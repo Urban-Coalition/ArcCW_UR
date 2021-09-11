@@ -1,0 +1,25 @@
+
+VertexLitGeneric
+{
+	"$baseTexture" "models\weapons\v_arccw_go\pist_deagle\pist_deagle"
+
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedoboost" "40"
+	"$phongfresnelranges" "[.8 .8 1]"
+//	"$phongexponent" 12
+	"$phongexponenttexture" "models\weapons\v_arccw_go\pist_deagle\pist_deagle_exponent"
+
+	"$basemapalphaphongmask" "1"
+	
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" "1"
+	"$envmaptint" 		"[.4 .4 .4]"
+
+	"$phongalbedotint" "1"
+	"$phongdisablehalflambert" "1"
+
+	$selfillum 1
+	$selfillumtint "[1 1 1]"
+	$selfillummask "models\weapons\v_arccw_go\pist_deagle\pist_deagle_selfillum"
+}

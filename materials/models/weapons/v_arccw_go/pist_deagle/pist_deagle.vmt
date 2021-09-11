@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+	$baseTexture "models\weapons\v_arccw_go\pist_deagle\pist_deagle"
+	$phong 1
+	$phongboost 60
+	$phongfresnelranges "[1 3 2]"
+	$phongexponenttexture "models\weapons\v_arccw_go\pist_deagle\pist_deagle_exponent"
+	$basemapalphaphongmask 1
+	$envmap env_cubemap
+	$basealphaenvmapmask 1
+	$envmapfresnel 1
+	$envmapFresnelMinMaxExp "[.01 1 1]"
+	$envmaptint "[.5 .5 .5]"
+	$phongalbedotint 1
+	$phongdisablehalflambert 1
+}
