@@ -56,7 +56,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 86
+SWEP.Damage = 90
 SWEP.DamageMin = 21
 SWEP.Range = 70
 SWEP.Penetration = 25
@@ -73,7 +73,7 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 2
+SWEP.Recoil = 2.25
 SWEP.RecoilSide = 0.5
 
 SWEP.RecoilRise = 0.3
@@ -83,7 +83,7 @@ SWEP.MaxRecoilPunch = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 200
+SWEP.Delay = 60 / 175
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -158,10 +158,12 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
-local path = "weapons/arccw/deagle/"
+local path = ")^weapons/arccw_ur/deagle/"
+local common = ")^weapons/arccw_ud/common/"
+local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "lowpolyfal_supp.ogg"
-SWEP.DistantShootSound = path .. "dist.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Bodygroups --
 
@@ -227,6 +229,7 @@ SWEP.Animations = {
         framerate = 60,
         Time = 33 / 60,
         ShellEjectAt = 0.01,
+        SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -251,6 +254,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.62,
         SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 62 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 72 / 60, c = ca },
         },
     },
     ["reload_empty"] = {
@@ -265,6 +275,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.7,
         SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 72 / 60, c = ca },
+            { s = rottle, t = 75 / 60, c = ca },
+            { s = path .. "chamber.ogg", t = 97 / 60, c = ca },
         },
     },
     
