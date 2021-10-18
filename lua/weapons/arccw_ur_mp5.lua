@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
-SWEP.Category = "ArcCW - Urban Renewal"
+SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.WeaponCamBone = tag_camera
 
