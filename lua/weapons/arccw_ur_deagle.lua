@@ -279,6 +279,7 @@ SWEP.Animations = {
             { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
             { s = path .. "magin.ogg", t = 72 / 60, c = ca },
