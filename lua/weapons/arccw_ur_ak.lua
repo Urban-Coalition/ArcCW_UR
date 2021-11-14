@@ -3,14 +3,14 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AKM"
+SWEP.PrintName = "AK-47"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "Ubiquitous Russian designed rifle used by militaries and militias around the world. One of the most popular weapons ever produced. Can be adapted into a variety of different forms."
+SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of the small arms in existence can be traced to this design. The default pattern is well-rounded, but recoils harder than other weapons of its class."
 SWEP.Trivia_Manufacturer = "Izhmash"
-SWEP.Trivia_Calibre = "7.62x39mm Soviet"
-SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "Russia"
-SWEP.Trivia_Year = 1956
+SWEP.Trivia_Calibre = "7.62x39mm"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+SWEP.Trivia_Country = "Soviet Union"
+SWEP.Trivia_Year = 1947
 
 SWEP.Slot = 2
 

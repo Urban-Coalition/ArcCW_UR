@@ -29,12 +29,12 @@ SWEP.TrueName = "Desert Eagle"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "Impractical pistol #13."
+SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its .50 caliber round can easily blast a human skull apart. Despite its imposing status in action culture, it’s rare in service because of its massive, bulky frame and needlessly large caliber.\n\nWe both know that won’t stop you."
 SWEP.Trivia_Manufacturer = "ISM"
-SWEP.Trivia_Calibre = ".50 AE"
-SWEP.Trivia_Mechanism = "Short Recoil"
-SWEP.Trivia_Country = "Israel / US"
-SWEP.Trivia_Year = 1924
+SWEP.Trivia_Calibre = ".50 Action Express"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+SWEP.Trivia_Country = "Israel"
+SWEP.Trivia_Year = 1983
 
 -- Weapon slot --
 
@@ -44,7 +44,7 @@ SWEP.Slot = 1
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "IMI"
+    SWEP.Trivia_Manufacturer = "Magnum Research"
 end
 
 -- Viewmodel / Worldmodel / FOV --
