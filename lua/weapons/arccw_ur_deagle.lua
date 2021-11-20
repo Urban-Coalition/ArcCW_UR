@@ -129,21 +129,24 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
-SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
+SWEP.HolsterPos = Vector(-0.5, -4, 2)
+SWEP.HolsterAng = Angle(-5, 15, -20)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.25, 3, 2.7),
+     Pos = Vector(-2.55, 10, 1.5),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
 }
 
-SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActiveAng = Angle(0, 0, -2)
+
+SWEP.CustomizePos = Vector(-1, -2, 1)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-2, -2, 0)
@@ -255,11 +258,12 @@ SWEP.Animations = {
         LHIKOut = 0.62,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 62 / 60, c = ca },
-            { s = path .. "magin.ogg", t = 72 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 72 / 60, c = ca },
         },
     },
     ["reload_empty"] = {
@@ -275,12 +279,13 @@ SWEP.Animations = {
         LHIKOut = 0.7,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
-            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout_old.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
-            { s = path .. "magin.ogg", t = 72 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 70 / 60, c = ca },
             { s = rottle, t = 75 / 60, c = ca },
             { s = path .. "chamber.ogg", t = 97 / 60, c = ca },
         },
