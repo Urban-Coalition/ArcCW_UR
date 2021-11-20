@@ -255,7 +255,6 @@ SWEP.Animations = {
         LHIKOut = 0.62,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
@@ -276,7 +275,6 @@ SWEP.Animations = {
         LHIKOut = 0.7,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
