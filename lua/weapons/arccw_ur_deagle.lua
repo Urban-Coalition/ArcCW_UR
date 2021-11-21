@@ -263,7 +263,7 @@ SWEP.Animations = {
             { s = rottle, t = 10 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 62 / 60, c = ca },
-            { s = path .. "magin_old.ogg", t = 72 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 72 / 60, c = ca },
         },
     },
     ["reload_empty"] = {
@@ -285,7 +285,7 @@ SWEP.Animations = {
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
-            { s = path .. "magin.ogg", t = 70 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 70 / 60, c = ca },
             { s = rottle, t = 75 / 60, c = ca },
             { s = path .. "chamber.ogg", t = 97 / 60, c = ca },
         },
