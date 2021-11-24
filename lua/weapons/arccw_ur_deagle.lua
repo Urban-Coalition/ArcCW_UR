@@ -216,12 +216,11 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
         LHIKOut = 0.6,
-        -- SoundTable = {
-        --     { s = path .. "lowpolyfal_readydraw.ogg", t = 1 / 60, c = ca },
-        --     { s = path .. "lowpolyfal_readycharge.ogg", t = 12 / 60, c = ca },
-        --     { s = path .. "lowpolyfal_readycheck1.ogg", t = 30 / 60, c = ca },
-        --     { s = path .. "lowpolyfal_readycheck2.ogg", t = 35 / 60, c = ca }
-        -- },
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = path .. "rack1.ogg", t = 10 / 60, c = ca },
+            { s = path .. "rack2.ogg", t = 25 / 60, c = ca },
+        },
     },
     ["draw"] = {
         Source = "idle",
