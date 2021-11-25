@@ -20,7 +20,7 @@ SWEP.ShootPitch = 100
 
 -- Fake name --
 
-SWEP.PrintName = "Deagle"
+SWEP.PrintName = "Predator .50"
 
 -- True name --
 
@@ -56,9 +56,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 90
-SWEP.DamageMin = 21
-SWEP.Range = 70
+SWEP.Damage = 80
+SWEP.DamageMin = 31
+SWEP.Range = 40
 SWEP.Penetration = 25
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -80,6 +80,8 @@ SWEP.RecoilRise = 0.3
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0.4
 SWEP.MaxRecoilPunch = 1
+
+SWEP.Sway = 1.11
 
 -- Firerate / Firemodes --
 
@@ -388,10 +390,21 @@ SWEP.Attachments = {
         InstalledEles = {"nors"},
     },
     {
-        PrintName = "Handguard",
-        Slot = {"lpfal_hand"},
+        PrintName = "Barrel",
+        Slot = {"ur_deagle_barrel"},
 		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
-        DefaultAttName = "21' Standard Issue Barrel",
+        DefaultAttName = "6\" Standard Barrel",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(3.07, -3.8, -27),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Caliber",
+        Slot = {"ur_deagle_caliber"},
+		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
+        DefaultAttName = ".50 Action Express",
         Bone = "Body",
         Offset = {
             vpos = Vector(3.07, -3.8, -27),
@@ -409,16 +422,6 @@ SWEP.Attachments = {
         },
         InstalledEles = {"nofh"},
     },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"foregrip","bipod","ubgl"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.5, 2),
-            vang = Angle(90, 0, -90),
-        },
-        ExcludeFlags = {"fnchand"},
-    },
     {
         PrintName = "Tactical",
         Slot = {"tac"},
@@ -429,16 +432,15 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Mag Type",
-        Slot = {"lpfal_mag"},
+        PrintName = "Magazine",
+        Slot = {"ur_deagle_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defmag.png"),
-        DefaultAttName = "20-Round Standard Mag",
+        DefaultAttName = "7-Round Mag",
     },
     {
         PrintName = "Stock",
-        Slot = {"lpglobal_stock","go_stock","lphm_stock","lpfal_stock"},
+        Slot = {"uc_stock", "go_stock_pistol_bt"},
 		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defstock.png"),
-        DefaultAttName = "Standard Wooden Stock",
         VMScale = Vector(0.9,0.9,0.9),
         Bone = "Body",
         Offset = {
@@ -448,19 +450,28 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Grip",
-        Slot = {"lpfal_grip"},
-		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defgrip.png"),
-        DefaultAttName = "Standard Wooden Grip",
+        DefaultAttName = "Factory Grip",
+        Slot = "ur_deagle_grip"
+    }
+    {
+        PrintName = "Ammo Type",
+        DefaultAttName = "\"FMJ\" Full Metal Jacket",
+        Slot = "uc_ammo",
     },
     {
-        PrintName = "Dust Cover",
-        Slot = {"lpfal_dc"},
-		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defdc.png"),
-        DefaultAttName = "Standard Dust Cover",
+        PrintName = "Powder Load",
+        Slot = "uc_powder",
+        DefaultAttName = "Standard Load"
     },
     {
-        PrintName = "Perk",
-        Slot = "go_perk",
+        PrintName = "Training Package",
+        Slot = "uc_tp",
+        DefaultAttName = "Basic Training"
+    },
+    {
+        PrintName = "Internals",
+        Slot = "uc_fg", -- Fire group
+        DefaultAttName = "Standard Internals"
     },
     {
         PrintName = "Charm",
@@ -473,9 +484,9 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Wood",
+        PrintName = "Finish",
+        Slot = {"ur_deagle_skin"},
+        DefaultAttName = "Stainless Steel",
         FreeSlot = true,
     },
 }
