@@ -49,7 +49,7 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lowpolydeagle.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ud_deagle.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
 SWEP.ViewModelFOV = 80
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
@@ -139,8 +139,8 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.55, 10, 1.5),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-2.55, 10, 1.05),
+     Ang = Angle(0.6, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
 }
@@ -386,8 +386,6 @@ SWEP.Attachments = {
             vpos = Vector(0, -1, -3),
             vang = Angle(90, 0, -90),
         },
-        ExtraSightDist = 10,
-        InstalledEles = {"nors"},
     },
     {
         PrintName = "Barrel",
@@ -452,7 +450,7 @@ SWEP.Attachments = {
         PrintName = "Grip",
         DefaultAttName = "Factory Grip",
         Slot = "ur_deagle_grip"
-    }
+    },  
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
