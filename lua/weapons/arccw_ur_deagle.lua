@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
 SWEP.ShellScale = 2.1
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
@@ -50,7 +50,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_deagle.mdl"
-SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_deagle.mdl"
 SWEP.ViewModelFOV = 80
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
