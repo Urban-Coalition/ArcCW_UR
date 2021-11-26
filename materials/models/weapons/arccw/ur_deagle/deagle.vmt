@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\v_models\Weapons\desert_eagle/deagle_c"
-	"$bumpmap" "models\v_models\Weapons\desert_eagle/deagle_n"
+	"$basetexture" "models\weapons\arccw\ur_deagle/deagle_c"
+	"$bumpmap" "models\weapons\arccw\ur_deagle/deagle_n"
 	"$normalmapalphaenvmapmask" 	1
 	
 	"$phong" 		"1"
