@@ -134,7 +134,7 @@ SWEP.ExtraSightDist = 7
 SWEP.HolsterPos = Vector(-0.5, 1, 0)
 SWEP.HolsterAng = Angle(-5, 15, -20)
 
-SWEP.HoldtypeHolstered = "passive"
+SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
@@ -156,8 +156,8 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-12, 4.5, -5.5),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(-10.5, 2.5, -5),
+    ang        =    Angle(-6, -6, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
