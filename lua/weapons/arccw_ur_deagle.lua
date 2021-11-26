@@ -56,8 +56,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 80
-SWEP.DamageMin = 31
+SWEP.Damage = 65 -- 2 shot close range kill
+SWEP.DamageMin = 31 -- 4 shot long range kill
+SWEP.RangeMin = 12
 SWEP.Range = 40
 SWEP.Penetration = 25
 SWEP.DamageType = DMG_BULLET
@@ -85,7 +86,7 @@ SWEP.Sway = 1.11
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 175
+SWEP.Delay = 60 / 275
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
