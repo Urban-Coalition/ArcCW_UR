@@ -423,7 +423,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "Barrel",
         Offset = {
-            vpos = Vector(0, 0, -4),
+            vpos = Vector(0, 0, 0.3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
@@ -433,8 +433,8 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.6, -0.6, 1),
-            vang = Angle(90, 0, 180),
+            vpos = Vector(0, -3.7, 7),
+            vang = Angle(90, 0, -90),
         },
     },
     {
