@@ -361,6 +361,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.3,
         LHIKOut = 0.84,
         SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 100 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 104 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 110 / 60, c = ca },
+            { s = rottle, t = 160 / 60, c = ca },
         },
     },
 }
