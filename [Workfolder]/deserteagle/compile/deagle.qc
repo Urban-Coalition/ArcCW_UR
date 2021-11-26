@@ -10,6 +10,7 @@ $bodygroup "1" {
 }
 
 $cdmaterials "models\weapons\arccw\shared"
+$cdmaterials "models\weapons\arccw\ur_deagle"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Brass" 0 0 0 rotate -10 140 180
