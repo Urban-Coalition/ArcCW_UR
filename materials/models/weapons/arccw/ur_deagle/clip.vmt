@@ -13,8 +13,8 @@
 	
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 			"1"
-	"$envmapFresnelMinMaxExp" "[0 5 .4]"
-	"$envmaptint"	"[0.42 0.45 0.47]"
+	//"$envmapFresnelMinMaxExp" "[0 5 .4]"
+	"$envmaptint"	"[0.32 0.35 0.37]"
 	
 	"$ambientocclusion" "1"
 	"$nocull" "1"
