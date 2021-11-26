@@ -115,7 +115,7 @@ SWEP.AccuracyMOA = 0
 SWEP.HipDispersion = 550
 SWEP.MoveDispersion = 700
 
-SWEP.Primary.Ammo = ".357"
+SWEP.Primary.Ammo = "357"
 SWEP.MagID = "deagle"
 
 -- Speed multipliers --
