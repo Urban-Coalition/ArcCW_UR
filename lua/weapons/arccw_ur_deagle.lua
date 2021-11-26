@@ -256,7 +256,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
+        LHIKEaseOut = 0.6,
         LHIKOut = 0.62,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
@@ -277,7 +277,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.1,
         LHIKEaseIn = 0.1,
-        LHIKEaseOut = 0.15,
+        LHIKEaseOut = 0.55,
         LHIKOut = 0.7,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
