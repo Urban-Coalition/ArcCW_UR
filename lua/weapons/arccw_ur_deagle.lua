@@ -200,11 +200,11 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_NameChange = function(wep, name)
     if !GetConVar("arccw_truenames"):GetBool() then
-        local cal = string.Replace(wep.Attachments[3].Installed or "default","ur_deagle_cal_","")
-
-        if cal == "357" then
+        local cal = wep.Attachments[3].Installed
+        
+        if cal == "ur_deagle_cal_357" then
             return "Predator .357"
-        elseif cal == "44"
+        elseif cal == "ur_deagle_cal_44"
             return "Predator .44"
         else
             return "Predator .50"
