@@ -204,7 +204,7 @@ SWEP.Hook_NameChange = function(wep, name)
 
     if cal == "ur_deagle_cal_357" then
         add = ".357"
-    elseif cal == "ur_deagle_cal_44"
+    elseif cal == "ur_deagle_cal_44" then
         add = ".44"
     end
 
