@@ -20,7 +20,7 @@ SWEP.ShootPitch = 100
 
 -- Fake name --
 
-SWEP.PrintName = "Predator .50"
+SWEP.PrintName = "Predator"
 
 -- True name --
 
@@ -199,19 +199,16 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    if !GetConVar("arccw_truenames"):GetBool() then
-        local cal = wep.Attachments[3].Installed
-        
-        if cal == "ur_deagle_cal_357" then
-            return "Predator .357"
-        elseif cal == "ur_deagle_cal_44"
-            return "Predator .44"
-        else
-            return "Predator .50"
-        end
-    else
-        return "Desert Eagle"
+    local add = ".50"
+    local cal = wep.Attachments[3].Installed
+
+    if cal == "ur_deagle_cal_357" then
+        add = ".357"
+    elseif cal == "ur_deagle_cal_44"
+        add = ".44"
     end
+
+    return name .. " " .. add
 end
 
 -- Animations --
