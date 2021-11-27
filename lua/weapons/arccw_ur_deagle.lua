@@ -20,7 +20,7 @@ SWEP.ShootPitch = 100
 
 -- Fake name --
 
-SWEP.PrintName = "Predator"
+SWEP.PrintName = "Predator .50"
 
 -- True name --
 
@@ -29,7 +29,7 @@ SWEP.TrueName = "Desert Eagle"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its .50 caliber round can easily blast a human skull apart. Despite its imposing status in action culture, it’s rare in service because of its massive, bulky frame and needlessly large caliber.\n\nWe both know that won’t stop you."
+SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its large round can easily blast a human skull apart. Despite its imposing status in action culture, it’s rare in service because of its massive, bulky frame and needlessly large caliber.\n\nWe both know that won’t stop you."
 SWEP.Trivia_Manufacturer = "ISM"
 SWEP.Trivia_Calibre = ".50 Action Express"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -199,16 +199,20 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local add = ".50"
-    local cal = wep.Attachments[3].Installed
+    if !GetConVar("arccw_truenames"):GetBool() then
+        local add = ".50"
+        local cal = wep.Attachments[3].Installed
 
-    if cal == "ur_deagle_cal_357" then
-        add = ".357"
-    elseif cal == "ur_deagle_cal_44" then
-        add = ".44"
+        if cal == "ur_deagle_caliber_357" then
+            add = ".357"
+        elseif cal == "ur_deagle_caliber_44" then
+            add = ".44"
+        end
+
+        return "Predator " .. add
+    else
+        return "Desert Eagle"
     end
-
-    return name .. " " .. add
 end
 
 -- Animations --
