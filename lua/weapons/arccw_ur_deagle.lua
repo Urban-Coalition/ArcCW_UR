@@ -123,7 +123,7 @@ SWEP.MagID = "deagle"
 
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.84
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.45
 
 -- Length --
 
@@ -197,6 +197,22 @@ SWEP.AttachmentElements = {
         VMSkin = 2,
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    if !GetConVar("arccw_truenames"):GetBool() then
+        local cal = string.Replace(wep.Attachments[3].Installed or "default","ur_deagle_cal_","")
+
+        if cal == "357" then
+            return "Predator .357"
+        elseif cal == "44"
+            return "Predator .44"
+        else
+            return "Predator .50"
+        end
+    else
+        return "Desert Eagle"
+    end
+end
 
 -- Animations --
 
