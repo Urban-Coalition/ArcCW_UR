@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\arccw\ur_deagle/deagle_black_c"
+	"$bumpmap" "models\weapons\arccw\ur_deagle/deagle_n"
+	"$normalmapalphaenvmapmask" 	1
+	
+	"$phong" 		"1"
+	"$phongexponent" "4"
+	"$phongboost" "1"
+	"$phongalbedotint" 			"1"
+	"$phongfresnelranges" "[1 1 1]"
+	"$halflambert" "1"
+	
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"1"
+	//"$envmapFresnelMinMaxExp" "[0 5 .4]"
+	"$envmaptint"	"[0.12 0.10 0.13]"
+
+	"$nocull" "1"
+	//$color2 "[2 2 2]"
+}

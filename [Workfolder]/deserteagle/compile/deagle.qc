@@ -1,17 +1,32 @@
 $modelname "weapons\arccw\c_ud_deagle.mdl"
  
-$bodygroup "studio" {
+$bodygroup "base" {
 	studio "deserteagle.smd"
 } 
 
-$bodygroup "1" {
+$bodygroup "barrel" {
 	studio "barrel.smd"
-	studio "barrel_mod.smd"
+	studio "barrel_modern.smd"
+	studio "barrel_long.smd"
+}
+$bodygroup "tritium" {
+    blank
+	studio "tritium.smd"
+	studio "tritium_long.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
 $cdmaterials "models\weapons\arccw\ur_deagle"
 $cdmaterials "models\weapons\arccw\ud_common"
+
+
+$texturegroup "skinfamilies"
+{
+	{ "deagle" "deagle_plastic"}
+	{ "deagle_black" "deagle_plastic"}
+	{ "deagle_gold" "deagle_plastic"}
+}
+
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Brass" 0 0 0 rotate -10 140 180
