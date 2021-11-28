@@ -1,6 +1,7 @@
 att.PrintName = "Desert Eagle Matte Black Finish"
 att.AbbrevName = "Matte Black"
-att.Description = "The perfect complement for your trenchcoat."
+att.Icon = nil --todo
+att.Description = "The finish of choice for assassins and agents everywhere."
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"
@@ -8,4 +9,4 @@ att.Desc_Neutrals = {
 att.SortOrder = 2
 
 att.IgnorePickX = true
-att.ActivateElements = {"deagle_skin_black"}
+att.ActivateElements = {"ur_deagle_skin_black"}
