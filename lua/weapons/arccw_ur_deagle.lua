@@ -186,20 +186,12 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-
-    ["nofh"] = {
-        VMBodygroups = {{ind = 1, bg = 4}},
-    },
-    ["nors"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
-    },
-
     -- Skins --
 
-    ["skin_wireframe"] = {
+    ["deagle_skin_black"] = {
         VMSkin = 1,
     },
-    ["skin_black"] = {
+    ["deagle_skin_gold"] = {
         VMSkin = 2,
     },
 }
