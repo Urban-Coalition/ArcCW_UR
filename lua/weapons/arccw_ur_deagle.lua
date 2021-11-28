@@ -186,19 +186,12 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-    ["ur_deagle_barrel_long"] = {
+    ["ur_deagle_barrel_ext"] = {
         VMBodygroups = {{ind = 3, bg = 3}}
     },
 
     ["ur_deagle_mag_ext"] = {
         VMBodygroups = {{ind = 2, bg = 1}}
-    },
-
-    ["ur_deagle_tritium_1"] = {
-        VMBodygroups = {{ind = 3, bg = 1}}
-    },
-    ["ur_deagle_tritium_2"] = {
-        VMBodygroups = {{ind = 2, bg = 2}}
     },
 
     ["ur_deagle_skin_black"] = {
@@ -208,6 +201,17 @@ SWEP.AttachmentElements = {
         VMSkin = 2,
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep,data)
+    local vm = data.vm
+    local tritium = (wep.Attachments[1].Installed == "ur_deagle_tritium")
+    local barrel = wep.Attachments[2].Installed
+
+    if tritium then
+        -- Setup for when we introduce new barrel options
+        vm:SetBodygroup(3,1)
+    end
+end
 
 SWEP.Hook_NameChange = function(wep, name)
     if !GetConVar("arccw_truenames"):GetBool() then

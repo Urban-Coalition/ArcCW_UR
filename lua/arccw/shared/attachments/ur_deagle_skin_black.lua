@@ -1,7 +1,7 @@
 att.PrintName = "Desert Eagle Matte Black Finish"
 att.AbbrevName = "Matte Black"
 att.Icon = nil --todo
-att.Description = "The perfect complement for your trenchcoat."
+att.Description = "The finish of choice for assassins and agents everywhere."
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"

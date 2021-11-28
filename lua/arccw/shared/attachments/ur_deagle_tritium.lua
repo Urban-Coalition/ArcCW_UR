@@ -8,4 +8,4 @@ att.Desc_Neutrals = {
 }
 att.SortOrder = 999
 
-att.ActivateElements = {"ur_deagle_tritium_1"}
+att.ActivateElements = {"ur_deagle_tritium"}
