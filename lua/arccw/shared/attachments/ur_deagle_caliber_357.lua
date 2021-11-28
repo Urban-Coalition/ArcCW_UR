@@ -10,9 +10,12 @@ end
 att.AutoStats = true
 att.Slot = "ur_deagle_caliber"
 
-att.Mult_ClipSize = 9/7
-att.Mult_Recoil = .8
-att.Mult_Damage = .775
-att.Mult_DamageMin = .775
+att.Mult_ClipSize = 1.3
+att.Mult_Recoil = .7
+att.Mult_Damage = .725
+att.Mult_DamageMin = .725
+
+att.Mult_ShootSpeedMult = 1.2
+att.Mult_RPM = 1.2
 
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y

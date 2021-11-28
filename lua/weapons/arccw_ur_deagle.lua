@@ -56,14 +56,14 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 65 -- 2 shot close range kill
-SWEP.DamageMin = 31 -- 4 shot long range kill
-SWEP.RangeMin = 12
-SWEP.Range = 40
+SWEP.Damage = 70 -- 2 shot close range kill
+SWEP.DamageMin = 34 -- 3 shot long range kill
+SWEP.RangeMin = 10
+SWEP.Range = 60
 SWEP.Penetration = 25
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 470 
+SWEP.MuzzleVelocity = 470
 
 -- Mag size --
 
@@ -74,19 +74,19 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 2.25
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 2.5
+SWEP.RecoilSide = 1
 
-SWEP.RecoilRise = 0.3
-SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.4
-SWEP.MaxRecoilPunch = 1
+SWEP.RecoilRise = 0.5
+SWEP.VisualRecoilMult = 1.5
+SWEP.MaxRecoilBlowback = 1
+SWEP.MaxRecoilPunch = 4
 
-SWEP.Sway = 1.11
+SWEP.Sway = 1.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 275
+SWEP.Delay = 60 / 240
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -112,22 +112,24 @@ SWEP.NPCWeight = 71
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 550
-SWEP.MoveDispersion = 700
+SWEP.AccuracyMOA = 6
+SWEP.HipDispersion = 700
+SWEP.MoveDispersion = 300
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "357"
 SWEP.MagID = "deagle"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.8
-SWEP.SightedSpeedMult = 0.84
+SWEP.SpeedMult = 0.9
+SWEP.SightedSpeedMult = 0.8
 SWEP.SightTime = 0.45
+SWEP.ShootSpeedMult = 0.7
 
 -- Length --
 
-SWEP.BarrelLength = 20
+SWEP.BarrelLength = 12
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
@@ -309,7 +311,7 @@ SWEP.Animations = {
             { s = rottle, t = 75 / 60, c = ca },
         },
     },
-    
+
     -- Inspecc --
 
     ["enter_inspect"] = {
@@ -415,7 +417,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Slot = {"ur_deagle_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
+        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
         DefaultAttName = "6\" Standard Barrel",
         Bone = "Body",
         Offset = {
@@ -426,7 +428,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         Slot = {"ur_deagle_caliber"},
-		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
+        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
         DefaultAttName = ".50 Action Express",
         Bone = "Body",
         Offset = {
@@ -457,17 +459,17 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"ur_deagle_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defmag.png"),
+        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defmag.png"),
         DefaultAttName = "7-Round Mag",
     },
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
-		DefaultAttIcon = Material("entities/att/acwatt_lpfal_defstock.png"),
-        VMScale = Vector(0.9,0.9,0.9),
+        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defstock.png"),
+        VMScale = Vector(1.1, 1.1, 1.1),
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.2, -16),
+            vpos = Vector(0, -0.25, 0),
             vang = Angle(90, 0, -90),
         },
     },
@@ -475,7 +477,7 @@ SWEP.Attachments = {
         PrintName = "Grip",
         DefaultAttName = "Factory Grip",
         Slot = "ur_deagle_grip"
-    },  
+    },
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
