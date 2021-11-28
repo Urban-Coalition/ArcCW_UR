@@ -26,8 +26,8 @@ SWEP.DefaultBodygroups = "000000000000"
 
 SWEP.Damage = 45 -- 3 shot close range kill (2 on chest)
 SWEP.DamageMin = 20 -- 5 shot long range kill
-SWEP.RangeMin = 25
-SWEP.Range = 250 -- 3 shot until ~120m
+SWEP.RangeMin = 60
+SWEP.Range = 300 -- 3 shot until ~120m
 SWEP.Penetration = 16
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
