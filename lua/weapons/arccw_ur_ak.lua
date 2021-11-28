@@ -3,9 +3,9 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AK-47"
+SWEP.PrintName = "AKM"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of the small arms in existence can be traced to this design. The default pattern is well-rounded, but recoils harder than other weapons of its class."
+SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design. The default pattern is well-rounded, but recoils harder than other weapons of its class."
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -22,26 +22,45 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000000000"
 
-SWEP.Damage = 36
-SWEP.DamageMin = 24 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
-SWEP.Penetration = 14
+-- Damage --
+
+SWEP.Damage = 45 -- 3 shot close range kill (2 on chest)
+SWEP.DamageMin = 20 -- 5 shot long range kill
+SWEP.RangeMin = 25
+SWEP.Range = 250 -- 3 shot until ~120m
+SWEP.Penetration = 16
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 715 -- projectile or phys bullet muzzle velocity
--- IN M/S
-SWEP.ChamberSize = 1 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.ShootEntity = nil
+SWEP.MuzzleVelocity = 715
+SWEP.PhysBulletMuzzleVelocity = 715
 
-SWEP.PhysBulletMuzzleVelocity = 700
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
-SWEP.Recoil = 0.7
-SWEP.RecoilSide = 0.65
-SWEP.RecoilRise = 0.1
-SWEP.RecoilPunch = 2.5
+-- Mag size --
 
-SWEP.Delay = 60 / 600 -- 60 / RPM.
-SWEP.Num = 1 -- number of shots per trigger pull.
+SWEP.ChamberSize = 1
+SWEP.Primary.ClipSize = 30
+SWEP.ExtendedClipSize = 40
+SWEP.ReducedClipSize = 15
+
+-- Recoil --
+
+SWEP.Recoil = 0.75
+SWEP.RecoilSide = 0.3
+
+SWEP.RecoilRise = 0.6
+SWEP.RecoilPunch = 1
+SWEP.VisualRecoilMult = 1
+SWEP.MaxRecoilBlowback = 1
+SWEP.MaxRecoilPunch = 1
+SWEP.RecoilPunchBack = 2
+
+SWEP.Sway = 0.6
+
+-- Firerate / Firemodes --
+
+SWEP.Delay = 60 / 600
+SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
@@ -50,22 +69,46 @@ SWEP.Firemodes = {
         Mode = 1,
     },
     {
-        Mode = 0
-    }
+        Mode = 0,
+    },
 }
 
+SWEP.ShootPitch = 100
+SWEP.ShootVol = 120
+
+SWEP.ProceduralRegularFire = false
+SWEP.ProceduralIronFire = false
+
+SWEP.ReloadInSights = true
+
+-- NPC --
+
 SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 200
+SWEP.NPCWeight = 60
 
-SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 750 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
+-- Accuracy --
 
-SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
-SWEP.MagID = "ak47" -- the magazine pool this gun draws from
+SWEP.AccuracyMOA = 5
+SWEP.HipDispersion = 850
+SWEP.MoveDispersion = 250
+SWEP.JumpDispersion = 1000
 
-SWEP.ShootVol = 120 -- volume of shoot sound
-SWEP.ShootPitch = 100 -- pitch of shoot sound
+SWEP.Primary.Ammo = "ar2"
+SWEP.MagID = "akm"
+
+SWEP.HeatCapacity = 75
+SWEP.HeatDissipation = 15
+SWEP.HeatDelayTime = 3
+
+SWEP.MalfunctionMean = 200
+
+-- Speed multipliers --
+
+SWEP.SpeedMult = 0.9
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.75
+
 
 SWEP.FirstShootSound = "weapons/arccw_ur/ak/fire_first.ogg"
 SWEP.ShootSound = {"weapons/arccw_ur/ak/fire_auto_1.ogg", "weapons/arccw_ur/ak/fire_auto_2.ogg"}
@@ -85,10 +128,6 @@ SWEP.ShellRotateAngle = Angle(0, 180, 0)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-
-SWEP.SpeedMult = 0.91
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.30
 
 SWEP.IronSightStruct = {
     Pos = Vector(-5.03, -10, 1.1),
