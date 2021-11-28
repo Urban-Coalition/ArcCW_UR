@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-SWEP.ShellScale = 2.1
+SWEP.ShellScale = 1.6
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
@@ -51,7 +51,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_deagle.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ud_deagle.mdl"
-SWEP.ViewModelFOV = 80
+SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
@@ -146,7 +146,7 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(0.2, 2, 1.5)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.CustomizePos = Vector(-1, -2, 1)
@@ -249,14 +249,14 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire_01", "fire_02", "fire_03"},
         framerate = 60,
-        Time = 33 / 60,
+        Time = 0.9,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         framerate = 60,
-        Time = 34 / 60,
+        Time = 0.9,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
     },
