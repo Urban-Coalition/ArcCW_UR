@@ -187,7 +187,10 @@ SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
     ["ur_deagle_barrel_ext"] = {
-        VMBodygroups = {{ind = 3, bg = 3}}
+        VMBodygroups = {{ind = 1, bg = 2}}
+    },
+    ["ur_deagle_barrel_police"] = {
+        VMBodygroups = {{ind = 1, bg = 3}}
     },
 
     ["ur_deagle_mag_ext"] = {
@@ -204,12 +207,15 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
     local vm = data.vm
-    local tritium = (wep.Attachments[1].Installed == "ur_deagle_tritium")
-    local barrel = wep.Attachments[2].Installed
+    local optic = wep.Attachments[1].Installed
+    local tritium = (optic == "ur_deagle_tritium")
+    local barrel = wep.Attachments[2].Installed or 0
 
     if tritium then
         -- Setup for when we introduce new barrel options
         vm:SetBodygroup(3,1)
+    elseif optic and barrel == 0 then
+        vm:SetBodygroup(1,1)
     end
 end
 
@@ -422,7 +428,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -5.2, 7),
+            vpos = Vector(0, -5.3, 7),
             vang = Angle(90, 0, -90),
         },
     },
