@@ -187,13 +187,37 @@ SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
     ["ur_deagle_barrel_modern"] = {
-        VMBodygroups = {{ind = 1, bg = 1}}
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["ur_deagle_barrel_compact"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, -.2),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ur_deagle_barrel_compen"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
     },
     ["ur_deagle_barrel_ext"] = {
-        VMBodygroups = {{ind = 1, bg = 2}}
+        VMBodygroups = {{ind = 1, bg = 2}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, 1.25),
+                vang = Angle(90, 0, -90),
+            },
+        }
     },
     ["ur_deagle_barrel_marksman"] = {
-        VMBodygroups = {{ind = 1, bg = 3}}
+        VMBodygroups = {{ind = 1, bg = 3}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -0.05, 4.8),
+                vang = Angle(90, 0, -90),
+            },
+        },
     },
 
     ["ur_deagle_mag_ext"] = {
@@ -220,6 +244,8 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
             vm:SetBodygroup(3,3)
         elseif barrel == "ur_deagle_barrel_ext" then
             vm:SetBodygroup(3,2)
+        elseif barrel == "ur_deagle_barrel_compact" then
+            vm:SetBodygroup(3,4)
         else
             vm:SetBodygroup(3,1)
         end
@@ -469,7 +495,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "Barrel",
         Offset = {
-            vpos = Vector(0, 0, 0.3),
+            vpos = Vector(0, 0, 0.2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
@@ -492,7 +518,6 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
-        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defstock.png"),
         VMScale = Vector(1.1, 1.1, 1.1),
         Bone = "Body",
         Offset = {
