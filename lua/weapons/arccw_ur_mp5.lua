@@ -31,7 +31,9 @@ SWEP.TrueName = "MP5A3"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Versatile submachine gun known for its use by high profile police units around the world, most famously by the British SAS during the Iranian embassy siege. While not the most cutting-edge weapon, it remains a classic despite multiple newer alternatives from both HK and its competitors. If accurate, sophisticated close-combat performance is what you’re looking for, no weapon has a better track record."
+SWEP.Trivia_Desc = [[Versatile submachine gun known for its use by high profile police units around the world, most famously by the British SAS during the Iranian embassy siege. While not the most cutting-edge weapon, it remains a classic despite multiple newer alternatives from both HK and its competitors.
+
+If accurate, sophisticated close-combat performance is what you’re looking for, no weapon has a better track record.]]
 SWEP.Trivia_Manufacturer = "Crowdley & Nelson"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
@@ -61,7 +63,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 30 -- 3 shot close range kill
 SWEP.DamageMin = 17 -- 6 shot long range kill
 SWEP.RangeMin = 15
-SWEP.Range = 75
+SWEP.Range = 90
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -69,15 +71,15 @@ SWEP.MuzzleVelocity = 300
 
 -- Mag size --
 
-SWEP.ChamberSize = 0
+SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 30
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 15
 
 -- Recoil --
 
-SWEP.Recoil = 0.7
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0.6
 SWEP.RecoilPunch = 1
@@ -86,7 +88,7 @@ SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 0.6
 SWEP.RecoilPunchBack = 1.5
 
-SWEP.Sway = 0.3
+SWEP.Sway = 0.25
 
 -- Firerate / Firemodes --
 
@@ -122,13 +124,13 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 6
-SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 100
-SWEP.JumpDispersion = 800
+SWEP.AccuracyMOA = 3
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 120
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.MagID = "uzi"
+SWEP.MagID = "mp5"
 
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
@@ -138,9 +140,9 @@ SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 0.925
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.4
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --
