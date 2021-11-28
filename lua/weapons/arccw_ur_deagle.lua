@@ -179,7 +179,7 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 -- Bodygroups --
 
 SWEP.BulletBones = {
-    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3", [4] = "Bullet4",    [5] = "Bullet5",    [6] = "Bullet6", [7] = "Bullet7"
 }
 
 SWEP.DefaultBodygroups = "000000000"
@@ -410,9 +410,9 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Slot = {"optic_lp"},
         DefaultAttName = "Iron Sights",
-        Bone = "Slide",
+        Bone = "Body",
         Offset = {
-            vpos = Vector(0, -1, 2),
+            vpos = Vector(0, -5.2, 7),
             vang = Angle(90, 0, -90),
         },
     },
