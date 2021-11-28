@@ -7,6 +7,7 @@ $bodygroup "barrel" {
 	studio "barrel.smd"
 	studio "barrel_modern.smd"
 	studio "barrel_long.smd"
+	studio "barrel_police.smd"
 }
 $bodygroup "magazine" {
 	studio "mag_7.smd"
@@ -16,6 +17,7 @@ $bodygroup "tritium" {
     blank
 	studio "tritium.smd"
 	studio "tritium_long.smd"
+	studio "tritium_police.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"

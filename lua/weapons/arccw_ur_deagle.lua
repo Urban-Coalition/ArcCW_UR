@@ -186,15 +186,32 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-    -- Skins --
+    ["ur_deagle_barrel_ext"] = {
+        VMBodygroups = {{ind = 3, bg = 3}}
+    },
 
-    ["deagle_skin_black"] = {
+    ["ur_deagle_mag_ext"] = {
+        VMBodygroups = {{ind = 2, bg = 1}}
+    },
+
+    ["ur_deagle_skin_black"] = {
         VMSkin = 1,
     },
-    ["deagle_skin_gold"] = {
+    ["ur_deagle_skin_gold"] = {
         VMSkin = 2,
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep,data)
+    local vm = data.vm
+    local tritium = (wep.Attachments[1].Installed == "ur_deagle_tritium")
+    local barrel = wep.Attachments[2].Installed
+
+    if tritium then
+        -- Setup for when we introduce new barrel options
+        vm:SetBodygroup(3,1)
+    end
+end
 
 SWEP.Hook_NameChange = function(wep, name)
     if !GetConVar("arccw_truenames"):GetBool() then
@@ -401,7 +418,7 @@ SWEP.CamAttachment = 3
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp"},
+        Slot = {"optic_lp","ur_deagle_tritium"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
