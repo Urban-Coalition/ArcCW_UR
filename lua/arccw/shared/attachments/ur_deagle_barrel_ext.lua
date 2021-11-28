@@ -4,6 +4,7 @@ att.Icon = nil --todo
 att.Description = "Slightly extended barrel that provides extra counterweight in addition to marginal ballistic enhancements."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
+att.SortOrder = 2
 
 att.Mult_AccuracyMOA = .85
 att.Mult_Range = 1.05

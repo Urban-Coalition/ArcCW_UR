@@ -4,6 +4,7 @@ att.Icon = nil --todo
 att.Description = "Elongated barrel for niche mid-range roles. Especially front-heavy."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
+att.SortOrder = 1
 
 att.Mult_AccuracyMOA = .5
 att.Mult_Range = 2

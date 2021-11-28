@@ -186,6 +186,9 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
+    ["ur_deagle_barrel_modern"] = {
+        VMBodygroups = {{ind = 1, bg = 1}}
+    },
     ["ur_deagle_barrel_ext"] = {
         VMBodygroups = {{ind = 1, bg = 2}}
     },
@@ -220,8 +223,8 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         else
             vm:SetBodygroup(3,1)
         end
-    elseif optic and barrel == 0 then
-        vm:SetBodygroup(1,1)
+    -- elseif optic and barrel == 0 then
+    --     vm:SetBodygroup(1,1)
     end
 end
 
