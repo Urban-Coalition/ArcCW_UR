@@ -669,7 +669,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ur_mp5_stock"},
-        DefaultAttName = "Folding Stock",
+        DefaultAttName = "Retracting Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_stock.png", "smooth mips"),
         ExcludeFlags = {"micro"},
     },
