@@ -186,12 +186,25 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-    -- Skins --
+    ["ur_deagle_barrel_long"] = {
+        VMBodygroups = {{ind = 3, bg = 3}}
+    },
 
-    ["deagle_skin_black"] = {
+    ["ur_deagle_mag_ext"] = {
+        VMBodygroups = {{ind = 2, bg = 1}}
+    },
+
+    ["ur_deagle_tritium_1"] = {
+        VMBodygroups = {{ind = 3, bg = 1}}
+    },
+    ["ur_deagle_tritium_2"] = {
+        VMBodygroups = {{ind = 2, bg = 2}}
+    },
+
+    ["ur_deagle_skin_black"] = {
         VMSkin = 1,
     },
-    ["deagle_skin_gold"] = {
+    ["ur_deagle_skin_gold"] = {
         VMSkin = 2,
     },
 }
@@ -401,7 +414,7 @@ SWEP.CamAttachment = 3
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp"},
+        Slot = {"optic_lp","ur_deagle_tritium"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
