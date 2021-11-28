@@ -173,7 +173,8 @@ local path = ")^weapons/arccw_ur/deagle/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "lowpolyfal_supp.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
+SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Bodygroups --
@@ -292,8 +293,8 @@ SWEP.Animations = {
             { s = path .. "magout.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
-            { s = path .. "magin_miss.ogg", t = 62 / 60, c = ca },
-            { s = path .. "magin_old.ogg", t = 72 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 64 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 74 / 60, c = ca },
         },
     },
     ["reload_empty"] = {
@@ -315,7 +316,7 @@ SWEP.Animations = {
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
             { s = path .. "magin_old.ogg", t = 70 / 60, c = ca },
-            { s = path .. "chamber.ogg", t = 97 / 60, c = ca },
+            { s = path .. "chamber.ogg", t = 98 / 60, c = ca },
             { s = rottle, t = 75 / 60, c = ca },
         },
     },
