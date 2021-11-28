@@ -62,12 +62,14 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
 SWEP.DamageMin = 17 -- 6 shot long range kill
-SWEP.RangeMin = 15
-SWEP.Range = 90 -- 4 shot until ~40m
+SWEP.RangeMin = 20
+SWEP.Range = 100 -- 4 shot until ~50m
+
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 300
+SWEP.MuzzleVelocity = 400
+SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
