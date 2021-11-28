@@ -157,7 +157,7 @@ SWEP.ActiveAng = Angle(0, 0, -2)
 SWEP.CustomizePos = Vector(-1, -2, 1)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-2, -2, 0)
+SWEP.CrouchPos = Vector(-2, 0, 0)
 SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
