@@ -7,4 +7,5 @@ att.Desc_Neutrals = {
 }
 att.SortOrder = 1
 
+att.IgnorePickX = true
 att.ActivateElements = {"deagle_skin_gold"}
