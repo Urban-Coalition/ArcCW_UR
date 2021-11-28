@@ -189,7 +189,7 @@ SWEP.AttachmentElements = {
     ["ur_deagle_barrel_ext"] = {
         VMBodygroups = {{ind = 1, bg = 2}}
     },
-    ["ur_deagle_barrel_police"] = {
+    ["ur_deagle_barrel_marksman"] = {
         VMBodygroups = {{ind = 1, bg = 3}}
     },
 
@@ -213,7 +213,13 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 
     if tritium then
         -- Setup for when we introduce new barrel options
-        vm:SetBodygroup(3,1)
+        if barrel == "ur_deagle_barrel_marksman" then
+            vm:SetBodygroup(3,3)
+        elseif barrel == "ur_deagle_barrel_ext" then
+            vm:SetBodygroup(3,2)
+        else
+            vm:SetBodygroup(3,1)
+        end
     elseif optic and barrel == 0 then
         vm:SetBodygroup(1,1)
     end

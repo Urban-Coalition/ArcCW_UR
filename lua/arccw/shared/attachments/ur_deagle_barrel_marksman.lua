@@ -8,7 +8,9 @@ att.AutoStats = true
 att.Mult_AccuracyMOA = .5
 att.Mult_Range = 2
 att.Mult_Recoil = .8
-att.Mult_SightTime = 1.2
+att.Mult_SightTime = 1.3
 att.Mult_Sway = 1.5
+att.Mult_DrawTime = 1.5
+att.Add_BarrelLength = 12
 
-att.ActivateElements = {"ur_deagle_barrel_police"}
+att.ActivateElements = {"ur_deagle_barrel_marksman"}
