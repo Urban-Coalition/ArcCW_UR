@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_1"
+SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"
 SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
 SWEP.ShellScale = 1.6
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -410,7 +410,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {
-            vpos = Vector(0, -1, -3),
+            vpos = Vector(0, -1, 2),
             vang = Angle(90, 0, -90),
         },
     },
