@@ -137,7 +137,7 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(-0.5, 1, 0)
+SWEP.HolsterPos = Vector(0.3, 3, 1)
 SWEP.HolsterAng = Angle(-5, 15, -20)
 
 SWEP.HoldtypeHolstered = "normal"
@@ -225,17 +225,14 @@ end
 SWEP.Animations = {
     ["idle_empty"] = {
         Source = "idle_empty",
-        framerate = 60,
         Time = 120 / 60,
     },
     ["idle"] = {
         Source = "idle",
-        framerate = 60,
         Time = 120 / 60,
     },
     ["ready"] = {
         Source = "ready",
-        framerate = 60,
         Time = 73 / 60,
         LHIK = true,
         LHIKIn = 0,
@@ -249,18 +246,28 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "idle",
-        framerate = 60,
+        ProcDraw = true,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
     },
+    --[[["holster"] = {
+        Source = "idle",
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
+    },]]
+
     ["fire"] = {
         Source = {"fire_01", "fire_02", "fire_03"},
-        framerate = 60,
         Time = 0.9,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        framerate = 60,
         Time = 0.9,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
@@ -273,7 +280,6 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 2,
         Time = 126 / 60,
-        framerate = 60,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.2,
@@ -293,7 +299,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        framerate = 60,
         Time = 152 / 60,
         LastClip1OutTime = 0.76,
         LHIK = true,
@@ -320,7 +325,6 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "enter_inspect",
         time = 35 / 60,
-        framerate = 60,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKOut = 0,
@@ -330,7 +334,6 @@ SWEP.Animations = {
     ["idle_inspect"] = {
         Source = "idle_inspect",
         time = 72 / 60,
-        framerate = 60,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
@@ -338,7 +341,6 @@ SWEP.Animations = {
     ["exit_inspect"] = {
         Source = "exit_inspect",
         time = 66 / 60,
-        framerate = 60,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
@@ -359,7 +361,6 @@ SWEP.Animations = {
     ["enter_inspect_empty"] = {
         Source = "enter_inspect_empty",
         time = 35 / 60,
-        framerate = 60,
         LHIK = true,
         LHIKIn = 0.1,
         LHIKOut = 0,
@@ -369,7 +370,6 @@ SWEP.Animations = {
     ["idle_inspect_empty"] = {
         Source = "idle_inspect_empty",
         time = 72 / 60,
-        framerate = 60,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
@@ -377,7 +377,6 @@ SWEP.Animations = {
     ["exit_inspect_empty"] = {
         Source = "exit_inspect_empty",
         time = 66 / 60,
-        framerate = 60,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
