@@ -3,11 +3,14 @@ $modelname "weapons\arccw\c_ud_deagle.mdl"
 $bodygroup "base" {
 	studio "deserteagle.smd"
 } 
-
 $bodygroup "barrel" {
 	studio "barrel.smd"
 	studio "barrel_modern.smd"
 	studio "barrel_long.smd"
+}
+$bodygroup "magazine" {
+	studio "mag_7.smd"
+	studio "mag_10.smd"
 }
 $bodygroup "tritium" {
     blank
