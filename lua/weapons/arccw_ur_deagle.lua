@@ -297,6 +297,8 @@ SWEP.Hook_NameChange = function(wep, name)
             add = ".357"
         elseif cal == "ur_deagle_caliber_44" then
             add = ".44"
+        elseif cal == "ur_deagle_caliber_410" then
+            add = ".410"
         end
 
         return "Predator " .. add

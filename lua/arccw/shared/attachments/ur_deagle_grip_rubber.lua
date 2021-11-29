@@ -10,6 +10,6 @@ att.AutoStats = true
 
 att.Mult_Recoil = 0.9825
 att.Mult_RecoilSide = 0.85
-att.Mult_SightedStrafeSpeed = 0.95
+att.Mult_SightedSpeedMult = 0.95
 
 att.ActivateElements = {"ur_deagle_grip_rubber"}
