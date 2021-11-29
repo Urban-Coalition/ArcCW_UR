@@ -33,6 +33,7 @@ $texturegroup "skinfamilies"
 	{ "deagle" "deagle_plastic"}
 	{ "deagle_black" "deagle_plastic"}
 	{ "deagle_gold" "deagle_plastic"}
+	{ "deagle_chrome" "deagle_plastic"}
 }
 
 

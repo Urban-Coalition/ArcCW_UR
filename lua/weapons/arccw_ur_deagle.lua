@@ -230,6 +230,9 @@ SWEP.AttachmentElements = {
     ["ur_deagle_skin_gold"] = {
         VMSkin = 2,
     },
+    ["ur_deagle_skin_chrome"] = {
+        VMSkin = 3,
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
