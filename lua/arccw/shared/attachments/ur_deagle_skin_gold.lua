@@ -6,6 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator Titanium Gold Finish"
     att.Description = "Look, you're already using a Predator, so we might as well gut whatever sense of style you have left."
 end
+att.Description = att.Description .. "\n\n\"The time has come to show our true strength. They underestimate our resolve. Let us show that we do not fear them. As one people, we shall free our bretyhren from the yoke of foreign oppression!\""
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"
