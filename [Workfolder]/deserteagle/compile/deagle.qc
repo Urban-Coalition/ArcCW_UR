@@ -10,6 +10,7 @@ $bodygroup "barrel" {
 	studio "barrel_police.smd"
 	studio "barrel_compensated.smd"
 	studio "barrel_compact.smd"
+	studio "barrel_annihilator.smd"
 }
 $bodygroup "magazine" {
 	studio "mag_7.smd"

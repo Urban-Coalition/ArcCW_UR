@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models/weapons/arccw/ur_deagle/decho_v2_grip"
+	"$bumpmap"					"models/weapons/arccw/ur_deagle/decho_v2_grip_n"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongalbedotint"	"1"
+	"$phongboost"	"0.15"
+	"$phongfresnelranges"	"[1 1 1]"
+        "$phongdisablehalflambert"  "1"
+
+        "$halflambert"                 "0"
+        "$nodecal"                     "0"
+        "$ambientocclusion"         "1"
+}
