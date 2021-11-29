@@ -7,13 +7,13 @@ att.AutoStats = true
 att.Desc_Cons = {
     "ur.compen"
 }
-att.SortOrder = 7
+att.SortOrder = -6
 
-att.Mult_Recoil = .85
-att.Mult_RecoilSide = .75
+att.Mult_Recoil = 0.85
+att.Mult_RecoilSide = 0.75
 att.Mult_VisualRecoilMult = 1.5
 att.Mult_ShootVol = 1.1
-att.Mult_Range = .95
-att.Mult_ShootPitch = .95
+att.Mult_Range = 0.95
+att.Mult_ShootPitch = 0.95
 
 att.ActivateElements = {"ur_deagle_barrel_compen"}

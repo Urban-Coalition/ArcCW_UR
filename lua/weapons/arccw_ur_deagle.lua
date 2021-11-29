@@ -60,7 +60,7 @@ SWEP.Damage = 70 -- 2 shot close range kill
 SWEP.DamageMin = 34 -- 3 shot long range kill
 SWEP.RangeMin = 10
 SWEP.Range = 90 -- 2 shot until ~55m
-SWEP.Penetration = 25
+SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 470
@@ -89,7 +89,7 @@ SWEP.Sway = 1.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 240
+SWEP.Delay = 60 / 200
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -111,12 +111,12 @@ SWEP.ReloadInSights = true
 -- NPC --
 
 SWEP.NPCWeaponType = "weapon_revolver"
-SWEP.NPCWeight = 71
+SWEP.NPCWeight = 70
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 6
-SWEP.HipDispersion = 700
+SWEP.AccuracyMOA = 5
+SWEP.HipDispersion = 600
 SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
 
@@ -125,10 +125,10 @@ SWEP.MagID = "deagle"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.8
-SWEP.SightTime = 0.45
-SWEP.ShootSpeedMult = 0.7
+SWEP.SpeedMult = 0.925
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.8
 
 -- Length --
 
