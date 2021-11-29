@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+$baseTexture "models\weapons\arccw\ur_deagle/shell"
+$bumpmap "models\weapons\arccw\ur_deagle/shell_n"
+$phong 1
+$phongboost	12
+$phongexponent 35
+$phongfresnelranges	"[0.05 0.5 1]"
+
+}

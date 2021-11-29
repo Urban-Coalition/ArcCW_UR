@@ -23,6 +23,23 @@ $bodygroup "tritium" {
 	studio "tritium_police.smd"
 	studio "tritium_compact.smd"
 }
+$bodygroup "grip" {
+	studio "grip_plastic.smd"
+	studio "grip_wooden.smd"
+	studio "grip_rubber.smd"
+}
+$bodygroup "rail" {
+    blank
+	studio "lower_rail.smd"
+}
+$bodygroup "bullets" {
+	studio "bullets_50ae.smd"
+	studio "bullets_44mag.smd"
+	studio "bullets_357mag.smd"
+	studio "bullets_410b.smd"
+	blank
+}
+
 
 $cdmaterials "models\weapons\arccw\shared"
 $cdmaterials "models\weapons\arccw\ur_deagle"
