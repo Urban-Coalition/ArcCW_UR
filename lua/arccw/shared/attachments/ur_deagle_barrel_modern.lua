@@ -1,5 +1,8 @@
-att.PrintName = "6\" Desert Eagle Modern Barrel"
+att.PrintName = "6\" Desert Eagle Mark XIX Barrel"
 att.AbbrevName = "6\" Modern Barrel"
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "6\" Predator Modern Barrel"
+end
 att.Icon = nil --todo
 att.Description = "Variation of the factory barrel with a built-in Weaver attachment rail."
 att.Slot = "ur_deagle_barrel"

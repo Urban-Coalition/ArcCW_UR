@@ -1,5 +1,8 @@
 att.PrintName = "6\" Desert Eagle Compensated Barrel"
 att.AbbrevName = "6\" Compensated Barrel"
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "6\" Predator Compensated Barrel"
+end
 att.Icon = nil --todo
 att.Description = "Barrel with an integral muzzle brake. Redirects propellant gases to stabilize the weapon's heavy recoil, but the strengthened muzzle report can become disorienting."
 att.Slot = "ur_deagle_barrel"
@@ -7,7 +10,7 @@ att.AutoStats = true
 att.Desc_Cons = {
     "ur.compen"
 }
-att.SortOrder = -6
+att.SortOrder = 6
 
 att.Mult_Recoil = 0.85
 att.Mult_RecoilSide = 0.75

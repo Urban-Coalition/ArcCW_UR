@@ -1,10 +1,13 @@
 att.PrintName = "5.5\" Desert Eagle Compact Barrel"
 att.AbbrevName = "5.5\" Compact Barrel"
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "5.5\" Predator Compact Barrel"
+end
 att.Icon = nil --todo
 att.Description = "Aftermarket reduced barrel that enhances concealability and ergonomics at the cost of ranged performance."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
-att.SortOrder = -5.5
+att.SortOrder = 5.5
 
 att.Mult_AccuracyMOA = 1.5
 att.Mult_Range = 0.85

@@ -1,10 +1,13 @@
 att.PrintName = "7\" Desert Eagle Extended Barrel"
 att.AbbrevName = "7\" Extended Barrel"
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "7\" Predator Extended Barrel"
+end
 att.Icon = nil --todo
 att.Description = "Slightly extended barrel that provides extra counterweight in addition to marginal ballistic enhancements."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
-att.SortOrder = -7
+att.SortOrder = 7
 
 att.Mult_AccuracyMOA = 0.8
 att.Mult_Range = 1.25

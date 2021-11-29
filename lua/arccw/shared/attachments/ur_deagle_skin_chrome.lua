@@ -1,5 +1,8 @@
 att.PrintName = "Desert Eagle Polished Chrome Finish"
 att.AbbrevName = "Polished Chrome"
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Predator Polished Chrome Finish"
+end
 att.Icon = nil --todo
 att.Description = "A luster that demands attention.\n\n\"I had to kill Bob Morton because he made a mistake. Now it's time to erase that mistake.\""
 att.Slot = "ur_deagle_skin"
