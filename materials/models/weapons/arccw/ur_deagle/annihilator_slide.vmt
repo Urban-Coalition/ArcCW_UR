@@ -2,7 +2,6 @@
 {
 	"$basetexture" "models/weapons/arccw/ur_deagle/annihilator_slide_d"
 	"$bumpmap" "models/weapons/arccw/ur_deagle/annihilator_slide_n"
-
 	"$normalmapalphaenvmapmask" 	1
 	
 	"$phong" 		"1"
@@ -18,6 +17,5 @@
 	"$envmaptint"	"[0.32 0.30 0.33]"
 
 	"$nocull" "1"
-	//$color2 "[2 2 2]"
+	//$color2 "[1.9 1.9 1.9]"
 }
-
