@@ -19,3 +19,4 @@ att.Mult_ShootSpeedMult = 1.1
 --att.Mult_RPM = 1.1
 
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
+att.Override_ShellScale = 2.145
