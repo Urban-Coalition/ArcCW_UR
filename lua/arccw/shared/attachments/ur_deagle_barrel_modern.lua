@@ -4,9 +4,9 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "6\" Predator Modern Barrel"
 end
 att.Icon = nil --todo
-att.Description = "Variation of the factory barrel with a built-in Weaver attachment rail."
+att.Description = "Variation of the factory barrel with a built-in Weaver attachment rail and underbarrel rail mount fix me please."
 att.Slot = "ur_deagle_barrel"
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 999
 
-att.ActivateElements = {"ur_deagle_barrel_modern"}
+att.ActivateElements = {"ur_deagle_barrel_modern", "tac_rail"}
