@@ -1,6 +1,6 @@
 att.PrintName = "Desert Eagle Polished Chrome Finish"
 att.AbbrevName = "Polished Chrome"
-if GetConVar("arccw_truenames"):GetBool() then
+if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator Polished Chrome Finish"
 end
 att.Icon = nil --todo

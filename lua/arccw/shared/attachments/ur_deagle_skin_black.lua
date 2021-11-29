@@ -1,6 +1,6 @@
 att.PrintName = "Desert Eagle Matte Black Finish"
 att.AbbrevName = "Matte Black"
-if GetConVar("arccw_truenames"):GetBool() then
+if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator Matte Black Finish"
 end
 att.Icon = nil --todo

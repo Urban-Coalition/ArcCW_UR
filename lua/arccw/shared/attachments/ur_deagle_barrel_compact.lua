@@ -1,6 +1,6 @@
 att.PrintName = "5.5\" Desert Eagle Compact Barrel"
 att.AbbrevName = "5.5\" Compact Barrel"
-if GetConVar("arccw_truenames"):GetBool() then
+if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "5.5\" Predator Compact Barrel"
 end
 att.Icon = nil --todo

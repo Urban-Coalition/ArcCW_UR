@@ -1,4 +1,7 @@
 att.PrintName = "Desert Eagle 10-Round Extended Magazine"
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Predator 10-Round Extended Magazine"
+end
 att.AbbrevName = "10-Round Extended Mag"
 att.Icon = nil --todo
 att.Description = "A higher capacity magazine increases the time you can spend without reloading. However, the extra rounds add even more weight to an already unwieldy weapon."
