@@ -223,7 +223,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 6}},
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.05, 4.8),
+                vpos = Vector(0, -0.05, 1.25),
                 vang = Angle(90, 0, -90),
             },
         },
@@ -536,6 +536,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
+        ExcludeFlags = {"barrel_annihilator"},
     },
     {
         PrintName = "Tactical",
