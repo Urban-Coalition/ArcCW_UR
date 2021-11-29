@@ -31,10 +31,10 @@ $cdmaterials "models\weapons\arccw\ud_common"
 
 $texturegroup "skinfamilies"
 {
-	{ "deagle" "deagle_plastic"}
-	{ "deagle_black" "deagle_plastic"}
-	{ "deagle_gold" "deagle_plastic"}
-	{ "deagle_chrome" "deagle_plastic"}
+	{ "deagle" "deagle_plastic" "annihilator_slide"}
+	{ "deagle_black" "deagle_plastic" "annihilator_slide_black"}
+	{ "deagle_gold" "deagle_plastic" "annihilator_slide_gold"}
+	{ "deagle_chrome" "deagle_plastic" "annihilator_slide_chrome"}
 }
 
 
