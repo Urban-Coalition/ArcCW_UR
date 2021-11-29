@@ -606,7 +606,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"ur_galil_mag"},
-        DefaultAttName = "30-Round Mag",
+        DefaultAttName = "20-Round Mag",
         DefaultAttIcon = Material("entities/att/acwatt_ur_galil_mag_30.png", "smooth mips"),
     },
     {
