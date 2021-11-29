@@ -6,7 +6,7 @@
 	
 	"$phong" 		"1"
 	"$phongexponent" "4"
-	"$phongboost" "4"
+	"$phongboost" "1"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[1 1 1]"
 	"$halflambert" "1"
@@ -14,7 +14,7 @@
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 			"1"
 	//"$envmapFresnelMinMaxExp" "[0 5 .4]"
-	//"$envmaptint"	"[0.32 0.30 0.33]"
+	"$envmaptint"	"[0.32 0.30 0.33]"
 
 	"$nocull" "1"
 	$color2 "[2 2 2]"

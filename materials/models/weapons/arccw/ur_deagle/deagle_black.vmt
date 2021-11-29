@@ -5,7 +5,7 @@
 	"$normalmapalphaenvmapmask" 	1
 	
 	"$phong" 		"1"
-	"$phongexponent" "4"
+	"$phongexponent" "20"
 	"$phongboost" "1"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[1 1 1]"
