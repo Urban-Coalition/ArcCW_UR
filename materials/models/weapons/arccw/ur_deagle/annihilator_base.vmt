@@ -3,18 +3,17 @@
 	"$basetexture" "models/weapons/arccw/ur_deagle/annihilator_base_d"
 	"$bumpmap" "models/weapons/arccw/ur_deagle/annihilator_base_n"
 	
-	$phong "1"
-	$phongexponent	"100"
-	$phongboost "2.5"
-	$phongfresnelranges "[0.5 1.5 1.5]"
-	$phongtint "[.2 .65 1]"
-	$phongalbedotint "1"
-	$blendtintbybasealpha  "1"
-	$normalmapalphaenvmapmask "1"
+	"$phong"					"1"
+	"$phongboost"				"12"
+	"$phongfresnelranges"		"[1 2 4]"
+	"$phongtint"				"[0.79 0.55 0.11]"
+	"$halflambert" "1"
+	
+	"$normalmapalphaenvmapmask" 	1
 	
 	$envmap "env_cubemap"
-	$envmaptint "[.9 .9 1]"
-	$envmapfresnel "[1]"
+	"$envmaptint"				"[0.89 0.65 0.21]"
+	$envmapfresnel "1"
 
 	$nocull 1
 }
