@@ -224,6 +224,26 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 1}}
     },
 
+    ["ur_deagle_grip_wooden"] = {
+        VMBodygroups = {{ind = 4, bg = 1}}
+    },
+    ["ur_deagle_grip_rubber"] = {
+        VMBodygroups = {{ind = 4, bg = 2}}
+    },
+
+    ["tac_rail"] = {
+        VMBodygroups = {{ind = 5, bg = 1}}
+    },
+    ["ur_deagle_caliber_44"] = {
+        VMBodygroups = {{ind = 6, bg = 1}}
+    },
+    ["ur_deagle_caliber_357"] = {
+        VMBodygroups = {{ind = 6, bg = 2}}
+    },
+    ["ur_deagle_caliber_410"] = {
+        VMBodygroups = {{ind = 6, bg = 3}}
+    },
+
     ["ur_deagle_skin_black"] = {
         VMSkin = 1,
     },
@@ -506,6 +526,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
+        InstalledEles = {"tac_rail"},
         Slot = {"tac"},
         Bone = "Body",
         Offset = {
