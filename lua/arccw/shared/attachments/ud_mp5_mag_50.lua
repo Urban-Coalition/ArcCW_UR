@@ -1,8 +1,8 @@
-att.PrintName = "MP5 50-Round C-Mag"
-att.AbbrevName = "50-Round C-Mag"
+att.PrintName = "MP5 50-Round Drum Magazine"
+att.AbbrevName = "50-Round Drum"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7 50-Round C-Mag"
+    att.PrintName = "K7 50-Round Drum"
 end
 
 

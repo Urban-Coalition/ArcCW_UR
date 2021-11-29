@@ -8,6 +8,8 @@ $bodygroup "barrel" {
 	studio "barrel_modern.smd"
 	studio "barrel_long.smd"
 	studio "barrel_police.smd"
+	studio "barrel_compensated.smd"
+	studio "barrel_compact.smd"
 }
 $bodygroup "magazine" {
 	studio "mag_7.smd"
@@ -18,6 +20,7 @@ $bodygroup "tritium" {
 	studio "tritium.smd"
 	studio "tritium_long.smd"
 	studio "tritium_police.smd"
+	studio "tritium_compact.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
