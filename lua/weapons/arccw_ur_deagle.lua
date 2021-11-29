@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"
 SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-SWEP.ShellScale = 1.6
+SWEP.ShellScale = 2.5
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
