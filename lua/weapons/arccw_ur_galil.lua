@@ -1382,7 +1382,6 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.75, 3),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.3, 1.3, 1.3),
         ExtraSightDist = 8,
     },
     {
@@ -1412,7 +1411,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Receiver",
-        DefaultAttName = "Standard Receiver",
+        DefaultAttName = "battle rifle Standard Receiver",
         DefaultAttIcon = Material("entities/att/acwatt_ur_galil_receiver_default.png", "smooth mips"),
         Slot = {"ur_galil_receiver"},
         Bone = "m16_parent",
@@ -1442,13 +1441,6 @@ SWEP.Attachments = {
         },
         GivesFlags = {"tac"},
         --InstalledEles = {"ur_galil_clamp_fullsize"}
-    },
-    {
-        PrintName = "Grip Type",
-        Slot = {"ur_galil_grip"},
-        DefaultAttName = "Standard Grip",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_galil_grip_default.png", "smooth mips"),
-        ExcludeFlags = {"m16_adar"}
     },
     {
         PrintName = "Stock",
@@ -1485,7 +1477,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm", "ur_galil_charm"},
+        Slot = {"charm", "fml_charm"},
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {
