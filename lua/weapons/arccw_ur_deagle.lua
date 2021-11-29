@@ -219,6 +219,15 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["ur_deagle_barrel_annihilator"] = {
+        VMBodygroups = {{ind = 1, bg = 6}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -0.05, 4.8),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
 
     ["ur_deagle_mag_ext"] = {
         VMBodygroups = {{ind = 2, bg = 1}}
@@ -265,7 +274,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         -- Setup for when we introduce new barrel options
         if barrel == "ur_deagle_barrel_marksman" then
             vm:SetBodygroup(3,3)
-        elseif barrel == "ur_deagle_barrel_ext" then
+        elseif barrel == "ur_deagle_barrel_ext" or barrel == "ur_deagle_barrel_annihilator" then
             vm:SetBodygroup(3,2)
         elseif barrel == "ur_deagle_barrel_compact" then
             vm:SetBodygroup(3,4)
@@ -278,7 +287,9 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 end
 
 SWEP.Hook_NameChange = function(wep, name)
-    if !GetConVar("arccw_truenames"):GetBool() then
+    if wep.Attachments[2].Installed == "ur_deagle_barrel_annihilator" then
+        return "Annihilator"
+    elseif !GetConVar("arccw_truenames"):GetBool() then
         local add = ".50"
         local cal = wep.Attachments[3].Installed
 
