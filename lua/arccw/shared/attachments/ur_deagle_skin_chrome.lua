@@ -1,7 +1,7 @@
 att.PrintName = "Desert Eagle Polished Chrome Finish"
 att.AbbrevName = "Polished Chrome"
 att.Icon = nil --todo
-att.Description = "\"I had to kill Bob Morton because he made a mistake. Now it's time to erase that mistake.\""
+att.Description = "A luster that demands attention.\n\n\"I had to kill Bob Morton because he made a mistake. Now it's time to erase that mistake.\""
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"
