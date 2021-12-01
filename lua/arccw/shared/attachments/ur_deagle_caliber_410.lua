@@ -9,23 +9,27 @@ end
 
 att.AutoStats = true
 att.Desc_Pros = {
-    "+4 Projectiles"
+    "ur.deagle.410.1"
 }
 att.Desc_Cons = {
-    "uc.jam"
+    "ur.deagle.410.2"
 }
 att.Slot = "ur_deagle_caliber"
 att.SortOrder = -1
 
-att.Override_Num = 5
---att.Mult_Damage = 1.2
-att.Mult_RPM = .8
-att.Mult_Range = .75
-att.Mult_AccuracyMOA = 11
-att.Add_ClipSize = 3
-att.Mult_HipDispersion = 1.5
-att.Override_Malfunction = true
-att.Mult_MalfunctionVariance = 1.5
+att.Override_Num = 4
+att.Mult_Range = 0.5
+att.Override_AccuracyMOA = 35
+att.Override_AccuracyMOA_Priority = 0
+att.Mult_ClipSize = 1.15
+att.Mult_Recoil = 0.75
+
+att.Override_HullSize = 0.1
+att.Override_BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun
+att.Override_Penetration = 1
+
+--att.Override_Malfunction = true
+--att.Mult_MalfunctionVariance = 1.5
 
 att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"

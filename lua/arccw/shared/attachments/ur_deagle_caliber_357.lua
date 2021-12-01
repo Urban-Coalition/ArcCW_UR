@@ -11,7 +11,7 @@ att.AutoStats = true
 att.Slot = "ur_deagle_caliber"
 
 att.Mult_ClipSize = 1.3
-att.Mult_Recoil = 0.6
+att.Mult_Recoil = 0.7
 att.Mult_Damage = 0.725
 att.Mult_DamageMin = 0.725
 
