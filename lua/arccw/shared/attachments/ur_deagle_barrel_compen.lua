@@ -21,5 +21,5 @@ att.Mult_Range = 0.95
 att.Mult_ShootPitch = 0.95
 att.Mult_SightedSpeedMult = .9
 
-att.ActivateElements = {"ur_deagle_barrel_compen"}
+att.ActivateElements = {"ur_deagle_barrel_compen", "tac_rail"}
 att.GivesFlags = {"barrel_annihilator"}
