@@ -8,7 +8,7 @@ att.Description = "Heavily modified barrel with gilded parts and an oversized in
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
 att.Desc_Cons = {
-    "150% Visual recoil",
+    "+150% Visual recoil",
     "uc.nomuzzle"
 }
 att.SortOrder = 6
