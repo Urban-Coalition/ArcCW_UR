@@ -3,7 +3,7 @@ att.AbbrevName = "6.75\" Annihilator Barrel"
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "6.75\" Predator Annihilator Barrel"
 end
-att.Icon = nil --todo
+att.Icon = Material("entities/att/acwatt_ur_deagle_barrel_annihilator.png","smooth mips")
 att.Description = "Heavily modified barrel with gilded parts and an oversized integral muzzle brake. Effects are exacerbated, but the reduced barrel material does improve handling slightly. The sheer volume of gas vented out the sides of the barrel prevents muzzle attachments from working at all."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true

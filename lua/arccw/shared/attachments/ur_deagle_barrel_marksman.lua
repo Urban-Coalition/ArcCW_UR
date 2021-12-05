@@ -3,7 +3,7 @@ att.AbbrevName = "10\" Marksman Barrel"
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "10\" Predator Marksman Barrel"
 end
-att.Icon = nil --todo
+att.Icon = Material("entities/att/acwatt_ur_deagle_barrel_police.png","smooth mips")
 att.Description = "Elongated barrel for niche mid-range roles. Especially front-heavy."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true

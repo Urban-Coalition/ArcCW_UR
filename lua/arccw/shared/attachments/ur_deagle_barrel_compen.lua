@@ -3,7 +3,7 @@ att.AbbrevName = "6\" Compensated Barrel"
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "6\" Predator Compensated Barrel"
 end
-att.Icon = nil --todo
+att.Icon = Material("entities/att/acwatt_ur_deagle_barrel_compensated.png","smooth mips")
 att.Description = "Barrel with an integral muzzle brake. Redirects propellant gases to stabilize the weapon's heavy recoil, but the strengthened muzzle report can become disorienting. Because gas is vented out of the sides of the barrel, external muzzle accessories cannot operate correctly."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true

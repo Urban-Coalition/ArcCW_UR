@@ -3,7 +3,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator 10-Round Extended Magazine"
 end
 att.AbbrevName = "10-Round Extended Mag"
-att.Icon = nil --todo
+att.Icon = Material("entities/att/acwatt_ur_deagle_mag_10.png","mips smooth")
 att.Description = "A higher capacity magazine increases the time you can spend without reloading. However, the extra rounds add even more weight to an already unwieldy weapon."
 att.Slot = "ur_deagle_mag"
 att.AutoStats = true

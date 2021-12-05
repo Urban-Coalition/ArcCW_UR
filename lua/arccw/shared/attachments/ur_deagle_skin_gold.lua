@@ -1,6 +1,6 @@
 att.PrintName = "Desert Eagle Titanium Gold Finish"
 att.AbbrevName = "Titanium Gold"
-att.Icon = nil --todo
+att.Icon = Material("entities/att/acwatt_ur_deagle_finish_gold.png","mips smooth")
 att.Description = "Look, you're already using a Desert Eagle, so we might as well gut whatever sense of style you have left."
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator Titanium Gold Finish"

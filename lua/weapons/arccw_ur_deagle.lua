@@ -274,10 +274,12 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         -- Setup for when we introduce new barrel options
         if barrel == "ur_deagle_barrel_marksman" then
             vm:SetBodygroup(3,3)
-        elseif barrel == "ur_deagle_barrel_ext" or barrel == "ur_deagle_barrel_annihilator" then
+        elseif barrel == "ur_deagle_barrel_ext" then
             vm:SetBodygroup(3,2)
         elseif barrel == "ur_deagle_barrel_compact" then
             vm:SetBodygroup(3,4)
+        elseif barrel == "ur_deagle_barrel_annihilator" then
+            vm:SetBodygroup(3,5)
         else
             vm:SetBodygroup(3,1)
         end
@@ -507,7 +509,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Slot = {"ur_deagle_barrel"},
-        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
         DefaultAttName = "6\" Standard Barrel",
         Bone = "Body",
         Offset = {
@@ -518,7 +520,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         Slot = {"ur_deagle_caliber"},
-        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defhand.png"),
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_bullets_50ae.png","mips smooth"),
         DefaultAttName = ".50 Action Express",
         Bone = "Body",
         Offset = {
@@ -551,7 +553,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"ur_deagle_mag"},
-        DefaultAttIcon = Material("entities/att/acwatt_lpfal_defmag.png"),
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_mag_7.png","mips smooth"),
         DefaultAttName = "7-Round Mag",
     },
     {
@@ -567,6 +569,7 @@ SWEP.Attachments = {
     {
         PrintName = "Grip",
         DefaultAttName = "Factory Grip",
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_grip_plastic.png","mips smooth"),
         Slot = "ur_deagle_grip"
     },
     {
@@ -604,6 +607,7 @@ SWEP.Attachments = {
         PrintName = "Finish",
         Slot = {"ur_deagle_skin"},
         DefaultAttName = "Stainless Steel",
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
         FreeSlot = true,
     },
 }
