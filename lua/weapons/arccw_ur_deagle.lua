@@ -352,13 +352,13 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire_01", "fire_02", "fire_03"},
         Time = 0.9,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.05,
         SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 0.9,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.05,
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
     },
 
