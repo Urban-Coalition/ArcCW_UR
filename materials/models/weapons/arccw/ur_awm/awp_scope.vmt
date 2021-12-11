@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ur_awm/awp_scope_color"
+	"$bumpmap" "models/weapons/arccw/ur_awm/awp_scope_normals"
+	"$normalmapalphaenvmapmask" 	1
+	
+	"$phong" 		"1"
+	"$phongexponent" "15"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[.6 1 2]"
+	
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"1"
+	"$envmaptint" "[.1 .1  .1]"
+}
