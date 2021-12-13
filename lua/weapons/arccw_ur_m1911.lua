@@ -29,12 +29,12 @@ SWEP.TrueName = "M1911"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "jesus gun"
+SWEP.Trivia_Desc = "Semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it still isn’t considered an obsolete design. It can get the job done faster than many other pistols, but its single-stacked magazine can’t hold many rounds."
 SWEP.Trivia_Manufacturer = "ISM"
 SWEP.Trivia_Calibre = ".45 Automatic Colt Pistol"
-SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-SWEP.Trivia_Country = "Israel"
-SWEP.Trivia_Year = 1983
+SWEP.Trivia_Mechanism = "Short Recoil"
+SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Year = 1911
 
 -- Weapon slot --
 
@@ -44,7 +44,7 @@ SWEP.Slot = 1
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Magnum Research"
+    SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -56,15 +56,16 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 70 -- 2 shot close range kill
-SWEP.DamageMin = 34 -- 3 shot long range kill
-SWEP.RangeMin = 10
-SWEP.Range = 90 -- 2 shot until ~55m
-SWEP.Penetration = 9
+-- Balancing is very early, 8z fix pls
+SWEP.Damage = 35 -- 3 shot close range kill
+SWEP.DamageMin = 21 -- 5 shot long range kill
+SWEP.RangeMin = 12
+SWEP.Range = 50 -- 3 shot until ~30m
+SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 450
-SWEP.PhysBulletMuzzleVelocity = 450
+SWEP.MuzzleVelocity = 415
+SWEP.PhysBulletMuzzleVelocity = 415
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -72,24 +73,22 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 7
-SWEP.ExtendedClipSize = 14
-SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 1.5
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.25
+SWEP.RecoilSide = 0.5
 
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1.0
-SWEP.MaxRecoilBlowback = 1
-SWEP.MaxRecoilPunch = 4
+SWEP.MaxRecoilBlowback = .5
+SWEP.MaxRecoilPunch = .8
 
-SWEP.Sway = 0.75
+SWEP.Sway = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 400
+SWEP.Delay = 60 / 500
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -110,29 +109,29 @@ SWEP.ReloadInSights = true
 
 -- NPC --
 
-SWEP.NPCWeaponType = "weapon_revolver"
+SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 70
 
 -- Accuracy --
 
 SWEP.AccuracyMOA = 5
-SWEP.HipDispersion = 600
-SWEP.MoveDispersion = 200
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 1000
 
-SWEP.Primary.Ammo = "357"
-SWEP.MagID = "deagle"
+SWEP.Primary.Ammo = "pistol"
+SWEP.MagID = "m1911"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.925
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.5
-SWEP.ShootSpeedMult = 0.8
+SWEP.SpeedMult = 0.965
+SWEP.SightedSpeedMult = 0.875
+SWEP.SightTime = 0.35
+SWEP.ShootSpeedMult = 1
 
 -- Length --
 
-SWEP.BarrelLength = 12
+SWEP.BarrelLength = 8
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
@@ -186,128 +185,8 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-    ["ur_deagle_barrel_modern"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-    ["ur_deagle_barrel_compact"] = {
-        VMBodygroups = {{ind = 1, bg = 5}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, -.2),
-                vang = Angle(90, 0, -90),
-            },
-        }
-    },
-    ["ur_deagle_barrel_compen"] = {
-        VMBodygroups = {{ind = 1, bg = 4}},
-    },
-    ["ur_deagle_barrel_ext"] = {
-        VMBodygroups = {{ind = 1, bg = 2}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, 1.25),
-                vang = Angle(90, 0, -90),
-            },
-        }
-    },
-    ["ur_deagle_barrel_marksman"] = {
-        VMBodygroups = {{ind = 1, bg = 3}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, -0.05, 4.8),
-                vang = Angle(90, 0, -90),
-            },
-        },
-    },
-    ["ur_deagle_barrel_annihilator"] = {
-        VMBodygroups = {{ind = 1, bg = 6}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, -0.05, 1.25),
-                vang = Angle(90, 0, -90),
-            },
-        },
-    },
 
-    ["ur_deagle_mag_ext"] = {
-        VMBodygroups = {{ind = 2, bg = 1}}
-    },
-
-    ["ur_deagle_grip_wooden"] = {
-        VMBodygroups = {{ind = 4, bg = 1}}
-    },
-    ["ur_deagle_grip_rubber"] = {
-        VMBodygroups = {{ind = 4, bg = 2}}
-    },
-
-    ["tac_rail"] = {
-        VMBodygroups = {{ind = 5, bg = 1}}
-    },
-    ["ur_deagle_caliber_44"] = {
-        VMBodygroups = {{ind = 6, bg = 1}}
-    },
-    ["ur_deagle_caliber_357"] = {
-        VMBodygroups = {{ind = 6, bg = 2}}
-    },
-    ["ur_deagle_caliber_410"] = {
-        VMBodygroups = {{ind = 6, bg = 3}}
-    },
-
-    ["ur_deagle_skin_black"] = {
-        VMSkin = 1,
-    },
-    ["ur_deagle_skin_gold"] = {
-        VMSkin = 2,
-    },
-    ["ur_deagle_skin_chrome"] = {
-        VMSkin = 3,
-    },
 }
-
-SWEP.Hook_ModifyBodygroups = function(wep,data)
-    local vm = data.vm
-    local optic = wep.Attachments[1].Installed
-    local tritium = (optic == "ur_deagle_tritium")
-    local barrel = wep.Attachments[2].Installed or 0
-
-    if tritium then
-        -- Setup for when we introduce new barrel options
-        if barrel == "ur_deagle_barrel_marksman" then
-            vm:SetBodygroup(3,3)
-        elseif barrel == "ur_deagle_barrel_ext" then
-            vm:SetBodygroup(3,2)
-        elseif barrel == "ur_deagle_barrel_compact" then
-            vm:SetBodygroup(3,4)
-        elseif barrel == "ur_deagle_barrel_annihilator" then
-            vm:SetBodygroup(3,5)
-        else
-            vm:SetBodygroup(3,1)
-        end
-    -- elseif optic and barrel == 0 then
-    --     vm:SetBodygroup(1,1)
-    end
-end
-
-SWEP.Hook_NameChange = function(wep, name)
-    if wep.Attachments[2].Installed == "ur_deagle_barrel_annihilator" then
-        return "Annihilator"
-    elseif !GetConVar("arccw_truenames"):GetBool() then
-        local add = ".50"
-        local cal = wep.Attachments[3].Installed
-
-        if cal == "ur_deagle_caliber_357" then
-            add = ".357"
-        elseif cal == "ur_deagle_caliber_44" then
-            add = ".44"
-        elseif cal == "ur_deagle_caliber_410" then
-            add = ".410"
-        end
-
-        return "Predator " .. add
-    else
-        return "Desert Eagle"
-    end
-end
 
 -- Animations --
 
@@ -527,7 +406,7 @@ SWEP.Attachments = {
         PrintName = "Caliber",
         Slot = {"ur_m1911_caliber"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_bullets_50ae.png","mips smooth"),
-        DefaultAttName = ".50 Action Express",
+        DefaultAttName = ".45 ACP",
         Bone = "Body",
         Offset = {
             vpos = Vector(3.07, -3.8, -27),
