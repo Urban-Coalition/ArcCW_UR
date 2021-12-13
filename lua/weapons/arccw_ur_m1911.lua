@@ -1,0 +1,619 @@
+SWEP.Base = "arccw_base"
+SWEP.Spawnable = true
+SWEP.Category = "ArcCW - Urban Coalition"
+SWEP.AdminOnly = false
+SWEP.UseHands = true
+
+-- Muzzle and shell effects --
+
+SWEP.MuzzleEffect = "muzzleflash_pistol"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
+SWEP.ShellScale = 1
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
+SWEP.ShellPitch = 90
+
+SWEP.MuzzleEffectAttachment = 1
+SWEP.CaseEffectAttachment = 2
+SWEP.TracerNum = 1
+SWEP.TracerWidth = 1
+SWEP.ShootPitch = 100
+
+-- Fake name --
+
+SWEP.PrintName = "fake 1911"
+
+-- True name --
+
+SWEP.TrueName = "M1911"
+
+-- Trivia --
+
+SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Desc = "jesus gun"
+SWEP.Trivia_Manufacturer = "ISM"
+SWEP.Trivia_Calibre = ".45 Automatic Colt Pistol"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+SWEP.Trivia_Country = "Israel"
+SWEP.Trivia_Year = 1983
+
+-- Weapon slot --
+
+SWEP.Slot = 1
+
+-- Weapon's manufacturer real name --
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+    SWEP.Trivia_Manufacturer = "Magnum Research"
+end
+
+-- Viewmodel / Worldmodel / FOV --
+
+SWEP.ViewModel = "models/weapons/arccw/c_ur_m1911.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ur_m1911.mdl"
+SWEP.ViewModelFOV = 60
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
+
+-- Damage parameters --
+
+SWEP.Damage = 70 -- 2 shot close range kill
+SWEP.DamageMin = 34 -- 3 shot long range kill
+SWEP.RangeMin = 10
+SWEP.Range = 90 -- 2 shot until ~55m
+SWEP.Penetration = 9
+SWEP.DamageType = DMG_BULLET
+SWEP.ShootEntity = nil
+SWEP.MuzzleVelocity = 450
+SWEP.PhysBulletMuzzleVelocity = 450
+
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
+
+-- Mag size --
+
+SWEP.ChamberSize = 1
+SWEP.Primary.ClipSize = 7
+SWEP.ExtendedClipSize = 14
+SWEP.ReducedClipSize = 5
+
+-- Recoil --
+
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 0.75
+
+SWEP.RecoilRise = 0.25
+SWEP.VisualRecoilMult = 1.0
+SWEP.MaxRecoilBlowback = 1
+SWEP.MaxRecoilPunch = 4
+
+SWEP.Sway = 0.75
+
+-- Firerate / Firemodes --
+
+SWEP.Delay = 60 / 400
+SWEP.Num = 1
+SWEP.Firemodes = {
+    {
+        Mode = 1,
+    },
+    {
+        Mode = 0
+    }
+}
+
+SWEP.ShootPitch = 100
+SWEP.ShootVol = 120
+
+SWEP.ProceduralRegularFire = false
+SWEP.ProceduralIronFire = false
+
+SWEP.ReloadInSights = true
+
+-- NPC --
+
+SWEP.NPCWeaponType = "weapon_revolver"
+SWEP.NPCWeight = 70
+
+-- Accuracy --
+
+SWEP.AccuracyMOA = 5
+SWEP.HipDispersion = 600
+SWEP.MoveDispersion = 200
+SWEP.JumpDispersion = 1000
+
+SWEP.Primary.Ammo = "357"
+SWEP.MagID = "deagle"
+
+-- Speed multipliers --
+
+SWEP.SpeedMult = 0.925
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.8
+
+-- Length --
+
+SWEP.BarrelLength = 12
+SWEP.ExtraSightDist = 7
+
+-- Ironsights / Customization / Poses --
+
+SWEP.HolsterPos = Vector(0.3, 3, 1)
+SWEP.HolsterAng = Angle(-5, 15, -20)
+
+SWEP.HoldtypeHolstered = "normal"
+SWEP.HoldtypeActive = "revolver"
+SWEP.HoldtypeSights = "revolver"
+
+SWEP.IronSightStruct = {
+     Pos = Vector(-2.55, 10, 1.05),
+     Ang = Angle(0.6, 0, 0),
+     Magnification = 1,
+     SwitchToSound = "",
+}
+
+SWEP.ActivePos = Vector(0.2, 2, 1.5)
+SWEP.ActiveAng = Angle(0, 0, -2)
+
+SWEP.CustomizePos = Vector(-1, -2, 1)
+SWEP.CustomizeAng = Angle(0, 0, 0)
+
+SWEP.CrouchPos = Vector(-2, 0, 0)
+SWEP.CrouchAng = Angle(0, 0, -8)
+
+SWEP.MirrorVMWM = true
+SWEP.WorldModelOffset = {
+    pos        =    Vector(-10.5, 2.5, -5),
+    ang        =    Angle(-6, -6, 180),
+    bone    =    "ValveBiped.Bip01_R_Hand",
+}
+
+-- Weapon sounds --
+
+local path = ")^weapons/arccw_ur/1911/"
+local common = ")^/arccw_uc/common/"
+local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
+SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
+
+-- Bodygroups --
+
+SWEP.BulletBones = {
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3", [4] = "Bullet4",    [5] = "Bullet5",    [6] = "Bullet6", [7] = "Bullet7"
+}
+
+SWEP.DefaultBodygroups = "000000000"
+
+SWEP.AttachmentElements = {
+    ["ur_deagle_barrel_modern"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["ur_deagle_barrel_compact"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, -.2),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ur_deagle_barrel_compen"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+    },
+    ["ur_deagle_barrel_ext"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, 1.25),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ur_deagle_barrel_marksman"] = {
+        VMBodygroups = {{ind = 1, bg = 3}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -0.05, 4.8),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
+    ["ur_deagle_barrel_annihilator"] = {
+        VMBodygroups = {{ind = 1, bg = 6}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -0.05, 1.25),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
+
+    ["ur_deagle_mag_ext"] = {
+        VMBodygroups = {{ind = 2, bg = 1}}
+    },
+
+    ["ur_deagle_grip_wooden"] = {
+        VMBodygroups = {{ind = 4, bg = 1}}
+    },
+    ["ur_deagle_grip_rubber"] = {
+        VMBodygroups = {{ind = 4, bg = 2}}
+    },
+
+    ["tac_rail"] = {
+        VMBodygroups = {{ind = 5, bg = 1}}
+    },
+    ["ur_deagle_caliber_44"] = {
+        VMBodygroups = {{ind = 6, bg = 1}}
+    },
+    ["ur_deagle_caliber_357"] = {
+        VMBodygroups = {{ind = 6, bg = 2}}
+    },
+    ["ur_deagle_caliber_410"] = {
+        VMBodygroups = {{ind = 6, bg = 3}}
+    },
+
+    ["ur_deagle_skin_black"] = {
+        VMSkin = 1,
+    },
+    ["ur_deagle_skin_gold"] = {
+        VMSkin = 2,
+    },
+    ["ur_deagle_skin_chrome"] = {
+        VMSkin = 3,
+    },
+}
+
+SWEP.Hook_ModifyBodygroups = function(wep,data)
+    local vm = data.vm
+    local optic = wep.Attachments[1].Installed
+    local tritium = (optic == "ur_deagle_tritium")
+    local barrel = wep.Attachments[2].Installed or 0
+
+    if tritium then
+        -- Setup for when we introduce new barrel options
+        if barrel == "ur_deagle_barrel_marksman" then
+            vm:SetBodygroup(3,3)
+        elseif barrel == "ur_deagle_barrel_ext" then
+            vm:SetBodygroup(3,2)
+        elseif barrel == "ur_deagle_barrel_compact" then
+            vm:SetBodygroup(3,4)
+        elseif barrel == "ur_deagle_barrel_annihilator" then
+            vm:SetBodygroup(3,5)
+        else
+            vm:SetBodygroup(3,1)
+        end
+    -- elseif optic and barrel == 0 then
+    --     vm:SetBodygroup(1,1)
+    end
+end
+
+SWEP.Hook_NameChange = function(wep, name)
+    if wep.Attachments[2].Installed == "ur_deagle_barrel_annihilator" then
+        return "Annihilator"
+    elseif !GetConVar("arccw_truenames"):GetBool() then
+        local add = ".50"
+        local cal = wep.Attachments[3].Installed
+
+        if cal == "ur_deagle_caliber_357" then
+            add = ".357"
+        elseif cal == "ur_deagle_caliber_44" then
+            add = ".44"
+        elseif cal == "ur_deagle_caliber_410" then
+            add = ".410"
+        end
+
+        return "Predator " .. add
+    else
+        return "Desert Eagle"
+    end
+end
+
+-- Animations --
+
+SWEP.Animations = {
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 120 / 60,
+    },
+    ["idle"] = {
+        Source = "idle",
+        Time = 120 / 60,
+    },
+    ["ready"] = {
+        Source = "ready",
+        Time = 200 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.6,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = path .. "rack1.ogg", t = 10 / 60, c = ca },
+            { s = path .. "rack2.ogg", t = 25 / 60, c = ca },
+        },
+    },
+    ["draw"] = {
+        Source = "draw",
+        ProcDraw = true,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        ProcDraw = true,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    --[[["holster"] = {
+        Source = "idle",
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
+    },]]
+
+    ["fire"] = {
+        Source = "fire",
+        Time = 0.9,
+        ShellEjectAt = 0.05,
+        SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
+    },
+    ["fire_empty"] = {
+        Source = "fire_empty",
+        Time = 0.9,
+        ShellEjectAt = 0.05,
+        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+    },
+
+    -- 7-R Reloads --
+
+--[[    ["reload"] = {
+        Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.3525,
+        Time = 115 / 60,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.6,
+        LHIKOut = 0.62,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 6 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 35 / 60, c = ca },
+        },
+    },
+    ["reload_empty"] = {
+        Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.75,
+        Time = 175 / 60,
+        LastClip1OutTime = 0.76,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKEaseIn = 0.1,
+        LHIKEaseOut = 0.55,
+        LHIKOut = 0.7,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 6 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 35 / 60, c = ca },
+            { s = path .. "slidedrop.ogg", t = 115 / 60, c = ca },
+            { s = rottle, t = 75 / 60, c = ca },
+        },
+    },
+
+    -- Inspecc --
+
+    ["enter_inspect"] = {
+        Source = "enter_inspect",
+        time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect"] = {
+        Source = "idle_inspect",
+        time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect"] = {
+        Source = "exit_inspect",
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 100 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 114 / 60, c = ca },
+            { s = path .. "rack1.ogg", t = 155 / 60, c = ca },
+            { s = rottle, t = 160 / 60, c = ca },
+            { s = path .. "rack2.ogg", t = 178 / 60, c = ca },
+        },
+    },
+
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKOut = 0,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
+        time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 100 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 114 / 60, c = ca },
+            { s = rottle, t = 160 / 60, c = ca },
+        },
+    },
+}]]
+
+-- ADS animation blending, thanks fesiug -- 
+
+SWEP.Hook_Think = function(wep)
+    local vm = wep:GetOwner():GetViewModel()
+    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) )
+end
+
+
+-- Attachments --
+
+SWEP.CamAttachment = 3
+
+SWEP.Attachments = {
+    {
+        PrintName = "Optic",
+        Slot = {"optic_lp"},
+        DefaultAttName = "Iron Sights",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0, -5.3, 7),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Barrel",
+        Slot = {"ur_m1911_barrel"},
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
+        DefaultAttName = "6\" Standard Barrel",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(3.07, -3.8, -27),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Caliber",
+        Slot = {"ur_m1911_caliber"},
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_bullets_50ae.png","mips smooth"),
+        DefaultAttName = ".50 Action Express",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(3.07, -3.8, -27),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultAttName = "Standard Muzzle",
+        Slot = {"muzzle"},
+        Bone = "Barrel",
+        Offset = {
+            vpos = Vector(0, 0, 0.2),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"nofh"},
+        ExcludeFlags = {"barrel_annihilator"},
+    },
+    {
+        PrintName = "Tactical",
+        InstalledEles = {"tac_rail"},
+        Slot = {"tac"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0, -3.7, 7),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Magazine",
+        Slot = {"ur_m1911_mag"},
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_mag_7.png","mips smooth"),
+        DefaultAttName = "7-Round Mag",
+    },
+    {
+        PrintName = "Stock",
+        Slot = {"uc_stock", "go_stock_pistol_bt"},
+        VMScale = Vector(1.1, 1.1, 1.1),
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0, -0.25, 0),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Grip",
+        DefaultAttName = "Factory Grip",
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_grip_plastic.png","mips smooth"),
+        Slot = "ur_m1911_grip"
+    },
+    {
+        PrintName = "Ammo Type",
+        DefaultAttName = "\"FMJ\" Full Metal Jacket",
+        Slot = "uc_ammo",
+    },
+    {
+        PrintName = "Powder Load",
+        Slot = "uc_powder",
+        DefaultAttName = "Standard Load"
+    },
+    {
+        PrintName = "Training Package",
+        Slot = "uc_tp",
+        DefaultAttName = "Basic Training"
+    },
+    {
+        PrintName = "Internals",
+        Slot = "uc_fg", -- Fire group
+        DefaultAttName = "Standard Internals"
+    },
+    {
+        PrintName = "Charm",
+        Slot = {"charm","fml_charm"},
+        FreeSlot = true,
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0.65, -4.1, 8.5),
+            vang = Angle(90, 0, -100),
+        },
+        VMScale = Vector(.6,.6,.6),
+    },
+    --[[{
+        PrintName = "Finish",
+        Slot = {"ur_deagle_skin"},
+        DefaultAttName = "Stainless Steel",
+        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
+        FreeSlot = true,
+    },]]
+}
