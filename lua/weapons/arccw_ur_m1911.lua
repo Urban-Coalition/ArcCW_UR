@@ -365,8 +365,8 @@ SWEP.Animations = {
             { s = path .. "magin.ogg", t = 114 / 60, c = ca },
             { s = rottle, t = 160 / 60, c = ca },
         },
-    },
-}]]
+    },]]
+}
 
 -- ADS animation blending, thanks fesiug -- 
 
