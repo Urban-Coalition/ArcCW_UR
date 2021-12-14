@@ -150,7 +150,7 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0.2, 2, 1.5)
+SWEP.ActivePos = Vector(0.2, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.CustomizePos = Vector(-1, -2, 1)
@@ -251,7 +251,7 @@ SWEP.Animations = {
 
     -- 7-R Reloads --
 
---[[    ["reload"] = {
+    ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.3525,
@@ -365,7 +365,7 @@ SWEP.Animations = {
             { s = path .. "magin.ogg", t = 114 / 60, c = ca },
             { s = rottle, t = 160 / 60, c = ca },
         },
-    },]]
+    },
 }
 
 -- ADS animation blending, thanks fesiug -- 
