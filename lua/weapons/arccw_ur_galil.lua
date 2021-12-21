@@ -59,19 +59,12 @@ SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
-
- -- 8z i NEED YOU
-  -- 8z i NEED YOU
-   -- 8z i NEED YOU
-    -- 8z i NEED YOU
-     -- 8z i NEED YOU
-
-SWEP.Damage = 40 -- 3 shot kill
-SWEP.DamageMin = 30 -- 4 shot kill
+SWEP.Damage = 54 -- 2 shot short range kill
+SWEP.DamageMin = 25 -- 4 shot long range kill
 SWEP.RangeMin = 50
-SWEP.Range = 400 -- 4 shot until ~250m FALSEEEEEEEEEEEEE
+SWEP.Range = 400
 
-SWEP.Penetration = 12
+SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 960
