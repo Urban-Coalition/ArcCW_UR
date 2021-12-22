@@ -20,7 +20,7 @@ SWEP.ShootPitch = 100
 
 -- Fake name --
 
-SWEP.PrintName = "fake 1911"
+SWEP.PrintName = "American Automatic Sidearm"
 
 -- True name --
 
@@ -31,7 +31,7 @@ SWEP.TrueName = "M1911"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it still isn’t considered an obsolete design. It can get the job done faster than many other pistols, but its single-stacked magazine can’t hold many rounds."
 SWEP.Trivia_Manufacturer = "ISM"
-SWEP.Trivia_Calibre = ".45 Automatic Colt Pistol"
+SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1911
@@ -56,11 +56,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
--- Balancing is very early, 8z fix pls
-SWEP.Damage = 35 -- 3 shot close range kill
-SWEP.DamageMin = 21 -- 5 shot long range kill
-SWEP.RangeMin = 12
-SWEP.Range = 50 -- 3 shot until ~30m
+SWEP.Damage = 47 -- 2 shot short range kill (3 on stomach)
+SWEP.DamageMin = 15 -- 6 shot long range kill
+SWEP.RangeMin = 10
+SWEP.Range = 80 -- 3 shot until ~40m
 SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
