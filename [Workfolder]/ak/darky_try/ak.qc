@@ -98,8 +98,8 @@ $cdmaterials "models\weapons\arccw\ud_common"
 // }
 
 
-$attachment "1" "tag_weapon" 0 0 0 rotate -90 0 0
-$attachment "2" "tag_weapon" 0 0 0 rotate -10 140 180
+$attachment "1" "muzzle" 0 0 0 rotate 0 90 -90
+$attachment "2" "shell" 0 0 0 rotate 0 90 -90
 $attachment "5" "camera" 0 0 0 rotate -90 0 0
  
 $surfaceprop "default"

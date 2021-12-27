@@ -337,12 +337,12 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip", "ubgl"},
-        Bone = "v_weapon.ak47_Parent",
+        Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, -2.05, 13),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 10, 1.5),
+            vang = Angle(0, -90, 0),
         },
-        InstalledEles = {"ubrms"},
+        -- InstalledEles = {"ubrms"},
     },
     {
         PrintName = "Tactical",
