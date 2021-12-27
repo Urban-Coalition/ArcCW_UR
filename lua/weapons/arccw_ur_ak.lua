@@ -18,7 +18,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 
 SWEP.DefaultBodygroups = "000000000000"
 
@@ -109,9 +109,12 @@ SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.75
 
-
-SWEP.FirstShootSound = "weapons/arccw_ur/ak/fire_first.ogg"
-SWEP.ShootSound = {"weapons/arccw_ur/ak/fire_auto_1.ogg", "weapons/arccw_ur/ak/fire_auto_2.ogg"}
+local path = ")^weapons/arccw_ur/ak/"
+local common = ")^/arccw_uc/common/"
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
+SWEP.FirstShootSound = path .. "fire_first.ogg"
+SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg"
 SWEP.DistantShootSound = "weapons/arccw_ur/ak/fire_dist.ogg"
 SWEP.ShootPitchVariation = 0
 
@@ -124,14 +127,14 @@ SWEP.MuzzleEffect = "muzzleflash_ak47"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.5
-SWEP.ShellRotateAngle = Angle(0, 180, 0)
+SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0, 0, 0),
-    Ang = Angle(0, 0,0),
+    Pos = Vector(-2.65, 0, 0.82),
+    Ang = Angle(0.5, 0.231, 5),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -337,12 +340,12 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip", "ubgl"},
-        Bone = "v_weapon.ak47_Parent",
+        Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, -2.05, 13),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 10, 1.5),
+            vang = Angle(0, -90, 0),
         },
-        InstalledEles = {"ubrms"},
+        -- InstalledEles = {"ubrms"},
     },
     {
         PrintName = "Tactical",
@@ -475,6 +478,9 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Temporary
+        },
     },
     -- ["fire_iron"] = {
     --     Source = "ak47_fire_iron",
@@ -488,6 +494,21 @@ SWEP.Animations = {
         LHIKIn = 0.3,
         LHIKOut = 0.3,
         LHIKEaseOut = 0.25,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.95},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = path .. "scrape.ogg",    t = 1.35},
+            {s = common .. "magpouchin.ogg", t = 1.35},
+            {s = common .. "shoulder.ogg", t = 2.05},
+            {s = common .. "grab.ogg", t = 2.1},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -496,44 +517,28 @@ SWEP.Animations = {
         LHIKIn = 0.3,
         LHIKOut = 0.3,
         LHIKEaseOut = 0.25,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.97},
+            {s = ratel, t = 1.1},
+            {s = common .. "rifle_magdrop.ogg", t = 1.15},
+            {s = rottle,  t = 1.15},
+            {s = path .. "chback.ogg",    t = 1.9},
+            {s = path .. "chamber.ogg",    t = 2.0},
+            {s = common .. "shoulder.ogg", t = 3.0},
+            {s = common .. "grab.ogg", t = 3.1},
+        },
     },
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
 }
-
-sound.Add({
-    name = "ArcCW_GO_AK47.Draw",
-    channel = 16,
-    volume = 1.0,
-    sound = "arccw_go/ak47/ak47_draw.wav"
-})
-
-sound.Add({
-    name = "ARCCW_GO_AK47.Boltpull",
-    channel = 16,
-    volume = 1.0,
-    sound = "weapons/arccw_ur/ak/cycle.ogg"
-})
-
-sound.Add({
-    name = "ARCCW_GO_AK47.Clipout",
-    channel = 16,
-    volume = 1.0,
-    sound = "weapons/arccw_ur/ak/magout.ogg"
-})
-
-sound.Add({
-    name = "ARCCW_GO_AK47.Clipin",
-    channel = 16,
-    volume = 1.0,
-    sound = "weapons/arccw_ur/ak/magin.ogg"
-})
-
-
-
-
-
 
 SWEP.Hook_Think = function(wep)
     local vm = wep:GetOwner():GetViewModel()
