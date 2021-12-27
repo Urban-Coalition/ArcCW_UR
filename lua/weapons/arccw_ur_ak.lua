@@ -16,8 +16,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw_go/v_rif_ak47.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000000000"
@@ -130,8 +130,8 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-5.03, -10, 1.1),
-    Ang = Angle(0.16, 0.125, -2.412),
+    Pos = Vector(0, 0, 0),
+    Ang = Angle(0, 0,0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -143,7 +143,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(-1, 0, -1)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, 0, -1)
@@ -152,8 +152,8 @@ SWEP.CrouchAng = Angle(0, 0, -10)
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
-SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
-SWEP.BarrelOffsetHip = Vector(2, 0, -2)
+SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
+SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
 SWEP.CustomizePos = Vector(8, 0, 1)
 SWEP.CustomizeAng = Angle(5, 30, 30)
@@ -457,42 +457,42 @@ end
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "ak47_idle"
+        Source = "idle"
     },
     ["draw"] = {
-        Source = "ak47_draw",
-        LHIK = true,
+        Source = "draw",
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
     },
     ["ready"] = {
-        Source = "ak47_ready",
-        LHIK = true,
+        Source = "ready",
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
     },
     ["fire"] = {
-        Source = {"ak47_fire1", "ak47_fire2", "ak47_fire3"},
+        Source = {"fire"},
         Time = 0.5,
         ShellEjectAt = 0,
     },
-    ["fire_iron"] = {
-        Source = "ak47_fire_iron",
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },
+    -- ["fire_iron"] = {
+    --     Source = "ak47_fire_iron",
+    --     Time = 0.5,
+    --     ShellEjectAt = 0,
+    -- },
     ["reload"] = {
-        Source = "ak47_reload",
+        Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0.3,
         LHIKOut = 0.3,
         LHIKEaseOut = 0.25,
     },
     ["reload_empty"] = {
-        Source = "ak47_reload_empty",
+        Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0.3,
         LHIKOut = 0.3,
         LHIKEaseOut = 0.25,
@@ -529,3 +529,13 @@ sound.Add({
     volume = 1.0,
     sound = "weapons/arccw_ur/ak/magin.ogg"
 })
+
+
+
+
+
+
+SWEP.Hook_Think = function(wep)
+    local vm = wep:GetOwner():GetViewModel()
+    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) )
+end
