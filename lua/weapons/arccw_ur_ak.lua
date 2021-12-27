@@ -127,7 +127,7 @@ SWEP.MuzzleEffect = "muzzleflash_ak47"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.5
-SWEP.ShellRotateAngle = Angle(0, 180, 0)
+SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -504,6 +504,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",    t = 0.95},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
+            {s = path .. "scrape.ogg",    t = 1.35},
             {s = common .. "magpouchin.ogg", t = 1.35},
             {s = common .. "shoulder.ogg", t = 2.05},
             {s = common .. "grab.ogg", t = 2.1},
@@ -521,6 +522,7 @@ SWEP.Animations = {
             {s = common .. "magpouch.ogg", t = 0.1},
             {s = ratel, t = 0.25},
             {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5},
             {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
             {s = path .. "magin.ogg",    t = 0.97},
