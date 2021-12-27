@@ -478,6 +478,9 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Temporary
+        },
     },
     -- ["fire_iron"] = {
     --     Source = "ak47_fire_iron",
