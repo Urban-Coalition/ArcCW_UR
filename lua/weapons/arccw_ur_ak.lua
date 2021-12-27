@@ -18,7 +18,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 
 SWEP.DefaultBodygroups = "000000000000"
 
@@ -130,8 +130,8 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0, 0, 0),
-    Ang = Angle(0, 0,0),
+    Pos = Vector(-2.641, 0, 0.779),
+    Ang = Angle(0.5, 0.231, 5),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false

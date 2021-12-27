@@ -116,10 +116,10 @@ $poseparameter "sights" 0 1 loop 0
 
 $sequence "idle"{
 	"anims\vm_ak47_idle.smd" 
-	"anims\vm_ak47_offset_ads.smd"
+	// "anims\vm_ak47_offset_ads.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
- 	blend "sights" 0 1
+ 	// blend "sights" 0 1
 	loop
 	snap
 	node "Ready"
@@ -184,8 +184,8 @@ $sequence "fire" {
 
 $sequence "draw" {
 	"anims\vm_ak47_draw.smd"
-	"anims\vm_ak47_draw_ads.smd"
- 	blend "sights" 0 1
+	// "anims\vm_ak47_draw_ads.smd"
+ 	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
@@ -202,8 +202,8 @@ $sequence "ready" {
 
 $sequence "reload" {
 	"anims\vm_ak47_reload_tactical.smd"
-	"anims\vm_ak47_reload_tactical_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_tactical_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -211,8 +211,8 @@ $sequence "reload" {
 
 $sequence "reload_empty" {
 	"anims\vm_ak47_reload_empty.smd"
-	"anims\vm_ak47_reload_empty_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_empty_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -220,8 +220,8 @@ $sequence "reload_empty" {
 
 $sequence "reload_drum" {
 	"anims\vm_ak47_reload_drum.smd"
-	"anims\vm_ak47_reload_drum_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_drum_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_1" 1
 	snap
@@ -229,8 +229,8 @@ $sequence "reload_drum" {
 
 $sequence "reload_drum_empty" {
 	"anims\vm_ak47_reload_empty_drum.smd"
-	"anims\vm_ak47_reload_empty_drum_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_empty_drum_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_1" 1
 	snap
@@ -238,8 +238,8 @@ $sequence "reload_drum_empty" {
 
 $sequence "reload_9mm" {
 	"anims\vm_ak47_reload_tactical_9mm.smd"
-	"anims\vm_ak47_reload_tactical_9mm_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_tactical_9mm_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_2" 1
 	snap
@@ -247,8 +247,8 @@ $sequence "reload_9mm" {
 
 $sequence "reload_9mm_empty" {
 	"anims\vm_ak47_reload_empty_9mm.smd"
-	"anims\vm_ak47_reload_empty_9mm_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_empty_9mm_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_2" 1
 	snap
@@ -256,8 +256,8 @@ $sequence "reload_9mm_empty" {
 
 $sequence "reload_10rnd" {
 	"anims\vm_ak47_reload_tactical_10rnd.smd"
-	"anims\vm_ak47_reload_tactical_10rnd_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_tactical_10rnd_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_3" 1
 	snap
@@ -265,8 +265,8 @@ $sequence "reload_10rnd" {
 
 $sequence "reload_10rnd_empty" {
 	"anims\vm_ak47_reload_empty_10rnd.smd"
-	"anims\vm_ak47_reload_empty_10rnd_ads.smd"
-	blend "sights" 0 1
+	// "anims\vm_ak47_reload_empty_10rnd_ads.smd"
+	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_3" 1
 	snap
