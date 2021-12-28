@@ -216,6 +216,9 @@ SWEP.AttachmentElements = {
     ["stock_underfolder_folded"] = {
         VMBodygroups = {{ind = 4, bg = 1}}
     },
+    ["stock_rpk"] = {
+        VMBodygroups = {{ind = 4, bg = 5}}
+    },
 
     ["mag_762_75"] = {
         VMBodygroups = {{ind = 2, bg = 1}}

@@ -7,9 +7,9 @@ att.AutoStats = true
 att.SortOrder = 23
 
 att.Add_BarrelLength = 5
-att.Mult_SightTime = 1.25
+att.Mult_SightTime = 1.2
 att.Mult_SpeedMult = .9
-att.Mult_SightedSpeedMult = .5
+att.Mult_SightedSpeedMult = .7
 att.Mult_Sway = 1.5
 
 att.Mult_Recoil = .8
