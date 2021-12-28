@@ -2,6 +2,7 @@ att.PrintName = "16\" Type 56 Barrel"
 att.Icon = nil -- todo
 att.Description = "Chinese derivative barrel with a fully hooded front sight and a folding spike bayonet. When unfolded, the bayonet increases melee damage substantially, but adds forward weight."
 att.Slot = {"ur_ak_barrel"}
+att.Desc_Cons = {"[Extended] Disables Muzzle attachments"}
 att.AutoStats = true
 
 att.SortOrder = 16
@@ -11,6 +12,7 @@ att.Mult_SightedSpeedMult = .95
 att.ToggleStats = {
     {
         PrintName = "Extended",
+        Desc_Cons = {"uc.nomuzzle"},
         ActivateElements = {"barrel_t56_ext"},
         AutoStats = true,
         Mult_MeleeDamage = 2.5,
