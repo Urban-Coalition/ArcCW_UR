@@ -1,6 +1,6 @@
-att.PrintName = "AKM Grip"
+att.PrintName = "Modernized Grip"
 att.Icon = nil -- todo
-att.Description = "Modernized pistol grip, carved into a more ergonomic shape with grooves for a more comfortable grip."
+att.Description = "Redesigned pistol grip, carved into a more ergonomic shape with grooves for a more comfortable grip."
 att.AutoStats = true
 att.Slot = {"ur_ak_grip"}
 

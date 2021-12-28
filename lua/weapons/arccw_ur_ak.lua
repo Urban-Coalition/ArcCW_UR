@@ -134,8 +134,8 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.65, 0, 0.82),
-    Ang = Angle(0.5, 0.231, 5),
+    Pos = Vector(-2.59, 0, 0.44),
+    Ang = Angle(.64, 0.288, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -165,6 +165,9 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
+    ["barrel_74m"] = {
+        VMBodygroups = {{ind = 1, bg = 3}}
+    },
     ["barrel_akm"] = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },
@@ -217,6 +220,7 @@ SWEP.AttachmentElements = {
     ["muzzle_bayonet"] = {
         VMBodygroups = {{ind = 11, bg = 1}}
     },
+
     ["stock_alpha"] = {
         VMBodygroups = {
             {ind = 6, bg = 4},
@@ -242,6 +246,7 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         }
     },
+
     ["mag_762_75"] = {
         VMBodygroups = {{ind = 2, bg = 1}}
     },
@@ -460,6 +465,8 @@ SWEP.Hook_NameChange = function(wep,name)
         if cal == "545" then
             if barr == "krinkov" or barr == "vityaz" then
                 post = "-74U" -- the AK-47U doesn't exist
+            elseif barr == "74m" then
+                post = "-74M"
             else
                 post = "-74"
             end
