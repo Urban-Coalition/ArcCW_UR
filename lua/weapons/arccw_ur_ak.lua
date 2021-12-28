@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Fake AK" -- make this something russian and cool
+SWEP.PrintName = "автомат Калашникова 47" -- make this something russian and cool
 SWEP.TrueName = "AK-47"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design. The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
