@@ -3,9 +3,10 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AK-47"
+SWEP.PrintName = "Fake AK" -- make this something russian and cool
+SWEP.TrueName = "AK-47"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design. The default pattern is well-rounded, but recoils harder than other weapons of its class."
+SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design. The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -94,7 +95,7 @@ SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.MagID = "akm"
+SWEP.MagID = "ak"
 
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
@@ -159,7 +160,9 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
-    
+    ["ak_muzzle_akm"] = {
+        VMBodygroups = {{ind = 6,bg = 1}}
+    }
 }
 
 SWEP.ExtraSightDist = 10
@@ -319,43 +322,10 @@ function SWEP:Hook_TranslateAnimation(anim)
 end
 
 function SWEP:Hook_NameChange(name)
-    local eles = self:GetActiveElements()
-
-    local prefix = "AK"
-    local s = ""
-    local model = "M"
-    local stock = ""
-
-    for i, k in pairs(eles or {}) do
-        if k == "go_ak_mag_15_545" then
-            model = "-74"
-        elseif k == "go_ak_mag_30_545" then
-            model = "-74"
-        elseif k == "go_ak_mag_45_545" then
-            model = "-74"
-        elseif k == "go_ak_mag_60_545" then
-            model = "-74"
-        elseif k == "go_ak_barrel_long" then
-            prefix = "RPK"
-            if model == "M" then
-                model = ""
-            end
-        elseif k == "go_ak_barrel_short" then
-            stock = "U"
-        elseif k == "go_ak_stock_skeleton" then
-            s = "S"
-        elseif k == "go_ak_stock_heavy" then
-            prefix = "RPK"
-            if model == "M" then
-                model = ""
-            end
-        end
-    end
-
-    if model == "M" then
-        return prefix .. model .. s .. stock
+    if GetConVar("arccw_truenames"):GetBool() then
+        return self.TrueName
     else
-        return prefix .. s .. model .. stock
+        return self.FakeName
     end
 end
 
