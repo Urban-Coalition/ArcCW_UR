@@ -54,6 +54,7 @@ $bodygroup "stocks" {
 	studio "vepr_stock.smd"
 	studio "akm_stock.smd"
 	blank
+	studio "aks_stock_folded.smd"
 }
 
 $bodygroup "barrels" {

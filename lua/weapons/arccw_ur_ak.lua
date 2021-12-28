@@ -228,6 +228,19 @@ SWEP.AttachmentElements = {
         }
 
     },
+    ["stock_aks"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 3},
+            {ind = 3, bg = 1},
+    }
+    },
+    ["stock_aks_folded"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 10},
+            {ind = 3, bg = 1},
+        }
+
+    },
     ["stock_underfolder"] = {
         VMBodygroups = {{ind = 6, bg = 2}}
     },
