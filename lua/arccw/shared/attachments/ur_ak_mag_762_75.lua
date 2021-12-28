@@ -5,6 +5,7 @@ att.Slot = {"ur_ak_mag"}
 att.AutoStats = true
 
 att.SortOrder = 75
+att.GivesFlags = {"mag_drum"}
 
 att.HideIfBlocked = true
 
