@@ -30,7 +30,7 @@ SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 47 -- 2 shot close range kill
+SWEP.Damage = 47 -- 3 shot close range kill
 SWEP.DamageMin = 20 -- 5 shot long range kill
 SWEP.RangeMin = 40
 SWEP.Range = 300 -- 3 shot until ~170m
@@ -179,6 +179,14 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 2}
         }
     },
+    ["barrel_vityaz"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 6},
+            {ind = 3, bg = 2},
+            {ind = 5, bg = 5},
+            {ind = 6, bg = 2}
+        }
+    },
     ["barrel_dong"] = {
         VMBodygroups = {{ind = 1, bg = 8}}
     },
@@ -275,10 +283,10 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Receiver",
-        DefaultAttName = "Standard Receiver",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_receiver_default.png", "smooth mips"),
-        Slot = {"ur_ak_receiver"},
+        PrintName = "Caliber",
+        DefaultAttName = "7.62x39mm",
+        DefaultAttIcon = Material("", "smooth mips"),
+        Slot = {"ur_ak_cal"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(2.8, -4.2, -11.5),
@@ -372,9 +380,42 @@ function SWEP:Hook_TranslateAnimation(anim)
     end
 end
 
-function SWEP:Hook_NameChange(name)
+SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
-        return self.TrueName
+        local start = "AK"
+        local mid = ""
+        local post = "-47"
+
+        local atts = wep.Attachments
+        local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
+        local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
+        local stock = string.Replace(atts[8].Installed or "default", "ur_ak_stock_", "")
+
+        if cal == "9mm" then
+            start = "PP"
+            post = "-19 Vityaz"
+        elseif cal == "12ga" then
+            start = "Saiga"
+            post = "-12"
+        elseif barr == "rpk" or barr == "rpk_dong" then
+            start = "RPK"
+            post = ""
+        elseif (cal == "762" and atts[3].Installed == "ur_ak_muzzle_akm" and (barr == "akm" or barr == "default" or barr == "dong")) then
+            start = "AKM"
+            post = ""
+        end
+
+        if cal == "545" then
+            post = "-74"
+        end
+        if (cal == "762" or cal == "545") and (stock == "underfolder" or stock == "sidefolder") then
+            mid = "S"
+        end
+        if barr == "krinkov" and cal ~= "9mm" then
+            post = post .. "U"
+        end
+
+        return start..mid..post
     else
         return self.FakeName
     end
@@ -478,6 +519,56 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 2.6,
         SoundTable = {}, -- zenith do your magic
+    },
+    ["reload_9mm"] = {
+        Source = "reload_9mm",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = false,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
+        LHIKEaseOut = 0.25,
+        MinProgress = 1.3,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.95},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = path .. "scrape.ogg",    t = 1.35},
+            {s = common .. "magpouchin.ogg", t = 1.35},
+            {s = common .. "shoulder.ogg", t = 2.05},
+            {s = common .. "grab.ogg", t = 2.1},
+        },
+    },
+    ["reload_empty_9mm"] = {
+        Source = "reload_9mm_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = false,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.97},
+            {s = ratel, t = 1.1},
+            {s = common .. "rifle_magdrop.ogg", t = 1.15},
+            {s = rottle,  t = 1.15},
+            {s = path .. "chback.ogg",    t = 1.9},
+            {s = path .. "chamber.ogg",    t = 2.0},
+            {s = common .. "grab.ogg", t = 2.4},
+            {s = common .. "shoulder.ogg", t = 2.5},
+        },
     },
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,

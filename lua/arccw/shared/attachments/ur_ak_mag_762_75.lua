@@ -1,6 +1,6 @@
 att.PrintName = "75-Round Drum Mag"
 att.Icon = nil -- todo
-att.Description = "Cylindrical drum magazine with capacity for a very large number of rounds, ideal for machine gunner roles. It is heavy enough to shift the weapon's center of mass, disorienting recoil control slightly in addition to the drawbacks of high weight. Prone to feeding failures."
+att.Description = "Cylindrical drum magazine with capacity for a very large number of rounds, ideal for machine gunners. It is heavy enough to shift the weapon's center of mass, disorienting recoil control slightly in addition to the drawbacks of high weight. Prone to feeding failures."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true
 
@@ -11,7 +11,7 @@ att.HideIfBlocked = true
 att.Override_ClipSize = 75
 
 att.Mult_SightTime = 1.45
-att.Mult_ReloadTime = 1.5
+att.Mult_ReloadTime = 1.25
 att.Mult_Sway = 2
 att.Mult_SpeedMult = 0.9
 att.Mult_ShootSpeedMult = 0.8
@@ -34,3 +34,4 @@ att.Hook_TranslateAnimation = function(wep, anim)
 end
 
 att.ActivateElements = {"mag_762_75"}
+att.ExcludeFlags = {"cal_545","cal_9mm","cal_12g","cal_366"}

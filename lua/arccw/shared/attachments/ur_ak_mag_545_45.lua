@@ -1,0 +1,20 @@
+att.PrintName = "45-Round Extended Mag"
+att.Icon = nil -- todo
+att.Description = "Extended magazine for the AK-74. While intended for squad gunners, the extra ammo is useful for any loadout, though the longer mag is noticeably heavier."
+att.Slot = {"ur_ak_mag"}
+att.AutoStats = true
+
+att.SortOrder = 45
+
+att.HideIfBlocked = true
+
+att.Override_ClipSize = 45
+
+att.Mult_SightTime = 1.25
+att.Mult_ReloadTime = 1.15
+att.Mult_Sway = 1.5
+att.Mult_SpeedMult = 0.95
+att.Mult_ShootSpeedMult = 0.9
+
+att.ActivateElements = {"mag_545_45"}
+att.RequireFlags = {"cal_545"}
