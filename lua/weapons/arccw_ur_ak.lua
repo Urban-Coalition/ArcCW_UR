@@ -208,7 +208,7 @@ SWEP.AttachmentElements = {
     },
 
     ["barrel_dong"] = {
-        VMBodygroups = {{ind = 1, bg = 8}} -- This will show up regardless of barrel selection because underbarrel atts are always processed after barrel atts
+        VMBodygroups = {{ind = 1, bg = 2}} -- This will show up regardless of barrel selection because underbarrel atts are always processed after barrel atts
     },
 
     ["muzzle_akm"] = {
