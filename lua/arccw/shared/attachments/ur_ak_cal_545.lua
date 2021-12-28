@@ -30,7 +30,7 @@ local path = ")^weapons/arccw_ur/ak/"
 
 att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.FirstShootSound then return path .. "fire_545_auto_1.ogg" end
-    if fsound == wep.ShootSound then return path .. "fire_545_auto_1.ogg" end
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_545_auto_1.ogg", path .. "fire_545_auto_2.ogg"} end
     if fsound == wep.ShootSoundSilenced then return path .. "fire_545_sup.ogg" end
 end
 
