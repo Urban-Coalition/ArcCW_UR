@@ -169,6 +169,13 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 1}}
     },
 
+    ["stock_underfolder"] = {
+        VMBodygroups = {{ind = 4, bg = 2}}
+    },
+    ["stock_underfolder_folded"] = {
+        VMBodygroups = {{ind = 4, bg = 1}}
+    },
+
     ["grip_akm"] = {
         VMBodygroups = {{ind = 7, bg = 1}}
     },
@@ -243,18 +250,14 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Underbarrel",
+        PrintName = "Underbarrel (Broken)",
         Slot = {"foregrip","ubgl"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 1.25, 12),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0,0,0),
+            vang = Angle(90, -90, -90),
         },
         InstalledEles = {"rail_fg"},
-        SlideAmount = {
-            vmin = Vector(0, 1.25, 12.5),
-            vmax = Vector(0, 1.25, 9),
-        },
     },
     {
         PrintName = "Tactical",
@@ -312,8 +315,8 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0.6, 1, 5),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0.6, 2, 2.25),
+            vang = Angle(90, -90, -90),
         },
     },
     {
