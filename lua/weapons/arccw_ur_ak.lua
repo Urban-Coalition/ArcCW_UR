@@ -165,6 +165,10 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
+    ["barrel_akm"] = {
+        VMBodygroups = {{ind = 1, bg = 3}}
+    },
+
     ["muzzle_akm"] = {
         VMBodygroups = {{ind = 6, bg = 1}}
     },
@@ -182,6 +186,9 @@ SWEP.AttachmentElements = {
 
     ["cover_ribbed"] = {
         VMBodygroups = {{ind = 8, bg = 2}}
+    },
+    ["cover_alpha"] = {
+        VMBodygroups = {{ind = 8, bg = 1}}
     }
 }
 
@@ -218,25 +225,18 @@ SWEP.Attachments = {
         DefaultAttName = "16\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
         Slot = "ur_ak_barrel",
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(2.8, -4.2, -11.5),
-            vang = Angle(90, 0, -90),
-        },
-        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_ak_muzzle"},
         Bone = "tag_weapon",
-        VMScale = Vector(1.25, 1.25, 1.25),
+        VMScale = Vector(1, 1, 1),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0.025, -0.05, 30.75),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 25, 2.5),
+            vang = Angle(0, 90, -90),
         },
-        ExcludeFlags = {"sd", "m16_usas", "m16_stub"},
     },
     {
         PrintName = "Receiver",
@@ -250,11 +250,11 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Underbarrel (Broken)",
+        PrintName = "Underbarrel",
         Slot = {"foregrip","ubgl"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0,0,0),
+            vpos = Vector(0,11,1.8),
             vang = Angle(90, -90, -90),
         },
         InstalledEles = {"rail_fg"},
