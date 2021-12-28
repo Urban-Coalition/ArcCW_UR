@@ -432,7 +432,8 @@ end
 SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
         local foldStocks = {["underfolder"] = true,["sidefolder"] = true}
-        local akCals = {["762"] = true,["545"] = true}
+        local akCals = {["762"] = true,["545"] = true,["akm"] = true}
+        local stockBarrs = {["default"] = true,["akm"] = true,["alpha"] = true}
 
         local start = "AK"
         local mid = ""
@@ -452,14 +453,9 @@ SWEP.Hook_NameChange = function(wep,name)
         elseif barr == "rpk" or barr == "rpk_dong" then
             start = "RPK"
             post = ""
-        elseif cal == "762" then
-            if atts[3].Installed == "ur_ak_muzzle_akm" and (barr == "akm" or barr == "default" or barr == "dong") then
-                start = "AKM"
-                post = ""
-            elseif barr == "t56" then
-                start = "Type "
-                post = "56"
-            end
+        elseif (cal == "762" or cal == "akm") and barr == "t56" then
+            start = "Type "
+            post = "56"
         end
 
         if cal == "545" then
@@ -470,6 +466,9 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-74"
             end
+        elseif cal == "akm" and barr ~= "t56" then
+            post = ""
+            start = start .. "M"
         end
 
         if foldStocks[stock] and akCals[cal] then
