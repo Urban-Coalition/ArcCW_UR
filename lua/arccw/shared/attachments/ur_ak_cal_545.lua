@@ -21,6 +21,7 @@ att.Mult_HipDispersion = .75
 att.Mult_Penetration = .65
 att.Mult_DamageMin = .8
 att.Mult_Damage = .8
+att.ShootPitchVariation = 1
 
 att.GivesFlags = {"cal_545"}
 
@@ -28,7 +29,8 @@ att.ActivateElements = {"mag_545_30"}
 local path = ")^weapons/arccw_ur/ak/"
 
 att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return path .. "fire_545.ogg" end
+    if fsound == wep.FirstShootSound then return path .. "fire_545_auto_1.ogg" end
+    if fsound == wep.ShootSound then return path .. "fire_545_auto_1.ogg" end
     if fsound == wep.ShootSoundSilenced then return path .. "fire_545_sup.ogg" end
 end
 
