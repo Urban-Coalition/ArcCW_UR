@@ -182,17 +182,32 @@ SWEP.AttachmentElements = {
     ["barrel_vityaz"] = {
         VMBodygroups = {
             {ind = 1, bg = 6},
-            {ind = 3, bg = 2},
             {ind = 5, bg = 5},
             {ind = 6, bg = 2}
         }
     },
+    ["barrel_t56"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 3},
+            {ind = 9, bg = 2}
+        }
+    },
+    ["barrel_t56_ext"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 3},
+            {ind = 9, bg = 3}
+        }
+    },
+
     ["barrel_dong"] = {
-        VMBodygroups = {{ind = 1, bg = 8}}
+        VMBodygroups = {{ind = 1, bg = 8}} -- This will show up regardless of barrel selection because underbarrel atts are always processed after barrel atts
     },
 
     ["muzzle_akm"] = {
         VMBodygroups = {{ind = 6, bg = 1}}
+    },
+    ["muzzle_bayonet"] = {
+        VMBodygroups = {{ind = 9, bg = 1}}
     },
 
     ["stock_underfolder"] = {
@@ -281,6 +296,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 25, 2.5),
             vang = Angle(0, 90, -90),
         },
+        ExcludeFlags = {"ur_ak_nomuzzle"}
     },
     {
         PrintName = "Caliber",
@@ -295,7 +311,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip","ubgl"},
+        Slot = {"foregrip","ubgl","ur_ak_ub"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(0,11,1.8),
@@ -382,6 +398,9 @@ end
 
 SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
+        local foldStocks = {["underfolder"] = true,["sidefolder"] = true}
+        local akCals = {["762"] = true,["545"] = true}
+
         local start = "AK"
         local mid = ""
         local post = "-47"
@@ -400,19 +419,30 @@ SWEP.Hook_NameChange = function(wep,name)
         elseif barr == "rpk" or barr == "rpk_dong" then
             start = "RPK"
             post = ""
-        elseif (cal == "762" and atts[3].Installed == "ur_ak_muzzle_akm" and (barr == "akm" or barr == "default" or barr == "dong")) then
-            start = "AKM"
-            post = ""
+        elseif cal == "762" then
+            if atts[3].Installed == "ur_ak_muzzle_akm" and (barr == "akm" or barr == "default" or barr == "dong") then
+                start = "AKM"
+                post = ""
+            elseif barr == "t56" then
+                start = "Type "
+                post = "56"
+            end
         end
 
         if cal == "545" then
-            post = "-74"
+            if barr == "krinkov" or barr == "vityaz" then
+                post = "-74U" -- the AK-47U doesn't exist
+            else
+                post = "-74"
+            end
         end
-        if (cal == "762" or cal == "545") and (stock == "underfolder" or stock == "sidefolder") then
-            mid = "S"
-        end
-        if barr == "krinkov" and cal ~= "9mm" then
-            post = post .. "U"
+
+        if foldStocks[stock] and akCals[cal] then
+            if barr == "t56" then
+                post = "56-1"
+            else
+                mid = "S"
+            end
         end
 
         return start..mid..post
