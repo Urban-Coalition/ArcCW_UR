@@ -1,0 +1,12 @@
+att.PrintName = "Clubfoot Stock"
+att.Icon = nil -- todo
+att.Description = "Heavy-duty machine gun stock, designed with prone shooting in mind. It has more mass than the factory stock, but is generally more comfortable to aim and shoot with."
+att.Slot = {"ur_ak_stock"}
+att.AutoStats = true
+
+att.Mult_Recoil = .85
+att.Mult_Sway = .75
+att.Mult_SightTime = 1.1
+att.Mult_SpeedMult = .9
+
+att.ActivateElements = {"stock_rpk"}
