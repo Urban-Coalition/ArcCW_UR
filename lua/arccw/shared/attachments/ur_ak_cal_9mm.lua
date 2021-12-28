@@ -17,6 +17,7 @@ att.Mult_ReloadTime = .95
 att.Mult_Recoil = .85
 att.Mult_AccuracyMOA = .85
 att.Mult_HipDispersion = .75
+att.Mult_ShootPitch = (90/100)
 
 att.Mult_Penetration = .25
 att.Mult_DamageMin = .6
@@ -52,7 +53,7 @@ att.Hook_GetShootSound = function(wep, fsound)
      } end        
 end
 
-local soundpath_dist = ")weapons/arccw_ur/ak/stalol/ak9_tail"
+local soundpath_dist = ")^weapons/arccw_ur/ak/stalol/ak9_tail"
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return {
