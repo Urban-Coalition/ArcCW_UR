@@ -29,7 +29,7 @@ $bodygroup "magazine" {
 
 $bodygroup "stock_adapt" {
 	blank
-	studio "default_ak_sight_trunnion.smd"
+	studio "stock_adapter.smd"
 }
 
 $bodygroup "sights" {

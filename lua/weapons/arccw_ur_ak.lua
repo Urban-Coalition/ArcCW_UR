@@ -217,6 +217,7 @@ SWEP.AttachmentElements = {
     ["stock_alpha"] = {
         VMBodygroups = {
             {ind = 6, bg = 4},
+            {ind = 3, bg = 1},
         }
 
     },
@@ -233,7 +234,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 8}}
     },
     ["stock_none"] = {
-        VMBodygroups = {{ind = 6, bg = 9}}
+        VMBodygroups = {
+            {ind = 6, bg = 9},
+            {ind = 3, bg = 1},
+        }
     },
     ["mag_762_75"] = {
         VMBodygroups = {{ind = 2, bg = 1}}

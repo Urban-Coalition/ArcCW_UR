@@ -4,7 +4,7 @@ att.Description = "If a weapon's stock does not contain any functional parts to 
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true
 
-att.Mult_Recoil = 1.3
+att.Mult_Recoil = 1.65
 att.Mult_Sway = 2
 att.Mult_SightTime = 0.5
 att.Mult_SpeedMult = 1.25
