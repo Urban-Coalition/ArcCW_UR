@@ -7,6 +7,7 @@ $bodygroup "base" {
 $bodygroup "handguards" {
 	studio "ak47_handguard.smd"
 	studio "akm_handguard.smd"
+	studio "romaniandong.smd"
 	studio "ak74m_handguard.smd"
 	studio "series_100_handguard.smd"
 	studio "rpk74m_handguard.smd"
@@ -14,7 +15,6 @@ $bodygroup "handguards" {
 	studio "alpha_handguard.smd"
 	studio "pp19_handguard-barrel.smd"
 	studio "vepr_sok_handguard.smd"
-	studio "romaniandong.smd"
 }
 
 $bodygroup "magazine" {
@@ -27,13 +27,15 @@ $bodygroup "magazine" {
 	studio "366tkm.smd"
 }
 
-$bodygroup "receiver" {
+$bodygroup "stock_adapt" {
+	blank
 	studio "default_ak_sight_trunnion.smd"
 }
 
 $bodygroup "sights" {
+	studio "default_ak_sight_trunnion.smd"
 	studio "aku_sights.smd"
-	studio "stock_adapter.smd"
+	blank
 }
 
 $bodygroup "barrel_internal" {
