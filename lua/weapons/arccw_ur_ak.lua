@@ -5,6 +5,11 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "автомат Калашникова 47" -- make this something russian and cool
 SWEP.TrueName = "AK-47"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design. The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
 SWEP.Trivia_Manufacturer = "Izhmash"
@@ -90,7 +95,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 5
-SWEP.HipDispersion = 850
+SWEP.HipDispersion = 950
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 1000
 
@@ -166,6 +171,10 @@ SWEP.AttachmentElements = {
 
     ["grip_akm"] = {
         VMBodygroups = {{ind = 7, bg = 1}}
+    },
+
+    ["cover_ribbed"] = {
+        VMBodygroups = {{ind = 8, bg = 2}}
     }
 }
 
@@ -242,7 +251,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},
-        ExcludeFlags = {"m16_lmg", "m16_stub"}, 
         SlideAmount = {
             vmin = Vector(0, 1.25, 12.5),
             vmax = Vector(0, 1.25, 9),
@@ -264,14 +272,13 @@ SWEP.Attachments = {
         Slot = {"ur_ak_grip"},
         DefaultAttName = "Standard Grip",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_grip_default.png", "smooth mips"),
-        ExcludeFlags = {"m16_adar"}
+        ExcludeFlags = {"ak_vepr"}
     },
     {
         PrintName = "Stock",
         Slot = {"ur_ak_stock"},
-        DefaultAttName = "Full Stock",
+        DefaultAttName = "Type 3 Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
-        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Magazine",
@@ -312,7 +319,7 @@ SWEP.Attachments = {
     {
         PrintName = "Dust Cover",
         DefaultAttName = "Standard Dust Cover",
-        Slot = {"ur_ak_dustcover"},
+        Slot = {"ur_ak_cover"},
         FreeSlot = true,
     }
 }
