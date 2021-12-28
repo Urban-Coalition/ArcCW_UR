@@ -1,10 +1,10 @@
-att.PrintName = "8\" Carbine Barrel"
+att.PrintName = "8\" Vityaz Barrel"
 att.Icon = nil -- todo
-att.Description = "Special carbine length handguard and barrel. Its reduced length leads to less unwieldiness, and the shortened gas system increases cyclic rate respectably.\nThese traits combined, however, result in a difficult weapon to control."
+att.Description = "Submachine gun barrel with a rail interface for additional modularity. Functions identically to the Carbine barrel."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
-att.SortOrder = 8
+att.SortOrder = 7
 
 att.Add_BarrelLength = -6
 att.Mult_RPM = 1.131
@@ -18,5 +18,5 @@ att.Mult_Recoil = 1.5
 att.Mult_AccuracyMOA = 2
 att.Mult_Range = .5
 
-att.ActivateElements = {"barrel_krinkov"}
+att.ActivateElements = {"barrel_vityaz"}
 att.GivesFlags = {"ak_barrelchange","barrel_carbine"}
