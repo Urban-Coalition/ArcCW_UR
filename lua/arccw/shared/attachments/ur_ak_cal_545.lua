@@ -23,4 +23,15 @@ att.Mult_DamageMin = .8
 att.Mult_Damage = .8
 
 att.GivesFlags = {"cal_545"}
+
 att.ActivateElements = {"mag_545_30"}
+local path = ")^weapons/arccw_ur/ak/"
+
+att.Hook_GetShootSound = function(wep, fsound)
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return path .. "fire_545.ogg" end
+    if fsound == wep.ShootSoundSilenced then return path .. "fire_545_sup.ogg" end
+end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then return path .. "fire_545_dist.ogg" end
+end
