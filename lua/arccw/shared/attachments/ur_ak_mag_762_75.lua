@@ -16,6 +16,7 @@ att.Mult_Sway = 2
 att.Mult_SpeedMult = 0.9
 att.Mult_ShootSpeedMult = 0.8
 att.Mult_DrawTime = 1.2
+att.Mult_RecoilSide = 1.35
 att.Mult_HolsterTime = 1.2
 att.Mult_RecoilSide = 1.1
 

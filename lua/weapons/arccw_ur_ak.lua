@@ -166,36 +166,38 @@ SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
     ["barrel_akm"] = {
-        VMBodygroups = {{ind = 1, bg = 3}}
+        VMBodygroups = {{ind = 1, bg = 1}}
     },
     ["barrel_rpk"] = {
-        VMBodygroups = {{ind = 5, bg = 1}}
+        VMBodygroups = {{ind = 7, bg = 1}}
     },
     ["barrel_krinkov"] = {
         VMBodygroups = {
-            {ind = 1, bg = 4},
-            {ind = 3, bg = 2},
-            {ind = 5, bg = 5},
-            {ind = 6, bg = 2}
+            {ind = 1, bg = 6},
+            {ind = 7, bg = 5},
+            {ind = 8, bg = 2},
+            {ind = 4, bg = 1}
         }
     },
     ["barrel_vityaz"] = {
         VMBodygroups = {
-            {ind = 1, bg = 6},
-            {ind = 5, bg = 5},
-            {ind = 6, bg = 2}
+            {ind = 1, bg = 8},
+            {ind = 7, bg = 5},
+            {ind = 8, bg = 2}
         }
     },
     ["barrel_t56"] = {
         VMBodygroups = {
-            {ind = 5, bg = 3},
-            {ind = 9, bg = 2}
+            {ind =7, bg = 3},
+            {ind = 11, bg = 2},
+            {ind = 8, bg = 2}
         }
     },
     ["barrel_t56_ext"] = {
         VMBodygroups = {
-            {ind = 5, bg = 3},
-            {ind = 9, bg = 3}
+            {ind = 7, bg = 3},
+            {ind = 11, bg = 3},
+            {ind = 8, bg = 2}
         }
     },
 
@@ -204,20 +206,23 @@ SWEP.AttachmentElements = {
     },
 
     ["muzzle_akm"] = {
-        VMBodygroups = {{ind = 6, bg = 1}}
+        VMBodygroups = {{ind = 8, bg = 1}}
     },
     ["muzzle_bayonet"] = {
-        VMBodygroups = {{ind = 9, bg = 1}}
+        VMBodygroups = {{ind = 11, bg = 1}}
     },
 
     ["stock_underfolder"] = {
-        VMBodygroups = {{ind = 4, bg = 2}}
+        VMBodygroups = {{ind = 6, bg = 2}}
     },
     ["stock_underfolder_folded"] = {
-        VMBodygroups = {{ind = 4, bg = 1}}
+        VMBodygroups = {{ind = 6, bg = 1}}
     },
     ["stock_rpk"] = {
-        VMBodygroups = {{ind = 4, bg = 5}}
+        VMBodygroups = {{ind = 6, bg = 5}}
+    },
+    ["stock_akn"] = {
+        VMBodygroups = {{ind = 6, bg = 8}}
     },
 
     ["mag_762_75"] = {
@@ -240,14 +245,14 @@ SWEP.AttachmentElements = {
     },
 
     ["grip_akm"] = {
-        VMBodygroups = {{ind = 7, bg = 1}}
+        VMBodygroups = {{ind = 9, bg = 1}}
     },
 
     ["cover_ribbed"] = {
-        VMBodygroups = {{ind = 8, bg = 2}}
+        VMBodygroups = {{ind = 10, bg = 2}}
     },
     ["cover_alpha"] = {
-        VMBodygroups = {{ind = 8, bg = 1}}
+        VMBodygroups = {{ind = 10, bg = 1}}
     }
 }
 

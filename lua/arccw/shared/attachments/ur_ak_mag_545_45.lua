@@ -13,6 +13,7 @@ att.Override_ClipSize = 45
 att.Mult_SightTime = 1.25
 att.Mult_ReloadTime = 1.15
 att.Mult_Sway = 1.5
+att.Mult_RecoilSide = 1.2
 att.Mult_SpeedMult = 0.95
 att.Mult_ShootSpeedMult = 0.9
 
