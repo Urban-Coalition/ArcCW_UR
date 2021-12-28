@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "автомат Калашникова 47" -- make this something russian and cool
-SWEP.TrueName = "AK-47"
+SWEP.TrueName = "AKM"
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
@@ -436,7 +436,7 @@ SWEP.Hook_NameChange = function(wep,name)
 
         local start = "AK"
         local mid = ""
-        local post = "-47"
+        local post = "M"
 
         local atts = wep.Attachments
         local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
@@ -451,15 +451,9 @@ SWEP.Hook_NameChange = function(wep,name)
             post = "-12"
         elseif barr == "rpk" or barr == "rpk_dong" then
             start = "RPK"
-            post = ""
-        elseif cal == "762" then
-            if atts[3].Installed == "ur_ak_muzzle_akm" and (barr == "akm" or barr == "default" or barr == "dong") then
-                start = "AKM"
-                post = ""
-            elseif barr == "t56" then
-                start = "Type "
-                post = "56"
-            end
+        elseif cal == "762" and barr == "t56" then
+            start = "Type "
+            post = "56"
         end
 
         if cal == "545" then
@@ -476,7 +470,11 @@ SWEP.Hook_NameChange = function(wep,name)
             if barr == "t56" then
                 post = "56-1"
             else
-                mid = "S"
+                if cal == "762" then
+                    post = "MS"
+                else
+                    mid = "S"
+                end
             end
         end
 
