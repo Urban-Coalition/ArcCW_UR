@@ -160,8 +160,12 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
-    ["ak_muzzle_akm"] = {
-        VMBodygroups = {{ind = 6,bg = 1}}
+    ["muzzle_akm"] = {
+        VMBodygroups = {{ind = 6, bg = 1}}
+    },
+
+    ["grip_akm"] = {
+        VMBodygroups = {{ind = 7, bg = 1}}
     }
 }
 
@@ -365,6 +369,7 @@ SWEP.Animations = {
         LHIKIn = 0.3,
         LHIKOut = 0.3,
         LHIKEaseOut = 0.25,
+        MinProgress = 1.3,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
@@ -388,6 +393,7 @@ SWEP.Animations = {
         LHIKIn = 0.3,
         LHIKOut = 0.3,
         LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},

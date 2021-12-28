@@ -15,5 +15,5 @@ att.Mult_ShootVol = 1.1
 att.SortOrder = 999
 
 att.AttachSound = "arccw_uc/common/gunsmith/suppressor_thread.ogg"
-att.ActivateElements = {"ak_muzzle_akm"}
+att.ActivateElements = {"muzzle_akm"}
 att.ExcludeFlags = {"ak_barrel_change"}
