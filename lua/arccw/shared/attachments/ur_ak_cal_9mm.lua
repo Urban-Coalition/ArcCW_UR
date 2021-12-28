@@ -36,3 +36,27 @@ end
 
 att.GivesFlags = {"cal_9mm"}
 att.ActivateElements = {"mag_9mm"}
+
+
+local soundpath = ")weapons/arccw_ur/ak/stalol/ak9_first_"
+local soundpath_s = ")weapons/arccw_ur/ak/stalol/ak9_loop_"
+att.Hook_GetShootSound = function(wep, fsound)
+    if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
+        soundpath .. "1.wav",
+        soundpath .. "2.wav",
+     } end
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSoundSilenced then return {
+        soundpath_s .. "1.wav",
+        soundpath_s .. "2.wav",
+        soundpath_s .. "3.wav",
+     } end        
+end
+
+local soundpath_dist = ")weapons/arccw_ur/ak/stalol/ak9_tail"
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then return {
+        soundpath_dist .. ".wav",
+     } end
+    
+end
