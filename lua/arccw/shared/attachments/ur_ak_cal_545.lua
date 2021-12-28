@@ -1,5 +1,5 @@
-att.PrintName = "AK-74 5.45x39mm Conversion"
-att.AbbrevName = "5.45x39mm"
+att.PrintName = "AK-74 5.45x39mm Receiver"
+att.AbbrevName = "5.45x39mm Receiver"
 att.Icon = nil -- todo
 att.Description = "Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration."
 att.Slot = {"ur_ak_cal"}
@@ -8,7 +8,7 @@ att.AutoStats = true
 att.SortOrder = 10
 
 att.Override_Ammo = "smg1"
-att.Override_Trivia_Calibre = att.AbbrevName
+att.Override_Trivia_Calibre = "5.45x39mm"
 
 att.Mult_Range = 1.2
 att.Mult_RPM = 1.083 -- 650 rpm

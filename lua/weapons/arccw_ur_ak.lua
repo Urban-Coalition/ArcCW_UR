@@ -327,8 +327,8 @@ SWEP.Attachments = {
         ExcludeFlags = {"ur_ak_nomuzzle"}
     },
     {
-        PrintName = "Caliber",
-        DefaultAttName = "7.62x39mm",
+        PrintName = "Receiver",
+        DefaultAttName = "Standard Receiver",
         DefaultAttIcon = Material("", "smooth mips"),
         Slot = {"ur_ak_cal"},
         Bone = "tag_weapon",
