@@ -211,6 +211,9 @@ SWEP.AttachmentElements = {
     ["muzzle_akm"] = {
         VMBodygroups = {{ind = 8, bg = 1}}
     },
+    ["muzzle_ak74"] = {
+        VMBodygroups = {{ind = 8, bg = 3}}
+    },
     ["muzzle_bayonet"] = {
         VMBodygroups = {{ind = 11, bg = 1}}
     },

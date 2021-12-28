@@ -69,6 +69,7 @@ $bodygroup "muzzles" {
 	studio "ak_barrel_ak_muzzle.smd"
 	studio "ak_barrel_akm_brake.smd"
 	blank
+	studio "ak74_compensator.smd"
 }
 
 $bodygroup "pistol_grips" {
