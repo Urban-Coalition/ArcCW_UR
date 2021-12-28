@@ -1,20 +1,20 @@
 att.PrintName = "Underfolding Stock"
 att.Icon = nil -- todo
-att.Description = [[Folding stock of the AKS-47. While not as sturdy as a full wood stock, it is much lighter. Folding the stock provides massively boosted maneuverability at the cost of severely increased recoil.
+att.Description = [[Folding stock of the AKS-47. While not as sturdy as a full wood stock, it is much lighter. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
 
 Toggling this stock modifies performance accordingly.]]
 att.AutoStats = true
 att.Slot = {"ur_ak_stock"}
-
-att.Mult_SightTime = .8
 
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
 att.ToggleStats = {
     {
         PrintName = "Extended",
+        Mult_SightTime = .8,
         Mult_RecoilSide = 1.25,
         Mult_Sway = 1.25,
+        Mult_SightedSpeedMult = 1.1,
         ActivateElements = {"stock_underfolder"},
         AutoStats = true,
     },
