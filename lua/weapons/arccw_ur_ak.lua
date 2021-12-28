@@ -168,6 +168,20 @@ SWEP.AttachmentElements = {
     ["barrel_akm"] = {
         VMBodygroups = {{ind = 1, bg = 3}}
     },
+    ["barrel_rpk"] = {
+        VMBodygroups = {{ind = 5, bg = 1}}
+    },
+    ["barrel_krinkov"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 4},
+            {ind = 3, bg = 2},
+            {ind = 5, bg = 5},
+            {ind = 6, bg = 2}
+        }
+    },
+    ["barrel_dong"] = {
+        VMBodygroups = {{ind = 1, bg = 8}}
+    },
 
     ["muzzle_akm"] = {
         VMBodygroups = {{ind = 6, bg = 1}}
@@ -178,6 +192,25 @@ SWEP.AttachmentElements = {
     },
     ["stock_underfolder_folded"] = {
         VMBodygroups = {{ind = 4, bg = 1}}
+    },
+
+    ["mag_762_75"] = {
+        VMBodygroups = {{ind = 2, bg = 1}}
+    },
+    ["mag_545_30"] = {
+        VMBodygroups = {{ind = 2, bg = 2}}
+    },
+    ["mag_545_45"] = {
+        VMBodygroups = {{ind = 2, bg = 3}}
+    },
+    ["mag_9mm"] = {
+        VMBodygroups = {{ind = 2, bg = 4}}
+    },
+    ["mag_12g"] = {
+        VMBodygroups = {{ind = 2, bg = 5}}
+    },
+    ["mag_366"] = {
+        VMBodygroups = {{ind = 2, bg = 6}}
     },
 
     ["grip_akm"] = {
@@ -191,6 +224,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 8, bg = 1}}
     }
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep,data)
+end
 
 SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
@@ -258,6 +294,7 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
         InstalledEles = {"rail_fg"},
+        ExcludeFlags = {"ak_noubs"},
     },
     {
         PrintName = "Tactical",
@@ -421,6 +458,26 @@ SWEP.Animations = {
             {s = common .. "grab.ogg", t = 2.4},
             {s = common .. "shoulder.ogg", t = 2.5},
         },
+    },
+    ["reload_75"] = {
+        Source = "reload_drum",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = false,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
+        LHIKEaseOut = 0.25,
+        MinProgress = 1.6,
+        SoundTable = {}, -- zenith do your magic
+    },
+    ["reload_empty_75"] = {
+        Source = "reload_drum_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = false,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.6,
+        SoundTable = {}, -- zenith do your magic
     },
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
