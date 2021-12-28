@@ -168,6 +168,9 @@ SWEP.AttachmentElements = {
     ["barrel_akm"] = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },
+    ["barrel_alpha"] = {
+        VMBodygroups = {{ind = 1, bg = 7}}
+    },
     ["barrel_rpk"] = {
         VMBodygroups = {{ind = 7, bg = 1}}
     },
@@ -211,7 +214,12 @@ SWEP.AttachmentElements = {
     ["muzzle_bayonet"] = {
         VMBodygroups = {{ind = 11, bg = 1}}
     },
+    ["stock_alpha"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 4},
+        }
 
+    },
     ["stock_underfolder"] = {
         VMBodygroups = {{ind = 6, bg = 2}}
     },
@@ -224,7 +232,9 @@ SWEP.AttachmentElements = {
     ["stock_akn"] = {
         VMBodygroups = {{ind = 6, bg = 8}}
     },
-
+    ["stock_none"] = {
+        VMBodygroups = {{ind = 6, bg = 9}}
+    },
     ["mag_762_75"] = {
         VMBodygroups = {{ind = 2, bg = 1}}
     },
@@ -246,6 +256,9 @@ SWEP.AttachmentElements = {
 
     ["grip_akm"] = {
         VMBodygroups = {{ind = 9, bg = 1}}
+    },
+    ["grip_alpha"] = {
+        VMBodygroups = {{ind = 9, bg = 2}}
     },
 
     ["cover_ribbed"] = {

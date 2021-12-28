@@ -19,4 +19,4 @@ att.Mult_AccuracyMOA = 2
 att.Mult_Range = .5
 
 att.ActivateElements = {"barrel_krinkov"}
-att.GivesFlags = {"ak_barrelchange","barrel_carbine"}
+att.GivesFlags = {"ak_barrelchange","barrel_carbine","ak_barrelkrinkov"}

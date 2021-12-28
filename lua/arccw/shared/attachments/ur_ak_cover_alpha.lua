@@ -1,7 +1,7 @@
 att.PrintName = "Alpha AK Dust Cover"
 att.AbbrevName = "Alpha Dust Cover"
 att.Icon = nil -- todo
-att.Description = "Alternative dust cover with an upper picattiny rail."
+att.Description = "Alternative US-made dust cover with an upper picattiny rail."
 att.Slot = {"ur_ak_cover"}
 
 att.Desc_Neutrals = {
@@ -10,3 +10,4 @@ att.Desc_Neutrals = {
 }
 
 att.ActivateElements = {"cover_alpha"}
+att.ExcludeFlags = {"ak_barrelkrinkov"}
