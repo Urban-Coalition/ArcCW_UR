@@ -657,6 +657,10 @@ SWEP.Animations = {
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
+    --[[["idle_sprint"] = {
+        Source = "vm_add_sprint",
+        Time = 30 / 40
+    },]]
 }
 
 SWEP.Hook_Think = function(wep)
