@@ -124,6 +124,7 @@ local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "ratt
 SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg"
 SWEP.DistantShootSound = "weapons/arccw_ur/ak/fire_dist.ogg"
+SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.ShootPitchVariation = 0
 
 SWEP.MuzzleEffect = "muzzleflash_ak47"
