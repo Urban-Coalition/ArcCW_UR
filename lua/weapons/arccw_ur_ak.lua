@@ -19,6 +19,7 @@ SWEP.Trivia_Country = "Soviet Union"
 SWEP.Trivia_Year = 1947
 
 SWEP.Slot = 2
+SWEP.CamAttachment = 3
 
 SWEP.UseHands = true
 
@@ -663,6 +664,10 @@ SWEP.Animations = {
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
+    --[[["idle_sprint"] = {
+        Source = "vm_add_sprint",
+        Time = 30 / 40
+    },]]
 }
 
 SWEP.Hook_Think = function(wep)
