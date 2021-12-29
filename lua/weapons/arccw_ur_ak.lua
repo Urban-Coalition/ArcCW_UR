@@ -174,7 +174,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },
     ["barrel_alpha"] = {
-        VMBodygroups = {{ind = 1, bg = 7}}
+        VMBodygroups = {
+            {ind = 1, bg = 7},
+            --{ind = 7, bg = 2},
+            --{ind = 8, bg = 2},
+        }
     },
     ["barrel_rpk"] = {
         VMBodygroups = {{ind = 7, bg = 1}}
@@ -468,7 +472,7 @@ SWEP.Hook_NameChange = function(wep,name)
         if cal == "9mm" then
             start = "PP"
             post = "-19 Vityaz"
-        elseif cal == "12ga" then
+        elseif cal == "12g" then
             start = "Saiga"
             if shortBarrs[barr] then
                 post = "-12K"
