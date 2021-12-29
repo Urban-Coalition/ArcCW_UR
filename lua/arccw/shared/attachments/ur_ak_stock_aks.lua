@@ -1,6 +1,6 @@
 att.PrintName = "Sidefolder Stock"
 att.Icon = nil -- todo
-att.Description = [[Side-folding stock found since the 74 series' debut. While not as stable as a full wood stock, it is much lighter. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
+att.Description = [[Side-folding stock found since the 74 series' debut. The triangular structure reduces its compromise on stability, but it is still less effective than a fixed stock. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
 
 Toggling this stock modifies performance accordingly.]]
 att.AutoStats = true
@@ -13,8 +13,8 @@ att.ToggleStats = {
         PrintName = "Extended",
         Mult_SightTime = .8,
         Mult_RecoilSide = 1.25,
-        Mult_Sway = 1.25,
-        Mult_SightedSpeedMult = 1.1,
+        Mult_Sway = 1.2,
+        Mult_SightedSpeedMult = 1.05,
         ActivateElements = {"stock_aks"},
         AutoStats = true,
     },

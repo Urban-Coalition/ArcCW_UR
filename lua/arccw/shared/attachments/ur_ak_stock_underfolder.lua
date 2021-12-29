@@ -12,9 +12,10 @@ att.ToggleStats = {
     {
         PrintName = "Extended",
         Mult_SightTime = .8,
-        Mult_RecoilSide = 1.25,
+        Mult_RecoilSide = 1.35,
         Mult_Sway = 1.25,
         Mult_SightedSpeedMult = 1.1,
+        Mult_SpeedMult = 1.025,
         ActivateElements = {"stock_underfolder"},
         AutoStats = true,
     },
