@@ -445,7 +445,7 @@ end
 
 SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
-        local foldStocks = {["underfolder"] = true,["sidefolder"] = true}
+        local foldStocks = {["underfolder"] = true,["aks"] = true}
         local akCals = {["762"] = true,["545"] = true}
 
         local start = "AK"
