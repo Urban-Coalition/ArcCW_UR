@@ -308,21 +308,20 @@ SWEP.WorldModelOffset = {
 SWEP.MirrorVMWM = true
 
 SWEP.Attachments = {
-    {
+    { -- dust cover optics
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        InstalledEles = {"upper_flat"},
         Slot = {"optic","sniper_optic","ur_ak_optic"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, -1.75, 3),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 2, 4.55),
+            vang = Angle(0, 270, 0),
         },
         VMScale = Vector(1, 1, 1),
         ExtraSightDist = 8,
         SlideAmount = {
-            vmin = Vector(0, -1.75, 3-2),
-            vmax = Vector(0, -1.75, 3+2),
+            vmin = Vector(0, 2-1, 4.55),
+            vmax = Vector(0, 2+0.5, 4.55),
         },
     },
     {

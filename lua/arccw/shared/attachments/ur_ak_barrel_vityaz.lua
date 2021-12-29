@@ -7,6 +7,7 @@ att.AutoStats = true
 att.SortOrder = 7
 
 att.Add_BarrelLength = -6
+att.Mult_ShootPitch = 115/100
 att.Mult_RPM = 1.131
 att.Mult_SightTime = .8
 att.Mult_HipDispersion = .8
