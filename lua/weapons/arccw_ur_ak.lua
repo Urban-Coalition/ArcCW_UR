@@ -19,6 +19,7 @@ SWEP.Trivia_Country = "Soviet Union"
 SWEP.Trivia_Year = 1947
 
 SWEP.Slot = 2
+SWEP.CamAttachment = 3
 
 SWEP.UseHands = true
 
