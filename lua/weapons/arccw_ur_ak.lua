@@ -19,7 +19,6 @@ SWEP.Trivia_Country = "Soviet Union"
 SWEP.Trivia_Year = 1947
 
 SWEP.Slot = 2
-SWEP.CamAttachment = 3
 
 SWEP.UseHands = true
 
@@ -136,7 +135,7 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.59, 0, 0.44),
-    Ang = Angle(.64, 0.288, 5.53),
+    Ang = Angle(0.64, 0.288, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -184,6 +183,11 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 5},
             {ind = 8, bg = 2},
             {ind = 4, bg = 1}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.643, 0, 0.9),
+            Ang = Angle(-0.9, 0.19, 5.53),
+            Magnification = 1,
         }
     },
     ["barrel_vityaz"] = {
