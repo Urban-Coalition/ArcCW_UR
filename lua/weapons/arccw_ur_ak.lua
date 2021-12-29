@@ -308,7 +308,7 @@ SWEP.WorldModelOffset = {
 SWEP.MirrorVMWM = true
 
 SWEP.Attachments = {
-    { -- dust cover optics
+    {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         Slot = {"optic","sniper_optic","ur_ak_optic"},
@@ -323,6 +323,8 @@ SWEP.Attachments = {
             vmin = Vector(0, 2-1, 4.55),
             vmax = Vector(0, 2+0.5, 4.55),
         },
+--        RequireFlags = {"cover_rail"},
+--        HideIfBlocked = true,
     },
     {
         PrintName = "Barrel",
