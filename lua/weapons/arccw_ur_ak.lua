@@ -487,14 +487,14 @@ SWEP.Hook_NameChange = function(wep,name)
         end
 
         if foldStocks[stock] and akCals[cal] then
-            if barr == "t56" then
-                post = "56-1"
-            else
-                if cal == "762" then
-                    post = "MS"
+            if cal == "762" then
+                if barr == "t56" then
+                    post = "56-1"
                 else
-                    mid = "S"
+                    post = "MS"
                 end
+            else
+                mid = "S"
             end
         end
 
