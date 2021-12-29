@@ -453,6 +453,7 @@ SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
         local foldStocks = {["underfolder"] = true,["aks"] = true}
         local akCals = {["762"] = true,["545"] = true}
+        local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
 
         local start = "AK"
         local mid = ""
@@ -468,8 +469,12 @@ SWEP.Hook_NameChange = function(wep,name)
             post = "-19 Vityaz"
         elseif cal == "12ga" then
             start = "Saiga"
-            post = "-12"
-        elseif barr == "rpk" or barr == "rpk_dong" then
+            if shortBarrs[barr] then
+                post = "-12K"
+            else
+                post = "-12"
+            end
+        elseif barr == "rpk" then
             start = "RPK"
         elseif cal == "762" and barr == "t56" then
             start = "Type "
@@ -477,9 +482,7 @@ SWEP.Hook_NameChange = function(wep,name)
         end
 
         if cal == "545" then
-            if barr == "krinkov" or barr == "vityaz" then
-                post = "-74U" -- the AK-47U doesn't exist
-            elseif barr == "74m" then
+            if barr == "74m" then
                 post = "-74M"
             else
                 post = "-74"
@@ -496,6 +499,10 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 mid = "S"
             end
+        end
+
+        if akCals[cal] and shortBarrs[barr] then
+            post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
         end
 
         return start..mid..post
