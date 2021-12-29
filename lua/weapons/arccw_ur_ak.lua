@@ -116,6 +116,7 @@ SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.75
 
 local path = ")^weapons/arccw_ur/ak/"
+local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
@@ -614,13 +615,13 @@ SWEP.Animations = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
             {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path1 .. "magout.ogg", 	 t = 0.45},
             {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.95},
+            {s = path1 .. "magin.ogg",    t = 0.73},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
-            {s = path .. "scrape.ogg",    t = 1.35},
+            {s = path .. "scrape.ogg",    t = 1.4},
             {s = common .. "magpouchin.ogg", t = 1.35},
             {s = common .. "shoulder.ogg", t = 2.05},
             {s = common .. "grab.ogg", t = 2.1},
@@ -638,16 +639,16 @@ SWEP.Animations = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
             {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path1 .. "magout.ogg", 	 t = 0.45},
             {s = path .. "bonk.ogg", 	 t = 0.5},
             {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.97},
+            {s = path1 .. "magin.ogg",    t = 0.85},
             {s = ratel, t = 1.1},
-            {s = common .. "rifle_magdrop.ogg", t = 1.15},
+            {s = common .. "pistol_magdrop.ogg", t = 1.15},
             {s = rottle,  t = 1.15},
-            {s = path .. "chback.ogg",    t = 1.9},
-            {s = path .. "chamber.ogg",    t = 2.0},
+            {s = path .. "chback_9.ogg",    t = 1.8},
+            {s = path .. "chamber_9.ogg",    t = 2.05},
             {s = common .. "grab.ogg", t = 2.4},
             {s = common .. "shoulder.ogg", t = 2.5},
         },
