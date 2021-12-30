@@ -373,9 +373,10 @@ SWEP.Attachments = {
         Slot = {"foregrip","ubgl","ur_ak_ub"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0,11,1.8),
+            vpos = Vector(0,12, 1.7),
             vang = Angle(90, -90, -90),
         },
+        VMScale = Vector(0.9, 0.9, 0.9),
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"ak_noubs"},
     },
@@ -384,8 +385,8 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 0.8, 27),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(-1, 10.5, 2.8),
+            vang = Angle(-90, 270, 0),
         },
         GivesFlags = {"tac"},
         --InstalledEles = {"ud_m16_clamp_fullsize"}
