@@ -383,6 +383,17 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
+    local akOptics = {["uc_optic_pso1"] = true} -- Will need to update this list if more AK optics get added
+
+    local optic = wep.Attachments[1].Installed
+    local vm = data.vm
+    if !IsValid(vm) then return end
+
+    if optic and !akOptics[optic] then
+        vm:SetBodygroup(12,1)
+    else
+        vm:SetBodygroup(12,0)
+    end
 end
 
 SWEP.ExtraSightDist = 10
@@ -418,7 +429,7 @@ SWEP.Attachments = {
         InstalledEles = {"optic_rail"},
     },
     {
-        PrintName = "Barrel & Hanguard",
+        PrintName = "Barrel",
         DefaultAttName = "16\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
         Slot = "ur_ak_barrel",
@@ -428,11 +439,11 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_ak_muzzle"},
         Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
+        VMScale = Vector(1.2, 1.2, 1.2),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0, 25, 2.5),
-            vang = Angle(0, 90, -90),
+            vpos = Vector(0, 24, 2.7),
+            vang = Angle(0, 270, -90),
         },
         ExcludeFlags = {"ur_ak_nomuzzle"}
     },
