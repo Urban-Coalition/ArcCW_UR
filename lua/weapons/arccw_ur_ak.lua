@@ -740,7 +740,6 @@ SWEP.Animations = {
             {s = common .. "magpouch.ogg", t = 0.1},
             {s = ratel, t = 0.25},
             {s = path1 .. "magout.ogg", 	 t = 0.45},
-            {s = path .. "bonk.ogg", 	 t = 0.5},
             {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
             {s = path1 .. "magin.ogg",    t = 0.85},
