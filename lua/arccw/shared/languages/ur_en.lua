@@ -6,3 +6,4 @@ L["ur.deagle.410.2"] = "35MOA Imprecision"
 
 L["ur.ak.12g.1"] = "Fires 8 pellets instead of one round"
 L["ur.ak.12g.2"] = "40MOA Imprecision"
+L["ur.ak.alpha"] = "Optics become mounted on the upper rail instead of a rail adapter."

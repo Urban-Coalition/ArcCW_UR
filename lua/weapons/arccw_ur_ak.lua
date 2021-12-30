@@ -124,6 +124,8 @@ local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "ratt
 SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg"
 SWEP.DistantShootSound = "weapons/arccw_ur/ak/fire_dist.ogg"
+SWEP.ShootSoundSilenced = ")^weapons/arccw_ud/m16/fire_sup.ogg" -- Temporary
+SWEP.DistantShootSoundSilenced = ")^weapons/arccw_ud/m16/fire_sup_dist.ogg" -- Temporary
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.ShootPitchVariation = 0
 
@@ -371,7 +373,13 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 10, bg = 2}}
     },
     ["cover_alpha"] = {
-        VMBodygroups = {{ind = 10, bg = 1}}
+        VMBodygroups = {{ind = 10, bg = 1}},
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, 2, 4.55),
+                vang = Angle(0, -90, 0),
+            }
+        }
     },
 
     ["optic_rail"] = {
@@ -386,10 +394,11 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     local akOptics = {["uc_optic_pso1"] = true} -- Will need to update this list if more AK optics get added
 
     local optic = wep.Attachments[1].Installed
+    local alpha = (wep.Attachments[10].Installed == "ur_ak_cover_alpha")
     local vm = data.vm
     if !IsValid(vm) then return end
 
-    if optic and !akOptics[optic] then
+    if optic and !alpha and !akOptics[optic] then
         vm:SetBodygroup(12,1)
     else
         vm:SetBodygroup(12,0)

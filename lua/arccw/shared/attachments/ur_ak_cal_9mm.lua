@@ -14,14 +14,14 @@ att.Override_Trivia_Class = "Submachine Gun"
 att.Mult_Range = .4
 att.Mult_RPM = 1.178 -- 800 rpm with the carbine barrels
 att.Mult_ReloadTime = .95
-att.Mult_Recoil = .85
+att.Mult_Recoil = .7
 att.Mult_AccuracyMOA = .85
 att.Mult_HipDispersion = .75
 att.Mult_ShootPitch = (90/100)
 
 att.Mult_Penetration = .25
-att.Mult_DamageMin = .6
-att.Mult_Damage = .6
+att.Mult_DamageMin = .6 -- 4 htk down from 3
+att.Mult_Damage = .6 -- 9 htk down from 5
 
 att.Override_Ammo = "pistol"
 att.Override_Trivia_Calibre = "9x19mm Parabellum"

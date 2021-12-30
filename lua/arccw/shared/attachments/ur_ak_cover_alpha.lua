@@ -7,7 +7,7 @@ att.AutoStats = true
 
 att.Desc_Neutrals = {
     "uc.cosmetic",
-    "Optics become mounted on the upper rail instead of a rail adapter. (NYI)"
+    "ur.ak.alpha"
 }
 
 att.ActivateElements = {"cover_alpha"}
