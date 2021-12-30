@@ -10,4 +10,17 @@ att.Mult_Sway = .9
 att.Mult_SightTime = .85
 att.Mult_Recoil = 1.2
 
-att.ActivateElements = {"barrel_74m"}
+att.ToggleStats = {
+    {
+        PrintName = "Black",
+        ActivateElements = {"barrel_74m"},
+    },
+    {
+        PrintName = "Plum",
+        ActivateElements = {"barrel_74m_red"},
+    },
+    {
+        PrintName = "Olive Drab",
+        ActivateElements = {"barrel_74m_green"},
+    },
+}

@@ -171,6 +171,12 @@ SWEP.AttachmentElements = {
     ["barrel_74m"] = {
         VMBodygroups = {{ind = 1, bg = 3}}
     },
+    ["barrel_74m_red"] = {
+        VMBodygroups = {{ind = 1, bg = 10}}
+    },
+    ["barrel_74m_green"] = {
+        VMBodygroups = {{ind = 1, bg = 11}}
+    },
     ["barrel_akm"] = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },

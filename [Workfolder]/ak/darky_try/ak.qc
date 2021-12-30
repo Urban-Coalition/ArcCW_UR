@@ -15,6 +15,8 @@ $bodygroup "handguards" {
 	studio "alpha_handguard.smd"
 	studio "pp19_handguard-barrel.smd"
 	studio "vepr_sok_handguard.smd"
+	studio "ak74m_handguard_red.smd"
+	studio "ak74m_handguard_od.smd"
 }
 
 $bodygroup "magazine" {
