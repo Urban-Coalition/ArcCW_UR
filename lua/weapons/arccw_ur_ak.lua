@@ -182,7 +182,10 @@ SWEP.AttachmentElements = {
         }
     },
     ["barrel_rpk"] = {
-        VMBodygroups = {{ind = 7, bg = 1}}
+        VMBodygroups = {
+            {ind = 7, bg = 1},
+            {ind = 8, bg = 2}
+        }
     },
     ["barrel_krinkov"] = {
         VMBodygroups = {
@@ -215,6 +218,13 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 7, bg = 3},
             {ind = 11, bg = 3},
+            {ind = 8, bg = 2}
+        }
+    },
+    ["barrel_vepr"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 9},
+            {ind = 7, bg = 4},
             {ind = 8, bg = 2}
         }
     },
@@ -265,6 +275,12 @@ SWEP.AttachmentElements = {
     ["stock_akn"] = {
         VMBodygroups = {{ind = 6, bg = 8}}
     },
+    ["stock_vepr"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 7},
+            {ind = 9, bg = 4}
+        }
+    },
     ["stock_none"] = {
         VMBodygroups = {
             {ind = 6, bg = 9},
@@ -296,6 +312,9 @@ SWEP.AttachmentElements = {
     },
     ["grip_alpha"] = {
         VMBodygroups = {{ind = 9, bg = 2}}
+    },
+    ["grip_saiga"] = {
+        VMBodygroups = {{ind = 9, bg = 3}}
     },
 
     ["cover_ribbed"] = {
@@ -394,9 +413,9 @@ SWEP.Attachments = {
     {
         PrintName = "Grip Type",
         Slot = {"ur_ak_grip"},
-        DefaultAttName = "Standard Grip",
+        DefaultAttName = "Type 3 Grip",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_grip_default.png", "smooth mips"),
-        ExcludeFlags = {"ak_vepr"}
+        ExcludeFlags = {"stock_vepr"},
     },
     {
         PrintName = "Stock",
@@ -481,6 +500,9 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-12"
             end
+        elseif cal == "366" then
+            start = "Vepr"
+            post = " .366"
         elseif barr == "rpk" then
             start = "RPK"
         elseif cal == "762" and barr == "t56" then

@@ -1,4 +1,4 @@
-att.PrintName = "Sidefolder Stock"
+att.PrintName = "Sidefolding Stock"
 att.Icon = nil -- todo
 att.Description = [[Side-folding stock found since the 74 series' debut. The triangular structure reduces its compromise on stability, but it is still less effective than a fixed stock. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
 
