@@ -12,5 +12,5 @@ att.Mult_SightedSpeedMult = 1.1
 att.Mult_SpeedMult = 1.1
 att.Mult_Recoil = 1.075
 
-att.GivesFlags = {"ak_railedguard"}
+att.GivesFlags = {"ak_railedguard","nodong"}
 att.ActivateElements = {"barrel_alpha"}

@@ -1,6 +1,6 @@
-att.PrintName = "8\" Vityaz Barrel"
+att.PrintName = "8\" SMG Barrel"
 att.Icon = nil -- todo
-att.Description = "Submachine gun barrel with a rail interface for additional modularity. Functions identically to the Carbine barrel."
+att.Description = "Submachine gun barrel with a rail interface for additional modularity. Functions identically to the Compact barrel."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
@@ -13,7 +13,7 @@ att.Mult_SightTime = .8
 att.Mult_HipDispersion = .8
 att.Mult_SightedSpeedMult = 1.1
 att.Mult_SpeedMult = 1.025
-att.Mult_AimSway = .8
+att.Mult_Sway = .8
 
 att.Mult_Recoil = 1.5
 att.Mult_AccuracyMOA = 2

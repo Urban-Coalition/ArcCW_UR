@@ -234,6 +234,27 @@ SWEP.AttachmentElements = {
             {ind = 8, bg = 2}
         }
     },
+    ["barrel_105"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 3},
+            {ind = 7, bg = 2},
+            {ind = 8, bg = 2}
+        }
+    },
+    ["barrel_105_red"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 10},
+            {ind = 7, bg = 2},
+            {ind = 8, bg = 2}
+        }
+    },
+    ["barrel_105_green"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 11},
+            {ind = 7, bg = 2},
+            {ind = 8, bg = 2}
+        }
+    },
 
     ["barrel_dong"] = {
         VMBodygroups = {{ind = 1, bg = 2}} -- This will show up regardless of barrel selection because underbarrel atts are always processed after barrel atts
@@ -467,7 +488,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Dust Cover",
-        DefaultAttName = "Standard Dust Cover",
+        DefaultAttName = "Smooth Dust Cover",
         Slot = {"ur_ak_cover"},
         FreeSlot = true,
     }
@@ -524,7 +545,7 @@ SWEP.Hook_NameChange = function(wep,name)
             end
         end
 
-        if foldStocks[stock] and akCals[cal] then
+        if foldStocks[stock] and akCals[cal] and !string.StartWith(barr,"105") then
             if cal == "762" then
                 if barr == "t56" then
                     post = "56-1"
@@ -536,8 +557,18 @@ SWEP.Hook_NameChange = function(wep,name)
             end
         end
 
-        if akCals[cal] and shortBarrs[barr] then
-            post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
+        if akCals[cal] then
+            if shortBarrs[barr] then
+                post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
+            elseif string.StartWith(barr,"105") then
+                if cal == "545" then
+                    post = "-105"
+                elseif cal == "762" then
+                    post = "-104"
+                elseif cal == "556" then
+                    post = "-102"
+                end
+            end
         end
 
         return start..mid..post

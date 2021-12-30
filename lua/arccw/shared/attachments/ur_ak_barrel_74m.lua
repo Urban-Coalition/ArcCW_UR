@@ -24,3 +24,5 @@ att.ToggleStats = {
         ActivateElements = {"barrel_74m_green"},
     },
 }
+
+att.GivesFlags = {"nodong"}

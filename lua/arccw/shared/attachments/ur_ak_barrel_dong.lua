@@ -13,4 +13,4 @@ att.Mult_SightTime = 1.1
 att.Mult_MoveDispersion = 1.25
 
 att.ActivateElements = {"barrel_dong"}
-att.ExcludeFlags = {"barrel_carbine","ak_railedguard"}
+att.ExcludeFlags = {"barrel_carbine","nodong"}
