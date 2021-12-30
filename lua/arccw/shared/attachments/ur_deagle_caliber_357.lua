@@ -20,4 +20,5 @@ att.Mult_ShootSpeedMult = 1.2
 --att.Mult_RPM = 1.2
 
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
-att.Override_ShellScale = 1.785
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
+att.Override_ShellScale = 1

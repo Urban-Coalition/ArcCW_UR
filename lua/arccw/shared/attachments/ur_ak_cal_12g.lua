@@ -56,8 +56,8 @@ att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"
 att.Override_Trivia_Calibre = "12 Gauge"
 att.Override_Trivia_Class = "Shotgun"
-att.Override_ShellModel = "models/weapons/arccw/ud_shells/12.mdl"
-att.Override_ShellScale = 1.7
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/12g.mdl"
+att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 
 att.GivesFlags = {"cal_12g"}

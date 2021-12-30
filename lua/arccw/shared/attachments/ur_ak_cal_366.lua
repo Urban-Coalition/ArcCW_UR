@@ -37,8 +37,8 @@ att.Override_Firemodes = {
     }
 }
 
-att.Override_ShellScale = 1.4
-
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/366tkm.mdl"
+att.Override_ShellScale = 1
 att.Override_Trivia_Class = "Rifle"
 att.Override_Trivia_Calibre = ".366 TKM"
 att.ActivateElements = {"mag_366"}

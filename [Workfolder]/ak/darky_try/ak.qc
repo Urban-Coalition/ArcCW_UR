@@ -107,10 +107,9 @@ $bodygroup "mount" {
 
 $cdmaterials "models\weapons\arccw\shared"
 $cdmaterials "models\weapons\arccw\ur_ak"
-$cdmaterials "models\weapons\arccw\ud_glock"
 $cdmaterials "models\weapons\arccw\ud_common"
 $cdmaterials "models/UC/attachments/"
-
+$cdmaterials "models\weapons\arccw\uc_shells\"
 
 // $texturegroup "skinfamilies"
 // {
@@ -144,21 +143,10 @@ $sequence "idle"{
 	"ACT_VM_IDLE" 1
  	// blend "sights" 0 1
 	loop
-	snap
+	// snap
 	node "Ready"
 }
 
-
-// $sequence "idle_empty"{
-// 	"anims\idle_empty.smd" 
-// 	// "anims\idle_iron_empty.smd"
-// 	fps 60
-// 	"ACT_VM_IDLE" 1
-//  	// blend "sights" 0 1
-// 	loop
-// 	snap
-// 	node "Ready"
-// }
 
 $sequence "fire" {
 	"anims\vm_ak47_fire.smd"
@@ -221,6 +209,37 @@ $sequence "ready" {
 	fps 30
 	"ACT_VM_DRAW_1" 1
 	snap
+}
+
+
+$sequence "sprint_start"{
+	"anims\vm_add_sprint_start.smd" 
+	// "anims\idle_iron_empty.smd"
+	fps 40
+	// "ACT_VM_IDLE" 1
+ 	// blend "sights" 0 1
+	// fadein 0.5
+	// fadeout 0.5
+}
+
+$sequence "sprint_idle"{
+	"anims\vm_add_sprint.smd" 
+	// "anims\idle_iron_empty.smd"
+	fps 30
+	// "ACT_VM_IDLE" 1
+ 	// blend "sights" 0 1
+	// fadein 0.5
+	// fadeout 0.5
+}
+
+$sequence "sprint_end"{
+	"anims\vm_ak47_sprint_end.smd" 
+	// "anims\idle_iron_empty.smd"
+	fps 40
+	// "ACT_VM_IDLE" 1
+ 	// blend "sights" 0 1
+	// fadein 0.5
+	// fadeout 0.5
 }
 
 $sequence "reload" {

@@ -34,7 +34,7 @@ att.Override_Penetration = 1
 
 att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"
-att.Override_ShellModel = "models/weapons/arccw/ud_shells/12.mdl"
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/410bore.mdl"
 att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 att.Override_Trivia_Class = "Shot Pistol"

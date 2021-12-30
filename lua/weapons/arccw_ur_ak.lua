@@ -130,9 +130,9 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.ShootPitchVariation = 0
 
 SWEP.MuzzleEffect = "muzzleflash_ak47"
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 1.5
+SWEP.ShellScale = 1
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
@@ -154,6 +154,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.SprintPos = Vector(0, 0, 0)
+SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
@@ -868,10 +871,15 @@ SWEP.Animations = {
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
-    --[[["idle_sprint"] = {
-        Source = "vm_add_sprint",
-        Time = 30 / 40
-    },]]
+    ["enter_sprint"] = {
+        Source = "sprint_start",
+    },
+    ["idle_sprint"] = {
+        Source = "sprint_idle",
+    },
+    ["exit_sprint"] = {
+        Source = "sprint_end",
+    },
 }
 
 SWEP.Hook_Think = function(wep)
