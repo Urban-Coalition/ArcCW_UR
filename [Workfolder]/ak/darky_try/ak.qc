@@ -138,12 +138,9 @@ $poseparameter "sights" 0 1 loop 0
 
 $sequence "idle"{
 	"anims\vm_ak47_idle.smd" 
-	// "anims\vm_ak47_offset_ads.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
- 	// blend "sights" 0 1
 	loop
-	// snap
 	node "Ready"
 }
 
@@ -160,43 +157,8 @@ $sequence "fire" {
 }
 
 
-// $sequence "fire_02" {
-// 	"anims\fire_02.smd"
-// 	// "anims\fire_iron.smd"
-// 	fps 60
-// 	"ACT_VM_PRIMARYATTACK" 1
-//  	// blend "sights" 0 1
-// 	fadein 0.03
-// 	fadeout 0.03
-// 	{ event 5001 0 "1" }
-// }
-
-// $sequence "fire_03" {
-// 	"anims\fire_03.smd"
-// 	// "anims\fire_iron.smd"
-// 	fps 60
-// 	"ACT_VM_PRIMARYATTACK" 1
-//  	// blend "sights" 0 1
-// 	fadein 0.03
-// 	fadeout 0.03
-// 	{ event 5001 0 "1" }
-// }
-
-// $sequence "fire_empty" {
-// 	"anims\fire_empty.smd"
-// 	"anims\fire_iron_empty.smd"
-// 	fps 60
-// 	"ACT_VM_PRIMARYATTACK" 1
-//  	blend "sights" 0 1
-// 	fadein 0.03
-// 	fadeout 0.03
-// 	{ event 5001 0 "1" }
-// }
-
 $sequence "draw" {
 	"anims\vm_ak47_draw.smd"
-	// "anims\vm_ak47_draw_ads.smd"
- 	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
@@ -204,8 +166,6 @@ $sequence "draw" {
 
 $sequence "ready" {
 	"anims\vm_ak47_first_draw.smd"
-	// "anims\ready_iron.smd"
- 	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_DRAW_1" 1
 	snap
@@ -214,38 +174,21 @@ $sequence "ready" {
 
 $sequence "sprint_start"{
 	"anims\vm_add_sprint_start.smd" 
-	// "anims\idle_iron_empty.smd"
 	fps 40
-	// "ACT_VM_IDLE" 1
- 	// blend "sights" 0 1
-	// fadein 0.5
-	// fadeout 0.5
 }
 
 $sequence "sprint_idle"{
 	"anims\vm_add_sprint.smd" 
-	// "anims\idle_iron_empty.smd"
 	fps 30
-	// "ACT_VM_IDLE" 1
- 	// blend "sights" 0 1
-	// fadein 0.5
-	// fadeout 0.5
 }
 
 $sequence "sprint_end"{
 	"anims\vm_ak47_sprint_end.smd" 
-	// "anims\idle_iron_empty.smd"
 	fps 40
-	// "ACT_VM_IDLE" 1
- 	// blend "sights" 0 1
-	// fadein 0.5
-	// fadeout 0.5
 }
 
 $sequence "reload" {
 	"anims\vm_ak47_reload_tactical.smd"
-	// "anims\vm_ak47_reload_tactical_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -253,17 +196,12 @@ $sequence "reload" {
 
 $sequence "jamfix" {
 	"anims\vm_ak47_jamfix.smd"
-	// "anims\vm_ak47_reload_tactical_ads.smd"
-	// blend "sights" 0 1
 	fps 30
-	// "ACT_VM_RELOAD" 1
 	snap
 }
 
 $sequence "reload_empty" {
 	"anims\vm_ak47_reload_empty.smd"
-	// "anims\vm_ak47_reload_empty_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -271,8 +209,6 @@ $sequence "reload_empty" {
 
 $sequence "reload_drum" {
 	"anims\vm_ak47_reload_drum.smd"
-	// "anims\vm_ak47_reload_drum_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_1" 1
 	snap
@@ -280,8 +216,6 @@ $sequence "reload_drum" {
 
 $sequence "reload_drum_empty" {
 	"anims\vm_ak47_reload_empty_drum.smd"
-	// "anims\vm_ak47_reload_empty_drum_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_1" 1
 	snap
@@ -289,8 +223,6 @@ $sequence "reload_drum_empty" {
 
 $sequence "reload_9mm" {
 	"anims\vm_ak47_reload_tactical_9mm.smd"
-	// "anims\vm_ak47_reload_tactical_9mm_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_2" 1
 	snap
@@ -298,8 +230,6 @@ $sequence "reload_9mm" {
 
 $sequence "reload_9mm_empty" {
 	"anims\vm_ak47_reload_empty_9mm.smd"
-	// "anims\vm_ak47_reload_empty_9mm_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_2" 1
 	snap
@@ -307,8 +237,6 @@ $sequence "reload_9mm_empty" {
 
 $sequence "reload_10rnd" {
 	"anims\vm_ak47_reload_tactical_10rnd.smd"
-	// "anims\vm_ak47_reload_tactical_10rnd_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_3" 1
 	snap
@@ -316,8 +244,6 @@ $sequence "reload_10rnd" {
 
 $sequence "reload_10rnd_empty" {
 	"anims\vm_ak47_reload_empty_10rnd.smd"
-	// "anims\vm_ak47_reload_empty_10rnd_ads.smd"
-	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD_3" 1
 	snap
