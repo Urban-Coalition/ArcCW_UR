@@ -22,7 +22,11 @@ att.Mult_ReloadTime = .9
 
 att.Mult_RPM = .6
 att.Mult_Recoil = 1.5
-att.Override_ClipSize = 20
+att.Override_ClipSize = 10
+
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_10rnd"
+end
 
 att.Override_Firemodes = {
     {

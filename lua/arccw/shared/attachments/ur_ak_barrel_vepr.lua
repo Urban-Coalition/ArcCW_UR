@@ -1,4 +1,4 @@
-att.PrintName = "20\" Marksman Barrel"
+att.PrintName = "20\" VEPR Barrel"
 att.Icon = nil -- todo
 att.Description = "Long hunting barrel that boosts accuracy significantly, but is more difficult to sight in with."
 att.Slot = {"ur_ak_barrel"}

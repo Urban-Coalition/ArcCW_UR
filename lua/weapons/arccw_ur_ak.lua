@@ -137,8 +137,8 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.59, 0, 0.44),
-    Ang = Angle(0.64, 0.288, 5.53),
+    Pos = Vector(-2.6, 0, 0.44),
+    Ang = Angle(0.60, 0.274, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -191,6 +191,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 7, bg = 1},
             {ind = 8, bg = 2}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.643, 0, 0.8),
+            Ang = Angle(-0.6, 0.14, 5.53),
+            Magnification = 1,
         }
     },
     ["barrel_krinkov"] = {
@@ -201,8 +206,8 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 1}
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.643, 0, 0.9),
-            Ang = Angle(-0.9, 0.19, 5.53),
+            Pos = Vector(-2.65, 0, 0.9),
+            Ang = Angle(-1, 0.15, 5.53),
             Magnification = 1,
         }
     },
@@ -211,6 +216,11 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 8},
             {ind = 7, bg = 5},
             {ind = 8, bg = 2}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.5, 0, 0.75),
+            Ang = Angle(-0.42, 0.602, 5.53),
+            Magnification = 1,
         }
     },
     ["barrel_t56"] = {
@@ -232,6 +242,11 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 9},
             {ind = 7, bg = 4},
             {ind = 8, bg = 2}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.63, 0, 0.72),
+            Ang = Angle(-0.3, 0.18, 5.53),
+            Magnification = 1,
         }
     },
     ["barrel_105"] = {
@@ -239,6 +254,11 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 3},
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.65, 0, 0.45),
+            Ang = Angle(0.55, 0.115, 5.53),
+            Magnification = 1,
         }
     },
     ["barrel_105_red"] = {
@@ -376,8 +396,10 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(0, 2, 4.55),
-            vang = Angle(0, 270, 0),
+            vang = Angle(0, -90, 0),
         },
+        CorrectivePos = Vector(0, 0, -0.0),
+        CorrectiveAng = Angle(-1.9, 180.15, 0),
         VMScale = Vector(1, 1, 1),
         ExtraSightDist = 8,
         SlideAmount = {
@@ -388,10 +410,16 @@ SWEP.Attachments = {
 --        HideIfBlocked = true,
     },
     {
-        PrintName = "Barrel",
+        PrintName = "Barrel & Hanguard",
         DefaultAttName = "16\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
         Slot = "ur_ak_barrel",
+    },
+    {
+        PrintName = "Dust Cover",
+        DefaultAttName = "Smooth Dust Cover",
+        Slot = {"ur_ak_cover"},
+        FreeSlot = true,
     },
     {
         PrintName = "Muzzle",
@@ -416,6 +444,12 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+    },
+    {
+        PrintName = "Magazine",
+        Slot = {"ur_ak_mag"},
+        DefaultAttName = "30-Round Mag",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
     },
     {
         PrintName = "Underbarrel",
@@ -453,12 +487,7 @@ SWEP.Attachments = {
         DefaultAttName = "Type 3 Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
     },
-    {
-        PrintName = "Magazine",
-        Slot = {"ur_ak_mag"},
-        DefaultAttName = "30-Round Mag",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
-    },
+
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
@@ -489,12 +518,7 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
     },
-    {
-        PrintName = "Dust Cover",
-        DefaultAttName = "Smooth Dust Cover",
-        Slot = {"ur_ak_cover"},
-        FreeSlot = true,
-    }
+
 }
 
 function SWEP:Hook_TranslateAnimation(anim)
@@ -705,6 +729,56 @@ SWEP.Animations = {
     },
     ["reload_empty_9mm"] = {
         Source = "reload_9mm_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.55,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path1 .. "magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path1 .. "magin.ogg",    t = 0.85},
+            {s = ratel, t = 1.1},
+            {s = common .. "pistol_magdrop.ogg", t = 1.15},
+            {s = rottle,  t = 1.15},
+            {s = path .. "chback_9.ogg",    t = 1.8},
+            {s = path .. "chamber_9.ogg",    t = 2.05},
+            {s = common .. "grab.ogg", t = 2.4},
+            {s = common .. "shoulder.ogg", t = 2.5},
+        },
+    },
+    ["reload_10rnd"] = {
+        Source = "reload_10rnd",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.9,
+        LHIKEaseOut = 0.25,
+        MinProgress = 1.3,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path1 .. "magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path1 .. "magin.ogg",    t = 0.73},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = path .. "scrape.ogg",    t = 1.4},
+            {s = common .. "magpouchin.ogg", t = 1.35},
+            {s = common .. "shoulder.ogg", t = 2.05},
+            {s = common .. "grab.ogg", t = 2.1},
+        },
+    },
+    ["reload_empty_10rnd"] = {
+        Source = "reload_10rnd_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.3,

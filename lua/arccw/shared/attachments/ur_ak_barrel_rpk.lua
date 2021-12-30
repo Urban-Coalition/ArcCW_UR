@@ -1,4 +1,4 @@
-att.PrintName = "23\" SAW Barrel"
+att.PrintName = "23\" RPK Barrel"
 att.Icon = nil -- todo
 att.Description = "Light machine gun barrel as used on the RPK. In addition to improved precision from the elongated barrel, it features an integrated bipod which can be deployed for even greater accuracy and control.\nVery front-heavy."
 att.Slot = {"ur_ak_barrel"}
