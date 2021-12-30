@@ -39,3 +39,10 @@ att.Override_Trivia_Class = "Rifle"
 att.Override_Trivia_Calibre = ".366 TKM"
 att.ActivateElements = {"mag_366"}
 att.GivesFlags = {"cal_366"}
+
+local path = ")^weapons/arccw_ur/ak/"
+
+att.Hook_GetShootSound = function(wep, fsound)
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_366_1.ogg", path .. "fire_366_2.ogg", path .. "fire_366_3.ogg"} end
+    if fsound == wep.ShootSoundSilenced then return path .. "fire_366_sup.ogg" end
+end
