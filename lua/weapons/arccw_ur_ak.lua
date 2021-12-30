@@ -107,7 +107,7 @@ SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
 SWEP.HeatDelayTime = 3
 
-SWEP.Malfunction = true    
+-- SWEP.Malfunction = true    
 SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
@@ -622,7 +622,7 @@ SWEP.Hook_NameChange = function(wep,name)
         local atts = wep.Attachments
         local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
         local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
-        local stock = string.Replace(atts[8].Installed or "default", "ur_ak_stock_", "")
+        local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
 
         if cal == "9mm" then
             start = "PP"
