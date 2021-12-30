@@ -124,9 +124,9 @@ local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "clo
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg"
-SWEP.DistantShootSound = "weapons/arccw_ur/ak/fire_dist.ogg"
-SWEP.ShootSoundSilenced = ")^weapons/arccw_ud/m16/fire_sup.ogg" -- Temporary
-SWEP.DistantShootSoundSilenced = ")^weapons/arccw_ud/m16/fire_sup_dist.ogg" -- Temporary
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.ShootPitchVariation = 0
 
@@ -163,8 +163,8 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CrouchPos = Vector(-4, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
 
-SWEP.HolsterPos = Vector(3, 3, 0)
-SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
+SWEP.HolsterPos = Vector(-1, -1, 1.2)
+SWEP.HolsterAng = Angle(-15, 8, -10)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
