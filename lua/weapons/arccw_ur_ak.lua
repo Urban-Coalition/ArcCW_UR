@@ -416,12 +416,6 @@ SWEP.Attachments = {
         Slot = "ur_ak_barrel",
     },
     {
-        PrintName = "Dust Cover",
-        DefaultAttName = "Smooth Dust Cover",
-        Slot = {"ur_ak_cover"},
-        FreeSlot = true,
-    },
-    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_ak_muzzle"},
@@ -487,7 +481,12 @@ SWEP.Attachments = {
         DefaultAttName = "Type 3 Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
     },
-
+    {
+        PrintName = "Dust Cover",
+        DefaultAttName = "Smooth Dust Cover",
+        Slot = {"ur_ak_cover"},
+        FreeSlot = true,
+    },
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
