@@ -17,5 +17,9 @@ att.Mult_RecoilSide = 1.2
 att.Mult_SpeedMult = 0.95
 att.Mult_ShootSpeedMult = 0.9
 
+att.Override_Malfunction = true
+att.Mult_MalfunctionMean = 0.8
+att.Mult_MalfunctionVariance = 1.5
+
 att.ActivateElements = {"mag_545_45"}
 att.RequireFlags = {"cal_545"}

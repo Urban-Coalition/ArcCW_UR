@@ -251,6 +251,15 @@ $sequence "reload" {
 	snap
 }
 
+$sequence "jamfix" {
+	"anims\vm_ak47_jamfix.smd"
+	// "anims\vm_ak47_reload_tactical_ads.smd"
+	// blend "sights" 0 1
+	fps 30
+	// "ACT_VM_RELOAD" 1
+	snap
+}
+
 $sequence "reload_empty" {
 	"anims\vm_ak47_reload_empty.smd"
 	// "anims\vm_ak47_reload_empty_ads.smd"

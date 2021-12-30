@@ -107,6 +107,7 @@ SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
 SWEP.HeatDelayTime = 3
 
+SWEP.Malfunction = true    
 SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
@@ -137,6 +138,7 @@ SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.6, 0, 0.44),
@@ -880,6 +882,22 @@ SWEP.Animations = {
     ["exit_sprint"] = {
         Source = "sprint_end",
     },
+    ["unjam"] = {
+        Source = "jamfix",
+        -- Time = 45 / 30,
+        ShellEjectAt = 0.65,
+        -- LHIK = true,
+        -- LHIKIn = 0.3,
+        -- LHIKEaseIn = 0.4,
+        -- LHIKEaseOut = 0.15,
+        -- LHIKOut = 0.4,
+        -- SoundTable = {                                             zenith do noises here
+        --     {s = path .. "chback.ogg",   t = 0.15},
+        --     {s = common .. "cloth_4.ogg",  t = 0.5},
+        --     {s = path .. "chamber.ogg",  t = 0.5},
+        -- },
+    },
+
 }
 
 SWEP.Hook_Think = function(wep)

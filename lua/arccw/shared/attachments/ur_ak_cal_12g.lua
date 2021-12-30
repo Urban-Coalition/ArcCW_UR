@@ -25,6 +25,16 @@ att.Override_ClipSize = 8
 --att.Mult_HipDispersion = 1.25
 att.Mult_RPM = 0.4
 
+
+
+
+att.Override_Malfunction = true
+att.Mult_MalfunctionMean = 0.2
+att.Mult_MalfunctionVariance = 1.5
+
+
+
+
 att.Override_AccuracyMOA_Priority = -1
 att.Override_AccuracyMOA = 40
 att.Override_Num_Priority = -1 -- shotgun ammo may need to overwrite this
