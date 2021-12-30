@@ -4,6 +4,8 @@ att.Description = "A straight, hollow mass-manufacturing stock that eases handli
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true
 
+att.SortOrder = 4
+
 att.Mult_Recoil = 1.1
 att.Mult_SightTime = .95
 att.Mult_Sway = 0.8

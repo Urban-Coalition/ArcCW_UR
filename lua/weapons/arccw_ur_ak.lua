@@ -302,6 +302,9 @@ SWEP.AttachmentElements = {
     ["stock_akn"] = {
         VMBodygroups = {{ind = 6, bg = 8}}
     },
+    ["stock_skeletal"] = {
+        VMBodygroups = {{ind = 6, bg = 6}}
+    },
     ["stock_vepr"] = {
         VMBodygroups = {
             {ind = 6, bg = 7},

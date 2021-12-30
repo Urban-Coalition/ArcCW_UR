@@ -4,6 +4,8 @@ att.Description = "Heavy-duty machine gun stock, designed with prone shooting in
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true
 
+att.SortOrder = 3
+
 att.Mult_Recoil = .85
 att.Mult_Sway = .75
 att.Mult_SightTime = 1.1

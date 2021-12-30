@@ -6,6 +6,8 @@ Toggling this stock modifies performance accordingly.]]
 att.AutoStats = true
 att.Slot = {"ur_ak_stock"}
 
+att.SortOrder = 1
+
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
 att.ToggleStats = {

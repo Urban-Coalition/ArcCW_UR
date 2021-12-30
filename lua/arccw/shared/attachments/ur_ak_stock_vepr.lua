@@ -7,6 +7,8 @@ att.Desc_Cons = {
     "uc.nogrip"
 }
 
+att.SortOrder = 3
+
 att.Mult_Recoil = .9
 att.Mult_Sway = .5
 att.Mult_SightTime = 1.15
