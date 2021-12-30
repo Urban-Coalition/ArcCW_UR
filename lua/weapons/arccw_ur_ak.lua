@@ -372,7 +372,14 @@ SWEP.AttachmentElements = {
     },
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}}
-    }
+    },
+
+    ["optic_rail"] = {
+        VMBodygroups = {{ind = 12, bg = 1}}
+    },
+    ["optic_rail+laser"] = {
+        VMBodygroups = {{ind = 12, bg = 2}}
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
@@ -395,19 +402,20 @@ SWEP.Attachments = {
         Slot = {"optic","sniper_optic","ur_ak_optic"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 2, 4.55),
+            vpos = Vector(0, 2, 4.55+0.3),
             vang = Angle(0, -90, 0),
         },
         CorrectivePos = Vector(0, 0, -0.0),
         CorrectiveAng = Angle(-1.9, 180.15, 0),
         VMScale = Vector(1, 1, 1),
         ExtraSightDist = 8,
-        SlideAmount = {
-            vmin = Vector(0, 2-1, 4.55),
-            vmax = Vector(0, 2+0.5, 4.55),
-        },
+        -- SlideAmount = {
+        --     vmin = Vector(0, 2-1, 4.55),
+        --     vmax = Vector(0, 2+0.5, 4.55),
+        -- },
 --        RequireFlags = {"cover_rail"},
 --        HideIfBlocked = true,
+        InstalledEles = {"optic_rail"},
     },
     {
         PrintName = "Barrel & Hanguard",

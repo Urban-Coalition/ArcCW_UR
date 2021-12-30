@@ -97,11 +97,19 @@ $bodygroup "bayonets" {
 	studio "type56_bayonet_unfolded.smd"
 }
 
+$bodygroup "mount" {
+	blank
+	studio "mount.smd"
+	studio "mount_laser.smd"
+	// studio "fas2 pso.smd"
+}
+
 
 $cdmaterials "models\weapons\arccw\shared"
 $cdmaterials "models\weapons\arccw\ur_ak"
 $cdmaterials "models\weapons\arccw\ud_glock"
 $cdmaterials "models\weapons\arccw\ud_common"
+$cdmaterials "models/UC/attachments/"
 
 
 // $texturegroup "skinfamilies"
