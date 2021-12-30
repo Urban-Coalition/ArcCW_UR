@@ -423,11 +423,17 @@ SWEP.AttachmentElements = {
         }}
     },
 
-    ["optic_rail"] = {
-        VMBodygroups = {{ind = 12, bg = 1}}
-    },
-    ["optic_rail+laser"] = {
-        VMBodygroups = {{ind = 12, bg = 2}}
+    -- ["optic_rail"] = {
+    --     VMBodygroups = {{ind = 12, bg = 1}}
+    -- },
+    ["optic_raillaser"] = {
+        -- VMBodygroups = {{ind = 12, bg = 2}}
+        AttPosMods = {
+            [7] = {
+                vpos = Vector(0.95, 2.5, 4.05),
+                vang = Angle(0, -90, 125),
+            },
+        },
     },
 }
 
@@ -436,13 +442,19 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 
     local optic = wep.Attachments[1].Installed
     local alpha = (wep.Attachments[10].Installed == "ur_ak_cover_alpha")
+    local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
+
     local vm = data.vm
     if !IsValid(vm) then return end
 
-    if optic and !alpha and !akOptics[optic] then
-        vm:SetBodygroup(12,1)
+    if taclaser and !akOptics[optic] then
+        vm:SetBodygroup(12,2)
     else
-        vm:SetBodygroup(12,0)
+        if optic and !alpha and !akOptics[optic] then
+            vm:SetBodygroup(12,1)
+        else
+            vm:SetBodygroup(12,0)
+        end
     end
 end
 
@@ -476,7 +488,7 @@ SWEP.Attachments = {
         -- },
 --        RequireFlags = {"cover_rail"},
 --        HideIfBlocked = true,
-        InstalledEles = {"optic_rail"},
+        -- InstalledEles = {"optic_rail"},
     },
     {
         PrintName = "Barrel",
@@ -578,7 +590,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
+        Slot = {"charm", "fml_charm", "ur_ak_charm"},
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
