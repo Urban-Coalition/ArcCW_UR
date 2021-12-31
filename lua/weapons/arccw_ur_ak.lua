@@ -415,6 +415,7 @@ SWEP.AttachmentElements = {
     ["cover_ribbed"] = {
         VMBodygroups = {{ind = 10, bg = 2}}
     },
+
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
         AttPosMods = {[1] = {
@@ -423,17 +424,50 @@ SWEP.AttachmentElements = {
         }}
     },
 
-    -- ["optic_rail"] = {
-    --     VMBodygroups = {{ind = 12, bg = 1}}
-    -- },
     ["optic_raillaser"] = {
-        -- VMBodygroups = {{ind = 12, bg = 2}}
         AttPosMods = {
             [7] = {
                 vpos = Vector(0.95, 2.5, 4.05),
                 vang = Angle(0, -90, 125),
             },
         },
+    },
+
+    ["cover_ak12"] = {
+        VMBodygroups = {{ind = 10, bg = 4}},
+        AttPosMods = {[1] = {
+            vpos = Vector(0, 2, 4.55),
+            vang = Angle(0, -90, 0),
+        }}
+    },
+    ["grip_ak12"] = {
+        VMBodygroups = {{ind = 9, bg = 5}}
+    },
+    ["stock_ak12"] = {
+        VMBodygroups = {{ind = 6, bg = 11}}
+    },
+    ["handguard_ak12"] = {
+        VMBodygroups = {{ind = 1, bg = 12}},
+    },
+    ["barrel_ak12"] = {
+        VMBodygroups = {{ind = 7, bg = 6}},
+    },
+    ["muzzle_ak12"] = {
+        VMBodygroups = {{ind = 8, bg = 2}},
+    },
+    ["reciever_ak12"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        Override_IronSightStruct = {
+            Pos = Vector(-2.642, 0, 0.59),
+            Ang = Angle(-0.75, 0.165, 5.53),
+            Magnification = 1,
+        }
+    },
+    ["sight_ak12"] = {
+        VMBodygroups = {{ind = 4, bg = 3}}
+    },
+    ["mag_545_ak12"] = {
+        VMBodygroups = {{ind = 2, bg = 7}}
     },
 }
 
