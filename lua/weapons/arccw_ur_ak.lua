@@ -699,6 +699,10 @@ SWEP.Animations = {
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        SoundTable = {
+            {s = path .. "chback.ogg",    t = 0.2},
+            {s = path .. "chamber.ogg",    t = 0.3},
+        }
     },
     ["fire"] = {
         Source = {"fire"},
