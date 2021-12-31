@@ -109,6 +109,7 @@ SWEP.HeatDelayTime = 3
 
 -- SWEP.Malfunction = true    
 SWEP.MalfunctionMean = 200
+SWEP.MeleeTime = 1.5
 
 -- Speed multipliers --
 
@@ -946,6 +947,10 @@ SWEP.Animations = {
         --     {s = common .. "cloth_4.ogg",  t = 0.5},
         --     {s = path .. "chamber.ogg",  t = 0.5},
         -- },
+    },
+    ["bash"] = {
+        Source = "bayonet",
+        Time = 1.4
     },
 
 }

@@ -14,12 +14,13 @@ att.ToggleStats = {
         ActivateElements = {"barrel_t56_ext"},
         AutoStats = true,
         Mult_MeleeDamage = 2.5,
+        Mult_MeleeTime = 0.7,
         Add_BarrelLength = 3,
         Mult_Sway = 1.2,
-        Override_BashPreparePos = Vector(4, -5, -1.8),
-        Override_BashPrepareAng = Angle(-15, -5, -5),
-        Override_BashPos = Vector(-1, 12, 4.5), -- i'm too impatient to not make this bat you in the face with the stock
-        Override_BashAng = Angle(-7, 3, 25),
+        -- Override_BashPreparePos = Vector(4, -5, -1.8),
+        -- Override_BashPrepareAng = Angle(-15, -5, -5),
+        -- Override_BashPos = Vector(-1, 12, 4.5), -- i'm too impatient to not make this bat you in the face with the stock
+        -- Override_BashAng = Angle(-7, 3, 25),
     },
     {
         PrintName = "Folded",

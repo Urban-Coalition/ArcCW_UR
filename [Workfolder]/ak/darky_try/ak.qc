@@ -215,6 +215,12 @@ $sequence "jamfix" {
 	snap
 }
 
+$sequence "bayonet" {
+	"anims\vm_ak47_bayonet.smd"
+	fps 30
+	snap
+}
+
 $sequence "reload_empty" {
 	"anims\vm_ak47_reload_empty.smd"
 	fps 30
