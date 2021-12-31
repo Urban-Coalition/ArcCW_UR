@@ -2,6 +2,8 @@ $modelname "weapons\arccw\c_ur_ak.mdl"
  
 $bodygroup "base" {
 	studio "receiver_main.smd"
+	
+	studio "ak12 reciever.smd"
 } 
 
 $bodygroup "handguards" {
@@ -17,6 +19,8 @@ $bodygroup "handguards" {
 	studio "vepr_sok_handguard.smd"
 	studio "ak74m_handguard_red.smd"
 	studio "ak74m_handguard_od.smd"
+
+	studio "ak12 handguard.smd"
 }
 
 $bodygroup "magazine" {
@@ -27,6 +31,8 @@ $bodygroup "magazine" {
 	studio "9x19mm.smd"
 	studio "12g_20.smd"
 	studio "366tkm.smd"
+
+	studio "ak12 mag.smd"
 }
 
 $bodygroup "stock_adapt" {
@@ -38,6 +44,8 @@ $bodygroup "sights" {
 	studio "default_ak_sight_trunnion.smd"
 	studio "aku_sights.smd"
 	blank
+
+	studio "ak12 sight.smd"
 }
 
 $bodygroup "barrel_internal" {
@@ -57,6 +65,8 @@ $bodygroup "stocks" {
 	studio "akm_stock.smd"
 	blank
 	studio "aks_stock_folded.smd"
+
+	studio "ak12 stock.smd"
 }
 
 $bodygroup "barrels" {
@@ -66,6 +76,8 @@ $bodygroup "barrels" {
 	studio "type56_barrel.smd"
 	studio "vepr_barrel.smd"
 	blank
+
+	studio "ak12 barrel.smd"
 }
 
 $bodygroup "muzzles" {
@@ -81,6 +93,8 @@ $bodygroup "pistol_grips" {
 	studio "alpha_grip.smd"
 	studio "saiga_grip.smd"
 	blank
+
+	studio "ak12 grip.smd"
 }
 
 $bodygroup "dust_covers" {
@@ -88,6 +102,8 @@ $bodygroup "dust_covers" {
 	studio "alpha_dust_cover.smd"
 	studio "ribbed_dust_cover.smd"
 	blank
+
+	studio "ak12 dust cover.smd"
 }
 
 $bodygroup "bayonets" {
@@ -101,7 +117,6 @@ $bodygroup "mount" {
 	blank
 	studio "mount.smd"
 	studio "mount_laser.smd"
-	// studio "fas2 pso.smd"
 }
 
 
