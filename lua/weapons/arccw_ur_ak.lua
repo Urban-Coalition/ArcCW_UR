@@ -222,8 +222,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, -90),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.65, 0, 0.9),
-            Ang = Angle(-1, 0.15, 5.53),
+            Pos = Vector(-2.638, 0, 0.9),
+            Ang = Angle(-1, 0.12, 5.53),
             Magnification = 1,
         }
     },
@@ -238,8 +238,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, -90),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.5, 0, 0.75),
-            Ang = Angle(-0.42, 0.602, 5.53),
+            Pos = Vector(-2.62, 0, 0.75),
+            Ang = Angle(-0.42, 0.2, 5.53),
             Magnification = 1,
         }
     },
@@ -284,8 +284,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, -90),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.65, 0, 0.45),
-            Ang = Angle(0.55, 0.115, 5.53),
+            Pos = Vector(-2.6, 0, 0.45),
+            Ang = Angle(0.55, 0.265, 5.53),
             Magnification = 1,
         }
     },
@@ -300,8 +300,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, -90),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.65, 0, 0.45),
-            Ang = Angle(0.55, 0.115, 5.53),
+            Pos = Vector(-2.6, 0, 0.45),
+            Ang = Angle(0.55, 0.265, 5.53),
             Magnification = 1,
         }
     },
@@ -316,8 +316,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, -90),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.65, 0, 0.45),
-            Ang = Angle(0.55, 0.115, 5.53),
+            Pos = Vector(-2.6, 0, 0.45),
+            Ang = Angle(0.55, 0.265, 5.53),
             Magnification = 1,
         }
     },
@@ -434,7 +434,7 @@ SWEP.AttachmentElements = {
     ["cover_ak12"] = {
         VMBodygroups = {{ind = 10, bg = 4}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 4, 4.55),
+            vpos = Vector(0, 4, 4.75),
             vang = Angle(0, -90, 0),
         }}
     },
@@ -459,15 +459,15 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 8, bg = 2}},
     },
     ["reciever_ak12"] = {
-        VMBodygroups = {{ind = 0, bg = 1}},
-        Override_IronSightStruct = {
-            Pos = Vector(-2.642, 0, 0.59),
-            Ang = Angle(-0.75, 0.165, 5.53),
-            Magnification = 1,
-        }
+        VMBodygroups = {{ind = 0, bg = 1}}
     },
     ["sight_ak12"] = {
-        VMBodygroups = {{ind = 4, bg = 3}}
+        VMBodygroups = {{ind = 4, bg = 3}},
+        Override_IronSightStruct = {
+            Pos = Vector(-2.609, 0, 0.59),
+            Ang = Angle(-0.75, 0.154, 5.53),
+            Magnification = 1,
+        },
     },
     ["mag_545_ak12"] = {
         VMBodygroups = {{ind = 2, bg = 7}}

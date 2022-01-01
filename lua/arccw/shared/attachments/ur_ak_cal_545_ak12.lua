@@ -27,7 +27,7 @@ att.Override_ShellModel = "models/weapons/arccw/uc_shells/545x39.mdl"
 att.Override_ShellScale = 1
 att.GivesFlags = {"cal_545"}
 
-att.ActivateElements = {"mag_545_30", "reciever_ak12", "sight_ak12"}
+att.ActivateElements = {"mag_545_30", "reciever_ak12"}
 local path = ")^weapons/arccw_ur/ak/"
 
 att.Hook_GetShootSound = function(wep, fsound)
