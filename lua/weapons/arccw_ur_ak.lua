@@ -210,6 +210,22 @@ SWEP.AttachmentElements = {
             Magnification = 1,
         }
     },
+    ["barrel_rpk74m"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 3},
+            {ind = 7, bg = 1},
+            {ind = 8, bg = 2}
+        },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, 31.5, 2.725),
+            vang = Angle(0, 270, -90),
+        }},
+        Override_IronSightStruct = {
+            Pos = Vector(-2.643, 0, 0.8),
+            Ang = Angle(-0.6, 0.14, 5.53),
+            Magnification = 1,
+        }
+    },
     ["barrel_krinkov"] = {
         VMBodygroups = {
             {ind = 1, bg = 6},
@@ -690,7 +706,7 @@ SWEP.Hook_NameChange = function(wep,name)
         end
 
         if cal == "545" then
-            if barr == "74m" then
+            if barr == "74m" or barr == "rpk74m" then
                 post = "-74M"
             else
                 post = "-74"
