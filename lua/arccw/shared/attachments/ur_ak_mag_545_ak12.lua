@@ -1,9 +1,10 @@
-att.PrintName = "AK-12 Polymer Mag"
+att.PrintName = "AK-12 30-Round Polymer Mag"
+att.AbbrevName = "30-Round Polymer Mag"
 att.Icon = nil -- todo
-att.Description = "AK-12 Polymerheavier."
+att.Description = "Contemporary polymer magazine. The grooves give it a slightly better grip surface, but the difference in practice is negligible."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true
-att.Desc_Cons = {
+att.Desc_Neutrals = {
     "uc.cosmetic",
 }
 

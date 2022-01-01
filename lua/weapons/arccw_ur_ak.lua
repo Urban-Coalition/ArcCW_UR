@@ -416,7 +416,6 @@ SWEP.AttachmentElements = {
     ["cover_ribbed"] = {
         VMBodygroups = {{ind = 10, bg = 2}}
     },
-
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
         AttPosMods = {[1] = {
@@ -424,7 +423,6 @@ SWEP.AttachmentElements = {
             vang = Angle(0, -90, 0),
         }}
     },
-
     ["optic_raillaser"] = {
         AttPosMods = {
             [7] = {
@@ -433,19 +431,23 @@ SWEP.AttachmentElements = {
             },
         },
     },
-
     ["cover_ak12"] = {
         VMBodygroups = {{ind = 10, bg = 4}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 2, 4.55),
+            vpos = Vector(0, 4, 4.55),
             vang = Angle(0, -90, 0),
         }}
     },
+
     ["grip_ak12"] = {
         VMBodygroups = {{ind = 9, bg = 5}}
     },
     ["stock_ak12"] = {
-        VMBodygroups = {{ind = 6, bg = 11}}
+        VMBodygroups = {{ind = 6, bg = 11}},
+        -- VMElements = {Offset = {
+        --     pos = Vector(0,-2,0),
+        --     ang = Vector(0,0,0)
+        -- }} -- BREAKS THE WHOLE FUCKING RENDER SYSTEM
     },
     ["handguard_ak12"] = {
         VMBodygroups = {{ind = 1, bg = 12}},
@@ -476,7 +478,8 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     local akOptics = {["uc_optic_pso1"] = true} -- Will need to update this list if more AK optics get added
 
     local optic = wep.Attachments[1].Installed
-    local alpha = (wep.Attachments[10].Installed == "ur_ak_cover_alpha")
+    local upper = wep.Attachments[10].Installed
+    local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12")
     local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
 
     local vm = data.vm
@@ -672,6 +675,8 @@ SWEP.Hook_NameChange = function(wep,name)
         elseif cal == "366" then
             start = "Vepr"
             post = " .366"
+        elseif cal == "545_ak12" then
+            post = "-12"
         elseif barr == "rpk" then
             start = "RPK"
         elseif cal == "762" and barr == "t56" then

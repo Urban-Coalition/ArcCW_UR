@@ -1,14 +1,13 @@
 att.PrintName = "AK-12 Polymer Grip"
 att.Icon = nil -- todo
-att.Description = "AK-12       recoil."
+att.Description = "Black polymer grip with an emphasis on ergonomics."
 att.AutoStats = true
 att.Slot = {"ur_ak_grip"}
 
 
-att.Mult_SightTime = .95
-att.Mult_Recoil = 1.1
-att.Mult_RecoilSide = 1.05
-att.Mult_SightedSpeedMult = 1.2
+att.Mult_SightTime = .875
+att.Mult_SpeedMult = 1.025
+att.Mult_RecoilSide = 1.15
 
 att.ActivateElements = {"grip_ak12"}
 -- att.ActivateElements = {"grip_alpha"}

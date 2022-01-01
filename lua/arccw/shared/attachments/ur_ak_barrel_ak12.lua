@@ -1,6 +1,6 @@
 att.PrintName = "16\" AK-12 Barrel"
 att.Icon = nil -- todo
-att.Description = "AK-12larity."
+att.Description = "The most recent barrel for the AK platform, with polymerized construction and a repositioned front sight. Functionally identical to the Helix Alpha barrel."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 

@@ -1,7 +1,8 @@
 att.PrintName = "AK-12 5.45x39mm Receiver"
 att.AbbrevName = "AK-12 Receiver"
 att.Icon = nil -- todo
-att.Description = "ak12 Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration."
+att.Description = [[Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration.
+Features a redesigned rear sight and trigger guard.]]
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true
 
