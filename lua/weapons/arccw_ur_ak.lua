@@ -435,7 +435,7 @@ SWEP.AttachmentElements = {
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 2, 4.55),
+            vpos = Vector(0, 3.5, 4.75),
             vang = Angle(0, -90, 0),
         }}
     },
@@ -450,7 +450,7 @@ SWEP.AttachmentElements = {
     ["cover_ak12"] = {
         VMBodygroups = {{ind = 10, bg = 4}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 4, 4.75),
+            vpos = Vector(0, 3.5, 4.75),
             vang = Angle(0, -90, 0),
         }}
     },
@@ -696,9 +696,11 @@ SWEP.Hook_NameChange = function(wep,name)
         elseif cal == "366" then
             start = "Vepr"
             post = " .366"
+        elseif cal == "308" then
+            post = "-308"
         elseif cal == "545_ak12" then
             post = "-12"
-        elseif barr == "rpk" then
+        elseif barr == "rpk" or barr == "rpk74m" then
             start = "RPK"
         elseif cal == "762" and barr == "t56" then
             start = "Type "
