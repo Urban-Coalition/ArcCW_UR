@@ -105,3 +105,16 @@ end
 --         return anim .. "_usas"
 --     end
 -- end
+local slotinfo = {
+    [5] = {"8-Round Mag", "8-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
+}
+att.Hook_GetDefaultAttName = function(wep, slot)
+    if slotinfo[slot] then
+        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
+    end
+end
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
+end

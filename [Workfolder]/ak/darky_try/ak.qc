@@ -33,6 +33,7 @@ $bodygroup "magazine" {
 	studio "366tkm.smd"
 
 	studio "ak12 mag.smd"
+	studio "ak308mag.smd"
 }
 
 $bodygroup "stock_adapt" {

@@ -50,3 +50,17 @@ att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_366_1.ogg", path .. "fire_366_2.ogg", path .. "fire_366_3.ogg"} end
     if fsound == wep.ShootSoundSilenced then return path .. "fire_366_sup.ogg" end
 end
+
+local slotinfo = {
+    [5] = {"10-Round Mag", "10-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
+}
+att.Hook_GetDefaultAttName = function(wep, slot)
+    if slotinfo[slot] then
+        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
+    end
+end
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
+end
