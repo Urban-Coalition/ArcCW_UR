@@ -11,7 +11,6 @@ att.Desc_Cons = {
 --att.SortOrder = 10
 
 att.Override_ClipSize = 20
-att.Override_Trivia_Calibre = "7.62x51mm NATO"
 
 att.Mult_Range = 2
 att.Mult_Penetration = 2
@@ -38,6 +37,10 @@ att.Override_Firemodes = {
         Mode = 0
     }
 } -- The real AK-308 is select fire :trollscream:
+
+att.Override_Trivia_Calibre = "7.62x51mm NATO"
+att.Override_Trivia_Class = "Battle Rifle"
+
 att.GivesFlags = {"cal_308"}
 att.ActivateElements = {"mag_308", "reciever_ak12"}
 -- local path = ")^weapons/arccw_ur/ak/"
