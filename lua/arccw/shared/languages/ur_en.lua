@@ -9,3 +9,5 @@ L["ur.ak.12g.2"] = "40MOA Imprecision"
 L["ur.ak.alpha"] = "Optics become mounted on the upper rail instead of a rail adapter."
 L["ur.ak.tl.1"] = "Mount tactical lasers on a rail adapter instead of the handguard."
 L["ur.ak.tl.2"] = "The sight is changed to a point shooting stance."
+
+L["ur.ak.userail"] = "Use Alpha or AK-12 Dust cover for AK-12 barrel with modern iron sights."

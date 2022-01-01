@@ -1,10 +1,10 @@
-att.PrintName = "16\" AK-12 Barrel"
+att.PrintName = "16\" AK-12 Handguard"
 att.Icon = nil -- todo
 att.Description = "The most recent barrel for the AK platform, with polymerized construction and a repositioned front sight. Practical, yet comfortable."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
---att.Desc_Neutrals = {"uc.cosmetic"} nvm
+att.Desc_Neutrals = {"ur.ak.userail"}
 att.SortOrder = 16
 
 att.Mult_Sway = .9

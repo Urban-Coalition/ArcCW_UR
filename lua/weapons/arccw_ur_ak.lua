@@ -454,6 +454,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_ak12"] = {
         VMBodygroups = {{ind = 7, bg = 6}},
+        RequireFlags = {"cover_rail"},
     },
     ["muzzle_ak12"] = {
         VMBodygroups = {{ind = 8, bg = 2}},
@@ -463,6 +464,7 @@ SWEP.AttachmentElements = {
     },
     ["sight_ak12"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+        RequireFlags = {"cover_rail"},
         Override_IronSightStruct = {
             Pos = Vector(-2.609, 0, 0.59),
             Ang = Angle(-0.75, 0.154, 5.53),
