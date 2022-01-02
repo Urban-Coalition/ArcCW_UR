@@ -481,7 +481,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 12}},
     },
     ["barrel_ak12"] = {
-        VMBodygroups = {{ind = 7, bg = 6}},
+        VMBodygroups = {
+            {ind = 7, bg = 6},
+            {ind = 8, bg = 2}
+        },
         RequireFlags = {"cover_rail"},
     },
     ["muzzle_ak12"] = {

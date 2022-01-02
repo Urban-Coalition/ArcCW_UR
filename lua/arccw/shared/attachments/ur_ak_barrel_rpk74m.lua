@@ -22,4 +22,4 @@ att.Mult_BipodRecoil = .25
 att.Mult_BipodDispersion = .2
 
 att.ActivateElements = {"barrel_rpk74m"}
-att.GivesFlags = {"ak_barrelchange","ak_nodong"}
+att.GivesFlags = {"ak_barrelchange","nodong"}
