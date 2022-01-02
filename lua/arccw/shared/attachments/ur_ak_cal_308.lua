@@ -1,5 +1,5 @@
 att.PrintName = "AK-308 7.62x51mm NATO Receiver"
-att.AbbrevName = "7.62x51mm Receiver"
+att.AbbrevName = ".308 Receiver"
 att.Icon = nil -- todo
 att.Description = "Converts the weapon to a battle rifle, boasting an even larger bullet, passable accuracy, and a kick like a mule.\nAccuracy becomes extremely low in fully automatic mode."
 att.Slot = {"ur_ak_cal"}
