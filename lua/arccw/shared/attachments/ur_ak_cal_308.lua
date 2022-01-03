@@ -23,8 +23,6 @@ att.Mult_ReloadTime = 1.2
 att.Mult_Recoil = 1.75
 att.Mult_SightTime = 1.1
 
-att.Override_ShellScale = 1.15
-
 att.Override_Firemodes = {
     {
         Mode = 2,
@@ -40,6 +38,8 @@ att.Override_Firemodes = {
 
 att.Override_Trivia_Calibre = "7.62x51mm NATO"
 att.Override_Trivia_Class = "Battle Rifle"
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
+att.Override_ShellScale = 1.145
 
 att.GivesFlags = {"cal_308"}
 att.ActivateElements = {"mag_308", "reciever_ak12"}
@@ -53,7 +53,6 @@ end
 -- att.Hook_GetDistantShootSound = function(wep, distancesound)
 --     if distancesound == wep.DistantShootSound then return path .. "fire_545_dist.ogg" end
 -- end
-
 
 local slotinfo = {
     [5] = {"20-Round Mag", "20-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
