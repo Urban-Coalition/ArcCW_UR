@@ -975,6 +975,7 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_end",
+        Time = 0.9,
     },
     ["unjam"] = {
         Source = "jamfix",
