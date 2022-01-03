@@ -43,15 +43,12 @@ att.Override_Trivia_Class = "Battle Rifle"
 
 att.GivesFlags = {"cal_308"}
 att.ActivateElements = {"mag_308", "reciever_ak12"}
--- local path = ")^weapons/arccw_ur/ak/"
+local path = ")^weapons/arccw_ur/ak/"
 
--- att.Hook_GetShootSound = function(wep, fsound)
---     if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
---         path .. "stalol/fire_545_1.wav",
---      } end
---     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_545_auto_1.ogg", path .. "fire_545_auto_2.ogg"} end
---     if fsound == wep.ShootSoundSilenced then return path .. "fire_545_sup.ogg" end
--- end
+att.Hook_GetShootSound = function(wep, fsound)
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_308_1.ogg", path .. "fire_308_2.ogg", path .. "fire_308_3.ogg", path .. "fire_308_4.ogg"} end
+    if fsound == wep.ShootSoundSilenced then return path .. "fire_308_sup.ogg" end
+end
 
 -- att.Hook_GetDistantShootSound = function(wep, distancesound)
 --     if distancesound == wep.DistantShootSound then return path .. "fire_545_dist.ogg" end
