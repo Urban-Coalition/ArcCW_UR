@@ -15,7 +15,8 @@ att.Mult_SightedSpeedMult = 1.05
 att.Mult_Recoil = 1.3
 att.Mult_AccuracyMOA = 1.5
 att.Mult_Range = .75
-
+att.Mult_RPM = 625/600
+att.Mult_ShootPitch = 105/100
 
 att.GivesFlags = {"ak_railedguard","ak_barrelchange","nodong"}
 att.ActivateElements = {"barrel_105_alpha"}
