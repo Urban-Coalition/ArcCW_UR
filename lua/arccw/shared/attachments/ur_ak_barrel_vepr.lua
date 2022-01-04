@@ -11,11 +11,13 @@ att.Mult_SightTime = 1.15
 att.Mult_SpeedMult = .95
 att.Mult_SightedSpeedMult = .65
 att.Mult_Sway = 1.5
+att.Mult_ShootVol = 125/120
 
 att.Mult_Recoil = .95
 att.Mult_AccuracyMOA = .5
 att.Mult_Range = 1.5
 att.Mult_HipDispersion = .95
-
+att.Mult_ShootPitch = 90/100
+att.Mult_RPM = 90/100
 att.ActivateElements = {"barrel_vepr"}
 att.GivesFlags = {"ak_barrelchange"}

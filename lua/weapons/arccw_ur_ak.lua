@@ -317,6 +317,22 @@ SWEP.AttachmentElements = {
             Magnification = 1,
         }
     },
+    ["barrel_105_alpha"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 7},
+            {ind = 7, bg = 2},
+            {ind = 8, bg = 2}
+        },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, 20, 2.65),
+            vang = Angle(0, 270, -90),
+        }},
+        Override_IronSightStruct = {
+            Pos = Vector(-2.6, 0, 0.45),
+            Ang = Angle(0.55, 0.265, 5.53),
+            Magnification = 1,
+        }
+    },
     ["barrel_105_red"] = {
         VMBodygroups = {
             {ind = 1, bg = 10},
@@ -975,6 +991,7 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_end",
+        Time = 0.9,
     },
     ["unjam"] = {
         Source = "jamfix",
@@ -993,7 +1010,7 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "bayonet",
-        Time = 1.4
+        Time = 1.2
     },
 
 }
