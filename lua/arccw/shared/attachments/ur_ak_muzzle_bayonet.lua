@@ -10,11 +10,16 @@ att.Mult_MeleeDamage = 3
 att.Add_BarrelLength = 3
 att.Mult_Sway = 1.25
 att.Mult_SightTime = 1.1
+att.Mult_MeleeTime = 1.1
 
 att.Override_BashPreparePos = Vector(4, -5, -1.8)
 att.Override_BashPrepareAng = Angle(-15, -5, -5)
 att.Override_BashPos = Vector(-1, 12, 4.5) -- i'm too impatient to not make this bat you in the face with the stock
 att.Override_BashAng = Angle(-7, 3, 25)
+
+att.Hook_SelectBashAnim = function(wep,anim)
+    return "bash_bayonet"
+end
 
 att.AttachSound = "arccw_uc/common/gunsmith/suppressor_thread.ogg"
 att.ActivateElements = {"muzzle_bayonet"}

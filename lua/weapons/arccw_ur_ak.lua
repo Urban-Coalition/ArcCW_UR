@@ -109,7 +109,7 @@ SWEP.HeatDelayTime = 3
 
 -- SWEP.Malfunction = true    
 SWEP.MalfunctionMean = 200
-SWEP.MeleeTime = 1.5
+--SWEP.MeleeTime = 1.5
 
 -- Speed multipliers --
 
@@ -1008,9 +1008,9 @@ SWEP.Animations = {
         --     {s = path .. "chamber.ogg",  t = 0.5},
         -- },
     },
-    ["bash"] = {
+    ["bash_bayonet"] = {
         Source = "bayonet",
-        Time = 1.2
+        Time = 1.2,
     },
 
 }

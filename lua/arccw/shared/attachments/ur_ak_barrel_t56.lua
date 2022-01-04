@@ -21,6 +21,9 @@ att.ToggleStats = {
         -- Override_BashPrepareAng = Angle(-15, -5, -5),
         -- Override_BashPos = Vector(-1, 12, 4.5), -- i'm too impatient to not make this bat you in the face with the stock
         -- Override_BashAng = Angle(-7, 3, 25),
+        Hook_SelectBashAnim = function(wep,anim)
+            return "bash_bayonet"
+        end
     },
     {
         PrintName = "Folded",
