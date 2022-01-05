@@ -24,6 +24,6 @@
 
 // envmap (convar: mat_specular "bool")
 	"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
-	"$envmaptint"				"[ .007 .007 .007 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
+	"$envmaptint"				"[ .005 .005 .005 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
 
 }
