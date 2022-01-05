@@ -24,8 +24,8 @@ att.ToggleStats = {
     {
         PrintName = "Folded",
         Mult_SightTime = 0.6,
-        Mult_DrawTime = 0.6,
-        Mult_HolsterTime = 0.6,
+        Mult_DrawTime = 0.8,
+        Mult_HolsterTime = 0.8,
         Mult_Recoil = 1.5,
         Mult_RecoilSide = 2,
         Mult_SightedSpeedMult = 1.2,
