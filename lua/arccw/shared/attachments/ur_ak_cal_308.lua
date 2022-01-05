@@ -17,7 +17,7 @@ att.Mult_Penetration = 2
 att.Mult_RPM = 1.167 -- 700 rpm
 att.Mult_AccuracyMOA = .75
 att.Mult_Damage = 1.146 -- 2 htk up from 3
-att.Mult_DamageMin = 1.5 -- 4 htk up from 5
+att.Mult_DamageMin = 1.75 -- 3 htk up from 5
 
 att.Mult_ReloadTime = 1.2
 att.Mult_Recoil = 1.75
