@@ -534,7 +534,7 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
-    local akOptics = {["uc_optic_pso1"] = true} -- Will need to update this list if more AK optics get added
+    local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
 
     local optic = wep.Attachments[1].Installed
     local upper = wep.Attachments[10].Installed
