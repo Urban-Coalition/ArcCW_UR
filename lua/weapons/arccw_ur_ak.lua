@@ -525,6 +525,9 @@ SWEP.AttachmentElements = {
     ["mag_545_ak12"] = {
         VMBodygroups = {{ind = 2, bg = 7}}
     },
+    ["mag_545_black"] = {
+        VMBodygroups = {{ind = 2, bg = 9}}
+    },
     ["mag_308"] = {
         VMBodygroups = {{ind = 2, bg = 8}}
     },
