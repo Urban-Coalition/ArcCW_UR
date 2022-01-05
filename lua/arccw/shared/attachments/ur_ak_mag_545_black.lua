@@ -1,7 +1,7 @@
 att.PrintName = "Black 30-Round Polymer Mag"
-att.AbbrevName = "Black Polymer 30-Round Mag"
+att.AbbrevName = "Black Bakelite 30-Round Mag"
 att.Icon = nil -- todo
-att.Description = "Contemporary polymer magazine. The grooves give it a slightly better grip surface, but the difference in practice is negligible."
+att.Description = "Identical to the stock magazine, spray-painted black. Might suit your taste better."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true
 att.Desc_Neutrals = {
@@ -12,19 +12,5 @@ att.SortOrder = 45
 
 att.HideIfBlocked = true
 
--- att.Override_ClipSize = 45
-
--- att.Mult_SightTime = 1.25
--- att.Mult_ReloadTime = 1.15
--- att.Mult_Sway = 1.5
--- att.Mult_RecoilSide = 1.2
--- att.Mult_SpeedMult = 0.95
--- att.Mult_ShootSpeedMult = 0.9
-
--- att.Override_Malfunction = true
--- att.Mult_MalfunctionMean = 0.85
--- att.Mult_MalfunctionVariance = 1.5
-
 att.ActivateElements = {"mag_545_black"}
--- att.ActivateElements = {"mag_545_45"}
 att.RequireFlags = {"cal_545"}
