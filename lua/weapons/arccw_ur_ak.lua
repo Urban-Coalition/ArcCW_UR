@@ -735,6 +735,22 @@ SWEP.Hook_NameChange = function(wep,name)
         local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
         local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
 
+        if atts[14].Installed == "uc_fg_civvy" then
+            start = "Vepr"
+            if cal == "12g" then
+                post = "-12"
+            elseif cal == "545_ak12" or cal == "545" then
+                post = " 5.45"
+            elseif cal == "762" then
+                post = " 7.62"
+            elseif cal == "9mm" then
+                post = " 9mm"
+            else
+                post = " ."..cal
+            end
+            return start..post
+        end
+
         if cal == "9mm" then
             start = "PP"
             post = "-19 Vityaz"
@@ -745,9 +761,6 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-12"
             end
-        elseif cal == "366" then
-            start = "Vepr"
-            post = " .366"
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" then
