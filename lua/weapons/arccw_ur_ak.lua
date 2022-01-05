@@ -608,7 +608,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Receiver",
-        DefaultAttName = "Standard Receiver",
+        DefaultAttName = "7.62x39mm Reciever",
         DefaultAttIcon = Material("", "smooth mips"),
         Slot = {"ur_ak_cal"},
         Bone = "tag_weapon",

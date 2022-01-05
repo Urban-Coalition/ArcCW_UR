@@ -11,3 +11,5 @@ att.Mult_Sway = .95
 att.Mult_SightedSpeedMult = .98
 
 att.ActivateElements = {"barrel_akm"}
+
+att.Ignore = true

@@ -4,14 +4,22 @@
 	"$basetexture" "models/weapons/arccw/ur_ak/ak308mag_c"
 	"$bumpmap" "models/weapons/arccw/ur_ak/ak308mag_n"
 	"$phongexponenttexture" "models/weapons/arccw/ur_ak/ak308mag_m"
-	"$color2" "[ .99 .99 .99 ]"
+	"$color2" "[ .3 .3 .3 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
-	"$phongboost" "0.8"
+	"$phongboost" "1"
 	"$phongalbedotint" "1"
 	"$PhongFresnelRanges" "[ 2 4 30 ]"
 	"$envmap" "env_cubemap"
 	"$basemapalphaenvmapmask" "1"
-	"$envmapfresnel" "0.01"
-	"$envmaptint" "[ .008 .008 .008 ]"
+	"$envmapfresnel" "0.3"
+	"$envmaptint" "[ .035 .035 .035 ]"
+	"Proxies"
+	{
+		"MwEnvMapTint"
+		{
+			"min" "0"
+			"max" "0.015"
+		}
+	}
 }
