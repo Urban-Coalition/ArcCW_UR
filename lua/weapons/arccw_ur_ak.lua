@@ -495,6 +495,10 @@ SWEP.AttachmentElements = {
     },
     ["handguard_ak12"] = {
         VMBodygroups = {{ind = 1, bg = 12}},
+        AttPosMods = {[6] = {
+            vpos = Vector(0, 11.75, 2.2),
+            vang = Angle(90, -90, -90),
+        }}
     },
     ["barrel_ak12"] = {
         VMBodygroups = {
