@@ -1,6 +1,6 @@
 att.PrintName = "16\" Ratnik Handguard"
 att.Icon = nil -- todo
-att.Description = "The most recent barrel for the AK platform, with polymerized construction and a repositioned front sight. Practical, yet comfortable."
+att.Description = "The most recent barrel for the AK platform, with polymerized construction and an upper rail interface. Practical, yet comfortable."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 

@@ -8,7 +8,7 @@ att.Desc_Neutrals = {
     "uc.cosmetic",
 }
 
-att.SortOrder = 45
+att.SortOrder = 98
 
 att.HideIfBlocked = true
 

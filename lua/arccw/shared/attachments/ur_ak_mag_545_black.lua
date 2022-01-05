@@ -1,5 +1,5 @@
-att.PrintName = "Black 30-Round Polymer Mag"
-att.AbbrevName = "Black Bakelite 30-Round Mag"
+att.PrintName = "30-Round Black Bakelite Mag"
+att.AbbrevName = "30-Round Mag (Black)"
 att.Icon = nil -- todo
 att.Description = "Identical to the stock magazine, spray-painted black. Might suit your taste better."
 att.Slot = {"ur_ak_mag"}
@@ -8,7 +8,7 @@ att.Desc_Neutrals = {
     "uc.cosmetic",
 }
 
-att.SortOrder = 45
+att.SortOrder = 99
 
 att.HideIfBlocked = true
 
