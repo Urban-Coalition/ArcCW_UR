@@ -501,6 +501,10 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 6},
             {ind = 8, bg = 2}
         },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, 22.5, 2.9),
+            vang = Angle(0, 270, -90),
+        }},
         RequireFlags = {"cover_rail"},
     },
     ["muzzle_ak12"] = {

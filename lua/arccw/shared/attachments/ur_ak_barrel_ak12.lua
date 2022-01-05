@@ -11,5 +11,5 @@ att.Mult_Sway = .9
 att.Mult_ShootSpeedMult = 1.1
 att.Mult_Recoil = 1.1
 
-att.GivesFlags = {"ak_railedguard","nodong"}
+att.GivesFlags = {"ak_railedguard","nodong","ak_barrelchange"}
 att.ActivateElements = {"barrel_ak12", "handguard_ak12", "sight_ak12"}
