@@ -1010,7 +1010,11 @@ SWEP.Animations = {
     },
     ["bash_bayonet"] = {
         Source = "bayonet",
-        Time = 1.2,
+        --Time = 1.2,
+        --MinProgress = .7,
+        SoundTable = {
+            {s = "weapons/arccw/melee_lift.wav", t = 0}
+        }
     },
 
 }
