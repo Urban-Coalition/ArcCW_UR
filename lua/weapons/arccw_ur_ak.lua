@@ -519,7 +519,7 @@ SWEP.AttachmentElements = {
             vpos = Vector(0, 22.5, 2.9),
             vang = Angle(0, 270, -90),
         }},
-        RequireFlags = {"receiver_ak12","cover_rail"},
+        RequireFlags = {"cover_rail"},
     },
     ["muzzle_ak12"] = {
         VMBodygroups = {{ind = 8, bg = 2}},
