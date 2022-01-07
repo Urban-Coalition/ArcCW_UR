@@ -824,9 +824,10 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "ready",
-        LHIK = false,
+        LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.5,
+        LHIKOut = 0.6,
+        LHIKEaseOut = 0.25,
         SoundTable = {
             {s = path .. "chback.ogg",    t = 0.2},
             {s = path .. "chamber.ogg",    t = 0.3},
@@ -900,7 +901,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.3,
-        LHIKOut = 0.3,
+        LHIKOut = 0.9,
         LHIKEaseOut = 0.25,
         MinProgress = 1.6,
         SoundTable = {}, -- zenith do your magic
@@ -910,7 +911,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.3,
-        LHIKOut = 0.9,
+        LHIKOut = 1.5,
         LHIKEaseOut = 0.25,
         MinProgress = 2.6,
         SoundTable = {}, -- zenith do your magic
