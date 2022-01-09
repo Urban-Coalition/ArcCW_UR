@@ -9,7 +9,19 @@ att.Desc_Pros = {
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator .50 Master Class Conversion"
 end
--- Todo: alt shoot sound
+
+att.Hook_GetShootSound = function(wep, sound)
+    if wep:GetBuff_Override("Silencer") then
+        return "weapons/arccw_ur/deagle/fire_supp_10.ogg" -- Placeholder
+    else
+        return {"weapons/arccw_ur/deagle/fire_halo_1.ogg", "weapons/arccw_ur/deagle/fire_halo_2.ogg", "weapons/arccw_ur/deagle/fire_halo_3.ogg", "weapons/arccw_ur/deagle/fire_halo_4.ogg", "weapons/arccw_ur/deagle/fire_halo_5.ogg"} -- Not Placeholder
+    end
+end
+
+--[[att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then
+        return "weapons/arccw_ur/deagle/fire_dist_10.ogg" end
+end]]
 
 att.AutoStats = true
 att.Slot = "ur_deagle_caliber"
