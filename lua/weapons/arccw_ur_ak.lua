@@ -812,7 +812,7 @@ SWEP.Hook_NameChange = function(wep,name)
 
         return start..mid..post
     else
-        return self.FakeName
+        return wep.FakeName
     end
 end
 
