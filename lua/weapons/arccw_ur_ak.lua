@@ -586,7 +586,7 @@ SWEP.Attachments = {
         Slot = {"optic","sniper_optic","ur_ak_optic"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 2, 4.55+0.3),
+            vpos = Vector(0, 2, 4.92),
             vang = Angle(0, -90, 0),
         },
         CorrectivePos = Vector(0, 0, -0.0),
@@ -767,9 +767,13 @@ SWEP.Hook_NameChange = function(wep,name)
             post = "-12"
         elseif barr == "rpk" or barr == "rpk74m" then
             start = "RPK"
-        elseif cal == "762" and barr == "t56" then
-            start = "Type "
-            post = "56"
+        elseif cal == "762" then
+            if barr == "t56" then
+                start = "Type "
+                post = "56"
+            elseif barr == "74m" then
+                post = "-103"
+            end
         end
 
         if cal == "545" then
