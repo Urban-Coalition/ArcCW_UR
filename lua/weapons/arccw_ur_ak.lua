@@ -908,7 +908,18 @@ SWEP.Animations = {
         LHIKOut = 0.9,
         LHIKEaseOut = 0.25,
         MinProgress = 1.6,
-        SoundTable = {}, -- zenith do your magic
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout_drum.ogg", 	 t = 0.25},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = ratel, t = 1.0},
+            {s = path .. "magin_drum.ogg",    t = 1.1},
+            {s = rottle,  t = 1.75},
+            {s = common .. "shoulder.ogg", t = 2.15},
+        },
     },
     ["reload_empty_75"] = {
         Source = "reload_drum_empty",
@@ -918,7 +929,20 @@ SWEP.Animations = {
         LHIKOut = 1.5,
         LHIKEaseOut = 0.25,
         MinProgress = 2.6,
-        SoundTable = {}, -- zenith do your magic
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout_drum.ogg", 	 t = 0.25},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = ratel, t = 1.0},
+            {s = path .. "magin_drum.ogg",    t = 1.1},
+            {s = rottle,  t = 2.0},
+            {s = path .. "chback.ogg",    t = 2.37},
+            {s = path .. "chamber.ogg",    t = 2.48},
+            {s = common .. "shoulder.ogg", t = 3.0},
+        },
     },
     ["reload_9mm"] = {
         Source = "reload_9mm",
