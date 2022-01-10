@@ -1,14 +1,16 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ur_deagle/deagle_black_c"
+	"$basetexture" "models\weapons\arccw\ur_deagle/deagle_c"
 	"$bumpmap" "models\weapons\arccw\ur_deagle/deagle_n"
+	"$color2" "[0.65 0.665 0.67]"
 	"$normalmapalphaenvmapmask" 	1
-	
+
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)	
 	"$phong" 		"1"
-	"$phongexponent" "10"
-	"$phongboost" "0.09"
+	"$phongexponenttexture" "models\weapons\arccw\ur_deagle/deagle_e"
+	"$phongboost" "0.7"
 	"$phongalbedotint" 			"1"
-	"$phongfresnelranges" "[2 8 14]"
+	"$phongfresnelranges" "[0 0 0]"
 	"$halflambert" "1"
 	
 	//"$envmap" "env_cubemap"
