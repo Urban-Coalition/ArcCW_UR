@@ -80,6 +80,8 @@ $bodygroup "barrels" {
 	blank
 
 	studio "ak12 barrel.smd"
+
+	studio "rpk_barrel_bipod_deployed.smd"
 }
 
 $bodygroup "muzzles" {
@@ -206,6 +208,8 @@ $sequence "sprint_end"{
 
 $sequence "reload" {
 	"anims\vm_ak47_reload_tactical.smd"
+	"anims\vm_ak47_reload_tactical_ads.smd"
+ 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -225,6 +229,8 @@ $sequence "bayonet" {
 
 $sequence "reload_empty" {
 	"anims\vm_ak47_reload_empty.smd"
+	"anims\vm_ak47_reload_empty_ads.smd"
+ 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -269,6 +275,33 @@ $sequence "reload_10rnd_empty" {
 	"anims\vm_ak47_reload_empty_10rnd.smd"
 	fps 30
 	"ACT_VM_RELOAD_3" 1
+	snap
+}
+
+
+$sequence "reload_308" {
+	"anims\vm_ak47_reload_tactical_308.smd"
+	fps 30
+	"ACT_VM_RELOAD_3" 1
+	snap
+}
+
+$sequence "reload_308_empty" {
+	"anims\vm_ak47_reload_empty_308.smd"
+	fps 30
+	"ACT_VM_RELOAD_3" 1
+	snap
+}
+
+$sequence "bipod_deploy" {
+	"anims\vm_ak47_bipod_deploy.smd"
+	fps 30
+	snap
+}
+
+$sequence "bipod_undeploy" {
+	"anims\vm_ak47_bipod_undeploy.smd"
+	fps 30
 	snap
 }
 

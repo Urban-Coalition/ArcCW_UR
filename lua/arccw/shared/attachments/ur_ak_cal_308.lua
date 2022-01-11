@@ -41,6 +41,10 @@ att.Override_Trivia_Class = "Battle Rifle"
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
 att.Override_ShellScale = 1.145
 
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_308"
+end
+
 att.GivesFlags = {"cal_308","receiver_ak12"}
 att.ActivateElements = {"mag_308", "reciever_ak12"}
 local path = ")^weapons/arccw_ur/ak/"

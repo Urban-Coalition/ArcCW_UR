@@ -1043,6 +1043,56 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 2.5},
         },
     },
+    ["reload_308"] = {
+        Source = "reload_308",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.9,
+        LHIKEaseOut = 0.25,
+        MinProgress = 1.3,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.95},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = path .. "scrape.ogg",    t = 1.35},
+            {s = common .. "magpouchin.ogg", t = 1.35},
+            {s = common .. "shoulder.ogg", t = 2.05},
+            {s = common .. "grab.ogg", t = 2.1},
+        },
+    },
+    ["reload_empty_308"] = {
+        Source = "reload_308_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.55,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.97},
+            {s = ratel, t = 1.1},
+            {s = common .. "rifle_magdrop.ogg", t = 1.15},
+            {s = rottle,  t = 1.15},
+            {s = path .. "chback.ogg",    t = 1.9},
+            {s = path .. "chamber.ogg",    t = 2.0},
+            {s = common .. "grab.ogg", t = 2.4},
+            {s = common .. "shoulder.ogg", t = 2.5},
+        },
+    },
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
@@ -1076,10 +1126,34 @@ SWEP.Animations = {
         --Time = 1.2,
         --MinProgress = .7,
         SoundTable = {
-            {s = "weapons/arccw/melee_lift.wav", t = 0}
+            {s = "weapons/arccw/melee_lift.wav", t = 0}                         
         }
     },
 
+    ["exit_bipod"] = {
+        Source = "bipod_undeploy",
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.55,
+        LHIKEaseOut = 0.25,
+        --Time = 1.2,
+        --MinProgress = .7,
+        SoundTable = {
+            -- {s = "weapons/arccw/melee_lift.wav", t = 0}
+        }
+    },
+    ["enter_bipod"] = {
+        Source = "bipod_deploy",
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.55,
+        LHIKEaseOut = 0.25,
+        --Time = 1.2,
+        --MinProgress = .7,
+        SoundTable = {
+            -- {s = "weapons/arccw/melee_lift.wav", t = 0}                   -- yeah here too
+        }
+    },
 }
 
 SWEP.Hook_Think = function(wep)
