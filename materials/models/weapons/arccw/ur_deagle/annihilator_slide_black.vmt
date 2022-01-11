@@ -1,22 +1,22 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arccw/ur_deagle/annihilator_slide_black_d"
+	"$basetexture" "models/weapons/arccw/ur_deagle/annihilator_slide_d"
 	"$bumpmap" "models/weapons/arccw/ur_deagle/annihilator_slide_n"
-
 	"$normalmapalphaenvmapmask" 	1
+	"$color2" "[0.465 0.49 0.51]"
 	
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
+	"$phongexponent"		"8"
 	"$phong" 		"1"
-	"$phongexponent" "10"
-	"$phongboost" "0.09"
-	"$phongalbedotint" 			"1"
-	"$phongfresnelranges" "[2 8 14]"
+	"$phongboost" "0.5"
+	"$phongalbedotint" 			"0"
+	"$phongfresnelranges" "[1 1 1]"
 	"$halflambert" "1"
 	
-	//"$envmap" "env_cubemap"
-	//"$envmapfresnel" 			"1"
-	//"$envmapFresnelMinMaxExp" "[0 5 .4]"
-	//"$envmaptint"	"[0.12 0.10 0.13]"
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"1"
+	"$envmapFresnelMinMaxExp" "[0 5 .4]"
+	"$envmaptint"	"[0.03 0.03 0.03]"
 
 	"$nocull" "1"
-	$color2 "[0.9 0.9 0.9]"
 }

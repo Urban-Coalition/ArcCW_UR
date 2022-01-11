@@ -2,17 +2,20 @@
 {
 	"$basetexture" "models/weapons/arccw/ur_deagle/annihilator_base_d"
 	"$bumpmap" "models/weapons/arccw/ur_deagle/annihilator_base_n"
-	
+	"$color2"	"[0.85 0.85 0.85]"
 	"$phong"					"1"
-	"$phongboost"				"12"
-	"$phongfresnelranges"		"[1 2 4]"
-	"$phongtint"				"[0.79 0.55 0.11]"
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_gold" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
+	"$phongboost"				"19"
+	"$phongexponent"			"59"
+	"$phongfresnelranges"		"[1 0.5 3]"
+	"$phongtint"			"[1.6 1.25 1]"
 	"$halflambert" "1"
+	
 	
 	"$normalmapalphaenvmapmask" 	1
 	
 	$envmap "env_cubemap"
-	"$envmaptint"				"[0.89 0.65 0.21]"
+	"$envmaptint"				"[0.4 0.37 0.18]"
 	$envmapfresnel "1"
 
 	$nocull 1
