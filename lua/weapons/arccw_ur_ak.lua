@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "автомат Калашникова 47" -- make this something russian and cool
+SWEP.PrintName = "AMR-59" -- make this something russian and cool
 SWEP.TrueName = "AKM"
 
 if GetConVar("arccw_truenames"):GetBool() then
