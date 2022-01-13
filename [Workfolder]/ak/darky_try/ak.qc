@@ -21,6 +21,7 @@ $bodygroup "handguards" {
 	studio "ak74m_handguard_od.smd"
 
 	studio "ak12 handguard.smd"
+	studio "railed handguard.smd"
 }
 
 $bodygroup "magazine" {
@@ -48,6 +49,7 @@ $bodygroup "sights" {
 	blank
 
 	studio "ak12 sight.smd"
+	studio "ak_trunnion_rail.smd"
 }
 
 $bodygroup "barrel_internal" {

@@ -545,6 +545,14 @@ SWEP.AttachmentElements = {
     ["mag_308"] = {
         VMBodygroups = {{ind = 2, bg = 8}}
     },
+
+    ["cover_trail"] = {
+        VMBodygroups = {{ind = 4, bg = 4}},
+        AttPosMods = {[1] = {
+            vpos = Vector(0, 8.2, 5.20),
+            vang = Angle(0, -90, 0),
+        }}
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
@@ -552,7 +560,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 
     local optic = wep.Attachments[1].Installed
     local upper = wep.Attachments[10].Installed
-    local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12")
+    local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
     local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
 
     local vm = data.vm
@@ -592,7 +600,6 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, -0.0),
         CorrectiveAng = Angle(-1.9, 180.15, 0),
         VMScale = Vector(1, 1, 1),
-        ExtraSightDist = 8,
         -- SlideAmount = {
         --     vmin = Vector(0, 2-1, 4.55),
         --     vmax = Vector(0, 2+0.5, 4.55),
