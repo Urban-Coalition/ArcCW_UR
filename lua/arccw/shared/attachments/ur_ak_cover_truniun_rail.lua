@@ -11,3 +11,5 @@ att.Desc_Cons = {"Obstructs ironsights, install any scope"
 att.ActivateElements = {"cover_trail"}
 att.GivesFlags = {"cover_rail"}
 att.ExcludeFlags = {"ak_barrelkrinkov","ak_norail"}
+
+att.Ignore = true
