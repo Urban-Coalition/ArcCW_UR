@@ -557,8 +557,12 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
     local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
+    local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
+    local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
 
     local optic = wep.Attachments[1].Installed
+    local hg = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
+    local ub = wep.Attachments[6].Installed
     local upper = wep.Attachments[10].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
     local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
@@ -573,6 +577,14 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
             vm:SetBodygroup(12,1)
         else
             vm:SetBodygroup(12,0)
+        end
+    end
+
+    if ub and ub ~= "ur_ak_barrel_dong" then
+        if railHgs[hg] then
+            vm:SetBodygroup(1,13)
+        elseif polRailHgs[hg] then
+            vm:SetBodygroup(1,4)
         end
     end
 end
