@@ -204,7 +204,7 @@ SWEP.AttachmentElements = {
             vpos = Vector(0, 31.5, 2.725),
             vang = Angle(0, 270, 0),
         }},
-        Override_IronSightStruct = {
+        Override_IronSightStruct = { -- Someone else fix this please, i'm impatient -Gauss
             Pos = Vector(-2.643, 0, 0.67),
             Ang = Angle(-0.1, 0.14, 5.53),
             Magnification = 1,
@@ -780,6 +780,9 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-12"
             end
+        elseif cal == "366" then
+            start = "Vepr "
+            post = ".366"
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" then
