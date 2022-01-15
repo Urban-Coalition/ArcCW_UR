@@ -9,8 +9,14 @@ att.AutoStats = true
 att.SortOrder = 16
 
 att.Mult_Recoil = .8
-att.Mult_SightTime = 1.1
+att.Mult_SightTime = 1.15
 att.Mult_MoveDispersion = 1.25
 
 att.ActivateElements = {"barrel_dong"}
 att.ExcludeFlags = {"barrel_carbine","nodong"}
+
+att.LHIK = true
+
+att.ModelOffset = Vector(-23, -2.6, 3.8)
+att.ModelScale = Vector(1.111, 1.111, 1.111)
+att.Model = "models/weapons/arccw/ak_lhik_dong.mdl"
