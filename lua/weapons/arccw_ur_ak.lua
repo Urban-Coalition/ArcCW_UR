@@ -107,7 +107,7 @@ SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
 SWEP.HeatDelayTime = 3
 
--- SWEP.Malfunction = true    
+-- SWEP.Malfunction = true
 SWEP.MalfunctionMean = 200
 --SWEP.MeleeTime = 1.5
 
@@ -555,9 +555,10 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.Hook_ModifyBodygroups = function(wep,data)
+SWEP.Hook_ModifyBodygroups = function(wep, data)
     local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
     local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
+    local bipodHgs = {["rpk"] = true, ["rpk74m"] = true}
     local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
 
     local optic = wep.Attachments[1].Installed
@@ -586,6 +587,10 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         elseif polRailHgs[hg] then
             vm:SetBodygroup(1,4)
         end
+    end
+
+    if bipodHgs[hg] then
+        vm:SetBodygroup(7, (wep:GetInBipod() and (wep.LastAnimKey ~= "enter_bipod" or wep.LastAnimFinishTime < CurTime())) and 7 or 1)
     end
 end
 
@@ -765,9 +770,9 @@ SWEP.Hook_NameChange = function(wep,name)
             elseif cal == "9mm" then
                 post = " 9mm"
             else
-                post = " ."..cal
+                post = " ." .. cal
             end
-            return start..post
+            return start .. post
         end
 
         if cal == "9mm" then
@@ -832,7 +837,7 @@ SWEP.Hook_NameChange = function(wep,name)
             end
         end
 
-        return start..mid..post
+        return start .. mid .. post
     else
         return wep.FakeName
     end
@@ -1148,7 +1153,7 @@ SWEP.Animations = {
         --Time = 1.2,
         --MinProgress = .7,
         SoundTable = {
-            {s = "weapons/arccw/melee_lift.wav", t = 0}                         
+            {s = "weapons/arccw/melee_lift.wav", t = 0}
         }
     },
 
