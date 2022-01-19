@@ -1165,6 +1165,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         --Time = 1.2,
         --MinProgress = .7,
+        Mult = .8,
         SoundTable = {
             -- {s = "weapons/arccw/melee_lift.wav", t = 0}
         }
@@ -1177,6 +1178,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         --Time = 1.2,
         --MinProgress = .7,
+        Mult = .8,
         SoundTable = {
             -- {s = "weapons/arccw/melee_lift.wav", t = 0}                   -- yeah here too
         }
