@@ -12,7 +12,7 @@ end
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ur/deagle/fire_supp_10.ogg" -- Placeholder
+        return {"weapons/arccw_ur/deagle/fire_halo_sup_1.ogg", "weapons/arccw_ur/deagle/fire_halo_sup_2.ogg", "weapons/arccw_ur/deagle/fire_halo_sup_3.ogg", "weapons/arccw_ur/deagle/fire_halo_sup_4.ogg"} -- Not Placeholder
     else
         return {"weapons/arccw_ur/deagle/fire_halo_1.ogg", "weapons/arccw_ur/deagle/fire_halo_2.ogg", "weapons/arccw_ur/deagle/fire_halo_3.ogg", "weapons/arccw_ur/deagle/fire_halo_4.ogg", "weapons/arccw_ur/deagle/fire_halo_5.ogg"} -- Not Placeholder
     end
