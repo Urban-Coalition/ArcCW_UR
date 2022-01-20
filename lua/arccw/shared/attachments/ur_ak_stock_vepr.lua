@@ -9,10 +9,11 @@ att.Desc_Cons = {
 
 att.SortOrder = 3
 
-att.Mult_Recoil = .9
-att.Mult_Sway = .5
+att.Mult_Recoil = 0.85
+att.Mult_Sway = 0.5
 att.Mult_SightTime = 1.15
-att.Mult_SpeedMult = .95
+att.Mult_SpeedMult = 0.95
+att.Mult_SightedSpeedMult = 0.8
 
 att.ActivateElements = {"stock_vepr"}
 att.GivesFlags = {"stock_vepr"}

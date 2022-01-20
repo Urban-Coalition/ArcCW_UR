@@ -148,6 +148,8 @@ SWEP.IronSightStruct = {
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
 }
+SWEP.LaserOffsetAngle = Angle(0, 0, 0)
+SWEP.LaserIronsAngle = Angle(0, 1.5, 0)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"

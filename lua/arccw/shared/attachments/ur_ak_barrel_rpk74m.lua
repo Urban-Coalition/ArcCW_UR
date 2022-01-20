@@ -9,15 +9,16 @@ att.SortOrder = 22.9
 att.Add_BarrelLength = 5
 att.Mult_SightTime = 1.1
 att.Mult_SpeedMult = .975
-att.Mult_SightedSpeedMult = .8
+att.Mult_SightedSpeedMult = 0.85
 att.Mult_Sway = 1.35
 att.Mult_HipDispersion = 1.35
 
 att.Mult_AccuracyMOA = .8
-att.Mult_Range = 1.25
+att.Mult_Range = 1.5
 att.Mult_MalfunctionMean = 2
+att.Mult_HipDispersion = 1.5
 
-att.Bipod = true 
+att.Bipod = true
 att.Mult_BipodRecoil = .25
 att.Mult_BipodDispersion = .2
 

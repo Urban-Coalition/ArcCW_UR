@@ -11,17 +11,17 @@ att.Override_Ammo = "pistol"
 att.Override_Trivia_Calibre = att.AbbrevName
 att.Override_Trivia_Class = "Submachine Gun"
 
-att.Mult_Range = .4
+att.Mult_Range = 0.6
 att.Mult_RPM = 1.178 -- 800 rpm with the carbine barrels
 att.Mult_ReloadTime = .95
-att.Mult_Recoil = .7
+att.Mult_Recoil = .65
 att.Mult_AccuracyMOA = .85
 att.Mult_HipDispersion = .75
-att.Mult_ShootPitch = (90/100)
+att.Mult_ShootPitch = 90 / 100
 
-att.Mult_Penetration = .25
-att.Mult_DamageMin = .6 -- 4 htk down from 3
-att.Mult_Damage = .6 -- 9 htk down from 5
+att.Mult_Penetration = 0.125
+att.Mult_DamageMin = 0.85
+att.Mult_Damage = 0.64
 
 att.Override_Ammo = "pistol"
 att.Override_Trivia_Calibre = "9x19mm Parabellum"
@@ -49,7 +49,7 @@ att.Hook_GetShootSound = function(wep, fsound)
         soundpath_s .. "1.wav",
         soundpath_s .. "2.wav",
         soundpath_s .. "3.wav",
-     } end        
+     } end
 end
 
 local soundpath_dist = ")^weapons/arccw_ur/ak/stalol/ak9_tail"
@@ -58,5 +58,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return {
         soundpath_dist .. ".wav",
      } end
-    
+
 end

@@ -1,6 +1,6 @@
 att.PrintName = "16\" Type 56 Barrel"
 att.Icon = nil -- todo
-att.Description = "Chinese derivative barrel with a fully hooded front sight and a folding spike bayonet. When unfolded, the bayonet increases melee damage substantially, but adds forward weight."
+att.Description = "Chinese derivative barrel with a fully hooded front sight and a folding spike bayonet. When unfolded, the bayonet increases melee damage substantially, but adds some forward weight."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
@@ -13,8 +13,9 @@ att.ToggleStats = {
         PrintName = "Extended",
         ActivateElements = {"barrel_t56_ext"},
         AutoStats = true,
-        Mult_MeleeDamage = 2.5,
-        --Mult_MeleeTime = 0.7,
+        Add_MeleeRange = 16,
+        Mult_MeleeDamage = 3,
+        Mult_MeleeWaitTime = 2,
         Add_BarrelLength = 3,
         Mult_Sway = 1.2,
         -- Override_BashPreparePos = Vector(4, -5, -1.8),
@@ -28,7 +29,6 @@ att.ToggleStats = {
     {
         PrintName = "Folded",
         AutoStats = true,
-        Mult_Sway = 1.1,
         ActivateElements = {"barrel_t56"},
     },
 }
