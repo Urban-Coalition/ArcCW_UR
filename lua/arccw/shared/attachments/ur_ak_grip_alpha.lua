@@ -1,5 +1,5 @@
 att.PrintName = "Helix Polymer Grip"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/grip_helix.png", "mips smooth")
 att.Description = "Rough US-made polymer grip, eases ironsight handling at the cost of a higher recoil."
 att.AutoStats = true
 att.Slot = {"ur_ak_grip"}

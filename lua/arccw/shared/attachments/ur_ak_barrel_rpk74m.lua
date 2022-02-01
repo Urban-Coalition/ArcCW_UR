@@ -1,5 +1,5 @@
 att.PrintName = "23\" Polymer SAW Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/rpk_poly.png", "mips smooth")
 att.Description = "Light machine gun barrel with polymer handguard furniture. The lighter material reduces strain at the cost of shoulder-fired performance. It features an integrated bipod which can be deployed for even greater accuracy and control."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

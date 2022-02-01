@@ -1,5 +1,5 @@
 att.PrintName = "16\" Ratnik Handguard"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/ak12.png", "mips smooth")
 att.Description = "The most recent barrel for the AK platform, with polymerized construction and an upper rail interface. Practical, yet comfortable."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

@@ -1,5 +1,5 @@
 att.PrintName = "Skeletal Stock"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/stock/saiga.png", "mips smooth")
 att.Description = [[Lightens the weapon by reducing mass in the stock. Unlike other skeletal stocks for this platform, this stock cannot be folded.]]
 att.AutoStats = true
 att.Slot = {"ur_ak_stock"}

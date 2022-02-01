@@ -1,5 +1,5 @@
 att.PrintName = "45-Round Extended Mag"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/magazines/545_45.png", "mips smooth")
 att.Description = "Extended magazine for the AK-74. While intended for squad gunners, the extra ammo is useful for any loadout, though the longer mag is noticeably heavier."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true

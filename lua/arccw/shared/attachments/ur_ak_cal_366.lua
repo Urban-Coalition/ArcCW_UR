@@ -1,7 +1,7 @@
 att.PrintName = "Vepr .366 TKM Receiver"
 att.AbbrevName = ".366 TKM Receiver"
 
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/recievers/366.png", "mips smooth")
 att.Description = "Hunting round based on 7.62x39mm, with much stronger ranged ballistics than the parent cartridge. Rifles chambered for it are exclusively produced for the civilian market, and are therefore semi-automatic only."
 
 att.Desc_Pros = {
@@ -55,7 +55,7 @@ att.Hook_GetShootSound = function(wep, fsound)
 end
 
 local slotinfo = {
-    [5] = {"10-Round Mag", "10-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
+    [5] = {"10-Round Mag", "10-Round Mag", Material("entities/att/ur_ak/magazines/366_10.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

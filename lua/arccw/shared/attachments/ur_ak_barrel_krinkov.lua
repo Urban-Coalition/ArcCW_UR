@@ -1,5 +1,5 @@
 att.PrintName = "8\" Compact Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/aksu.png", "mips smooth")
 att.Description = "Special carbine length handguard and barrel. Its reduced length leads to less unwieldiness, and the shortened gas system increases cyclic rate respectably.\nThese traits combined, however, result in a difficult weapon to control."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

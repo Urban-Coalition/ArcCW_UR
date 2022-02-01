@@ -1,5 +1,5 @@
 att.PrintName = "AKM Muzzle Brake"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/muzzle_m.png", "mips smooth")
 att.Description = "External muzzle brake unique to the AKM and some derivatives. The slant-cut design counters muzzle rise more effectively and doesn't add as much weight as a universal compensator."
 att.AutoStats = true
 att.Slot = {"ur_ak_muzzle"}

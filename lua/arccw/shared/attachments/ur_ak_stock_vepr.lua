@@ -1,5 +1,5 @@
 att.PrintName = "Thumbhole Stock"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/stock/vepr.png", "mips smooth")
 att.Description = "Marksman stock with integrated grip. The thumbhole design provides unparalleled stability."
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true

@@ -1,5 +1,5 @@
 att.PrintName = "16\" Type 56 Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/type56.png", "mips smooth")
 att.Description = "Chinese derivative barrel with a fully hooded front sight and a folding spike bayonet. When unfolded, the bayonet increases melee damage substantially, but adds some forward weight."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

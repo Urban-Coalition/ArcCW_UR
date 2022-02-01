@@ -1,6 +1,6 @@
 att.PrintName = "Saiga Polymer Grip"
 att.AbbrevName = "Saiga Grip"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/grip_saiga.png", "mips smooth")
 att.Description = "Ergonomic polymer grip. The large, grooved grip surface mitigates its effects on recoil, but not entirely."
 att.AutoStats = true
 att.Slot = {"ur_ak_grip"}

@@ -1,5 +1,5 @@
 att.PrintName = "Tactical Laser Position"
-att.Icon = Material("entities/att/arccw_ud_pointshoot.png", "smooth mips")
+att.Icon = Material("entities/att/aksidemount.png", "smooth mips")
 att.Description = "Give your AN/PEQ a reason to be thin."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

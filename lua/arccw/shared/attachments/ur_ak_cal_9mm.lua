@@ -1,6 +1,6 @@
 att.PrintName = "PP-19 Vityaz 9x19mm Parabellum Receiver"
 att.AbbrevName = "9x19mm Receiver"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/recievers/9.png", "mips smooth")
 att.Description = "Converts the weapon to a submachine gun. The smaller caliber drastically reduces recoil, but has much less range and is less accurate."
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true
@@ -59,4 +59,18 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
         soundpath_dist .. ".wav",
      } end
 
+end
+
+local slotinfo = {
+    [5] = {"30-Round Mag", "30-Round Mag", Material("entities/att/ur_ak/magazines/9_30.png", "mips smooth")},
+}
+att.Hook_GetDefaultAttName = function(wep, slot)
+    if slotinfo[slot] then
+        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
+    end
+end
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
 end

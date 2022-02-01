@@ -1,5 +1,5 @@
 att.PrintName = "12\" Spetsnaz Alpha Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/alpha_100.png", "mips smooth")
 att.Description = "Series 100 type barrel fitted with Helix handguard as used by various Russian armed forces. Similarly to the 105 Barrels, Reduces weight and profile while keeping the weapon accurate and controllable but also features the Alpha's sleek and modern design for extra modularity."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

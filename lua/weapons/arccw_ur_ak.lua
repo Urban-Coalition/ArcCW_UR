@@ -630,7 +630,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "16\" Standard Barrel",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
         Slot = "ur_ak_barrel",
     },
     {
@@ -649,7 +649,7 @@ SWEP.Attachments = {
     {
         PrintName = "Receiver",
         DefaultAttName = "7.62x39mm Reciever",
-        DefaultAttIcon = Material("", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_ak/recievers/762.png", "mips smooth"),
         Slot = {"ur_ak_cal"},
         Bone = "tag_weapon",
         Offset = {
@@ -661,7 +661,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = {"ur_ak_mag"},
         DefaultAttName = "30-Round Mag",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_ak/magazines/762_30.png", "mips smooth"),
     },
     {
         PrintName = "Underbarrel",
@@ -690,18 +690,19 @@ SWEP.Attachments = {
         PrintName = "Grip Type",
         Slot = {"ur_ak_grip"},
         DefaultAttName = "Type 3 Grip",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_grip_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_ak/grip_3.png", "mips smooth"),
         ExcludeFlags = {"stock_vepr"},
     },
     {
         PrintName = "Stock",
         Slot = {"ur_ak_stock"},
         DefaultAttName = "Type 3 Stock",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
     },
     {
         PrintName = "Dust Cover",
         DefaultAttName = "Smooth Dust Cover",
+        DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
         Slot = {"ur_ak_cover"},
         FreeSlot = true,
     },

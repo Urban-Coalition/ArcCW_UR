@@ -1,5 +1,5 @@
 att.PrintName = "AK-12 Stock"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/stock/ak12.png", "mips smooth")
 att.Description = "Retractable folding stock, retracted for further maneuverability."
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true

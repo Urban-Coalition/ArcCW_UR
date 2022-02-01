@@ -1,5 +1,5 @@
 att.PrintName = "AK-12 Polymer Grip"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/grip_ak12.png", "mips smooth")
 att.Description = "Black polymer grip with an emphasis on ergonomics."
 att.AutoStats = true
 att.Slot = {"ur_ak_grip"}

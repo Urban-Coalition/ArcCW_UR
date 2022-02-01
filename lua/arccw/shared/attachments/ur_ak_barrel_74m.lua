@@ -1,5 +1,5 @@
 att.PrintName = "16\" Polymer Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/poly.png", "mips smooth")
 att.Description = "Light polymer handguard with superior agility, but higher recoil from the reduced counterweight."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

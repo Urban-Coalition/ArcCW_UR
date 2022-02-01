@@ -1,6 +1,6 @@
 att.PrintName = "AK-12 5.45x39mm Receiver"
 att.AbbrevName = "AK-12 Receiver"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/recievers/ak12.png", "mips smooth")
 att.Description = [[Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration.
 Features a redesigned rear sight and trigger guard.]]
 att.Slot = {"ur_ak_cal"}
@@ -41,4 +41,18 @@ end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return path .. "fire_545_dist.ogg" end
+end
+
+local slotinfo = {
+    [5] = {"30-Round Mag", "30-Round Mag", Material("entities/att/ur_ak/magazines/545_30.png", "mips smooth")},
+}
+att.Hook_GetDefaultAttName = function(wep, slot)
+    if slotinfo[slot] then
+        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
+    end
+end
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
 end

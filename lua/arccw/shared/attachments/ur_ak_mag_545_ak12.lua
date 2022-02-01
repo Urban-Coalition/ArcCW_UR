@@ -1,6 +1,6 @@
 att.PrintName = "AK-12 30-Round Polymer Mag"
 att.AbbrevName = "30-Round Polymer Mag"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/magazines/545_30_ak12.png", "mips smooth")
 att.Description = "Contemporary polymer magazine. The grooves give it a slightly better grip surface, but the difference in practice is negligible."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true

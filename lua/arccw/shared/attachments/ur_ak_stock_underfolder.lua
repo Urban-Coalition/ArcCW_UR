@@ -1,5 +1,5 @@
 att.PrintName = "Underfolding Stock"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/stock/under.png", "mips smooth")
 att.Description = [[Folding stock of the AKS-47. While not as stable as a full wood stock, it is much lighter. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
 
 Toggling this stock modifies performance accordingly.]]

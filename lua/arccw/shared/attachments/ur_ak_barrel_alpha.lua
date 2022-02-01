@@ -1,5 +1,5 @@
 att.PrintName = "16\" Helix Alpha Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/alpha.png", "mips smooth")
 att.Description = "US production handguard featuring a sleek and lightweight design with a rail interface for additional modularity."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

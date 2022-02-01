@@ -1,5 +1,5 @@
 att.PrintName = "Helix Alpha Stock"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/stock/helix.png", "mips smooth")
 att.Description = "A US made adjustable lightweight polymer stock with expectable pros and cons. Reduces vertical recoil and swaying, but drastically adds horizontal recoil."
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true

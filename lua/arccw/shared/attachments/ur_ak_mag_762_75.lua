@@ -1,5 +1,5 @@
 att.PrintName = "75-Round Drum Mag"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/magazines/762_75.png", "mips smooth")
 att.Description = "Cylindrical drum magazine with capacity for a very large number of rounds, ideal for machine gunners. It is heavy enough to shift the weapon's center of mass, disorienting recoil control in addition to the existing drawbacks of extreme weight. Prone to feeding failures."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true

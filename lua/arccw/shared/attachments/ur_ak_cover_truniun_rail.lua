@@ -1,6 +1,6 @@
-att.PrintName = "Truniun Sight Mount"
-att.Icon = nil -- todo
-att.Description = "Picatinny rail mounted on truniun sights"
+att.PrintName = "Trunnion Sight Mount"
+att.Icon = Material("entities/att/ur_ak/dustcover_mount.png", "mips smooth")
+att.Description = "Picatinny rail mounted on trunnion sights"
 att.Slot = {"ur_ak_cover"}
 
 att.Desc_Neutrals = {"uc.cosmetic"}
@@ -12,4 +12,4 @@ att.ActivateElements = {"cover_trail"}
 att.GivesFlags = {"cover_rail"}
 att.ExcludeFlags = {"ak_barrelkrinkov","ak_norail"}
 
-att.Ignore = true
+-- att.Ignore = true
