@@ -124,12 +124,12 @@ local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg"
+SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
-SWEP.ShootPitchVariation = 0
+--SWEP.ShootPitchVariation = 0
 
 SWEP.MuzzleEffect = "muzzleflash_ak47"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
