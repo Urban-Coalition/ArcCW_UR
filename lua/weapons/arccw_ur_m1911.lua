@@ -191,28 +191,28 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = "vm_m1911_idle_empty",
         Time = 120 / 60,
     },
     ["idle"] = {
-        Source = "idle",
+        Source = "vm_m1911_idle",
         Time = 120 / 60,
     },
     ["ready"] = {
-        Source = "ready",
+        Source = "vm_m1911_inspect",
         Time = 200 / 60,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
         LHIKOut = 0.6,
-        SoundTable = {
+        --[[SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
             { s = path .. "rack1.ogg", t = 10 / 60, c = ca },
             { s = path .. "rack2.ogg", t = 25 / 60, c = ca },
-        },
+        },]]
     },
     ["draw"] = {
-        Source = "draw",
+        Source = "vm_m1911_idle",
         ProcDraw = true,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
@@ -220,7 +220,7 @@ SWEP.Animations = {
         },
     },
     ["draw_empty"] = {
-        Source = "draw_empty",
+        Source = "vm_m1911_idle_empty",
         ProcDraw = true,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
@@ -236,13 +236,13 @@ SWEP.Animations = {
     },]]
 
     ["fire"] = {
-        Source = "fire",
+        Source = "vm_m1911_fire",
         Time = 0.5,
         ShellEjectAt = 0.05,
         SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
     ["fire_empty"] = {
-        Source = "fire_empty",
+        Source = "vm_m1911_fire_empty",
         Time = 0.5,
         ShellEjectAt = 0.05,
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
@@ -251,7 +251,7 @@ SWEP.Animations = {
     -- 7-R Reloads --
 
     ["reload"] = {
-        Source = "reload",
+        Source = "vm_m1911_reload_tactical",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.3525,
         Time = 115 / 60,
@@ -271,7 +271,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "reload_empty",
+        Source = "vm_m1911_reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.75,
         Time = 175 / 60,
