@@ -1,6 +1,6 @@
 att.PrintName = "No Stock"
 att.Icon = Material("arccw/hud/atts/default.png", "mips smooth")
-att.Description = "Concept of buttstock is lie by Western capitalist weaklings. Real comrades channel strength of Siberian bear and shoot Kalashnikov without stock; withstand kick harder than 20 bottles of vodka."
+att.Description = "Buttstock? What are you, Western capitalist WEAKLING? Real comrades channel strength of Siberian bear and shoot Kalashnikov without stock; withstand kick harder than 20 bottles of vodka."
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true
 
