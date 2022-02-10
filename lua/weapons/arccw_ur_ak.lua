@@ -214,7 +214,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_rpk74m"] = {
         VMBodygroups = {
-            {ind = 1, bg = 3},
+            {ind = 1, bg = 5},
             {ind = 7, bg = 1},
             {ind = 8, bg = 2}
         },

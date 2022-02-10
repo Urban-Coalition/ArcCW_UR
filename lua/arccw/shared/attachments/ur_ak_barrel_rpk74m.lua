@@ -17,6 +17,7 @@ att.Mult_AccuracyMOA = .8
 att.Mult_Range = 1.5
 att.Mult_MalfunctionMean = 2
 att.Mult_HipDispersion = 1.5
+att.Mult_MoveDispersion = 1.25
 
 att.Bipod = true
 att.Mult_BipodRecoil = .25
