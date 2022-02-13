@@ -465,7 +465,7 @@ SWEP.AttachmentElements = {
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 3.5, 4.75),
+            vpos = Vector(0, 3.5, 4.5),
             vang = Angle(0, -90, 0),
         }}
     },
@@ -480,7 +480,7 @@ SWEP.AttachmentElements = {
     ["cover_ak12"] = {
         VMBodygroups = {{ind = 10, bg = 4}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 3.5, 4.75),
+            vpos = Vector(0, 3.5, 4.5),
             vang = Angle(0, -90, 0),
         }}
     },
@@ -672,6 +672,10 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
         VMScale = Vector(0.9, 0.9, 0.9),
+        SlideAmount = {
+            vmin = Vector(0,10.5,1.9),
+            vmax = Vector(0,13.5,1.9)
+        },
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"ak_noubs"},
     },
