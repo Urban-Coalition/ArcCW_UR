@@ -465,7 +465,7 @@ SWEP.AttachmentElements = {
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 3.5, 4.5),
+            vpos = Vector(0, 3.5, 4.68),
             vang = Angle(0, -90, 0),
         }}
     },
@@ -480,7 +480,7 @@ SWEP.AttachmentElements = {
     ["cover_ak12"] = {
         VMBodygroups = {{ind = 10, bg = 4}},
         AttPosMods = {[1] = {
-            vpos = Vector(0, 3.5, 4.5),
+            vpos = Vector(0, 3.5, 4.67),
             vang = Angle(0, -90, 0),
         }}
     },
