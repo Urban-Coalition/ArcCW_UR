@@ -798,7 +798,11 @@ SWEP.Hook_NameChange = function(wep,name)
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" then
-            post = "-12"
+            if string.EndsWith(barr,"105") then
+                post = "-12K"
+            else
+                post = "-12"
+            end
         elseif barr == "rpk" or barr == "rpk74m" then
             start = "RPK"
         elseif cal == "762" then
