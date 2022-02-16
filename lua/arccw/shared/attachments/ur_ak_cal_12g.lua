@@ -9,7 +9,8 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     "uc.semionly",
-    "ur.ak.12g.2"
+    "ur.ak.12g.2",
+    "uc.jam"
 }
 att.Desc_Neutrals = {
 }
@@ -29,7 +30,7 @@ att.Mult_RPM = 0.4
 
 
 att.Override_Malfunction = true
-att.Mult_MalfunctionMean = 0.2
+att.Mult_MalfunctionMean = 0.8
 att.Mult_MalfunctionVariance = 1.5
 
 
