@@ -2,7 +2,7 @@ att.PrintName = "AK-12 5.45x39mm Receiver"
 att.AbbrevName = "AK-12 Receiver"
 att.Icon = Material("entities/att/ur_ak/recievers/ak12.png", "mips smooth")
 att.Description = [[Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration.
-Features a redesigned rear sight and trigger guard.]]
+Features a redesigned trigger guard and a dark, glossy finish.]]
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true
 

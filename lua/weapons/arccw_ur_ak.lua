@@ -10,8 +10,15 @@ if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
 end
 
+local descStart = "One of the first assault rifles, prized around the world to this day for its cheap cost, ease of maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design.\n\n"
+local desc_762 = "The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
+local desc_545 = "With a heavier frame than other service rifles, the AK-74 platform is accurate and easy to control."
+local desc_74u = "This PDW variant sacrifices range for a compact profile and a high rate of fire."
+local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
+local desc_12g = "Magazine-fed semi automatic shotgun, based on the Kalashnikov pattern. Its low accuracy is compensated for by a much faster reload time than tube-fed designs."
+
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "One of the first assault rifles, prized around the world to this day for its cheap cost, lax maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design. The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
+SWEP.Trivia_Desc = descStart..desc_762
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -766,16 +773,24 @@ SWEP.Hook_NameChange = function(wep,name)
         local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
         local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
 
+        wep.Trivia_Desc = descStart .. desc_762
+        wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+
         if atts[14].Installed == "uc_fg_civvy" then
             start = "Vepr"
             if cal == "12g" then
                 post = "-12"
+                wep.Trivia_Desc = desc_12g
             elseif cal == "545_ak12" or cal == "545" then
                 post = " 5.45"
+                wep.Trivia_Desc = descStart .. desc_545
             elseif cal == "762" then
                 post = " 7.62"
             elseif cal == "9mm" then
-                post = " 9mm"
+                start = "Saiga"
+                post = "-9"
+                wep.Trivia_Desc = desc_9mm
+                wep.Trivia_Mechanism = "Blowback"
             else
                 post = " ." .. cal
             end
@@ -785,6 +800,8 @@ SWEP.Hook_NameChange = function(wep,name)
         if cal == "9mm" then
             start = "PP"
             post = "-19 Vityaz"
+            wep.Trivia_Desc = desc_9mm
+            wep.Trivia_Mechanism = "Blowback"
         elseif cal == "12g" then
             start = "Saiga"
             if shortBarrs[barr] then
@@ -792,17 +809,19 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-12"
             end
+            wep.Trivia_Desc = desc_12g
         elseif cal == "366" then
             start = "Vepr "
             post = ".366"
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" then
-            if string.EndsWith(barr,"105") then
+            if string.EndsWith(barr,"105") or shortBarrs[barr] then
                 post = "-12K"
             else
                 post = "-12"
             end
+            wep.Trivia_Desc = descStart .. desc_545
         elseif barr == "rpk" or barr == "rpk74m" then
             start = "RPK"
         elseif cal == "762" then
@@ -820,6 +839,7 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-74"
             end
+            wep.Trivia_Desc = descStart .. desc_545
         end
 
         if foldStocks[stock] and akCals[cal] and !string.StartWith(barr,"105") then
@@ -837,6 +857,7 @@ SWEP.Hook_NameChange = function(wep,name)
         if akCals[cal] then
             if shortBarrs[barr] then
                 post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
+            endDesc = desc_74u
             elseif string.EndsWith(barr,"105") then
                 if cal == "545" then
                     post = "-105"
