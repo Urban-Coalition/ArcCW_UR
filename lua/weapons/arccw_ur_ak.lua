@@ -857,7 +857,7 @@ SWEP.Hook_NameChange = function(wep,name)
         if akCals[cal] then
             if shortBarrs[barr] then
                 post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
-            endDesc = desc_74u
+            wep.Trivia_Desc = descStart .. desc_74u
             elseif string.EndsWith(barr,"105") then
                 if cal == "545" then
                     post = "-105"
