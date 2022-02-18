@@ -8,6 +8,7 @@ att.Slot = {"ur_ak_stock"}
 
 att.SortOrder = 1
 
+att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
 att.ToggleStats = {

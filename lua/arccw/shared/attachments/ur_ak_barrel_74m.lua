@@ -10,6 +10,7 @@ att.Mult_Sway = .9
 att.Mult_SightTime = .85
 att.Mult_Recoil = 1.2
 
+att.ToggleLockDefault = true
 att.ToggleStats = {
     {
         PrintName = "Black",
