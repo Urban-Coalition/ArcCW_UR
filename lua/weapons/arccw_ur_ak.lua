@@ -721,7 +721,16 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
         Slot = "uc_ammo",
+        ExcludeFlags = {"cal_12g"},
+        HideIfBlocked = true
     },
+    -- {
+    --     PrintName = "Ammo Type",
+    --     DefaultAttName = "\"BUCK\" #00 Buckshot",
+    --     Slot = "ud_ammo_shotgun",
+    --     RequireFlags = {"cal_12g"},
+    --     HideIfBlocked = true
+    -- }, -- Will un-comment as soon as HideIfBlocked is fixed for slots
     {
         PrintName = "Powder Load",
         Slot = "uc_powder",
@@ -1179,6 +1188,13 @@ SWEP.Animations = {
         --     {s = common .. "cloth_4.ogg",  t = 0.5},
         --     {s = path .. "chamber.ogg",  t = 0.5},
         -- },
+        SoundTable = {
+            {s = common .. "cloth_4.ogg",  t = 0.1},
+            {s = path .. "chback.ogg",    t = 0.6},
+            {s = path .. "chamber.ogg",    t = 0.7},
+            {s = common .. "grab.ogg", t = 1.1},
+            {s = common .. "shoulder.ogg", t = 1.15},
+        }
     },
     ["bash_bayonet"] = {
         Source = "bayonet",
