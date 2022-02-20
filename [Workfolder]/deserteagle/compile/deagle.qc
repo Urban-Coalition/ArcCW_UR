@@ -93,6 +93,15 @@ $sequence "idle_empty"{
 	node "Ready"
 }
 
+$sequence "idle_jammed"{
+	"anims\idle_jammed.smd" 
+	fps 60
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
 $sequence "fire_01" {
 	"anims\fire_01.smd"
 	"anims\fire_iron.smd"
@@ -132,6 +141,15 @@ $sequence "fire_empty" {
 	fps 60
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
+	fadein 0.03
+	fadeout 0.03
+	{ event 5001 0 "1" }
+}
+
+$sequence "fire_jammed" {
+	"anims\fire_jammed.smd"
+	fps 60
+	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
 	fadeout 0.03
 	{ event 5001 0 "1" }
@@ -180,6 +198,12 @@ $sequence "reload_empty_exte" {
 	fps 60
 	"ACT_VM_RELOAD" 1
 	snap
+}
+
+$sequence "unjam" {
+	"anims\unjam.smd"
+	snap
+	fps 60
 }
 
 $sequence "enter_inspect" {
