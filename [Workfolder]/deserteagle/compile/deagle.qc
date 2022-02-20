@@ -164,6 +164,24 @@ $sequence "reload_empty" {
 	snap
 }
 
+$sequence "reload_exte" {
+	"anims\reload_exte.smd"
+	"anims\reload_iron_exte.smd"
+	blend "sights" 0 1
+	fps 60
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "reload_empty_exte" {
+	"anims\reload_empty_exte.smd"
+	"anims\reload_empty_iron_exte.smd"
+	blend "sights" 0 1
+	fps 60
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
 $sequence "enter_inspect" {
 	"anims\enter_inspect.smd"
 	"ACT_VM_IDLE" 1

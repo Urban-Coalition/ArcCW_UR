@@ -432,6 +432,54 @@ SWEP.Animations = {
         },
     },
 
+    -- 10-R Reloads --
+
+    ["reload_10"] = {
+        Source = "reload_exte",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.3525,
+        Time = 139 / 60,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.6,
+        LHIKOut = 0.62,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 6 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 64 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 71 / 60, c = ca },
+        },
+    },
+    ["reload_empty_10"] = {
+        Source = "reload_empty_exte",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.75,
+        Time = 160 / 60,
+        LastClip1OutTime = 0.76,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKEaseIn = 0.1,
+        LHIKEaseOut = 0.55,
+        LHIKOut = 0.7,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout_old.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 66 / 60, c = ca },
+            { s = path .. "chamber.ogg", t = 94 / 60, c = ca },
+            { s = rottle, t = 75 / 60, c = ca },
+        },
+    },
+
     -- Inspecc --
                                     -- disabled due to suck balls
     -- ["enter_inspect"] = {
