@@ -29,7 +29,7 @@ SWEP.TrueName = "Desert Eagle"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its huge rounds, unrivaled in power for a handgun cartridge, can easily blast a human skull apart. Despite being one of the most famous weapons in action culture, it’s rare in service because of its massive, bulky frame and needlessly large caliber.\n\nWe both know that won’t stop you."
+SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its huge rounds, unrivaled in power for a handgun cartridge, can easily blast a human skull apart.\nDespite being one of the most famous weapons in action culture, it's rare in service because of its massive, bulky frame and needlessly large caliber.\n\nWe both know that won't stop you."
 SWEP.Trivia_Manufacturer = "ISM"
 SWEP.Trivia_Calibre = ".50 Action Express"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -493,7 +493,7 @@ SWEP.Animations = {
             { s = rottle, t = 75 / 60, c = ca },
         },
     },
-    
+
     ["unjam"] = {
         Source = "unjam",
         Time = 0.9,
@@ -570,9 +570,43 @@ SWEP.Animations = {
             { s = rottle, t = 160 / 60, c = ca },
         },
     },
+
+    ["enter_inspect_jammed"] = {
+        Source = "enter_inspect_empty",
+        time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKOut = 0,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect_jammed"] = {
+        Source = "idle_inspect_empty",
+        time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_jammed"] = {
+        Source = "exit_inspect_empty",
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            { s = rottle, t = 100 / 60, c = ca },
+            { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
+            { s = path .. "magin_old.ogg", t = 114 / 60, c = ca },
+            { s = rottle, t = 160 / 60, c = ca },
+        },
+    },
 }
 
--- ADS animation blending, thanks fesiug -- 
+-- ADS animation blending, thanks fesiug --
 
 SWEP.Hook_Think = function(wep)
     local vm = wep:GetOwner():GetViewModel()
