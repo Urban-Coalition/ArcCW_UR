@@ -10,7 +10,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme conditions. Few targets can stand up to its power, but its long bolt pull and reload time can be an encumbrance outside its preferred environment.\n\nOne shot. One kill. You know the routine."
+SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme environments. Few targets can stand up to its power, but its long bolt pull and reload time can be an encumbrance outside its preferred environment.\n\nOne shot. One kill. You know the routine."
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Bolt Action"
@@ -110,17 +110,17 @@ SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.5
-SWEP.ShootSpeedMult = 0.75
+SWEP.SpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.625
+SWEP.SightTime = 0.525
+SWEP.ShootSpeedMult = 0.625
 
 local path = ")^weapons/arccw_ur/ak/"
 local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-SWEP.ShootSound = ")^weapons/arccw_ur/sw586/fire_357.ogg" -- Temporary
+SWEP.ShootSound = ")^weapons/arccw_ur/sw586/fire_357.ogg" -- Temporary, .338 needs a fire sound too <3
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
@@ -158,8 +158,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(-1, -1, 1.2)
+SWEP.SprintAng = Angle(-15, 8, -10)
 
 SWEP.CrouchPos = Vector(-4, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)
@@ -176,9 +176,29 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 32
 
 SWEP.AttachmentElements = {
-    -- PUT BARRELS UP HERE
+    ["barrel_long"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+        AttPosMods = {[3] = {
+            vpos = Vector(0, 40, 1.75),
+            vang = Angle(0, 270, 0),
+        }}
+    },
+    ["barrel_short"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
+        AttPosMods = {[3] = {
+            vpos = Vector(0, 28, 1.75),
+            vang = Angle(0, 270, 0),
+        }}
+    },
+    ["barrel_sd"] = {
+        VMBodygroups = {{ind = 2, bg = 3}}
+    },
+    
     ["mag_338"] = {
         VMBodygroups = {{ind = 3, bg = 2}}
+    },
+    ["mag_ext"] = {
+        VMBodygroups = {{ind = 3, bg = 1}}
     },
 
     ["rail_bottom"] = {
@@ -242,9 +262,10 @@ SWEP.Attachments = {
         VMScale = Vector(1.5, 1.5, 1.5),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0, 37, 1.75),
+            vpos = Vector(0, 35.5, 1.75),
             vang = Angle(0, 270, 0),
         },
+        ExcludeFlags = {"barrel_sd"}
     },
     {
         PrintName = "Caliber",
@@ -336,10 +357,13 @@ end
 
 SWEP.Hook_NameChange = function(wep,name)
     local atts = wep.Attachments
+    local barr = string.Replace(atts[2].Installed or "default", "ur_aw_barrel_", "")
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
 
     if cal == "338" then
         return "AWM"
+    elseif barr == "sd" then
+        return "AWS"
     end
 end
 
