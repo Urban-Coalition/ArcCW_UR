@@ -120,8 +120,7 @@ local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"
+SWEP.ShootSound = ")^weapons/arccw_ur/sw586/fire_357.ogg" -- Temporary
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
@@ -179,7 +178,7 @@ SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
     -- PUT BARRELS UP HERE
     ["sights_flipped"] = {
-        VMBodygroups = {{ind = 8, bg = 4}}
+        VMBodygroups = {{ind = 8, bg = 1}}
     },
 }
 
@@ -211,8 +210,8 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(-1.9, 180.15, 0),
         VMScale = Vector(1, 1, 1),
         SlideAmount = {
-            vmin = Vector(0, 4.5, 2.6),
-            vmax = Vector(0, 7.5, 2.6),
+            vmin = Vector(0, 5.5, 2.6),
+            vmax = Vector(0, 7, 2.6),
         },
         InstalledEles = {"sights_flipped"}
     },
@@ -311,7 +310,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0.6, 2, 2.25),
+            vpos = Vector(0.7, 3.9, .25),
             vang = Angle(90, -90, -90),
         },
     },
@@ -391,13 +390,15 @@ SWEP.Animations = {
     },
     ["cycle"] = {
         Source = "cycle",
-        -- Time = 20 / 30,
+         Time = 1.47,
         ShellEjectAt = 0.5,
-        MinProgress = 12 / 30,
+        MinProgress = 1.3,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0},
-            {s = path .. "eject.ogg",  t = 0.075},
+            -- {s = path .. "chback.ogg",    t = .4},
+            {s = path .. "eject.ogg", t = .4},
+            -- {s = path .. "chamber.ogg",    t = .65},
             {s = path .. "rack_2.ogg",  t = 0.2},
         },
     },
