@@ -252,6 +252,28 @@ $sequence "exit_inspect_empty" {
 	fps 60
 }
 
+
+$sequence "enter_inspect_jammed" {
+	"anims\enter_inspect_jammed.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 60
+}
+
+$sequence "idle_inspect_jammed" {
+	"anims\idle_inspect_jammed.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 60
+}
+
+$sequence "exit_inspect_jammed" {
+	"anims\exit_inspect_jammed.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 60
+}
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"
