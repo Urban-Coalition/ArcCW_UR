@@ -26,7 +26,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ur_aw.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_aw.mdl"
 SWEP.ViewModelFOV = 70
 
-SWEP.DefaultBodygroups = "000000000"
+SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
@@ -376,21 +376,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if cal == "338" then
         if pistolGrip then
             vm:SetBodygroup(1,3)
-            vm:SetBodygroup(5,0)
         else
             vm:SetBodygroup(1,1)
-            vm:SetBodygroup(5,1)
-            vm:SetBodygroup(4,4)
         end
+    elseif pistolGrip then
+        vm:SetBodygroup(1,2)
     else
-        if pistolGrip then
-            vm:SetBodygroup(1,2)
-            vm:SetBodygroup(5,0)
-        else
-            vm:SetBodygroup(1,0)
-            vm:SetBodygroup(5,1)
-            vm:SetBodygroup(4,4)
-        end
+        vm:SetBodygroup(1,0)
     end
 end
 
