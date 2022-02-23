@@ -3,29 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "awoop" -- make this something russian and cool
-SWEP.TrueName = "awoop"
+SWEP.PrintName = "AWP"
 
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
+if !GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = "Apex Precision"
 end
 
-local descStart = "One of the first assault rifles, prized around the world to this day for its cheap cost, ease of maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design.\n\n"
-local desc_762 = "The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
-local desc_545 = "With a heavier frame than other service rifles, the AK-74 platform is accurate and easy to control."
-local desc_74u = "This PDW variant sacrifices range for a compact profile and a high rate of fire."
-local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
-local desc_12g = "Magazine-fed semi automatic shotgun, based on the Kalashnikov pattern. Its low accuracy is compensated for by a much faster reload time than tube-fed designs."
+SWEP.Trivia_Class = "Sniper Rifle"
+SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme conditions. Few targets can stand up to its power, but its long bolt pull and reloading times can be an encumbrance outside its preferred environment.\n\nOne shot. One kill. You know the routine."
+SWEP.Trivia_Manufacturer = "Accuracy International"
+SWEP.Trivia_Calibre = "7.62x51mm NATO"
+SWEP.Trivia_Mechanism = "Bolt Action"
+SWEP.Trivia_Country = "United Kingdom"
+SWEP.Trivia_Year = 1982
 
-SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = descStart..desc_762
-SWEP.Trivia_Manufacturer = "Izhmash"
-SWEP.Trivia_Calibre = "7.62x39mm"
-SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-SWEP.Trivia_Country = "Soviet Union"
-SWEP.Trivia_Year = 1947
-
-SWEP.Slot = 2
+SWEP.Slot = 3
 SWEP.CamAttachment = 3
 
 SWEP.UseHands = true
@@ -38,15 +30,15 @@ SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 47 -- 3 shot close range kill
-SWEP.DamageMin = 20 -- 5 shot long range kill
-SWEP.RangeMin = 40
-SWEP.Range = 300 -- 3 shot until ~170m
-SWEP.Penetration = 16
+SWEP.Damage = 42 -- 3 shot close range kill
+SWEP.DamageMin = 75 -- 2 shot long range kill
+SWEP.RangeMin = 5
+SWEP.Range = 50 -- 2 shot at ~27m
+SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 715
-SWEP.PhysBulletMuzzleVelocity = 715
+SWEP.MuzzleVelocity = 850
+SWEP.PhysBulletMuzzleVelocity = 850
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -59,7 +51,7 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 0.75
+SWEP.Recoil = 2.5
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0.6
@@ -77,6 +69,7 @@ SWEP.Delay = 60 / 80
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
+        PrintName = "fcg.bolt",
         Mode = 1,
     },
     {
@@ -94,7 +87,7 @@ SWEP.ReloadInSights = true
 
 -- NPC --
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_crossbow"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
@@ -105,7 +98,7 @@ SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.MagID = "ak"
+SWEP.MagID = "awp"
 
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
@@ -184,61 +177,14 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
-    -- ["barrel_105"] = {
-    --     VMBodygroups = {
-    --         {ind = 1, bg = 3},
-    --         {ind = 7, bg = 2},
-    --         {ind = 8, bg = 2}
-    --     },
-    --     AttPosMods = {[3] = {
-    --         vpos = Vector(0, 20.6, 2.65),
-    --         vang = Angle(0, 270, 0),
-    --     }},
-    --     Override_IronSightStruct = {
-    --         Pos = Vector(-2.6, 0, 0.45),
-    --         Ang = Angle(0.55, 0.265, 5.53),
-    --         Magnification = 1,
-    --     }
-    -- },
+    -- PUT BARRELS UP HERE
+    ["sights_flipped"] = {
+        VMBodygroups = {{ind = 8, bg = 4}}
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
-    -- local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
-    -- local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
-    -- local bipodHgs = {["rpk"] = true, ["rpk74m"] = true}
-    -- local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
 
-    -- local optic = wep.Attachments[1].Installed
-    -- local hg = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
-    -- local ub = wep.Attachments[6].Installed
-    -- local upper = wep.Attachments[10].Installed
-    -- local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
-    -- local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
-
-    -- local vm = data.vm
-    -- if !IsValid(vm) then return end
-
-    -- if taclaser and !akOptics[optic] then
-    --     vm:SetBodygroup(12,2)
-    -- else
-    --     if optic and !alpha and !akOptics[optic] then
-    --         vm:SetBodygroup(12,1)
-    --     else
-    --         vm:SetBodygroup(12,0)
-    --     end
-    -- end
-
-    -- if ub and ub ~= "ur_ak_barrel_dong" then
-    --     if railHgs[hg] then
-    --         vm:SetBodygroup(1,13)
-    --     elseif polRailHgs[hg] then
-    --         vm:SetBodygroup(1,4)
-    --     end
-    -- end
-
-    -- if bipodHgs[hg] then
-    --     vm:SetBodygroup(7, (wep:GetInBipod() and (wep.LastAnimKey ~= "enter_bipod" or wep.LastAnimFinishTime < CurTime())) and 7 or 1)
-    -- end
 end
 
 SWEP.ExtraSightDist = 10
@@ -255,29 +201,27 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic","sniper_optic","ur_ak_optic"},
+        Slot = {"optic","optic_lp"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 2, 4.92),
+            vpos = Vector(0, 6, 2.6),
             vang = Angle(0, -90, 0),
         },
-        CorrectivePos = Vector(0, 0, -0.0),
+        CorrectivePos = Vector(0, 0, -.085),
         CorrectiveAng = Angle(-1.9, 180.15, 0),
         VMScale = Vector(1, 1, 1),
         SlideAmount = {
-            vmin = Vector(0, 2-1, 4.55),
-            vmax = Vector(0, 2+0.5, 4.55),
+            vmin = Vector(0, 4.5, 2.6),
+            vmax = Vector(0, 7.5, 2.6),
         },
-       RequireFlags = {"cover_rail"},
-       HideIfBlocked = true,
-        InstalledEles = {"optic_rail"},
+        InstalledEles = {"sights_flipped"}
     },
-    -- {
-    --     PrintName = "Barrel",
-    --     DefaultAttName = "16\" Standard Barrel",
-    --     DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
-    --     Slot = "ur_ak_barrel",
-    -- },c
+    {
+        PrintName = "Barrel",
+        DefaultAttName = "24\" Police Barrel",
+        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
+        Slot = "ur_aw_barrel",
+    },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -289,28 +233,27 @@ SWEP.Attachments = {
             vpos = Vector(0, 24.6, 2.7),
             vang = Angle(0, 270, 0),
         },
-        ExcludeFlags = {"ur_ak_nomuzzle"}
     },
-    -- {
-    --     PrintName = "Receiver",
-    --     DefaultAttName = "7.62x39mm Reciever",
-    --     DefaultAttIcon = Material("entities/att/ur_ak/recievers/762.png", "mips smooth"),
-    --     Slot = {"ur_ak_cal"},
-    --     Bone = "tag_weapon",
-    --     Offset = {
-    --         vpos = Vector(2.8, -4.2, -11.5),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    -- },
-    -- {
-    --     PrintName = "Magazine",
-    --     Slot = {"ur_ak_mag"},
-    --     DefaultAttName = "30-Round Mag",
-    --     DefaultAttIcon = Material("entities/att/ur_ak/magazines/762_30.png", "mips smooth"),
-    -- },
+    {
+        PrintName = "Receiver",
+        DefaultAttName = "7.62x51mm Reciever",
+        DefaultAttIcon = Material("entities/att/ur_ak/recievers/762.png", "mips smooth"),
+        Slot = {"ur_aw_cal"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(2.8, -4.2, -11.5),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Magazine",
+        Slot = {"ur_aw_mag"},
+        DefaultAttName = "5-Round Mag",
+        DefaultAttIcon = Material("entities/att/ur_ak/magazines/762_30.png", "mips smooth"),
+    },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip","ubgl","ur_ak_ub"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(0,12, 1.9),
@@ -335,40 +278,18 @@ SWEP.Attachments = {
         GivesFlags = {"tac"},
         --InstalledEles = {"ud_m16_clamp_fullsize"}
     },
-    -- {
-    --     PrintName = "Grip Type",
-    --     Slot = {"ur_ak_grip"},
-    --     DefaultAttName = "Type 3 Grip",
-    --     DefaultAttIcon = Material("entities/att/ur_ak/grip_3.png", "mips smooth"),
-    --     ExcludeFlags = {"stock_vepr"},
-    -- },
-    -- {
-    --     PrintName = "Stock",
-    --     Slot = {"ur_ak_stock"},
-    --     DefaultAttName = "Type 3 Stock",
-    --     DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
-    -- },
-    -- {
-    --     PrintName = "Dust Cover",
-    --     DefaultAttName = "Smooth Dust Cover",
-    --     DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
-    --     Slot = {"ur_ak_cover"},
-    --     FreeSlot = true,
-    -- },
+    {
+        PrintName = "Stock",
+        Slot = {"ur_aw_stock"},
+        DefaultAttName = "Factory Stock",
+        DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
+    },
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
         Slot = "uc_ammo",
-        ExcludeFlags = {"cal_12g"},
         HideIfBlocked = true
     },
-    -- {
-    --     PrintName = "Ammo Type",
-    --     DefaultAttName = "\"BUCK\" #00 Buckshot",
-    --     Slot = "ud_ammo_shotgun",
-    --     RequireFlags = {"cal_12g"},
-    --     HideIfBlocked = true
-    -- }, -- Will un-comment as soon as HideIfBlocked is fixed for slots
     {
         PrintName = "Powder Load",
         Slot = "uc_powder",
@@ -384,142 +305,31 @@ SWEP.Attachments = {
         Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
     },
-    -- {
-    --     PrintName = "Charm",
-    --     Slot = {"charm", "fml_charm", "ur_ak_charm"},
-    --     FreeSlot = true,
-    --     Bone = "tag_weapon",
-    --     Offset = {
-    --         vpos = Vector(0.6, 2, 2.25),
-    --         vang = Angle(90, -90, -90),
-    --     },
-    -- },
+    {
+        PrintName = "Charm",
+        Slot = {"charm", "fml_charm", "ur_ak_charm"},
+        FreeSlot = true,
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(0.6, 2, 2.25),
+            vang = Angle(90, -90, -90),
+        },
+    },
+    {
+        PrintName = "Finish",
+        Slot = {"ur_aw_finish"},
+        FreeSlot = true,
+        DefaultAttName = "Olive Drab"
+    }
 }
 
--- function SWEP:Hook_TranslateAnimation(anim)
-    -- if anim == "fire_iron" then
-    --     if self:GetBuff_Override("NoStock") then return "fire" end
-    -- elseif anim == "fire_iron_empty" then
-    --     if self:GetBuff_Override("NoStock") then return "fire_empty" end
-    -- end
--- end
+function SWEP:Hook_TranslateAnimation(anim)
 
--- SWEP.Hook_NameChange = function(wep,name)
-    -- if GetConVar("arccw_truenames"):GetBool() then
-    --     local foldStocks = {["underfolder"] = true,["aks"] = true}
-    --     local akCals = {["762"] = true,["545"] = true}
-    --     local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
+end
 
-    --     local start = "AK"
-    --     local mid = ""
-    --     local post = "M"
+SWEP.Hook_NameChange = function(wep,name)
 
-    --     local atts = wep.Attachments
-    --     local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
-    --     local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
-    --     local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
-
-    --     wep.Trivia_Desc = descStart .. desc_762
-    --     wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-
-    --     if atts[14].Installed == "uc_fg_civvy" then
-    --         start = "Vepr"
-    --         if cal == "12g" then
-    --             post = "-12"
-    --             wep.Trivia_Desc = desc_12g
-    --         elseif cal == "545_ak12" or cal == "545" then
-    --             post = " 5.45"
-    --             wep.Trivia_Desc = descStart .. desc_545
-    --         elseif cal == "762" then
-    --             post = " 7.62"
-    --         elseif cal == "9mm" then
-    --             start = "Saiga"
-    --             post = "-9"
-    --             wep.Trivia_Desc = desc_9mm
-    --             wep.Trivia_Mechanism = "Blowback"
-    --         else
-    --             post = " ." .. cal
-    --         end
-    --         return start .. post
-    --     end
-
-    --     if cal == "9mm" then
-    --         start = "PP"
-    --         post = "-19 Vityaz"
-    --         wep.Trivia_Desc = desc_9mm
-    --         wep.Trivia_Mechanism = "Blowback"
-    --     elseif cal == "12g" then
-    --         start = "Saiga"
-    --         if shortBarrs[barr] then
-    --             post = "-12K"
-    --         else
-    --             post = "-12"
-    --         end
-    --         wep.Trivia_Desc = desc_12g
-    --     elseif cal == "366" then
-    --         start = "Vepr "
-    --         post = ".366"
-    --     elseif cal == "308" then
-    --         post = "-308"
-    --     elseif cal == "545_ak12" then
-    --         if string.EndsWith(barr,"105") or shortBarrs[barr] then
-    --             post = "-12K"
-    --         else
-    --             post = "-12"
-    --         end
-    --         wep.Trivia_Desc = descStart .. desc_545
-    --     elseif barr == "rpk" or barr == "rpk74m" then
-    --         start = "RPK"
-    --     elseif cal == "762" then
-    --         if barr == "t56" then
-    --             start = "Type "
-    --             post = "56"
-    --         elseif barr == "74m" then
-    --             post = "-103"
-    --         end
-    --     end
-
-    --     if cal == "545" then
-    --         if barr == "74m" or barr == "rpk74m" then
-    --             post = "-74M"
-    --         else
-    --             post = "-74"
-    --         end
-    --         wep.Trivia_Desc = descStart .. desc_545
-    --     end
-
-    --     if foldStocks[stock] and akCals[cal] and !string.StartWith(barr,"105") then
-    --         if cal == "762" then
-    --             if barr == "t56" then
-    --                 post = "56-1"
-    --             else
-    --                 post = "MS"
-    --             end
-    --         else
-    --             mid = "S"
-    --         end
-    --     end
-
-    --     if akCals[cal] then
-    --         if shortBarrs[barr] then
-    --             post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
-    --         wep.Trivia_Desc = descStart .. desc_74u
-    --         elseif string.EndsWith(barr,"105") then
-    --             if cal == "545" then
-    --                 post = "-105"
-    --             elseif cal == "762" then
-    --                 post = "-104"
-    --             elseif cal == "556" then
-    --                 post = "-102"
-    --             end
-    --         end
-    --     end
-
-    --     return start .. mid .. post
-    -- else
-    --     return wep.FakeName
-    -- end
--- end
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -544,7 +354,7 @@ SWEP.Animations = {
     -- },
     ["fire"] = {
         Source = {"fire"},
-        Time = 1,
+        Time = 22/30,
         -- ShellEjectAt = 0,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Temporary
