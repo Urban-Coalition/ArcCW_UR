@@ -72,7 +72,7 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 SWEP.Malfunction = true
 SWEP.MalfunctionJam = true
-SWEP.MalfunctionMean = 55
+SWEP.MalfunctionMean = 7
 
 -- Mag size --
 
@@ -345,7 +345,7 @@ SWEP.Animations = {
         Time = 120 / 60,
     },
     ["idle_jammed"] = {  -- pistol-like malfucntions not implemented yet in arccw
-        Source = "idle_empty",
+        Source = "idle_jammed",
         Time = 120 / 60,
     },
     ["idle"] = {
@@ -387,7 +387,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.05,
         SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
-    ["fire_jammed"] = { -- pistol-like malfucntions not implemented yet in arccw
+    ["fire_jammed"] = {
         Source = "fire_jammed",
         SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
     },
@@ -572,7 +572,7 @@ SWEP.Animations = {
     },
 
     ["enter_inspect_jammed"] = {
-        Source = "enter_inspect_empty",
+        Source = "enter_inspect_jammed",
         time = 35 / 60,
         LHIK = true,
         LHIKIn = 0.1,
@@ -581,14 +581,14 @@ SWEP.Animations = {
         },
     },
     ["idle_inspect_jammed"] = {
-        Source = "idle_inspect_empty",
+        Source = "idle_inspect_jammed",
         time = 72 / 60,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
     },
     ["exit_inspect_jammed"] = {
-        Source = "exit_inspect_empty",
+        Source = "exit_inspect_jammed",
         time = 66 / 60,
         LHIK = true,
         LHIKIn = 0,
