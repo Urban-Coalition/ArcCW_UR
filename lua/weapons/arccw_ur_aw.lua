@@ -180,6 +180,13 @@ SWEP.AttachmentElements = {
     ["sights_flipped"] = {
         VMBodygroups = {{ind = 8, bg = 1}}
     },
+
+    ["skin_black"] = {
+        VMSkin = 1
+    },
+    ["skin_tan"] = {
+        VMSkin = 2
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
