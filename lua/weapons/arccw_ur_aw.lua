@@ -173,7 +173,7 @@ SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 SWEP.CustomizePos = Vector(8, 0, 1)
 SWEP.CustomizeAng = Angle(5, 30, 30)
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 32
 
 SWEP.AttachmentElements = {
     -- PUT BARRELS UP HERE
@@ -181,6 +181,12 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 2}}
     },
 
+    ["rail_bottom"] = {
+        VMBodygroups = {{ind = 6, bg = 1}}
+    },
+    ["rail_top"] = {
+        VMBodygroups = {{ind = 7, bg = 1}}
+    },
     ["sights_flipped"] = {
         VMBodygroups = {{ind = 8, bg = 1}}
     },
@@ -233,10 +239,10 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
         Bone = "tag_weapon",
-        VMScale = Vector(1.2, 1.2, 1.2),
+        VMScale = Vector(1.5, 1.5, 1.5),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0, 24.6, 2.7),
+            vpos = Vector(0, 37, 1.75),
             vang = Angle(0, 270, 0),
         },
     },
@@ -262,27 +268,22 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0,12, 1.9),
+            vpos = Vector(0,16, -.6),
             vang = Angle(90, -90, -90),
         },
-        VMScale = Vector(0.9, 0.9, 0.9),
-        SlideAmount = {
-            vmin = Vector(0,10.5,1.9),
-            vmax = Vector(0,13.5,1.9)
-        },
-        InstalledEles = {"rail_fg"},
-        ExcludeFlags = {"ak_noubs"},
+        VMScale = Vector(1, 1, 1),
+        InstalledEles = {"rail_bottom"},
     },
     {
         PrintName = "Tactical",
         Slot = {"tac"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-1, 10.5, 2.8),
-            vang = Angle(-90, 270, 0),
+            vpos = Vector(1.1, 17, 1.1),
+            vang = Angle(90, 270, 0),
         },
         GivesFlags = {"tac"},
-        --InstalledEles = {"ud_m16_clamp_fullsize"}
+        InstalledEles = {"rail_top"}
     },
     {
         PrintName = "Stock",
