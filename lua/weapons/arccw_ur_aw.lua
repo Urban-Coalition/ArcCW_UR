@@ -51,8 +51,8 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 2.5
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 1.75
+SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.6
 SWEP.RecoilPunch = 1
@@ -177,6 +177,10 @@ SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
     -- PUT BARRELS UP HERE
+    ["mag_338"] = {
+        VMBodygroups = {{ind = 3, bg = 2}}
+    },
+
     ["sights_flipped"] = {
         VMBodygroups = {{ind = 8, bg = 1}}
     },
@@ -188,10 +192,6 @@ SWEP.AttachmentElements = {
         VMSkin = 2
     },
 }
-
-SWEP.Hook_ModifyBodygroups = function(wep, data)
-
-end
 
 SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
@@ -241,8 +241,8 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Receiver",
-        DefaultAttName = "7.62x51mm Reciever",
+        PrintName = "Caliber",
+        DefaultAttName = "7.62x51mm NATO",
         DefaultAttIcon = Material("entities/att/ur_ak/recievers/762.png", "mips smooth"),
         Slot = {"ur_aw_cal"},
         Bone = "tag_weapon",
@@ -334,7 +334,31 @@ function SWEP:Hook_TranslateAnimation(anim)
 end
 
 SWEP.Hook_NameChange = function(wep,name)
+    local atts = wep.Attachments
+    local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
 
+    if cal == "338" then
+        return "AWM"
+    end
+end
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local vm = data.vm
+    local atts = wep.Attachments
+    local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
+    local pistolGrip = false
+
+    if cal == "338" then
+        if pistolGrip then
+            vm:SetBodygroup(1,3)
+        else
+            vm:SetBodygroup(1,1)
+        end
+    elseif pistolGrip then
+        vm:SetBodygroup(1,2)
+    else
+        vm:SetBodygroup(1,0)
+    end
 end
 
 SWEP.Animations = {
