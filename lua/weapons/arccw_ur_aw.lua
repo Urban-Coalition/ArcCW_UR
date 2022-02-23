@@ -10,7 +10,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme conditions. Few targets can stand up to its power, but its long bolt pull and reloading times can be an encumbrance outside its preferred environment.\n\nOne shot. One kill. You know the routine."
+SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme conditions. Few targets can stand up to its power, but its long bolt pull and reload time can be an encumbrance outside its preferred environment.\n\nOne shot. One kill. You know the routine."
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Bolt Action"
@@ -30,10 +30,10 @@ SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 42 -- 3 shot close range kill
-SWEP.DamageMin = 75 -- 2 shot long range kill
+SWEP.Damage = 44 -- 3 shot close range kill
+SWEP.DamageMin = 85 -- 2 shot long range kill
 SWEP.RangeMin = 5
-SWEP.Range = 50 -- 2 shot at ~27m
+SWEP.Range = 50 -- 2 shot to stomach at 47m
 SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -310,7 +310,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0.7, 3.9, .25),
+            vpos = Vector(.85, 8.6, -.1),
             vang = Angle(90, -90, -90),
         },
     },
