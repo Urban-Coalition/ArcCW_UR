@@ -206,8 +206,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 6, 2.6),
             vang = Angle(0, -90, 0),
         },
-        CorrectivePos = Vector(0, 0, -.085),
-        CorrectiveAng = Angle(-1.9, 180.15, 0),
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 180, 0),
         VMScale = Vector(1, 1, 1),
         SlideAmount = {
             vmin = Vector(0, 5.5, 2.6),
@@ -306,7 +306,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm", "ur_ak_charm"},
+        Slot = {"charm", "fml_charm"},
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
@@ -316,7 +316,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Finish",
-        Slot = {"ur_aw_finish"},
+        Slot = {"ur_aw_skin"},
         FreeSlot = true,
         DefaultAttName = "Olive Drab"
     }
