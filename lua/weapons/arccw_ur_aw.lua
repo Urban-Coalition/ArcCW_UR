@@ -61,7 +61,7 @@ SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 1
 SWEP.RecoilPunchBack = 2
 
-SWEP.Sway = 0.6
+SWEP.Sway = 0.25
 
 -- Firerate / Firemodes --
 
@@ -93,8 +93,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = .5
-SWEP.HipDispersion = 950
-SWEP.MoveDispersion = 250
+SWEP.HipDispersion = 1250
+SWEP.MoveDispersion = 500
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "ar2"
