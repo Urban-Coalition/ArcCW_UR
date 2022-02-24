@@ -1,4 +1,4 @@
-att.PrintName = "AW 20\" Shortened Barrel"
+att.PrintName = "AT 20\" Shortened Barrel"
 att.AbbrevName = "20\" Shortened Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
@@ -22,7 +22,7 @@ att.Mult_HipDispersion = .5
 att.Add_BarrelLength = -4
 
 att.Mult_Range = .5
-att.Mult_AccuracyMOA = 3
+att.Mult_AccuracyMOA = 2
 att.Mult_Recoil = 1.25
 
 att.AutoStats = true
