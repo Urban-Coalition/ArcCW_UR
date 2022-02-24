@@ -19,6 +19,7 @@ att.Slot = "ur_aw_barrel"
 att.Mult_SightTime = .75
 att.Mult_Sway = .5
 att.Mult_HipDispersion = .5
+att.Mult_SpeedMult = 1.05
 att.Add_BarrelLength = -4
 
 att.Mult_Range = .5
