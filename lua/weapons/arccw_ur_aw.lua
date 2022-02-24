@@ -372,18 +372,23 @@ SWEP.Hook_NameChange = function(wep,name)
     local atts = wep.Attachments
     local barr = string.Replace(atts[2].Installed or "default", "ur_aw_barrel_", "")
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
+    local stock = string.Replace(atts[8].Installed or "default", "ur_aw_stock_", "")
 
     if GetConVar("arccw_truenames"):GetBool() then
         if cal == "338" then
             return "AWM"
         elseif barr == "sd" then
             return "AWS"
+        elseif stock == "at" then
+            return "AT"
         end
     else
         if cal == "338" then
             return "Apex Magnum"
         elseif barr == "sd" then
             return "Apex Spectre"
+        elseif stock == "at" then
+            return "Apex Tactical"
         end
     end
 end
