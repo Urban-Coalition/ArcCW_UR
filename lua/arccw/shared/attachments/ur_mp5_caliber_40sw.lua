@@ -1,8 +1,8 @@
-att.PrintName = "MP5 .40 S&W Conversion"
-att.AbbrevName = ".40 S&W"
+att.PrintName = "MP5/40 .40 Smith & Wesson Conversion"
+att.AbbrevName = ".40 S&W Receiver"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7 .40 S&W Conversion"
+    att.PrintName = "K7/40 .40 S&W Conversion"
 end
 
 att.SortOrder = 100
@@ -18,7 +18,7 @@ att.Slot = "ur_mp5_caliber"
 
 att.AutoStats = true
 
-att.Override_Trivia_Calibre = ".40 S&W"
+att.Override_Trivia_Calibre = ".40 Smith & Wesson"
 
 att.Mult_DamageMin = 1.35
 att.Mult_RangeMin = 0.75
@@ -39,3 +39,6 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
         return "weapons/arccw_ud/glock/fire_dist_40.ogg" end
 end
+
+att.GivesFlags = {"ur_mp5_cal_40sw"}
+att.ActivateElements = {"ur_mp5_mag_waffle"}

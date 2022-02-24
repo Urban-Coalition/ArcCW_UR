@@ -30,3 +30,5 @@ att.ActivateElements = {"ur_mp5_mag_40"}
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_40"
 end
+
+att.ExcludeFlags = {"ur_mp5_cal_10mm","ur_mp5_cal_40sw"}

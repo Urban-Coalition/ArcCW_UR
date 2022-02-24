@@ -1,8 +1,8 @@
-att.PrintName = "MP5 10mm Auto Conversion"
-att.AbbrevName = "10mm Auto"
+att.PrintName = "MP5/10 10mm Auto Conversion"
+att.AbbrevName = "10mm Auto Receiver"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7 10mm Auto Conversion"
+    att.PrintName = "K7/10 10mm Auto Conversion"
 end
 
 att.SortOrder = 80
@@ -44,20 +44,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
         return "weapons/arccw_ud/glock/fire_dist_10.ogg" end
 end
 
---[[
-att.Override_ClipSize = 15
-att.Override_ClipSize_Priority = -1
-local slotinfo = {
-    [7] = {"15-Round Mag", "15-Round Mag", nil},
-}
-att.Hook_GetDefaultAttName = function(wep, slot)
-    if slotinfo[slot] then
-        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
-    end
-end
-att.Hook_GetDefaultAttIcon = function(wep, slot)
-    if slotinfo[slot] then
-        return slotinfo[slot][3]
-    end
-end
-]]
+att.GivesFlags = {"ur_mp5_cal_10mm"}
+att.ActivateElements = {"ur_mp5_mag_waffle"}

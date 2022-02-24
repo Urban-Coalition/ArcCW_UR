@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 20
 att.Icon = Material("entities/att/acwatt_ur_mp5_mag_15.png", "smooth mips")
-att.Description = "Low-capacity magazine. The lighter load makes the weapon more ergonomic."
+att.Description = "Low-capacity magazine. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -29,3 +29,5 @@ att.ActivateElements = {"ur_mp5_mag_15"}
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_15"
 end
+
+att.ExcludeFlags = {"ur_mp5_cal_10mm","ur_mp5_cal_40sw"}

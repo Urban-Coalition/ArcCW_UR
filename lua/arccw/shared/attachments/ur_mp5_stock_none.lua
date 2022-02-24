@@ -18,7 +18,7 @@ att.Slot = "ur_mp5_stock"
 att.AutoStats = true
 att.SortOrder = -1
 
-att.Mult_Recoil = 3
+att.Mult_Recoil = 2
 att.Mult_RecoilSide = 1.5
 att.Mult_VisualRecoilMult = 2
 att.Mult_Sway = 2

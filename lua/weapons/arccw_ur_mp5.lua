@@ -26,7 +26,7 @@ SWEP.PrintName = "K7"
 
 -- True name --
 
-SWEP.TrueName = "MP5A2"
+SWEP.TrueName = "MP5A4"
 
 -- Trivia --
 
@@ -202,19 +202,22 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 -- Bodygroups --
 
 SWEP.BulletBones = {
-    [1] = "uzi_b1", [2] = "uzi_b2", [3] = "uzi_b3", [4] = "uzi_b4"
+    -- [1] = "uzi_b1", [2] = "uzi_b2", [3] = "uzi_b3", [4] = "uzi_b4"
 }
 
 SWEP.AttachmentElements = {
 
-    ["ur_mp5_mag_20"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+    ["ur_mp5_mag_15"] = {
+        VMBodygroups = {{ind = 3, bg = 3}},
     },
     ["ur_mp5_mag_40"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 1}},
     },
-    ["ur_mp5_mag_100"] = {
+    ["ur_mp5_mag_50"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
+    },
+    ["ur_mp5_mag_waffle"] = {
+        VMBodygroups = {{ind = 3, bg = 2}},
     },
 
     ["ur_mp5_rail_optic"] = {
@@ -256,17 +259,7 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
-    local vm = data.vm
-    if !IsValid(vm) then return end
-    local barrel = wep.Attachments[2].Installed
-    if barrel == "ur_mp5_body_micro" then
-        if wep.Attachments[1].Installed then
-            vm:SetBodygroup(4, 3)
-        end
-        if wep.Attachments[5].Installed then
-            vm:SetBodygroup(6, 3)
-        end
-    end
+    
 end
 
 -- Animations --
@@ -458,14 +451,14 @@ SWEP.Animations = {
         LHIKOut = 0.55,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "magout.ogg",        t = 0.4, c = ci},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
-            {s = path .. "magin.ogg",         t = 1.0, c = ci},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
-            {s = path .. "chback.ogg",         t = 1.947, c = ci},
-            {s = path .. "chforward.ogg",         t = 2.15, c = ci},
-            {s = common .. "shoulder.ogg",  t = 2.45},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
 
@@ -503,13 +496,13 @@ SWEP.Animations = {
         LHIKOut = 0.55,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "magout.ogg",        t = 0.4, c = ci},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
-            {s = path .. "magin.ogg",         t = 1.1, c = ci},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
-            {s = path .. "chback.ogg",         t = 1.95, c = ci},
-            {s = path .. "chforward.ogg",         t = 2.2, c = ci},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
@@ -580,7 +573,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "10\" Standard Barrel",
+        DefaultAttName = "9\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
         Slot = "ur_mp5_frame",
         Bone = "body",
@@ -591,7 +584,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Receiver",
-        DefaultAttName = "9x19mm Parabellum",
+        DefaultAttName = "Factory Receiver",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips"),
         Slot = "ur_mp5_caliber",
     },
@@ -601,7 +594,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "body",
         Offset = {
-            vpos = Vector(-0.2, 0.5, 14.8),
+            vpos = Vector(0, .75, 14.4),
             vang = Angle(90, 0, -90),
         },
     },
@@ -621,9 +614,10 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0.3, 0.9, 12.5),
-            vang = Angle(90, 0, -45),
+            vpos = Vector(-.65, 0.81, 12),
+            vang = Angle(90, 0, 180),
         },
+        VMScale = Vector(.8,.8,.8),
         InstalledEles = {"ur_mp5_clamp"}
     },
     {
