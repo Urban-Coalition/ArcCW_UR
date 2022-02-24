@@ -92,7 +92,6 @@ $sequence "idle" "anims/idle.smd" {
 
 $sequence "draw" "anims/draw.smd" {
 	fps 48
-	loop
 	snap
 	"ACT_VM_DRAW" 1
 }
