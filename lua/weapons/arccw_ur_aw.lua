@@ -437,6 +437,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 22/30,
         -- ShellEjectAt = 0,
+        MinProgress = 0.2,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Temporary
         },
