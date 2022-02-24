@@ -5,12 +5,12 @@
 	"$bumpmap" "models/weapons/arccw/ur_aw/ur_aw_stock_n"
 	"$phongexponenttexture" "models/weapons/arccw/ur_aw/ur_aw_stock_m"
 
-	"$phongwarptexture"			"models/weapons/arc9/ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
-	"$nocull"					"1"
-	"$halflambert"              "1"
+	//"$phongwarptexture"			"models/weapons/arc9/ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
+	//"$nocull"					"1"
+	//"$halflambert"              "1"
 	
 // map interp
-    "$color2"					"[0.9 0.9 0.9]" // vector -- rgb tinting of the basetexture
+    "$color2"					"[0.31 0.32 0.2]" // vector -- rgb tinting of the basetexture
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
@@ -27,6 +27,6 @@
 	"$rimlightexponent"			"20" // float -- rimlight exponent
 
 // envmap (convar: mat_specular "bool")
-	"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
-	"$envmaptint"				"[ 0.01 0.01 0.01 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
+	//"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
+	//"$envmaptint"				"[ 0.01 0.01 0.01 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
 }

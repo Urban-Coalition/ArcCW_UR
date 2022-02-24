@@ -225,6 +225,9 @@ SWEP.AttachmentElements = {
     ["skin_tan"] = {
         VMSkin = 2
     },
+    ["skin_cust"] = {
+        VMSkin = 3
+    },
 
     ["stock_at"] = {
         VMBodygroups = {{ind = 4, bg = 1}}

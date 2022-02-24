@@ -60,8 +60,9 @@ $cdmaterials "models\weapons\arccw\uc_shells"
 
 $texturegroup "skinfamilies" {
 	{ "ur_aw_stock" }  			// green skin  id 0 
-	{ "ur_aw_stock_black" }  	// black skin  id 0
-	{ "ur_aw_stock_tan" }  		// tan skin    id 0
+	{ "ur_aw_stock_black" }  	// black skin  id 1
+	{ "ur_aw_stock_tan" }  		// tan skin    id 2
+	{ "ur_aw_stock_custom" }  		// custom skin    id 3
 }
 
 

@@ -10,7 +10,7 @@
 	"$halflambert"              "1"
 	
 // map interp
-    "$color2" "[ .4 .4 .4 ]" // vector -- rgb tinting of the basetexture
+    "$color2" "[ .52 .52 .53 ]" // vector -- rgb tinting of the basetexture
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
@@ -27,6 +27,6 @@
 	"$rimlightexponent"			"20" // float -- rimlight exponent
 
 // envmap (convar: mat_specular "bool")
-	"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
-	"$envmaptint"				"[ 0.005 0.005 0.005 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
+	//"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
+	//"$envmaptint"				"[ 0.005 0.005 0.005 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
 }
