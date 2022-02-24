@@ -15,6 +15,6 @@ att.SortOrder = 998
 
 att.AttachSound = "arccw_uc/common/gunsmith/suppressor_thread.ogg"
 att.Model = "models/weapons/arccw/ur_aw_muzzlesight.mdl"
-att.ModelScale = Vector(.7,.7,.7)
+att.ModelScale = Vector(2/3,2/3,2/3)
 
 att.GivesFlags = {"sights_compact"}
