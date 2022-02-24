@@ -1,7 +1,7 @@
 att.PrintName = "AWM .300 Winchester Magnum Receiver"
 att.AbbrevName = ".300 Win Mag"
 att.Icon = nil 
-att.Description = "Versatile magnum cartridge that delivers a flat trajectory and high accuracy for its energy. The lengthened bolt required to accommodate the cartridge is harder to cycle."
+att.Description = "Versatile magnum cartridge that delivers a flat trajectory and high accuracy for its increased energy."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
     --"Increased muzzle velocity"

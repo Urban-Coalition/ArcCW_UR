@@ -447,7 +447,6 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 22/30,
-        MinProgress = .2,
         -- ShellEjectAt = 0,
         MinProgress = 0.2,
         SoundTable = {
