@@ -21,5 +21,6 @@ att.Mult_ReloadTime = 1.15
 
 att.Override_Trivia_Calibre = ".338 Lapua Magnum"
 att.Override_ShellModel = "models/weapons/arccw/ud_shells/338.mdl"
+att.Override_Ammo = "SniperPenetratedRound"
 att.GivesFlags = {"mag_338"}
 att.ActivateElements = {"mag_338"}
