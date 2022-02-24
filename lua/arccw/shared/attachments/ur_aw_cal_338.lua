@@ -1,7 +1,7 @@
 att.PrintName = "AWM .338 Lapua Magnum Receiver"
 att.AbbrevName = ".338 Lapua Magnum"
 att.Icon = nil 
-att.Description = "Powerful sniper cartridge that exerts substantially higher muzzle energy, practically guaranteed to be fatal on a successful hit. The recoil is tremendous, and the lengthened bolt required to accommodate the cartridge is harder to cycle."
+att.Description = "Powerful sniper cartridge that exerts substantially more muzzle energy, practically guaranteed to be fatal on a successful hit. The recoil is tremendous, and the lengthened bolt required to accommodate the cartridge is harder to cycle."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
     --"Increased muzzle velocity"
@@ -14,6 +14,7 @@ att.Mult_DamageMin = 1.3 -- becomes 1 shot at ~40m
 att.Mult_Penetration = 2
 -- att.Override_MuzzleVelocity = 936
 -- att.Override_PhysBulletMuzzleVelocity = 936
+att.Mult_Range = 1.05
 
 att.Mult_Recoil = 1.5
 att.Mult_CycleTime = 1.25

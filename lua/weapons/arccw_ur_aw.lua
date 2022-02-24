@@ -227,7 +227,18 @@ SWEP.AttachmentElements = {
 
     ["stock_at"] = {
         VMBodygroups = {{ind = 4, bg = 1}}
-    }
+    },
+    ["stock_ru"] = {
+        VMBodygroups = {{ind = 4, bg = 2}}
+    },
+    ["stock_ru_rubber"] = {
+        VMBodygroups = {{ind = 4, bg = 3}}
+    },
+    ["stock_none"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 5},
+        }
+    },
 }
 
 SWEP.ExtraSightDist = 10
@@ -375,7 +386,7 @@ SWEP.Hook_NameChange = function(wep,name)
     local stock = string.Replace(atts[8].Installed or "default", "ur_aw_stock_", "")
 
     if GetConVar("arccw_truenames"):GetBool() then
-        if cal == "338" then
+        if cal ~= "default" then
             return "AWM"
         elseif barr == "sd" then
             return "AWS"
@@ -399,7 +410,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
     local pistolGrip = table.HasValue(wep:GetWeaponFlags(),"pistolgrip")
 
-    if cal == "338" then
+    if cal ~= "default" then
         if pistolGrip then
             vm:SetBodygroup(1,3)
         else
@@ -436,6 +447,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 22/30,
+        MinProgress = .2,
         -- ShellEjectAt = 0,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Temporary
