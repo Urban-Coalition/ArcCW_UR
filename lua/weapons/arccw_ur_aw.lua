@@ -209,9 +209,10 @@ SWEP.AttachmentElements = {
     },
     ["sights_compact"] = {
         VMBodygroups = {{ind = 8, bg = 2}},
-        Override_IronsightStruct = {
-            Pos = Vector(-3.372, 0, 0.639),
+        Override_IronSightStruct = {
+            Pos = Vector(-3.395, 0, 1.36),
             Ang = Angle(0, 0, 2),
+            Magnification = 1,
         }
     },
     ["sights_flipped"] = {
@@ -268,7 +269,6 @@ SWEP.Attachments = {
             vmin = Vector(0, 5.5, 2.6),
             vmax = Vector(0, 7, 2.6),
         },
-        InstalledEles = {"sights_flipped"}
     },
     {
         PrintName = "Barrel",
@@ -408,7 +408,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local atts = wep.Attachments
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
-    local pistolGrip = table.HasValue(wep:GetWeaponFlags(),"pistolgrip")
+    local flags = wep:GetWeaponFlags()
+
+    local pistolGrip = table.HasValue(flags,"pistolgrip")
 
     if cal ~= "default" then
         if pistolGrip then
@@ -420,6 +422,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(1,2)
     else
         vm:SetBodygroup(1,0)
+    end
+
+    if atts[1].Installed then
+        if table.HasValue(flags,"sights_compact") then
+            vm:SetBodygroup(8,3)
+        else
+            vm:SetBodygroup(8,1)
+        end
     end
 end
 
