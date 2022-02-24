@@ -257,7 +257,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"muzzle","ur_aw_muzzle"},
         Bone = "tag_weapon",
         VMScale = Vector(1.5, 1.5, 1.5),
         WMScale = VMScale,
@@ -360,10 +360,18 @@ SWEP.Hook_NameChange = function(wep,name)
     local barr = string.Replace(atts[2].Installed or "default", "ur_aw_barrel_", "")
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
 
-    if cal == "338" then
-        return "AWM"
-    elseif barr == "sd" then
-        return "AWS"
+    if GetConVar("arccw_truenames"):GetBool() then
+        if cal == "338" then
+            return "AWM"
+        elseif barr == "sd" then
+            return "AWS"
+        end
+    else
+        if cal == "338" then
+            return "Apex Magnum"
+        elseif barr == "sd" then
+            return "Apex Spectre"
+        end
     end
 end
 
