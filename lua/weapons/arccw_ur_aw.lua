@@ -10,7 +10,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme environments. Few targets can stand up to its power, but its long bolt pull and reload time can be an encumbrance outside its preferred environment.\n\nOne shot. One kill. You know the routine."
+SWEP.Trivia_Desc = "The Arctic Warfare, a purpose-designed sniper rifle for extreme-range combat under extreme climates. Few targets can stand up to its power, but its long bolt pull and reload time are an encumbrance outside of its preferred environment.\n\nOne shot. One kill. You know the routine."
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Bolt Action"
@@ -33,7 +33,7 @@ SWEP.DefaultBodygroups = "000000000000"
 SWEP.Damage = 44 -- 3 shot close range kill
 SWEP.DamageMin = 85 -- 2 shot long range kill
 SWEP.RangeMin = 5
-SWEP.Range = 50 -- 2 shot to stomach at 47m
+SWEP.Range = 50 -- 2 shot at ~11m
 SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -130,7 +130,7 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.MuzzleEffect = "muzzleflash_ak47"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 1.3
+SWEP.ShellScale = 1.145
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
 SWEP.ManualAction = true
@@ -207,6 +207,13 @@ SWEP.AttachmentElements = {
     ["rail_top"] = {
         VMBodygroups = {{ind = 7, bg = 1}}
     },
+    ["sights_compact"] = {
+        VMBodygroups = {{ind = 8, bg = 2}},
+        Override_IronsightStruct = {
+            Pos = Vector(-3.372, 0, 0.639),
+            Ang = Angle(0, 0, 2),
+        }
+    },
     ["sights_flipped"] = {
         VMBodygroups = {{ind = 8, bg = 1}}
     },
@@ -217,6 +224,10 @@ SWEP.AttachmentElements = {
     ["skin_tan"] = {
         VMSkin = 2
     },
+
+    ["stock_at"] = {
+        VMBodygroups = {{ind = 4, bg = 1}}
+    }
 }
 
 SWEP.ExtraSightDist = 10
@@ -259,10 +270,11 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_aw_muzzle"},
         Bone = "tag_weapon",
+        Installed = "ur_aw_muzzle_brake",
         VMScale = Vector(1.5, 1.5, 1.5),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0, 35.5, 1.75),
+            vpos = Vector(0, 35.2, 1.675),
             vang = Angle(0, 270, 0),
         },
         ExcludeFlags = {"barrel_sd"}
@@ -351,6 +363,7 @@ SWEP.Attachments = {
     }
 }
 
+
 function SWEP:Hook_TranslateAnimation(anim)
 
 end
@@ -379,7 +392,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local atts = wep.Attachments
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
-    local pistolGrip = false
+    local pistolGrip = table.HasValue(wep:GetWeaponFlags(),"pistolgrip")
 
     if cal == "338" then
         if pistolGrip then

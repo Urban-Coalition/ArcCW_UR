@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 --att.Icon = Material("entities/att/acwatt_ud_mini14_barrel_long.png", "smooth mips")
-att.SortOrder = 16
+att.SortOrder = 28
 att.Description = "Integrally suppressed barrel for the Arctic Warfare, designed for use with subsonic ammunition. Very effective for noise reduction, but reduces effective range.\nIncompatible with magnum ammunition."
 att.Desc_Pros = {
 }
