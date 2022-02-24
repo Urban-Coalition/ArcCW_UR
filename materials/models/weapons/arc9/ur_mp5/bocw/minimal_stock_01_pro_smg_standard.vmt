@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models/weapons/arc9/ur_mp5/bocw/minimal_stock_01_pro_smg_standard"
+	"$bumpmap"					"models/weapons/arc9/ur_mp5/bocw/minimal_stock_01_pro_smg_standard_n"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongalbedotint"	"1"
+	"$phongboost"	"0.25"
+	"$phongfresnelranges"	"[1 1 1]"
+        "$phongdisablehalflambert"  "1"
+
+        "$halflambert"                 "0"
+        "$nodecal"                     "0"
+        "$ambientocclusion"         "1"
+}

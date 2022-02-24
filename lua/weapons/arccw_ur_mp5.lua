@@ -26,14 +26,14 @@ SWEP.PrintName = "K7"
 
 -- True name --
 
-SWEP.TrueName = "MP5A3"
+SWEP.TrueName = "MP5A2"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = [[Versatile submachine gun known for its use by high profile police units around the world, most famously by the British SAS during the Iranian embassy siege. While not the most cutting-edge weapon, it remains a classic despite multiple newer alternatives from both HK and its competitors.
 
-If accurate, sophisticated close-combat performance is what you’re looking for, no weapon has a better track record.]]
+If accurate, sophisticated close-combat performance is what you're looking for, no weapon has a better track record.]]
 SWEP.Trivia_Manufacturer = "Crowdley & Nelson"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
@@ -53,7 +53,7 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
-SWEP.ViewModel = "models/weapons/arccw/fesiugmw2/c_slog_mp5n.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ur_mp5.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_mp5.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -146,7 +146,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.925
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.375
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --
@@ -164,8 +164,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "smg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.91, -3.79, 0.95),
-     Ang = Angle(-0.278, 0.008, 0),
+     Pos = Vector(-3.1, 1.3, 1.45),
+     Ang = Angle(-.1, 0, .5),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 55,
@@ -415,55 +415,55 @@ SWEP.Animations = {
         LHIKOut = 0.55,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "magout.ogg",        t = 0.4, c = ci},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
-            {s = path .. "magin.ogg",         t = 1.1, c = ci},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
-            {s = path .. "chback.ogg",         t = 1.947, c = ci},
-            {s = path .. "chforward.ogg",         t = 2.15, c = ci},
+            {s = path .. "chamber.ogg",         t = 2.15, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
 
 
-    ["reload"] = {
-        Source = "reload",
-        Time = 67 / 30,
-        MinProgress = 1.2,
-        LastClip1OutTime = 67 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        SoundTable = {
-            {s = "arccw_uc/common/cloth_1.ogg", 	t = 0/30},
-            {s = "weapons/arccw_ur/mp5/magout.ogg", 	t = 13/30},
-            {s = "arccw_uc/common/cloth_4.ogg", 	t = 20/30},	
-            {s = "weapons/arccw_ur/mp5/magin.ogg", 	t = 36/30},
-            {s = "arccw_uc/common/cloth_3.ogg", 	t = 40/30},	
-            {s = "arccw_uc/common/shoulder.ogg", 	t = 70/30},	
-        },
-        LHIK = true,
-        LHIKIn = 0.3,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        Time = 90 / 30,
-        MinProgress = 2.2,
-        LastClip1OutTime = 1.8,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        SoundTable = {
-            {s = "arccw_uc/common/cloth_1.ogg", 	t = 0/30},		
-            {s = "weapons/arccw_ur/mp5/chback.ogg", 	t = 6/30},
-            {s = "weapons/arccw_ur/mp5/chlock.ogg", 	t = 11/30},	
-            {s = "weapons/arccw_ur/mp5/magout.ogg", 	t = 26/30},
-            {s = "arccw_uc/common/cloth_2.ogg", 	t = 30/30},		
-            {s = "weapons/arccw_ur/mp5/magin.ogg", 	t = 52/30},
-            {s = "arccw_uc/common/cloth_4.ogg", 	t = 55/30},
-            {s = "arccw_uc/common/cloth_3.ogg", 	t = 75/30},
-            {s = "weapons/arccw_ur/mp5/chamber.ogg", 	t = 80/30},	
-            {s = "arccw_uc/common/shoulder.ogg", 	t = 95/30},						
-		},
-    },
+    -- ["reload"] = {
+    --     Source = "reload",
+    --     Time = 67 / 30,
+    --     MinProgress = 1.2,
+    --     LastClip1OutTime = 67 / 30,
+    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+    --     SoundTable = {
+    --         {s = "arccw_uc/common/cloth_1.ogg", 	t = 0/30},
+    --         {s = "weapons/arccw_ur/mp5/magout.ogg", 	t = 13/30},
+    --         {s = "arccw_uc/common/cloth_4.ogg", 	t = 20/30},	
+    --         {s = "weapons/arccw_ur/mp5/magin.ogg", 	t = 36/30},
+    --         {s = "arccw_uc/common/cloth_3.ogg", 	t = 40/30},	
+    --         {s = "arccw_uc/common/shoulder.ogg", 	t = 70/30},	
+    --     },
+    --     LHIK = true,
+    --     LHIKIn = 0.3,
+    --     LHIKOut = 0.5,
+    -- },
+    -- ["reload_empty"] = {
+    --     Source = "reload_empty",
+    --     Time = 90 / 30,
+    --     MinProgress = 2.2,
+    --     LastClip1OutTime = 1.8,
+    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+    --     SoundTable = {
+    --         {s = "arccw_uc/common/cloth_1.ogg", 	t = 0/30},		
+    --         {s = "weapons/arccw_ur/mp5/chback.ogg", 	t = 6/30},
+    --         {s = "weapons/arccw_ur/mp5/chlock.ogg", 	t = 11/30},	
+    --         {s = "weapons/arccw_ur/mp5/magout.ogg", 	t = 26/30},
+    --         {s = "arccw_uc/common/cloth_2.ogg", 	t = 30/30},		
+    --         {s = "weapons/arccw_ur/mp5/magin.ogg", 	t = 52/30},
+    --         {s = "arccw_uc/common/cloth_4.ogg", 	t = 55/30},
+    --         {s = "arccw_uc/common/cloth_3.ogg", 	t = 75/30},
+    --         {s = "weapons/arccw_ur/mp5/chamber.ogg", 	t = 80/30},	
+    --         {s = "arccw_uc/common/shoulder.ogg", 	t = 95/30},						
+	-- 	},
+    -- },
 
     -- 15 Round Reloads --
 

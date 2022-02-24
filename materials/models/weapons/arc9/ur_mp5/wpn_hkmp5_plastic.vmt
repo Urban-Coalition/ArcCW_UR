@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture"				"models/weapons/arc9/ur_mp5/wpn_hkmp5"
+	"$bumpmap"					"models/weapons/arc9/ur_mp5/wpn_hkmp5_bump"
+	"$phongexponenttexture"		"models/weapons/arc9/ur_mp5/wpn_hkmp5_rough"
+	
+	"$color2"   "[0.9 0.9 0.9]"
+
+	"$phongwarptexture"			"models/weapons/arc9/ud_stalol\phongwarp_metal" 
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongalbedotint"	"1"
+	"$phongboost"	"0.2"
+	"$phongfresnelranges"	"[1 1 1]"
+        "$phongdisablehalflambert"  "1"
+
+        "$halflambert"                 "0"
+        "$nodecal"                     "0"
+        "$ambientocclusion"         "1"
+}
