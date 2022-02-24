@@ -25,7 +25,7 @@ att.Mult_ReloadTime = 1.12
 att.Override_ClipSize = 40
 att.Mult_Sway = 1.15
 
-att.ActivateElements = {"ur_mp5_40_mag"}
+att.ActivateElements = {"ur_mp5_mag_40"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_40"

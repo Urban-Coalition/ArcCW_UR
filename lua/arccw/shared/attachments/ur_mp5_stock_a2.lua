@@ -1,12 +1,12 @@
-att.PrintName = "MP5A2 Full Stock"
-att.AbbrevName = "Full Stock"
+att.PrintName = "MP5A2 Wooden Stock"
+att.AbbrevName = "Wooden Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "K7 Wooden Stock"
 end
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_stock_solid.png", "smooth mips")
-att.Description = "A solid, non-foldable stock made of polymer. It's weight improves recoil control but harms handling."
+att.Description = "A solid, non-foldable stock made of wood. Its weight improves recoil control but harms handling."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}
@@ -26,3 +26,5 @@ att.Mult_ShootSpeedMult = 0.9
 
 att.Mult_DrawTime = 1.25
 att.Mult_HolsterTime = 1.25
+
+att.ActivateElements = {"ur_mp5_stock_wood"}

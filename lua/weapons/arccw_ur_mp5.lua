@@ -16,9 +16,9 @@ SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 -- SWEP.CamAttachment = 3 ---------------------------------------------------------------------------
-SWEP.TracerNum = 1
-SWEP.TracerCol = Color(25, 255, 25)
-SWEP.TracerWidth = 2
+-- SWEP.TracerNum = 1
+-- SWEP.TracerCol = Color(25, 255, 25)
+-- SWEP.TracerWidth = 2
 
 -- Fake name --
 
@@ -146,7 +146,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.925
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.375
+SWEP.SightTime = 0.4
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --
@@ -184,9 +184,10 @@ SWEP.BarrelOffsetHip = Vector(4, 0, -4)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-16, 3.5, -6),
+    pos        =    Vector(-7, 3.75, -6.9),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1
 }
 
 -- Firing sounds --
@@ -217,7 +218,7 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_mp5_rail_optic"] = {
-        VMBodygroups = {{ind = 4, bg = 2}},
+        VMBodygroups = {{ind = 4, bg = 1}},
     },
 
     ["ur_mp5_clamp"] = {
@@ -225,74 +226,32 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_mp5_rail_fg"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
+        VMBodygroups = {{ind = 6, bg = 1}},
     },
 
-    ["ur_mp5_stock_wood"] = {
-        VMBodygroups = {{ind = 3, bg = 2}},
+    ["ur_mp5_stock_a3"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+            {ind = 2, bg = 1},
+        },
     },
-    ["ur_mp5_stock_polymer"] = {
-        VMBodygroups = {{ind = 3, bg = 3}},
-    },
-    ["ur_mp5_stock_folded"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+    ["ur_mp5_stock_a3_folded"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+            {ind = 2, bg = 2},
+        },
     },
     ["ur_mp5_stock_remove"] = {
-        VMBodygroups = {{ind = 3, bg = 4}},
-    },
-
-    ["ur_mp5_body_carbine"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-        NameChange = "CarP-9",
-        TrueNameChange = "Uzi Carbine",
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(-0.2, 0.5, 20.8),
-            },
-        },
-    },
-    ["ur_mp5_body_mini"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
-        NameChange = "MeP-9",
-        TrueNameChange = "Mini Uzi",
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(-0.2, 0.5, 12.8),
-            },
-        },
     },
-    ["ur_mp5_body_micro"] = {
-        VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 4}},
-        NameChange = "MiP-9G",
-        TrueNameChange = "Micro Uzi",
-        Override_IronSightStruct = {
-            Pos = Vector(-2.869, 0, 2.3),
-            Ang = Angle(-0.95, 0.035, 0),
-            Magnification = 1,
-            CrosshairInSights = false
-        },
-        AttPosMods = {
-            [1] = {
-                vpos = Vector(-0.2, -1.2, -2.5),
-            },
-            [3] = {
-                vpos = Vector(-0.2, 0.3, 7.8),
-            },
-            [5] = {
-                vpos = Vector(0, 0, 7),
-                vang = Angle(90, 0, 0),
-            },
-        },
-    },
-    ["ur_mp5_body_civvy"] = {
+    ["ur_mp5_stock_wood"] = {
         VMBodygroups = {{ind = 1, bg = 4}},
-        NameChange = "CarP-9 Model GB",
-        TrueNameChange = "Uzi Action-B",
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(-0.2, 0.5, 23.8),
-            },
-        },
+    },
+    ["ur_mp5_stock_pdw"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+    },
+    ["ur_mp5_stock_pdw_folded"] = {
+        VMBodygroups = {{ind = 1, bg = 6}},
     },
 }
 
@@ -398,7 +357,7 @@ SWEP.Animations = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magout.ogg",        t = 0.25, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
-            {s = path .. "magin.ogg",         t = 0.55, c = ci},
+            {s = path .. "magin.ogg",         t = 0.5, c = ci},
             {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
@@ -421,7 +380,7 @@ SWEP.Animations = {
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
             {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
-            {s = path .. "chamber.ogg",         t = 2.15, c = ci},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
@@ -610,13 +569,13 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp"}, -- ,"optic"
-        Bone = "uzi_parent",
+        Slot = {"optic_lp","optic"}, -- ,"optic"
+        Bone = "body",
         Offset = {
-            vpos = Vector(-0.2, -1.0, -2.5),
+            vpos = Vector(0, -1, 3),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1, 1, 1),
+        VMScale = Vector(.9, .9, .9),
         InstalledEles = {"ur_mp5_rail_optic"}
     },
     {
@@ -624,14 +583,14 @@ SWEP.Attachments = {
         DefaultAttName = "10\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
         Slot = "ur_mp5_frame",
-        Bone = "uzi_parent",
+        Bone = "body",
         Offset = {
             vpos = Vector(2.6, -3.7, -17.3),
             vang = Angle(90, 0, -90),
         },
     },
     {
-        PrintName = "Caliber",
+        PrintName = "Receiver",
         DefaultAttName = "9x19mm Parabellum",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips"),
         Slot = "ur_mp5_caliber",
@@ -640,7 +599,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "uzi_parent",
+        Bone = "body",
         Offset = {
             vpos = Vector(-0.2, 0.5, 14.8),
             vang = Angle(90, 0, -90),
@@ -649,17 +608,18 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
-        Bone = "uzi_parent",
+        Bone = "body",
         Offset = {
-            vpos = Vector(-0.2, 2.4, 8),
+            vpos = Vector(-0.2, 1.5, 11),
             vang = Angle(90, 0, -90),
         },
+        VMScale = Vector(.8, .8, .8),
         InstalledEles = {"ur_mp5_rail_fg"}
     },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
-        Bone = "uzi_parent",
+        Bone = "body",
         Offset = {
             vpos = Vector(0.3, 0.9, 12.5),
             vang = Angle(90, 0, -45),
@@ -669,9 +629,8 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ur_mp5_stock"},
-        DefaultAttName = "Retracting Stock",
+        DefaultAttName = "Full Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_stock.png", "smooth mips"),
-        ExcludeFlags = {"micro"},
     },
     {
         PrintName = "Magazine",
