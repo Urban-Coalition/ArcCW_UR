@@ -27,8 +27,8 @@ att.Mult_ShootSpeedMult = 0.95
 
 att.ActivateElements = {"mag_ext"}
 
--- att.Hook_SelectReloadAnimation = function(wep, anim)
---     return anim .. "_10"
--- end
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_10"
+end
 
 att.ExcludeFlags = {"mag_338"}
