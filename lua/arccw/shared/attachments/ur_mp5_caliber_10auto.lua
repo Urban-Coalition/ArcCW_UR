@@ -28,7 +28,7 @@ att.Mult_RecoilSide = 1.25
 att.Mult_ReloadTime = 1.15
 att.Mult_MalfunctionMean = 0.75
 
-att.Mult_ClipSize = 0.9
+--att.Mult_ClipSize = 0.9
 att.Override_ShellScale = 1.5
 
 att.Hook_GetShootSound = function(wep, sound)

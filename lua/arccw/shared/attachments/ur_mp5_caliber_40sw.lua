@@ -24,7 +24,7 @@ att.Mult_DamageMin = 1.35
 att.Mult_RangeMin = 0.75
 att.Mult_Recoil = 1.15
 
-att.Mult_ClipSize = .9
+--att.Mult_ClipSize = .9
 att.Override_ShellScale = 1.5
 
 att.Hook_GetShootSound = function(wep, sound)
