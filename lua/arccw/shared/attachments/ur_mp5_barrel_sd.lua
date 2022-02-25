@@ -1,15 +1,15 @@
-att.PrintName = "13\" Integral Schalldämpfer Barrel"
+att.PrintName = "13\" Schalldämpfer Barrel"
 att.AbbrevName = "13\" SD Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7S Integral Schalldämpfer Barrel"
+    att.PrintName = "K7S Schalldämpfer Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
-att.Description = "Large, specialized integral suppressor for the MP5. Projectiles are slowed to subsonic velocities, which results in an extremely quiet report but reduced effective range.\n\nOnly compatible with 9mm rounds."
+att.Description = "Large, specialized integral suppressor for the MP5. Projectiles are slowed to subsonic velocities, which results in an extremely quiet report but reduced effective range.\nOnly compatible with 9mm rounds."
 att.Desc_Pros = {
-    "No distant firing sound",
-    "pro.invistracers"
+    "pro.invistracers",
+    "ur.mp5.sd"
 }
 att.Desc_Cons = {
     "uc.nomuzzle"
