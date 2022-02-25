@@ -147,6 +147,9 @@ SWEP.ShellRotateAngle = Angle(0, 0, 0)
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
+-- SWEP.BulletBones = {
+--     [2] = "tag_mag2",
+-- }
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.6, 0, 0.44),

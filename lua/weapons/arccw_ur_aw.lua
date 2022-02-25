@@ -28,6 +28,10 @@ SWEP.ViewModelFOV = 70
 
 SWEP.DefaultBodygroups = "000000000000"
 
+-- SWEP.BulletBones = {
+--     [1] = "mag_round",
+-- }
+
 -- Damage --
 
 SWEP.Damage = 75 -- 2 shot close range
