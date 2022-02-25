@@ -199,7 +199,7 @@ local path1 = ")^weapons/arccw_ud/glock/"
 local common = ")^/arccw_uc/common/"
 SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = { path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg" }
-SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 
