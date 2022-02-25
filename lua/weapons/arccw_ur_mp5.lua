@@ -212,6 +212,16 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 1},
             {ind = 6, bg = 3},
         },
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(-1, 0.81, 12),
+                vang = Angle(90, 0, 180),
+            },
+            [5] = {
+                vpos = Vector(-0.2, 1.6, 10),
+                vang = Angle(90, 0, -90),
+            }
+        },
     },
 
     ["ur_mp5_mag_15"] = {
@@ -266,7 +276,71 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local atts = wep.Attachments
+    local vm = data.vm
+
+    if atts[5].Installed or atts[6].Installed then
+        if atts[2].Installed == "ur_mp5_barrel_sd" then
+            vm:SetBodygroup(7,1)
+        else
+            vm:SetBodygroup(7,0)
+            vm:SetBodygroup(6,1)
+        end
+    else
+        vm:SetBodygroup(7,0)
+    end
+end
+
+SWEP.Hook_NameChange = function(wep,name)
+    local atts = wep.Attachments
+    local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
+    local cal = string.Replace(atts[3].Installed or "default","ur_mp5_caliber_","")
+    local stock = string.Replace(atts[7].Installed or "default","ur_mp5_stock_","")
+
+    local start = "MP5"
+    local mid = "A"
+    local num = "4"
+
+    if cal ~= "default" and cal ~= "noburst" then
+        num = ""
+        if cal == "10auto" then
+            mid = "/10"
+        elseif cal == "40sw" then
+            mid = "/40"
+        end
+    else
+        if barr == "sd" then
+            mid = "SD"
+        end
     
+        if cal == "noburst" then
+            if stock == "default" then
+                num = "2"
+            elseif stock == "a3" then
+                num = "3"
+            elseif stock == "none" then
+                num = "1"
+            end
+        else
+            if stock == "default" then
+                if barr == "sd" then
+                    num = "5"
+                end
+            elseif stock == "a3" then
+                if barr == "sd" then
+                    num = "6"
+                else
+                    num = "5"
+                end
+            elseif stock == "none" then
+                if barr == "sd" then
+                    num = "4"
+                end
+            end
+        end
+    end
+
+    return start .. mid .. num
 end
 
 -- Animations --
@@ -558,7 +632,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Receiver",
-        DefaultAttName = "Factory Receiver",
+        DefaultAttName = "Navy Receiver",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips"),
         Slot = "ur_mp5_caliber",
     },
@@ -578,11 +652,11 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "body",
         Offset = {
-            vpos = Vector(-0.2, 1.5, 11),
+            vpos = Vector(-0.2, 1.3, 10),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(.8, .8, .8),
-        InstalledEles = {"ur_mp5_rail_fg"}
+        --InstalledEles = {"ur_mp5_rail_fg"}
     },
     {
         PrintName = "Tactical",
@@ -593,7 +667,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, 180),
         },
         VMScale = Vector(.8,.8,.8),
-        InstalledEles = {"ur_mp5_clamp"}
+        --InstalledEles = {"ur_mp5_clamp"}
     },
     {
         PrintName = "Stock",
