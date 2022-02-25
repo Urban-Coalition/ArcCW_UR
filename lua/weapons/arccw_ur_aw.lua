@@ -114,7 +114,7 @@ SWEP.MalfunctionMean = 200
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.625
 SWEP.SightTime = 0.6
-SWEP.ShootSpeedMult = 0.5
+SWEP.ShootSpeedMult = 0.625
 
 local path = ")^weapons/arccw_ur/ak/"
 local path1 = ")^weapons/arccw_ur/mp5/"
@@ -194,7 +194,7 @@ SWEP.AttachmentElements = {
     ["barrel_sd"] = {
         VMBodygroups = {{ind = 2, bg = 3}}
     },
-    
+
     ["mag_338"] = {
         VMBodygroups = {{ind = 3, bg = 2}}
     },

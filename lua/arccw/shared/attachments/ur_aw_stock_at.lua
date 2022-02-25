@@ -5,9 +5,9 @@ att.AutoStats = true
 
 att.SortOrder = 3
 
-att.Mult_SightTime = .9
-att.Mult_Sway = 1.15
-att.Mult_Recoil = 1.05
+att.Mult_SightTime = .85
+att.Mult_Sway = 1.25
+att.Mult_Recoil = 1.1
 
 att.ActivateElements = {"stock_at"}
 att.GivesFlags = {"pistolgrip"}

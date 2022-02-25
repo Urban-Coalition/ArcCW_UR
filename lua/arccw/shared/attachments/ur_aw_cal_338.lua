@@ -17,6 +17,8 @@ att.Mult_Recoil = 2
 att.Mult_CycleTime = 1.25
 att.Mult_ReloadTime = 1.15
 
+att.Mult_ShootSpeedMult = 0.8
+
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
 end
