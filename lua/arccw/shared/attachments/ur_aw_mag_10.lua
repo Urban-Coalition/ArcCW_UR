@@ -14,7 +14,7 @@ att.Desc_Neutrals = {}
 att.Slot = "ur_aw_mag"
 
 att.AutoStats = true
-att.HideIfBlocked = false
+att.HideIfBlocked = true
 
 att.Override_ClipSize = 10
 
@@ -31,4 +31,4 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_10"
 end
 
-att.ExcludeFlags = {"mag_338"}
+att.ExcludeFlags = {"mag_338","mag_300"}

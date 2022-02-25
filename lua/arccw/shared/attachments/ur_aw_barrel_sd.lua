@@ -27,6 +27,6 @@ att.Add_BarrelLength = 3
 att.Mult_SightedSpeedMult = 0.85
 
 att.AutoStats = true
-att.ExcludeFlags = {"mag_338"}
+att.ExcludeFlags = {"mag_338","mag_300"}
 att.ActivateElements = {"barrel_sd"}
 att.GivesFlags = {"barrel_sd"}

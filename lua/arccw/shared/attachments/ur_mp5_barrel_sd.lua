@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
-att.Description = "Large, specialized integral suppressor for the MP5. Projectiles are slowed to subsonic velocities, which results in an extremely quiet report but reduced effective range.\nOnly compatible with 9mm rounds."
+att.Description = "Large, specialized integral suppressor for the MP5.\nProjectiles are slowed to subsonic velocities, which results in an extremely quiet report but reduced effective range.\nOnly compatible with 9mm rounds."
 att.Desc_Pros = {
     "pro.invistracers",
     "ur.mp5.sd"

@@ -26,5 +26,5 @@ end
 att.Override_Trivia_Calibre = ".300 Winchester Magnum"
 att.Override_ShellModel = "models/weapons/arccw/ud_shells/338.mdl"
 att.Override_Ammo = "SniperPenetratedRound"
-att.GivesFlags = {"mag_338"}
-att.ActivateElements = {"mag_338"}
+att.GivesFlags = {"mag_300"}
+--att.ActivateElements = {"mag_338"}

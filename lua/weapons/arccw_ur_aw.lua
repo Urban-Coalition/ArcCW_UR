@@ -200,13 +200,16 @@ SWEP.AttachmentElements = {
     },
 
     ["mag_338"] = {
-        VMBodygroups = {{ind = 3, bg = 2}}
+        --VMBodygroups = {{ind = 3, bg = 2}}
+    },
+    ["mag_300"] = {
+        --VMBodygroups = {{ind = 3, bg = 2}}
     },
     ["mag_ext"] = {
-        VMBodygroups = {{ind = 3, bg = 1}}
+        --VMBodygroups = {{ind = 3, bg = 1}}
     },
-    ["mag_ext_338"] = {
-        VMBodygroups = {{ind = 3, bg = 3}}
+    ["mag_ext_magnum"] = {
+        --VMBodygroups = {{ind = 3, bg = 3}}
     },
 
     ["rail_bottom"] = {
@@ -317,6 +320,7 @@ SWEP.Attachments = {
         Slot = {"ur_aw_mag"},
         DefaultAttName = "5-Round Mag",
         DefaultAttIcon = Material("entities/att/ur_ak/magazines/762_30.png", "mips smooth"),
+        ExcludeFlags = {"mag_338"}
     },
     {
         PrintName = "Underbarrel",
@@ -421,6 +425,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     local atts = wep.Attachments
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
+    local mag = string.Replace(atts[5].Installed or "default", "ur_aw_mag_", "")
     local flags = wep:GetWeaponFlags()
 
     local pistolGrip = table.HasValue(flags,"pistolgrip")
@@ -443,6 +448,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         else
             vm:SetBodygroup(8,1)
         end
+    end
+
+    if mag == "10" then
+        vm:SetBodygroup(3,1)
+    elseif mag == "10m" then
+        vm:SetBodygroup(3,3)
+    elseif cal ~= "default" then
+        vm:SetBodygroup(3,2)
     end
 end
 

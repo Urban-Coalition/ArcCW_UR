@@ -1,8 +1,8 @@
-att.PrintName = "AWM 8-Round Extended Mag"
-att.AbbrevName = "8-Round Extended Mag"
+att.PrintName = "AWM .300 10-Round Extended Mag"
+att.AbbrevName = "10-Round Extended Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AP 8-Round Extended Mag"
+    att.PrintName = "AP 10-Round Extended Mag"
 end
 
 att.SortOrder = 10
@@ -14,7 +14,8 @@ att.Desc_Neutrals = {}
 att.Slot = "ur_aw_mag"
 
 att.AutoStats = true
-att.HideIfBlocked = false
+
+att.HideIfBlocked = true
 
 att.Override_ClipSize = 10
 
@@ -31,4 +32,5 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_10_338"
 end
 
+att.RequireFlags = {"mag_300"}
 att.ExcludeFlags = {"mag_308"}
