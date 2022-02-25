@@ -41,4 +41,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
 end
 
 att.GivesFlags = {"ur_mp5_cal_40sw"}
+att.ExcludeFlags = {"barrel_sd"}
 att.ActivateElements = {"ur_mp5_mag_waffle"}
