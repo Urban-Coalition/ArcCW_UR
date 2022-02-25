@@ -1,4 +1,4 @@
-att.PrintName = "MP5-PDW Folding Stock"
+att.PrintName = "MP5K PDW Folding Stock"
 att.AbbrevName = "PDW Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
