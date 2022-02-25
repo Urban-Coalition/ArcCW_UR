@@ -1,12 +1,12 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models/weapons/arc9/ur_mp5/bocw/barrel_01_smg_standard"
-	"$bumpmap"					"models/weapons/arc9/ur_mp5/bocw/barrel_01_smg_standard_n"
+	"$basetexture"					"models/weapons/arccw/ur_mp5/bocw/mixstock_01_pro_mount_smg_standard"
+	"$bumpmap"					"models/weapons/arccw/ur_mp5/bocw/mixstock_01_pro_mount_smg_standard_n"
 
 	"$phong"	"1"
-	"$phongexponent"	"3"
+	"$phongexponent"	"2"
 	"$phongalbedotint"	"1"
-	"$phongboost"	"0.3"
+	"$phongboost"	"0.2"
 	"$phongfresnelranges"	"[1 1 1]"
         "$phongdisablehalflambert"  "1"
 

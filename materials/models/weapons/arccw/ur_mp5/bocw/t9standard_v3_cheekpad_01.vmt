@@ -1,10 +1,10 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models/weapons/arc9/ur_mp5/bocw/mixstock_01_pro_mount_smg_standard"
-	"$bumpmap"					"models/weapons/arc9/ur_mp5/bocw/mixstock_01_pro_mount_smg_standard_n"
+	"$basetexture"					"models/weapons/arccw/ur_mp5/bocw/t9standard_v3_cheekpad_01"
+	"$bumpmap"					"models/weapons/arccw/ur_mp5/bocw/t9standard_v3_cheekpad_01_n"
 
 	"$phong"	"1"
-	"$phongexponent"	"2"
+	"$phongexponent"	"3"
 	"$phongalbedotint"	"1"
 	"$phongboost"	"0.2"
 	"$phongfresnelranges"	"[1 1 1]"
