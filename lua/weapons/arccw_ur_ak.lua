@@ -138,7 +138,7 @@ SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 --SWEP.ShootPitchVariation = 0
 
-SWEP.MuzzleEffect = "muzzleflash_ak47"
+SWEP.MuzzleEffect = "muzzleflash_m82"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1
@@ -170,8 +170,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-4, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -10)
+SWEP.CrouchPos = Vector(-2, -2, -0.6)
+SWEP.CrouchAng = Angle(0, 0, -14)
 
 SWEP.HolsterPos = Vector(-1, -1, 1.2)
 SWEP.HolsterAng = Angle(-15, 8, -10)
@@ -179,8 +179,8 @@ SWEP.HolsterAng = Angle(-15, 8, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
-SWEP.CustomizePos = Vector(8, 0, 1)
-SWEP.CustomizeAng = Angle(5, 30, 30)
+SWEP.CustomizePos = Vector(6.5, 0.8, -0.2)
+SWEP.CustomizeAng = Angle(8, 22, 15)
 
 SWEP.BarrelLength = 24
 

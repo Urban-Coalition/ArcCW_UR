@@ -7,8 +7,8 @@ SWEP.UseHands = true
 -- Effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-SWEP.ShellScale = 1.4
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
+SWEP.ShellScale = 1
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
@@ -55,7 +55,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_mp5.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_mp5.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
@@ -152,7 +152,7 @@ SWEP.ShootSpeedMult = 0.95
 -- Length --
 
 SWEP.BarrelLength = 24
-SWEP.ExtraSightDist = 7
+SWEP.ExtraSightDist = 5
 
 -- Ironsights / Customization / Poses --
 
@@ -168,17 +168,20 @@ SWEP.IronSightStruct = {
      Ang = Angle(-.1, 0, .5),
      Magnification = 1,
      SwitchToSound = "",
-     ViewModelFOV = 55,
+     ViewModelFOV = 60,
 }
 
-SWEP.ActivePos = Vector(0, 0, 1)
-SWEP.ActiveAng = Angle(0, 0, -3)
+SWEP.ActivePos = Vector(-0.5, 1.5, 1.05)
+SWEP.ActiveAng = Angle(0, 0, -1)
 
-SWEP.CustomizePos = Vector(5, -2, -2)
-SWEP.CustomizeAng = Angle(15, 25, 0)
+SWEP.SprintPos = Vector(-0.5, 3, 1.5)
+SWEP.SprintAng = Angle(-12, 15, -15)
 
-SWEP.CrouchPos = Vector(-3, -3, 0)
-SWEP.CrouchAng = Angle(0, 0, -30)
+SWEP.CustomizePos = Vector(6, -2, -1.5)
+SWEP.CustomizeAng = Angle(16, 28, 0)
+
+SWEP.CrouchPos = Vector(-2, 0.5, 0)
+SWEP.CrouchAng = Angle(0, 0, -14)
 
 SWEP.BarrelOffsetHip = Vector(4, 0, -4)
 
@@ -419,7 +422,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 2,
+        -- Time = 2,
         MinProgress = 1.2,
         LastClip1OutTime = 2,
         LHIK = true,
@@ -439,7 +442,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 90 / 30,
+        -- Time = 90 / 30,
         MinProgress = 2.2,
         LastClip1OutTime = 1.8,
         LHIK = true,
@@ -466,7 +469,7 @@ SWEP.Animations = {
     ["reload_15"] = {
         Source = "reload",--"reload_15",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 67 / 30,
+        -- Time = 67 / 30,
         MinProgress = 1.2,
         LastClip1OutTime = 67 / 30,
         LHIK = true,
@@ -486,7 +489,7 @@ SWEP.Animations = {
     ["reload_empty_15"] = {
         Source = "reload_empty",--"reload_empty_15",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 90 / 30,
+        -- Time = 90 / 30,
         MinProgress = 2.2,
         LastClip1OutTime = 1.8,
         LHIK = true,
@@ -513,7 +516,7 @@ SWEP.Animations = {
     ["reload_40"] = {
         Source = "reload",--"reload_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 67 / 30,
+        -- Time = 67 / 30,
         MinProgress = 1.2,
         LastClip1OutTime = 67 / 30,
         LHIK = true,
@@ -533,7 +536,7 @@ SWEP.Animations = {
     ["reload_empty_40"] = {
         Source = "reload_empty",--"reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 90 / 30,
+        -- Time = 90 / 30,
         MinProgress = 2.2,
         LastClip1OutTime = 1.8,
         LHIK = true,
@@ -560,7 +563,7 @@ SWEP.Animations = {
     ["reload_50"] = {
         Source = "reload",--"reload_50",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 67 / 30,
+        -- Time = 67 / 30,
         MinProgress = 1.6,
         LastClip1OutTime = 1,
         LHIK = true,
@@ -581,7 +584,7 @@ SWEP.Animations = {
     ["reload_empty_50"] = {
         Source = "reload_empty",--"reload_empty_50",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 90 / 30,
+        -- Time = 90 / 30,
         MinProgress = 2.4,
         LastClip1OutTime = 1.8,
         LHIK = true,

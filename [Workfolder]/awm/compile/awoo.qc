@@ -92,14 +92,40 @@ $sequence "idle" "anims/idle.smd" {
 	node "Ready"
 }
 
+$sequence "idle_empty" "anims/idle_empty.smd" {
+	fps 37
+	loop
+	snap
+	"ACT_VM_IDLE_EMPTY" 1
+	node "Ready"
+}
+
 $sequence "draw" "anims/draw.smd" {
 	fps 48
 	snap
 	"ACT_VM_DRAW" 1
 }
 
+$sequence "holster" "anims/holster.smd" {
+	fps 48
+	snap
+	"ACT_VM_HOLSTER" 1
+}
+
+$sequence "draw_empty" "anims/draw_empty.smd" {
+	fps 48
+	snap
+	"ACT_VM_DRAW_EMPTY" 1
+}
+
+$sequence "holster_empty" "anims/holster_empty.smd" {
+	fps 48
+	snap
+	"ACT_VM_HOLSTER_EMPTY" 1
+}
+
 $sequence "fire" "anims/fire.smd" {
-	fps 37
+	fps 40
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
 	fadeout 0.03

@@ -156,14 +156,14 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(-0.1, 0.1, 0.2)
+SWEP.ActiveAng = Angle(0, 0, -1)
 
 SWEP.SprintPos = Vector(-1, -1, 1.2)
 SWEP.SprintAng = Angle(-15, 8, -10)
 
-SWEP.CrouchPos = Vector(-4, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -10)
+SWEP.CrouchPos = Vector(-2, -2, -0.8)
+SWEP.CrouchAng = Angle(0, 0, -14)
 
 SWEP.HolsterPos = Vector(-1, -1, 1.2)
 SWEP.HolsterAng = Angle(-15, 8, -10)
@@ -171,8 +171,8 @@ SWEP.HolsterAng = Angle(-15, 8, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
-SWEP.CustomizePos = Vector(8, 0, 1)
-SWEP.CustomizeAng = Angle(5, 30, 30)
+SWEP.CustomizePos = Vector(6.5, 0.8, -0.2)
+SWEP.CustomizeAng = Angle(8, 18, 15)
 
 SWEP.BarrelLength = 32
 
@@ -249,7 +249,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 10
+SWEP.ExtraSightDist = 5
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {
@@ -413,6 +413,8 @@ end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
+    if !IsValid(vm) then return end
+
     local atts = wep.Attachments
     local cal = string.Replace(atts[4].Installed or "default", "ur_aw_cal_", "")
     local flags = wep:GetWeaponFlags()
@@ -444,8 +446,29 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle"
     },
+    ["idle_empty"] = {
+        Source = "idle_empty"
+    },
     ["draw"] = {
         Source = "draw",
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 0.5,
+    },
+    ["holster"] = {
+        Source = "holster",
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 0.5,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 0.5,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
