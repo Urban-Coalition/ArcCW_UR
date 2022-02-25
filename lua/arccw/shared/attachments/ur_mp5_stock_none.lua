@@ -18,18 +18,17 @@ att.Slot = "ur_mp5_stock"
 att.AutoStats = true
 att.SortOrder = -1
 
-att.Mult_Recoil = 2
-att.Mult_RecoilSide = 1.5
-att.Mult_VisualRecoilMult = 2
-att.Mult_Sway = 2
+att.Mult_Recoil = 2.15
+att.Mult_RecoilSide = 1.25
+att.Mult_Sway = 3
 
-att.Mult_SightTime = 0.75
+att.Mult_SightTime = 0.65
 att.Mult_SpeedMult = 1.1
-att.Mult_SightedSpeedMult = 1.1
-att.Mult_ShootSpeedMult = 1.1
+att.Mult_SightedSpeedMult = 1.25
+att.Mult_ShootSpeedMult = 1.2
 
-att.Mult_DrawTime = 0.75
-att.Mult_HolsterTime = 0.75
-att.Add_BarrelLength = -4
+att.Mult_DrawTime = 0.6
+att.Mult_HolsterTime = 0.6
+att.Add_BarrelLength = -6
 
 att.ActivateElements = {"ur_mp5_stock_remove"}

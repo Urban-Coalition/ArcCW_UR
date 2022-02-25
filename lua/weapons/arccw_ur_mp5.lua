@@ -96,7 +96,7 @@ SWEP.Sway = 0.25
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 815
+SWEP.Delay = 60 / 800
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -239,13 +239,13 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 1}},
     },
 
-    ["ur_mp5_stock_a3"] = {
+    ["stock_a3"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 2, bg = 1},
         },
     },
-    ["ur_mp5_stock_a3_folded"] = {
+    ["stock_a3_folded"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 2, bg = 2},
@@ -606,6 +606,7 @@ SWEP.Attachments = {
         Slot = {"ur_mp5_mag"},
         DefaultAttName = "30-Round Mag",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_mag_32.png", "smooth mips"),
+        ExcludeFlags = {"ur_mp5_cal_40sw","ur_mp5_cal_10mm"}
     },
     {
         PrintName = "Ammo Type",
