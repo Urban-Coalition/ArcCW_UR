@@ -270,10 +270,10 @@ SWEP.AttachmentElements = {
     ["ur_mp5_stock_wood"] = {
         VMBodygroups = {{ind = 1, bg = 4}},
     },
-    ["ur_mp5_stock_pdw"] = {
+    ["stock_pdw"] = {
         VMBodygroups = {{ind = 1, bg = 5}},
     },
-    ["ur_mp5_stock_pdw_folded"] = {
+    ["stock_pdw_folded"] = {
         VMBodygroups = {{ind = 1, bg = 6}},
     },
 }
