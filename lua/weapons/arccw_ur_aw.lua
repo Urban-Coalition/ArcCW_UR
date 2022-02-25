@@ -45,7 +45,7 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
+SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 5
 SWEP.ExtendedClipSize = 10
 SWEP.ReducedClipSize = 5
@@ -266,15 +266,15 @@ SWEP.Attachments = {
         Slot = {"optic","optic_lp"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 6, 2.6),
+            vpos = Vector(0, 6, 2.65),
             vang = Angle(0, -90, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 180, 0),
-        VMScale = Vector(1, 1, 1),
+        VMScale = Vector(1.05, 1.05, 1.05),
         SlideAmount = {
-            vmin = Vector(0, 5.5, 2.6),
-            vmax = Vector(0, 7, 2.6),
+            vmin = Vector(0, 5.5, 2.65),
+            vmax = Vector(0, 7, 2.65),
         },
     },
     {
@@ -330,8 +330,8 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(1.1, 17, 1.1),
-            vang = Angle(90, 270, 0),
+            vpos = Vector(-1.2, 16, 1.1),
+            vang = Angle(-90, 270, 0),
         },
         GivesFlags = {"tac"},
         InstalledEles = {"rail_top"}
