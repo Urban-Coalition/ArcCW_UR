@@ -30,10 +30,11 @@ SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 44 -- 3 shot close range kill
-SWEP.DamageMin = 85 -- 2 shot long range kill
-SWEP.RangeMin = 5
-SWEP.Range = 50 -- 2 shot at ~11m
+SWEP.Damage = 75 -- 2 shot close range
+SWEP.DamageMin = 40 -- 3 shot long range
+SWEP.RangeMin = 50
+SWEP.Range = 400 -- 2 shot at ~300m
+
 SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -51,7 +52,7 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 1.75
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.6
@@ -61,7 +62,7 @@ SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 1
 SWEP.RecoilPunchBack = 2
 
-SWEP.Sway = 0.25
+SWEP.Sway = 0.2
 
 -- Firerate / Firemodes --
 
@@ -92,7 +93,7 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = .5
+SWEP.AccuracyMOA = .25
 SWEP.HipDispersion = 1250
 SWEP.MoveDispersion = 500
 SWEP.JumpDispersion = 1000
@@ -112,8 +113,8 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.625
-SWEP.SightTime = 0.525
-SWEP.ShootSpeedMult = 0.625
+SWEP.SightTime = 0.6
+SWEP.ShootSpeedMult = 0.5
 
 local path = ")^weapons/arccw_ur/ak/"
 local path1 = ")^weapons/arccw_ur/mp5/"

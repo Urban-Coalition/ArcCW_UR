@@ -1,19 +1,21 @@
 att.PrintName = "AWM .300 Winchester Magnum Receiver"
 att.AbbrevName = ".300 Win Mag"
-att.Icon = nil 
-att.Description = "Versatile magnum cartridge that delivers a flat trajectory and high accuracy for its increased energy."
+att.Icon = nil
+att.Description = "Versatile magnum cartridge identical in diameter to 7.62x51mm rounds but with significantly higher muzzle energy. Liable to overpenetration at close range."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
-    --"Increased muzzle velocity"
 }
 
-att.AutoStats = true 
+att.AutoStats = true
+
+att.Mult_Damage = 44 / 75
+att.Mult_DamageMin = 85 / 40
+att.Mult_Range = 2
+
+att.Override_PhysBulletMuzzleVelocity = 1000
 
 att.Mult_Penetration = 1.25
-att.Mult_Range = 1.2
-att.Mult_AccuracyMOA = .75
-
-att.Mult_Recoil = 1.35
+att.Mult_Recoil = 1.5
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
