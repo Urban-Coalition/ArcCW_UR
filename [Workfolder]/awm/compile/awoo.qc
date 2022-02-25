@@ -16,9 +16,10 @@ $bodygroup "barrel" {  // index 2
 	studio "b_silenced.smd"  	// id 3
 }
 $bodygroup "magazine" {  // index 3
-	studio "m_308_5.smd"  	// id 1
+	studio "m_308_5.smd"  	// id 0
 	studio "m_308_10.smd"  	// id 1
-	studio "m_338.smd"  	// id 2
+	studio "m_338_5.smd"  	// id 2
+	studio "m_338_10.smd"  	// id 3
 }
 $bodygroup "stock" {  // index 4
 	studio "aw_stock.smd"  			// id 0
@@ -143,6 +144,19 @@ $sequence "reload_exte" "anims/reload_exte.smd" {
 }
 
 $sequence "reload_empty_exte" "anims/reload_empty_exte.smd" {
+	fps 48
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+
+$sequence "reload_exte_magnum" "anims/reload_exte_magnum.smd" {
+	fps 48
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "reload_empty_exte_magnum" "anims/reload_empty_exte_magnum.smd" {
 	fps 48
 	"ACT_VM_RELOAD" 1
 	snap

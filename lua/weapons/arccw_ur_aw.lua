@@ -201,6 +201,9 @@ SWEP.AttachmentElements = {
     ["mag_ext"] = {
         VMBodygroups = {{ind = 3, bg = 1}}
     },
+    ["mag_ext_338"] = {
+        VMBodygroups = {{ind = 3, bg = 3}}
+    },
 
     ["rail_bottom"] = {
         VMBodygroups = {{ind = 6, bg = 1}}
@@ -620,6 +623,56 @@ SWEP.Animations = {
             {s = path .. "chamber.ogg",    t = 2.0+0.85},
             {s = common .. "grab.ogg", t = 2.4+0.8},
             {s = common .. "shoulder.ogg", t = 2.5+0.8},
+        },
+    },
+    ["reload_empty_10_338"] = {
+        Source = "reload_empty_exte_magnum",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5+0.5},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.97+0.5},
+            {s = ratel, t = 1.1+0.5},
+            {s = common .. "rifle_magdrop.ogg", t = 1.15+0.5},
+            {s = rottle,  t = 1.15+0.5},
+            {s = path .. "chback.ogg",    t = 1.9+0.75},
+            {s = path .. "chamber.ogg",    t = 2.0+0.85},
+            {s = common .. "grab.ogg", t = 2.4+0.8},
+            {s = common .. "shoulder.ogg", t = 2.5+0.8},
+        },
+    },
+    ["reload_10_338"] = {
+        Source = "reload_exte_magnum",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.65,
+        LHIKEaseOut = 0.25,
+        MinProgress = 1.3,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "magin.ogg",    t = 0.95+0.5},
+            {s = ratel, t = 1.1+0.5},
+            {s = rottle,  t = 1.15+0.5},
+            {s = path .. "scrape.ogg",    t = 1.35+0.5},
+            {s = common .. "magpouchin.ogg", t = 1.35+0.5},
+            {s = common .. "shoulder.ogg", t = 2.05+0.5},
+            {s = common .. "grab.ogg", t = 2.1+0.5},
         },
     },
     ["cycle"] = {
