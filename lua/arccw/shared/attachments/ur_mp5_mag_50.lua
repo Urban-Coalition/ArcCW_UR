@@ -39,3 +39,5 @@ att.Mult_MalfunctionVariance = 1.5
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_50"
 end
+
+att.Ignore = true
