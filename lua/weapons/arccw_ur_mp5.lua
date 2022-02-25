@@ -226,6 +226,9 @@ SWEP.AttachmentElements = {
             }
         },
     },
+    ["ur_mp5_barrel_classic"] = {
+        VMBodygroups = {{ind = 6, bg = 2}},
+    },
 
     ["ur_mp5_mag_15"] = {
         VMBodygroups = {{ind = 3, bg = 3}},
@@ -672,6 +675,7 @@ SWEP.Attachments = {
         },
         VMScale = Vector(.8, .8, .8),
         --InstalledEles = {"ur_mp5_rail_fg"}
+        GivesFlags = {"mp5_rail"},
     },
     {
         PrintName = "Tactical",
@@ -683,6 +687,7 @@ SWEP.Attachments = {
         },
         VMScale = Vector(.8,.8,.8),
         --InstalledEles = {"ur_mp5_clamp"}
+        GivesFlags = {"mp5_rail"},
     },
     {
         PrintName = "Stock",

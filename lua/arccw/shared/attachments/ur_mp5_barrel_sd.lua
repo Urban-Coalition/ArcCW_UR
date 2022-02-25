@@ -18,7 +18,7 @@ att.AutoStats = true
 
 att.Slot = "ur_mp5_barrel"
 
-att.SortOrder = 6
+att.SortOrder = 13
 
 att.Silencer = true
 att.Mult_ShootVol = 0.5
