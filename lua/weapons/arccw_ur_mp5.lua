@@ -159,9 +159,9 @@ SWEP.ExtraSightDist = 7
 SWEP.HolsterPos = Vector(0.5, -2, 1)
 SWEP.HolsterAng = Angle(-8.5, 8, -10)
 
-SWEP.HoldtypeHolstered = "normal"
+SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-3.1, 1.3, 1.45),
@@ -198,6 +198,7 @@ SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = { path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg" }
 SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 
 -- Bodygroups --
 
@@ -206,6 +207,12 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
+    ["ur_mp5_barrel_sd"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
+            {ind = 6, bg = 3},
+        },
+    },
 
     ["ur_mp5_mag_15"] = {
         VMBodygroups = {{ind = 3, bg = 3}},
@@ -351,7 +358,8 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.25, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = path .. "magin.ogg",         t = 0.5, c = ci},
-            {s = common .. "shoulder.ogg",  t = 1.75},
+            {s = common .. "rattle2.ogg",  t = 1.55},
+            {s = common .. "shoulder.ogg",  t = 1.5},
         },
     },
     ["reload_empty"] = {
@@ -374,48 +382,10 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
             {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
-
-
-    -- ["reload"] = {
-    --     Source = "reload",
-    --     Time = 67 / 30,
-    --     MinProgress = 1.2,
-    --     LastClip1OutTime = 67 / 30,
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-    --     SoundTable = {
-    --         {s = "arccw_uc/common/cloth_1.ogg", 	t = 0/30},
-    --         {s = "weapons/arccw_ur/mp5/magout.ogg", 	t = 13/30},
-    --         {s = "arccw_uc/common/cloth_4.ogg", 	t = 20/30},	
-    --         {s = "weapons/arccw_ur/mp5/magin.ogg", 	t = 36/30},
-    --         {s = "arccw_uc/common/cloth_3.ogg", 	t = 40/30},	
-    --         {s = "arccw_uc/common/shoulder.ogg", 	t = 70/30},	
-    --     },
-    --     LHIK = true,
-    --     LHIKIn = 0.3,
-    --     LHIKOut = 0.5,
-    -- },
-    -- ["reload_empty"] = {
-    --     Source = "reload_empty",
-    --     Time = 90 / 30,
-    --     MinProgress = 2.2,
-    --     LastClip1OutTime = 1.8,
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-    --     SoundTable = {
-    --         {s = "arccw_uc/common/cloth_1.ogg", 	t = 0/30},		
-    --         {s = "weapons/arccw_ur/mp5/chback.ogg", 	t = 6/30},
-    --         {s = "weapons/arccw_ur/mp5/chlock.ogg", 	t = 11/30},	
-    --         {s = "weapons/arccw_ur/mp5/magout.ogg", 	t = 26/30},
-    --         {s = "arccw_uc/common/cloth_2.ogg", 	t = 30/30},		
-    --         {s = "weapons/arccw_ur/mp5/magin.ogg", 	t = 52/30},
-    --         {s = "arccw_uc/common/cloth_4.ogg", 	t = 55/30},
-    --         {s = "arccw_uc/common/cloth_3.ogg", 	t = 75/30},
-    --         {s = "weapons/arccw_ur/mp5/chamber.ogg", 	t = 80/30},	
-    --         {s = "arccw_uc/common/shoulder.ogg", 	t = 95/30},						
-	-- 	},
-    -- },
 
     -- 15 Round Reloads --
 
@@ -434,8 +404,9 @@ SWEP.Animations = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magout.ogg",        t = 0.25, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
-            {s = path .. "magin.ogg",         t = 0.55, c = ci},
-            {s = common .. "shoulder.ogg",  t = 1.75},
+            {s = path .. "magin.ogg",         t = 0.5, c = ci},
+            {s = common .. "rattle2.ogg",  t = 1.8},
+            {s = common .. "shoulder.ogg",  t = 1.5},
         },
     },
     ["reload_empty_15"] = {
@@ -458,6 +429,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
             {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
@@ -476,11 +448,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.1},
-            {s = path .. "magout.ogg",        t = 0.35, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "magout.ogg",        t = 0.25, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
-            {s = path .. "magin.ogg",         t = 0.65, c = ci},
-            {s = common .. "shoulder.ogg",  t = 1.75},
+            {s = path .. "magin.ogg",         t = 0.5, c = ci},
+            {s = common .. "rattle2.ogg",  t = 1.8},
+            {s = common .. "shoulder.ogg",  t = 1.5},
         },
     },
     ["reload_empty_40"] = {
@@ -503,6 +476,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",         t = 1.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
             {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
@@ -575,7 +549,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "9\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
-        Slot = "ur_mp5_frame",
+        Slot = "ur_mp5_barrel",
         Bone = "body",
         Offset = {
             vpos = Vector(2.6, -3.7, -17.3),
@@ -597,6 +571,7 @@ SWEP.Attachments = {
             vpos = Vector(0, .75, 14.4),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"barrel_sd"}
     },
     {
         PrintName = "Underbarrel",
