@@ -357,6 +357,15 @@ SWEP.Animations = {
     ["idle_empty"] = {
         Source = "idle_empty",
     },
+    ["ready"] = {
+        Source = "ready",
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.15},
+            {s = path .. "chback.ogg",         t = 0.15, c = ci},
+            {s = path .. "chamber.ogg",         t = .38, c = ci},
+            {s = common .. "rattle2.ogg",         t = 0.75},
+        }
+    },
     ["draw"] = {
         Source = "draw",
         SoundTable = ArcCW.UD.DrawSounds,
@@ -397,8 +406,8 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.15},
-            {s = path .. "chback.ogg",         t = 0.3, c = ci},
-            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
+            {s = path .. "chback.ogg",         t = 0.27, c = ci},
+            {s = path .. "chforward.ogg",         t = 0.5, c = ci},
         },
     },
     ["fix_empty"] = {
@@ -453,6 +462,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
             {s = path .. "magout.ogg",        t = .9, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
@@ -500,6 +510,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
             {s = path .. "magout.ogg",        t = .9, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
@@ -547,6 +558,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
             {s = path .. "magout.ogg",        t = .9, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
