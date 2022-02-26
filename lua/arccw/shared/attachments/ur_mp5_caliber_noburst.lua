@@ -33,3 +33,5 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+
+att.ActivateElements = {"receiver_lower"}

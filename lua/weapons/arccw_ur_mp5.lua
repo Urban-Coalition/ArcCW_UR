@@ -212,8 +212,8 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
     ["ur_mp5_barrel_sd"] = {
         VMBodygroups = {
-            {ind = 5, bg = 1},
-            {ind = 6, bg = 3},
+            {ind = 4, bg = 1},
+            {ind = 5, bg = 3},
         },
         AttPosMods = {
             [6] = {
@@ -227,57 +227,74 @@ SWEP.AttachmentElements = {
         },
     },
     ["ur_mp5_barrel_classic"] = {
-        VMBodygroups = {{ind = 6, bg = 2}},
+        VMBodygroups = {{ind = 5, bg = 2}},
+    },
+    ["ur_mp5_barrel_kurz"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+            {ind = 5, bg = 4},
+            {ind = 7, bg = 1},
+        },
     },
 
     ["ur_mp5_mag_15"] = {
-        VMBodygroups = {{ind = 3, bg = 3}},
+        VMBodygroups = {{ind = 2, bg = 3}},
     },
     ["ur_mp5_mag_40"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
     ["ur_mp5_mag_50"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
     ["ur_mp5_mag_waffle"] = {
-        VMBodygroups = {{ind = 3, bg = 2}},
+        VMBodygroups = {{ind = 2, bg = 2}},
     },
 
     ["ur_mp5_rail_optic"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+        VMBodygroups = {{ind = 3, bg = 1}},
     },
 
     ["ur_mp5_clamp"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
 
     ["ur_mp5_rail_fg"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
+        VMBodygroups = {{ind = 5, bg = 1}},
+    },
+
+    ["receiver_lower"] = {
+        VMBodygroups = {{ind = 8, bg = 1}},
+    },
+    ["receiver_lower_0"] = {
+        VMBodygroups = {{ind = 8, bg = 0}},
+    },
+    ["receiver_upper_0"] = {
+        VMBodygroups = {{ind = 7, bg = 0}},
     },
 
     ["stock_a3"] = {
         VMBodygroups = {
+            {ind = 0, bg = 1},
             {ind = 1, bg = 1},
-            {ind = 2, bg = 1},
         },
     },
     ["stock_a3_folded"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1},
-            {ind = 2, bg = 2},
+            {ind = 0, bg = 1},
+            {ind = 1, bg = 2},
         },
     },
     ["ur_mp5_stock_remove"] = {
-        VMBodygroups = {{ind = 1, bg = 2}},
+        VMBodygroups = {{ind = 0, bg = 2}},
     },
     ["ur_mp5_stock_wood"] = {
-        VMBodygroups = {{ind = 1, bg = 4}},
+        VMBodygroups = {{ind = 0, bg = 4}},
     },
     ["stock_pdw"] = {
-        VMBodygroups = {{ind = 1, bg = 5}},
+        VMBodygroups = {{ind = 0, bg = 5}},
     },
     ["stock_pdw_folded"] = {
-        VMBodygroups = {{ind = 1, bg = 6}},
+        VMBodygroups = {{ind = 0, bg = 6}},
     },
 }
 
@@ -287,13 +304,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if atts[5].Installed or atts[6].Installed then
         if atts[2].Installed == "ur_mp5_barrel_sd" then
-            vm:SetBodygroup(7,1)
-        else
-            vm:SetBodygroup(7,0)
             vm:SetBodygroup(6,1)
+        else
+            vm:SetBodygroup(6,0)
+            vm:SetBodygroup(5,1)
         end
     else
-        vm:SetBodygroup(7,0)
+        vm:SetBodygroup(6,0)
     end
 end
 
@@ -653,6 +670,7 @@ SWEP.Attachments = {
         DefaultAttName = "Navy Receiver",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips"),
         Slot = "ur_mp5_caliber",
+        DefaultEles = {"receiver_lower_0"}
     },
     {
         PrintName = "Muzzle",
