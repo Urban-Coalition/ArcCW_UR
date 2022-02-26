@@ -45,7 +45,7 @@ $bodygroup "magazine" {
 
 
 $cdmaterials "models\weapons\arccw\shared"
-// $cdmaterials "models\weapons\arccw\ur_deagle"
+$cdmaterials "models\weapons\arccw\ur_m1911"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 

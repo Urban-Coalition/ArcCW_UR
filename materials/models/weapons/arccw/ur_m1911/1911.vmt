@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ur_m1911/1911_basecolor"
+	"$bumpmap" "models/weapons/arccw/ur_m1911/1911_bump"
+	"$normalmapalphaenvmapmask" 	1
+	"$color2"					"[1 1 1]"
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
+
+
+	"$blendTintByBaseAlpha" "1"
+	"$phong" 		"1"
+	"$phongexponenttexture"	"models/weapons/arccw/ur_m1911/1911_rough"
+	"$phongboost" "9"
+	"$phongalbedotint" 			"1"
+	"$phongexponent"	        "50"
+	"$phongfresnelranges" "[.6 1 2]"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.015 .015 .015]"
+	"$nocull" "1"
+}
