@@ -34,8 +34,9 @@ att.Add_BarrelLength = 4
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSoundSilenced then
-        return "common/null.wav" end
+        return false end
 end
+att.Mult_ShootPitch = 1.15
 
 att.ActivateElements = {"ur_mp5_barrel_sd"}
 att.GivesFlags = {"barrel_sd"}
