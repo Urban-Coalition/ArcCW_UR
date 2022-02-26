@@ -722,6 +722,7 @@ SWEP.Attachments = {
         VMScale = Vector(.8,.8,.8),
         --InstalledEles = {"ur_mp5_clamp"}
         GivesFlags = {"mp5_rail"},
+        ExcludeFlags = {"mp5_kurz"}
     },
     {
         PrintName = "Stock",
