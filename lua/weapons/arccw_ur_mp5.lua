@@ -312,6 +312,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(6,0)
     end
+
+    if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
+        vm:SetBodygroup(0,7)
+    end
 end
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -332,32 +336,43 @@ SWEP.Hook_NameChange = function(wep,name)
             mid = "/40"
         end
     else
-        if barr == "sd" then
-            mid = "SD"
-        end
-    
-        if cal == "noburst" then
-            if stock == "default" then
-                num = "2"
-            elseif stock == "a3" then
-                num = "3"
-            elseif stock == "none" then
-                num = "1"
+        if barr == "kurz" then
+            mid = "K"
+            if stock == "pdw" then
+                num = "-PDW"
+            elseif cal == "default" then
+                num = "A4"
+            else
+                num = ""
             end
         else
-            if stock == "default" then
-                if barr == "sd" then
-                    num = "5"
+            if barr == "sd" then
+                mid = "SD"
+            end
+        
+            if cal == "noburst" then
+                if stock == "default" then
+                    num = "2"
+                elseif stock == "a3" then
+                    num = "3"
+                elseif stock == "none" then
+                    num = "1"
                 end
-            elseif stock == "a3" then
-                if barr == "sd" then
-                    num = "6"
-                else
-                    num = "5"
-                end
-            elseif stock == "none" then
-                if barr == "sd" then
-                    num = "4"
+            else
+                if stock == "default" then
+                    if barr == "sd" then
+                        num = "5"
+                    end
+                elseif stock == "a3" then
+                    if barr == "sd" then
+                        num = "6"
+                    else
+                        num = "5"
+                    end
+                elseif stock == "none" then
+                    if barr == "sd" then
+                        num = "4"
+                    end
                 end
             end
         end
@@ -681,7 +696,7 @@ SWEP.Attachments = {
             vpos = Vector(0, .75, 14.4),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"barrel_sd"}
+        ExcludeFlags = {"barrel_sd","mp5_kurz"}
     },
     {
         PrintName = "Underbarrel",
@@ -694,6 +709,7 @@ SWEP.Attachments = {
         VMScale = Vector(.8, .8, .8),
         --InstalledEles = {"ur_mp5_rail_fg"}
         GivesFlags = {"mp5_rail"},
+        ExcludeFlags = {"mp5_kurz"}
     },
     {
         PrintName = "Tactical",

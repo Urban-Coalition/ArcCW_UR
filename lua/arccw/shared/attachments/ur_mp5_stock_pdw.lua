@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Light polymer \"personal defense weapon\" stock. Its conventional shape makes it ideal for point shooting. It can be folded to reduce profile even further at the cost of recoil.\n\nToggling the stock modifies performance accordingly."
+att.Description = "Light polymer \"personal defense weapon\" stock. Ideal for point shooting due to its conventional shape. It can be folded to reduce profile even further at the cost of recoil.\n\nToggling the stock modifies performance accordingly."
 att.AutoStats = true
 att.Slot = "ur_mp5_stock"
 
