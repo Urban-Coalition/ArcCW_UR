@@ -121,13 +121,16 @@ SWEP.SightTime = 0.6
 SWEP.ShootSpeedMult = 0.625
 
 local path = ")^weapons/arccw_ur/ak/"
+
+local testpath = ")^weapons/arccw_ur/aw_placeholders/"
+
 local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-SWEP.ShootSound = ")^weapons/arccw_ur/sw586/fire_357.ogg" -- Temporary, .338 needs a fire sound too <3
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
+SWEP.ShootSound = ")^weapons/arccw_ur/aw_placeholders/fire-01.ogg" -- Temporary, .338 needs a fire sound too <3
+SWEP.DistantShootSound = testpath .. "fire-dist-01.ogg"
+SWEP.ShootSoundSilenced = testpath .. "fire-sup-06.ogg" -- Temporary
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 --SWEP.ShootPitchVariation = 0
@@ -139,6 +142,7 @@ SWEP.ShellScale = 1.145
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
 SWEP.ManualAction = true
+-- SWEP.ManualAction = false
 SWEP.NoLastCycle = true
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
@@ -471,50 +475,48 @@ SWEP.Animations = {
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        SoundTable = {
+            {s = ratel, t = 0},
+            {s = common .. "raise.ogg", t = 0.2},
+        },
     },
     ["holster"] = {
         Source = "holster",
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        SoundTable = {
+            {s = ratel, t = 0},
+        },
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        SoundTable = {
+            {s = ratel, t = 0},
+            {s = common .. "raise.ogg", t = 0.2},
+        },
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        SoundTable = {
+            {s = ratel, t = 0},
+        },
     },
-    -- ["ready"] = {
-    --     Source = "ready",
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKOut = 0.6,
-    --     LHIKEaseOut = 0.25,
-    --     SoundTable = {
-    --         {s = path .. "chback.ogg",    t = 0.2},
-    --         {s = path .. "chamber.ogg",    t = 0.3},
-    --     }
-    -- },
     ["fire"] = {
         Source = {"fire"},
         Time = 22/30,
-        -- ShellEjectAt = 0,
         MinProgress = 0.2,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Temporary
+            {s = testpath .. "mech-01.ogg", t = 0}, -- Temporary
         },
     },
-    -- ["fire_iron"] = {
-    --     Source = "ak47_fire_iron",
-    --     Time = 0.5,
-    --     ShellEjectAt = 0,
-    -- },
+
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -524,19 +526,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 1.3,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.95+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "scrape.ogg",    t = 1.35+0.5},
-            {s = common .. "magpouchin.ogg", t = 1.35+0.5},
-            {s = common .. "shoulder.ogg", t = 2.05+0.5},
-            {s = common .. "grab.ogg", t = 2.1+0.5},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.4},
+            {s = common .. "magpouch.ogg",          t = 0.75},
+            {s = testpath .. "magin.ogg",           t = 1.35},
+            {s = ratel,                             t = 2.2},
         },
     },
     ["reload_10"] = {
@@ -548,19 +542,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 1.3,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.95+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "scrape.ogg",    t = 1.35+0.5},
-            {s = common .. "magpouchin.ogg", t = 1.35+0.5},
-            {s = common .. "shoulder.ogg", t = 2.05+0.5},
-            {s = common .. "grab.ogg", t = 2.1+0.5},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.45},
+            {s = common .. "magpouch.ogg",          t = 0.8},
+            {s = testpath .. "magin.ogg",           t = 1.5},
+            {s = ratel,                             t = 2.35},
         },
     },
     ["reload_338"] = {
@@ -572,19 +558,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 1.3,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.95+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "scrape.ogg",    t = 1.35+0.5},
-            {s = common .. "magpouchin.ogg", t = 1.35+0.5},
-            {s = common .. "shoulder.ogg", t = 2.05+0.5},
-            {s = common .. "grab.ogg", t = 2.1+0.5},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.4},
+            {s = common .. "magpouch.ogg",          t = 0.75},
+            {s = testpath .. "magin.ogg",           t = 1.35},
+            {s = ratel,                             t = 2.2},
         },
     },
     ["reload_empty"] = {
@@ -596,21 +574,21 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = path .. "bonk.ogg", 	 t = 0.5+0.5},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.97+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = common .. "rifle_magdrop.ogg", t = 1.15+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "chback.ogg",    t = 1.9+0.75},
-            {s = path .. "chamber.ogg",    t = 2.0+0.85},
-            {s = common .. "grab.ogg", t = 2.4+0.8},
-            {s = common .. "shoulder.ogg", t = 2.5+0.8},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.4},
+            {s = ratel, 	                        t = 0.6},
+            {s = common .. "magpouch.ogg",          t = 0.92},
+            {s = testpath .. "magdrop_metal.ogg", 	t = 1.05},
+            {s = testpath .. "magin.ogg",           t = 1.35},
+            {s = ratel,                             t = 2.2},
+
+            {s = testpath .. "boltup.ogg",   t = 2.35},
+            {s = testpath .. "boltback.ogg",   t = 2.45},
+            {s = testpath .. "eject.ogg",   t = 2.55},
+            {s = testpath .. "boltforward.ogg",   t = 2.7},
+            {s = testpath .. "boltdown.ogg",   t = 2.75},
+
+            {s = common .. "shoulder.ogg",                             t = 2.9},
         },
     },
     ["reload_empty_10"] = {
@@ -622,21 +600,21 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = path .. "bonk.ogg", 	 t = 0.5+0.5},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.97+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = common .. "rifle_magdrop.ogg", t = 1.15+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "chback.ogg",    t = 1.9+0.75},
-            {s = path .. "chamber.ogg",    t = 2.0+0.85},
-            {s = common .. "grab.ogg", t = 2.4+0.8},
-            {s = common .. "shoulder.ogg", t = 2.5+0.8},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.4},
+            {s = ratel, 	                        t = 0.6},
+            {s = common .. "magpouch.ogg",          t = 1.02},
+            {s = testpath .. "magdrop_metal.ogg", 	t = 1.15},
+            {s = testpath .. "magin.ogg",           t = 1.45},
+            {s = ratel,                             t = 2.3},
+
+            {s = testpath .. "boltup.ogg",   t = 2.5},
+            {s = testpath .. "boltback.ogg",   t = 2.6},
+            {s = testpath .. "eject.ogg",   t = 2.7},
+            {s = testpath .. "boltforward.ogg",   t = 2.85},
+            {s = testpath .. "boltdown.ogg",   t = 3},
+
+            {s = common .. "shoulder.ogg",                             t = 3.05},
         },
     },
     ["reload_empty_338"] = {
@@ -648,21 +626,21 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = path .. "bonk.ogg", 	 t = 0.5+0.5},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.97+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = common .. "rifle_magdrop.ogg", t = 1.15+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "chback.ogg",    t = 1.9+0.75},
-            {s = path .. "chamber.ogg",    t = 2.0+0.85},
-            {s = common .. "grab.ogg", t = 2.4+0.8},
-            {s = common .. "shoulder.ogg", t = 2.5+0.8},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.4},
+            {s = ratel, 	                        t = 0.6},
+            {s = common .. "magpouch.ogg",          t = 0.92},
+            {s = testpath .. "magdrop_metal.ogg", 	t = 1.05},
+            {s = testpath .. "magin.ogg",           t = 1.35},
+            {s = ratel,                             t = 2.2},
+
+            {s = testpath .. "boltup.ogg",   t = 2.35},
+            {s = testpath .. "boltback.ogg",   t = 2.45},
+            {s = testpath .. "eject.ogg",   t = 2.55},
+            {s = testpath .. "boltforward.ogg",   t = 2.7},
+            {s = testpath .. "boltdown.ogg",   t = 2.75},
+
+            {s = common .. "shoulder.ogg",                             t = 2.9},
         },
     },
     ["reload_empty_10_338"] = {
@@ -674,21 +652,21 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = path .. "bonk.ogg", 	 t = 0.5+0.5},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.97+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = common .. "rifle_magdrop.ogg", t = 1.15+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "chback.ogg",    t = 1.9+0.75},
-            {s = path .. "chamber.ogg",    t = 2.0+0.85},
-            {s = common .. "grab.ogg", t = 2.4+0.8},
-            {s = common .. "shoulder.ogg", t = 2.5+0.8},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.4},
+            {s = ratel, 	                        t = 0.6},
+            {s = common .. "magpouch.ogg",          t = 1.02},
+            {s = testpath .. "magdrop_metal.ogg", 	t = 1.15},
+            {s = testpath .. "magin.ogg",           t = 1.45},
+            {s = ratel,                             t = 2.3},
+
+            {s = testpath .. "boltup.ogg",   t = 2.5},
+            {s = testpath .. "boltback.ogg",   t = 2.6},
+            {s = testpath .. "eject.ogg",   t = 2.7},
+            {s = testpath .. "boltforward.ogg",   t = 2.85},
+            {s = testpath .. "boltdown.ogg",   t = 3},
+
+            {s = common .. "shoulder.ogg",                             t = 3.05},
         },
     },
     ["reload_10_338"] = {
@@ -700,19 +678,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.25,
         MinProgress = 1.3,
         SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.95+0.5},
-            {s = ratel, t = 1.1+0.5},
-            {s = rottle,  t = 1.15+0.5},
-            {s = path .. "scrape.ogg",    t = 1.35+0.5},
-            {s = common .. "magpouchin.ogg", t = 1.35+0.5},
-            {s = common .. "shoulder.ogg", t = 2.05+0.5},
-            {s = common .. "grab.ogg", t = 2.1+0.5},
+            {s = ratel,                             t = 0.1},
+            {s = testpath .. "magout_metal.ogg", 	t = 0.45},
+            {s = common .. "magpouch.ogg",          t = 0.8},
+            {s = testpath .. "magin.ogg",           t = 1.5},
+            {s = ratel,                             t = 2.35},
         },
     },
     ["cycle"] = {
@@ -721,12 +691,14 @@ SWEP.Animations = {
         ShellEjectAt = 0.5,
         MinProgress = 1.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "rack_1.ogg",  t = 0},
-            -- {s = path .. "chback.ogg",    t = .4},
-            {s = path .. "eject.ogg", t = .4},
-            -- {s = path .. "chamber.ogg",    t = .65},
-            {s = path .. "rack_2.ogg",  t = 0.2},
+            {s = ratel,                             t = 0.05},
+            {s = testpath .. "boltup.ogg",          t = 0.2},
+            {s = testpath .. "boltback.ogg",        t = 0.3},
+            {s = testpath .. "eject.ogg",           t = 0.4},
+            {s = testpath .. "boltforward.ogg",     t = 0.55},
+            {s = testpath .. "boltdown.ogg",        t = 0.6},
+
+            {s = common .. "shoulder.ogg",          t = 0.7},
         },
     },
 

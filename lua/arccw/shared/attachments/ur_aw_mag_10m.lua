@@ -20,7 +20,7 @@ att.HideIfBlocked = true
 att.Override_ClipSize = 10
 
 att.Mult_SightTime = 1.25
-att.Mult_ReloadTime = 1.2
+att.Mult_ReloadTime = 1.08
 att.Mult_Sway = 1.25
 
 att.Mult_SpeedMult = 0.975
