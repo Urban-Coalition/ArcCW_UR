@@ -100,7 +100,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = .25
 SWEP.HipDispersion = 1250
 SWEP.MoveDispersion = 500
-SWEP.JumpDispersion = 1000
+SWEP.JumpDispersion = 0 -- tactical unrealism    set to 700 later
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "awp"
