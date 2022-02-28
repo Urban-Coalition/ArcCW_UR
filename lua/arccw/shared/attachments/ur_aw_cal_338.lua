@@ -5,6 +5,9 @@ att.Description = "Powerful sniper cartridge that exerts substantially more muzz
 att.Slot = "ur_aw_cal"
 
 att.AutoStats = true
+att.Desc_Pros = {
+    "ur.aw.velocity"
+}
 att.Desc_Cons = {
     "Disables Magazine attachments"
 }

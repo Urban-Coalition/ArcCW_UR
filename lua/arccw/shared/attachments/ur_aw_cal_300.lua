@@ -4,6 +4,7 @@ att.Icon = nil
 att.Description = "Versatile magnum cartridge identical in diameter to 7.62x51mm rounds but with significantly higher muzzle energy. Liable to overpenetration at close range."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
+    "ur.aw.velocity"
 }
 
 att.AutoStats = true
