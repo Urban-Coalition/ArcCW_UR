@@ -2,7 +2,7 @@ att.PrintName = "MP5/10 10mm Auto Conversion"
 att.AbbrevName = "10mm Auto Receiver"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7/10 10mm Auto Conversion"
+    att.PrintName = "PK5/10 10mm Auto Conversion"
 end
 
 att.SortOrder = 80

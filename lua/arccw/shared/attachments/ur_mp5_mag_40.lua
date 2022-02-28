@@ -2,7 +2,7 @@ att.PrintName = "MP5 40-Round Extended Mag"
 att.AbbrevName = "40-Round Extended Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7 40-Round Extended Mag"
+    att.PrintName = "PK5 40-Round Extended Mag"
 end
 
 att.SortOrder = 40

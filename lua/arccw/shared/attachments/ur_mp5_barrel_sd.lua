@@ -2,7 +2,7 @@ att.PrintName = "13\" Schalldämpfer Barrel"
 att.AbbrevName = "13\" SD Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7S Schalldämpfer Barrel"
+    att.PrintName = "Schalldämpfer Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")

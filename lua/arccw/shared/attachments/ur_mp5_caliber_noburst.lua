@@ -2,7 +2,7 @@ att.PrintName = "MP5A3 SEF Receiver"
 att.AbbrevName = "SEF Receiver"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7-3 SEF Receiver"
+    att.PrintName = "PK5-3 SEF Receiver"
 end
 
 att.SortOrder = 201

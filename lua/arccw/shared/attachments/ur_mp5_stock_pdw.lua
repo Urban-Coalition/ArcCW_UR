@@ -2,7 +2,7 @@ att.PrintName = "MP5K PDW Folding Stock"
 att.AbbrevName = "PDW Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7-PDW Folding Stock"
+    att.PrintName = "PK5-PDW Folding Stock"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

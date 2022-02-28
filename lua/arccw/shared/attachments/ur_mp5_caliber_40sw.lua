@@ -2,7 +2,7 @@ att.PrintName = "MP5/40 .40 Smith & Wesson Conversion"
 att.AbbrevName = ".40 S&W Receiver"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7/40 .40 S&W Conversion"
+    att.PrintName = "PK5/40 .40 S&W Conversion"
 end
 
 att.SortOrder = 100

@@ -2,7 +2,7 @@ att.PrintName = "MP5 15-Round Flush Mag"
 att.AbbrevName = "15-Round Flush Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7 15-Round Flush Mag"
+    att.PrintName = "PK5 15-Round Flush Mag"
 end
 
 att.SortOrder = 20

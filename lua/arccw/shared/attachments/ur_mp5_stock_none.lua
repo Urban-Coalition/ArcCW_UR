@@ -2,7 +2,7 @@ att.PrintName = "MP5A1 Buttcap"
 att.AbbrevName = "Buttcap"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "K7 Buttcap"
+    att.PrintName = "PK5-1 Buttcap"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

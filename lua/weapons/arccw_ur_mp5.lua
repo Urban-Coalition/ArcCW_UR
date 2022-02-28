@@ -22,7 +22,7 @@ SWEP.CaseEffectAttachment = 2
 
 -- Fake name --
 
-SWEP.PrintName = "K7"
+SWEP.PrintName = "PK5-4"
 
 -- True name --
 
@@ -323,10 +323,23 @@ SWEP.Hook_NameChange = function(wep,name)
     local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
     local cal = string.Replace(atts[3].Installed or "default","ur_mp5_caliber_","")
     local stock = string.Replace(atts[7].Installed or "default","ur_mp5_stock_","")
+    local fakeNames = !GetConVar("arccw_truenames"):GetBool()
 
     local start = "MP5"
     local mid = "A"
     local num = "4"
+    if fakeNames then
+        start = "PK5"
+        mid = "-"
+    end
+
+    if atts[12].Installed == "uc_fg_civvy" then
+        if fakeNames then
+            return "PK5-CIV"
+        else
+            return "SP5"
+        end
+    end
 
     if cal ~= "default" and cal ~= "noburst" then
         num = ""
@@ -337,11 +350,19 @@ SWEP.Hook_NameChange = function(wep,name)
         end
     else
         if barr == "kurz" then
-            mid = "K"
+            if fakeNames then
+                mid = "C"
+            else
+                mid = "K"
+            end
             if stock == "pdw" then
                 num = "-PDW"
             elseif cal == "default" then
-                num = "A4"
+                if fakeNames then
+                    num = "-4"
+                else
+                    num = "A4"
+                end
             else
                 num = ""
             end
@@ -671,7 +692,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "9\" Standard Barrel",
+        DefaultAttName = "9\" Tropical Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
         Slot = "ur_mp5_barrel",
         Bone = "body",
