@@ -130,9 +130,9 @@ local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+--SWEP.FirstShootSound = path .. "fire_first.ogg"
+SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
@@ -912,9 +912,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Temporary
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     -- ["fire_iron"] = {
     --     Source = "ak47_fire_iron",
