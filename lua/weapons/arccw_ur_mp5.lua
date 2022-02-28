@@ -727,7 +727,7 @@ SWEP.Attachments = {
             vpos = Vector(-0.2, 1.3, 10),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(.8, .8, .8),
+        --VMScale = Vector(.8, .8, .8),
         --InstalledEles = {"ur_mp5_rail_fg"}
         GivesFlags = {"mp5_rail"},
         ExcludeFlags = {"mp5_kurz"}
