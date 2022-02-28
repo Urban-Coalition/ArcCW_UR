@@ -724,7 +724,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "body",
         Offset = {
-            vpos = Vector(-0.2, 1.3, 10),
+            vpos = Vector(0, 1.3, 10),
             vang = Angle(90, 0, -90),
         },
         --VMScale = Vector(.8, .8, .8),
