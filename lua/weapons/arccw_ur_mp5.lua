@@ -226,9 +226,6 @@ SWEP.AttachmentElements = {
             }
         },
     },
-    ["ur_mp5_barrel_classic"] = {
-        VMBodygroups = {{ind = 5, bg = 2}},
-    },
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
             {ind = 4, bg = 3},
@@ -239,12 +236,21 @@ SWEP.AttachmentElements = {
     ["ur_mp5_barrel_long"] = {
         VMBodygroups = {
             {ind = 4, bg = 2},
-            {ind = 5, bg = 2}
         },
         AttPosMods = {[4] = {
             vpos = Vector(0, .75, 18.2),
             vang = Angle(90, 0, -90),
         }}
+    },
+
+    ["ur_mp5_rail_fg"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
+    },
+    ["ur_mp5_ub_classic"] = {
+        VMBodygroups = {{ind = 5, bg = 2}},
+    },
+    ["ur_mp5_ub_wood"] = {
+        VMBodygroups = {{ind = 5, bg = 3}}, -- insert wood handguard here
     },
 
     ["ur_mp5_mag_15"] = {
@@ -265,10 +271,6 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_mp5_clamp"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    ["ur_mp5_rail_fg"] = {
         VMBodygroups = {{ind = 5, bg = 1}},
     },
 
@@ -312,15 +314,18 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local atts = wep.Attachments
     local vm = data.vm
 
-    if atts[5].Installed or atts[6].Installed then
+    local ub = atts[5].Installed
+
+    if ub then
         if atts[2].Installed == "ur_mp5_barrel_sd" then
             vm:SetBodygroup(6,1)
-        else
-            vm:SetBodygroup(6,0)
-            vm:SetBodygroup(5,1)
+            vm:SetBodygroup(5,3)
+        -- elseif !string.StartWith(ub,"ur_mp5_ub_") then
+            -- vm:SetBodygroup(6,0)
+            -- vm:SetBodygroup(5,1)
         end
-    else
-        vm:SetBodygroup(6,0)
+    -- else
+        -- vm:SetBodygroup(6,0)
     end
 
     if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
@@ -735,14 +740,15 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
+        DefaultAttName = "Tropical Handguard",
+        Slot = {"foregrip","ur_mp5_hg"},
         Bone = "body",
         Offset = {
             vpos = Vector(0, 1.3, 10),
             vang = Angle(90, 0, -90),
         },
         --VMScale = Vector(.8, .8, .8),
-        --InstalledEles = {"ur_mp5_rail_fg"}
+        InstalledEles = {"ur_mp5_rail_fg"},
         GivesFlags = {"mp5_rail"},
         ExcludeFlags = {"mp5_kurz"}
     },
@@ -751,7 +757,7 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "body",
         Offset = {
-            vpos = Vector(-.65, 0.81, 12),
+            vpos = Vector(-.61, 0.8, 12),
             vang = Angle(90, 0, 180),
         },
         VMScale = Vector(.8,.8,.8),
