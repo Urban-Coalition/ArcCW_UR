@@ -236,6 +236,12 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 1},
         },
     },
+    ["ur_mp5_barrel_long"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+            {ind = 5, bg = 2}
+        },
+    },
 
     ["ur_mp5_mag_15"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
@@ -337,7 +343,11 @@ SWEP.Hook_NameChange = function(wep,name)
         if fakeNames then
             return "PK5-CIV"
         else
-            return "SP5"
+            if barr == "long" then
+                start = "HK94" -- I know how prolific civies can get with their gunbuilds, so the nonsensical names will continue
+            else
+                return "SP5"
+            end
         end
     end
 
