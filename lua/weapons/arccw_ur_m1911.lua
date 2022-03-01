@@ -20,7 +20,7 @@ SWEP.ShootPitch = 100
 
 -- Fake name --
 
-SWEP.PrintName = "American Automatic Sidearm"
+SWEP.PrintName = "AMAS" -- American Automatic Sidearm
 
 -- True name --
 
@@ -29,7 +29,8 @@ SWEP.TrueName = "M1911"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "Semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it still isn’t considered an obsolete design. It can get the job done faster than many other pistols, but its single-stacked magazine can’t hold many rounds."
+SWEP.Trivia_Desc = [[Venerable semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it still isn't considered an obsolete design.
+Has better stopping power than many other pistols, but its single-stacked magazine can only hold a few of the large rounds.]]
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
@@ -76,7 +77,7 @@ SWEP.Primary.ClipSize = 7
 -- Recoil --
 
 SWEP.Recoil = 1.25
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1.0
@@ -139,7 +140,7 @@ SWEP.HolsterPos = Vector(0.3, 3, 1)
 SWEP.HolsterAng = Angle(-5, 15, -20)
 
 SWEP.HoldtypeHolstered = "normal"
-SWEP.HoldtypeActive = "revolver"
+SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
