@@ -30,7 +30,7 @@ SWEP.TrueName = "M1911"
 
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it still isn’t considered an obsolete design. It can get the job done faster than many other pistols, but its single-stacked magazine can’t hold many rounds."
-SWEP.Trivia_Manufacturer = "ISM"
+SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "USA"
@@ -143,24 +143,24 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.32, 15, 1.42),
-     Ang = Angle(0.27, -0.01, 5),
+     Pos = Vector(-2.28, 15, 1.25),
+     Ang = Angle(0.63, 0.07, 5),
      Magnification = 1,
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0.2, 0, 1)
+SWEP.ActivePos = Vector(0.2, 3, 1)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
-SWEP.CustomizePos = Vector(-1, -2, 1)
-SWEP.CustomizeAng = Angle(0, 0, 0)
+SWEP.CustomizePos = Vector(7, 0, -2)
+SWEP.CustomizeAng = Angle(15, 25, 0)
 
 SWEP.CrouchPos = Vector(-2, 0, 0)
 SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-15, 2.5, -10),
+    pos        =    Vector(-9, 2.5, -5),
     ang        =    Angle(-6, -6, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -394,7 +394,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = {"ur_m1911_barrel"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
-        DefaultAttName = "6\" Standard Barrel",
+        DefaultAttName = "5\" Government Barrel",
         Bone = "Body",
         Offset = {
             vpos = Vector(3.07, -3.8, -27),
