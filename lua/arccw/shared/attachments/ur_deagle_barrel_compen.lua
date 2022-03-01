@@ -21,5 +21,5 @@ att.Mult_ShootPitch = 0.95
 --att.Mult_SightedSpeedMult = .9
 att.Mult_RPM = .9
 
-att.ActivateElements = {"ur_deagle_barrel_compen", "tac_rail"}
+--att.ActivateElements = {"ur_deagle_barrel_compen", "tac_rail"}
 att.GivesFlags = {"barrel_annihilator"}

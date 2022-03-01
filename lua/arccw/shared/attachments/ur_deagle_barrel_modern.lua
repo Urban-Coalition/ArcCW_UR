@@ -9,4 +9,4 @@ att.Slot = "ur_deagle_barrel"
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 5.5
 
-att.ActivateElements = {"ur_deagle_barrel_modern", "tac_rail"}
+--att.ActivateElements = {"ur_deagle_barrel_modern", "tac_rail"}
