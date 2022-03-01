@@ -543,8 +543,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 3}},
         RequireFlags = {"receiver_ak12","cover_rail"},
         Override_IronSightStruct = {
-            Pos = Vector(-2.609, 0, 0.59),
-            Ang = Angle(-0.75, 0.154, 5.53),
+            Pos = Vector(-2.63, 0, 0.79),
+            Ang = Angle(-1.12, 0.116, 5.53),
             Magnification = 1,
         },
     },
