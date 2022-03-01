@@ -123,7 +123,7 @@ SWEP.ReloadInSights = true
 
 -- NPC --
 
-SWEP.NPCWeaponType = "weapon_smg"
+SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
@@ -236,6 +236,16 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 1},
         },
     },
+    ["ur_mp5_barrel_long"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+            {ind = 5, bg = 2}
+        },
+        AttPosMods = {[4] = {
+            vpos = Vector(0, .75, 18.2),
+            vang = Angle(90, 0, -90),
+        }}
+    },
 
     ["ur_mp5_mag_15"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
@@ -337,7 +347,11 @@ SWEP.Hook_NameChange = function(wep,name)
         if fakeNames then
             return "PK5-CIV"
         else
-            return "SP5"
+            if barr == "long" then
+                start = "HK94" -- I know how prolific civies can get with their gunbuilds, so the nonsensical names will continue
+            else
+                return "SP5"
+            end
         end
     end
 
@@ -724,7 +738,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "body",
         Offset = {
-            vpos = Vector(-0.2, 1.3, 10),
+            vpos = Vector(0, 1.3, 10),
             vang = Angle(90, 0, -90),
         },
         --VMScale = Vector(.8, .8, .8),

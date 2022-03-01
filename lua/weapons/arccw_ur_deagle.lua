@@ -116,7 +116,7 @@ SWEP.ReloadInSights = true
 
 -- NPC --
 
-SWEP.NPCWeaponType = "weapon_revolver"
+SWEP.NPCWeaponType = "weapon_357"
 SWEP.NPCWeight = 70
 
 -- Accuracy --
