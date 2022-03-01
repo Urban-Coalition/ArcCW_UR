@@ -241,6 +241,10 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 2},
             {ind = 5, bg = 2}
         },
+        AttPosMods = {[4] = {
+            vpos = Vector(0, .75, 18.2),
+            vang = Angle(90, 0, -90),
+        }}
     },
 
     ["ur_mp5_mag_15"] = {
