@@ -361,7 +361,11 @@ SWEP.Hook_NameChange = function(wep,name)
     end
 
     if cal ~= "default" and cal ~= "noburst" then
-        num = ""
+        if barr == "sd" then
+            num = "SD"
+        else
+            num = ""
+        end
         if cal == "10auto" then
             mid = "/10"
         elseif cal == "40sw" then
@@ -809,3 +813,9 @@ SWEP.Attachments = {
         },
     },
 }
+
+-- SWEP.AttachmentOverrides = {
+--     ["uc_grip_handstop"] = {
+--         LHIK = false
+--     }
+-- } -- THIS SHIT DOESN'T WORK
