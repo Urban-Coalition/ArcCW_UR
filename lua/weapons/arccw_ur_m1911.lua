@@ -52,7 +52,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_m1911.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_m1911.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 66
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
@@ -150,11 +150,11 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0.2, 3, 1)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(0.3, 3, 1.3)
+SWEP.ActiveAng = Angle(0, 0, -0.5)
 
-SWEP.CustomizePos = Vector(7, 0, -2)
-SWEP.CustomizeAng = Angle(15, 25, 0)
+SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-2, 0, 0)
 SWEP.CrouchAng = Angle(0, 0, -8)
@@ -297,75 +297,75 @@ SWEP.Animations = {
 
     -- -- Inspecc --
 
-    -- ["enter_inspect"] = {
-    --     Source = "enter_inspect",
-    --     time = 35 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0.3,
-    --     LHIKOut = 0,
-    --     SoundTable = {
-    --     },
-    -- },
-    -- ["idle_inspect"] = {
-    --     Source = "idle_inspect",
-    --     time = 72 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKOut = 0,
-    -- },
-    -- ["exit_inspect"] = {
-    --     Source = "exit_inspect",
-    --     time = 66 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKEaseOut = 0.3,
-    --     LHIKOut = 0.84,
-    --     SoundTable = {
-    --         { s = rottle, t = 0 / 60, c = ca },
-    --         { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-    --         { s = path .. "magout.ogg", t = 8 / 60, c = ca },
-    --         { s = rottle, t = 100 / 60, c = ca },
-    --         { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
-    --         { s = path .. "magin.ogg", t = 114 / 60, c = ca },
-    --         { s = path .. "rack1.ogg", t = 155 / 60, c = ca },
-    --         { s = rottle, t = 160 / 60, c = ca },
-    --         { s = path .. "rack2.ogg", t = 178 / 60, c = ca },
-    --     },
-    -- },
+    ["enter_inspect"] = {
+        Source = "enter_inspect",
+        time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect"] = {
+        Source = "idle_inspect",
+        time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect"] = {
+        Source = "exit_inspect",
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        -- SoundTable = {
+        --     { s = rottle, t = 0 / 60, c = ca },
+        --     { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+        --     { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+        --     { s = rottle, t = 100 / 60, c = ca },
+        --     { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
+        --     { s = path .. "magin.ogg", t = 114 / 60, c = ca },
+        --     { s = path .. "rack1.ogg", t = 155 / 60, c = ca },
+        --     { s = rottle, t = 160 / 60, c = ca },
+        --     { s = path .. "rack2.ogg", t = 178 / 60, c = ca },
+        -- },
+    },
 
-    -- ["enter_inspect_empty"] = {
-    --     Source = "enter_inspect_empty",
-    --     time = 35 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0.1,
-    --     LHIKOut = 0,
-    --     SoundTable = {
-    --     },
-    -- },
-    -- ["idle_inspect_empty"] = {
-    --     Source = "idle_inspect_empty",
-    --     time = 72 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKOut = 0,
-    -- },
-    -- ["exit_inspect_empty"] = {
-    --     Source = "exit_inspect_empty",
-    --     time = 66 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKEaseOut = 0.3,
-    --     LHIKOut = 0.84,
-    --     SoundTable = {
-    --         { s = rottle, t = 0 / 60, c = ca },
-    --         { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-    --         { s = path .. "magout.ogg", t = 8 / 60, c = ca },
-    --         { s = rottle, t = 100 / 60, c = ca },
-    --         { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
-    --         { s = path .. "magin.ogg", t = 114 / 60, c = ca },
-    --         { s = rottle, t = 160 / 60, c = ca },
-    --     },
-    -- },
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKOut = 0,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
+        time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        -- SoundTable = {
+        --     { s = rottle, t = 0 / 60, c = ca },
+        --     { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+        --     { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+        --     { s = rottle, t = 100 / 60, c = ca },
+        --     { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
+        --     { s = path .. "magin.ogg", t = 114 / 60, c = ca },
+        --     { s = rottle, t = 160 / 60, c = ca },
+        -- },
+    },
 }
 
 -- ADS animation blending, thanks fesiug -- 
@@ -416,7 +416,7 @@ SWEP.Attachments = {
         Bone = "vm_barrel",
         Offset = {
             vpos = Vector(0, -5.5, .2),
-            vang = Angle(0, 90, -90),
+            vang = Angle(0, 90, 0),
         },
         InstalledEles = {"nofh"},
         ExcludeFlags = {"barrel_annihilator"},

@@ -69,8 +69,8 @@ $sequence "fire" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.02
+	fadeout 0.0
 	{ event 5001 0 "1" }
 }
 
@@ -80,8 +80,8 @@ $sequence "fire_empty" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	// blend "sights" 0 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.02
+	fadeout 0.0
 	{ event 5001 0 "1" }
 }
 
@@ -100,7 +100,8 @@ $sequence "reload" {
 	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	snap
+	fadein 0
+	fadeout 0.08
 }
 
 $sequence "reload_empty" {
@@ -109,7 +110,8 @@ $sequence "reload_empty" {
 	// blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	snap
+	fadein 0
+	fadeout 0.08
 }
 
 
@@ -131,51 +133,56 @@ $sequence "reload_empty_ext" {
 	snap
 }
 
-// $sequence "enter_inspect" {
-// 	"anims\enter_inspect.smd"
-// 	"ACT_VM_IDLE" 1
-// 	snap
-// 	fps 60
-// }
+$sequence "enter_inspect" {
+	"anims\vm_m1911_inspect.smd"
+	"ACT_VM_IDLE" 1
+	frame 0 30
+	fadein 0
+	fadeout 0.2
+	fps 32
+}
 
-// $sequence "idle_inspect" {
-// 	"anims\idle_inspect.smd"
-// 	"ACT_VM_IDLE" 1
-// 	snap
-// 	fps 60
-// }
+$sequence "idle_inspect" {
+	"anims\vm_m1911_inspect.smd"
+	"ACT_VM_IDLE" 1
+	frame 30 30
+	fps 30
+}
 
-// $sequence "exit_inspect" {
-// 	"anims\exit_inspect.smd"
-// 	"anims\exit_inspect_iron.smd"
-// 	blend "sights" 0 1
-// 	"ACT_VM_IDLE" 1
-// 	snap
-// 	fps 60
-// }
+$sequence "exit_inspect" {
+	"anims\vm_m1911_inspect.smd"
+	"ACT_VM_IDLE" 1
+	frame 31 120
+	fadein 0.2
+	fadeout 0
+	fps 32
+}
 
-// $sequence "enter_inspect_empty" {
-// 	"anims\enter_inspect_empty.smd"
-// 	"ACT_VM_IDLE" 1
-// 	snap
-// 	fps 60
-// }
+$sequence "enter_inspect_empty" {
+	"anims\vm_m1911_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	frame 0 30
+	fadein 0
+	fadeout 0.2
+	fps 30
+}
 
-// $sequence "idle_inspect_empty" {
-// 	"anims\idle_inspect_empty.smd"
-// 	"ACT_VM_IDLE" 1
-// 	snap
-// 	fps 60
-// }
+$sequence "idle_inspect_empty" {
+	"anims\vm_m1911_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	frame 30 30
+	snap
+	fps 30
+}
 
-// $sequence "exit_inspect_empty" {
-// 	"anims\exit_inspect_empty.smd"
-// 	"anims\exit_inspect_empty_iron.smd"
-// 	blend "sights" 0 1
-// 	"ACT_VM_IDLE" 1
-// 	snap
-// 	fps 60
-// }
+$sequence "exit_inspect_empty" {
+	"anims\vm_m1911_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	frame 31 120
+	fadein 0.2
+	fadeout 0
+	fps 32
+}
 
 // $include "wbtrfix2.qci"            idk how to make it work
 
