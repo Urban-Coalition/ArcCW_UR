@@ -9,7 +9,7 @@ att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
 att.Description = "Large, specialized integral suppressor for the MP5.\nProjectiles are slowed to subsonic velocities, which results in an extremely quiet report but reduced effective range.\nOnly compatible with 9mm rounds."
 att.Desc_Pros = {
     "pro.invistracers",
-    "ur.mp5.sd"
+    --"ur.mp5.sd"
 }
 att.Desc_Cons = {
     "uc.nomuzzle"
@@ -40,4 +40,4 @@ att.Mult_ShootPitch = 1.15
 
 att.ActivateElements = {"ur_mp5_barrel_sd"}
 att.GivesFlags = {"barrel_sd"}
-att.ExcludeFlags = {"ur_mp5_cal_10mm","ur_mp5_cal_40sw"}
+--att.ExcludeFlags = {"ur_mp5_cal_10mm","ur_mp5_cal_40sw"}
