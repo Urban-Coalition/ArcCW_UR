@@ -138,7 +138,7 @@ SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 --SWEP.ShootPitchVariation = 0
 
-SWEP.MuzzleEffect = "muzzleflash_m82"
+SWEP.MuzzleEffect = "muzzleflash_6"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1
