@@ -171,10 +171,10 @@ SWEP.WorldModelOffset = {
 local path = ")^weapons/arccw_ur/1911/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
-SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
 SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
 -- Bodygroups --
 
@@ -240,7 +240,7 @@ SWEP.Animations = {
         Source = "fire",
         Time = 0.75,
         ShellEjectAt = 0.05,
-        SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
