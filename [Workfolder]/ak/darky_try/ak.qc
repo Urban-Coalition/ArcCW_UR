@@ -158,6 +158,10 @@ $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 
+$sequence "ref" {
+	"anims\worldmodel_idle.smd" 
+}
+
 $sequence "idle"{
 	"anims\vm_ak47_idle.smd" 
 	fps 30
@@ -165,7 +169,6 @@ $sequence "idle"{
 	loop
 	node "Ready"
 }
-
 
 $sequence "fire" {
 	"anims\vm_ak47_fire.smd"
