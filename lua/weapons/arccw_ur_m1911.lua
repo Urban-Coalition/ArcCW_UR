@@ -57,15 +57,15 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 47 -- 2 shot short range kill (3 on stomach)
-SWEP.DamageMin = 15 -- 6 shot long range kill
+SWEP.Damage = 38 -- 3 shot short range kill
+SWEP.DamageMin = 17 -- 6 shot long range kill
 SWEP.RangeMin = 10
 SWEP.Range = 80 -- 3 shot until ~40m
-SWEP.Penetration = 1
+SWEP.Penetration = 1.5
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 415
-SWEP.PhysBulletMuzzleVelocity = 415
+SWEP.MuzzleVelocity = 315
+SWEP.PhysBulletMuzzleVelocity = 315
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -385,29 +385,25 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Slot = {"optic_lp"},
         DefaultAttName = "Iron Sights",
-        Bone = "Body",
+        Bone = "vm_charge",
         Offset = {
-            vpos = Vector(0, -5.3, 7),
+            vpos = Vector(.02, -.7, 0),
             vang = Angle(90, 0, -90),
         },
+        
     },
     {
         PrintName = "Barrel",
         Slot = {"ur_m1911_barrel"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
         DefaultAttName = "5\" Government Barrel",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(3.07, -3.8, -27),
-            vang = Angle(90, 0, -90),
-        },
     },
     {
         PrintName = "Caliber",
         Slot = {"ur_m1911_caliber"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_bullets_50ae.png","mips smooth"),
         DefaultAttName = ".45 ACP",
-        Bone = "Body",
+        Bone = "vm_pivot",
         Offset = {
             vpos = Vector(3.07, -3.8, -27),
             vang = Angle(90, 0, -90),
@@ -417,10 +413,10 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "Barrel",
+        Bone = "vm_barrel",
         Offset = {
-            vpos = Vector(0, 0, 0.2),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, -5.5, .2),
+            vang = Angle(0, 90, -90),
         },
         InstalledEles = {"nofh"},
         ExcludeFlags = {"barrel_annihilator"},
@@ -428,10 +424,10 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         InstalledEles = {"tac_rail"},
-        Slot = {"tac"},
-        Bone = "Body",
+        Slot = {"tac_pistol"},
+        Bone = "vm_pivot",
         Offset = {
-            vpos = Vector(0, -3.7, 7),
+            vpos = Vector(0, -.5, 4),
             vang = Angle(90, 0, -90),
         },
     },
@@ -445,7 +441,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
         VMScale = Vector(1.1, 1.1, 1.1),
-        Bone = "Body",
+        Bone = "vm_pivot",
         Offset = {
             vpos = Vector(0, -0.25, 0),
             vang = Angle(90, 0, -90),
@@ -481,7 +477,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm","fml_charm"},
         FreeSlot = true,
-        Bone = "Body",
+        Bone = "vm_pivot",
         Offset = {
             vpos = Vector(0.65, -4.1, 8.5),
             vang = Angle(90, 0, -100),
