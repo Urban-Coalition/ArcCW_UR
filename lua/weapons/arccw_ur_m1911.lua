@@ -29,7 +29,7 @@ SWEP.TrueName = "M1911"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Venerable semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it still isn't considered an obsolete design.
+SWEP.Trivia_Desc = [[Venerable semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, many modern service pistols use a similar mechanism to this design.
 Has better stopping power than many other pistols, but its single-stacked magazine can only hold a few of the large rounds.]]
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = ".45 ACP"
@@ -387,7 +387,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "vm_charge",
         Offset = {
-            vpos = Vector(.02, -.7, 0),
+            vpos = Vector(-0.01, -.7, 0),
             vang = Angle(90, 0, -90),
         },
         

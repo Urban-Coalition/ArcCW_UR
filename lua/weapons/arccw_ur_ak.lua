@@ -681,7 +681,7 @@ SWEP.Attachments = {
             vpos = Vector(0,12, 1.9),
             vang = Angle(90, -90, -90),
         },
-        VMScale = Vector(0.9, 0.9, 0.9),
+        VMScale = Vector(1, 1, 1),
         SlideAmount = {
             vmin = Vector(0,10.5,1.9),
             vmax = Vector(0,13.5,1.9)
