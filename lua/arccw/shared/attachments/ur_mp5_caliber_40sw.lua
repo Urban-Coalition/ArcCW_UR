@@ -25,7 +25,7 @@ att.Mult_RangeMin = 0.75
 att.Mult_Recoil = 1.15
 
 --att.Mult_ClipSize = .9
-att.Override_ShellScale = 1.5
+att.Override_ShellScale = 1.1
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
