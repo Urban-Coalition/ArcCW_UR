@@ -71,6 +71,9 @@ $bodygroup "stocks" {
 	studio "aks_stock_folded.smd"
 
 	studio "ak12 stock.smd"
+	
+	studio "ak74m_stock.smd"
+	studio "ak74m_stock_folded.smd"
 }
 
 $bodygroup "barrels" {
