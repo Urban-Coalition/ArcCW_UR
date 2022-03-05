@@ -724,8 +724,7 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
         Slot = "uc_ammo",
-        ExcludeFlags = {"cal_12g"},
-        HideIfBlocked = true
+        --ExcludeFlags = {"cal_12g"},
     },
     -- {
     --     PrintName = "Ammo Type",

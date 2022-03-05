@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_mp5"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellScale = 0.90
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
@@ -455,12 +455,12 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.25,
+        --Time = 0.25,
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 0.25,
+        --Time = 0.25,
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["fire"] = {

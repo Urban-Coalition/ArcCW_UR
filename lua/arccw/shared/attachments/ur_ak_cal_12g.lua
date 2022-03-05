@@ -64,6 +64,7 @@ att.Override_Firemodes = {
 att.LHIK = true
 
 att.Override_IsShotgun = true
+att.Override_IsShotgun_Priority = 999
 att.Override_Ammo = "buckshot"
 att.Override_Trivia_Calibre = "12 Gauge"
 att.Override_Trivia_Class = "Shotgun"
@@ -86,15 +87,6 @@ end
 -- att.Hook_SelectReloadAnimation = function(wep, anim)
 --     return anim .. "_40"
 -- end
-
-local slotinfo = {
-    [9] = {"8-Round Mag", "10-Round Mag", att.Icon},
-}
-att.Hook_GetDefaultAttName = function(wep, slot)
-    if slotinfo[slot] then
-        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
-    end
-end
 -- att.Hook_GetDefaultAttIcon = function(wep, slot)
 --     if slotinfo[slot] then
 --         return slotinfo[slot][3]
@@ -108,6 +100,7 @@ end
 -- end
 local slotinfo = {
     [5] = {"8-Round Mag", "8-Round Mag", Material("entities/att/ur_ak/magazines/12_8.png", "mips smooth")},
+    [11] = {"\"BUCK\" #00 Buckshot", "\"BUCK\" #00 Buckshot", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

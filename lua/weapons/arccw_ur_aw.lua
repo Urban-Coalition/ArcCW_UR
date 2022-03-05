@@ -49,7 +49,7 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 -- Mag size --
 
-SWEP.ChamberSize = 0
+SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 5
 SWEP.ExtendedClipSize = 10
 SWEP.ReducedClipSize = 5

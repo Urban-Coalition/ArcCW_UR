@@ -39,3 +39,18 @@ att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 att.Override_Trivia_Class = "Shot Pistol"
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
+
+local slotinfo = {
+    [6] = {"8-Round Mag", "8-Round Mag", Material("entities/att/acwatt_ur_deagle_mag_7.png", "mips smooth")},
+    [9] = {"\"BUCK\" #000 Buckshot", "\"BUCK\" #000 Buckshot", nil},
+}
+att.Hook_GetDefaultAttName = function(wep, slot)
+    if slotinfo[slot] then
+        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
+    end
+end
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
+end
