@@ -253,6 +253,12 @@ SWEP.AttachmentElements = {
     ["stock_ru_rubber"] = {
         VMBodygroups = {{ind = 4, bg = 3}}
     },
+    ["stock_fixed"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 4},
+            {ind = 5, bg = 1},
+        }
+    },
     ["stock_none"] = {
         VMBodygroups = {
             {ind = 4, bg = 5},
