@@ -14,7 +14,9 @@ att.Desc_Cons = {
 
 att.Mult_Damage = 85 / 75
 att.Mult_DamageMin = 160 / 40
-att.Mult_Range = 2
+--att.Mult_Range = 2
+att.Override_Range = 100
+att.Override_RangeMin = 20
 
 att.Override_PhysBulletMuzzleVelocity = 1000
 

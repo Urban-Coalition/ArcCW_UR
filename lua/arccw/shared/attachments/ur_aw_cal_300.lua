@@ -11,7 +11,9 @@ att.AutoStats = true
 
 att.Mult_Damage = 44 / 75
 att.Mult_DamageMin = 85 / 40
-att.Mult_Range = 2
+--att.Mult_Range = 2
+att.Override_Range = 50
+att.Override_RangeMin = 10
 
 att.Override_PhysBulletMuzzleVelocity = 1000
 
