@@ -12,9 +12,9 @@ att.Desc_Cons = {
     "Disables Magazine attachments"
 }
 
-att.Mult_Damage = 80 / 75
+att.Mult_Damage = 85 / 75
 att.Mult_DamageMin = 160 / 40
-att.Mult_Range = 2.5
+att.Mult_Range = 2
 
 att.Override_PhysBulletMuzzleVelocity = 1000
 
