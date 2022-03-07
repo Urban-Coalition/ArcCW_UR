@@ -2,7 +2,10 @@ att.PrintName = "AK-12 5.45x39mm Receiver"
 att.AbbrevName = "AK-12 Receiver"
 att.Icon = Material("entities/att/ur_ak/recievers/ak12.png", "mips smooth")
 att.Description = [[Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration.
-Features a redesigned trigger guard and a dark, glossy finish.]]
+Features a dark, glossy finish and a 2-round burst group.]]
+att.Desc_Pros = {
+    "Two-round burst mode"
+}
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true
 
@@ -26,6 +29,21 @@ att.ShootPitchVariation = 1
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/545x39.mdl"
 att.Override_ShellScale = 1
 att.GivesFlags = {"cal_545"}
+
+att.Override_Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = -2
+    },
+    {
+        Mode = 1,
+    },
+    {
+        Mode = 0,
+    },
+}
 
 att.ActivateElements = {"mag_545_30", "reciever_ak12"}
 att.GivesFlags = {"receiver_ak12","cal_545"}
