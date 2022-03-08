@@ -84,7 +84,7 @@ $attachment "5" "camera" 0 0 0 rotate -90 0 0
 // $poseparameter "sights" 0 1 loop 0
 
 
-$sequence "idle" "anims/idle.smd" {
+$sequence "idle" "talonAnims/idle.smd" {
 	fps 37
 	loop
 	snap
@@ -92,7 +92,7 @@ $sequence "idle" "anims/idle.smd" {
 	node "Ready"
 }
 
-$sequence "idle_empty" "anims/idle_empty.smd" {
+$sequence "idle_empty" "talonAnims/idle_empty.smd" {
 	fps 37
 	loop
 	snap
@@ -100,31 +100,31 @@ $sequence "idle_empty" "anims/idle_empty.smd" {
 	node "Ready"
 }
 
-$sequence "draw" "anims/draw.smd" {
+$sequence "draw" "talonAnims/draw.smd" {
 	fps 48
 	snap
 	"ACT_VM_DRAW" 1
 }
 
-$sequence "holster" "anims/holster.smd" {
+$sequence "holster" "talonAnims/holster.smd" {
 	fps 48
 	snap
 	"ACT_VM_HOLSTER" 1
 }
 
-$sequence "draw_empty" "anims/draw_empty.smd" {
+$sequence "draw_empty" "talonAnims/draw_empty.smd" {
 	fps 48
 	snap
 	"ACT_VM_DRAW_EMPTY" 1
 }
 
-$sequence "holster_empty" "anims/holster_empty.smd" {
+$sequence "holster_empty" "talonAnims/holster_empty.smd" {
 	fps 48
 	snap
 	"ACT_VM_HOLSTER_EMPTY" 1
 }
 
-$sequence "fire" "anims/fire.smd" {
+$sequence "fire" "talonAnims/fire.smd" {
 	fps 40
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
@@ -132,57 +132,61 @@ $sequence "fire" "anims/fire.smd" {
 	{ event 5001 0 "1" }
 }
 
-$sequence "cycle" "anims/cycle.smd" {
+$sequence "cycle" "talonAnims/cycle.smd" {
 	fps 37
 	fadein 0.03
 	fadeout 0.03
 }
 
-$sequence "reload" "anims/reload.smd" {
-	fps 48
+
+
+$sequence "reload" "talonAnims/reload3.smd" {
+	fps 40
 	"ACT_VM_RELOAD" 1
 	snap
 }
-
-$sequence "reload_empty" "anims/reload_empty.smd" {
-	fps 48
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "reload_magnum" "anims/reload_magnum.smd" {
-	fps 48
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "reload_empty_magnum" "anims/reload_empty_magnum.smd" {
-	fps 48
+$sequence "reload_empty" "talonAnims/reload_empty3.smd" {
+	fps 40
 	"ACT_VM_RELOAD" 1
 	snap
 }
 
 
-$sequence "reload_exte" "anims/reload_exte.smd" {
+$sequence "reload_magnum" "talonAnims/reload3_magnum.smd" {
+	fps 40
+	"ACT_VM_RELOAD" 1
+	snap
+}
+$sequence "reload_empty_magnum" "talonAnims/reload_empty3_magnum.smd" {
+	fps 40
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+
+
+$sequence "reload_exte" "talonAnims/reload3_exte.smd" {
+	fps 40
+	"ACT_VM_RELOAD" 1
+	snap
+}
+$sequence "reload_empty_exte" "talonAnims/reload_empty3_exte.smd" {
+	fps 40
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+
+
+
+
+$sequence "reload_exte_magnum" "talonAnims/reload_exte_magnum.smd" {
 	fps 48
 	"ACT_VM_RELOAD" 1
 	snap
 }
 
-$sequence "reload_empty_exte" "anims/reload_empty_exte.smd" {
-	fps 48
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-
-$sequence "reload_exte_magnum" "anims/reload_exte_magnum.smd" {
-	fps 48
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "reload_empty_exte_magnum" "anims/reload_empty_exte_magnum.smd" {
+$sequence "reload_empty_exte_magnum" "talonAnims/reload_empty_exte_magnum.smd" {
 	fps 48
 	"ACT_VM_RELOAD" 1
 	snap
