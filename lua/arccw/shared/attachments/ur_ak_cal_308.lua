@@ -50,7 +50,7 @@ att.ActivateElements = {"mag_308", "reciever_ak12"}
 local path = ")^weapons/arccw_ur/ak/"
 
 att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_308_1.ogg", path .. "fire_308_2.ogg", path .. "fire_308_3.ogg", path .. "fire_308_4.ogg"} end
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire_308_1.ogg", path .. "fire_308_2.ogg", path .. "fire_308_3.ogg"} end
     if fsound == wep.ShootSoundSilenced then return path .. "fire_308_sup.ogg" end
 end
 
