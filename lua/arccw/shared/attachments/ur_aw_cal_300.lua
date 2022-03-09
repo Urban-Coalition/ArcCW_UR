@@ -22,6 +22,13 @@ att.Mult_Recoil = 1.5
 
 att.Mult_ShootSpeedMult = 0.9
 
+local path = ")^weapons/arccw_ur/aw_placeholders/338/"
+local path1 = ")^weapons/arccw_ur/aw_placeholders/"
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then return {path1 .. "fire-dist-01.ogg", path1 .. "fire-dist-02.ogg", path1 .. "fire-dist-03.ogg", path1 .. "fire-dist-04.ogg", path1 .. "fire-dist-05.ogg", path1 .. "fire-dist-06.ogg"} end
+end
+
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
 end

@@ -27,6 +27,18 @@ att.Mult_CycleTime = 1.18
 
 att.Mult_ShootSpeedMult = 0.8
 
+local path = ")^weapons/arccw_ur/aw_placeholders/338/"
+local path1 = ")^weapons/arccw_ur/aw_placeholders/"
+
+att.Hook_GetShootSound = function(wep, fsound)
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} end
+    if fsound == wep.ShootSoundSilenced then return path .. "fire_sup.ogg" end
+end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then return {path1 .. "fire-dist-01.ogg", path1 .. "fire-dist-02.ogg", path1 .. "fire-dist-03.ogg", path1 .. "fire-dist-04.ogg", path1 .. "fire-dist-05.ogg", path1 .. "fire-dist-06.ogg"} end
+end
+
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
 end
