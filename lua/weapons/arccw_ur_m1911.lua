@@ -14,6 +14,7 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
+SWEP.CamAttachment = 5
 SWEP.TracerNum = 1
 SWEP.TracerWidth = 1
 SWEP.ShootPitch = 100
@@ -193,11 +194,11 @@ SWEP.AttachmentElements = {
 SWEP.Animations = {
     ["idle_empty"] = {
         Source = "idle_empty",
-        Time = 120 / 60,
+        Time = 10 / 30,
     },
     ["idle"] = {
         Source = "idle",
-        Time = 120 / 60,
+        Time = 10 / 30,
     },
     -- ["ready"] = {
     --     Source = "vm_m1911_inspect",
@@ -238,13 +239,13 @@ SWEP.Animations = {
 
     ["fire"] = {
         Source = "fire",
-        Time = 0.75,
+        Time = 30 / 30,
         ShellEjectAt = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Time = 0.25,
+        Time = 24 / 30,
         ShellEjectAt = 0,
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
     },
@@ -255,12 +256,12 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.3525,
-        Time = 120 / 60,
+        Time = 65 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.6,
+        LHIKEaseOut = 0.2,
         LHIKOut = 0.62,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
@@ -275,7 +276,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.75,
-        Time = 150 / 60,
+        Time = 75 / 30,
         LastClip1OutTime = 0.76,
         LHIK = true,
         LHIKIn = 0.1,
@@ -377,8 +378,6 @@ end
 
 
 -- Attachments --
-
---SWEP.CamAttachment = 3
 
 SWEP.Attachments = {
     {
