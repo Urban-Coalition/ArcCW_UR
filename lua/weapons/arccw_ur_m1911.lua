@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-SWEP.ShellScale = 1.15
+SWEP.ShellScale = 1.4
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
@@ -218,7 +218,7 @@ SWEP.Animations = {
         ProcDraw = true,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
-            {s = common .. "raise.ogg", t = 0.05},
+            --{s = common .. "raise.ogg", t = 0.05},
         },
     },
     ["draw_empty"] = {
@@ -226,7 +226,7 @@ SWEP.Animations = {
         ProcDraw = true,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
-            {s = common .. "raise.ogg", t = 0.05},
+            --{s = common .. "raise.ogg", t = 0.05},
         },
     },
     --[[["holster"] = {
