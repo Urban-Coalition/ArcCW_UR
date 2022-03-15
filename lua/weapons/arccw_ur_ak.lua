@@ -779,7 +779,6 @@ SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
         local foldStocks = {["underfolder"] = true,["aks"] = true}
         local akCals = {["762"] = true,["545"] = true}
-        local akOptics = {["uc_optic_kobra"] = true,["uc_optic_pso1"] = true}
         local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
 
         local start = "AK"
@@ -890,7 +889,7 @@ SWEP.Hook_NameChange = function(wep,name)
                     post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
                     wep.Trivia_Desc = descStart .. desc_74u
                 end
-                if !noN and akOptics[atts[1].Installed] then
+                if !noN and atts[1].Installed then
                     post = post .. "N"
                 end
             end
