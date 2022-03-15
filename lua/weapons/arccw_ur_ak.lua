@@ -779,11 +779,13 @@ SWEP.Hook_NameChange = function(wep,name)
     if GetConVar("arccw_truenames"):GetBool() then
         local foldStocks = {["underfolder"] = true,["aks"] = true}
         local akCals = {["762"] = true,["545"] = true}
+        local akOptics = {["uc_optic_kobra"] = true,["uc_optic_pso1"] = true}
         local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
 
         local start = "AK"
         local mid = ""
         local post = "M"
+        local noN = false
 
         local atts = wep.Attachments
         local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
@@ -833,6 +835,7 @@ SWEP.Hook_NameChange = function(wep,name)
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" then
+            noN = true
             if string.EndsWith(barr,"105") or shortBarrs[barr] then
                 post = "-12K"
             else
@@ -843,18 +846,19 @@ SWEP.Hook_NameChange = function(wep,name)
             start = "RPK"
         elseif cal == "762" then
             if barr == "t56" then
+                noN = true
                 start = "Type "
                 post = "56"
             elseif barr == "74m" then
+                noN = true
                 post = "-103"
             end
         end
 
         if cal == "545" then
+            post = "-74"
             if barr == "74m" or barr == "rpk74m" then
-                post = "-74M"
-            else
-                post = "-74"
+                post = "M"
             end
             wep.Trivia_Desc = descStart .. desc_545
         end
@@ -872,10 +876,8 @@ SWEP.Hook_NameChange = function(wep,name)
         end
 
         if akCals[cal] then
-            if shortBarrs[barr] then
-                post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
-            wep.Trivia_Desc = descStart .. desc_74u
-            elseif string.EndsWith(barr,"105") then
+            if string.EndsWith(barr,"105") then
+                noN = true
                 if cal == "545" then
                     post = "-105"
                 elseif cal == "762" then
@@ -883,7 +885,16 @@ SWEP.Hook_NameChange = function(wep,name)
                 elseif cal == "556" then
                     post = "-102"
                 end
+            else
+                if shortBarrs[barr] then
+                    post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
+                    wep.Trivia_Desc = descStart .. desc_74u
+                end
+                if !noN and akOptics[atts[1].Installed] then
+                    post = post .. "N"
+                end
             end
+            
         end
 
         return start .. mid .. post
