@@ -36,6 +36,10 @@ $bodygroup "magazine" {
 	studio "ak12 mag.smd"
 	studio "ak308mag.smd"
 	studio "545b_30.smd"
+
+	studio "556_30.smd"
+	studio "762_30_bakelite.smd"
+	studio "762_30_magpul.smd"
 }
 
 $bodygroup "stock_adapt" {
