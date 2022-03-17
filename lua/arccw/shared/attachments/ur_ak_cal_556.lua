@@ -1,7 +1,7 @@
-att.PrintName = "5.56x45mm NATO Receiver"
+att.PrintName = "AK-101 5.56x45mm NATO Receiver"
 att.AbbrevName = "5.56x45mm Receiver"
 att.Icon = Material("entities/att/ur_ak/recievers/545.png", "mips smooth")
-att.Description = "Designed for the world export market, this receiever uses the NATO standard 5.56×45mm cartridge. The smaller round yields a higher muzzle velocity and accuracy at range with similiar wounding potential to 5.45x39mm."
+att.Description = "Designed for the export market, this receiever uses the NATO standard 5.56x45mm cartridge.\nThe smaller round yields a higher muzzle velocity and accuracy at range with similiar wounding potential to 5.45x39mm, but with a slower cyclic rate."
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true
 

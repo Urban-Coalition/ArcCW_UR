@@ -882,9 +882,11 @@ SWEP.Hook_NameChange = function(wep,name)
         end
 
         if cal == "545" then
-            post = "-74"
             if barr == "74m" or barr == "rpk74m" then
-                post = "M"
+                noN = true
+                post = "-74M"
+            else
+                post = "-74"
             end
             wep.Trivia_Desc = descStart .. desc_545
         end
