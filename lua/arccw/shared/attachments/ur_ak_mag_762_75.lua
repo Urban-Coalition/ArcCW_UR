@@ -36,4 +36,4 @@ att.Hook_TranslateAnimation = function(wep, anim)
 end
 
 att.ActivateElements = {"mag_762_75"}
-att.ExcludeFlags = {"cal_545","cal_9mm","cal_12g","cal_366", "cal_308", "cal_556"}
+att.ExcludeFlags = ArcCW.UR.AKCalFlags

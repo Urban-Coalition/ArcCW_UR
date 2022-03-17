@@ -8,7 +8,7 @@ att.AutoStats = true
 att.SortOrder = 10
 
 att.Override_Ammo = "smg1"
-att.Override_Trivia_Calibre = "5.56x45mm"
+att.Override_Trivia_Calibre = "5.56x45mm NATO"
 
 att.Mult_Range = 1.5
 att.Mult_SightedSpeedMult = 1.05
@@ -37,7 +37,7 @@ att.Hook_GetShootSound = function(wep, fsound)
         path .. "stalol/fire_545_1.wav",
      } end]]
     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} end
-    if fsound == wep.ShootSoundSilenced then return path1 .. "fire_545_sup.ogg" end
+    if fsound == wep.ShootSoundSilenced then return path .. "fire_supp.ogg" end
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)

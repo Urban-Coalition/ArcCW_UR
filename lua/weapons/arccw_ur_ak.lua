@@ -450,6 +450,12 @@ SWEP.AttachmentElements = {
     ["mag_762_75"] = {
         VMBodygroups = {{ind = 2, bg = 1}}
     },
+    ["mag_762_bakelite"] = {
+        VMBodygroups = {{ind = 2, bg = 11}}
+    },
+    ["mag_762_pmag"] = {
+        VMBodygroups = {{ind = 2, bg = 12}}
+    },
     ["mag_545_30"] = {
         VMBodygroups = {{ind = 2, bg = 2}}
     },
