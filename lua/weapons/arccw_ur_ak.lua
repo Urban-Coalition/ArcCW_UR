@@ -551,7 +551,7 @@ SWEP.AttachmentElements = {
     },
     ["sight_ak12"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
-        RequireFlags = {"receiver_ak12","cover_rail"},
+        RequireFlags = {"cover_rail"},
         Override_IronSightStruct = {
             Pos = Vector(-2.63, 0, 0.79),
             Ang = Angle(-1.12, 0.116, 5.53),
@@ -785,6 +785,7 @@ SWEP.Hook_NameChange = function(wep,name)
         local akCals = {["762"] = true,["545"] = true}
         local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
 
+
         local start = "AK"
         local mid = ""
         local post = "M"
@@ -794,9 +795,14 @@ SWEP.Hook_NameChange = function(wep,name)
         local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
         local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
         local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
+        local upper = atts[10].Installed
+        local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
+        local ak12 = alpha and barr == "ak12"
 
         wep.Trivia_Desc = descStart .. desc_762
         wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+
+        if alpha then noN = true end
 
         if atts[14].Installed == "uc_fg_civvy" then
             start = "Vepr"
@@ -837,14 +843,19 @@ SWEP.Hook_NameChange = function(wep,name)
             post = ".366"
         elseif cal == "308" then
             post = "-308"
-        elseif cal == "545_ak12" then
+        elseif cal == "545_ak12" or ak12 then
             noN = true
-            if string.EndsWith(barr,"105") or shortBarrs[barr] then
-                post = "-12K"
-            else
+            if string.StartWith(cal,"545") then
                 post = "-12"
+                wep.Trivia_Desc = descStart .. desc_545
+            elseif cal == "762" then
+                post = "-15"
+            elseif cal == "556" then
+                post = "-18"
             end
-            wep.Trivia_Desc = descStart .. desc_545
+            if string.EndsWith(barr,"105") or shortBarrs[barr] then
+                post = post .."K"   
+            end
         elseif barr == "rpk" or barr == "rpk74m" then
             start = "RPK"
         elseif cal == "762" then
@@ -855,6 +866,12 @@ SWEP.Hook_NameChange = function(wep,name)
             elseif barr == "74m" then
                 noN = true
                 post = "-103"
+            end
+        elseif cal == "556" then
+            if string.EndsWith(barr,"105") then
+                post = "-102"
+            else
+                post = "-101"
             end
         end
 
