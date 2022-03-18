@@ -75,13 +75,13 @@ $attachment "5" "camera" 0 0 0 rotate -90 0 0
  
 // $contents "solid"
  
-// $illumposition 0 0 0
+$illumposition 0 0 0
 
 // $bbox 0 0 0 0 0 0
  
-// $cbox 0 0 0 0 0 0
+$cbox 0 0 0 0 0 0
 
-// $poseparameter "sights" 0 1 loop 0
+$poseparameter "sights" 0 1 loop 0
 
 
 $sequence "idle" "talonAnims/idle.smd" {
@@ -124,18 +124,25 @@ $sequence "holster_empty" "talonAnims/holster_empty.smd" {
 	"ACT_VM_HOLSTER_EMPTY" 1
 }
 
-$sequence "fire" "talonAnims/fire.smd" {
+$sequence "fire" {
+	"talonAnims/fire.smd"
+	"talonAnims/idle.smd"
+	blend "sights" 0 1
 	fps 40
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
-	fadeout 0.03
+	fadeout 0.5
 	{ event 5001 0 "1" }
 }
 
-$sequence "cycle" "talonAnims/cycle.smd" {
-	fps 37
-	fadein 0.03
-	fadeout 0.03
+$sequence "cycle" {
+	"talonAnims/cycle.smd"
+	"talonAnims/cycle.smd"
+	blend "sights" 0 1
+	fps 40
+	"ACT_VM_IDLE" 1
+	fadein 0.3
+	fadeout 0
 }
 
 

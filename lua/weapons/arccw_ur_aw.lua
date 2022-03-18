@@ -517,7 +517,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 27/30,
+        Time = 27 / 30,
         MinProgress = 0.2,
         SoundTable = {
             {s = testpath .. "mech-01.ogg", t = 0}, -- Temporary
@@ -526,7 +526,7 @@ SWEP.Animations = {
 
     ["fire_iron"] = {
         Source = {"fire_iron"},
-        Time = 27/30,
+        Time = 27 / 30,
         MinProgress = 0.2,
         SoundTable = {
             {s = testpath .. "mech-01.ogg", t = 0}, -- Temporary
