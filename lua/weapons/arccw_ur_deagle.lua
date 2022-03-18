@@ -70,9 +70,10 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 -- Jamming --
 
--- SWEP.Malfunction = true
+SWEP.Malfunction = true
 SWEP.MalfunctionJam = true
---SWEP.MalfunctionMean = 7
+SWEP.MalfunctionMean = 21
+SWEP.MalfunctionPostFire = true
 
 -- Mag size --
 
