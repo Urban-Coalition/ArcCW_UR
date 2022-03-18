@@ -74,6 +74,7 @@ SWEP.Malfunction = true
 SWEP.MalfunctionJam = true
 SWEP.MalfunctionMean = 21
 SWEP.MalfunctionPostFire = true
+SWEP.MalfunctionTakeRound = false
 
 -- Mag size --
 
