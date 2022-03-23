@@ -1,6 +1,6 @@
 att.PrintName = "16\" Modernized Barrel"
 att.Icon = nil -- todo
-att.Description = "Modern handguard with protrusions for increased grip surface."
+att.Description = "Enhanced wood handguard with protrusions for increased grip surface."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
@@ -12,4 +12,4 @@ att.Mult_SightedSpeedMult = .98
 
 att.ActivateElements = {"barrel_akm"}
 
-att.Ignore = true
+--att.Ignore = true
