@@ -10,7 +10,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
 end
 
-local descStart = "One of the first assault rifles, prized around the world to this day for its cheap cost, ease of maintenance, and infallible reliability under harsh conditions. Consequently, a fifth of all small arms in existence can be traced to this design.\n\n"
+local descStart = "One of the first assault rifles, prized around the world to this day for its cheap price, ease of maintenance, and infallible reliability. Consequently, a fifth of all small arms in existence can be traced to this design.\n\n"
 local desc_762 = "The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
 local desc_545 = "With a heavier frame than other service rifles, the AK-74 platform is accurate and easy to control."
 local desc_74u = "This PDW variant sacrifices range for a compact profile and a high rate of fire."
