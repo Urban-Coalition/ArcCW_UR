@@ -1,5 +1,5 @@
 att.PrintName = "16\" Modernized Barrel"
-att.Icon = nil -- todo
+att.Icon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth") -- todo
 att.Description = "Enhanced wood handguard with protrusions for increased grip surface."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
