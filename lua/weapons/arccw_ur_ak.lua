@@ -10,7 +10,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
 end
 
-local descStart = "One of the first assault rifles, prized around the world to this day for its cheap price, ease of maintenance, and infallible reliability. Consequently, a fifth of all small arms in existence can be traced to this design.\n\n"
+local descStart = "One of the first assault rifles, wielded around the world to this day for its cheap price, ease of maintenance, and infallible reliability. Consequently, it has become the most popular rifle to ever enter service. One fifth of all small arms in existence can be traced to this design.\n\n"
 local desc_762 = "The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
 local desc_545 = "With a heavier frame than other service rifles, the AK-74 platform is accurate and easy to control."
 local desc_74u = "This PDW variant sacrifices range for a compact profile and a high rate of fire."
@@ -940,6 +940,11 @@ SWEP.Animations = {
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        SoundTable = {
+            {s = ratel, t = 0},
+            {s = common .. "raise.ogg", t = 0.2},
+            {s = common .. "shoulder.ogg",    t = 0.2},
+        },
     },
     ["ready"] = {
         Source = "ready",
@@ -948,9 +953,11 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         LHIKEaseOut = 0.25,
         SoundTable = {
+            {s = ratel, t = 0},
             {s = path .. "chback.ogg",    t = 0.2},
             {s = path .. "chamber.ogg",    t = 0.3},
-        }
+            {s = common .. "shoulder.ogg",    t = .6},
+        },
     },
     ["fire"] = {
         Source = {"fire"},
