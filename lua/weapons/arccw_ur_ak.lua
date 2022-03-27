@@ -17,6 +17,7 @@ local desc_74u = "This PDW variant sacrifices range for a compact profile and a 
 local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
 local desc_12g = "Magazine-fed semi automatic shotgun, based on the Kalashnikov pattern. Its low accuracy is compensated for by a much faster reload time than tube-fed designs."
 local desc_556 = "The AK-101 is designed for the world export market, using the NATO standard 5.56×45mm cartridge."
+local desc_366 = "AK-pattern shotgun chambered in .366 TKM, a sporting cartridge that uses reshaped M43 casings. It is considered a shotgun becuase its smoothbore barrel, a change made to circumvent Russian rifle laws. Despite the lack of rifling, it achieves similar ballistics to a proper AK-47."
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = descStart..desc_762
@@ -845,8 +846,14 @@ SWEP.Hook_NameChange = function(wep,name)
             end
             wep.Trivia_Desc = desc_12g
         elseif cal == "366" then
-            start = "VPO"
-            post = "-209"
+            if barr == "vepr" or string.find(atts[14].Installed or "","rifling") then
+                start = "Vepr"
+                post = " .366"
+            else
+                start = "VPO"
+                post = "-209"
+                wep.Trivia_Desc = desc_366
+            end
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" or ak12 then

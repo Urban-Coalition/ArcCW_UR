@@ -13,4 +13,4 @@ att.SortOrder = 30
 att.HideIfBlocked = true
 
 att.ActivateElements = {"mag_762_bakelite"}
-att.ExcludeFlags = ArcCW.UR.AKCalFlags
+att.ExcludeFlags = {"cal_545","cal_9mm","cal_12g","cal_308","cal_556"} -- Includes .366
