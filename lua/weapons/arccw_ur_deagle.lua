@@ -418,6 +418,7 @@ SWEP.Animations = {
             { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout.ogg", t = 6 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "magpouch_pull_small.ogg", t = 30 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 64 / 60, c = ca },
             { s = path .. "magin_old.ogg", t = 71 / 60, c = ca },
@@ -439,6 +440,7 @@ SWEP.Animations = {
             { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout_old.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "magpouch_pull_small.ogg", t = 26 / 60, c = ca },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
@@ -466,6 +468,7 @@ SWEP.Animations = {
             { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout.ogg", t = 6 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "magpouch.ogg", t = 30 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 64 / 60, c = ca },
             { s = path .. "magin_old.ogg", t = 71 / 60, c = ca },
@@ -487,6 +490,7 @@ SWEP.Animations = {
             { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
             { s = path .. "magout_old.ogg", t = 8 / 60, c = ca },
             { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "magpouch.ogg", t = 26 / 60, c = ca },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
             { s = rottle, t = 55 / 60, c = ca },
             { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
@@ -500,6 +504,10 @@ SWEP.Animations = {
         Source = "unjam",
         Time = 0.9,
         -- ShellEjectAt = 0.65,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path .. "rack2.ogg", t = .4}
+        }
     },
     -- Inspecc --
                                     -- disabled due to suck balls
