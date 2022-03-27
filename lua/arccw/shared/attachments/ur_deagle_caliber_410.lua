@@ -25,6 +25,9 @@ att.Override_AccuracyMOA_Priority = 0
 att.Mult_ClipSize = 1.15
 att.Mult_Recoil = 0.75
 
+att.Mult_Damage = 72 / 70
+att.Mult_DamageMin = 20 / 17
+
 att.Override_HullSize = 0.1
 att.Override_BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun
 att.Override_Penetration = 1

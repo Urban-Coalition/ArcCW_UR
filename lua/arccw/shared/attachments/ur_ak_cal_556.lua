@@ -18,8 +18,8 @@ att.Mult_AccuracyMOA = .85
 att.Mult_HipDispersion = .75
 
 att.Mult_Penetration = .5
-att.Mult_DamageMin = .8
-att.Mult_Damage = .8
+att.Mult_DamageMin = 35 / 50
+att.Mult_Damage = 20 / 25
 
 att.Override_Trivia_Country = "Russia"
 
