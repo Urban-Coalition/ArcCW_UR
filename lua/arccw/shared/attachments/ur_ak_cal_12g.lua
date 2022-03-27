@@ -86,9 +86,9 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/870/fire_dist.ogg" end
 end
 
--- att.Hook_SelectReloadAnimation = function(wep, anim)
---     return anim .. "_40"
--- end
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_12g"
+end
 -- att.Hook_GetDefaultAttIcon = function(wep, slot)
 --     if slotinfo[slot] then
 --         return slotinfo[slot][3]
