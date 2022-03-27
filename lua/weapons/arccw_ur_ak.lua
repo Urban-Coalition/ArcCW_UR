@@ -845,8 +845,8 @@ SWEP.Hook_NameChange = function(wep,name)
             end
             wep.Trivia_Desc = desc_12g
         elseif cal == "366" then
-            start = "Vepr "
-            post = ".366"
+            start = "VPO"
+            post = "-209"
         elseif cal == "308" then
             post = "-308"
         elseif cal == "545_ak12" or ak12 then
@@ -1212,6 +1212,56 @@ SWEP.Animations = {
             {s = rottle,  t = 1.15},
             {s = path .. "chback.ogg",    t = 1.9},
             {s = path .. "chamber.ogg",    t = 2.0},
+            {s = common .. "grab.ogg", t = 2.4},
+            {s = common .. "shoulder.ogg", t = 2.5},
+        },
+    },
+    ["reload_12g"] = {
+        Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.65,
+        LHIKEaseOut = 0.25,
+        MinProgress = 1.3,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "12ga/magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "12ga/magin.ogg",    t = 0.95},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = path .. "scrape.ogg",    t = 1.35},
+            {s = common .. "magpouchin.ogg", t = 1.35},
+            {s = common .. "shoulder.ogg", t = 2.05},
+            {s = common .. "grab.ogg", t = 2.1},
+        },
+    },
+    ["reload_empty_12g"] = {
+        Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.1},
+            {s = ratel, t = 0.25},
+            {s = path .. "12ga/magout.ogg", 	 t = 0.45},
+            {s = path .. "bonk.ogg", 	 t = 0.5},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "12ga/magin.ogg",    t = 0.97},
+            {s = ratel, t = 1.1},
+            {s = common .. "rifle_magdrop.ogg", t = 1.15},
+            {s = rottle,  t = 1.15},
+            {s = path .. "12ga/chback.ogg",    t = 1.9},
+            {s = path .. "12ga/chamber.ogg",    t = 2.0},
             {s = common .. "grab.ogg", t = 2.4},
             {s = common .. "shoulder.ogg", t = 2.5},
         },
