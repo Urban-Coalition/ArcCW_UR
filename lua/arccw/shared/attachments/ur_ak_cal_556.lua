@@ -12,14 +12,14 @@ att.Override_Trivia_Calibre = "5.56x45mm NATO"
 
 att.Mult_Range = 1.5
 att.Mult_SightedSpeedMult = 1.05
-att.Mult_ReloadTime = .95
-att.Mult_Recoil = .85
-att.Mult_AccuracyMOA = .85
+att.Mult_ReloadTime = 0.95
+att.Mult_Recoil = 0.65
+att.Mult_AccuracyMOA = 0.6
 att.Mult_HipDispersion = .75
 
-att.Mult_Penetration = .5
-att.Mult_DamageMin = 35 / 50
-att.Mult_Damage = 20 / 25
+att.Mult_Penetration = 12 / 16
+att.Mult_DamageMin = 20 / 25
+att.Mult_Damage = 34 / 50
 
 att.Override_Trivia_Country = "Russia"
 
