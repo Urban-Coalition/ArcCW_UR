@@ -1,17 +1,17 @@
-att.PrintName = "M1911 10mm Auto Conversion"
+att.PrintName = "Delta Elite 10mm Auto Conversion"
 att.AbbrevName = "10mm Auto"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AMAS 10mm Auto Conversion"
+    att.PrintName = "AMAS-FBI 10mm Auto Conversion"
 end
 
-att.Hook_NameChange = function(wep,name)
-	name = "Ruger SR1911"
-end
+-- att.Hook_NameChange = function(wep,name)
+-- 	name = "Ruger SR1911"
+-- end
 
-att.SortOrder = 80
+att.SortOrder = 10
 att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
-att.Description = "The FBI's preferred caliber of choice.\nSignificantly more powerful, but weapon handling suffers."
+att.Description = "The FBI's preferred caliber of choice.\nSignificantly more powerful, but weapon handling suffers. Despite being more powerful, it is smaller than .45 ACP."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,18 +23,18 @@ att.Slot = "ur_m1911_caliber"
 att.AutoStats = true
 
 att.Override_Trivia_Calibre = "10mm Auto"
-att.Override_Trivia_Manufacturer = "Ruger"
+-- att.Override_Trivia_Manufacturer = "Ruger"
 
 att.Mult_Damage = 1.15
 att.Mult_DamageMin = 1.15
 att.Mult_Penetration = 8 / 6
 
-att.Mult_Recoil = 1.25
+att.Mult_Recoil = 1.3
 att.Mult_RecoilSide = 1.25
-att.Mult_ReloadTime = 1.15
+att.Mult_ReloadTime = 1.2
 att.Mult_MalfunctionMean = 0.75
 
-att.Mult_ClipSize = 0.9
+att.Mult_ClipSize = 1.1
 att.Override_ShellScale = 1
 
 att.Hook_GetShootSound = function(wep, sound)
