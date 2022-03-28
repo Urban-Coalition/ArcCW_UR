@@ -16,7 +16,7 @@ local desc_545 = "With a heavier frame than other service rifles, the AK-74 plat
 local desc_74u = "This PDW variant sacrifices range for a compact profile and a high rate of fire."
 local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
 local desc_12g = "Magazine-fed semi automatic shotgun, based on the Kalashnikov pattern. Its low accuracy is compensated for by a much faster reload time than tube-fed designs."
-local desc_556 = "The AK-101 is designed for the world export market, using the NATO standard 5.56×45mm cartridge."
+local desc_556 = "This international variant has a lower damage output than the Russian cartridges, but boasts substantially lower recoil."
 local desc_366 = "AK-pattern shotgun chambered in .366 TKM, a sporting cartridge that uses reshaped M43 casings. It is considered a shotgun becuase of its smoothbore barrel, a change made to circumvent Russian rifle laws. Despite the lack of rifling, it achieves similar ballistics to a proper AK-47."
 
 SWEP.Trivia_Class = "Assault Rifle"
@@ -889,6 +889,7 @@ SWEP.Hook_NameChange = function(wep,name)
             else
                 post = "-101"
             end
+            wep.Trivia_Desc = descStart .. desc_556
         end
 
         if cal == "545" then
