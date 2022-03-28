@@ -189,6 +189,19 @@ SWEP.AttachmentElements = {
 
 }
 
+SWEP.Hook_NameChange = function(wep,name)
+    if GetConVar("arccw_truenames"):GetBool() then
+        local atts = wep.Attachments
+        local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
+
+        if cal == "10auto" then return "Delta Elite" end
+
+        return "M1911"
+    else
+        return "AMAS"
+    end
+end
+
 -- Animations --
 
 SWEP.Animations = {
