@@ -4,9 +4,6 @@ SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
-att.GivesFlags = {"cal_subsonic"}
-att.ExcludeFlags = {"powder_subsonic"}
-
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
@@ -410,6 +407,7 @@ SWEP.Attachments = {
             vpos = Vector(3.07, -3.8, -27),
             vang = Angle(90, 0, -90),
         },
+        DefaultFlags = {"cal_subsonic"},
     },
     {
         PrintName = "Muzzle",
