@@ -4,6 +4,9 @@ SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
+att.GivesFlags = {"cal_subsonic"}
+att.ExcludeFlags = {"powder_subsonic"}
+
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
