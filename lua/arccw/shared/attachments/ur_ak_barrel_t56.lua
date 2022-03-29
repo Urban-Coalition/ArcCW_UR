@@ -4,6 +4,10 @@ att.Description = "Chinese derivative barrel with a fully hooded front sight and
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "16\" Yucha 7 Barrel" -- Chinese for harpoon
+end
+
 att.SortOrder = 16
 
 att.Mult_SightedSpeedMult = .95

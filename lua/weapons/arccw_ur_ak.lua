@@ -787,159 +787,165 @@ function SWEP:Hook_TranslateAnimation(anim)
 end
 
 SWEP.Hook_NameChange = function(wep,name)
-    if GetConVar("arccw_truenames"):GetBool() then
-        local foldStocks = {["underfolder"] = true,["aks"] = true}
-        local akCals = {["762"] = true,["545"] = true}
-        local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
+    local foldStocks = {["underfolder"] = true,["aks"] = true}
+    local akCals = {["762"] = true,["545"] = true}
+    local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
+    local fakeNames = !GetConVar("arccw_truenames"):GetBool()
 
+    local start = "AK"
+    local mid = ""
+    local post = "M"
+    local noN = false
 
-        local start = "AK"
-        local mid = ""
-        local post = "M"
-        local noN = false
+    if fakeNames then
+        start = "AVR"
+        post = "-59"
+    end
 
-        local atts = wep.Attachments
-        local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
-        local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
-        local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
-        local upper = atts[10].Installed
-        local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
-        local ak12 = alpha and barr == "ak12"
+    local atts = wep.Attachments
+    local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
+    local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
+    local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
+    local upper = atts[10].Installed
+    local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
+    local ak12 = alpha and barr == "ak12"
 
-        wep.Trivia_Desc = descStart .. desc_762
-        wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+    wep.Trivia_Desc = descStart .. desc_762
+    wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 
-        if alpha then noN = true end
+    if alpha then noN = true end
 
-        if atts[14].Installed == "uc_fg_civvy" then
-            start = "Vepr"
-            if cal == "12g" then
-                post = "-12"
-                wep.Trivia_Desc = desc_12g
-            elseif cal == "545_ak12" or cal == "545" then
-                post = " 5.45"
-                wep.Trivia_Desc = descStart .. desc_545
-            elseif cal == "762" then
-                post = " 7.62"
-            elseif cal == "9mm" then
-                start = "Saiga"
-                post = "-9"
-                wep.Trivia_Desc = desc_9mm
-                wep.Trivia_Mechanism = "Blowback"
-            else
-                post = " ." .. cal
-            end
-            return start .. post
-        end
-
-        if cal == "9mm" then
-            start = "PP"
-            post = "-19 Vityaz"
+    if atts[14].Installed == "uc_fg_civvy" then
+        start = "Vepr"
+        if cal == "12g" then
+            post = "-12"
+            wep.Trivia_Desc = desc_12g
+        elseif cal == "545_ak12" or cal == "545" then
+            post = " 5.45"
+            wep.Trivia_Desc = descStart .. desc_545
+        elseif cal == "762" then
+            post = " 7.62"
+        elseif cal == "9mm" then
+            start = "Saiga"
+            post = "-9"
             wep.Trivia_Desc = desc_9mm
             wep.Trivia_Mechanism = "Blowback"
-        elseif cal == "12g" then
-            start = "Saiga"
-            if shortBarrs[barr] then
-                post = "-12K"
-            else
-                post = "-12"
-            end
-            wep.Trivia_Desc = desc_12g
-        elseif cal == "366" then
-            if barr == "vepr" or string.find(atts[14].Installed or "","rifling") then
-                start = "Vepr"
-                post = " .366"
-            else
-                start = "VPO"
-                post = "-209"
-                wep.Trivia_Desc = desc_366
-            end
-        elseif cal == "308" then
-            post = "-308"
-        elseif cal == "545_ak12" or ak12 then
-            noN = true
-            if string.StartWith(cal,"545") then
-                post = "-12"
-                wep.Trivia_Desc = descStart .. desc_545
-            elseif cal == "762" then
-                post = "-15"
-            elseif cal == "556" then
-                post = "-18"
-            end
-            if string.EndsWith(barr,"105") or shortBarrs[barr] then
-                post = post .."K"   
-            end
-        elseif barr == "rpk" or barr == "rpk74m" then
-            start = "RPK"
-            if barr == "rpk" and cal == "762" then
-                post = ""
-            end
+        else
+            post = " ." .. cal
+        end
+        return start .. post
+    end
+
+    if cal == "9mm" then
+        start = "PP"
+        post = "-19 Vityaz"
+        wep.Trivia_Desc = desc_9mm
+        wep.Trivia_Mechanism = "Blowback"
+    elseif cal == "12g" then
+        start = "Saiga"
+        if shortBarrs[barr] then
+            post = "-12K"
+        else
+            post = "-12"
+        end
+        wep.Trivia_Desc = desc_12g
+    elseif cal == "366" then
+        if barr == "vepr" or string.find(atts[14].Installed or "","rifling") then
+            start = "Vepr"
+            post = " .366"
+        else
+            start = "VPO"
+            post = "-209"
+            wep.Trivia_Desc = desc_366
+        end
+    elseif cal == "308" then
+        post = "-308"
+    elseif cal == "545_ak12" or ak12 then
+        noN = true
+        if string.StartWith(cal,"545") then
+            post = "-12"
+            wep.Trivia_Desc = descStart .. desc_545
         elseif cal == "762" then
-            if barr == "t56" then
-                noN = true
+            post = "-15"
+        elseif cal == "556" then
+            post = "-18"
+        end
+        if string.EndsWith(barr,"105") or shortBarrs[barr] then
+            post = post .."K"
+        end
+    elseif barr == "rpk" or barr == "rpk74m" then
+        start = "RPK"
+        if barr == "rpk" and cal == "762" then
+            post = ""
+        end
+    elseif cal == "762" then
+        if barr == "t56" then
+            noN = true
+            if fakeNames then
+                start = "Yucha"
+                post = " 7"
+            else
                 start = "Type "
                 post = "56"
-            elseif barr == "74m" then
-                noN = true
-                post = "-103"
             end
-        elseif cal == "556" then
-            if string.EndsWith(barr,"105") then
-                post = "-102"
-            else
-                post = "-101"
-            end
-            wep.Trivia_Desc = descStart .. desc_556
+        elseif barr == "74m" then
+            noN = true
+            post = "-103"
         end
-
-        if cal == "545" then
-            if barr == "74m" or barr == "rpk74m" then
-                noN = true
-                post = "-74M"
-            else
-                post = "-74"
-            end
-            wep.Trivia_Desc = descStart .. desc_545
+    elseif cal == "556" then
+        if string.EndsWith(barr,"105") then
+            post = "-102"
+        else
+            post = "-101"
         end
-
-        if foldStocks[stock] and akCals[cal] and !string.StartWith(barr,"105") then
-            if cal == "762" then
-                if barr == "t56" then
-                    post = "56-1"
-                else
-                    post = "MS"
-                end
-            else
-                mid = "S"
-            end
-        end
-
-        if akCals[cal] then
-            if string.EndsWith(barr,"105") then
-                noN = true
-                if cal == "545" then
-                    post = "-105"
-                elseif cal == "762" then
-                    post = "-104"
-                elseif cal == "556" then
-                    post = "-102"
-                end
-            else
-                if shortBarrs[barr] then
-                    post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
-                    wep.Trivia_Desc = descStart .. desc_74u
-                end
-                if !noN and atts[1].Installed then
-                    post = post .. "N"
-                end
-            end
-            
-        end
-
-        return start .. mid .. post
-    else
-        return wep.FakeName
+        wep.Trivia_Desc = descStart .. desc_556
     end
+
+    if cal == "545" then
+        if barr == "74m" or barr == "rpk74m" then
+            noN = true
+            post = "-74M"
+        else
+            post = "-74"
+        end
+        wep.Trivia_Desc = descStart .. desc_545
+    end
+
+    if foldStocks[stock] and akCals[cal] and !string.StartWith(barr,"105") then
+        if cal == "762" then
+            if barr == "t56" then
+                post = post .. "-1"
+            else
+                post = "MS"
+            end
+        else
+            mid = "S"
+        end
+    end
+
+    if akCals[cal] then
+        if string.EndsWith(barr,"105") then
+            noN = true
+            if cal == "545" then
+                post = "-105"
+            elseif cal == "762" then
+                post = "-104"
+            elseif cal == "556" then
+                post = "-102"
+            end
+        else
+            if shortBarrs[barr] then
+                post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
+                wep.Trivia_Desc = descStart .. desc_74u
+            end
+            if !noN and atts[1].Installed then
+                post = post .. "N"
+            end
+        end
+        
+    end
+
+    return start .. mid .. post
 end
 
 SWEP.Animations = {
