@@ -118,6 +118,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.ShotgunReload = true
+SWEP.NoLastCycle = true
 
 SWEP.ShootVol = 160
 SWEP.ShootPitch = 100
@@ -193,6 +194,8 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
+-- Todo: Translate manual-mode fire and reload anims
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -229,6 +232,23 @@ SWEP.Animations = {
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
+    ["fire_manual"] = {
+        Source = "fire_manual",
+        Time = 23 / 25,--30,
+        ShellEjectAt = 0.01,
+        SoundTable = {
+
+        },
+    },
+    ["cycle"] = {
+        Source = "cycle",
+        Time = 23 / 30,
+        ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+        },
+    },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 23 / 25,--30,
@@ -249,6 +269,22 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
+        Time = 40 / 30,
+        MinProgress = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+        TPAnimStartTime = 0.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "breechload.ogg",  t = 0.05},
+            {s = path .. "breechclose.ogg",  t = 0.7},
+        },
+        ForceEmpty = true,
+    },
+    ["sgreload_start_empty_manual"] = {
+        Source = "sgreload_start_empty_manual",
         Time = 40 / 30,
         MinProgress = 1,
         LHIK = true,
