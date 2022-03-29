@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 -- att.Hook_NameChange = function(wep,name)
--- 	name = "Delta Elite"
+-- 	name = "Ruger SR1911"
 -- end
 
 att.SortOrder = 10
@@ -23,6 +23,7 @@ att.Slot = "ur_m1911_caliber"
 att.AutoStats = true
 
 att.Override_Trivia_Calibre = "10mm Auto"
+-- att.Override_Trivia_Manufacturer = "Ruger"
 
 att.Mult_Damage = 35 / 45
 att.Mult_DamageMin = 20 / 15
