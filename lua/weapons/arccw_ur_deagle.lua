@@ -506,7 +506,7 @@ SWEP.Animations = {
         -- ShellEjectAt = 0.65,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path .. "rack2.ogg", t = .4}
+            {s = path .. "unjam.ogg", t = .4}
         }
     },
     -- Inspecc --
