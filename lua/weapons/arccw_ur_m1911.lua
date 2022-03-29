@@ -30,7 +30,8 @@ SWEP.TrueName = "M1911"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Venerable semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, many modern service pistols use a similar mechanism to this design.
+SWEP.Trivia_Desc = [[Venerable semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it is rarely considered an obsolete design, with its short recoil mechanism inherited by most modern pistols.
+
 Has better stopping power than many other pistols, but its single-stacked magazine can only hold a few of the large rounds.]]
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = ".45 ACP"
@@ -62,7 +63,7 @@ SWEP.Damage = 45 -- 3 shot short range kill (2 shot chest point-blank)
 SWEP.DamageMin = 15 -- 7 shot long range kill
 SWEP.RangeMin = 10
 SWEP.Range = 80 -- 3 shot until ~40m
-SWEP.Penetration = 1.5
+SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 315
@@ -137,8 +138,11 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(0.3, 3, 1)
-SWEP.HolsterAng = Angle(-5, 15, -20)
+SWEP.HolsterPos = Vector(0.3, 3, 1.6)
+SWEP.HolsterAng = Angle(-14, 0, -0.5)
+
+SWEP.SprintPos = Vector(0.3, 3, 1)
+SWEP.SprintAng = Angle(-5, 15, -20)
 
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "pistol"
@@ -194,7 +198,8 @@ SWEP.Hook_NameChange = function(wep,name)
         local atts = wep.Attachments
         local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
 
-        if cal == "10auto" then return "Delta Elite" end
+        if cal == "10auto" then return "Delta Elite"
+        elseif cal == "9mm" then return "SR1911" end
 
         return "M1911"
     else
