@@ -184,9 +184,9 @@ SWEP.BarrelOffsetHip = Vector(3, 0, -4.5)
 local path1 = ")^weapons/arccw_ud/870/"
 local path = ")^weapons/arccw_ur/spas12/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg"}
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
@@ -236,10 +236,7 @@ SWEP.Animations = {
         Source = "fire",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 }},
     },
     ["fire_manual"] = { -- No bolt cycling
         Source = "fire_manual",
