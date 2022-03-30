@@ -245,7 +245,8 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 6},
             {ind = 7, bg = 5},
             {ind = 8, bg = 2},
-            {ind = 4, bg = 1}
+            {ind = 4, bg = 1},
+            {ind = 5, bg = 1}
         },
         AttPosMods = {
             [3] = {
@@ -267,7 +268,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 1, bg = 8},
             {ind = 7, bg = 5},
-            {ind = 8, bg = 2}
+            {ind = 8, bg = 2},
+            {ind = 5, bg = 1}
         },
         AttPosMods = {
             [3] = {
