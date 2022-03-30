@@ -27,7 +27,7 @@ SWEP.TrueName = "SPAS-12"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[Combat shotgun with the ability to toggle between pump action and semi-automatic modes. This "dual-mode" operation, marketed to law enforcement, allows the weapon to accept low pressure, less-lethal ammunition that lacks the energy to properly extract.
+SWEP.Trivia_Desc = [[Flexible combat shotgun with the ability to toggle between manual and semi-automatic action. This "dual-mode" operation, marketed to law enforcement, allows the weapon to accept low pressure, less-lethal ammunition that lacks the energy to properly extract.
 The weapon's attempts to reach the American civilian market may have been struck down by legal encumberances, but it remains prominent in culture for its intimidating appearance.
 
 Switch to pump-action mode to increase accuracy and aid ammo conservation.]]
@@ -110,7 +110,7 @@ SWEP.Firemodes = {
         Override_ManualAction = true,
         Mult_AccuracyMOA = .9,
         Mult_HipDispersion = .8,
-        Mult_RPM = 1 / 2,
+        Mult_RPM = .5,
     },
     {
         Mode = 0
@@ -194,7 +194,16 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
--- Todo: Translate manual-mode fire and reload anims
+SWEP.Hook_SelectFireAnimation = function(wep,data)
+    if wep:GetCurrentFiremode().Override_ManualAction then
+        return "fire_manual"
+    end
+end
+SWEP.Hook_SelectInsertAnimation = function(wep,data)
+    if wep:GetCurrentFiremode().Override_ManualAction and data.empty then
+        return "sgreload_start_empty_manual"
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -232,7 +241,7 @@ SWEP.Animations = {
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
-    ["fire_manual"] = {
+    ["fire_manual"] = { -- No bolt cycling
         Source = "fire_manual",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
