@@ -16,12 +16,12 @@ att.AutoStats = true
 
 att.Mult_Damage = 1.2
 att.Mult_DamageMin = 1.2
-att.Mult_Range = 1.75
+att.Mult_Range = 1.25
 att.Mult_PrecisionMOA = .75
 att.Mult_Penetration = 1.5
 --att.Mult_ReloadTime = .9
 
-att.Mult_RPM = 0.6
+att.Mult_RPM = 0.8
 att.Mult_Recoil = 1.5
 -- att.Override_ClipSize = 10
 att.Mult_ShootVol = 130 / 125
