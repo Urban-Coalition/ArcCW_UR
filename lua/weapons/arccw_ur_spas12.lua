@@ -242,17 +242,17 @@ SWEP.Animations = {
         Source = "fire_manual",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {
-
-        },
+        SoundTable = {{ s = common .. "manual_trigger.ogg", t = 0 }},
     },
     ["cycle"] = {
         Source = "cycle",
         Time = 23 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path .. "mech.ogg", t = 0},
+            {s = path .. "forearm_back.ogg", t = 0},
+            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = path .. "forearm_forward.ogg", t = 0.2}, -- Not temporary
         },
     },
     ["fire_empty"] = {
@@ -315,7 +315,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0},
+            {s = {common .. "shotgun-insert-alt-01.ogg", common .. "shotgun-insert-alt-02.ogg", common .. "shotgun-insert-alt-03.ogg"},  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
