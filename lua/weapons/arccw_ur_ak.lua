@@ -298,6 +298,12 @@ SWEP.AttachmentElements = {
             {ind =7, bg = 3},
             {ind = 11, bg = 2},
             {ind = 8, bg = 2}
+        },
+        AttPosMods = {
+            [7] = {
+                vpos = Vector(-0.4, 16.75, 2.8),
+                vang = Angle(-90, 270, 0),
+            },
         }
     },
     ["barrel_t56_ext"] = {
@@ -305,6 +311,12 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 3},
             {ind = 11, bg = 3},
             {ind = 8, bg = 2}
+        },
+        AttPosMods = {
+            [7] = {
+                vpos = Vector(-0.4, 16.75, 2.8),
+                vang = Angle(-90, 270, 0),
+            },
         }
     },
     ["barrel_vepr"] = {
