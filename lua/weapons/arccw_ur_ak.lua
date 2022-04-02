@@ -25,7 +25,7 @@ SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "Soviet Union"
-SWEP.Trivia_Year = 1947
+SWEP.Trivia_Year = 1959
 
 SWEP.Slot = 2
 SWEP.CamAttachment = 3
