@@ -207,7 +207,13 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 7},
             -- {ind = 7, bg = 6},
             -- {ind = 8, bg = 2},
-        }
+        },
+        AttPosMods = {
+            [7] = {
+                vpos = Vector(-0.4, 11.75, 4.0),
+                vang = Angle(-90, 270, 0),
+            },
+        },
     },
     ["barrel_rpk"] = {
         VMBodygroups = {
@@ -339,10 +345,16 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
-            vpos = Vector(0, 20.6, 2.65),
-            vang = Angle(0, 270, 0),
-        }},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 20.6, 2.65),
+                vang = Angle(0, 270, 0),
+            },
+            [7] = {
+                vpos = Vector(-0.4, 11.75, 4.0),
+                vang = Angle(-90, 270, 0),
+            },
+        },
         Override_IronSightStruct = {
             Pos = Vector(-2.6, 0, 0.45),
             Ang = Angle(0.55, 0.265, 5.53),
@@ -713,8 +725,8 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-1, 10.5, 2.8),
-            vang = Angle(-90, 270, 0),
+            vpos = Vector(0, 19.6, 2.1),
+            vang = Angle(0, 270, 0),
         },
         GivesFlags = {"tac"},
         --InstalledEles = {"ud_m16_clamp_fullsize"}
