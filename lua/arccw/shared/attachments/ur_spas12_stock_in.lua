@@ -18,8 +18,8 @@ att.AutoStats = true
 att.Free = true
 att.IgnorePickX = true
 
-att.Mult_Recoil = 1.1
-att.Mult_RecoilSide = 1.25
+att.Mult_Recoil = 1.15
+att.Mult_RecoilSide = 1.5
 
 att.Mult_SightedSpeedMult = 1.1
 att.Mult_ShootSpeedMult = 1.1
@@ -29,7 +29,7 @@ att.Mult_Sway = 1.5
 att.Add_BarrelLength = -12
 
 att.Override_IronSightStruct = {
-    Pos = Vector(-1 ,4, 0),
+    Pos = Vector(-1 ,6, 0),
      Ang = Angle(0, 0, 0),
      Magnification = 1.075,
      SwitchToSound = "",
@@ -41,5 +41,9 @@ att.Hook_TranslateAnimation = function(wep,anim)
         return anim .. "_fold"
     end
 end
+
+att.Override_ActivePos = Vector(0.5, 5, 0)
+att.Override_HoldtypeActive = "shotgun"
+att.Override_HoldtypeSights = "ar2"
 
 att.GivesFlags = {"spas12_foldstock"}

@@ -317,7 +317,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "breechload.ogg",  t = .4},
-            {s = path .. "breechclose.ogg",  t = 1},
+            {s = path .. "breechclose.ogg",  t = 1}, -- Temporary
             {s = rottle,  t = 1.5},
 
             {s = rottle,  t = 2},
@@ -339,7 +339,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "breechload.ogg",  t = .4},
-            {s = path .. "breechclose.ogg",  t = 1},
+            {s = path .. "breechclose.ogg",  t = 1}, -- Temporary
             {s = rottle,  t = 1.5},
 
             {s = rottle,  t = 2},
