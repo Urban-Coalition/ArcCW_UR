@@ -166,8 +166,11 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.HolsterPos = Vector(-0.5, -4, -3)
-SWEP.HolsterAng = Angle(3.5, 7, -20)
+SWEP.SprintPos = Vector(-0.5, -4, -3)
+SWEP.SprintAng = Angle(3.5, 7, -20)
+
+SWEP.HolsterPos = Vector(2.5, -1, -3)
+SWEP.HolsterAng = Angle(-3.5, 20, -20)
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -287,8 +290,44 @@ SWEP.Animations = {
             {s = common .. "grab.ogg",  t = 0.2},
         }
     },
+    ["sgreload_start_fold"] = {
+        Source = "sgreload_start_fold",
+        Time = 25 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKOut = 0,
+        SoundTable = {
+            {s = rottle,  t = 0},
+            {s = ratel,  t = 0.1},
+            {s = common .. "grab.ogg",  t = 0.2},
+        }
+    },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty_semi",
+        Time = 80 / 30,
+        -- MinProgress = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+        TPAnimStartTime = 0.5,
+        ShellEjectAt = false,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path .. "breechload.ogg",  t = .4},
+            {s = path .. "breechclose.ogg",  t = 1},
+            {s = rottle,  t = 1.5},
+
+            {s = rottle,  t = 2},
+            {s = ratel,  t = 2.1},
+            {s = common .. "grab.ogg",  t = 2.2},
+        },
+        ForceEmpty = true,
+    },
+    ["sgreload_start_empty_fold"] = {
+        Source = "sgreload_start_empty_semi_fold",
         Time = 80 / 30,
         -- MinProgress = 1,
         LHIK = true,
@@ -333,8 +372,46 @@ SWEP.Animations = {
         },
         ForceEmpty = true,
     },
+    ["sgreload_start_empty_manual_fold"] = {
+        Source = "sgreload_start_empty_fold",
+        Time = 85 / 30,
+        MinProgress = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+        TPAnimStartTime = 0.5,
+        ShellEjectAt = .1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0},
+            {s = path .. "forearm_back.ogg", t = 0},
+            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = rottle, t = .2},
+            {s = path .. "breechload.ogg",  t = .7},
+            {s = path .. "forearm_forward.ogg", t = 1.6},
+
+            {s = rottle,  t = 2.1},
+            {s = ratel,  t = 2.2},
+            {s = common .. "grab.ogg",  t = 2.3},
+        },
+        ForceEmpty = true,
+    },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
+        Time = 18 / 30,
+        MinProgress = 0.24,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+        SoundTable = {
+            {s = {common .. "shotgun-insert-alt-01.ogg", common .. "shotgun-insert-alt-02.ogg", common .. "shotgun-insert-alt-03.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
+        },
+    },
+    ["sgreload_insert_fold"] = {
+        Source = "sgreload_insert_fold",
         Time = 18 / 30,
         MinProgress = 0.24,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
@@ -362,6 +439,21 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 0.55},
         },
     },
+    ["sgreload_finish_fold"] = {
+        Source = "sgreload_finish_fold",
+        Time = 40 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.6,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.8,
+        SoundTable = {
+            {s = rottle,  t = 0.2},
+            {s = ratel,  t = 0.35},
+            {s = common .. "shoulder.ogg",  t = 0.55},
+        },
+    },
 }
 
 SWEP.BulletBones = {
@@ -371,6 +463,21 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
+    ["ur_spas12_barrel_short"] = {
+        VMBodygroups = {{ind = 3, bg = 1}}
+    },
+
+    ["ur_spas12_stock_in"] = {
+        VMBodygroups = {{ind = 7, bg = 3}}
+    },
+    ["ur_spas12_stock_none"] = {
+        VMBodygroups = {{ind = 7, bg = 5}}
+    },
+
+    ["ur_spas12_tube_short"] = {
+        VMBodygroups = {{ind = 4, bg = 1}}
+    },
+
     ["rail_classic"] = {
         VMBodygroups = {{ind = 8, bg = 2}}
     },
@@ -397,6 +504,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"rail_classic"},
         DefaultEles = {"rail_none_fix"},
+        ExcludeFlags = {"spas12_foldstock"}
     },
     {
         PrintName = "Barrel",
@@ -435,13 +543,13 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"ud_1014_stock"},
+        Slot = {"ur_spas12_stock"},
         DefaultAttName = "Extended Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_stock.png", "smooth mips"),
     },
     {
         PrintName = "Tube Type",
-        Slot = {"ud_1014_tube"},
+        Slot = {"ur_spas12_tube"},
         DefaultAttName = "7 Shell Tube",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_tube.png", "smooth mips"),
         DefaultEles = {"ud_autoshotgun_tube_short"},
