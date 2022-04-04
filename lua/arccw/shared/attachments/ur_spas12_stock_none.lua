@@ -1,4 +1,4 @@
-att.PrintName = "Buffer Tube"
+att.PrintName = "No Stock"
 att.Icon = Material("entities/att/acwatt_ud_m1014_stock_buffer.png", "smooth mips")
 att.Description = "Stocks are overrated."
 att.Desc_Pros = {
