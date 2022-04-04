@@ -110,7 +110,6 @@ SWEP.Firemodes = {
         Override_ManualAction = true,
         Mult_AccuracyMOA = .9,
         Mult_HipDispersion = .8,
-        Mult_RPM = 1,
     },
     {
         Mode = 0
@@ -302,6 +301,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path .. "breechload.ogg",  t = .4},
             {s = path .. "breechclose.ogg",  t = 1},
+            {s = rottle,  t = 1.5},
 
             {s = rottle,  t = 2},
             {s = ratel,  t = 2.1},
