@@ -4,7 +4,7 @@ att.Icon = Material("entities/att/ur_ak/recievers/ak12.png", "mips smooth")
 att.Description = [[Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration.
 Features a dark, glossy finish and a 2-round burst group.]]
 att.Desc_Pros = {
-    "Two-round burst mode"
+    "ur.ak.burst"
 }
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true

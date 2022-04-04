@@ -161,9 +161,9 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.035, -4, 1.602),
-     Ang = Angle(.345, 0.006, 0),
-     Magnification = 1.1,
+     Pos = Vector(-3.75, -4, 1.2),
+     Ang = Angle(.345, .03, 0),
+     Magnification = 1.05,
      SwitchToSound = "",
 }
 
@@ -201,7 +201,7 @@ SWEP.Hook_SelectFireAnimation = function(wep,data)
 end
 SWEP.Hook_SelectInsertAnimation = function(wep,data)
     if wep:GetCurrentFiremode().Override_ManualAction and data.empty then
-        return "sgreload_start_empty_manual"
+        --return "sgreload_start_empty_manual"
     end
 end
 
@@ -214,22 +214,22 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 20 / 30,
+        --Time = 20 / 30,
         SoundTable = ArcCW.UD.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = 20 / 30,
+        --Time = 20 / 30,
         SoundTable = ArcCW.UD.DrawSounds,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 20 / 30,
+        --Time = 20 / 30,
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 20 / 30,
+        --Time = 20 / 30,
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["fire"] = {
@@ -267,7 +267,7 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",
-        Time = 22 / 30,
+        Time = 25 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
@@ -276,7 +276,7 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty_semi",
-        Time = 70 / 30,
+        --Time = 70 / 30,
         -- MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -292,7 +292,7 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty_manual"] = {
         Source = "sgreload_start_empty",
-        Time = 40 / 30,
+        --Time = 40 / 30,
         MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -322,7 +322,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 30 / 30,
+        Time = 40 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
@@ -364,7 +364,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "21.5\" Special Purpose Barrel", --16\" M4 Super 90 SBS Barrel
         DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_barrel.png", "smooth mips"),
-        Slot = "ud_1014_barrel",
+        Slot = "ur_spas12_barrel",
     },
     {
         PrintName = "Muzzle",
