@@ -2,7 +2,7 @@ att.PrintName = "21.5\" Freeman Barrel"
 att.Icon = nil
 att.Description = [[Unorthodox fire control group and barrel accomodation that supports a two-round burst firemode. Replaces the original dual-mode mechanism, relegating the weapon to pump action in both modes.
 
-The two-round burst can shred most targets, but depletes ammo quickly.]]
+The two-round burst can shred most targets, but depletes ammo quickly. The complicated mechanism also has a heavier pump.]]
 att.Desc_Pros = {
     "ur.ak.burst"
 }
@@ -24,16 +24,17 @@ att.Override_Firemodes = {
         Mult_RPM = 1,
     },
     {
-        Mode = 1, -- Mode = -2,
+        Mode = 1,
         PrintName = "ur.spas12.dbl",
         Override_ManualAction = true,
         Mult_AccuracyMOA = .9,
         Mult_HipDispersion = .8,
-        Mult_RPM = 1,
 
-        Override_Num = 18,
+        Mult_Num = 2, -- Currently defunct
         Override_AmmoPerShot = 2,
     },
 }
+
+att.Override_Firemodes_Priority = 2
 
 att.Mult_CycleTime = 1.25

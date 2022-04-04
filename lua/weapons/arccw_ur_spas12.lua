@@ -199,9 +199,9 @@ SWEP.Hook_SelectFireAnimation = function(wep,data)
         return "fire_manual"
     end
 end
-SWEP.Hook_SelectInsertAnimation = function(wep,data)
-    if wep:GetCurrentFiremode().Override_ManualAction and data.empty then
-        --return "sgreload_start_empty_manual"
+SWEP.Hook_SelectReloadAnimation = function(wep,curanim)
+    if wep:GetCurrentFiremode().Override_ManualAction and curanim == "sgreload_start_empty" then
+        return "sgreload_start_empty_manual"
     end
 end
 
@@ -276,7 +276,7 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty_semi",
-        --Time = 70 / 30,
+        Time = 80 / 30,
         -- MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
