@@ -23,6 +23,7 @@ att.Mult_RecoilSide = 1.25
 
 att.Mult_SightedSpeedMult = 1.1
 att.Mult_ShootSpeedMult = 1.1
+att.Mult_SightTime = .8
 
 att.Mult_Sway = 1.5
 att.Add_BarrelLength = -8
