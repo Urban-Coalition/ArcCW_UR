@@ -32,8 +32,20 @@ att.Override_Firemodes = {
 
         Mult_Num = 2, -- Currently defunct
         Override_AmmoPerShot = 2,
+        Mult_Recoil = 2,
     },
 }
+
+att.Hook_GetShootSound = function(wep,sound)
+    if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
+        return "arccw_uc/common/gl_fire_buck.ogg"
+    end
+end
+att.Hook_GetDistantShootSound = function(wep,sound)
+    if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
+        return "arccw_uc/common/gl_fire_buck_dist.ogg"
+    end
+end
 
 att.Override_Firemodes_Priority = 2
 
