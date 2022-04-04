@@ -10,7 +10,7 @@
 // 0.95 0.85 0.8 plum
 // 0.87 0.93 0.8 od
 // map interp
-	"$color2"					"[1 1 1]" // vector -- rgb tinting of the basetexture
+	"$color2"					"[0.5 0.5 0.5]" // vector -- rgb tinting of the basetexture
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
