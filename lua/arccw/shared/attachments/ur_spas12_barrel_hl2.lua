@@ -1,6 +1,6 @@
 att.PrintName = "21.5\" Freeman Barrel"
 att.Icon = nil
-att.Description = [[Futuristic fire control group and barrel accomodation that supports a two-round burst firemode. Replaces the original dual-mode mechanism, relegating the weapon to pump action in both modes.
+att.Description = [[Futuristic fire control group and barrel accomodation that supports a near-instant, gas-powered two-round burst. Replaces the original dual-mode mechanism, relegating the weapon to pump action in both modes.
 
 The two-round burst can shred most targets, but depletes ammo quickly. The complicated mechanism also has a heavier pump.]]
 att.Desc_Pros = {
@@ -58,4 +58,4 @@ att.Hook_SelectFireAnimation = function(wep,curanim)
     end
 end
 
-att.Mult_CycleTime = 1.25
+att.Mult_CycleTime = 1.3
