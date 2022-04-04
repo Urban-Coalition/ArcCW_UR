@@ -110,7 +110,7 @@ SWEP.Firemodes = {
         Override_ManualAction = true,
         Mult_AccuracyMOA = .9,
         Mult_HipDispersion = .8,
-        Mult_RPM = .5,
+        Mult_RPM = 1,
     },
     {
         Mode = 0
@@ -233,21 +233,22 @@ SWEP.Animations = {
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["fire"] = {
-        Source = "fire",
+        Source = "fire_semi",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 }},
     },
     ["fire_manual"] = { -- No bolt cycling
-        Source = "fire_manual",
+        Source = "fire_pump",
         Time = 23 / 25,--30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = false,
         SoundTable = {{ s = common .. "manual_trigger.ogg", t = 0 }},
     },
     ["cycle"] = {
         Source = "cycle",
-        Time = 23 / 30,
+        Time = 30 / 30,
         ShellEjectAt = 0.01,
+        MinProgress = .5,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0},
             {s = path .. "forearm_back.ogg", t = 0},
@@ -266,7 +267,7 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",
-        Time = 16 / 30,
+        Time = 22 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
@@ -274,9 +275,9 @@ SWEP.Animations = {
         LHIKOut = 0,
     },
     ["sgreload_start_empty"] = {
-        Source = "sgreload_start_empty",
-        Time = 40 / 30,
-        MinProgress = 1,
+        Source = "sgreload_start_empty_semi",
+        Time = 70 / 30,
+        -- MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0,
@@ -290,7 +291,7 @@ SWEP.Animations = {
         ForceEmpty = true,
     },
     ["sgreload_start_empty_manual"] = {
-        Source = "sgreload_start_empty_manual",
+        Source = "sgreload_start_empty",
         Time = 40 / 30,
         MinProgress = 1,
         LHIK = true,
@@ -321,7 +322,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 22 / 30,
+        Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
