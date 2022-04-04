@@ -27,7 +27,7 @@ SWEP.TrueName = "SPAS-12"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[Flexible combat shotgun with the ability to toggle between manual and semi-automatic action. This "dual-mode" operation, marketed to law enforcement, allows the weapon to accept low pressure, less-lethal ammunition that lacks the energy to properly extract.
+SWEP.Trivia_Desc = [[Flexible combat shotgun with the ability to toggle between manual and semi-automatic action. This "dual-mode" operation, as marketed to law enforcement, allows the weapon to accept low pressure, less-lethal ammunition that lacks the energy to properly extract.
 The weapon's attempts to reach the American civilian market may have been struck down by legal encumberances, but it remains prominent in culture for its intimidating appearance.
 
 Switch to pump-action mode to increase accuracy and aid ammo conservation.]]
@@ -144,7 +144,7 @@ SWEP.Primary.Ammo = "buckshot"
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.88
-SWEP.SightedSpeedMult = 0.6
+SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.625
 SWEP.ShootSpeedMult = 0.75
 
@@ -371,7 +371,12 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
-    
+    ["rail_classic"] = {
+        VMBodygroups = {{ind = 8, bg = 2}}
+    },
+    ["rail_none_fix"] = {
+        VMBodygroups = {{ind = 8, bg = 0}}
+    },
 }
 
 SWEP.Attachments = {
@@ -379,15 +384,19 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         Slot = {"optic_lp", "optic", "sniper_optic"},
-        Bone = "1014_parent",
+        Bone = "spas_parent",
         Offset = {
-            vpos = Vector(0, -2, 3.5),
-            vang = Angle(90, 2, -90),
+            vpos = Vector(0, -1, 0.4),
+            vang = Angle(90, -90, -90),
         },
+        SlideAmount = nil,
+        CorrectiveAng = Angle(180,0,0),
         SlideAmount = {
-            vmin = Vector(0, -2, 2),
-            vmax = Vector(0, -2, 5)
+            vmin = Vector(0, 1, 0.4),
+            vmax = Vector(0, -2, 0.4)
         },
+        InstalledEles = {"rail_classic"},
+        DefaultEles = {"rail_none_fix"},
     },
     {
         PrintName = "Barrel",
@@ -399,29 +408,29 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"choke", "muzzle_shotgun"},
-        Bone = "1014_parent",
+        Bone = "spas_parent",
         Offset = {
-            vpos = Vector(-0.02, -0.785, 30.2),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(-0.02, 25.75, -0.7),
+            vang = Angle(90, -90, -90),
         },
         ExcludeFlags = {"nomuzzle"}
     },
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
-        Bone = "1014_parent",
+        Bone = "pump",
         Offset = {
-            vpos = Vector(0, 2, 12),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, -1, 0),
+            vang = Angle(90, -90, -90),
         },
     },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
-        Bone = "1014_parent",
+        Bone = "spas_parent",
         Offset = {
-            vpos = Vector(0, 1, 19.5),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 20, -2.3),
+            vang = Angle(90, -90, -90),
         },
     },
     {
@@ -461,22 +470,22 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "1014_parent",
+        Bone = "spas_parent",
         Offset = {
-            vpos = Vector(0.6, -0.5, 4),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0.6, .5, -1.5),
+            vang = Angle(90, -90, -90),
         },
     },
 }
 
 local lookup_barrel = {
     default = 1,
+    ur_spas12_comp = 1,
     ur_spas12_barrel_short = 0,
 }
 
 local lookup_tube = {
     default = 1,
-    ur_spas12_tube_ext = 2,
     ur_spas12_tube_short = 0,
 }
 
