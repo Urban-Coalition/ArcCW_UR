@@ -29,8 +29,10 @@ att.Override_Firemodes = {
         Mult_AccuracyMOA = 1.1,
         Mult_HipDispersion = .8,
 
-        Mult_Num = 2, -- Currently defunct
+        Mult_Num = 2,
         Override_AmmoPerShot = 2,
+        Mult_Damage = 2,
+        Mult_DamageMin = 2,
         Mult_Recoil = 2,
         CustomBars = "--___"
     },
