@@ -10,6 +10,10 @@ att.AutoStats = true
 
 att.Slot = "ur_mp5_barrel"
 
+att.LHIK = true
+
+att.ModelOffset = Vector(25, 2.5, -4.7)
+att.Model = "models/weapons/arccw/atts/ur_kurzlhik.mdl" // stole this pose from the tall troy grip lol!!!
 
 att.SortOrder = 4.5
 
