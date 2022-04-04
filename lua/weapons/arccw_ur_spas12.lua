@@ -151,7 +151,7 @@ SWEP.ShootSpeedMult = 0.75
 
 -- Length --
 
-SWEP.BarrelLength = 50
+SWEP.BarrelLength = 46
 SWEP.ExtraSightDist = 10
 
 -- Ironsights / Customization / Poses --
@@ -205,6 +205,9 @@ SWEP.Hook_SelectReloadAnimation = function(wep,curanim)
     end
 end
 
+local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
+local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -233,6 +236,12 @@ SWEP.Animations = {
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["fire"] = {
+        Source = "fire_semi",
+        Time = 23 / 25,--30,
+        ShellEjectAt = 0.01,
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 }},
+    },
+    ["fire_2bst"] = {
         Source = "fire_semi",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
@@ -273,6 +282,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKOut = 0,
+        SoundTable = {
+            {s = rottle,  t = 0},
+            {s = ratel,  t = 0.1},
+            {s = common .. "grab.ogg",  t = 0.2},
+        }
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty_semi",
@@ -282,27 +296,40 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0,
         TPAnimStartTime = 0.5,
+        ShellEjectAt = false,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "breechload.ogg",  t = 0.05},
-            {s = path .. "breechclose.ogg",  t = 0.7},
+            {s = rottle, t = 0},
+            {s = path .. "breechload.ogg",  t = .4},
+            {s = path .. "breechclose.ogg",  t = 1},
+
+            {s = rottle,  t = 2},
+            {s = ratel,  t = 2.1},
+            {s = common .. "grab.ogg",  t = 2.2},
         },
         ForceEmpty = true,
     },
     ["sgreload_start_empty_manual"] = {
         Source = "sgreload_start_empty",
-        --Time = 40 / 30,
+        Time = 85 / 30,
         MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0,
         TPAnimStartTime = 0.5,
+        ShellEjectAt = .1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "breechload.ogg",  t = 0.05},
-            {s = path .. "breechclose.ogg",  t = 0.7},
+            {s = path .. "mech.ogg", t = 0},
+            {s = path .. "forearm_back.ogg", t = 0},
+            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = rottle, t = .2},
+            {s = path .. "breechload.ogg",  t = .7},
+            {s = path .. "forearm_forward.ogg", t = 1.6},
+
+            {s = rottle,  t = 2.1},
+            {s = ratel,  t = 2.2},
+            {s = common .. "grab.ogg",  t = 2.3},
         },
         ForceEmpty = true,
     },
@@ -330,7 +357,9 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.8,
         SoundTable = {
-            {s = common .. "shoulder.ogg",  t = 0.4},
+            {s = rottle,  t = 0.2},
+            {s = ratel,  t = 0.35},
+            {s = common .. "shoulder.ogg",  t = 0.55},
         },
     },
 }
