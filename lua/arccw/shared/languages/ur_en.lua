@@ -19,5 +19,5 @@ L["ur.mp5.noburst"] = "Disables burst mode"
 L["ur.mp5.sd"] = "No distant firing sound"
 
 L["ur.spas12.pump"] = "Manual action only"
-L["ur.spas12.dbl"] = "Double"
-L["ur.spas12.dbl.abbrev"] = "DBL"
+L["ur.spas12.dbl"] = "2-round burst"
+L["ur.spas12.dbl.abbrev"] = "2BST"
