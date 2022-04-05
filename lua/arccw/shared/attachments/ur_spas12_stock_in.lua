@@ -30,7 +30,7 @@ att.Add_BarrelLength = -12
 
 att.Override_IronSightStruct = {
     Pos = Vector(-1 ,6.5, 0),
-     Ang = Angle(0, 0, -5),
+     Ang = Angle(1, 0, -5),
      Magnification = 1.075,
      SwitchToSound = "",
      CrosshairInSights = true,
