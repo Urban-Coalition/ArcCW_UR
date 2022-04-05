@@ -82,7 +82,7 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 7
+SWEP.Primary.ClipSize = 8
 SWEP.ChamberLoadEmpty = 1
 
 -- Recoil --
@@ -474,7 +474,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 7, bg = 5}}
     },
 
-    ["ur_spas12_tube_short"] = {
+    ["ur_spas12_tube_reduced"] = {
         VMBodygroups = {{ind = 4, bg = 1}}
     },
 
@@ -550,9 +550,8 @@ SWEP.Attachments = {
     {
         PrintName = "Tube Type",
         Slot = {"ur_spas12_tube"},
-        DefaultAttName = "7 Shell Tube",
+        DefaultAttName = "8 Shell Tube",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_tube.png", "smooth mips"),
-        DefaultEles = {"ud_autoshotgun_tube_short"},
     },
     {
         PrintName = "Ammo Type",
@@ -594,7 +593,7 @@ local lookup_barrel = {
 
 local lookup_tube = {
     default = 1,
-    ur_spas12_tube_short = 0,
+    ur_spas12_tube_reduced = 0,
 }
 
 SWEP.Hook_ExtraFlags = function(wep, data)
