@@ -508,6 +508,15 @@ SWEP.AttachmentElements = {
     ["rail_classic"] = {
         VMBodygroups = {{ind = 8, bg = 2}}
     },
+    ["rail_modern"] = {
+        VMBodygroups = {{ind = 8, bg = 1}},
+        AttPosMods = {[1] ={
+            SlideAmount = {
+                vmin = Vector(0, 0.5, 0.65),
+                vmax = Vector(0, 2.5, 0.65)
+            },
+        }}
+    },
     ["rail_none_fix"] = {
         VMBodygroups = {{ind = 8, bg = 0}}
     },
@@ -528,8 +537,8 @@ SWEP.Attachments = {
         SlideAmount = nil,
         CorrectiveAng = Angle(180,0,0),
         SlideAmount = {
-            vmin = Vector(0, 1, 0.4),
-            vmax = Vector(0, -2, 0.4)
+            vmin = Vector(0, -2, 0.4),
+            vmax = Vector(0, 1, 0.4)
         },
         InstalledEles = {"rail_classic"},
         DefaultEles = {"rail_none_fix"},
@@ -604,7 +613,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
+        Slot = {"charm", "fml_charm", "ur_spas12_charm"},
         FreeSlot = true,
         Bone = "spas_parent",
         Offset = {
