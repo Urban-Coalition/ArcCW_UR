@@ -19,22 +19,23 @@ att.Override_Firemodes = {
         Mode = 1,
         PrintName = "fcg.pump",
         Override_ManualAction = true,
-        Mult_AccuracyMOA = .9,
-        Mult_HipDispersion = .8,
+        Mult_AccuracyMOA = 0.8,
+        Mult_HipDispersion = 0.8,
     },
     {
         Mode = 1,
         PrintName = "ur.spas12.dbl",
         Override_ManualAction = true,
-        Mult_AccuracyMOA = 1.1,
-        Mult_HipDispersion = .8,
+        Mult_AccuracyMOA = 1.15,
+        Mult_HipDispersion = 0.8,
 
         Mult_Num = 2,
         Override_AmmoPerShot = 2,
         Mult_Damage = 2,
         Mult_DamageMin = 2,
         Mult_Recoil = 2,
-        CustomBars = "--___"
+        CustomBars = "--___",
+        Mult_CycleTime = 1.13
     },
     {
         Mode = 0,
@@ -52,10 +53,13 @@ att.Hook_GetDistantShootSound = function(wep,sound)
         --return "arccw_uc/common/gl_fire_buck_dist.ogg"
     end
 end
+-- Overwritten by weapon's hook
+--[[]
 att.Hook_SelectFireAnimation = function(wep,curanim)
     if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
         return "fire_2bst"
     end
 end
+]]
 
-att.Mult_CycleTime = 1.3
+att.Mult_CycleTime = 1.15

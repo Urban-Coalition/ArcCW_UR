@@ -1,6 +1,6 @@
 att.PrintName = "No Stock"
 att.Icon = Material("entities/att/acwatt_ud_m1014_stock_buffer.png", "smooth mips")
-att.Description = "Stocks are overrated."
+att.Description = "A real theoretical physicist won't need this."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -108,8 +108,8 @@ SWEP.Firemodes = {
         Mode = 1,
         PrintName = "fcg.pump",
         Override_ManualAction = true,
-        Mult_AccuracyMOA = .9,
-        Mult_HipDispersion = .8,
+        Mult_AccuracyMOA = 0.8,
+        Mult_HipDispersion = 0.8,
     },
     {
         Mode = 0
@@ -197,7 +197,9 @@ SWEP.ShootDrySound = common .. "manual_trigger.ogg"
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Hook_SelectFireAnimation = function(wep,data)
-    if wep:GetCurrentFiremode().Override_ManualAction then
+    if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
+        return "fire_2bst"
+    elseif wep:GetCurrentFiremode().Override_ManualAction then
         return "fire_manual"
     end
 end
@@ -245,9 +247,10 @@ SWEP.Animations = {
     },
     ["fire_2bst"] = {
         Source = "fire_semi",
-        Time = 23 / 25,--30,
+        Time = 35 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 }},
+        MinProgress = 0.4
     },
     ["fire_manual"] = { -- No bolt cycling
         Source = "fire_pump",
@@ -473,6 +476,8 @@ SWEP.BulletBones = {
 }
 
 -- Bodygroups --
+
+SWEP.DefaultElements = {"nobolt"}
 
 SWEP.AttachmentElements = {
     ["ur_spas12_barrel_short"] = {
