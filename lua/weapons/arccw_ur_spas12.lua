@@ -271,7 +271,7 @@ SWEP.Animations = {
         Source = "cycle",
         Time = 30 / 30,
         ShellEjectAt = 0.01,
-        MinProgress = .5,
+        MinProgress = .25,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0},
             {s = path .. "forearm_back.ogg", t = 0},
