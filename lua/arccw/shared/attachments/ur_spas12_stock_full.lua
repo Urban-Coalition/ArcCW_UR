@@ -1,0 +1,17 @@
+att.PrintName = "Sporting Stock"
+att.Icon = Material("entities/att/acwatt_ud_m1014_stock_in.png", "smooth mips")
+att.Description = "Solid, non-adjustable polymer stock designed specifically for the civilian market. Provides a better brace at the cost of combat mobility."
+att.Desc_Pros = {
+}
+att.Desc_Cons = {
+}
+att.Desc_Neutrals = {
+}
+att.Slot = "ur_spas12_stock"
+
+att.AutoStats = true
+
+att.Mult_Recoil = .8
+att.Mult_Sway = .8
+
+att.Mult_SightedSpeedMult = .85

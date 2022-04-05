@@ -267,6 +267,18 @@ SWEP.Animations = {
             {s = path .. "forearm_forward.ogg", t = 0.2}, -- Not temporary
         },
     },
+    ["unjam"] = {
+        Source = "cycle",
+        Time = 30 / 30,
+        ShellEjectAt = 0.01,
+        MinProgress = .5,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0},
+            {s = path .. "forearm_back.ogg", t = 0},
+            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = path .. "forearm_forward.ogg", t = 0.2}, -- Not temporary
+        },
+    },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 23 / 25,--30,
@@ -464,9 +476,18 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
     ["ur_spas12_barrel_short"] = {
-        VMBodygroups = {{ind = 3, bg = 1}}
+        VMBodygroups = {{ind = 3, bg = 1}},
+        AttPosMods = {[3] = {
+            vpos = Vector(-0.02, 22.25, -0.7),
+        }}
     },
 
+    ["ur_spas12_stock_full"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+            {ind = 7, bg = 2},
+        }
+    },
     ["ur_spas12_stock_in"] = {
         VMBodygroups = {{ind = 7, bg = 3}}
     },
