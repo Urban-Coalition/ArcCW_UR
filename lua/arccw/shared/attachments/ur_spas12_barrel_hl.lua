@@ -33,7 +33,7 @@ att.Override_Firemodes = {
         Override_AmmoPerShot = 2,
         Mult_Damage = 2,
         Mult_DamageMin = 2,
-        Mult_Recoil = 2,
+        Mult_Recoil = 1.5,
         CustomBars = "--___",
         Mult_CycleTime = 1.13
     },

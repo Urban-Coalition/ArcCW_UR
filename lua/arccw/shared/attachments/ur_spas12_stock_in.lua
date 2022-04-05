@@ -7,7 +7,8 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     "ur.spas12.folded",
-    "uc.nooptics"
+    "uc.nooptics",
+    "uc.altnofs",
 }
 att.Desc_Neutrals = {
 }
@@ -21,7 +22,7 @@ att.IgnorePickX = true
 att.Mult_Recoil = 1.15
 att.Mult_RecoilSide = 1.5
 
-att.Mult_SightedSpeedMult = 1.1
+att.Mult_SightedSpeedMult = 1.2
 att.Mult_ShootSpeedMult = 1.1
 att.Mult_SightTime = .8
 
@@ -45,5 +46,11 @@ end
 att.Override_ActivePos = Vector(0.5, 5, 0)
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"
+
+att.A_Hook_Add_SightsDispersion = function(wep, data)
+    if data and !wep.Attachments[1].Installed then
+        data.add = data.add + 75
+    end
+end
 
 att.GivesFlags = {"spas12_foldstock"}

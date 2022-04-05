@@ -477,8 +477,6 @@ SWEP.BulletBones = {
 
 -- Bodygroups --
 
-SWEP.DefaultElements = {"nobolt"}
-
 SWEP.AttachmentElements = {
     ["ur_spas12_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
