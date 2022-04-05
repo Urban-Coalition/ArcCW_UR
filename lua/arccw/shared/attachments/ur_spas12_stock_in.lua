@@ -29,8 +29,8 @@ att.Mult_Sway = 1.5
 att.Add_BarrelLength = -12
 
 att.Override_IronSightStruct = {
-    Pos = Vector(-1 ,6, 0),
-     Ang = Angle(0, 0, 0),
+    Pos = Vector(-1 ,6.5, 0),
+     Ang = Angle(0, 0, -5),
      Magnification = 1.075,
      SwitchToSound = "",
      CrosshairInSights = true,
