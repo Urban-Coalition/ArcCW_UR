@@ -10,6 +10,8 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ur_spas12_barrel"
 
+att.SortOrder = 18
+
 att.AutoStats = true
 
 att.Mult_AccuracyMOA = 1.5

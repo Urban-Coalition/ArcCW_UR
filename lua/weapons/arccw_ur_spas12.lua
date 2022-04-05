@@ -481,6 +481,9 @@ SWEP.AttachmentElements = {
             vpos = Vector(-0.02, 22.25, -0.7),
         }}
     },
+    ["ur_spas12_barrel_sport"] = {
+        VMBodygroups = {{ind = 3, bg = 2}},
+    },
 
     ["ur_spas12_stock_full"] = {
         VMBodygroups = {
@@ -551,7 +554,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "pump",
         Offset = {
-            vpos = Vector(0, -1, 0),
+            vpos = Vector(0, -5, .1),
             vang = Angle(90, -90, -90),
         },
     },
