@@ -937,7 +937,6 @@ SWEP.Hook_NameChange = function(wep,name)
         if barr == "74m" or barr == "rpk74m" then
             noN = true
             post = "-74M"
-        else
         elseif shortBarrs[barr] then
             post = "-74U"
             wep.Trivia_Desc = descStart .. desc_74u
