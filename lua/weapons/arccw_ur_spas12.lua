@@ -441,7 +441,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 40 / 30,
+        Time = 45 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
@@ -456,7 +456,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish_fold"] = {
         Source = "sgreload_finish_fold",
-        Time = 40 / 30,
+        Time = 45 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
