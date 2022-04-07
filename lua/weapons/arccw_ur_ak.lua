@@ -938,6 +938,10 @@ SWEP.Hook_NameChange = function(wep,name)
             noN = true
             post = "-74M"
         else
+        elseif shortBarrs[barr] then
+            post = "-74U"
+            wep.Trivia_Desc = descStart .. desc_74u
+        else
             post = "-74"
         end
         wep.Trivia_Desc = descStart .. desc_545
@@ -966,10 +970,10 @@ SWEP.Hook_NameChange = function(wep,name)
                 post = "-102"
             end
         else
-            if shortBarrs[barr] then
-                post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
-                wep.Trivia_Desc = descStart .. desc_74u
-            end
+            -- if shortBarrs[barr] then
+            --     post = post .. "U" -- I know I said the AK-47U doesn't exist, but we have fucking Glock 44 Autos so I warmed up to it
+            --     wep.Trivia_Desc = descStart .. desc_74u
+            -- end
             if !noN and atts[1].Installed then
                 post = post .. "N"
             end
