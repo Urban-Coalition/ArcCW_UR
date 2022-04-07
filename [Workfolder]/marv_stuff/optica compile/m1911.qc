@@ -46,7 +46,7 @@ $sequence "idle"{
 	// "anims\idle_iron.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
- 	// blend "sights" 0 1
+ 	blend "sights" 0 1
 	loop
 	snap
 	node "Ready"
@@ -57,7 +57,7 @@ $sequence "idle_empty"{
 	// "anims\idle_iron_empty.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
- 	// blend "sights" 0 1
+ 	blend "sights" 0 1
 	loop
 	snap
 	node "Ready"
@@ -79,7 +79,7 @@ $sequence "fire_empty" {
 	// "anims\fire_iron_empty.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
- 	// blend "sights" 0 1
+ 	blend "sights" 0 1
 	fadein 0.02
 	fadeout 0.0
 	{ event 5001 0 "1" }
@@ -97,21 +97,19 @@ $sequence "fire_empty" {
 $sequence "reload" {
 	"anims\vm_m1911_reload_tactical.smd"
 	// "anims\reload_iron.smd"
-	// blend "sights" 0 1
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	fadein 0
-	fadeout 0.08
+	snap
 }
 
 $sequence "reload_empty" {
 	"anims\vm_m1911_reload_empty.smd"
 	// "anims\reload_empty_iron.smd"
-	// blend "sights" 0 1
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	fadein 0
-	fadeout 0.08
+	snap
 }
 
 

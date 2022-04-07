@@ -76,6 +76,22 @@ $sequence "idle" "anims\idle.smd" {
 	node "Ready"
 }
 
+$sequence "idle_empty" "anims\idle_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
+$sequence "idle_empty_semi" "anims\idle_empty_semi.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
 $sequence "fire_pump" "anims\fire_pump.smd" {
 	blend "sights" 0 1
 	fps 30
