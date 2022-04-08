@@ -1,10 +1,11 @@
 att.PrintName = "21.5\" Freeman Barrel"
 att.Icon = nil
-att.Description = [[Futuristic fire control group and barrel accomodation that supports a near-instant, gas-powered two-round burst. Replaces the original dual-mode mechanism, relegating the weapon to pump action in both modes.
+att.Description = [[Futuristic fire control group and barrel accomodation that supports a near-instant, gas-powered two-round burst, as well as slamfiring. However, the original dual-mode mechanism is replaced.
 
 The two-round burst can shred most targets, but depletes ammo quickly. The complicated mechanism also has a heavier pump.]]
 att.Desc_Pros = {
-    "ur.ak.burst"
+    "uc.slam",
+    "ur.ak.burst",
 }
 att.Desc_Cons = {
     "ur.spas12.pump"
@@ -16,8 +17,8 @@ att.AutoStats = true
 
 att.Override_Firemodes = {
     {
-        Mode = 1,
-        PrintName = "fcg.pump",
+        Mode = 2,
+        PrintName = "fcg.slam",
         Override_ManualAction = true,
         Mult_AccuracyMOA = 0.8,
         Mult_HipDispersion = 0.8,
