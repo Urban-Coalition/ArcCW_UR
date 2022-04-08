@@ -225,7 +225,7 @@ SWEP.Animations = {
         SoundTable = ArcCW.UD.DrawSounds,
     },
     ["draw_empty"] = {
-        Source = "draw_empty",
+        Source = "draw", -- draw_empty
         --Time = 20 / 30,
         SoundTable = ArcCW.UD.DrawSounds,
     },
@@ -235,7 +235,7 @@ SWEP.Animations = {
         SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["holster_empty"] = {
-        Source = "holster_empty",
+        Source = "holster", -- holster_empty
         --Time = 20 / 30,
         SoundTable = ArcCW.UD.HolsterSounds,
     },
@@ -283,7 +283,7 @@ SWEP.Animations = {
         },
     },
     ["fire_empty"] = {
-        Source = "fire_empty",
+        Source = "fire_semi", -- fire_empty
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
