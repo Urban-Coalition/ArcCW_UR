@@ -102,7 +102,7 @@ end
 -- end
 local slotinfo = {
     [5] = {"8-Round Mag", "8-Round Mag", Material("entities/att/ur_ak/magazines/12_8.png", "mips smooth")},
-    [11] = {"\"BUCK\" #00 Buckshot", "\"BUCK\" #00 Buckshot", nil},
+    [11] = {"\"BUCK\" #00 Buckshot", "\"BUCK\" #00 Buckshot", Material("entities/att/arccw_uc_ammo_shotgun_generic.png", "mips smooth")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

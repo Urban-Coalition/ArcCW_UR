@@ -594,6 +594,7 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"BUCK\" #00 Buckshot",
+        DefaultAttIcon = Material("entities/att/arccw_uc_ammo_shotgun_generic.png", "mips smooth"),
         Slot = {"ud_ammo_shotgun","ur_ammo_spas12"},
     },
     {
