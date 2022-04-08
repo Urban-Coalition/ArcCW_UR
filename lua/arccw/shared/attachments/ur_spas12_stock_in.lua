@@ -26,7 +26,7 @@ att.Mult_SightedSpeedMult = 1.2
 att.Mult_ShootSpeedMult = 1.1
 att.Mult_SightTime = .8
 
-att.Mult_Sway = 1.5
+att.Mult_Sway = 2
 att.Add_BarrelLength = -12
 
 att.Override_IronSightStruct = {
