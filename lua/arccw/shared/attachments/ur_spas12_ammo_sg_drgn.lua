@@ -80,9 +80,8 @@ att.Override_Firemodes = {
         Mode = 1,
         PrintName = "fcg.pump",
         Override_ManualAction = true,
-        Mult_AccuracyMOA = .9,
-        Mult_HipDispersion = .8,
-        Mult_RPM = 1,
+        Mult_AccuracyMOA = 0.8,
+        Mult_HipDispersion = 0.8,
     },
     {
         Mode = 0,
