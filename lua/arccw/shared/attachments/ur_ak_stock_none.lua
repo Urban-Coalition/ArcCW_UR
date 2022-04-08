@@ -3,6 +3,7 @@ att.Icon = Material("arccw/hud/atts/default.png", "mips smooth")
 att.Description = "Buttstock? What are you, Western capitalist WEAKLING? Real comrades channel strength of Siberian bear and shoot Kalashnikov without stock; withstand kick harder than 20 bottles of vodka."
 att.Slot = {"ur_ak_stock"}
 att.AutoStats = true
+att.Free = true
 
 att.SortOrder = -1
 

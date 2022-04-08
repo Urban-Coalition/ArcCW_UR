@@ -2,6 +2,7 @@ att.PrintName = "No Stock"
 att.Description = "Your wrists will never function again."
 att.Slot = {"ur_aw_stock"}
 att.AutoStats = true
+att.Free = true
 
 att.SortOrder = -1
 

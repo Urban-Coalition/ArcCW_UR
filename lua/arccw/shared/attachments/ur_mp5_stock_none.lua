@@ -16,6 +16,7 @@ att.Desc_Neutrals = {
 att.Slot = "ur_mp5_stock"
 
 att.AutoStats = true
+att.Free = true
 att.SortOrder = -1
 
 att.Mult_Recoil = 2.15
