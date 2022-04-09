@@ -210,9 +210,9 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [7] = {
-                vpos = Vector(-0.4, 11.75, 4.0),
+                vpos = Vector(-1, 14.75, 2.8),
                 vang = Angle(-90, 270, 0),
-            },
+            }
         },
     },
     ["barrel_rpk"] = {
@@ -285,6 +285,10 @@ SWEP.AttachmentElements = {
             [6] = {
                 vpos = Vector(0,11,1.7),
                 vang = Angle(90, -90, -90),
+            },
+            [7] = {
+                vpos = Vector(-0.8, 11.75, 2.9),
+                vang = Angle(-90, 270, 0),
             }
         },
         Override_IronSightStruct = {
@@ -363,9 +367,9 @@ SWEP.AttachmentElements = {
                 vang = Angle(0, 270, 0),
             },
             [7] = {
-                vpos = Vector(-0.4, 11.75, 4.0),
+                vpos = Vector(-1, 14.75, 2.8),
                 vang = Angle(-90, 270, 0),
-            },
+            }
         },
         Override_IronSightStruct = {
             Pos = Vector(-2.6, 0, 0.45),
@@ -562,7 +566,7 @@ SWEP.AttachmentElements = {
         }}]]
         AttPosMods = {
             [7] = {
-                vpos = Vector(-0.4, 11.75, 4.0),
+                vpos = Vector(-0.7, 13.5, 3.8),
                 vang = Angle(-90, 270, 0),
             },
             [6] = {
