@@ -212,6 +212,7 @@ SWEP.AttachmentElements = {
             [7] = {
                 vpos = Vector(-1, 14.75, 2.8),
                 vang = Angle(-90, 270, 0),
+                wang = Angle(-90, 270, 0),
             }
         },
     },
@@ -289,6 +290,7 @@ SWEP.AttachmentElements = {
             [7] = {
                 vpos = Vector(-0.8, 11.75, 2.9),
                 vang = Angle(-90, 270, 0),
+                wang = Angle(-90, 270, 0),
             }
         },
         Override_IronSightStruct = {
@@ -369,6 +371,7 @@ SWEP.AttachmentElements = {
             [7] = {
                 vpos = Vector(-1, 14.75, 2.8),
                 vang = Angle(-90, 270, 0),
+                wang = Angle(-90, 270, 0),
             }
         },
         Override_IronSightStruct = {
@@ -568,6 +571,7 @@ SWEP.AttachmentElements = {
             [7] = {
                 vpos = Vector(-0.7, 13.5, 3.8),
                 vang = Angle(-90, 270, 0),
+                wang = Angle(-90, 270, 0),
             },
             [6] = {
                 vpos = Vector(0, 11.75, 2.2),
