@@ -1007,6 +1007,17 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",    t = 0.2},
         },
     },
+    ["holster"] = {
+        Source = "holster",
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = ratel, t = 0},
+           -- {s = common .. "raise.ogg", t = 0.2},
+            -- {s = common .. "shoulder.ogg",    t = 0.2},
+        },
+    },
     ["ready"] = {
         Source = "ready",
         LHIK = true,

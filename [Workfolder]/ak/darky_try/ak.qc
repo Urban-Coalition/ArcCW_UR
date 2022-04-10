@@ -196,6 +196,13 @@ $sequence "draw" {
 	snap
 }
 
+$sequence "holster" {
+	"anims\vm_ak47_holster.smd"
+	fps 30
+	"ACT_VM_HOLSTER" 1
+	snap
+}
+
 $sequence "ready" {
 	"anims\vm_ak47_first_draw.smd"
 	fps 30
