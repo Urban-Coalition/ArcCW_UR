@@ -18,11 +18,11 @@ att.HideIfBlocked = true
 att.Override_ClipSize = 10
 
 att.Desc_Cons = {
-    "+ Reload time"
+    --"+ Reload time"
 }
 
 att.Mult_SightTime = 1.25
--- att.Mult_ReloadTime = 1.2 -- anim is just longer
+att.Mult_ReloadTime = 5.675 / 5.15 -- compensation for longer anim length
 att.Mult_Sway = 1.25
 
 att.Mult_SpeedMult = 0.975
