@@ -217,7 +217,7 @@ SWEP.Animations = {
         Source = "idle",
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = "idle_empty_semi",
     },
     ["draw"] = {
         Source = "draw",
@@ -283,7 +283,7 @@ SWEP.Animations = {
         },
     },
     ["fire_empty"] = {
-        Source = "fire_semi", -- fire_empty
+        Source = "fire_empty_semi", -- fire_empty
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
