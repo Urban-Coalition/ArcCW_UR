@@ -149,9 +149,9 @@ SWEP.ShellRotateAngle = Angle(0, 0, 0)
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
--- SWEP.BulletBones = {
---     [2] = "tag_mag2",
--- }
+SWEP.BulletBones = {
+    [1] = "tag_mag2",
+}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.6, 0, 0.44),
@@ -1074,6 +1074,7 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
+        LastClip1OutTime = 2,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
@@ -1121,6 +1122,7 @@ SWEP.Animations = {
         LHIKOut = 1.5,
         LHIKEaseOut = 0.25,
         MinProgress = 2.6,
+        LastClip1OutTime = 2,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
@@ -1168,6 +1170,7 @@ SWEP.Animations = {
         LHIKOut = 0.55,
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
+        LastClip1OutTime = 2,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
@@ -1217,6 +1220,7 @@ SWEP.Animations = {
         LHIKOut = 0.55,
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
+        LastClip1OutTime = 2,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
@@ -1267,6 +1271,7 @@ SWEP.Animations = {
         LHIKOut = 0.55,
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
+        LastClip1OutTime = 2,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},
@@ -1317,6 +1322,7 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
+        LastClip1OutTime = 2,
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = common .. "magpouch.ogg", t = 0.1},

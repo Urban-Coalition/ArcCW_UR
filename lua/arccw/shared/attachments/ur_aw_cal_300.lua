@@ -19,6 +19,7 @@ att.Override_PhysBulletMuzzleVelocity = 1000
 
 att.Mult_Penetration = 1.25
 att.Mult_Recoil = 1.5
+att.Mult_ReloadTime = 5.55 / 5.15
 
 att.Mult_ShootSpeedMult = 0.9
 
