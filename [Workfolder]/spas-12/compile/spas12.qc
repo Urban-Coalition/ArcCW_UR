@@ -50,8 +50,13 @@ $bodygroup "7" {
 	studio "rail_classic.smd"
 }
 
+$bodygroup "8" {
+	studio "12ga.smd"
+}
+
 $cdmaterials "models\weapons\arccw\ur_spas12"
 $cdmaterials "models\weapons\arccw\ud_common"
+$cdmaterials "models\weapons\arccw\uc_shells\"
 
 
 $attachment "1" "flash" 0 0 0 rotate -90 0 0
