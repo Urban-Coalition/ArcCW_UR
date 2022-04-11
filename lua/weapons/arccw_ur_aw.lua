@@ -281,6 +281,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
+        DefaultAttIcon = Material("entities/att/ur_aw/ironsights.png", "mips smooth"),
         Slot = {"optic","optic_lp"},
         Bone = "tag_weapon",
         Offset = {
@@ -298,7 +299,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "24\" Police Barrel",
-        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_aw/bar_def.png", "mips smooth"),
         Slot = "ur_aw_barrel",
     },
     {
@@ -318,7 +319,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "7.62x51mm NATO",
-        DefaultAttIcon = Material("entities/att/ur_ak/recievers/762.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_aw/rec308.png", "mips smooth"),
         Slot = {"ur_aw_cal"},
         Bone = "tag_weapon",
         Offset = {
@@ -330,7 +331,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = {"ur_aw_mag"},
         DefaultAttName = "5-Round Mag",
-        DefaultAttIcon = Material("entities/att/ur_ak/magazines/762_30.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_aw/mag308_5.png", "mips smooth"),
         ExcludeFlags = {"mag_338"}
     },
     {
@@ -359,7 +360,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ur_aw_stock"},
         DefaultAttName = "Factory Stock",
-        DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_aw/stock_def.png", "mips smooth"),
     },
     {
         PrintName = "Ammo Type",
@@ -397,7 +398,8 @@ SWEP.Attachments = {
         PrintName = "Finish",
         Slot = {"ur_aw_skin"},
         FreeSlot = true,
-        DefaultAttName = "Olive Drab"
+        DefaultAttName = "Olive Drab",
+        DefaultAttIcon = Material("entities/att/ur_aw/skin_green.png", "mips smooth"),
     }
 }
 

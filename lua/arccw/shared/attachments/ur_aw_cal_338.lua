@@ -1,6 +1,6 @@
 att.PrintName = "AWM .338 Lapua Magnum Receiver"
 att.AbbrevName = ".338 Lapua Magnum"
-att.Icon = nil
+att.Icon = Material("entities/att/ur_aw/rec338.png", "mips smooth")
 att.Description = "Powerful sniper cartridge that exerts substantially more muzzle energy, practically guaranteed to be fatal on a successful hit beyond point blank. The recoil is tremendous, and the lengthened bolt required to accommodate the cartridge is harder to cycle."
 att.Slot = "ur_aw_cal"
 
@@ -41,6 +41,16 @@ end
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
+end
+
+local slotinfo = {
+    [5] = {"5-Round Mag", "5-Round Mag", Material("entities/att/ur_aw/mag338_5.png", "mips smooth")},
+}
+
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
 end
 
 att.Override_Trivia_Calibre = ".338 Lapua Magnum"

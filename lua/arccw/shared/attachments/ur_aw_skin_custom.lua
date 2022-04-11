@@ -1,6 +1,6 @@
 att.PrintName = "Custom Finish"
 att.AbbrevName = "Custom"
---att.Icon = Material("entities/att/acwatt_ur_deagle_finish_chrome.png","mips smooth")
+att.Icon = Material("entities/att/ur_aw/skin_rainbow.png", "mips smooth")
 att.Description = "This skin matches your player color. Let your imagination run wild."
 att.Slot = "ur_aw_skin"
 att.Desc_Neutrals = {

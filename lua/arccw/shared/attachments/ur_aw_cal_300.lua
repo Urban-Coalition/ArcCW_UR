@@ -1,6 +1,6 @@
 att.PrintName = "AWM .300 Winchester Magnum Receiver"
 att.AbbrevName = ".300 Win Mag"
-att.Icon = nil
+att.Icon = Material("entities/att/ur_aw/rec300.png", "mips smooth")
 att.Description = "Versatile magnum cartridge identical in diameter to 7.62x51mm rounds but with significantly higher muzzle energy. Liable to overpenetration at close range."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
@@ -32,6 +32,16 @@ end
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
+end
+
+local slotinfo = {
+    [5] = {"5-Round Mag", "5-Round Mag", Material("entities/att/ur_aw/mag338_5.png", "mips smooth")},
+}
+
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
 end
 
 att.Override_Trivia_Calibre = ".300 Winchester Magnum"

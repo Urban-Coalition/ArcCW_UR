@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 10
-att.Icon = Material("entities/att/acwatt_ud_m16_mag_40.png", "smooth mips")
+att.Icon = Material("entities/att/ur_aw/mag308_10.png", "mips smooth")
 att.Description = "Extended magazine for the Arctic Warfare. The extra rounds add weight to the magazine, but allow for twice as many shots to be taken between reloads."
 att.Desc_Pros = {}
 att.Desc_Neutrals = {}

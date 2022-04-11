@@ -1,5 +1,6 @@
 att.PrintName = "Tactical Stock"
 att.Description = "Variant folding stock with a pistol grip design. Lighter and perhaps more comfortable, but not as sturdy."
+att.Icon = Material("entities/att/ur_aw/stock_at.png", "mips smooth")
 att.Slot = {"ur_aw_stock"}
 att.AutoStats = true
 

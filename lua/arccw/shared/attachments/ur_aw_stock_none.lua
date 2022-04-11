@@ -1,5 +1,6 @@
 att.PrintName = "No Stock"
 att.Description = "Your wrists will never function again."
+att.Icon = Material("entities/att/ur_aw/stock_removed.png", "mips smooth")
 att.Slot = {"ur_aw_stock"}
 att.AutoStats = true
 att.Free = true

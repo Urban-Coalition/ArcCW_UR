@@ -1,5 +1,6 @@
 att.PrintName = "AT 20\" Shortened Barrel"
 att.AbbrevName = "20\" Shortened Barrel"
+att.Icon = Material("entities/att/ur_aw/bar_short.png", "mips smooth")
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "AP 20\" Shortened Barrel"

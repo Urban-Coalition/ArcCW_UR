@@ -1,5 +1,6 @@
 att.PrintName = "AWS 28\" Suppressed Barrel"
 att.AbbrevName = "28\" SD Barrel"
+att.Icon = Material("entities/att/ur_aw/bar_sup.png", "mips smooth")
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "APS 28\" SD Barrel"

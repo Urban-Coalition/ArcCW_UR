@@ -1,5 +1,5 @@
 att.PrintName = "AI Ironsight Brake"
-att.Icon = nil
+att.Icon = Material("entities/att/ur_aw/muzzle_sights.png", "mips smooth")
 att.Description = "Light muzzle brake unique to the AW platform.\n\nEquips alternative \"compact\" iron sights."
 att.AutoStats = true
 att.Slot = {"ur_aw_muzzle"}
