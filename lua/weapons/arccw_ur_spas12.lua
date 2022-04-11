@@ -196,6 +196,11 @@ SWEP.ShootDrySound = common .. "manual_trigger.ogg"
 
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
+SWEP.Hook_TranslateAnimation = function(wep,anim)
+    if wep:GetCurrentFiremode().Override_ManualAction and anim == "idle_empty" then
+        return "idle_empty_manual"
+    end
+end
 SWEP.Hook_SelectFireAnimation = function(wep,data)
     if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
         return "fire_2bst"
@@ -218,6 +223,9 @@ SWEP.Animations = {
     },
     ["idle_empty"] = {
         Source = "idle_empty_semi",
+    },
+    ["idle_empty_manual"] = {
+        Source = "idle_empty",
     },
     ["draw"] = {
         Source = "draw",
