@@ -7,8 +7,6 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     "ur.spas12.folded",
-    "uc.nooptics",
-    "uc.altnofs",
 }
 att.Desc_Neutrals = {
 }
@@ -19,12 +17,12 @@ att.AutoStats = true
 att.Free = true
 att.IgnorePickX = true
 
-att.Mult_Recoil = 1.15
+att.Mult_Recoil = 1.2
 att.Mult_RecoilSide = 1.5
 
-att.Mult_SightedSpeedMult = 1.2
+att.Mult_SightedSpeedMult = 1.1
 att.Mult_ShootSpeedMult = 1.1
-att.Mult_SightTime = .8
+att.Mult_SightTime = 0.5
 
 att.Mult_Sway = 2
 att.Add_BarrelLength = -12
