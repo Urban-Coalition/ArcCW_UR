@@ -19,7 +19,7 @@ att.Mult_SightTime = 0.5
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
 
-att.Mult_Recoil = 1.35
+att.Mult_Recoil = 1.4
 att.Mult_RecoilSide = 2
 
 att.Mult_SightedSpeedMult = 1.2
