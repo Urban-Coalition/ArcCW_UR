@@ -31,9 +31,9 @@ SWEP.TrueName = "PM"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [["A simple Soviet pistol that can be found around the globe. Although its many features are dated, it and its many derivatives remain trustworthy sidearms.
+SWEP.Trivia_Desc = [[A simple Soviet pistol that can be found around the globe. Although its many features are dated, it and its many derivatives remain trustworthy sidearms.
 
-With low offensive potential but very quick handling, its main use is as an emergency backup weapon."]]
+With low offensive potential but very quick handling, its main use is as an emergency backup weapon.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
 SWEP.Trivia_Calibre = "9x18mm Makarov"
 SWEP.Trivia_Mechanism = "Blowback"
@@ -377,13 +377,12 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle", "ud_glock_muzzle"},
-        Bone = "glock_flash",
+        Slot = {"muzzle"},
+        Bone = "flashbone",
         Offset = {
-            vpos = Vector(0, 0, 0.0),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 0.1, 0),
+            vang = Angle(180, 90, 0),
         },
-        ExcludeFlags = {"sd"},
         VMScale = Vector(0.8, 0.8, 0.8)
     },
     {
