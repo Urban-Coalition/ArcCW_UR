@@ -36,8 +36,8 @@ $cdmaterials "models\weapons\arccw\ud_common"
 
 
 $attachment "1" "flashbone" 0 0 0 rotate 0 90 -90  
-$attachment "2" "brassbone" 0 0 0 rotate 0 90 -90
-$attachment "5" "camera" 0 0 0 rotate -90 0 0
+$attachment "2" "brassbone" 0 0 0 rotate 0 180 0
+$attachment "3" "camera" 0 0 0 rotate -90 0 0
  
 $surfaceprop "default"
  

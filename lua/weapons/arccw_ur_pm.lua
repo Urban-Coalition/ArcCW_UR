@@ -155,7 +155,7 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.327, 4, 1),
-     Ang = Angle(0, 0, 2.8),
+     Ang = Angle(0, 0, 3.3),
      Magnification = 1,
      ViewModelFOV = 55,
      SwitchToSound = ratel, -- sound that plays when switching to this sight
@@ -236,6 +236,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
+        Time = 30/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
@@ -248,6 +249,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
+        Time = 26/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
