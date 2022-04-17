@@ -31,9 +31,9 @@ SWEP.TrueName = "PM"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[A simple Soviet pistol that can be found around the globe. Although its many features are dated, it and its many derivatives remain trustworthy sidearms.
+SWEP.Trivia_Desc = [[Basic Soviet pistol that can be found around the globe. Better known by its colloquial moniker, the "Makarov," after its designer. Although its many features are dated, the weapon and its many derivatives remain trustworthy sidearms.
 
-With low offensive potential but very quick handling, its main use is as an emergency backup weapon.]]
+With low offensive potential but very compact handling, its main use is as an emergency backup weapon.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
 SWEP.Trivia_Calibre = "9x18mm Makarov"
 SWEP.Trivia_Mechanism = "Blowback"
@@ -61,14 +61,14 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage --
 
 SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
-SWEP.DamageMin = 17 -- 5 shot long range kill
+SWEP.DamageMin = 15 -- 7 shot long range kill
 SWEP.RangeMin = 15
 SWEP.Range = 50 -- 4 shot until ~35m
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 375
-SWEP.PhysBulletMuzzleVelocity = 375
+SWEP.MuzzleVelocity = 315
+SWEP.PhysBulletMuzzleVelocity = 315
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -175,8 +175,8 @@ SWEP.BarrelOffsetHip = Vector(3.5, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-10.5, 3.5, -5.25),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(-11.0, 5.5, -3.75),
+    ang        =    Angle(-6, 6, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
@@ -236,7 +236,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
-        Time = 30/30,
+        Time = 18/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
@@ -357,7 +357,7 @@ SWEP.Attachments = {
         WMScale = Vector(1.25, 1.25, 1.25),
     },
     {
-        PrintName = "Varient",
+        PrintName = "Slide",
         DefaultAttName = "Standard Slide",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
         Slot = "ud_glock_slide",
