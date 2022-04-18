@@ -188,9 +188,9 @@ local path = ")^weapons/arccw_ur/pm/"
 local path1 = ")^weapons/arccw_ud/glock/"
 local path2 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = {path1 .. "fire-01.ogg", path1 .. "fire-02.ogg", path1 .. "fire-03.ogg", path1 .. "fire-04.ogg", path1 .. "fire-05.ogg", path1 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = path1 .. "fire_380.ogg" -- Placeholder
 SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
-SWEP.DistantShootSound = {path1 .. "fire-dist-01.ogg", path1 .. "fire-dist-02.ogg", path1 .. "fire-dist-03.ogg", path1 .. "fire-dist-04.ogg", path1 .. "fire-dist-05.ogg", path1 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.DistantShootSound = path1 .. "fire_dist_380.ogg" -- Placeholder
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path1 .. "dryfire.ogg"
 
@@ -254,7 +254,8 @@ SWEP.Animations = {
         Time = 18/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path1 .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = "weapons/arccw/firemode.wav", t = 0.15},
+            {s = path1 .. "holster.ogg", t = 0.25}, -- Not Temporary
         },
     },
     ["holster_empty"] = {
@@ -267,7 +268,7 @@ SWEP.Animations = {
         Time = 26/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path1 .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path1 .. "holster.ogg", t = 0.25}, -- Not Temporary
         },
     },
     ["fire"] = {
