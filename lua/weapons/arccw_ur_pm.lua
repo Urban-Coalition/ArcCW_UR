@@ -58,6 +58,8 @@ SWEP.WorldModel = "models/weapons/arccw/c_ur_pm.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
+SWEP.DefaultBodygroups = "00000"
+
 -- Damage --
 
 SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
@@ -197,8 +199,16 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
    // [2] = "glock_bullet1"
 // }
 
-// SWEP.AttachmentElements = {
-    
+SWEP.AttachmentElements = {
+    ["ur_pmm"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+            {ind = 2, bg = 1},
+            {ind = 3, bg = 1},
+        },
+    },
+}
+
 -- Animations --
 
 SWEP.Hook_Think = ArcCW.UD.ADSReload
@@ -357,16 +367,10 @@ SWEP.Attachments = {
         WMScale = Vector(1.25, 1.25, 1.25),
     },
     {
-        PrintName = "Slide",
-        DefaultAttName = "Standard Slide",
+        PrintName = "Variant",
+        DefaultAttName = "Classic Makarov",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
-        Slot = "ud_glock_slide",
-    },
-    {
-        PrintName = "Frame",
-        DefaultAttName = "Standard Frame",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_frame.png", "smooth mips"),
-        Slot = "ud_glock_frame",
+        Slot = "ur_pm_variant",
     },
     {
         PrintName = "Caliber",
