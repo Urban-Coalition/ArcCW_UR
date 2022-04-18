@@ -498,7 +498,7 @@ SWEP.AttachmentElements = {
 
     ["ur_spas12_stock_full"] = {
         VMBodygroups = {
-            {ind = 2, bg = 0},
+            {ind = 2, bg = 1},
             {ind = 7, bg = 2},
         }
     },
@@ -530,7 +530,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.DefaultBodygroups = "00100000"
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.Attachments = {
     {
