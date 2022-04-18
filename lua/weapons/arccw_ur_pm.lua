@@ -208,6 +208,16 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         },
     },
+    ["ur_peanutbutter"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 2},
+            {ind = 2, bg = 2},
+            {ind = 3, bg = 2},
+        },
+    },
+    ["ur_pb_supp"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -392,7 +402,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"muzzle", "pm_supp"},
         Bone = "flashbone",
         Offset = {
             vpos = Vector(0, 0.1, 0),
@@ -403,7 +413,7 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
-        Bone = "glock_parent",
+        Bone = "pm_parent",
         Offset = {
             vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
@@ -413,7 +423,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
         DefaultAttName = "No Stock",
-        Bone = "glock_parent",
+        Bone = "pm_parent",
         Offset = {
             vpos = Vector(0.1, 2, -1.4),
             vang = Angle(90, 0, -90),
@@ -444,7 +454,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "glock_slide",
+        Bone = "pm_slide",
         Offset = {
             vpos = Vector(0.4, 0, 4),
             vang = Angle(90, 0, -90),
