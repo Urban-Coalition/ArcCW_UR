@@ -184,14 +184,15 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/glock/"
-local path1 = ")^weapons/arccw_ud/uzi/"
+local path = ")^weapons/arccw_ur/pm/"
+local path1 = ")^weapons/arccw_ud/glock/"
+local path2 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {path1 .. "fire-01.ogg", path1 .. "fire-02.ogg", path1 .. "fire-03.ogg", path1 .. "fire-04.ogg", path1 .. "fire-05.ogg", path1 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
+SWEP.DistantShootSound = {path1 .. "fire-dist-01.ogg", path1 .. "fire-dist-02.ogg", path1 .. "fire-dist-03.ogg", path1 .. "fire-dist-04.ogg", path1 .. "fire-dist-05.ogg", path1 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
-SWEP.ShootDrySound = path .. "dryfire.ogg"
+SWEP.ShootDrySound = path1 .. "dryfire.ogg"
 
 -- Bodygroups --
 
@@ -215,10 +216,14 @@ SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 -- CHAN_ITEM doesn't sound too right
 local ci = CHAN_AUTO
-local ratel = {path .. "pistol_rattle_1.ogg", path .. "pistol_rattle_2.ogg", path .. "pistol_rattle_3.ogg"}
+local ratel = {path1 .. "pistol_rattle_1.ogg", path1 .. "pistol_rattle_2.ogg", path1 .. "pistol_rattle_3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "fix",
+        ProcDraw = true,
+    },
     ["idle"] = {
         Source = "idle",
     },
@@ -228,14 +233,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         SoundTable = {
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path1 .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         SoundTable = {
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path1 .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
@@ -249,7 +254,7 @@ SWEP.Animations = {
         Time = 18/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path1 .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
     ["holster_empty"] = {
@@ -262,29 +267,29 @@ SWEP.Animations = {
         Time = 26/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path1 .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
     ["fire"] = {
         Source = "fire",
         ShellEjectAt = 0.03,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
+        SoundTable = {{ s = {path1 .. "mech-01.ogg", path1 .. "mech-02.ogg", path1 .. "mech-03.ogg", path1 .. "mech-04.ogg", path1 .. "mech-05.ogg", path1 .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         ShellEjectAt = 0.03,
         SoundTable = {
-            {s = path .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
+            {s = path1 .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
     },
     ["fix"] = {
         Source = "fix",
         ShellEjectAt = false,
         SoundTable = {
-            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
-            {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
-            {s = path .. "slide_rel_new.ogg",        t = 0.7, c = ci},
+            {s = path1 .. "magtap.ogg",    t = 0.18, c = ci},
+            {s = path1 .. "slide_pull_new.ogg",  t = 0.5, c = ci},
+            {s = path1 .. "sliderel_deact.ogg",  t = 0.5, c = ci},
+            {s = path1 .. "slide_rel_new.ogg",        t = 0.7, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -296,9 +301,9 @@ SWEP.Animations = {
         Source = "fix_empty",
         ShellEjectAt = false,
         SoundTable = {
-            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
-            {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
+            {s = path1 .. "magtap.ogg",    t = 0.18, c = ci},
+            {s = path1 .. "slide_pull_new.ogg",  t = 0.5, c = ci},
+            {s = path1 .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -318,12 +323,13 @@ SWEP.Animations = {
         LHIKOut = 0.3,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = common .. "magpouch_pull_small.ogg", t = 0.075},
             {s = rattel, t = 0.3},
-            {s = path .. "magout_partial.ogg",        t = 0.3, c = ci},
+            {s = path .. "magout.ogg",        t = 0.3, c = ci},
+            {s = common .. "magpouch_replace_small.ogg", t = .6},
+            {s = common .. "magpouch_pull_small.ogg", t = .9},
             {s = rattel, t = 0.35},
-            {s = path .. "magin_new.ogg",         t = 0.49, c = ci},
-            {s = common .. "magpouch_replace_small.ogg", t = 1.25},
+            {s = path .. "magstruggle.ogg",         t = 1.45, c = ci},
+            {s = path .. "magin.ogg",         t = 1.5, c = ci},
             {s = rottle, t = 0.5},
         },
     },
@@ -338,14 +344,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = rattel, t = 0},
-            {s = path .. "magout_empty.ogg",        t = 0.13, c = ci},
-            {s = common .. "magpouch_pull_small.ogg", t = 0.35},
-            {s = path .. "magin_new.ogg",         t = 0.55, c = ci},
+            {s = rottle, t = 0},
+            {s = rattel, t = 0.3},
+            {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = rattel, t = 0.5},
-            {s = common .. "pistol_magdrop.ogg",  t = 0.65},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.8},
+            {s = common .. "pistol_magdrop.ogg",  t = 1},
             {s = rottle, t = 1.15},
-            {s = path .. "chamber.ogg",      t = 1.39, c = ci},
+            {s = path .. "magstruggle.ogg",         t = 1.45, c = ci},
+            {s = path .. "magin.ogg",         t = 1.5, c = ci},
+            {s = path1 .. "chamber.ogg",      t = 2.1, c = ci},
         },
     },
 }
@@ -372,12 +380,12 @@ SWEP.Attachments = {
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
         Slot = "ur_pm_variant",
     },
-    {
-        PrintName = "Caliber",
-        DefaultAttName = "9x19mm Parabellum",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
-        Slot = "ud_glock_caliber",
-    },
+    -- {
+    --     PrintName = "Caliber",
+    --     DefaultAttName = "9x19mm Parabellum",
+    --     DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+    --     Slot = "ud_glock_caliber",
+    -- },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
