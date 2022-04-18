@@ -177,7 +177,7 @@ SWEP.BarrelOffsetHip = Vector(3.5, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-11.0, 5.5, -3.75),
+    pos        =    Vector(-10.9, 5.5, -3.5),
     ang        =    Angle(-6, 6, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -274,11 +274,13 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         ShellEjectAt = 0.03,
+        Time = .5,
         SoundTable = {{ s = {path1 .. "mech-01.ogg", path1 .. "mech-02.ogg", path1 .. "mech-03.ogg", path1 .. "mech-04.ogg", path1 .. "mech-05.ogg", path1 .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         ShellEjectAt = 0.03,
+        Time = .5,
         SoundTable = {
             {s = path1 .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
