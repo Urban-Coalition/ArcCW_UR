@@ -156,8 +156,8 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.327, 4, 1),
-     Ang = Angle(0, 0, 3.3),
+     Pos = Vector(-2.327, 10, 1),
+     Ang = Angle(0.195, 0, 3.3),
      Magnification = 1,
      ViewModelFOV = 55,
      SwitchToSound = ratel, -- sound that plays when switching to this sight
