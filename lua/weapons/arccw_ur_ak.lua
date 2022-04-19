@@ -154,7 +154,7 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.6, 0, 0.44),
+    Pos = Vector(-2.57, 7, 0.41),
     Ang = Angle(0.60, 0.274, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
