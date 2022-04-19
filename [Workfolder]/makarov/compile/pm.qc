@@ -76,8 +76,6 @@ $sequence "holster"{
 	fps 30
 	"ACT_VM_IDLE" 1
  	blend "sights" 0 1
-	loop
-	snap
 	node "Ready"
 }
 
@@ -86,8 +84,22 @@ $sequence "holster_empty"{
 	fps 30
 	"ACT_VM_IDLE" 1
  	blend "sights" 0 1
-	loop
-	snap
+	node "Ready"
+}
+
+$sequence "draw"{
+	"anims\draw.smd" 
+	fps 30
+	"ACT_VM_IDLE" 1
+ 	blend "sights" 0 1
+	node "Ready"
+}
+
+$sequence "draw_empty"{
+	"anims\draw_empty.smd" 
+	fps 30
+	"ACT_VM_IDLE" 1
+ 	blend "sights" 0 1
 	node "Ready"
 }
 
@@ -124,7 +136,6 @@ $sequence "reload" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	snap
 }
 
 $sequence "reload_empty" {
@@ -132,7 +143,6 @@ $sequence "reload_empty" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	snap
 }
 
 
