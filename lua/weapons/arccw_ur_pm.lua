@@ -31,7 +31,7 @@ SWEP.TrueName = "PM"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Basic Soviet pistol that can be found around the globe. Better known by its colloquial moniker, the "Makarov," after its designer. Although its many features are dated, the weapon and its many derivatives remain trustworthy sidearms.
+SWEP.Trivia_Desc = [[Basic Soviet pistol that can be found around the globe. Better known by its colloquial moniker, the "Makarov," after its designer. Although it lacks the modularity of modern sidearms, the weapon and its many derivatives remain trustworthy sidearms.
 
 With low offensive potential but very compact handling, its main use is as an emergency backup weapon.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
@@ -380,10 +380,11 @@ SWEP.Attachments = {
         Slot = {"optic_lp"},
         Bone = "slide",
         Offset = {
-            vpos = Vector(0, -0.55, -0.15),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, -0.55, -0.4),
+            vang = Angle(0, 90, 180),
         },
-        CorrectivePos = Vector(0, 0, 0.05),
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 180, 0),
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1.25, 1.25, 1.25),
     },
@@ -410,23 +411,23 @@ SWEP.Attachments = {
         },
         VMScale = Vector(0.8, 0.8, 0.8)
     },
-    {
-        PrintName = "Tactical",
-        Slot = {"tac_pistol"},
-        Bone = "pm_parent",
-        Offset = {
-            vpos = Vector(0, -1.3, 5),
-            vang = Angle(90, 0, -90),
-        },
-    },
+   // { i hate this gay ass little pistol bruh
+       // PrintName = "Tactical",
+      //  Slot = {"tac_pistol"},
+      //  Bone = "pm_parent",
+      //  Offset = {
+      //      vpos = Vector(0, -5.6, -0.2),
+      //      vang = Angle(0, 90, 180),
+       // },
+   // },
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
         DefaultAttName = "No Stock",
         Bone = "pm_parent",
         Offset = {
-            vpos = Vector(0.1, 2, -1.4),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 1, 3.5),
+            vang = Angle(180, 90, 0),
         },
     },
     {
@@ -454,7 +455,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "pm_slide",
+        Bone = "slide",
         Offset = {
             vpos = Vector(0.4, 0, 4),
             vang = Angle(90, 0, -90),
