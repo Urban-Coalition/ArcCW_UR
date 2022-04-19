@@ -149,8 +149,8 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.28, 15, 1.25),
-     Ang = Angle(0.63, 0.07, 5),
+     Pos = Vector(-2.28, 21, 1.25),
+     Ang = Angle(0.78, 0.07, 5),
      Magnification = 1,
      SwitchToSound = "",
 }
