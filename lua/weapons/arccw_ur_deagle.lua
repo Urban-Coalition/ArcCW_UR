@@ -631,7 +631,7 @@ SWEP.CamAttachment = 3
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp","ur_deagle_tritium"},
+        Slot = {"optic_lp","ur_deagle_tritium","optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
