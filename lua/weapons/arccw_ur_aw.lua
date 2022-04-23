@@ -137,6 +137,7 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
 --SWEP.ShootPitchVariation = 0
 
 SWEP.MuzzleEffect = "muzzleflash_ak47"
+SWEP.ShellEffect = "arccw_uc_shelleffect"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.145
