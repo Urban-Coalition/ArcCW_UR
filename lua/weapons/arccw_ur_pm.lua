@@ -62,8 +62,8 @@ SWEP.DefaultBodygroups = "00000"
 
 -- Damage --
 
-SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
-SWEP.DamageMin = 15 -- 7 shot long range kill
+SWEP.Damage = 28 -- 4 shot close range kill (3 on chest)
+SWEP.DamageMin = 17 -- 7 shot long range kill
 SWEP.RangeMin = 15
 SWEP.Range = 50 -- 4 shot until ~35m
 SWEP.Penetration = 6
@@ -81,8 +81,8 @@ SWEP.Primary.ClipSize = 8
 
 -- Recoil --
 
-SWEP.Recoil = 1.0
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 0.7
+SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
@@ -119,10 +119,10 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 7
-SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 1000
+SWEP.AccuracyMOA = 8
+SWEP.HipDispersion = 300
+SWEP.MoveDispersion = 150
+SWEP.JumpDispersion = 800
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"
@@ -136,15 +136,15 @@ SWEP.MalfunctionTakeRound = false
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.975
+SWEP.SpeedMult = 0.985
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.275
 SWEP.ShootSpeedMult = 1
 
 -- Length --
 
 SWEP.BarrelLength = 8
-SWEP.ExtraSightDist = 7
+SWEP.ExtraSightDist = 4
 
 -- Ironsights / Customization / Poses --
 
