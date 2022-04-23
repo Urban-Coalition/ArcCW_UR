@@ -7,10 +7,12 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
+SWEP.ShellEffect = "arccw_uc_shelleffect"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/12g.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
 SWEP.ShellScale = 1
+SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -116,6 +118,7 @@ SWEP.Firemodes = {
     }
 }
 
+SWEP.UC_CanManualAction = true
 SWEP.ShotgunReload = true
 SWEP.NoLastCycle = true
 
@@ -486,6 +489,34 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
+    ["uc_ammo_sg_baton"] = {
+        Override_Firemodes = {
+            {
+                Mode = 1,
+                PrintName = "fcg.pump",
+                Override_ManualAction = true,
+                Mult_AccuracyMOA = 0.8,
+                Mult_HipDispersion = 0.8,
+            },
+            {
+                Mode = 0,
+            },
+        }
+    },
+    ["uc_ammo_sg_drgn"] = {
+        Override_Firemodes = {
+            {
+                Mode = 1,
+                PrintName = "fcg.pump",
+                Override_ManualAction = true,
+                Mult_AccuracyMOA = 0.8,
+                Mult_HipDispersion = 0.8,
+            },
+            {
+                Mode = 0,
+            },
+        }
+    },
     ["ur_spas12_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
         AttPosMods = {[3] = {
@@ -603,7 +634,7 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         DefaultAttName = "\"BUCK\" #00 Buckshot",
         DefaultAttIcon = Material("entities/att/arccw_uc_ammo_shotgun_generic.png", "mips smooth"),
-        Slot = {"ud_ammo_shotgun","ur_ammo_spas12"},
+        Slot = {"ud_ammo_shotgun"},
     },
     {
         PrintName = "Powder Load",
