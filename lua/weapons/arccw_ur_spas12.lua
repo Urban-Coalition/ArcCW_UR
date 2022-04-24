@@ -488,35 +488,27 @@ SWEP.BulletBones = {
 
 -- Bodygroups --
 
+local ffa, ffb, ffc = {}, { "needsmanual" }, {
+    {
+        Mode = 1,
+        PrintName = "fcg.pump",
+        Override_ManualAction = true,
+        Mult_AccuracyMOA = 0.8,
+        Mult_HipDispersion = 0.8,
+    },
+    {
+        Mode = 0,
+    },
+}
+SWEP.O_Hook_Override_Firemodes = function(wep, tbl)
+    local buff, current, winningslot = tbl.buff, tbl.current, tbl.winningslot
+
+    if wep:CheckFlags(ffa, ffb) and buff == "Override_Firemodes" then
+        tbl.current = ffc
+    end
+end
+
 SWEP.AttachmentElements = {
-    ["uc_ammo_sg_baton"] = {
-        Override_Firemodes = {
-            {
-                Mode = 1,
-                PrintName = "fcg.pump",
-                Override_ManualAction = true,
-                Mult_AccuracyMOA = 0.8,
-                Mult_HipDispersion = 0.8,
-            },
-            {
-                Mode = 0,
-            },
-        }
-    },
-    ["uc_ammo_sg_drgn"] = {
-        Override_Firemodes = {
-            {
-                Mode = 1,
-                PrintName = "fcg.pump",
-                Override_ManualAction = true,
-                Mult_AccuracyMOA = 0.8,
-                Mult_HipDispersion = 0.8,
-            },
-            {
-                Mode = 0,
-            },
-        }
-    },
     ["ur_spas12_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
         AttPosMods = {[3] = {
