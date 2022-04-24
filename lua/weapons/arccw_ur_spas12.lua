@@ -504,9 +504,6 @@ SWEP.AttachmentElements = {
         },
         Override_Firemodes_Priority = 10,
     },
-}
-
-SWEP.AttachmentElements = {
     ["ur_spas12_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
         AttPosMods = {[3] = {
