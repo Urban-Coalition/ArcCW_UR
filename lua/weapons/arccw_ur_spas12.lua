@@ -489,7 +489,7 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
-    ["uc_ammo_sg_baton"] = {
+    ["uc_manualonly"] = {
         Override_Firemodes = {
             {
                 Mode = 1,
@@ -501,21 +501,8 @@ SWEP.AttachmentElements = {
             {
                 Mode = 0,
             },
-        }
-    },
-    ["uc_ammo_sg_drgn"] = {
-        Override_Firemodes = {
-            {
-                Mode = 1,
-                PrintName = "fcg.pump",
-                Override_ManualAction = true,
-                Mult_AccuracyMOA = 0.8,
-                Mult_HipDispersion = 0.8,
-            },
-            {
-                Mode = 0,
-            },
-        }
+        },
+        Override_Firemodes_Priority = 10,
     },
     ["ur_spas12_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
@@ -549,7 +536,7 @@ SWEP.AttachmentElements = {
     },
     ["rail_modern"] = {
         VMBodygroups = {{ind = 8, bg = 1}},
-        AttPosMods = {[1] ={
+        AttPosMods = {[1] = {
             SlideAmount = {
                 vmin = Vector(0, 0.5, 0.65),
                 vmax = Vector(0, 2.5, 0.65)
@@ -573,7 +560,6 @@ SWEP.Attachments = {
             vpos = Vector(0, -1, 0.4),
             vang = Angle(90, -90, -90),
         },
-        SlideAmount = nil,
         CorrectiveAng = Angle(180,0,0),
         SlideAmount = {
             vmin = Vector(0, -2, 0.4),
