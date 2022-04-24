@@ -197,10 +197,6 @@ SWEP.ShootDrySound = path1 .. "dryfire.ogg"
 
 -- Bodygroups --
 
-// SWEP.BulletBones = {
-   // [2] = "glock_bullet1"
-// }
-
 SWEP.AttachmentElements = {
     ["ur_pmm"] = {
         VMBodygroups = {
@@ -208,6 +204,8 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
             {ind = 3, bg = 1},
         },
+        NameChange = "PVM",
+        TrueNameChange = "PMM",
     },
     ["ur_peanutbutter"] = {
         VMBodygroups = {
@@ -391,7 +389,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Variant",
-        DefaultAttName = "Classic Makarov",
+        DefaultAttName = "Classic",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
         Slot = "ur_pm_variant",
     },
