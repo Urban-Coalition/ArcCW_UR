@@ -32,7 +32,7 @@ SWEP.TrueName = "PM"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Basic Soviet pistol that can be found around the globe. Better known by its colloquial moniker, the "Makarov," after its designer. Although it lacks the modularity of modern sidearms, the weapon and its many derivatives remain trustworthy sidearms.
+SWEP.Trivia_Desc = [[Basic Soviet pistol that can be found around the globe. Better known by its colloquial moniker, the "Makarov," after its designer. Although it lacks the modularity of modern sidearms, the weapon and its many derivatives remain trustworthy among both police and irregular forces.
 
 With low offensive potential but very compact handling, its main use is as an emergency backup weapon.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
@@ -326,7 +326,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        MinProgress = 1.1,
+        MinProgress = 1.85,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.2,
@@ -348,7 +348,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        MinProgress = 1.5,
+        MinProgress = 2.15,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.2,
@@ -361,11 +361,11 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "magpouch_pull_small.ogg", t = 0.8},
-            {s = common .. "pistol_magdrop.ogg",  t = 1},
+            {s = common .. "pistol_magdrop.ogg",  t = .8},
             {s = rottle, t = 1.15},
             {s = path .. "magstruggle.ogg",         t = 1.45, c = ci},
             {s = path .. "magin.ogg",         t = 1.5, c = ci},
-            {s = path1 .. "chamber.ogg",      t = 2.1, c = ci},
+            {s = path1 .. "chamber.ogg",      t = 2.1, c = ci}, -- Temporary
         },
     },
 }
