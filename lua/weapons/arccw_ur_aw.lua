@@ -151,7 +151,7 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.372, 0, 0.639),
+    Pos = Vector(-3.37, -5, 0.68),
     Ang = Angle(0, 0, 2),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -227,7 +227,7 @@ SWEP.AttachmentElements = {
     ["sights_compact"] = {
         VMBodygroups = {{ind = 8, bg = 2}},
         Override_IronSightStruct = {
-            Pos = Vector(-3.395, 0, 1.36),
+            Pos = Vector(-3.395, -5, 1.35),
             Ang = Angle(0, 0, 2),
             Magnification = 1,
         }
@@ -308,7 +308,7 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_aw_muzzle"},
         Bone = "tag_weapon",
-        Installed = "ur_aw_muzzle_brake",
+        --Installed = "ur_aw_muzzle_brake",
         VMScale = Vector(1.5, 1.5, 1.5),
         WMScale = VMScale,
         Offset = {
