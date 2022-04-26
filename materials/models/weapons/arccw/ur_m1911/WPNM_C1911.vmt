@@ -4,7 +4,7 @@ VertexlitGeneric
 	
 	"$phong" 1
 	"$phongexponenttexture"     "models/weapons/arccw/ur_m1911/1911_rough"
-	"$phongwarptexture"			"models/weapons/gunslinger/shared/phongwarp_metallic" 
+	//"$phongwarptexture"			"models/weapons/gunslinger/shared/phongwarp_metallic" 
 	"$phongboost"               "0.3"
 	"$phongfresnelranges"       "[1 4 8]"
 	"$phongexponent"            "8"
