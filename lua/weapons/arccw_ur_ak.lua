@@ -146,6 +146,7 @@ SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
+SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -155,8 +156,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.57, 7, 0.41),
-    Ang = Angle(0.60, 0.274, 5.53),
+    Pos = Vector(-2.57, -2, 0.41),
+    Ang = Angle(0.80, 0.274, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -783,15 +784,17 @@ SWEP.Attachments = {
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
         DefaultAttIcon = Material("entities/att/arccw_uc_ammo_generic.png", "mips smooth"),
         Slot = "uc_ammo",
+        MergeSlots = {12},
         --ExcludeFlags = {"cal_12g"},
     },
-    -- {
-    --     PrintName = "Ammo Type",
-    --     DefaultAttName = "\"BUCK\" #00 Buckshot",
-    --     Slot = "ud_ammo_shotgun",
-    --     RequireFlags = {"cal_12g"},
-    --     HideIfBlocked = true
-    -- }, -- Will un-comment as soon as HideIfBlocked is fixed for slots
+    {
+        PrintName = "Ammo Type (Shotgun)",
+        DefaultAttName = "\"BUCK\" #00 Buckshot",
+        Slot = "ud_ammo_shotgun",
+        RequireFlags = {"cal_12g"},
+        HideIfBlocked = false,
+        Hidden = true
+    }, -- Fix HideIfBlocked
     {
         PrintName = "Powder Load",
         Slot = "uc_powder",
