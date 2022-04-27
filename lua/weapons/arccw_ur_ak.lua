@@ -156,14 +156,14 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.57, -2, 0.41),
+    Pos = Vector(-2.61, -2, 0.35),
     Ang = Angle(0.80, 0.274, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
 }
 SWEP.LaserOffsetAngle = Angle(0, 0, 0)
-SWEP.LaserIronsAngle = Angle(0, 1.5, 0)
+SWEP.LaserIronsAngle = Angle(0, 0, 0)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -227,11 +227,11 @@ SWEP.AttachmentElements = {
             vpos = Vector(0, 32.2, 2.6),
             vang = Angle(0, 270, 0),
         }},
-        Override_IronSightStruct = { -- Someone else fix this please, i'm impatient -Gauss
-            Pos = Vector(-2.643, 0, 0.67),
-            Ang = Angle(-0.1, 0.14, 5.53),
-            Magnification = 1,
-        }
+	Override_IronSightStruct = {
+    		Pos = Vector(-2.59, -2, 0.32),
+    		Ang = Angle(0.40, 0.274, 5.53),
+    		Magnification = 1,
+	}
     },
     ["barrel_rpk74m"] = {
         VMBodygroups = {
@@ -244,10 +244,10 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, 0),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.643, 0, 0.67),
-            Ang = Angle(-0.1, 0.14, 5.53),
-            Magnification = 1,
-        }
+    		Pos = Vector(-2.59, -2, 0.32),
+    		Ang = Angle(0.40, 0.274, 5.53),
+    		Magnification = 1,
+	}
     },
     ["barrel_krinkov"] = {
         VMBodygroups = {
@@ -666,7 +666,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.ExtraSightDist = 10
-SWEP.GuaranteeLaser = true
+SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {
     pos = Vector(-7, 4, -4.5),
