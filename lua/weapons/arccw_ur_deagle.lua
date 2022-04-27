@@ -12,6 +12,7 @@ SWEP.ShellModel = "models/weapons/arccw/uc_shells/50ae.mdl"
 SWEP.ShellScale = 1
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
+SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
