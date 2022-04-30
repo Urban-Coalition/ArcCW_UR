@@ -156,8 +156,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.61, -2, 0.35),
-    Ang = Angle(0.80, 0.274, 5.53),
+    Pos = Vector(-2.61, -2, 0.45),
+    Ang = Angle(0.60, 0.274, 5.53),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -228,8 +228,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, 0),
         }},
 	Override_IronSightStruct = {
-    		Pos = Vector(-2.59, -2, 0.32),
-    		Ang = Angle(0.40, 0.274, 5.53),
+    		Pos = Vector(-2.625, -2, 0.68),
+    		Ang = Angle(-0.1, 0.274, 5.53),
     		Magnification = 1,
 	}
     },
@@ -244,8 +244,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, 0),
         }},
         Override_IronSightStruct = {
-    		Pos = Vector(-2.59, -2, 0.32),
-    		Ang = Angle(0.40, 0.274, 5.53),
+    		Pos = Vector(-2.625, -2, 0.68),
+    		Ang = Angle(-0.1, 0.274, 5.53),
     		Magnification = 1,
 	}
     },
@@ -268,7 +268,7 @@ SWEP.AttachmentElements = {
             }
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.638, 0, 0.9),
+            Pos = Vector(-2.638, -2, 0.9),
             Ang = Angle(-1, 0.12, 5.53),
             Magnification = 1,
         }
@@ -296,7 +296,7 @@ SWEP.AttachmentElements = {
             }
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.62, 0, 0.75),
+            Pos = Vector(-2.62, -2, 0.75),
             Ang = Angle(-0.42, 0.2, 5.53),
             Magnification = 1,
         }
@@ -338,7 +338,7 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, -0),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.63, 0, 0.72),
+            Pos = Vector(-2.63, -2, 0.76),
             Ang = Angle(-0.3, 0.18, 5.53),
             Magnification = 1,
         }
@@ -354,8 +354,8 @@ SWEP.AttachmentElements = {
             vang = Angle(0, 270, 0),
         }},
         Override_IronSightStruct = {
-            Pos = Vector(-2.6, 0, 0.45),
-            Ang = Angle(0.55, 0.265, 5.53),
+            Pos = Vector(-2.6, -2, 0.48),
+            Ang = Angle(0.6, 0.265, 5.53),
             Magnification = 1,
         }
     },
@@ -377,7 +377,7 @@ SWEP.AttachmentElements = {
             }
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.6, 0, 0.45),
+            Pos = Vector(-2.6, -2, 0.5),
             Ang = Angle(0.55, 0.265, 5.53),
             Magnification = 1,
         }
