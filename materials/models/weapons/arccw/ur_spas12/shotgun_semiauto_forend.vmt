@@ -9,8 +9,8 @@ VertexlitGeneric
 	"$phongfresnelranges"       "[1 4 8]"
 	"$phongexponent"            "38"
 	
-	"$color2"					"[0.8 0.8 0.8]"
-	"$blendTintByBaseAlpha"		"1" 
+	"$color2"					"[0.6 0.6 0.6]"
+	"$blendTintByBaseAlpha"		"0" 
 
 	"$rimlight"					"1"
 	"$rimmask"					"1"
