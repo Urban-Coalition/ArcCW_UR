@@ -434,11 +434,12 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "vm_barrel",
         Offset = {
-            vpos = Vector(0, -5.5, .2),
+            vpos = Vector(0, -4.7, .12),
             vang = Angle(0, 90, 0),
         },
         InstalledEles = {"nofh"},
         ExcludeFlags = {"barrel_annihilator"},
+        VMScale = Vector(.8, .8, .8)
     },
     {
         PrintName = "Tactical",
