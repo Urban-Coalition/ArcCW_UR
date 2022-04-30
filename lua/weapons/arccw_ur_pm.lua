@@ -145,7 +145,7 @@ SWEP.ShootSpeedMult = 1
 -- Length --
 
 SWEP.BarrelLength = 8
-SWEP.ExtraSightDist = 4
+SWEP.ExtraSightDist = 20
 
 -- Ironsights / Customization / Poses --
 
@@ -157,7 +157,7 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.327, 10, 1),
+     Pos = Vector(-2.327, 5, 1),
      Ang = Angle(0.195, 0, 3.3),
      Magnification = 1,
      ViewModelFOV = 55,
