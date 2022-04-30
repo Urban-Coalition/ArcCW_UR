@@ -66,7 +66,7 @@ SWEP.MaxRecoilBlowback = 3
 SWEP.MaxRecoilPunch = 3
 SWEP.RecoilPunchBack = 3
 SWEP.RecoilPunchBackMax = 2.5
-SWEP.RecoilPunchBackMaxSights = 2.5
+SWEP.RecoilPunchBackMaxSights = 1
 
 SWEP.Sway = 0.2
 
