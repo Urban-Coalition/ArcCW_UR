@@ -60,11 +60,13 @@ SWEP.Recoil = 2
 SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.6
-SWEP.RecoilPunch = 1
-SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 1
-SWEP.MaxRecoilPunch = 1
-SWEP.RecoilPunchBack = 2
+SWEP.RecoilPunch = -0.5
+SWEP.VisualRecoilMult = 3
+SWEP.MaxRecoilBlowback = 3
+SWEP.MaxRecoilPunch = 3
+SWEP.RecoilPunchBack = 3
+SWEP.RecoilPunchBackMax = 2.5
+SWEP.RecoilPunchBackMaxSights = 2.5
 
 SWEP.Sway = 0.2
 
@@ -792,7 +794,4 @@ SWEP.Animations = {
     ["exit_inspect"] = false,
 }
 
-SWEP.Hook_Think = function(wep)
-    -- local vm = wep:GetOwner():GetViewModel()
-    -- vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) )
-end
+SWEP.Hook_Think = ArcCW.UC.ADSReload

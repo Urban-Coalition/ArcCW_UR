@@ -620,10 +620,7 @@ SWEP.Animations = {
 
 -- ADS animation blending, thanks fesiug --
 
-SWEP.Hook_Think = function(wep)
-    local vm = wep:GetOwner():GetViewModel()
-    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) )
-end
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 
 -- Attachments --
