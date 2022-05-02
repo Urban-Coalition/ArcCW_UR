@@ -787,17 +787,7 @@ SWEP.Attachments = {
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
         DefaultAttIcon = Material("entities/att/arccw_uc_ammo_generic.png", "mips smooth"),
         Slot = "uc_ammo",
-        MergeSlots = {12},
-        --ExcludeFlags = {"cal_12g"},
     },
-    {
-        PrintName = "Ammo Type (Shotgun)",
-        DefaultAttName = "\"BUCK\" #00 Buckshot",
-        Slot = "ud_ammo_shotgun",
-        RequireFlags = {"cal_12g"},
-        HideIfBlocked = false,
-        Hidden = true
-    }, -- Fix HideIfBlocked
     {
         PrintName = "Powder Load",
         Slot = "uc_powder",
