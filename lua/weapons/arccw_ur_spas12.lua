@@ -511,7 +511,11 @@ SWEP.AttachmentElements = {
         }}
     },
     ["ur_spas12_barrel_sport"] = {
-        VMBodygroups = {{ind = 3, bg = 2}},
+        VMBodygroups = {
+            {ind = 3, bg = 2},
+            {ind = 5, bg = 1},
+            {ind = 6, bg = 1},
+            },
     },
 
     ["ur_spas12_stock_full"] = {
