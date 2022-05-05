@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Remove your stock. Who needs it, anyway? Not you, that's for sure."
+att.Description = "Remove your stock. Who needs it, anyway? Not the Germans, that's for sure."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,7 +23,7 @@ att.Mult_Recoil = 2.15
 att.Mult_RecoilSide = 1.25
 att.Mult_Sway = 3
 
-att.Mult_SightTime = 0.65
+att.Mult_SightTime = 0.8
 att.Mult_SpeedMult = 1.1
 att.Mult_SightedSpeedMult = 1.25
 att.Mult_ShootSpeedMult = 1.2
