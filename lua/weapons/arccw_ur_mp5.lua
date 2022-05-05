@@ -58,6 +58,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ur_mp5.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_mp5.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.ProceduralIronFire = true
 
 -- Damage --
 
@@ -435,7 +436,7 @@ SWEP.Animations = {
         Source = "idle",
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = "idle",
     },
     ["ready"] = {
         Source = "ready",
@@ -475,7 +476,17 @@ SWEP.Animations = {
         ShellEjectAt = 0.03,
     },
     ["fire_empty"] = {
-        Source = "fire_empty",
+        Source = "fire",
+        Time = 13 / 30,
+        ShellEjectAt = 0.03,
+    },
+    ["fire_iron"] = {
+        Source = "idle",
+        Time = 13 / 30,
+        ShellEjectAt = 0.03,
+    },
+    ["fire_empty_iron"] = {
+        Source = "idle",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
     },
@@ -489,25 +500,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        ShellEjectAt = 0.36,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.15},
             {s = path .. "chback.ogg",         t = 0.27, c = ci},
             {s = path .. "chforward.ogg",         t = 0.5, c = ci},
-        },
-    },
-    ["fix_empty"] = {
-        Source = "fix_empty",
-        Time = 40 / 30,
-        ShellEjectAt = false,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.15},
-            {s = path .. "chback.ogg",         t = 0.3, c = ci},
-            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
         },
     },
 
