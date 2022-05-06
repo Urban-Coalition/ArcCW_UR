@@ -1,6 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
 SWEP.Category = "ArcCW - Urban Coalition"
+SWEP.UC_CategoryPack = "2Urban Renewal"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
