@@ -311,14 +311,14 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_aw_muzzle"},
         Bone = "tag_weapon",
-        --Installed = "ur_aw_muzzle_brake",
         VMScale = Vector(1.5, 1.5, 1.5),
         WMScale = VMScale,
         Offset = {
             vpos = Vector(0, 35.2, 1.675),
             vang = Angle(0, 270, 0),
         },
-        ExcludeFlags = {"barrel_sd"}
+        ExcludeFlags = {"barrel_sd"},
+        Installed = "ur_aw_muzzle_brake",
     },
     {
         PrintName = "Caliber",
