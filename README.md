@@ -6,6 +6,7 @@ urban real  renewal
 	- Sounds: 12g (currently uses UD sounds, we don't want that)
 	- Suppressed sounds: 5.45, 9mm, 308, 12g
 	- Balancing
+	- Cosmetic dovetail mount
 	- Wood RPK stock :pleading_face:
 	- Dong grip normal rework
 	- Some att icons
