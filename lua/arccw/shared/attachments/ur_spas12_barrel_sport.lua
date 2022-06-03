@@ -1,7 +1,7 @@
 att.PrintName = "22.5\" SPAS-12 Competition Kit"
 att.AbbrevName = "22.5\" Competition Kit"
 att.Icon = Material("entities/att/acwatt_ud_m1014_barrel.png", "smooth mips")
-att.Description = "Aftermarket sporting kit the replaces the stock forend, handguard, and barrel. Though its design disables the usage of the semi-automatic gas system and muzzle accessories, the kit more than makes up for it."
+att.Description = "Aftermarket sporting kit that replaces the stock forend, handguard, and barrel. Though its design disables the usage of the semi-automatic gas system and muzzle accessories, it more than makes up for it."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
