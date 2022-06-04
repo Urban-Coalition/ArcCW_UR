@@ -214,6 +214,17 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 2},
             {ind = 3, bg = 2},
         },
+        NameChange = "PVS",
+        TrueNameChange = "PB",
+    },
+    ["ur_stechkin"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 3},
+            {ind = 2, bg = 3},
+            {ind = 3, bg = 3},
+        },
+        NameChange = "PV Auto",
+        TrueNameChange = "APS",
     },
     ["ur_pb_supp"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
@@ -409,7 +420,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.1, 0),
             vang = Angle(180, 90, 0),
         },
-        VMScale = Vector(0.8, 0.8, 0.8)
+        VMScale = Vector(0.8, 0.8, 0.8),
+        ExcludeFlags = {"sd"}
     },
    // { i hate this gay ass little pistol bruh
        // PrintName = "Tactical",
