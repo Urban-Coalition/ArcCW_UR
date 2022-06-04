@@ -11,7 +11,9 @@ att.Override_ClipSize = 20
 att.Mult_ReloadTime = 1.15
 att.Mult_SightTime = 0.9
 att.Mult_SightedSpeedMult = 0.9
+att.Mult_Recoil = 1.3
 att.Mult_RPM = 1.304
+att.Mult_AccuracyMOA = 1.5
 
 att.Override_Firemodes = {
     {

@@ -201,6 +201,7 @@ SWEP.ShootDrySound = path1 .. "dryfire.ogg"
 SWEP.AttachmentElements = {
     ["ur_pmm"] = {
         VMBodygroups = {
+            {ind = 0, bg = 1},
             {ind = 1, bg = 1},
             {ind = 2, bg = 1},
             {ind = 3, bg = 1},
@@ -210,6 +211,7 @@ SWEP.AttachmentElements = {
     },
     ["ur_peanutbutter"] = {
         VMBodygroups = {
+            {ind = 0, bg = 2},
             {ind = 1, bg = 2},
             {ind = 2, bg = 2},
             {ind = 3, bg = 2},
@@ -219,6 +221,7 @@ SWEP.AttachmentElements = {
     },
     ["ur_stechkin"] = {
         VMBodygroups = {
+            {ind = 0, bg = 3},
             {ind = 1, bg = 3},
             {ind = 2, bg = 3},
             {ind = 3, bg = 3},
