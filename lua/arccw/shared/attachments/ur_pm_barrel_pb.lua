@@ -1,9 +1,9 @@
-att.PrintName = "BG-K Integral Suppressor"
-att.AbbrevName = "BG-K Suppressor"
+att.PrintName = "PB Integral Suppressor"
+att.AbbrevName = "PB Suppressor"
 
 if !GetConVar("arccw_truenames"):GetBool() then 
-    att.PrintName = "PB Integral Suppressor"
-    att.AbbrevName = "PB Suppressor"
+    att.PrintName = "BG-K Integral Suppressor"
+    att.AbbrevName = "BG-K Suppressor"
 end
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
@@ -30,7 +30,7 @@ att.Mult_HipDispersion = 0.8
 
 att.Mult_PhysBulletMuzzleVelocity = 0.75
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
+att.Hook_GetDistantShootSound = function(wep, distancesound) 
     if distancesound == wep.DistantShootSoundSilenced then
         return false end
 end
