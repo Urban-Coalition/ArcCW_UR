@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.AbbrevName = "BG-K Suppressor"
 end
 
-att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips")
 att.Description = "An integral, quick-detach suppressor for the \"Silent\" variant of the pistol. Specially designed, it provides near-reportless firing and high precision, at the cost of handling and muzzle velocity."
 att.Desc_Pros = {
     "pro.invistracers",

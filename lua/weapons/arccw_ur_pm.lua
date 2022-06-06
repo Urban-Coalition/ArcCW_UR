@@ -216,6 +216,10 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 2},
             {ind = 3, bg = 2},
         },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, -0.25, 0.2),
+            vang = Angle(90, 90, -90),
+        }},
         NameChange = "PVS",
         TrueNameChange = "PB",
     },
@@ -226,6 +230,10 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 3},
             {ind = 3, bg = 3},
         },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, -1.4, -0.15),
+            vang = Angle(90, 90, -90),
+        }},
         NameChange = "PV Auto",
         TrueNameChange = "APS",
     },
