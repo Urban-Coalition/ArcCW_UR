@@ -12,4 +12,4 @@ att.Mult_Range = 0.65
 att.Mult_Recoil = 1.05
 
 att.ActivateElements = {"ur_peanutbutter"}
-att.GivesFlags = {"sd"}
+att.GivesFlags = {"ur_pb"}

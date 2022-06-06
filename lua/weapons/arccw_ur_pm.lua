@@ -424,7 +424,7 @@ SWEP.Attachments = {
             vang = Angle(180, 90, 0),
         },
         VMScale = Vector(0.8, 0.8, 0.8),
-        ExcludeFlags = {"sd"}
+        -- ExcludeFlags = {"ur_pb"}
     },
    // { i hate this gay ass little pistol bruh
        // PrintName = "Tactical",
