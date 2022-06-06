@@ -1,13 +1,13 @@
-att.PrintName = "\"KGB\" Integral Suppressor"
-att.AbbrevName = "PVS Suppressor"
+att.PrintName = "BG-K Integral Suppressor"
+att.AbbrevName = "BG-K Suppressor"
 
-if !GetConVar("arccw_truenames"):GetBool() then
+if !GetConVar("arccw_truenames"):GetBool() then 
     att.PrintName = "PB Integral Suppressor"
     att.AbbrevName = "PB Suppressor"
 end
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
-att.Description = "yes."
+att.Description = "An integral, quick-detach suppressor for the \"Silent\" variant of the pistol. Specially designed, it provides near-reportless firing and high precision, at the cost of handling and muzzle velocity."
 att.Desc_Pros = {
     "pro.invistracers",
     "uc.subsonic"
@@ -24,7 +24,7 @@ att.Override_MuzzleEffect = "muzzleflash_suppressed"
 att.Override_PhysTracerProfile = 7
 att.Override_TracerNum = 0
 
-att.Mult_SightTime = 1.05
+att.Mult_SightTime = 1.10
 att.Mult_AccuracyMOA = 0.5
 att.Mult_HipDispersion = 0.8
 
