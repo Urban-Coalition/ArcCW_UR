@@ -1,6 +1,6 @@
 att.PrintName = "Modernized Makarov Pistol"
 att.AbbrevName = "Modernized"
-att.Icon = Material("entities/att/ur_ak/barrel/aksu.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide.png", "mips smooth")
 att.Description = "Modernized variant of the pistol with many redesigned features, including a new extended magazine alongside more robust grip panels. Marginally slower to reload."
 att.Slot = {"ur_pm_variant"}
 att.AutoStats = true

@@ -216,6 +216,10 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 2},
             {ind = 3, bg = 2},
         },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, -0.25, 0.2),
+            vang = Angle(90, 90, -90),
+        }},
         NameChange = "PVS",
         TrueNameChange = "PB",
     },
@@ -226,6 +230,10 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 3},
             {ind = 3, bg = 3},
         },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, -1.4, -0.15),
+            vang = Angle(90, 90, -90),
+        }},
         NameChange = "PV Auto",
         TrueNameChange = "APS",
     },
@@ -424,7 +432,7 @@ SWEP.Attachments = {
             vang = Angle(180, 90, 0),
         },
         VMScale = Vector(0.8, 0.8, 0.8),
-        ExcludeFlags = {"sd"}
+        -- ExcludeFlags = {"ur_pb"}
     },
    // { i hate this gay ass little pistol bruh
        // PrintName = "Tactical",
