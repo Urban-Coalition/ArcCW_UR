@@ -192,7 +192,24 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
+    ["ur_1911_slide_compact"] = {VMBodygroups = {
+        {ind = 0,bg = 1},
+        {ind = 1,bg = 1}
+    }},
 
+    ["ur_1911_slide_m45"] = {VMBodygroups = 
+        {ind = 1,bg = 1},
+        {ind = 4,bg = 1},
+        {ind = 5,bg = 1},
+    },
+
+    ["ur_1911_mag_ext"] = {VMBodygroups = {ind = 3,bg = 1}},
+
+    ["ur_1911_grip_snake"] = {VMBodygroups = {ind = 6,bg = 1}},
+    ["ur_1911_grip_pachmayr"] = {VMBodygroups = {ind = 6,bg = 2}},
+
+    ["optic_rail"] = {VMBodygroups = {ind = 7,bg = 1}},
+    ["tac_rail"] = {VMBodygroups = {ind = 8,bg = 1}},
 }
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -200,8 +217,9 @@ SWEP.Hook_NameChange = function(wep,name)
         local atts = wep.Attachments
         local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
 
-        if cal == "10auto" then return "Delta Elite"
-        elseif cal == "9mm" then return "SR1911" end
+        if cal == "10auto" then return GetConVar("arccw_truenames"):GetBool() and "Delta Elite" or ""
+        elseif cal == "9mm" then return GetConVar("arccw_truenames"):GetBool() and "SR1911" or ""
+        end
 
         return "M1911"
     else
@@ -409,13 +427,13 @@ SWEP.Attachments = {
             vpos = Vector(-0.01, -.7, 0),
             vang = Angle(90, 0, -90),
         },
-        
+        InstalledEles = {"optic_rail"},
     },
     {
-        PrintName = "Barrel",
-        Slot = {"ur_m1911_barrel"},
+        PrintName = "Slide",
+        Slot = {"ur_m1911_slide"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
-        DefaultAttName = "5\" Government Barrel",
+        DefaultAttName = "5\" Government Slide",
     },
     {
         PrintName = "Caliber",
@@ -451,6 +469,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -.5, 4),
             vang = Angle(90, 0, -90),
         },
+        InstalledEles = {"tac_rail"},
     },
     {
         PrintName = "Magazine",

@@ -201,6 +201,7 @@ SWEP.ShootDrySound = path1 .. "dryfire.ogg"
 SWEP.AttachmentElements = {
     ["ur_pmm"] = {
         VMBodygroups = {
+            {ind = 0, bg = 1},
             {ind = 1, bg = 1},
             {ind = 2, bg = 1},
             {ind = 3, bg = 1},
@@ -210,10 +211,31 @@ SWEP.AttachmentElements = {
     },
     ["ur_peanutbutter"] = {
         VMBodygroups = {
+            {ind = 0, bg = 2},
             {ind = 1, bg = 2},
             {ind = 2, bg = 2},
             {ind = 3, bg = 2},
         },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, -0.25, 0.2),
+            vang = Angle(90, 90, -90),
+        }},
+        NameChange = "PVS",
+        TrueNameChange = "PB",
+    },
+    ["ur_stechkin"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 3},
+            {ind = 1, bg = 3},
+            {ind = 2, bg = 3},
+            {ind = 3, bg = 3},
+        },
+        AttPosMods = {[3] = {
+            vpos = Vector(0, -1.4, -0.15),
+            vang = Angle(90, 90, -90),
+        }},
+        NameChange = "PV Auto",
+        TrueNameChange = "APS",
     },
     ["ur_pb_supp"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
@@ -409,7 +431,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.1, 0),
             vang = Angle(180, 90, 0),
         },
-        VMScale = Vector(0.8, 0.8, 0.8)
+        VMScale = Vector(0.8, 0.8, 0.8),
+        -- ExcludeFlags = {"ur_pb"}
     },
    // { i hate this gay ass little pistol bruh
        // PrintName = "Tactical",
