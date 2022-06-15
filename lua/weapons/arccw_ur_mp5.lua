@@ -208,7 +208,7 @@ SWEP.ShootSound = {
 }
 SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSound = nil
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
@@ -234,7 +234,7 @@ SWEP.DistantShootSoundIndoorsSilenced = {
     common .. "sup_tail.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
-SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 0.5
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
