@@ -234,7 +234,7 @@ SWEP.DistantShootSoundIndoorsSilenced = {
     common .. "sup_tail.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
-SWEP.DistantShootSoundIndoorsVolume = 0.5
+SWEP.DistantShootSoundIndoorsVolume = 0.6
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
