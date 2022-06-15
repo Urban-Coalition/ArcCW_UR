@@ -186,7 +186,35 @@ local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "clo
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
 SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+
+SWEP.ShootSound = {
+    path .. "fire.ogg"
+}
+SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
+SWEP.DistantShootSound = nil
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire_dist.ogg"
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-pistol-heavy-01.ogg",
+    common .. "fire-dist-int-pistol-heavy-02.ogg",
+    common .. "fire-dist-int-pistol-heavy-03.ogg",
+    common .. "fire-dist-int-pistol-heavy-04.ogg",
+    common .. "fire-dist-int-pistol-heavy-05.ogg",
+    common .. "fire-dist-int-pistol-heavy-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
