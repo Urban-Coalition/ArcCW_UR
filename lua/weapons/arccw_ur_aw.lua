@@ -132,12 +132,45 @@ local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-SWEP.ShootSound = {testpath .. "fire-01.ogg", testpath .. "fire-02.ogg", testpath .. "fire-03.ogg", testpath .. "fire-04.ogg", testpath .. "fire-05.ogg", testpath .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.DistantShootSound = {path1 .. "fire-dist-01.ogg", path1 .. "fire-dist-02.ogg", path1 .. "fire-dist-03.ogg", path1 .. "fire-dist-04.ogg", path1 .. "fire-dist-05.ogg", path1 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = testpath .. "fire-sup-06.ogg" -- Temporary
+
+SWEP.ShootSound = {
+    testpath .. "fire-01.ogg",
+    testpath .. "fire-02.ogg",
+    testpath .. "fire-03.ogg",
+    testpath .. "fire-04.ogg",
+    testpath .. "fire-05.ogg",
+    testpath .. "fire-06.ogg"
+}
+SWEP.ShootSoundSilenced = testpath .. "fire_supp.ogg"
+SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
-SWEP.ShootDrySound = path .. "dryfire.ogg"
---SWEP.ShootPitchVariation = 0
+SWEP.ShootDrySound = testpath .. "dryfire.ogg"
+
+SWEP.DistantShootSoundOutdoors = {
+    testpath .. "fire-dist-01.ogg",
+    testpath .. "fire-dist-02.ogg",
+    testpath .. "fire-dist-03.ogg",
+    testpath .. "fire-dist-04.ogg",
+    testpath .. "fire-dist-05.ogg",
+    testpath .. "fire-dist-06.ogg"
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_ak47"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
