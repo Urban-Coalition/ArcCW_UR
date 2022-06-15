@@ -192,9 +192,33 @@ local path = ")^weapons/arccw_ur/spas12/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg"}
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+--[[SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg"}
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = common .. "manual_trigger.ogg"
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Animations --
 
