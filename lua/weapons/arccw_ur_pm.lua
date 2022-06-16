@@ -212,12 +212,12 @@ SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-int-pistol-light-01.ogg",
-    common .. "fire-dist-int-pistol-light-02.ogg",
-    common .. "fire-dist-int-pistol-light-03.ogg",
-    common .. "fire-dist-int-pistol-light-04.ogg",
-    common .. "fire-dist-int-pistol-light-05.ogg",
-    common .. "fire-dist-int-pistol-light-06.ogg"
+    common .. "fire-dist-int-pistol-01.ogg",
+    common .. "fire-dist-int-pistol-02.ogg",
+    common .. "fire-dist-int-pistol-03.ogg",
+    common .. "fire-dist-int-pistol-04.ogg",
+    common .. "fire-dist-int-pistol-05.ogg",
+    common .. "fire-dist-int-pistol-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup_tail.ogg"
@@ -226,7 +226,7 @@ SWEP.DistantShootSoundIndoorsSilenced = {
     common .. "sup_tail.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
-SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 0.5
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
