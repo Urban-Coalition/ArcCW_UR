@@ -190,11 +190,44 @@ local path = ")^weapons/arccw_ur/pm/"
 local path1 = ")^weapons/arccw_ud/glock/"
 local path2 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = path1 .. "fire_380.ogg" -- Placeholder
-SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
-SWEP.DistantShootSound = path1 .. "fire_dist_380.ogg" -- Placeholder
+SWEP.ShootSound = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
-SWEP.ShootDrySound = path1 .. "dryfire.ogg"
+SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-pistol-light-01.ogg",
+    common .. "fire-dist-int-pistol-light-02.ogg",
+    common .. "fire-dist-int-pistol-light-03.ogg",
+    common .. "fire-dist-int-pistol-light-04.ogg",
+    common .. "fire-dist-int-pistol-light-05.ogg",
+    common .. "fire-dist-int-pistol-light-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
@@ -307,7 +340,7 @@ SWEP.Animations = {
         Source = "fire",
         ShellEjectAt = 0.03,
         Time = .5,
-        SoundTable = {{ s = {path1 .. "mech-01.ogg", path1 .. "mech-02.ogg", path1 .. "mech-03.ogg", path1 .. "mech-04.ogg", path1 .. "mech-05.ogg", path1 .. "mech-06.ogg"}, t = 0.03 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -388,7 +421,7 @@ SWEP.Animations = {
             {s = rottle, t = 1.15},
             {s = path .. "magstruggle.ogg",         t = 1.45, c = ci},
             {s = path .. "magin.ogg",         t = 1.5, c = ci},
-            {s = path1 .. "chamber.ogg",      t = 2.1, c = ci}, -- Temporary
+            {s = path .. "chamber.ogg",      t = 2.0, c = ci},
         },
     },
 }
