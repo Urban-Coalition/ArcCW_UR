@@ -188,15 +188,26 @@ SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
 SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
 
 SWEP.ShootSound = {
-    path .. "fire.ogg"
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
+
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
-    path .. "fire_dist.ogg"
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",
@@ -418,11 +429,11 @@ SWEP.Animations = {
         Source = {"fire_01", "fire_02", "fire_03"},
         Time = 0.9,
         ShellEjectAt = 0.05,
-        SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_jammed"] = {
         Source = "fire_jammed",
-        SoundTable = {{ s = path .. "mech.ogg", t = 0 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
