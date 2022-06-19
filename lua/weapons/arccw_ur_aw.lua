@@ -141,7 +141,7 @@ SWEP.ShootSound = {
     testpath .. "fire-05.ogg",
     testpath .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = testpath .. "fire_supp.ogg"
+SWEP.ShootSoundSilenced = testpath .. "fire-sup-06.ogg"
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = testpath .. "dryfire.ogg"
