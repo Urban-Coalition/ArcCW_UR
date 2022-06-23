@@ -249,10 +249,12 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 2},
             {ind = 3, bg = 2},
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {
+            [3] = {
             vpos = Vector(0, -0.25, 0.2),
             vang = Angle(90, 90, -90),
-        }},
+            },
+        },
         NameChange = "PVS",
         TrueNameChange = "PB",
     },
@@ -263,10 +265,12 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 3},
             {ind = 3, bg = 3},
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {
+            [3] = {
             vpos = Vector(0, -1.4, -0.15),
             vang = Angle(90, 90, -90),
-        }},
+            },
+        },
         NameChange = "PV Auto",
         TrueNameChange = "APS",
     },
@@ -350,6 +354,20 @@ SWEP.Animations = {
             {s = path1 .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
     },
+    ["fire_stock"] = {
+        Source = "fire_stock",
+        ShellEjectAt = 0.03,
+        Time = .5,
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
+    },
+    ["fire_empty_stock"] = {
+        Source = "fire_empty_stock",
+        ShellEjectAt = 0.03,
+        Time = .5,
+        SoundTable = {
+            {s = path1 .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
+        },
+    },
     ["fix"] = {
         Source = "fix",
         ShellEjectAt = false,
@@ -427,6 +445,12 @@ SWEP.Animations = {
 }
 
 SWEP.AutosolveSourceSeq = "idle"
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep.Attachments[4].Installed and (anim == "fire" or anim == "fire_empty") then
+        return anim .. "_stock"
+    end
+end
 
 SWEP.Attachments = {
     {

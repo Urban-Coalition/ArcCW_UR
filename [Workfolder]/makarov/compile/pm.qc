@@ -123,6 +123,26 @@ $sequence "fire_empty" {
 	{ event 5001 0 "1" }
 }
 
+$sequence "fire_stock" {
+	"anims\fire_stock.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+ 	blend "sights" 0 1
+	fadein 0.02
+	fadeout 0.0
+	{ event 5001 0 "1" }
+}
+
+$sequence "fire_empty_stock" {
+	"anims\fire_empty_stock.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+ 	blend "sights" 0 1
+	fadein 0.02
+	fadeout 0.0
+	{ event 5001 0 "1" }
+}
+
 // $sequence "ready" {
 // 	"anims\ready.smd"
 //  blend "sights" 0 1
