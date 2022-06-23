@@ -29,7 +29,7 @@ att.Mult_Damage = 0.72
 att.Mult_DamageMin = 0.72
 
 att.Mult_ShootSpeedMult = 1.2
---att.Mult_RPM = 1.2
+att.Mult_RPM = 1.1
 
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
