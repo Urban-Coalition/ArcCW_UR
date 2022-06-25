@@ -26,8 +26,20 @@ att.Mult_ShootSpeedMult = 0.9
 local path = ")^weapons/arccw_ur/aw_placeholders/338/"
 local path1 = ")^weapons/arccw_ur/aw_placeholders/"
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return {path1 .. "fire-dist-01.ogg", path1 .. "fire-dist-02.ogg", path1 .. "fire-dist-03.ogg", path1 .. "fire-dist-04.ogg", path1 .. "fire-dist-05.ogg", path1 .. "fire-dist-06.ogg"} end
+att.Hook_GetShootSound = function(wep, sound) -- Temporary
+    if wep:GetBuff_Override("Silencer") then
+        return path .. "fire_sup.ogg"
+    else
+        return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"}
+    end
+end
+
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"}
+    end
 end
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
