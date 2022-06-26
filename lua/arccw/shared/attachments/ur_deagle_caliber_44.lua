@@ -22,3 +22,8 @@ att.Mult_ShootSpeedMult = 1.1
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"
 att.Override_ShellScale = 1
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then
+        return {"weapons/arccw_ur/sw586/fire-dist-01.ogg", "weapons/arccw_ur/sw586/fire-dist-02.ogg", "weapons/arccw_ur/sw586/fire-dist-03.ogg", "weapons/arccw_ur/sw586/fire-dist-04.ogg", "weapons/arccw_ur/sw586/fire-dist-05.ogg", "weapons/arccw_ur/sw586/fire-dist-06.ogg"} end
+end

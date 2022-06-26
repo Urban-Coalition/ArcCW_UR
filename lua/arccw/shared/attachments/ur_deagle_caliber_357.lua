@@ -11,14 +11,14 @@ att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
         return "weapons/arccw_ur/deagle/fire_supp_10.ogg" -- Placeholder
     else
-        return {"weapons/arccw_ur/deagle/fire_357_1.ogg", "weapons/arccw_ur/deagle/fire_357_2.ogg"} -- Not Placeholder
+        return {"weapons/arccw_ur/sw586/fire-01.ogg", "weapons/arccw_ur/sw586/fire-02.ogg", "weapons/arccw_ur/sw586/fire-03.ogg", "weapons/arccw_ur/sw586/fire-04.ogg", "weapons/arccw_ur/sw586/fire-05.ogg", "weapons/arccw_ur/sw586/fire-06.ogg"} -- Not Placeholder
     end
 end
 
---[[att.Hook_GetDistantShootSound = function(wep, distancesound)
+att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ur/deagle/fire_dist_10.ogg" end
-end]]
+        return {"weapons/arccw_ur/sw586/fire-dist-01.ogg", "weapons/arccw_ur/sw586/fire-dist-02.ogg", "weapons/arccw_ur/sw586/fire-dist-03.ogg", "weapons/arccw_ur/sw586/fire-dist-04.ogg", "weapons/arccw_ur/sw586/fire-dist-05.ogg", "weapons/arccw_ur/sw586/fire-dist-06.ogg"} end
+end
 
 att.AutoStats = true
 att.Slot = "ur_deagle_caliber"
