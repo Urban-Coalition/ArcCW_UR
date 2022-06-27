@@ -32,7 +32,7 @@ SWEP.TrueName = "M1911"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Venerable semi-automatic pistol used by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it is rarely considered an obsolete design, with its short recoil mechanism inherited by most modern pistols.
+SWEP.Trivia_Desc = [[Venerable semi-automatic pistol issued by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it is rarely considered an obsolete design. Its short recoil mechanism has been inherited by most modern pistols.
 
 Has better stopping power than many other pistols, but its single-stacked magazine can only hold a few of the large rounds.]]
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."

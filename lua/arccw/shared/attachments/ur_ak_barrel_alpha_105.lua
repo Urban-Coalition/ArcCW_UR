@@ -20,3 +20,5 @@ att.Mult_ShootPitch = 105/100
 
 att.GivesFlags = {"ak_railedguard","ak_barrelchange","nodong"}
 att.ActivateElements = {"barrel_105_alpha"}
+
+att.Ignore = true

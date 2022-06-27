@@ -25,3 +25,5 @@ att.Mult_BipodDispersion = .2
 
 att.ActivateElements = {"barrel_rpk74m"}
 att.GivesFlags = {"ak_barrelchange","nodong"}
+
+att.Ignore = true

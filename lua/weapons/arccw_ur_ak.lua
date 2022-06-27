@@ -363,7 +363,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_vepr"] = {
         VMBodygroups = {
-            {ind = 1, bg = 9},
+            --{ind = 1, bg = 9},
             {ind = 7, bg = 4},
             {ind = 8, bg = 2}
         },
@@ -377,9 +377,16 @@ SWEP.AttachmentElements = {
             Magnification = 1,
         }
     },
+
+    ["ur_ak_hg_vepr"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 9},
+        },
+    },
+
     ["barrel_105"] = {
         VMBodygroups = {
-            {ind = 1, bg = 3},
+            --{ind = 1, bg = 3},
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
@@ -395,7 +402,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_105_alpha"] = {
         VMBodygroups = {
-            {ind = 1, bg = 7},
+            --{ind = 1, bg = 7},
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
@@ -671,10 +678,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     local optic = wep.Attachments[1].Installed
     local hg = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
-    local ub = wep.Attachments[6].Installed
-    local upper = wep.Attachments[10].Installed
+    local ub = wep.Attachments[7].Installed
+    local upper = wep.Attachments[15].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
-    local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
+    local taclaser = (wep.Attachments[16].Installed == "ur_ak_charm_tl")
 
     local vm = data.vm
     if !IsValid(vm) then return end
@@ -738,6 +745,13 @@ SWEP.Attachments = {
         DefaultAttName = "16\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
         Slot = "ur_ak_barrel",
+    },
+    {
+        PrintName = "Handguard",
+        DefaultAttName = "Type 3 Handguard",
+        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
+        Slot = "ur_ak_hg",
+        ExcludeFlags = {"barrel_carbine"},
     },
     {
         PrintName = "Muzzle",
@@ -810,13 +824,6 @@ SWEP.Attachments = {
         DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
     },
     {
-        PrintName = "Dust Cover",
-        DefaultAttName = "Smooth Dust Cover",
-        DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
-        Slot = {"ur_ak_cover"},
-        FreeSlot = true,
-    },
-    {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
         DefaultAttIcon = Material("entities/att/arccw_uc_ammo_generic.png", "mips smooth"),
@@ -836,6 +843,13 @@ SWEP.Attachments = {
         PrintName = "Internals",
         Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
+    },
+    {
+        PrintName = "Dust Cover",
+        DefaultAttName = "Smooth Dust Cover",
+        DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
+        Slot = {"ur_ak_cover"},
+        FreeSlot = true,
     },
     {
         PrintName = "Charm",
