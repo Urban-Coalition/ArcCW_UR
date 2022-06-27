@@ -382,14 +382,14 @@ SWEP.Hook_NameChange = function(wep,name)
         mid = "-"
     end
 
-    if atts[12].Installed == "uc_fg_civvy" then
+    if cal == "semi" or atts[12].Installed == "uc_fg_civvy" then
         if fakeNames then
             return "PK5-CIV"
         else
             if barr == "long" then
                 start = "HK94" -- I know how prolific civies can get with their gunbuilds, so the nonsensical names will continue
             else
-                return "SP5"
+                return "SP5" .. ((barr == "kurz" and "K") or "")
             end
         end
     end
