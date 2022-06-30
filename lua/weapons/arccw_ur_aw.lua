@@ -143,7 +143,7 @@ SWEP.ShootSound = {
 }
 SWEP.ShootSoundSilenced = testpath .. "fire-sup-06.ogg"
 SWEP.DistantShootSound = nil
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+SWEP.DistantShootSoundSilenced = common .. nil
 SWEP.ShootDrySound = testpath .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
@@ -669,7 +669,7 @@ SWEP.Animations = {
             {s = ratel,                             t = 0.05},
             {s = testpath .. "boltup.ogg",          t = 0.1},
             {s = testpath .. "boltback_reload.ogg",        t = 0.2},
-            {s = testpath .. "eject.ogg",           t = 0.5},
+            {s = testpath .. "eject.ogg",           t = 0.35},
             {s = rottle,    t = .6},
             {s = testpath .. "magrel.ogg", 	t = 1.1},
             {s = rottle,    t = 1.8},
@@ -815,7 +815,7 @@ SWEP.Animations = {
             {s = ratel,                             t = 0.05},
             {s = testpath .. "boltup.ogg",          t = 0.1},
             {s = testpath .. "boltback.ogg",        t = 0.2},
-            {s = testpath .. "eject.ogg",           t = 0.5},
+            {s = testpath .. "eject.ogg",           t = 0.45},
             {s = testpath .. "boltforward.ogg",     t = 0.6},
             {s = testpath .. "boltdown.ogg",        t = 0.8},
 
