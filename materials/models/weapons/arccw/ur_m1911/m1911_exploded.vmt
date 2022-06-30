@@ -1,6 +1,6 @@
 VertexlitGeneric
 {
-	"$basetexture" 	"models/weapons/arccw/ur_m1911/1911_basecolor"
+	"$basetexture" 	"models/weapons/arccw/ur_m1911/b"
 	
 	"$phong" 1
 	"$phongexponenttexture"     "models/weapons/arccw/ur_m1911/1911_rough"
@@ -21,5 +21,5 @@ VertexlitGeneric
 	"$normalmapalphaenvmapmask" "1"
 	"$envmaptint"               "[ 0.03 0.03 0.03 ]"
 				
-	"$bumpmap"                  "models/weapons/arccw/ur_m1911/1911_bump"
+	"$bumpmap"                  "models/weapons/arccw/ur_m1911/n"
 }

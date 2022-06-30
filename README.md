@@ -23,6 +23,7 @@ urban real  renewal
 	- Remodel
 	- Sounds: 10mm, 40S&W
 	- Handguards: surefire, wooden
+	- Att icons
 - PM:
 	- Firing and holster sounds
 	- we need to decide what we want from this gun in the first place

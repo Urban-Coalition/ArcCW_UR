@@ -9,8 +9,8 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
-SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-SWEP.ShellScale = 1.6
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
+SWEP.ShellScale = 1
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
@@ -227,24 +227,48 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-    ["ur_1911_slide_compact"] = {VMBodygroups = {
-        {ind = 0,bg = 1},
-        {ind = 1,bg = 1}
-    }},
-
-    ["ur_1911_slide_m45"] = {VMBodygroups = 
-        {ind = 1,bg = 1},
-        {ind = 4,bg = 1},
-        {ind = 5,bg = 1},
+    ["ur_1911_slide_compact"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 1},
+            {ind = 1, bg = 1}
+        }
     },
 
-    ["ur_1911_mag_ext"] = {VMBodygroups = {ind = 3,bg = 1}},
+    ["ur_1911_slide_m45"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+            {ind = 4, bg = 1},
+            {ind = 5, bg = 1},
+        }
+    },
 
-    ["ur_1911_grip_snake"] = {VMBodygroups = {ind = 6,bg = 1}},
-    ["ur_1911_grip_pachmayr"] = {VMBodygroups = {ind = 6,bg = 2}},
+    ["ur_1911_mag_ext"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 1}
+        }
+    },
 
-    ["optic_rail"] = {VMBodygroups = {ind = 7,bg = 1}},
-    ["tac_rail"] = {VMBodygroups = {ind = 8,bg = 1}},
+    ["ur_1911_grip_snake"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 1}
+        }
+    },
+    ["ur_1911_grip_pachmayr"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 2}
+        }
+    },
+
+    ["optic_rail"] = {
+        VMBodygroups = {
+            {ind = 7, bg = 1}
+        }
+    },
+    ["tac_rail"] = {
+        VMBodygroups = {
+            {ind = 8, bg = 1}
+        }
+    },
 }
 
 SWEP.Hook_NameChange = function(wep,name)
