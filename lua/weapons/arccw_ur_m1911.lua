@@ -233,7 +233,7 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1}
         },
         AttPosMods = {
-            
+
         },
         NameChange = "AMAD",
         TrueNameChange = "Colt Officer",
@@ -265,6 +265,16 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 6, bg = 2}
         }
+    },
+
+    ["ur_1911_skin_silver"] = {
+        VMSkin = 1
+    },
+    ["ur_1911_skin_tan"] = {
+        VMSkin = 2
+    },
+    ["ur_1911_skin_custom"] = {
+        VMSkin = 3
     },
 
     ["ur_1911_cal_9mm"] = {
@@ -649,11 +659,11 @@ SWEP.Attachments = {
         },
         VMScale = Vector(.6,.6,.6),
     },
-    --[[{
-        PrintName = "Finish",
-        Slot = {"ur_deagle_skin"},
-        DefaultAttName = "Stainless Steel",
+    {
+        PrintName = "Material",
+        Slot = {"ur_m1911_skin"},
+        DefaultAttName = "Gunmetal Grey",
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
         FreeSlot = true,
-    },]]
+    },
 }
