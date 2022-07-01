@@ -231,15 +231,23 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 0, bg = 1},
             {ind = 1, bg = 1}
-        }
+        },
+        AttPosMods = {
+            
+        },
+        NameChange = "",
+        TrueNameChange = "Colt Officer",
     },
 
     ["ur_1911_slide_m45"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1},
+            {ind = 1, bg = 2},
             {ind = 4, bg = 1},
             {ind = 5, bg = 1},
-        }
+        },
+        VMSkin = 1,
+        NameChange = "",
+        TrueNameChange = "M45",
     },
 
     ["ur_1911_mag_ext"] = {
@@ -259,6 +267,15 @@ SWEP.AttachmentElements = {
         }
     },
 
+    ["ur_1911_cal_9mm"] = {
+        NameChange = "",
+        TrueNameChange = "SR1911",
+    },
+    ["ur_1911_cal_10auto"] = {
+        NameChange = "",
+        TrueNameChange = "Delta Elite",
+    },
+
     ["optic_rail"] = {
         VMBodygroups = {
             {ind = 7, bg = 1}
@@ -271,20 +288,20 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.Hook_NameChange = function(wep,name)
-    if GetConVar("arccw_truenames"):GetBool() then
-        local atts = wep.Attachments
-        local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
+-- SWEP.Hook_NameChange = function(wep,name)
+--     if GetConVar("arccw_truenames"):GetBool() then
+--         local atts = wep.Attachments
+--         local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
 
-        if cal == "10auto" then return GetConVar("arccw_truenames"):GetBool() and "Delta Elite" or ""
-        elseif cal == "9mm" then return GetConVar("arccw_truenames"):GetBool() and "SR1911" or ""
-        end
+--         if cal == "10auto" then return GetConVar("arccw_truenames"):GetBool() and "Delta Elite" or ""
+--         elseif cal == "9mm" then return GetConVar("arccw_truenames"):GetBool() and "SR1911" or ""
+--         end
 
-        return "M1911"
-    else
-        return "AMAS"
-    end
-end
+--         return "M1911"
+--     else
+--         return "AMAS"
+--     end
+-- end
 
 -- Animations --
 
@@ -483,7 +500,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "vm_charge",
         Offset = {
-            vpos = Vector(-0.01, -.7, 0),
+            vpos = Vector(-0.01, -1, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"optic_rail"},
