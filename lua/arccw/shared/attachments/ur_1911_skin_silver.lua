@@ -1,4 +1,4 @@
-att.PrintName = "M1911 Silver Skin"
+att.PrintName = "M1911 Silver Finish"
 att.AbbrevName = "Silver"
 att.Description = "Placeholder"
 

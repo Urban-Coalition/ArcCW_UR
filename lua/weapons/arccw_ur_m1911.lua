@@ -245,7 +245,7 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 1},
             {ind = 5, bg = 1},
         },
-        VMSkin = 1,
+        --VMSkin = 1,
         NameChange = "AMASIN",
         TrueNameChange = "M45",
     },
@@ -297,6 +297,19 @@ SWEP.AttachmentElements = {
         }
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local vm = data.vm
+    if !IsValid(vm) then return end
+
+    local att_skin = wep.Attachments[14].Installed
+    local att_slide = wep.Attachments[2].Installed
+
+    if att_slide == "ur_1911_slide_m45" and att_skin == "ur_1911_skin_custom" then
+        vm:SetBodygroup(1, 3)
+    end
+
+end
 
 -- SWEP.Hook_NameChange = function(wep,name)
 --     if GetConVar("arccw_truenames"):GetBool() then
@@ -660,9 +673,9 @@ SWEP.Attachments = {
         VMScale = Vector(.6,.6,.6),
     },
     {
-        PrintName = "Material",
+        PrintName = "Finish",
         Slot = {"ur_m1911_skin"},
-        DefaultAttName = "Gunmetal Grey",
+        DefaultAttName = "Grey",
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
         FreeSlot = true,
     },

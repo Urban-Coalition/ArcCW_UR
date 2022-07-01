@@ -1,4 +1,4 @@
-att.PrintName = "M1911 Custom Skin"
+att.PrintName = "M1911 Custom Finish"
 att.AbbrevName = "Custom"
 att.Description = "Placeholder"
 
