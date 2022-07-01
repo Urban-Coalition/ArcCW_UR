@@ -1,5 +1,5 @@
-att.PrintName = "Colt Officer's Model 3.5\" Barrel"
-att.AbbrevName = "3.5\" Officer Barrel"
+att.PrintName = "Colt Officer's Model 3.5\" Slide"
+att.AbbrevName = "3.5\" Officer Slide"
 att.Description = "A shortened slide reduces the amount of holster to clear and further improves agility to the detriment of long-range performance and recoil control."
 
 att.AutoStats = true

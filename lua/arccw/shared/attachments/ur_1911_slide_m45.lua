@@ -1,5 +1,5 @@
-att.PrintName = "M45 MEUSOC 5\" Barrel"
-att.AbbrevName = "5\" M45 Barrel"
+att.PrintName = "M45 MEUSOC 5\" Slide"
+att.AbbrevName = "5\" M45 Slide"
 att.Description = "Placeholder"
 
 att.AutoStats = true
