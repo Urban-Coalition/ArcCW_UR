@@ -266,6 +266,10 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 4},
             {ind = 7, bg = 1},
         },
+        AttPosMods = {[4] = {
+            vpos = Vector(0, .75, 10.5),
+            vang = Angle(90, 0, -90),
+        }}
     },
     ["ur_mp5_barrel_long"] = {
         VMBodygroups = {
@@ -788,7 +792,7 @@ SWEP.Attachments = {
             vpos = Vector(0, .75, 14.4),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"barrel_sd","mp5_kurz"}
+        ExcludeFlags = {"barrel_sd"}
     },
     {
         PrintName = "Underbarrel",
