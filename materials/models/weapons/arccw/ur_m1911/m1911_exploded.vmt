@@ -1,25 +1,25 @@
-VertexlitGeneric
+"VertexlitGeneric"
 {
-	"$basetexture" 	"models/weapons/arccw/ur_m1911/b"
-	
-	"$phong" 1
-	"$phongexponenttexture"     "models/weapons/arccw/ur_m1911/1911_rough"
-	//"$phongwarptexture"			"models/weapons/gunslinger/shared/phongwarp_metallic" 
-	"$phongboost"               "0.3"
-	"$phongfresnelranges"       "[1 4 8]"
-	"$phongexponent"            "8"
+	"$basetexture" "models\weapons\arccw\ur_m1911/c1911exploded_default_c"
+	"$bumpmap" "models\weapons\arccw\ur_m1911/c1911exploded_default_n"
+	"$normalmapalphaenvmapmask" 	1
 
-	"$color2"					"[0.8 0.8 0.8]"
+	"$color2" "[1.55 1.6 1.6]"	
+
 	"$blendTintByBaseAlpha"		"1" 
-
-	"$rimlight"					"1"
-	"$rimmask"					"1"
-	"$rimlightboost"			"0.3"
-	"$rimlightexponent"			"5"
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
+	"$phongexponentfactor"		"1"
+	"$phong" 		"1"
+	"$phongexponenttexture" "models\weapons\arccw\ur_m1911/c1911exploded_default_e"
+	"$phongboost" "2.5"
+	"$phongalbedotint" 			"0"
+	"$phongfresnelranges" "[1 1 1]"
+	"$halflambert" "1"
 	
 	"$envmap" "env_cubemap"
-	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint"               "[ 0.03 0.03 0.03 ]"
-				
-	"$bumpmap"                  "models/weapons/arccw/ur_m1911/n"
+	"$envmapfresnel" 			"1"
+	"$envmapFresnelMinMaxExp" "[0 5 .4]"
+	"$envmaptint"	"[0.32 0.30 0.33]"
+
+	"$nocull" "1"
 }
