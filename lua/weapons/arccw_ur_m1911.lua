@@ -627,10 +627,10 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
-        VMScale = Vector(1.1, 1.1, 1.1),
+        VMScale = Vector(1, 1, 1),
         Bone = "vm_pivot",
         Offset = {
-            vpos = Vector(0, -0.25, 0),
+            vpos = Vector(0, 3, -3),
             vang = Angle(90, 0, -90),
         },
     },
@@ -663,7 +663,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm","fml_charm"},
+        Slot = {"charm", "fml_charm"},
         FreeSlot = true,
         Bone = "vm_pivot",
         Offset = {

@@ -21,4 +21,11 @@
 	"$envmaptint"	"[0.32 0.30 0.33]"
 
 	"$nocull" "1"
+
+	Proxies {
+			UC_Weapon_Color {
+				resultVar $color2
+				myVariable $color
+			}
+	}
 }
