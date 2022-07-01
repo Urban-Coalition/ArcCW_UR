@@ -92,7 +92,7 @@ SWEP.Sway = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 500
+SWEP.Delay = 60 / 400
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -233,7 +233,10 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1}
         },
         AttPosMods = {
-
+            [4] = {
+                vpos = Vector(0, -3.58, .22),
+                vang = Angle(0, 90, 0),
+            }
         },
         NameChange = "AMAD",
         TrueNameChange = "Colt Officer",
@@ -609,7 +612,6 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        InstalledEles = {"tac_rail"},
         Slot = {"tac_pistol"},
         Bone = "vm_pivot",
         Offset = {
