@@ -334,7 +334,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
-        Time = 26/30,
+        Time = 20/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path1 .. "holster.ogg", t = 0.25}, -- Not Temporary
