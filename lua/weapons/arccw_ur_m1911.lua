@@ -235,7 +235,7 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             
         },
-        NameChange = "",
+        NameChange = "AMAD",
         TrueNameChange = "Colt Officer",
     },
 
@@ -246,7 +246,7 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 1},
         },
         VMSkin = 1,
-        NameChange = "",
+        NameChange = "AMASIN",
         TrueNameChange = "M45",
     },
 
@@ -306,12 +306,12 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 SWEP.Animations = {
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 10 / 30,
-    },
     ["idle"] = {
         Source = "idle",
+        Time = 10 / 30,
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
         Time = 10 / 30,
     },
     -- ["ready"] = {
@@ -366,6 +366,53 @@ SWEP.Animations = {
     },
 
     -- 7-R Reloads --
+
+    ["reload_10"] = {
+        Source = "reload_ext",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.3525,
+        Time = 65 / 30,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.62,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magpouch_pull_small.ogg", t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 17 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 26 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 50 / 60, c = ca },
+        },
+    },
+    ["reload_empty_10"] = {
+        Source = "reload_empty_ext",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.75,
+        Time = 75 / 30,
+        LastClip1OutTime = 0.76,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKEaseIn = 0.1,
+        LHIKEaseOut = 0.55,
+        LHIKOut = 0.7,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 16 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60, c = ca },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 64 / 60, c = ca },
+            { s = rottle, t = 90 / 60, c = ca },
+            { s = path .. "slidedrop.ogg", t = 94 / 60, c = ca },
+        },
+    },
 
     ["reload"] = {
         Source = "reload",
@@ -530,7 +577,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "vm_barrel",
         Offset = {
-            vpos = Vector(0, -4.7, .12),
+            vpos = Vector(0, -4.7, .22),
             vang = Angle(0, 90, 0),
         },
         InstalledEles = {"nofh"},

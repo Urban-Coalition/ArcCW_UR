@@ -15,7 +15,6 @@ att.Mult_Sway = 1.25
 att.Mult_SpeedMult = 0.98
 att.Mult_ShootSpeedMult = 0.95
 
--- att.Hook_SelectReloadAnimation = function(wep, anim)
---     return anim .. "_10"
--- end
--- 10-round anims don't exist yet
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_10"
+end
