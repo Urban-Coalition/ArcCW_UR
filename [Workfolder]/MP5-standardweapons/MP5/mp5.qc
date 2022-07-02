@@ -1,9 +1,5 @@
 
-//  				ARC9
-// $modelname "weapons\arc9\c_ur_mp5.mdl"
-
-//  				ARCCW
-$modelname "weapons/arc9\c_ur_mp5.mdl"
+$modelname "weapons/arccw/c_ur_mp5.mdl"
  
 $bodygroup "1" {
 	studio "stock_solid.smd"
@@ -66,22 +62,10 @@ $bodygroup "lower" {
 }
 
 //  				ARC9
-$cdmaterials "models\weapons\arc9\ur_mp5"
-$cdmaterials "models\weapons\arc9\ur_mp5\bocw"
-$cdmaterials "models\weapons\arc9\ud_m16"
-$cdmaterials "models\weapons\arc9\ud_common"
-
-
-// 					ARCCW
-// $cdmaterials "models\weapons/arc9\ur_mp5"
-// $cdmaterials "models\weapons/arc9\ur_mp5\bocw"
-// $cdmaterials "models\weapons/arc9\ud_common"
-
-// $texturegroup "skinfamilies"
-// {
-// 	{ "m16_barrel_classic" }
-// 	{ "m16_barrel_classic_wood" }
-// }
+$cdmaterials "models\weapons\arccw\ur_mp5"
+$cdmaterials "models\weapons\arccw\ur_mp5\bocw"
+$cdmaterials "models\weapons\arccw\ud_m16"
+$cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "bolt" 0.00 -0.75 -1.00 rotate -10 140 180
@@ -94,10 +78,7 @@ $contents "solid"
  
 $illumposition 0 0 0
 
-$cbox 0 0 0 0 0 0
-
 $poseparameter "sights" 0 1 loop 0
-$poseparameter "firemode" 1 3 loop 0
 
 // So the WM has only 1 visible mag
 
@@ -106,54 +87,6 @@ $sequence "ref" {
 	fps 30
 	"ACT_VM_IDLE" 1
 	snap
-}
-
-// $sequence "firemode_1_pose" "anims\firemode_auto_pose.smd" {
-// 	fps 30
-// 	fadein 0.03
-// 	fadeout 0.03
-// }
-
-// $sequence "firemode_2_pose" "anims\firemode_semi_pose.smd" {
-// 	fps 30
-// 	fadein 0.03
-// 	fadeout 0.03
-// }
-
-$sequence "firemode_1_pose" "anims\firemode_burst_pose.smd" {
-	fps 30
-	fadein 0
-	fadeout 0.2
-}
-
-$sequence "firemode_pose_2" "anims\firemode_semi_pose.smd" {
-	fps 30
-	fadein 0
-	fadeout 0.2
-}
-
-$sequence "firemode_pose_3" "anims\firemode_auto_pose.smd" {
-	fps 30
-	fadein 0
-	fadeout 0.2
-}
-
-$sequence "firemode_1" "anims\firemode_burst.smd" {
-	fps 30
-	fadein 0
-	fadeout 0.2
-}
-
-$sequence "firemode_2" "anims\firemode_semi.smd" {
-	fps 30
-	fadein 0
-	fadeout 0.2
-}
-
-$sequence "firemode_3" "anims\firemode_auto.smd" {
-	fps 30
-	fadein 0
-	fadeout 0.2
 }
 
 $sequence "idle" {
@@ -186,17 +119,6 @@ $sequence "holster" {
 	fps 30
 	"ACT_VM_HOLSTER" 1
 	snap
-}
-
-$sequence "firemode_pose" {
-	"anims\firemode_auto_pose.smd"
-	"anims\firemode_burst_pose.smd"
-	"anims\firemode_semi_pose.smd"
-	blend "firemode" 1 3
-	blendwidth 3
-	delta
-	autoplay
-	subtract "firemode_1_pose" 0
 }
 
 $sequence "fire" {
