@@ -253,6 +253,17 @@ SWEP.AttachmentElements = {
         TrueNameChange = "M45",
     },
 
+    ["ur_1911_slide_m45_custom"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 3},
+            {ind = 4, bg = 1},
+            {ind = 5, bg = 1},
+        },
+        --VMSkin = 1,
+        NameChange = "AMASIN",
+        TrueNameChange = "M45",
+    },
+
     ["ur_1911_mag_ext"] = {
         VMBodygroups = {
             {ind = 3, bg = 1}
@@ -302,16 +313,15 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
-    local vm = data.vm
-    if !IsValid(vm) then return end
+    -- local vm = data.vm
+    -- if !IsValid(vm) then return end
 
-    local att_skin = wep.Attachments[14].Installed
-    local att_slide = wep.Attachments[2].Installed
+    -- local att_skin = wep.Attachments[14].Installed
+    -- local att_slide = wep.Attachments[2].Installed
 
-    if att_slide == "ur_1911_slide_m45" and att_skin == "ur_1911_skin_custom" then
-        vm:SetBodygroup(1, 3)
-    end
-
+    -- if att_slide == "ur_1911_slide_m45" and att_skin == "ur_1911_skin_custom" then
+    --     vm:SetBodygroup(1, 3)
+    -- end
 end
 
 -- SWEP.Hook_NameChange = function(wep,name)

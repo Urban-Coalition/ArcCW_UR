@@ -1,6 +1,7 @@
 att.PrintName = "M1911 Custom Finish"
 att.AbbrevName = "Custom"
 att.Description = "This skin matches your player color."
+att.SortOrder = 7
 
 att.Desc_Neutrals = {
     "uc.cosmetic"

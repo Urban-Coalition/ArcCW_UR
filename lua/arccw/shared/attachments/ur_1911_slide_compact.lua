@@ -4,7 +4,7 @@ att.Description = "A shortened slide reduces the amount of holster to clear and 
 
 att.AutoStats = true
 att.Slot = "ur_m1911_slide"
-att.SortOrder = 3.5
+att.SortOrder = 9
 
 att.Mult_DrawTime = 0.85
 att.Mult_HolsterTime = 0.85

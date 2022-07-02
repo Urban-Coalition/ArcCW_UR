@@ -10,7 +10,7 @@
 	"$phongexponentfactor"		"1"
 	"$phong" 		"1"
 	"$phongexponenttexture" "models\weapons\arccw\ur_m1911/c1911exploded_default_e"
-	"$phongboost" "2.5"
+	"$phongboost" "1"
 	"$phongalbedotint" 			"0"
 	"$phongfresnelranges" "[1 1 1]"
 	"$halflambert" "1"

@@ -4,7 +4,7 @@ att.Description = "Modernized slide, hammer and trigger assembly designed and ha
 
 att.AutoStats = true
 att.Slot = "ur_m1911_slide"
-att.SortOrder = 5
+att.SortOrder = 8
 
 att.Mult_RPM = 1.05
 att.Mult_SightTime = 0.9

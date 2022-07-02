@@ -31,7 +31,7 @@
 	//"$envmaptint"				"[ 0.01 0.01 0.01 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
 	
 	Proxies {
-    		UC_Weapon_Color {
+    		UC_Weapon_Color1 {
        			resultVar $color2
        			myVariable $color
     		}
