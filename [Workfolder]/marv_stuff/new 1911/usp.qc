@@ -49,6 +49,7 @@ $cdmaterials "models\weapons\arccw\ur_m1911"
 // $cdmaterials "models\weapons\arccw\uc_common"
 $cdmaterials "models\weapons\arccw\uc_shells\"
 
+$collisionmodel "default.smd"
 
 $texturegroup "skinfamilies"
 {
