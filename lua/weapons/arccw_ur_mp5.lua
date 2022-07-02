@@ -411,6 +411,13 @@ SWEP.Hook_NameChange = function(wep,name)
             mid = "/10"
         elseif cal == "40sw" then
             mid = "/40"
+        elseif cal == "22lr" then
+            if barr == "sd" then
+                mid = "SD"
+                num = " .22 LR"
+            else
+                mid = " .22 LR"
+            end
         end
     else
         if barr == "kurz" then
@@ -434,7 +441,7 @@ SWEP.Hook_NameChange = function(wep,name)
             if barr == "sd" then
                 mid = "SD"
             end
-        
+
             if cal == "noburst" then
                 if stock == "default" then
                     num = "2"
