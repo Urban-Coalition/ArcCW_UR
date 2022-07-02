@@ -491,15 +491,15 @@ SWEP.Attachments = {
         VMScale = Vector(0.8, 0.8, 0.8),
         -- ExcludeFlags = {"ur_pb"}
     },
-   // { i hate this gay ass little pistol bruh
-       // PrintName = "Tactical",
-      //  Slot = {"tac_pistol"},
-      //  Bone = "pm_parent",
-      //  Offset = {
-      //      vpos = Vector(0, -5.6, -0.2),
-      //      vang = Angle(0, 90, 180),
-       // },
-   // },
+    {
+         PrintName = "Tactical",
+         Slot = {"tac_pistol"},
+         Bone = "pm_parent",
+         Offset = {
+             vpos = Vector(0, -5.6, -0.2),
+             vang = Angle(0, 90, 180),
+         },
+    },
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},

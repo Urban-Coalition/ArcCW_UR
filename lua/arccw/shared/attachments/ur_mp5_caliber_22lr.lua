@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "PK5/22 .22 LR Conversion"
 end
 
-att.Description = "A civilian model of the MP5 outfitted with an auto sear.\nThe low lethality of the cartridge makes this unfit for tactical operations, but far more fun to plink with."
+att.Description = "A semi-automatic civilian model of the MP5 rechambered in .22 Long Rifle.\nThe low lethality of the cartridge makes this unfit for tactical operations, but far more fun to plink with."
 
 --att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
 att.Desc_Pros = {
@@ -28,10 +28,12 @@ att.Mult_Penetration = 3 / 6
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
-att.Mult_RPM = 1.25
+--att.Mult_RPM = 1.25
 att.Mult_Penetration = 0.1
 att.Mult_ShootSpeedMult = 1.2
 att.Override_PhysBulletMuzzleVelocity = 370
+
+att.Mult_HipDispersion = 0.75
 
 att.Mult_ClipSize = 1.2
 
@@ -54,11 +56,9 @@ end
 
 att.GivesFlags = {"ur_mp5_cal_22lr"}
 
+
 att.Override_Firemodes_Priority = 0.5
 att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
     {
         Mode = 1,
     },
@@ -67,4 +67,4 @@ att.Override_Firemodes = {
     }
 }
 
-att.ActivateElements = {"receiver_lower"}
+att.ActivateElements = {"receiver_lower_semi"}
