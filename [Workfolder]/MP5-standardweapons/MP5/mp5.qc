@@ -59,6 +59,7 @@ $bodygroup "upper" {
 $bodygroup "lower" {
 	studio "receiver_lower_a4.smd"
 	studio "receiver_lower_a1.smd"
+	studio "receiver_lower_semi.smd"
 }
 
 //  				ARC9

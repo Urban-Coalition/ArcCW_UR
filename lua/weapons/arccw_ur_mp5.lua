@@ -315,6 +315,9 @@ SWEP.AttachmentElements = {
     ["receiver_lower"] = {
         VMBodygroups = {{ind = 8, bg = 1}},
     },
+    ["receiver_lower_semi"] = {
+        VMBodygroups = {{ind = 8, bg = 2}},
+    },
     ["receiver_lower_0"] = {
         VMBodygroups = {{ind = 8, bg = 0}},
     },
