@@ -29,3 +29,5 @@ att.Mult_Range = .5
 att.GivesFlags = {"mp5_kurz"}
 att.Override_Trivia_Class = "Machine Pistol"
 att.Override_HoldtypeActive = "smg"
+
+att.Mult_PhysBulletMuzzleVelocity = 0.9375
