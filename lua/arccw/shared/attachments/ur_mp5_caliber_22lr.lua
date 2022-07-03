@@ -31,8 +31,9 @@ att.Mult_VisualRecoilMult = 0.25
 --att.Mult_RPM = 1.25
 att.Mult_Penetration = 0.1
 att.Mult_ShootSpeedMult = 1.2
-att.Override_PhysBulletMuzzleVelocity = 370
 
+
+att.Override_PhysBulletMuzzleVelocity = 320
 att.Mult_HipDispersion = 0.75
 
 att.Mult_ClipSize = 1.2

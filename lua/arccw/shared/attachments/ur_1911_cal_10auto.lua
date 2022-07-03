@@ -35,6 +35,8 @@ att.Mult_RangeMin = 1.5
 -- att.Mult_ReloadTime = 1.2
 -- att.Mult_MalfunctionMean = 0.75
 
+att.Override_PhysBulletMuzzleVelocity = 420
+
 att.Mult_ClipSize = 8 / 7
 att.Override_ShellScale = 1
 
