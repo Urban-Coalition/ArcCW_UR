@@ -11,21 +11,18 @@ urban real  renewal
 	- Dong grip normal rework
 	- Some att icons
 - M1911:
-	- Un-fuck model
-	- Sounds: 9mm, 10mm (also from UD)
 	- Suppressed sounds
-	- All atts: slides, ext mag, grips, skins
 	- Att icons
 - SPAS-12:
 	- Comp rear sight texture
 	- Att icons
 - MP5:
-	- Remodel
+	- Remodel(?)
 	- Sounds: 10mm, 40S&W
 	- Handguards: surefire, wooden
 	- Att icons
 - PM:
-	- Firing and holster sounds
+	- Holster sounds
 	- we need to decide what we want from this gun in the first place
 - AWP: .338 suppressed sound
 - DB, G3, M29: everything
