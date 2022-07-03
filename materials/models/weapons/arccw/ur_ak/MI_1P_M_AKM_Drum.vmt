@@ -2,8 +2,8 @@
 {
 // maps
 	"$basetexture"				"models\weapons\arccw\ur_ak\sandstorm\akm\T_1P_M_AKM_Drum_BC" // string -- main texture
-	//"$bumpmap"					"models\weapons\arccw\ur_ak\sandstorm\akm\T_1P_M_AKM_Drum_N" // string -- normal map texture (bump map for brushes)
-	//"$phongexponenttexture"		"models\weapons\arccw\ur_ak\sandstorm\akm\T_1P_M_AKM_Drum_E" // string -- phong exponent texture (contains info for other shaders)
+	"$bumpmap"					"models\weapons\arccw\ur_ak\sandstorm\akm\T_1P_M_AKM_Drum_N" // string -- normal map texture (bump map for brushes)
+	"$phongexponenttexture"		"models\weapons\arccw\ur_ak\sandstorm\akm\T_1P_M_AKM_Drum_M" // string -- phong exponent texture (contains info for other shaders)
 
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 

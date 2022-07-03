@@ -9,22 +9,18 @@
 
 
 // map interp
-	"$color2"					"[0.5 0.5 0.5]" // vector -- rgb tinting of the basetexture
+	"$color2"					"[0.8 0.8 0.8]" // vector -- rgb tinting of the basetexture
 	//"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
 	"$phong"					"1" // bool -- phong enabler, have this on 1 if you have a central neural system
-	"$phongboost"				"2" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
+	"$phongboost"				"0.3" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
 	"$phongfresnelranges"		"[0.32 0.72 0.99]" // vector -- phong fresnel ranges, default are [0 0.5 1]
 	"$phongalbedotint" 			"1" // bool -- enables basetexture tinting of the phong's color but masks it with phongexponent's green channel
 
 // rimlight (convar: mat_rimlight "bool")
 	"$rimlight"					"1" // bool -- rimlight enabler, doesn't have to be on, use if needed
 	"$rimmask"					"1" // bool -- rimlight masking through exponent's alpha channel (use alpha vtf format)
-	"$rimlightboost"			"1" // float -- rimlight intensity coefficient
-	"$rimlightexponent"			"33" // float -- rimlight exponent
+	"$rimlightboost"			"0.6" // float -- rimlight intensity coefficient
+	"$rimlightexponent"			"53" // float -- rimlight exponent
 
-// envmap (convar: mat_specular "bool")
-	"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
-	"$envmaptint"				"[ .02 .02 .02 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
-}

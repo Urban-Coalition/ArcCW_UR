@@ -9,8 +9,8 @@
 
 
 // map interp
-	"$color2"					"[0.3 0.3 0.3]" // vector -- rgb tinting of the basetexture
-	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
+	"$color2"					"[0.7 0.7 0.7]" // vector -- rgb tinting of the basetexture
+	"$blendTintByBaseAlpha"		"0" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
 	"$phong"					"1" // bool -- phong enabler, have this on 1 if you have a central neural system
