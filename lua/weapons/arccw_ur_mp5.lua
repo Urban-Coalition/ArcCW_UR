@@ -380,6 +380,11 @@ SWEP.Hook_NameChange = function(wep,name)
     local cal = string.Replace(atts[3].Installed or "default","ur_mp5_caliber_","")
     local stock = string.Replace(atts[7].Installed or "default","ur_mp5_stock_","")
     local fakeNames = !GetConVar("arccw_truenames"):GetBool()
+    local defaultCals = {
+        ["default"] = true,
+        ["noburst"] = true,
+        ["semi"] = true
+    }
 
     local start = "MP5"
     local mid = "A"
@@ -393,7 +398,7 @@ SWEP.Hook_NameChange = function(wep,name)
         if fakeNames then
             return "PK5-CIV"
         else
-            if barr == "long" then
+            if barr == "long" or barr == "sd" then
                 start = "HK94" -- I know how prolific civies can get with their gunbuilds, so the nonsensical names will continue
             else
                 return "SP5" .. ((barr == "kurz" and "K") or "")
@@ -401,7 +406,7 @@ SWEP.Hook_NameChange = function(wep,name)
         end
     end
 
-    if cal ~= "default" and cal ~= "noburst" then
+    if !defaultCals[cal] then
         if barr == "sd" then
             num = "SD"
         else
@@ -442,20 +447,16 @@ SWEP.Hook_NameChange = function(wep,name)
                 mid = "SD"
             end
 
-            if cal == "noburst" then
-                if stock == "default" then
-                    num = "2"
-                elseif stock == "a3" then
+            if cal == "noburst" or cal == "semi" then
+                if stock == "a3" then
                     num = "3"
                 elseif stock == "none" then
                     num = "1"
+                else
+                    num = "2"
                 end
             else
-                if stock == "default" then
-                    if barr == "sd" then
-                        num = "5"
-                    end
-                elseif stock == "a3" then
+                if stock == "a3" then
                     if barr == "sd" then
                         num = "6"
                     else
@@ -464,6 +465,10 @@ SWEP.Hook_NameChange = function(wep,name)
                 elseif stock == "none" then
                     if barr == "sd" then
                         num = "4"
+                    end
+                else
+                    if barr == "sd" then
+                        num = "5"
                     end
                 end
             end
