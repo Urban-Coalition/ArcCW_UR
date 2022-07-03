@@ -29,7 +29,7 @@ SWEP.TrueName = "Model 329PD"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = [[Though commonly viewed as archaic, revolvers maintain a large following today for their reliability, accuracy, and evocative sentiment. This model was famously the "most powerful handgun in the world" at its time, though its usurpers have not changed the fact that it packs a mean punch.
 
 Switch to single-action mode to lighten the trigger pull, eliminating delay and increasing accuracy.]]
