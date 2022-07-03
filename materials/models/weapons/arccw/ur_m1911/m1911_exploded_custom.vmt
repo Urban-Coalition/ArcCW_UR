@@ -23,7 +23,7 @@
 	"$nocull" "1"
 
 	Proxies {
-			UC_Weapon_Color1 {
+			UC_Weapon_Color2 {
 				resultVar $color2
 				myVariable $color
 			}
