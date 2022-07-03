@@ -25,12 +25,14 @@ SWEP.PrintName = "Enforcer .44"
 
 -- True name --
 
-SWEP.TrueName = "Model 329"
+SWEP.TrueName = "Model 329PD"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "One of the most revolvers of all time."
+SWEP.Trivia_Desc = [[Though commonly viewed as archaic, revolvers maintain a large following today for their reliability, accuracy, and evocative sentiment. This model was famously the "most powerful handgun in the world" at its time, though its usurpers have not changed the fact that it packs a mean punch.
+
+Switch to single-action mode to lighten the trigger pull, eliminating delay and increasing accuracy.]]
 SWEP.Trivia_Manufacturer = "Sneed & Walwakashi"
 SWEP.Trivia_Calibre = ".44 Magnum"
 SWEP.Trivia_Mechanism = "Double-Action"
@@ -57,11 +59,11 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 70 -- 2 shot close range kill
-SWEP.DamageMin = 44 -- 3 shot long range kill
+SWEP.Damage = 60 -- 2 shot close range kill
+SWEP.DamageMin = 15 -- 7 shot long range kill
 SWEP.RangeMin = 10
-SWEP.Range = 120
-SWEP.Penetration = 9
+SWEP.Range = 160
+SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 470
@@ -101,10 +103,14 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "ur.329.dact",
     },
     {
-        Mode = 0
-    }
+        Mode = 1,
+        PrintName = "ur.329.sact",
+        Override_ManualAction = true,
+        Mult_AccuracyMOA = .75,
+    },
 }
 
 SWEP.ShootPitch = 100
