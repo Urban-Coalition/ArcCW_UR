@@ -32,7 +32,7 @@ SWEP.TrueName = "Model 329PD"
 SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = [[Though commonly viewed as archaic, revolvers maintain a large following today for their reliability, accuracy, and evocative sentiment. This model was famously the "most powerful handgun in the world" at its time, though its usurpers have not changed the fact that it packs a mean punch.
 
-Switch to single-action mode to lighten the trigger pull, eliminating delay and increasing accuracy.]]
+Has a heavy trigger pull. Single-action mode removes trigger delay and increases accuracy, but requires manual cocking of the hammer.]]
 SWEP.Trivia_Manufacturer = "Sneed & Walwakashi"
 SWEP.Trivia_Calibre = ".44 Magnum"
 SWEP.Trivia_Mechanism = "Double-Action"
@@ -307,12 +307,12 @@ SWEP.CamAttachment = 3
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp","optic"},
+        Slot = {"optic_lp"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -5.3, 7),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(3, -3.6, 0),
+            vang = Angle(0, 0, -90),
         },
     },
     {
@@ -338,32 +338,14 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, 0.75),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nofh"},
-        ExcludeFlags = {"barrel_annihilator"},
-    },
-    {
         PrintName = "Tactical",
         InstalledEles = {"tac_rail"},
         Slot = {"tac_pistol"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -3.7, 7),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(6.75, -2.5, 0),
+            vang = Angle(0, 0, -90),
         },
-    },
-    {
-        PrintName = "Magazine",
-        Slot = {"ur_329_mag"},
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_mag_7.png","mips smooth"),
-        DefaultAttName = "6-Round Cylinder",
     },
     {
         PrintName = "Stock",
@@ -371,8 +353,8 @@ SWEP.Attachments = {
         VMScale = Vector(1.1, 1.1, 1.1),
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.25, 0),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(-2, 2, 0),
+            vang = Angle(0, 0, -90),
         },
     },
     {
@@ -412,12 +394,5 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -100),
         },
         VMScale = Vector(.6,.6,.6),
-    },
-    {
-        PrintName = "Finish",
-        Slot = {"ur_329_skin"},
-        DefaultAttName = "Stainless Steel",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
-        FreeSlot = true,
     },
 }
