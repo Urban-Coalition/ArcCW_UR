@@ -112,6 +112,7 @@ SWEP.Firemodes = {
 --        PrintName = "ur.329.sact",
 --        Override_ManualAction = true,
 --        Mult_AccuracyMOA = .75,
+--        Mult_TriggerDelay = 0,
 --    },
     {
         Mode = 0,
