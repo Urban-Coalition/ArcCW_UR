@@ -191,18 +191,39 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = ")^weapons/arccw_ur/sw329/"
+local path1 = ")^weapons/arccw_ur/sw586/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
-SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
-SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
 
-SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
+SWEP.ShootSound = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
+SWEP.ShootSoundSilenced = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
+
 SWEP.DistantShootSound = nil
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
-SWEP.ShootDrySound = path .. "dryfire.ogg"
+SWEP.DistantShootSoundSilenced = nil
+SWEP.ShootDrySound = path .. "drophammer.ogg"
 
-SWEP.DistantShootSoundOutdoors = { path .. "fire_dist.ogg" }
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
+}
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",
     common .. "fire-dist-int-shotgun-02.ogg",
@@ -212,10 +233,20 @@ SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
-    common .. "sup_tail.ogg"
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoorsSilenced = {
-    common .. "sup_tail.ogg"
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 0.75
@@ -291,9 +322,11 @@ SWEP.Animations = {
             { s = rottle, t = 0 },
             { s = path .. "cyl_latch.ogg", t = 0.2 },
             { s = path .. "cyl_open.ogg", t = 0.5 },
-            { s = path .. "extractor_1.ogg", t = 1.1 },
+            { s = path .. "extractor_1.ogg", t = 1.0 },
+            { s = path1 .. "cylinder_extract.ogg", t = 1.0 },
+            { s = path .. "extractor_2.ogg", t = 1.125 },
             { s = common .. "magpouch_pull_small.ogg", t = 1.7 },
-            { s = path .. "speedloader.ogg", t = 2.3 },
+            { s = path1 .. "speedloader.ogg", t = 2.3 },
             { s = path .. "cyl_close.ogg", t = 3 },
             { s = rottle, t = 3.3 },
         },

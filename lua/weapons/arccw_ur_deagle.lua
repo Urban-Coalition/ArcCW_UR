@@ -184,9 +184,6 @@ SWEP.WorldModelOffset = {
 local path = ")^weapons/arccw_ur/deagle/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
-SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
-SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
 
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
