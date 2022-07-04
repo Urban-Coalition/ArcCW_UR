@@ -21,7 +21,7 @@ SWEP.ShootPitch = 100
 
 -- Fake name --
 
-SWEP.PrintName = "Enforcer .44"
+SWEP.PrintName = "Enforcement .44"
 
 -- True name --
 
@@ -52,9 +52,9 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
-SWEP.ViewModel = "models/weapons/arccw/c_ud_deagle.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ur_329pd.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ud_deagle.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
@@ -98,6 +98,8 @@ SWEP.Sway = 1.1
 
 -- Firerate / Firemodes --
 
+SWEP.TriggerDelay = true
+
 SWEP.Delay = 60 / 160
 SWEP.Num = 1
 SWEP.Firemodes = {
@@ -105,12 +107,17 @@ SWEP.Firemodes = {
         Mode = 1,
         PrintName = "ur.329.dact",
     },
+--    {
+--        Mode = 1,
+--        PrintName = "ur.329.sact",
+--        Override_ManualAction = true,
+--        Mult_AccuracyMOA = .75,
+--        Override_TriggerDelay = false,
+--    },
     {
-        Mode = 1,
-        PrintName = "ur.329.sact",
-        Override_ManualAction = true,
-        Mult_AccuracyMOA = .75,
-    },
+        Mode = 0,
+        PrintName = "fcg.safe2",
+    }
 }
 
 SWEP.ShootPitch = 100
@@ -150,25 +157,26 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(0.3, 3, 1)
-SWEP.HolsterAng = Angle(-5, 15, -20)
+SWEP.HolsterPos = Vector(0.3, 1, 0)
+SWEP.HolsterAng = Angle(-3, 9, -12)
 
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.546, 5, 1.09),
-     Ang = Angle(0.6, 0, 0),
+     Pos = Vector(-2.7, 2, 0.733),
+     Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
+     ViewModelFOV = 55,
 }
 
-SWEP.ActivePos = Vector(0.2, 2, 1.5)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(0, 2, 0.9)
+SWEP.ActiveAng = Angle(0, 0, -1)
 
-SWEP.CustomizePos = Vector(-1, -2, 1)
-SWEP.CustomizeAng = Angle(0, 0, 0)
+SWEP.CustomizePos = Vector(1, -2, -1)
+SWEP.CustomizeAng = Angle(15, 15, 0)
 
 SWEP.CrouchPos = Vector(-2.2, 1, 0.6)
 SWEP.CrouchAng = Angle(0, 0, -14)
@@ -182,35 +190,19 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
-local path = ")^weapons/arccw_ur/deagle/"
+local path = ")^weapons/arccw_ur/sw329/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
 SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
 
-SWEP.ShootSound = {
-    path .. "fire-01.ogg",
-    path .. "fire-02.ogg",
-    path .. "fire-03.ogg",
-    path .. "fire-04.ogg",
-    path .. "fire-05.ogg",
-    path .. "fire-06.ogg"
-}
-
 SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-SWEP.DistantShootSoundOutdoors = {
-    path .. "fire-dist-01.ogg",
-    path .. "fire-dist-02.ogg",
-    path .. "fire-dist-03.ogg",
-    path .. "fire-dist-04.ogg",
-    path .. "fire-dist-05.ogg",
-    path .. "fire-dist-06.ogg"
-}
+SWEP.DistantShootSoundOutdoors = { path .. "fire_dist.ogg" }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",
     common .. "fire-dist-int-shotgun-02.ogg",
@@ -242,34 +234,22 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
+SWEP.Hook_Think = ArcCW.UC.ADSReload
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 120 / 60,
-    },
-    ["ready"] = {
-        Source = "ready",
-        Time = 73 / 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseOut = 0.3,
-        LHIKOut = 0.6,
-        SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
-            { s = path .. "rack1.ogg", t = 10 / 60, c = ca },
-            { s = path .. "rack2.ogg", t = 25 / 60, c = ca },
-        },
+        Time = 3,
     },
     ["draw"] = {
-        Source = "idle",
-        ProcDraw = true,
+        Source = "draw",
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
     ["holster"] = {
-        Source = "idle",
+        Source = "holster",
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
@@ -277,10 +257,21 @@ SWEP.Animations = {
     },
 
     ["fire"] = {
-        Source = {"fire_01", "fire_02", "fire_03"},
-        Time = 0.9,
-        ShellEjectAt = 0.05,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
+        Source = "fire",
+        --Time = 0.9,
+        SoundTable = {
+            { s = path .. "drophammer.ogg", t = 0 }
+        },
+    },
+
+    ["trigger"] = {
+        Source = "trigger",
+        Time = 0.15,
+        SoundTable = {
+            { s = path .. "resettrigger.ogg", t = 0, v = 0.05 },
+            { s = path .. "resettrigger.ogg", t = 0.07, v = 0.1 },
+            { s = path .. "resettrigger.ogg", t = 0.15, v = 0.2 }, -- need a very quiet "pull back trigger sound"
+        },
     },
 
     -- 7-R Reloads --
@@ -289,7 +280,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.3525,
-        Time = 139 / 60,
+        --Time = 139 / 60,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.2,
@@ -297,39 +288,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.6,
         LHIKOut = 0.62,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-            { s = path .. "magout.ogg", t = 6 / 60, c = ca },
-            { s = rottle, t = 10 / 60, c = ca },
-            { s = common .. "magpouch_pull_small.ogg", t = 30 / 60, c = ca },
-            { s = rottle, t = 55 / 60, c = ca },
-            { s = path .. "magin_miss.ogg", t = 64 / 60, c = ca },
-            { s = path .. "magin_old.ogg", t = 71 / 60, c = ca },
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        MinProgress = 1.75,
-        Time = 160 / 60,
-        LastClip1OutTime = 0.76,
-        LHIK = true,
-        LHIKIn = 0.1,
-        LHIKEaseIn = 0.1,
-        LHIKEaseOut = 0.55,
-        LHIKOut = 0.7,
-        SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-            { s = path .. "magout_old.ogg", t = 8 / 60, c = ca },
-            { s = rottle, t = 10 / 60, c = ca },
-            { s = common .. "magpouch_pull_small.ogg", t = 26 / 60, c = ca },
-            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
-            { s = rottle, t = 55 / 60, c = ca },
-            { s = path .. "magin_miss.ogg", t = 60 / 60, c = ca },
-            { s = path .. "magin_old.ogg", t = 66 / 60, c = ca },
-            { s = path .. "chamber.ogg", t = 94 / 60, c = ca },
-            { s = rottle, t = 75 / 60, c = ca },
+            { s = rottle, t = 0 },
+            { s = path .. "cyl_latch.ogg", t = 0.2 },
+            { s = path .. "cyl_open.ogg", t = 0.5 },
+            { s = path .. "extractor_1.ogg", t = 1.1 },
+            { s = common .. "magpouch_pull_small.ogg", t = 1.7 },
+            { s = path .. "speedloader.ogg", t = 2.3 },
+            { s = path .. "cyl_close.ogg", t = 3 },
+            { s = rottle, t = 3.3 },
         },
     },
 }

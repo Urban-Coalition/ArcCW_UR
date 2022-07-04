@@ -1,0 +1,18 @@
+"vertexlitgeneric"
+{
+    "$basetexture" "models/weapons/arccw/ur_329pd\FL_D"
+    "$bumpmap" "models/weapons/arccw/ur_329pd\FL_N"
+    "$phongexponenttexture" "models/weapons/arccw/ur_329pd\FL_S"
+    "$envmap"                        "env_cubemap"      
+    "$envmaptint"                    "[.02 .02 .021]" 
+    "$normalmapalphaenvmapmask"      "1"  
+    "$phong"                         "1"                      
+    "$phongboost"                    "25"          
+    "$phongfresnelranges" "[1 5 6.6]"            
+    "$phongalbedotint"			"1"
+    "$phongalbedoboost"			"25"
+    "$envmapfresnel"		"1"
+    "$envmapFresnelMinMaxExp" "[1 4 .5]"   
+    "$nocull" "1"
+    "$halflambert" 	   "1" 
+}
