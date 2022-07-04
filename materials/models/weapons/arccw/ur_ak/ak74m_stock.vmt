@@ -12,7 +12,7 @@
 	"$basemapalphaenvmapmask" "1"
 
 	"$phong" "1"
-	"$phongboost" "0.5"
+	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0.5 1 1]"
 	
@@ -23,6 +23,6 @@
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" "0.1"
 
-	"$envmaptint" "[0.025 0.025 0.025]"
-	"$color2" "[0.88 0.88 0.88]"
+	"$envmaptint" "[0.005 0.005 0.005]"
+	"$color2" "[1 1 1]"
 }
