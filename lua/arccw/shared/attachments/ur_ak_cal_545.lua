@@ -29,6 +29,7 @@ att.GivesFlags = {"cal_545"}
 att.ActivateElements = {"mag_545_30"}
 local path = ")^weapons/arccw_ur/ak/545_39/"
 local path1 = ")^weapons/arccw_ur/ak/"
+local path2 = ")^weapons/arccw_ur/ak/556/"
 
 att.Hook_GetShootSound = function(wep, fsound)
     --[[if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
@@ -38,8 +39,13 @@ att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSoundSilenced then return path1 .. "fire_545_sup.ogg" end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} end
+
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return {path2 .. "fire-dist-01.ogg", path2 .. "fire-dist-02.ogg", path2 .. "fire-dist-03.ogg", path2 .. "fire-dist-04.ogg", path2 .. "fire-dist-05.ogg", path2 .. "fire-dist-06.ogg"}
+    end
 end
 
 local slotinfo = {
