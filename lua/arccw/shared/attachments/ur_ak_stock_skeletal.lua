@@ -15,3 +15,5 @@ att.Mult_Recoil = 1.35
 att.Mult_RecoilSide = 1.15
 
 att.ActivateElements = {"stock_skeletal"}
+
+att.Ignore = true
