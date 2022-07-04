@@ -586,7 +586,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "vm_pivot",
         Offset = {
-            vpos = Vector(-0.01, -2.2, 1.5),
+            vpos = Vector(-0.01, -2.3, 1.6),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"optic_rail"},
