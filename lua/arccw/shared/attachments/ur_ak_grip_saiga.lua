@@ -13,3 +13,5 @@ att.Mult_SpeedMult = 0.97
 att.Mult_SightedSpeedMult = .9
 
 att.ActivateElements = {"grip_saiga"}
+
+att.Ignore = true
