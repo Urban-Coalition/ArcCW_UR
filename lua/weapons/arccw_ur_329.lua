@@ -11,10 +11,9 @@ SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/50ae.mdl"
 SWEP.ShellScale = 1
-SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
-SWEP.CaseEffectAttachment = 2
+SWEP.CaseEffectAttachment = 1
 SWEP.TracerNum = 1
 SWEP.TracerWidth = 1
 SWEP.ShootPitch = 100
@@ -266,6 +265,7 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
+SWEP.RevolverReload = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -289,7 +289,6 @@ SWEP.Animations = {
 
     ["fire"] = {
         Source = "fire",
-        --Time = 0.9,
         SoundTable = {
             { s = path .. "drophammer.ogg", t = 0 },
             { s = path .. "resettrigger.ogg", t = 0.2, v = 0.25 },
@@ -304,14 +303,11 @@ SWEP.Animations = {
         },
     },
 
-    -- 7-R Reloads --
-
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        MinProgress = 1.3525,
-        --Time = 139 / 60,
-        LastClip1OutTime = 0.9,
+        MinProgress = 2.0,
+        ShellEjectAt = 1.3,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
