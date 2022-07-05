@@ -260,6 +260,11 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
+    ["ur_329_barrel_m29"] = {
+        VMBodygroups = { { ind = 1, bg = 1 } },
+        NameChange = "Thunderbolt .44",
+        TrueNameChange = "Model 29"
+    }
 }
 
 -- Animations --
