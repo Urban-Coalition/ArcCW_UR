@@ -213,7 +213,7 @@ SWEP.ShootSoundSilenced = {
 
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
-SWEP.ShootDrySound = path .. "drophammer.ogg"
+SWEP.ShootDrySound = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}
 
 SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-01.ogg",
@@ -295,8 +295,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         SoundTable = {
-            { s = path .. "drophammer.ogg", t = 0 },
-            { s = path .. "resettrigger.ogg", t = 0.2, v = 0.25 },
+            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
     },
 
