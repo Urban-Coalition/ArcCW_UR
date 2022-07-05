@@ -291,7 +291,8 @@ SWEP.Animations = {
         Source = "fire",
         --Time = 0.9,
         SoundTable = {
-            { s = path .. "drophammer.ogg", t = 0 }
+            { s = path .. "drophammer.ogg", t = 0 },
+            { s = path .. "resettrigger.ogg", t = 0.2, v = 0.25 },
         },
     },
 
@@ -299,9 +300,7 @@ SWEP.Animations = {
         Source = "trigger",
         Time = 0.15,
         SoundTable = {
-            { s = path .. "resettrigger.ogg", t = 0, v = 0.05 },
-            { s = path .. "resettrigger.ogg", t = 0.07, v = 0.1 },
-            { s = path .. "resettrigger.ogg", t = 0.15, v = 0.2 }, -- need a very quiet "pull back trigger sound"
+            SoundTable = {{ s = {path .. "revolver_trigger-01.ogg", path .. "revolver_trigger-02.ogg", path .. "revolver_trigger-03.ogg"}, t = 0 }},
         },
     },
 
