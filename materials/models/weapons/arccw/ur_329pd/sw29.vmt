@@ -3,7 +3,7 @@
 	$basetexture 	"models\weapons\arccw\ur_329pd\sw29"
 	$bumpmap 	"models\weapons\arccw\ur_329pd\sw29_normal"
 
-	$color2 "[0.8 0.8 0.8]"
+	$color2 "[0.8 0.8 0.9]"
 
 	$normalmapalphaenvmapmask "1"
 	$normalmapalphaphongmask 	"1"
