@@ -15,7 +15,7 @@
 	
 	"$envmap" 					 "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint" "[0.02 0.02 0.02]"		
+	"$envmaptint" "[0.1 0.1 0.1]"		
 	//"$phongtint" 			"[0.5 0.5 0.5]"			
 	"$PhongAlbedoTint" "1"
 
