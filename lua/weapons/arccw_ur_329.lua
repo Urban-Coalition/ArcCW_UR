@@ -13,7 +13,7 @@ SWEP.ShellModel = "models/weapons/arccw/uc_shells/50ae.mdl"
 SWEP.ShellScale = 1
 
 SWEP.MuzzleEffectAttachment = 1
-SWEP.CaseEffectAttachment = 1
+SWEP.CaseEffectAttachment = 2
 SWEP.TracerNum = 1
 SWEP.TracerWidth = 1
 SWEP.ShootPitch = 100
@@ -304,7 +304,7 @@ SWEP.Animations = {
         Source = "trigger",
         Time = 0.15,
         SoundTable = {
-            SoundTable = {{ s = {path .. "revolver_trigger-01.ogg", path .. "revolver_trigger-02.ogg", path .. "revolver_trigger-03.ogg"}, t = 0 }},
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0 }
         },
     },
 

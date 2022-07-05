@@ -14,6 +14,7 @@ $bodygroup "barrel"
 }
 
 $attachment "1" "body" 8.50 3.00 0.00 rotate 0 0 0
+$attachment "2" "chamber" -2.00 0.00 -0.00 rotate 0 -180 0
 
 $cdmaterials "models/weapons/arccw/ur_329pd"
 $surfaceprop "weapon"
