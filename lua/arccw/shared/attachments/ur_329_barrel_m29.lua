@@ -1,10 +1,10 @@
-att.PrintName = "7\" Model 29 Extended Barrel"
+att.PrintName = "7\" Model 29 Barrel"
 att.AbbrevName = "7\" Extended Barrel"
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "7\" Thunderbolt Extended Barrel"
+    att.PrintName = "7\" Thunderbolt Barrel"
 end
 att.Icon = Material("entities/att/acwatt_ur_deagle_barrel_long.png","smooth mips")
-att.Description = "Slightly extended barrel that provides extra counterweight in addition to marginal ballistic enhancements."
+att.Description = "Extended barrel that provides extra counterweight in addition to marginal ballistic enhancements."
 att.Slot = "ur_329_barrel"
 att.AutoStats = true
 att.SortOrder = 7
