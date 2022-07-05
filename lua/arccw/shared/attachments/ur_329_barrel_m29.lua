@@ -20,5 +20,3 @@ att.Add_BarrelLength = 4
 
 att.Mult_DrawTime = 1.25
 att.Mult_HolsterTime = 1.25
-
-att.ActivateElements = {"ur_deagle_barrel_ext"}
