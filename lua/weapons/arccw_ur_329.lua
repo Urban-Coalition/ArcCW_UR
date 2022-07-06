@@ -13,7 +13,7 @@ SWEP.ShellModel = "models/weapons/arccw/uc_shells/50ae.mdl"
 SWEP.ShellScale = 1
 
 SWEP.MuzzleEffectAttachment = 1
-SWEP.CaseEffectAttachment = 1
+SWEP.CaseEffectAttachment = 2
 SWEP.TracerNum = 1
 SWEP.TracerWidth = 1
 SWEP.ShootPitch = 100
@@ -213,7 +213,7 @@ SWEP.ShootSoundSilenced = {
 
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
-SWEP.ShootDrySound = path .. "drophammer.ogg"
+SWEP.ShootDrySound = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}
 
 SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-01.ogg",
@@ -295,8 +295,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         SoundTable = {
-            { s = path .. "drophammer.ogg", t = 0 },
-            { s = path .. "resettrigger.ogg", t = 0.2, v = 0.25 },
+            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
     },
 
@@ -304,14 +303,14 @@ SWEP.Animations = {
         Source = "trigger",
         Time = 0.15,
         SoundTable = {
-            SoundTable = {{ s = {path .. "revolver_trigger-01.ogg", path .. "revolver_trigger-02.ogg", path .. "revolver_trigger-03.ogg"}, t = 0 }},
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0 }
         },
     },
 
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        MinProgress = 2.0,
+        MinProgress = 2.7,
         ShellEjectAt = 1.3,
         LHIK = true,
         LHIKIn = 0.2,
