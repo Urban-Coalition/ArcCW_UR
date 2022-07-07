@@ -13,6 +13,12 @@ $bodygroup "barrel"
     blank
 }
 
+// always make the speedloader last
+$bodygroup "speedloader"
+{
+    studio "speedloader.smd"
+}
+
 $attachment "1" "body" 8.50 3.00 0.00 rotate 0 0 0
 $attachment "2" "chamber" -2.00 0.00 -0.00 rotate 0 -180 0
 $attachment "3" "camera" 0 0 0 rotate -90 0 0
@@ -21,8 +27,7 @@ $cdmaterials "models/weapons/arccw/ur_329pd"
 $surfaceprop "weapon"
 $contents "solid"
 
-// Separate speedloader first.
-// $collisionmodel "v_sw329.smd"
+$collisionmodel "v_sw329.smd"
 
 $poseparameter "sights" 0 1 loop 0
 

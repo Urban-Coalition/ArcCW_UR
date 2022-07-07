@@ -243,6 +243,73 @@ SWEP.BulletBones = {
     -- [1] = "uzi_b1", [2] = "uzi_b2", [3] = "uzi_b3", [4] = "uzi_b4"
 }
 
+--[[
+
+1 --- 	id: 0
+     [	name: iron
+	num: 1
+	submodels:
+	0 --- ironSIGHT.smd
+2 --- 	id: 1
+     [	name: 1
+	num: 4
+	submodels:
+	0 --- mp5UPPER.smd
+	1 --- mp5sdUPPER.smd
+	2 --- mp5kUPPER.smd
+	3 --- swordUPPER.smd
+3 --- 	id: 2
+     [	name: 2
+	num: 2
+	submodels:
+	0 --- fourLOWER.smd
+	1 --- sefLOWER.smd
+4 --- 	id: 3
+     [	name: 3
+	num: 11
+	submodels:
+	0 --- fixedSTOCK.smd
+	1 --- collapseSTOCK.smd
+	2 --- collapseSTOCKcoll.smd
+	3 --- pdwSTOCK.smd
+	4 --- pdwSTOCKfold.smd
+	5 --- tacticSTOCK.smd
+	6 --- tacticSTOCKfold.smd
+	7 --- futureSTOCK.smd
+	8 --- futureSTOCKcoll.smd
+	9 --- futureSTOCKfold.smd
+	10 --- buttSTOCK.smd
+5 --- 	id: 4
+     [	name: 4
+	num: 10
+	submodels:
+	0 --- standardHG.smd
+	1 --- flashHG.smd
+	2 --- flashmlokHG.smd
+	3 --- slimHG.smd
+	4 --- picaHG.smd
+	5 --- mlokHG.smd
+	6 --- kurzgripHG.smd
+	7 --- kurzslimHG.smd
+	8 --- kurzmlokHG.smd
+	9 --- 
+6 --- 	id: 5
+     [	name: 5
+	num: 4
+	submodels:
+	0 --- standardMAG.smd
+	1 --- smallMAG.smd
+	2 --- straightMAG.smd
+	3 --- drumMAG.smd
+7 --- 	id: 6
+     [	name: 6
+	num: 2
+	submodels:
+	0 --- 
+	1 --- mp5RAIL.smd
+
+]]
+
 SWEP.AttachmentElements = {
     ["ur_mp5_barrel_sd"] = {
         VMBodygroups = {
@@ -325,27 +392,31 @@ SWEP.AttachmentElements = {
 
     ["stock_a3"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 1},
+            {ind = 3, bg = 1},
         },
     },
     ["stock_a3_folded"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 2},
+            {ind = 3, bg = 2},
         },
     },
     ["ur_mp5_stock_remove"] = {
-        VMBodygroups = {{ind = 0, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 10}},
     },
     ["ur_mp5_stock_wood"] = {
-        VMBodygroups = {{ind = 0, bg = 4}},
+        VMBodygroups = {{ind = 3, bg = 7}},
     },
     ["stock_pdw"] = {
-        VMBodygroups = {{ind = 0, bg = 5}},
+        VMBodygroups = {{ind = 3, bg = 3}},
     },
     ["stock_pdw_folded"] = {
-        VMBodygroups = {{ind = 0, bg = 6}},
+        VMBodygroups = {{ind = 3, bg = 4}},
+    },
+    ["stock_future"] = {
+        VMBodygroups = {{ind = 3, bg = 7}},
+    },
+    ["stock_future_folded"] = {
+        VMBodygroups = {{ind = 3, bg = 8}},
     },
 }
 
