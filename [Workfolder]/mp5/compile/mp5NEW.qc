@@ -40,6 +40,7 @@ $bodygroup "4" {
 	studio "kurzgripHG.smd"
 	studio "kurzslimHG.smd"
 	studio "kurzmlokHG.smd"
+	blank
 }
 
 $bodygroup "5" {

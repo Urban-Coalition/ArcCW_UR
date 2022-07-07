@@ -167,8 +167,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.04, -5, 1.5),
-     Ang = Angle(-0.704, -0.501, 4.148),
+     Pos = Vector(-3.055, -4, 0.7),
+     Ang = Angle(-0.3, -0.53, 4.148),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 60,
@@ -247,6 +247,7 @@ SWEP.AttachmentElements = {
     ["ur_mp5_barrel_sd"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
+            {ind = 4, bg = 9},
         },
         AttPosMods = {
             [6] = {
@@ -302,7 +303,7 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_mp5_rail_optic"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+        VMBodygroups = {{ind = 6, bg = 1}},
     },
 
     ["ur_mp5_clamp"] = {
@@ -849,7 +850,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"}, -- ,"optic"
         Bone = "body",
         Offset = {
-            vpos = Vector(0, -1, 3),
+            vpos = Vector(-0.1, -1.6, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(.9, .9, .9),
