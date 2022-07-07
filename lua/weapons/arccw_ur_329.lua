@@ -352,7 +352,6 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = {"ur_329_barrel"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
-        DefaultAttName = "6\" Standard Barrel",
         Bone = "Body",
         Offset = {
             vpos = Vector(3.07, -3.8, -27),
