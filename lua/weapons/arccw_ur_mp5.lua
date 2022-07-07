@@ -246,8 +246,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
     ["ur_mp5_barrel_sd"] = {
         VMBodygroups = {
-            {ind = 4, bg = 1},
-            {ind = 5, bg = 3},
+            {ind = 1, bg = 1},
         },
         AttPosMods = {
             [6] = {
@@ -262,18 +261,16 @@ SWEP.AttachmentElements = {
     },
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3},
-            {ind = 5, bg = 4},
-            {ind = 7, bg = 1},
+            {ind = 1, bg = 2},
         },
         AttPosMods = {[4] = {
             vpos = Vector(0, .75, 10.65),
             vang = Angle(90, 0, -90),
         }}
     },
-    ["ur_mp5_barrel_long"] = {
+    ["ur_mp5_barrel_swordfish"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2},
+            {ind = 1, bg = 3},
         },
         AttPosMods = {[4] = {
             vpos = Vector(0, .75, 18.2),
@@ -359,8 +356,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if ub then
         if atts[2].Installed == "ur_mp5_barrel_sd" then
-            vm:SetBodygroup(6,1)
-            vm:SetBodygroup(5,3)
+          --  vm:SetBodygroup(6,1)
+          --  vm:SetBodygroup(5,3)
         -- elseif !string.StartWith(ub,"ur_mp5_ub_") then
             -- vm:SetBodygroup(6,0)
             -- vm:SetBodygroup(5,1)
@@ -613,6 +610,32 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
+    ["reload_empty_kurz"] = {
+        Source = "reload_empty_kurz",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 90 / 30,
+        MinProgress = 2.2,
+        LastClip1OutTime = 1.8,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "chback.ogg",         t = 0.066, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.2, c = ci},
+            {s = common .. "magpouch.ogg", t = 0.4},
+            {s = path .. "magout.ogg",        t = 0.86, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 1.13, c = ci},
+            {s = common .. "magdrop_smg.ogg",  t = 1.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
+            {s = path .. "chamber.ogg",         t = 2.1, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.6},
+        },
+    },
 
     -- 15 Round Reloads --
 
@@ -664,6 +687,32 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
+    ["reload_empty__kurz_15"] = {
+        Source = "reload_empty_kurz",--"reload_empty_15",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 90 / 30,
+        MinProgress = 2.2,
+        LastClip1OutTime = 1.8,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
+            {s = common .. "magpouch.ogg", t = 0.4},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
+            {s = common .. "magdrop_smg.ogg",  t = 1.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.6},
+        },
+    },
 
     -- 40 Round Reloads --
 
@@ -691,6 +740,32 @@ SWEP.Animations = {
     },
     ["reload_empty_40"] = {
         Source = "reload_empty",--"reload_empty_40",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 90 / 30,
+        MinProgress = 2.2,
+        LastClip1OutTime = 1.8,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
+            {s = common .. "magpouch.ogg", t = 0.4},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
+            {s = common .. "magdrop_smg.ogg",  t = 1.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.6},
+        },
+    },
+    ["reload_empty_kurz_40"] = {
+        Source = "reload_empty_kurz",--"reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 90 / 30,
         MinProgress = 2.2,
