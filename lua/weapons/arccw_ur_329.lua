@@ -326,7 +326,7 @@ SWEP.Animations = {
             { s = path1 .. "extractor2.ogg", t = 0.75, p = 110 },
             { s = path1 .. "cylinder_extract.ogg", t = 0.75 },
             { s = path1 .. "extractor2.ogg", t = 0.825 },
-            { s = common .. "magpouch_pull_small.ogg", t = 1.2 },
+            { s = common .. "magpouch_pull_small.ogg", t = 1.2, v = 0.2 },
             { s = path1 .. "speedloader.ogg", t = 1.9 },
             { s = path1 .. "cylinder_in.ogg", t = 2.4 },
             { s = rottle, t = 2.4 },
