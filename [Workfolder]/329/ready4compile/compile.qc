@@ -51,6 +51,8 @@ $sequence "trigger" {
 
 $sequence "fire" {
     "anims/fire.smd"
+    "anims/fire_iron.smd"
+	blend "sights" 0 1
     fps 60
     snap
 }
