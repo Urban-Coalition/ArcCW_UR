@@ -16,11 +16,16 @@ urban real  renewal
 - SPAS-12:
 	- Comp rear sight texture
 	- Att icons
+	- Find a remodel
 - MP5:
-	- Remodel(?)
 	- Sounds: 10mm, 40S&W
-	- Handguards: surefire, wooden
 	- Att icons
+	- Stuff missing from the remodel:
+		- All textures
+		- Carbine barrel
+		- 40-round mag
+		- Drum mag animations
+		- Wooden handguard and stock
 - PM:
 	- Holster sounds
 	- we need to decide what we want from this gun in the first place

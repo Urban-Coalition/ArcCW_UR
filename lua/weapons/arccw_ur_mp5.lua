@@ -174,7 +174,7 @@ SWEP.IronSightStruct = {
      ViewModelFOV = 60,
 }
 
-SWEP.ActivePos = Vector(-0.5, 1.5, 1.05)
+SWEP.ActivePos = Vector(-0.3, 1.1, 0.6)
 SWEP.ActiveAng = Angle(0, 0, -1)
 
 SWEP.SprintPos = Vector(-0.5, 3, 1.5)
@@ -190,7 +190,7 @@ SWEP.BarrelOffsetHip = Vector(4, 0, -4)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 3.75, -6.9),
+    pos        =    Vector(-7, 3.75, -6.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
@@ -243,6 +243,73 @@ SWEP.BulletBones = {
     -- [1] = "uzi_b1", [2] = "uzi_b2", [3] = "uzi_b3", [4] = "uzi_b4"
 }
 
+--[[
+
+1 --- 	id: 0
+     [	name: iron
+	num: 1
+	submodels:
+	0 --- ironSIGHT.smd
+2 --- 	id: 1
+     [	name: 1
+	num: 4
+	submodels:
+	0 --- mp5UPPER.smd
+	1 --- mp5sdUPPER.smd
+	2 --- mp5kUPPER.smd
+	3 --- swordUPPER.smd
+3 --- 	id: 2
+     [	name: 2
+	num: 2
+	submodels:
+	0 --- fourLOWER.smd
+	1 --- sefLOWER.smd
+4 --- 	id: 3
+     [	name: 3
+	num: 11
+	submodels:
+	0 --- fixedSTOCK.smd
+	1 --- collapseSTOCK.smd
+	2 --- collapseSTOCKcoll.smd
+	3 --- pdwSTOCK.smd
+	4 --- pdwSTOCKfold.smd
+	5 --- tacticSTOCK.smd
+	6 --- tacticSTOCKfold.smd
+	7 --- futureSTOCK.smd
+	8 --- futureSTOCKcoll.smd
+	9 --- futureSTOCKfold.smd
+	10 --- buttSTOCK.smd
+5 --- 	id: 4
+     [	name: 4
+	num: 10
+	submodels:
+	0 --- standardHG.smd
+	1 --- flashHG.smd
+	2 --- flashmlokHG.smd
+	3 --- slimHG.smd
+	4 --- picaHG.smd
+	5 --- mlokHG.smd
+	6 --- kurzgripHG.smd
+	7 --- kurzslimHG.smd
+	8 --- kurzmlokHG.smd
+	9 --- 
+6 --- 	id: 5
+     [	name: 5
+	num: 4
+	submodels:
+	0 --- standardMAG.smd
+	1 --- smallMAG.smd
+	2 --- straightMAG.smd
+	3 --- drumMAG.smd
+7 --- 	id: 6
+     [	name: 6
+	num: 2
+	submodels:
+	0 --- 
+	1 --- mp5RAIL.smd
+
+]]
+
 SWEP.AttachmentElements = {
     ["ur_mp5_barrel_sd"] = {
         VMBodygroups = {
@@ -263,6 +330,7 @@ SWEP.AttachmentElements = {
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
             {ind = 1, bg = 2},
+            {ind = 4, bg = 6},
         },
         AttPosMods = {[4] = {
             vpos = Vector(0, .75, 10.65),
@@ -280,26 +348,29 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_mp5_rail_fg"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
+        VMBodygroups = {{ind = 4, bg = 4}},
     },
     ["ur_mp5_ub_classic"] = {
-        VMBodygroups = {{ind = 5, bg = 2}},
+        VMBodygroups = {{ind = 4, bg = 3}},
+    },
+    ["ur_mp5_ub_surefire"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
     },
     ["ur_mp5_ub_wood"] = {
-        VMBodygroups = {{ind = 5, bg = 3}}, -- insert wood handguard here
+        VMBodygroups = {{ind = 4, bg = 3}}, -- insert wood handguard here
     },
 
     ["ur_mp5_mag_15"] = {
-        VMBodygroups = {{ind = 2, bg = 3}},
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
     ["ur_mp5_mag_40"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+        VMBodygroups = {{ind = 5, bg = 3}},
     },
     ["ur_mp5_mag_50"] = {
-        VMBodygroups = {{ind = 2, bg = 3}},
+        VMBodygroups = {{ind = 5, bg = 3}},
     },
     ["ur_mp5_mag_waffle"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
+        VMBodygroups = {{ind = 5, bg = 2}},
     },
 
     ["ur_mp5_rail_optic"] = {
@@ -311,13 +382,13 @@ SWEP.AttachmentElements = {
     },
 
     ["receiver_lower"] = {
-        VMBodygroups = {{ind = 8, bg = 1}},
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
     ["receiver_lower_semi"] = {
-        VMBodygroups = {{ind = 8, bg = 2}},
+        VMBodygroups = {{ind = 2, bg = 2}},
     },
     ["receiver_lower_0"] = {
-        VMBodygroups = {{ind = 8, bg = 0}},
+        VMBodygroups = {{ind = 2, bg = 0}},
     },
     ["receiver_upper_0"] = {
         VMBodygroups = {{ind = 7, bg = 0}},
@@ -325,27 +396,32 @@ SWEP.AttachmentElements = {
 
     ["stock_a3"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 1},
+            {ind = 3, bg = 1},
         },
     },
     ["stock_a3_folded"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 2},
+            {ind = 3, bg = 2},
         },
     },
     ["ur_mp5_stock_remove"] = {
-        VMBodygroups = {{ind = 0, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 10}},
     },
     ["ur_mp5_stock_wood"] = {
-        VMBodygroups = {{ind = 0, bg = 4}},
+        -- VMBodygroups = {{ind = 0, bg = 4}},
+        -- Make this part of the VMSkin
     },
     ["stock_pdw"] = {
-        VMBodygroups = {{ind = 0, bg = 5}},
+        VMBodygroups = {{ind = 3, bg = 3}},
     },
     ["stock_pdw_folded"] = {
-        VMBodygroups = {{ind = 0, bg = 6}},
+        VMBodygroups = {{ind = 3, bg = 4}},
+    },
+    ["stock_future"] = {
+        VMBodygroups = {{ind = 3, bg = 7}},
+    },
+    ["stock_future_folded"] = {
+        VMBodygroups = {{ind = 3, bg = 8}},
     },
 }
 
@@ -367,9 +443,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         -- vm:SetBodygroup(6,0)
     end
 
-    if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
-        vm:SetBodygroup(0,7)
-    end
+    -- if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
+    --     vm:SetBodygroup(0,7)
+    -- end
 end
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -858,7 +934,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "9\" Tropical Barrel",
+        DefaultAttName = "9\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
         Slot = "ur_mp5_barrel",
         Bone = "body",
@@ -880,7 +956,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, .75, 14.4),
+            vpos = Vector(0, .25, 14.4),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"barrel_sd"}
@@ -891,7 +967,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","ur_mp5_hg"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, 1.3, 10),
+            vpos = Vector(0, .9, 10),
             vang = Angle(90, 0, -90),
         },
         --VMScale = Vector(.8, .8, .8),
@@ -910,7 +986,7 @@ SWEP.Attachments = {
         VMScale = Vector(.8,.8,.8),
         --InstalledEles = {"ur_mp5_clamp"}
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_kurz"}
+        ExcludeFlags = {"mp5_kurz","hg_surefire"}
     },
     {
         PrintName = "Stock",

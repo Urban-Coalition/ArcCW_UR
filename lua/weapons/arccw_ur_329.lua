@@ -52,7 +52,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_329pd.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_ud_deagle.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ur_329pd.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
@@ -310,7 +310,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        MinProgress = 2.7,
+        MinProgress = 1.9,
         ShellEjectAt = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -320,15 +320,16 @@ SWEP.Animations = {
         SoundTable = {
             { s = rottle, t = 0 },
             { s = path .. "cyl_latch.ogg", t = 0.1 },
-            { s = path .. "cyl_open.ogg", t = 0.2 },
-            { s = path .. "extractor_1.ogg", t = 0.5 },
-            { s = path .. "extractor_1.ogg", t = 0.75 },
+            { s = path1 .. "cylinder_out.ogg", t = 0.2 },
+            { s = path1 .. "extractor1.ogg", t = 0.65 },
+            { s = path1 .. "extract1.ogg", t = 0.65, p = 110, v = 0.25 },
+            { s = path1 .. "extractor2.ogg", t = 0.75, p = 110 },
             { s = path1 .. "cylinder_extract.ogg", t = 0.75 },
-            { s = path .. "extractor_2.ogg", t = 0.825 },
-            { s = common .. "magpouch_pull_small.ogg", t = 1.2 },
+            { s = path1 .. "extractor2.ogg", t = 0.825 },
+            { s = common .. "magpouch_pull_small.ogg", t = 1.2, v = 0.2 },
             { s = path1 .. "speedloader.ogg", t = 1.9 },
-            { s = path .. "cyl_close.ogg", t = 2.4 },
-            { s = rottle, t = 2.7 },
+            { s = path1 .. "cylinder_in.ogg", t = 2.4 },
+            { s = rottle, t = 2.4 },
         },
     },
 }
@@ -352,7 +353,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = {"ur_329_barrel"},
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
-        DefaultAttName = "6\" Standard Barrel",
+        DefaultAttName = "4\" Standard Barrel",
         Bone = "Body",
         Offset = {
             vpos = Vector(3.07, -3.8, -27),
