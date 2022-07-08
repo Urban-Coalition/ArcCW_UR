@@ -18,7 +18,7 @@ att.Mult_DamageMin = 160 / 40
 att.Override_Range = 100
 att.Override_RangeMin = 20
 
-att.Override_PhysBulletMuzzleVelocity = 1000
+att.Mult_PhysBulletMuzzleVelocity = 950 / 850
 
 att.Mult_Penetration = 2
 att.Mult_Recoil = 2

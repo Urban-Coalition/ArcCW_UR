@@ -33,7 +33,7 @@ att.Mult_Sway = 1.25
 att.Mult_Range = 0.65
 att.Add_BarrelLength = 4
 
-att.Mult_PhysBulletMuzzleVelocity = 0.75
+att.Mult_PhysBulletMuzzleVelocity = 0.7
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSoundSilenced then

@@ -156,10 +156,11 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.546, 5, 1.09),
+     Pos = Vector(-2.546, 3, 1.09),
      Ang = Angle(0.6, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
+     ViewModelFOV = 55,
 }
 
 SWEP.ActivePos = Vector(0.2, 2, 1.5)
@@ -183,9 +184,6 @@ SWEP.WorldModelOffset = {
 local path = ")^weapons/arccw_ur/deagle/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
-SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_sup_dist.ogg"
-SWEP.DistantShootSoundSilenced = path .. "fire_sup.ogg"
 
 SWEP.ShootSound = {
     path .. "fire-01.ogg",

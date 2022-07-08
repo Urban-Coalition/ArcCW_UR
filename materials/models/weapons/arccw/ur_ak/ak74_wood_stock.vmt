@@ -1,0 +1,25 @@
+// ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE MATERIALS
+// Auto converter by Darsu, material setup and vmt by Mal0
+
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_LOD0_diff"
+	"$bumpmap" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_LOD0_nrm"
+	"$phongexponenttexture" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_LOD0_gloss"
+
+	"$blendtintbybasealpha" "1"
+	"$normalmapalphaenvmapmask" "0"
+	"$basemapalphaenvmapmask" "1"
+
+	"$phong" "1"
+	"$phongboost" "0.05"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[0.5 1 1]"
+	
+	"$rimlight" "1"
+	"$rimlightexponent" "4"
+	"$rimmask" "1"
+
+	"$envmaptint" "[0.125 0.125 0.125]"
+	"$color2" "[1 1 1]"
+}

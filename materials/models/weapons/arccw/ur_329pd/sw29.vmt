@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+	$basetexture 	"models\weapons\arccw\ur_329pd\sw29"
+	$bumpmap 	"models\weapons\arccw\ur_329pd\sw29_normal"
+
+	$color2 "[0.79 0.79 0.85]"
+
+	$normalmapalphaenvmapmask "1"
+	$normalmapalphaphongmask 	"1"
+
+	$envmap 			"env_cubemap"
+	$envmaptint 		"[0.1 0.1 0.1]"
+	$envmapfresnel 		"1"
+	//$envmapfresnelMinMaxExp 	"[0 5 0.4]"
+
+	$phong 			"1"
+	$phongboost 		"2.0"
+	$phongfresnelranges 	"[0.5 1.5 1]"
+	$phongexponenttexture 	"models\weapons\arccw\ur_329pd\sw29_gloss"
+	$phongalbedotint 		"1"
+	$phongalbedoboost 	"40"
+	$halflambert 		"1"
+}

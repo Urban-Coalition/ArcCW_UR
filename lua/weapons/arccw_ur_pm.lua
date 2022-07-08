@@ -150,8 +150,8 @@ SWEP.ExtraSightDist = 20
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(-0.5, 0, -1)
-SWEP.HolsterAng = Angle(3.5, 7, -20)
+SWEP.HolsterPos = Vector(-0.5, 0, 0)
+SWEP.HolsterAng = Angle(-5, 7, -10)
 
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "pistol"
@@ -334,7 +334,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
-        Time = 26/30,
+        Time = 20/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path1 .. "holster.ogg", t = 0.25}, -- Not Temporary
@@ -447,7 +447,7 @@ SWEP.Animations = {
 SWEP.AutosolveSourceSeq = "idle"
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[4].Installed and (anim == "fire" or anim == "fire_empty") then
+    if wep.Attachments[5].Installed and (anim == "fire" or anim == "fire_empty") then
         return anim .. "_stock"
     end
 end
@@ -491,15 +491,15 @@ SWEP.Attachments = {
         VMScale = Vector(0.8, 0.8, 0.8),
         -- ExcludeFlags = {"ur_pb"}
     },
-   // { i hate this gay ass little pistol bruh
-       // PrintName = "Tactical",
-      //  Slot = {"tac_pistol"},
-      //  Bone = "pm_parent",
-      //  Offset = {
-      //      vpos = Vector(0, -5.6, -0.2),
-      //      vang = Angle(0, 90, 180),
-       // },
-   // },
+    {
+         PrintName = "Tactical",
+         Slot = {"tac_pistol"},
+         Bone = "pm_parent",
+         Offset = {
+             vpos = Vector(0, -5.6, -0.2),
+             vang = Angle(0, 90, 180),
+         },
+    },
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},

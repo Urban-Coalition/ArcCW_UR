@@ -15,3 +15,5 @@ att.Mult_Range = 1.25
 att.Mult_SightTime = 1.25
 att.Mult_Sway = 1.5
 att.Add_BarrelLength = 7
+
+att.Mult_PhysBulletMuzzleVelocity = 1.15

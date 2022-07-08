@@ -1,9 +1,9 @@
 att.PrintName = "4.5\" Kurz Barrel"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_kurz.png", "smooth mips")
-att.Description = "Machine pistol variant with a maximally compact barrel, a lightened bolt assembly for increased cyclic rate, and an integrated foregrip that reduces its impact on recoil control.\nMid-range accuracy is poor, and the lack of an outer barrel makes it unable to accept muzzle attachments."
+att.Description = "Machine pistol variant with a maximally compact barrel, a lightened bolt assembly for increased cyclic rate, and an integrated foregrip that reduces its impact on recoil control.\nMid-range accuracy is poor, and the lack of space for a tactical rail mount restricts further customization."
 att.Desc_Cons = {
-    "uc.nomuzzle",
+    --"uc.nomuzzle",
     "uc.noubs"
 }
 att.AutoStats = true
@@ -29,3 +29,5 @@ att.Mult_Range = .5
 att.GivesFlags = {"mp5_kurz"}
 att.Override_Trivia_Class = "Machine Pistol"
 att.Override_HoldtypeActive = "smg"
+
+att.Mult_PhysBulletMuzzleVelocity = 0.9375

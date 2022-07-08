@@ -22,3 +22,8 @@ L["ur.spas12.pump"] = "Manual action only"
 L["ur.spas12.dbl"] = "2-round burst"
 L["ur.spas12.dbl.abbrev"] = "2BST"
 L["ur.spas12.folded"] = "Cannot use optics or iron sights"
+
+L["ur.329.sact"] = "Single-action"
+L["ur.329.sact.abbrev"] = "SACT"
+L["ur.329.dact"] = "Double-action"
+L["ur.329.dact.abbrev"] = "DACT"

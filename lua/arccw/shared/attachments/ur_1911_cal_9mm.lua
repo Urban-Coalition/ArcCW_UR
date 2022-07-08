@@ -25,12 +25,13 @@ att.Mult_Damage = 30 / 45
 att.Mult_DamageMin = 17 / 15
 att.Mult_Penetration = 6 / 9
 att.Mult_Range = 1.25
-att.Mult_RPM = 1.05
+att.Mult_RPM = 525 / 450
 att.Mult_ReloadTime = .9
 
 att.Mult_Recoil = 0.85
 att.Mult_RecoilSide = 0.75
 
+att.Mult_PhysBulletMuzzleVelocity = 1.25 -- 310 / 253
 
 att.Mult_ClipSize = 9 / 7
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"

@@ -8,6 +8,7 @@ $bodygroup "slide" { // 1
 	studio "slide.smd"
 	studio "slide compact.smd"
 	studio "slide m45.smd"
+	studio "slide m45 custom.smd"
 }
 $bodygroup "shared" { // x
 	studio "shared.smd"
@@ -38,16 +39,24 @@ $bodygroup "tacmount" { // 8
 	studio "mount tac.smd"
 }
 
+$bodygroup "bullers" { // 9
+	studio "bullers.smd"
+}
 
-$cdmaterials "models\weapons\arccw\shared"
+
+// $cdmaterials "models\weapons\arccw\shared"
 $cdmaterials "models\weapons\arccw\ur_m1911"
-$cdmaterials "models\weapons\arccw\ud_common"
+// $cdmaterials "models\weapons\arccw\uc_common"
+$cdmaterials "models\weapons\arccw\uc_shells\"
 
+$collisionmodel "default.smd"
 
 $texturegroup "skinfamilies"
 {
-    { "m1911_exploded" }
- 	{ "m1911_alsid" }
+    { m1911_exploded }
+ 	{ m1911_alsid }
+ 	{ m1911_exploded_tan }
+ 	{ m1911_exploded_custom }
 }
 
 

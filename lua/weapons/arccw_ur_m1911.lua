@@ -9,8 +9,8 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
-SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-SWEP.ShellScale = 1.6
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
+SWEP.ShellScale = 1
 --SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
@@ -68,8 +68,8 @@ SWEP.Range = 80 -- 3 shot until ~40m
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 315
-SWEP.PhysBulletMuzzleVelocity = 315
+
+SWEP.PhysBulletMuzzleVelocity = 253
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -92,7 +92,7 @@ SWEP.Sway = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 500
+SWEP.Delay = 60 / 400
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -187,9 +187,17 @@ SWEP.ShootSound = {
     path .. "fire-05.ogg",
     path .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
+SWEP.ShootSoundSilenced = {
+    path .. "fire-sup-01.ogg",
+    path .. "fire-sup-02.ogg",
+    path .. "fire-sup-03.ogg",
+    path .. "fire-sup-04.ogg",
+    path .. "fire-sup-05.ogg",
+    path .. "fire-sup-06.ogg"
+}
+
 SWEP.DistantShootSound = nil
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
@@ -227,50 +235,129 @@ SWEP.BulletBones = {
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
-    ["ur_1911_slide_compact"] = {VMBodygroups = {
-        {ind = 0,bg = 1},
-        {ind = 1,bg = 1}
-    }},
-
-    ["ur_1911_slide_m45"] = {VMBodygroups = 
-        {ind = 1,bg = 1},
-        {ind = 4,bg = 1},
-        {ind = 5,bg = 1},
+    ["ur_1911_slide_compact"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 1},
+            {ind = 1, bg = 1}
+        },
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -3.58, .22),
+                vang = Angle(0, 90, 0),
+            }
+        },
+        NameChange = "AMAD",
+        TrueNameChange = "Colt Officer",
     },
 
-    ["ur_1911_mag_ext"] = {VMBodygroups = {ind = 3,bg = 1}},
+    ["ur_1911_slide_m45"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 2},
+            {ind = 4, bg = 1},
+            {ind = 5, bg = 1},
+        },
+        --VMSkin = 1,
+        NameChange = "AMASIN",
+        TrueNameChange = "M45",
+    },
 
-    ["ur_1911_grip_snake"] = {VMBodygroups = {ind = 6,bg = 1}},
-    ["ur_1911_grip_pachmayr"] = {VMBodygroups = {ind = 6,bg = 2}},
+    ["ur_1911_slide_m45_custom"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 3},
+            {ind = 4, bg = 1},
+            {ind = 5, bg = 1},
+        },
+        --VMSkin = 1,
+        NameChange = "AMASIN",
+        TrueNameChange = "M45",
+    },
 
-    ["optic_rail"] = {VMBodygroups = {ind = 7,bg = 1}},
-    ["tac_rail"] = {VMBodygroups = {ind = 8,bg = 1}},
+    ["ur_1911_mag_ext"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 1}
+        }
+    },
+
+    ["ur_1911_grip_snake"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 1}
+        }
+    },
+    ["ur_1911_grip_pachmayr"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 2}
+        }
+    },
+
+    ["ur_1911_skin_silver"] = {
+        VMSkin = 1
+    },
+    ["ur_1911_skin_tan"] = {
+        VMSkin = 2
+    },
+    ["ur_1911_skin_custom"] = {
+        VMSkin = 3
+    },
+
+    ["ur_1911_cal_9mm"] = {
+        NameChange = "AMAS-9",
+        TrueNameChange = "SR1911",
+    },
+    ["ur_1911_cal_10auto"] = {
+        NameChange = "AMAS Elite",
+        TrueNameChange = "Delta Elite",
+    },
+
+    ["optic_rail"] = {
+        VMBodygroups = {
+            {ind = 7, bg = 1}
+        }
+    },
+    ["tac_rail"] = {
+        VMBodygroups = {
+            {ind = 8, bg = 1}
+        }
+    },
 }
 
-SWEP.Hook_NameChange = function(wep,name)
-    if GetConVar("arccw_truenames"):GetBool() then
-        local atts = wep.Attachments
-        local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    -- local vm = data.vm
+    -- if !IsValid(vm) then return end
 
-        if cal == "10auto" then return GetConVar("arccw_truenames"):GetBool() and "Delta Elite" or ""
-        elseif cal == "9mm" then return GetConVar("arccw_truenames"):GetBool() and "SR1911" or ""
-        end
+    -- local att_skin = wep.Attachments[14].Installed
+    -- local att_slide = wep.Attachments[2].Installed
 
-        return "M1911"
-    else
-        return "AMAS"
-    end
+    -- if att_slide == "ur_1911_slide_m45" and att_skin == "ur_1911_skin_custom" then
+    --     vm:SetBodygroup(1, 3)
+    -- end
 end
+
+-- SWEP.Hook_NameChange = function(wep,name)
+--     if GetConVar("arccw_truenames"):GetBool() then
+--         local atts = wep.Attachments
+--         local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
+
+--         if cal == "10auto" then return GetConVar("arccw_truenames"):GetBool() and "Delta Elite" or ""
+--         elseif cal == "9mm" then return GetConVar("arccw_truenames"):GetBool() and "SR1911" or ""
+--         end
+
+--         return "M1911"
+--     else
+--         return "AMAS"
+--     end
+-- end
 
 -- Animations --
 
+local ca = CHAN_AUTO
+
 SWEP.Animations = {
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 10 / 30,
-    },
     ["idle"] = {
         Source = "idle",
+        Time = 10 / 30,
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
         Time = 10 / 30,
     },
     -- ["ready"] = {
@@ -290,6 +377,7 @@ SWEP.Animations = {
         Source = "idle",
         ProcDraw = true,
         SoundTable = {
+            {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             --{s = common .. "raise.ogg", t = 0.05},
         },
@@ -298,17 +386,17 @@ SWEP.Animations = {
         Source = "idle_empty",
         ProcDraw = true,
         SoundTable = {
+            {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             --{s = common .. "raise.ogg", t = 0.05},
         },
     },
-    --[[["holster"] = {
+    ["holster"] = {
         Source = "idle",
         SoundTable = {
-            {s = common .. "cloth_2.ogg", t = 0},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
-    },]]
+    },
 
     ["fire"] = {
         Source = "fire",
@@ -325,8 +413,8 @@ SWEP.Animations = {
 
     -- 7-R Reloads --
 
-    ["reload"] = {
-        Source = "reload",
+    ["reload_10"] = {
+        Source = "reload_ext",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.3525,
         Time = 65 / 30,
@@ -345,6 +433,53 @@ SWEP.Animations = {
             { s = rottle, t = 55 / 60, c = ca },
             { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60, c = ca },
             { s = path .. "magin.ogg", t = 50 / 60, c = ca },
+        },
+    },
+    ["reload_empty_10"] = {
+        Source = "reload_empty_ext",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.75,
+        Time = 75 / 30,
+        LastClip1OutTime = 0.76,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKEaseIn = 0.1,
+        LHIKEaseOut = 0.55,
+        LHIKOut = 0.7,
+        SoundTable = {
+            { s = rottle, t = 0 / 60, c = ca },
+            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            { s = path .. "magout.ogg", t = 16 / 60, c = ca },
+            { s = rottle, t = 10 / 60, c = ca },
+            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60, c = ca },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
+            { s = rottle, t = 55 / 60, c = ca },
+            { s = path .. "magin.ogg", t = 64 / 60, c = ca },
+            { s = rottle, t = 90 / 60, c = ca },
+            { s = path .. "slidedrop.ogg", t = 94 / 60, c = ca },
+        },
+    },
+
+    ["reload"] = {
+        Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.3525,
+        Time = 65 / 30,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.62,
+        SoundTable = {
+            { s = rottle,                                   t = 0 / 60, c = ca },
+            { s = common .. "magpouch_pull_small.ogg",      t = 5 / 60, c = ca },
+            { s = rottle,                                   t = 10 / 60, c = ca },
+            { s = common .. "magrelease.ogg",               t = 17 / 60, c = ca },
+            { s = path .. "magout.ogg",                     t = 26 / 60, c = ca },
+            { s = path .. "magin.ogg",                      t = 50 / 60, c = ca },
+            { s = rottle,                                   t = 55 / 60, c = ca },
+            { s = common ..  "magpouch_replace_small.ogg",  t = 80 / 60, c = ca },
         },
     },
     ["reload_empty"] = {
@@ -457,9 +592,9 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Slot = {"optic_lp"},
         DefaultAttName = "Iron Sights",
-        Bone = "vm_charge",
+        Bone = "vm_pivot",
         Offset = {
-            vpos = Vector(-0.01, -.7, 0),
+            vpos = Vector(-0.01, -2.3, 1.6),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"optic_rail"},
@@ -488,7 +623,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "vm_barrel",
         Offset = {
-            vpos = Vector(0, -4.7, .12),
+            vpos = Vector(0.04, -4.7, .22),
             vang = Angle(0, 90, 0),
         },
         InstalledEles = {"nofh"},
@@ -497,11 +632,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        InstalledEles = {"tac_rail"},
         Slot = {"tac_pistol"},
         Bone = "vm_pivot",
         Offset = {
-            vpos = Vector(0, -.5, 4),
+            vpos = Vector(0, 0, 4),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"tac_rail"},
@@ -515,10 +649,10 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"uc_stock", "go_stock_pistol_bt"},
-        VMScale = Vector(1.1, 1.1, 1.1),
+        VMScale = Vector(1, 1, 1),
         Bone = "vm_pivot",
         Offset = {
-            vpos = Vector(0, -0.25, 0),
+            vpos = Vector(0, 3, -3),
             vang = Angle(90, 0, -90),
         },
     },
@@ -551,7 +685,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm","fml_charm"},
+        Slot = {"charm", "fml_charm"},
         FreeSlot = true,
         Bone = "vm_pivot",
         Offset = {
@@ -560,11 +694,11 @@ SWEP.Attachments = {
         },
         VMScale = Vector(.6,.6,.6),
     },
-    --[[{
+    {
         PrintName = "Finish",
-        Slot = {"ur_deagle_skin"},
-        DefaultAttName = "Stainless Steel",
+        Slot = {"ur_m1911_skin"},
+        DefaultAttName = "Grey",
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
         FreeSlot = true,
-    },]]
+    },
 }

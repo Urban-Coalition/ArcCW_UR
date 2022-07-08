@@ -11,7 +11,7 @@ $bodygroup "handguards" {
 	studio "akm_handguard.smd"
 	studio "romaniandong.smd"
 	studio "ak74m_handguard_new.smd"
-	studio "series_100_handguard.001.smd"
+	studio "series_100_handguard.smd"
 	studio "rpk74m_handguard.smd"
 	studio "aku_handguard-barrel-trunnion.smd"
 	studio "alpha_handguard.smd"
@@ -76,8 +76,8 @@ $bodygroup "stocks" {
 
 	studio "ak12 stock.smd"
 	
-	studio "ak74m_stock.smd"
-	studio "ak74m_stock_folded.smd"
+	studio "74m_stock.smd"
+	studio "74m_stock_folded.smd"
 }
 
 $bodygroup "barrels" {

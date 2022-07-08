@@ -167,14 +167,14 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.04, -5, 1.5),
-     Ang = Angle(-0.704, -0.501, 4.148),
+     Pos = Vector(-3.055, -4, 0.7),
+     Ang = Angle(-0.3, -0.53, 4.148),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 60,
 }
 
-SWEP.ActivePos = Vector(-0.5, 1.5, 1.05)
+SWEP.ActivePos = Vector(-0.3, 1.1, 0.6)
 SWEP.ActiveAng = Angle(0, 0, -1)
 
 SWEP.SprintPos = Vector(-0.5, 3, 1.5)
@@ -190,7 +190,7 @@ SWEP.BarrelOffsetHip = Vector(4, 0, -4)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 3.75, -6.9),
+    pos        =    Vector(-7, 3.75, -6.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
@@ -243,11 +243,78 @@ SWEP.BulletBones = {
     -- [1] = "uzi_b1", [2] = "uzi_b2", [3] = "uzi_b3", [4] = "uzi_b4"
 }
 
+--[[
+
+1 --- 	id: 0
+     [	name: iron
+	num: 1
+	submodels:
+	0 --- ironSIGHT.smd
+2 --- 	id: 1
+     [	name: 1
+	num: 4
+	submodels:
+	0 --- mp5UPPER.smd
+	1 --- mp5sdUPPER.smd
+	2 --- mp5kUPPER.smd
+	3 --- swordUPPER.smd
+3 --- 	id: 2
+     [	name: 2
+	num: 2
+	submodels:
+	0 --- fourLOWER.smd
+	1 --- sefLOWER.smd
+4 --- 	id: 3
+     [	name: 3
+	num: 11
+	submodels:
+	0 --- fixedSTOCK.smd
+	1 --- collapseSTOCK.smd
+	2 --- collapseSTOCKcoll.smd
+	3 --- pdwSTOCK.smd
+	4 --- pdwSTOCKfold.smd
+	5 --- tacticSTOCK.smd
+	6 --- tacticSTOCKfold.smd
+	7 --- futureSTOCK.smd
+	8 --- futureSTOCKcoll.smd
+	9 --- futureSTOCKfold.smd
+	10 --- buttSTOCK.smd
+5 --- 	id: 4
+     [	name: 4
+	num: 10
+	submodels:
+	0 --- standardHG.smd
+	1 --- flashHG.smd
+	2 --- flashmlokHG.smd
+	3 --- slimHG.smd
+	4 --- picaHG.smd
+	5 --- mlokHG.smd
+	6 --- kurzgripHG.smd
+	7 --- kurzslimHG.smd
+	8 --- kurzmlokHG.smd
+	9 --- 
+6 --- 	id: 5
+     [	name: 5
+	num: 4
+	submodels:
+	0 --- standardMAG.smd
+	1 --- smallMAG.smd
+	2 --- straightMAG.smd
+	3 --- drumMAG.smd
+7 --- 	id: 6
+     [	name: 6
+	num: 2
+	submodels:
+	0 --- 
+	1 --- mp5RAIL.smd
+
+]]
+
 SWEP.AttachmentElements = {
     ["ur_mp5_barrel_sd"] = {
         VMBodygroups = {
-            {ind = 4, bg = 1},
-            {ind = 5, bg = 3},
+            {ind = 1, bg = 1},
+            {ind = 4, bg = 9},
         },
         AttPosMods = {
             [6] = {
@@ -262,14 +329,17 @@ SWEP.AttachmentElements = {
     },
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3},
-            {ind = 5, bg = 4},
-            {ind = 7, bg = 1},
+            {ind = 1, bg = 2},
+            {ind = 4, bg = 6},
         },
+        AttPosMods = {[4] = {
+            vpos = Vector(0, .75, 10.65),
+            vang = Angle(90, 0, -90),
+        }}
     },
-    ["ur_mp5_barrel_long"] = {
+    ["ur_mp5_barrel_swordfish"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2},
+            {ind = 1, bg = 3},
         },
         AttPosMods = {[4] = {
             vpos = Vector(0, .75, 18.2),
@@ -278,30 +348,33 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_mp5_rail_fg"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
+        VMBodygroups = {{ind = 4, bg = 4}},
     },
     ["ur_mp5_ub_classic"] = {
-        VMBodygroups = {{ind = 5, bg = 2}},
+        VMBodygroups = {{ind = 4, bg = 3}},
+    },
+    ["ur_mp5_ub_surefire"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
     },
     ["ur_mp5_ub_wood"] = {
-        VMBodygroups = {{ind = 5, bg = 3}}, -- insert wood handguard here
+        VMBodygroups = {{ind = 4, bg = 3}}, -- insert wood handguard here
     },
 
     ["ur_mp5_mag_15"] = {
-        VMBodygroups = {{ind = 2, bg = 3}},
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
     ["ur_mp5_mag_40"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+        VMBodygroups = {{ind = 5, bg = 3}},
     },
     ["ur_mp5_mag_50"] = {
-        VMBodygroups = {{ind = 2, bg = 3}},
+        VMBodygroups = {{ind = 5, bg = 3}},
     },
     ["ur_mp5_mag_waffle"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
+        VMBodygroups = {{ind = 5, bg = 2}},
     },
 
     ["ur_mp5_rail_optic"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+        VMBodygroups = {{ind = 6, bg = 1}},
     },
 
     ["ur_mp5_clamp"] = {
@@ -309,10 +382,13 @@ SWEP.AttachmentElements = {
     },
 
     ["receiver_lower"] = {
-        VMBodygroups = {{ind = 8, bg = 1}},
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
+    ["receiver_lower_semi"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
     },
     ["receiver_lower_0"] = {
-        VMBodygroups = {{ind = 8, bg = 0}},
+        VMBodygroups = {{ind = 2, bg = 0}},
     },
     ["receiver_upper_0"] = {
         VMBodygroups = {{ind = 7, bg = 0}},
@@ -320,27 +396,32 @@ SWEP.AttachmentElements = {
 
     ["stock_a3"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 1},
+            {ind = 3, bg = 1},
         },
     },
     ["stock_a3_folded"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 2},
+            {ind = 3, bg = 2},
         },
     },
     ["ur_mp5_stock_remove"] = {
-        VMBodygroups = {{ind = 0, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 10}},
     },
     ["ur_mp5_stock_wood"] = {
-        VMBodygroups = {{ind = 0, bg = 4}},
+        -- VMBodygroups = {{ind = 0, bg = 4}},
+        -- Make this part of the VMSkin
     },
     ["stock_pdw"] = {
-        VMBodygroups = {{ind = 0, bg = 5}},
+        VMBodygroups = {{ind = 3, bg = 3}},
     },
     ["stock_pdw_folded"] = {
-        VMBodygroups = {{ind = 0, bg = 6}},
+        VMBodygroups = {{ind = 3, bg = 4}},
+    },
+    ["stock_future"] = {
+        VMBodygroups = {{ind = 3, bg = 7}},
+    },
+    ["stock_future_folded"] = {
+        VMBodygroups = {{ind = 3, bg = 8}},
     },
 }
 
@@ -352,8 +433,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if ub then
         if atts[2].Installed == "ur_mp5_barrel_sd" then
-            vm:SetBodygroup(6,1)
-            vm:SetBodygroup(5,3)
+          --  vm:SetBodygroup(6,1)
+          --  vm:SetBodygroup(5,3)
         -- elseif !string.StartWith(ub,"ur_mp5_ub_") then
             -- vm:SetBodygroup(6,0)
             -- vm:SetBodygroup(5,1)
@@ -362,9 +443,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         -- vm:SetBodygroup(6,0)
     end
 
-    if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
-        vm:SetBodygroup(0,7)
-    end
+    -- if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
+    --     vm:SetBodygroup(0,7)
+    -- end
 end
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -373,6 +454,11 @@ SWEP.Hook_NameChange = function(wep,name)
     local cal = string.Replace(atts[3].Installed or "default","ur_mp5_caliber_","")
     local stock = string.Replace(atts[7].Installed or "default","ur_mp5_stock_","")
     local fakeNames = !GetConVar("arccw_truenames"):GetBool()
+    local defaultCals = {
+        ["default"] = true,
+        ["noburst"] = true,
+        ["semi"] = true
+    }
 
     local start = "MP5"
     local mid = "A"
@@ -382,19 +468,19 @@ SWEP.Hook_NameChange = function(wep,name)
         mid = "-"
     end
 
-    if atts[12].Installed == "uc_fg_civvy" then
+    if cal == "semi" or atts[12].Installed == "uc_fg_civvy" then
         if fakeNames then
             return "PK5-CIV"
         else
-            if barr == "long" then
+            if barr == "long" or barr == "sd" then
                 start = "HK94" -- I know how prolific civies can get with their gunbuilds, so the nonsensical names will continue
             else
-                return "SP5"
+                return "SP5" .. ((barr == "kurz" and "K") or "")
             end
         end
     end
 
-    if cal ~= "default" and cal ~= "noburst" then
+    if !defaultCals[cal] then
         if barr == "sd" then
             num = "SD"
         else
@@ -404,6 +490,13 @@ SWEP.Hook_NameChange = function(wep,name)
             mid = "/10"
         elseif cal == "40sw" then
             mid = "/40"
+        elseif cal == "22lr" then
+            if barr == "sd" then
+                mid = "SD"
+                num = " .22 LR"
+            else
+                mid = " .22 LR"
+            end
         end
     else
         if barr == "kurz" then
@@ -427,21 +520,17 @@ SWEP.Hook_NameChange = function(wep,name)
             if barr == "sd" then
                 mid = "SD"
             end
-        
-            if cal == "noburst" then
-                if stock == "default" then
-                    num = "2"
-                elseif stock == "a3" then
+
+            if cal == "noburst" or cal == "semi" then
+                if stock == "a3" then
                     num = "3"
                 elseif stock == "none" then
                     num = "1"
+                else
+                    num = "2"
                 end
             else
-                if stock == "default" then
-                    if barr == "sd" then
-                        num = "5"
-                    end
-                elseif stock == "a3" then
+                if stock == "a3" then
                     if barr == "sd" then
                         num = "6"
                     else
@@ -450,6 +539,10 @@ SWEP.Hook_NameChange = function(wep,name)
                 elseif stock == "none" then
                     if barr == "sd" then
                         num = "4"
+                    end
+                else
+                    if barr == "sd" then
+                        num = "5"
                     end
                 end
             end
@@ -594,6 +687,32 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
+    ["reload_empty_kurz"] = {
+        Source = "reload_empty_kurz",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 90 / 30,
+        MinProgress = 2.2,
+        LastClip1OutTime = 1.8,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "chback.ogg",         t = 0.066, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.2, c = ci},
+            {s = common .. "magpouch.ogg", t = 0.4},
+            {s = path .. "magout.ogg",        t = 0.86, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 1.13, c = ci},
+            {s = common .. "magdrop_smg.ogg",  t = 1.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
+            {s = path .. "chamber.ogg",         t = 2.1, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.6},
+        },
+    },
 
     -- 15 Round Reloads --
 
@@ -645,6 +764,32 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
+    ["reload_empty__kurz_15"] = {
+        Source = "reload_empty_kurz",--"reload_empty_15",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 90 / 30,
+        MinProgress = 2.2,
+        LastClip1OutTime = 1.8,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
+            {s = common .. "magpouch.ogg", t = 0.4},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
+            {s = common .. "magdrop_smg.ogg",  t = 1.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.6},
+        },
+    },
 
     -- 40 Round Reloads --
 
@@ -672,6 +817,32 @@ SWEP.Animations = {
     },
     ["reload_empty_40"] = {
         Source = "reload_empty",--"reload_empty_40",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 90 / 30,
+        MinProgress = 2.2,
+        LastClip1OutTime = 1.8,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "chback.ogg",         t = 0.1, c = ci},
+            {s = path .. "chlock.ogg",         t = 0.19, c = ci},
+            {s = common .. "magpouch.ogg", t = 0.4},
+            {s = path .. "magout.ogg",        t = .9, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 1.2, c = ci},
+            {s = common .. "magdrop_smg.ogg",  t = 1.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
+            {s = path .. "chamber.ogg",         t = 2.13, c = ci},
+            {s = common .. "rattle2.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.6},
+        },
+    },
+    ["reload_empty_kurz_40"] = {
+        Source = "reload_empty_kurz",--"reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 90 / 30,
         MinProgress = 2.2,
@@ -755,7 +926,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"}, -- ,"optic"
         Bone = "body",
         Offset = {
-            vpos = Vector(0, -1, 3),
+            vpos = Vector(-0.1, -1.6, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(.9, .9, .9),
@@ -763,7 +934,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "9\" Tropical Barrel",
+        DefaultAttName = "9\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
         Slot = "ur_mp5_barrel",
         Bone = "body",
@@ -785,10 +956,10 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, .75, 14.4),
+            vpos = Vector(0, .25, 14.4),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"barrel_sd","mp5_kurz"}
+        ExcludeFlags = {"barrel_sd"}
     },
     {
         PrintName = "Underbarrel",
@@ -796,7 +967,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","ur_mp5_hg"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, 1.3, 10),
+            vpos = Vector(0, .9, 10),
             vang = Angle(90, 0, -90),
         },
         --VMScale = Vector(.8, .8, .8),
@@ -815,7 +986,7 @@ SWEP.Attachments = {
         VMScale = Vector(.8,.8,.8),
         --InstalledEles = {"ur_mp5_clamp"}
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_kurz"}
+        ExcludeFlags = {"mp5_kurz","hg_surefire"}
     },
     {
         PrintName = "Stock",
