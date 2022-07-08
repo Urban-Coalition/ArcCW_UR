@@ -21,6 +21,7 @@ urban real  renewal
 	- Sounds: 10mm, 40S&W
 	- Att icons
 	- Stuff missing from the remodel:
+		- All textures
 		- Carbine barrel
 		- 40-round mag
 		- Drum mag animations
