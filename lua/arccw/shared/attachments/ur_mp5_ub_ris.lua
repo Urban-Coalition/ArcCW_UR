@@ -8,7 +8,7 @@ att.Desc_Neutrals = {
 att.AutoStats = true
 
 att.Slot = "ur_mp5_hg"
-att.SortOrder = 998
+att.SortOrder = 997
 
 
 att.IgnorePickX = true

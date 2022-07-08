@@ -353,6 +353,9 @@ SWEP.AttachmentElements = {
     ["ur_mp5_ub_classic"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
+    ["ur_mp5_ub_surefire"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+    },
     ["ur_mp5_ub_wood"] = {
         VMBodygroups = {{ind = 4, bg = 3}}, -- insert wood handguard here
     },
@@ -953,7 +956,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, .75, 14.4),
+            vpos = Vector(0, .25, 14.4),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"barrel_sd"}
@@ -983,7 +986,7 @@ SWEP.Attachments = {
         VMScale = Vector(.8,.8,.8),
         --InstalledEles = {"ur_mp5_clamp"}
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_kurz"}
+        ExcludeFlags = {"mp5_kurz","hg_surefire"}
     },
     {
         PrintName = "Stock",
