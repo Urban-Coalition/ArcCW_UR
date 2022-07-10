@@ -13,4 +13,4 @@ att.Mult_SightTime = .95
 att.Mult_Recoil = 1.15
 
 att.ActivateElements = {"ur_mp5_ub_classic"}
-att.ExcludeFlags = {"barrel_sd"}
+att.ExcludeFlags = {"barrel_sd","mp5_kurz"}

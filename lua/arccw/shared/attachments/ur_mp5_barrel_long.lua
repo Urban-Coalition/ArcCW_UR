@@ -17,3 +17,5 @@ att.Mult_Sway = 1.5
 att.Add_BarrelLength = 7
 
 att.Mult_PhysBulletMuzzleVelocity = 1.15
+
+att.Ignore = true

@@ -989,7 +989,7 @@ SWEP.Attachments = {
             vpos = Vector(0, .25, 14.4),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"barrel_sd"}
+        ExcludeFlags = {"barrel_sd","barrel_sword"}
     },
     {
         PrintName = "Handguard",

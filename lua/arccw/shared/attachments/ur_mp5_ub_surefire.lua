@@ -40,4 +40,4 @@ att.ToggleStats = {
 }
 
 att.GivesFlags = {"hg_surefire","mp5_badhg"}
-att.ExcludeFlags = {"barrel_sd"}
+att.ExcludeFlags = {"barrel_sd","mp5_kurz"}
