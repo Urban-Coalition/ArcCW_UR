@@ -12,6 +12,11 @@ att.Slot = "ur_mp5_barrel"
 
 att.SortOrder = 4.5
 
+att.LHIK = true
+
+att.ModelOffset = Vector(6.5, -0.5, -1)
+att.Model = "models/weapons/arccw/atts/lhik_kurz.mdl"
+
 att.Add_BarrelLength = -4
 att.Mult_Sway = .5
 att.Mult_SightTime = .75
