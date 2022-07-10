@@ -56,17 +56,9 @@ $bodygroup "6" {
 	studio "mp5RAIL.smd"
 }
 
-//  				ARC9
-$cdmaterials "models\weapons\arc9\ur_mp5"
-$cdmaterials "models\weapons\arc9\ur_mp5\bocw"
+$cdmaterials "models\weapons\arccw\ur_mp5NEW"
 $cdmaterials "models\weapons\arc9\ud_m16"
 $cdmaterials "models\weapons\arc9\ud_common"
-
-
-// 					ARCCW
-// $cdmaterials "models\weapons/arc9\ur_mp5"
-// $cdmaterials "models\weapons/arc9\ur_mp5\bocw"
-// $cdmaterials "models\weapons/arc9\ud_common"
 
 // $texturegroup "skinfamilies"
 // {
