@@ -1,9 +1,10 @@
 $modelname "weapons/arccw\c_ur_mp5.mdl"
- 
-$bodygroup "iron" { 
-	studio "ironSIGHT.smd"
-}
 
+$bodygroup "0" { 
+	studio "ironSIGHT.smd"
+	blank
+}
+ 
 $bodygroup "1" {
 	studio "mp5UPPER.smd"
 	studio "mp5sdUPPER.smd"
