@@ -333,7 +333,7 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 7},
         },
         AttPosMods = {[4] = {
-            vpos = Vector(0, .75, 10.65),
+            vpos = Vector(-0.1, 0.3, 11.5),
             vang = Angle(90, 0, -90),
         }}
     },
@@ -343,10 +343,6 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 3},
             {ind = 6, bg = 0},
         },
-        AttPosMods = {[4] = {
-            vpos = Vector(0, .75, 18.2),
-            vang = Angle(90, 0, -90),
-        }}
     },
 
     ["ur_mp5_rail_fg"] = {
@@ -986,7 +982,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, .25, 14.4),
+            vpos = Vector(0, 0.3, 14.8),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"barrel_sd","barrel_sword"}
