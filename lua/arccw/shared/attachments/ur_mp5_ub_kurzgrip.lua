@@ -19,7 +19,7 @@ att.SortOrder = 2
 
 att.Mult_Sway = .75
 att.Mult_SightTime = .95
-att.Mult_Recoil = 1.15
+att.Mult_Recoil = .85
 
 att.ActivateElements = {"ur_mp5_ub_kurzgrip"}
 att.GivesFlags = {"mp5_badhg"}

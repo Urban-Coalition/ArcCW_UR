@@ -18,7 +18,7 @@ att.Mult_Sway = .5
 att.Mult_SightTime = .75
 att.Mult_RPM = 1.125
 
-att.Mult_Recoil = 1.15
+att.Mult_Recoil = 1.25
 att.Mult_AccuracyMOA = 3
 att.Mult_Range = .5
 

@@ -10,7 +10,8 @@ att.Slot = "ur_mp5_hg"
 att.SortOrder = 1
 
 att.Mult_SightTime = .90
-att.Mult_Recoil = 1.05
+att.Mult_Recoil = 1.15
+att.Mult_Sway = 1.25
 
 att.ActivateElements = {"ur_mp5_ub_kurzmlok"}
 --att.RequireFlags = {"mp5_kurz"}
