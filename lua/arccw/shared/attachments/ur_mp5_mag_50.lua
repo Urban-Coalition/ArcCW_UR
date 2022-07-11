@@ -25,7 +25,7 @@ att.Override_ClipSize = 50
 
 att.Mult_SightTime = 1.25
 --att.Mult_Recoil = 0.9
-att.Mult_ReloadTime = 1.3
+att.Mult_ReloadTime = 1.15
 att.Mult_SpeedMult = 0.93
 att.Mult_DrawTime = 1.2
 att.Mult_HolsterTime = 1.2
