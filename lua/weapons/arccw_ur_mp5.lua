@@ -433,23 +433,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local atts = wep.Attachments
     local vm = data.vm
 
-    local ub = atts[5].Installed
+    local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
+    local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
 
-    if ub then
-        if atts[2].Installed == "ur_mp5_barrel_sd" then
-          --  vm:SetBodygroup(6,1)
-          --  vm:SetBodygroup(5,3)
-        -- elseif !string.StartWith(ub,"ur_mp5_ub_") then
-            -- vm:SetBodygroup(6,0)
-            -- vm:SetBodygroup(5,1)
+    if hg == "mlok" then
+        if barr == "kurz" then
+            vm:SetBodygroup(4,8)
+        else
+            vm:SetBodygroup(4,5)
         end
-    -- else
-        -- vm:SetBodygroup(6,0)
     end
-
-    -- if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
-    --     vm:SetBodygroup(0,7)
-    -- end
 end
 
 SWEP.Hook_NameChange = function(wep,name)
