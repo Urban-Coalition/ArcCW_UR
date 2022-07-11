@@ -330,21 +330,19 @@ SWEP.AttachmentElements = {
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
             {ind = 1, bg = 2},
-            {ind = 4, bg = 6},
+            {ind = 4, bg = 7},
         },
         AttPosMods = {[4] = {
-            vpos = Vector(0, .75, 10.65),
+            vpos = Vector(-0.1, 0.3, 11.5),
             vang = Angle(90, 0, -90),
         }}
     },
     ["ur_mp5_barrel_swordfish"] = {
         VMBodygroups = {
+            {ind = 0, bg = 1},
             {ind = 1, bg = 3},
+            {ind = 6, bg = 0},
         },
-        AttPosMods = {[4] = {
-            vpos = Vector(0, .75, 18.2),
-            vang = Angle(90, 0, -90),
-        }}
     },
 
     ["ur_mp5_rail_fg"] = {
@@ -355,6 +353,12 @@ SWEP.AttachmentElements = {
     },
     ["ur_mp5_ub_surefire"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
+    },
+    ["ur_mp5_ub_kurzgrip"] = {
+        VMBodygroups = {{ind = 4, bg = 6}},
+    },
+    ["ur_mp5_ub_kurzmlok"] = {
+        VMBodygroups = {{ind = 4, bg = 8}},
     },
     ["ur_mp5_ub_wood"] = {
         VMBodygroups = {{ind = 4, bg = 3}}, -- insert wood handguard here
@@ -429,30 +433,23 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local atts = wep.Attachments
     local vm = data.vm
 
-    local ub = atts[5].Installed
+    local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
+    local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
 
-    if ub then
-        if atts[2].Installed == "ur_mp5_barrel_sd" then
-          --  vm:SetBodygroup(6,1)
-          --  vm:SetBodygroup(5,3)
-        -- elseif !string.StartWith(ub,"ur_mp5_ub_") then
-            -- vm:SetBodygroup(6,0)
-            -- vm:SetBodygroup(5,1)
+    if hg == "mlok" then
+        if barr == "kurz" then
+            vm:SetBodygroup(4,8)
+        else
+            vm:SetBodygroup(4,5)
         end
-    -- else
-        -- vm:SetBodygroup(6,0)
     end
-
-    -- if atts[7].Installed == "ur_mp5_stock_none" and atts[2].Installed == "ur_mp5_barrel_kurz" then
-    --     vm:SetBodygroup(0,7)
-    -- end
 end
 
 SWEP.Hook_NameChange = function(wep,name)
     local atts = wep.Attachments
     local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
     local cal = string.Replace(atts[3].Installed or "default","ur_mp5_caliber_","")
-    local stock = string.Replace(atts[7].Installed or "default","ur_mp5_stock_","")
+    local stock = string.Replace(atts[8].Installed or "default","ur_mp5_stock_","")
     local fakeNames = !GetConVar("arccw_truenames"):GetBool()
     local defaultCals = {
         ["default"] = true,
@@ -713,6 +710,28 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
+    ["reload_kurz"] = {
+        Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 2,
+        MinProgress = 1.2,
+        LastClip1OutTime = 2,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.6,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = common .. "magpouch.ogg", t = 0.05},
+            {s = path .. "magout.ogg",        t = 0.4, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 0.63, c = ci},
+            {s = common .. "magpouchin.ogg", t = 1.25},
+            {s = common .. "rattle2.ogg",  t = 1.55},
+            {s = common .. "shoulder.ogg",  t = 1.5},
+        },
+    },
 
     -- 15 Round Reloads --
 
@@ -870,8 +889,8 @@ SWEP.Animations = {
 
     -- 100 Round Reloads --
 
-    ["reload_50"] = {
-        Source = "reload",--"reload_50",
+    ["reload_drum"] = {
+        Source = "reload_drum",--"reload_50",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 67 / 30,
         MinProgress = 1.6,
@@ -891,8 +910,8 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 1.95},
         },
     },
-    ["reload_empty_50"] = {
-        Source = "reload_empty",--"reload_empty_50",
+    ["reload_empty_drum"] = {
+        Source = "reload_empty_drum",--"reload_empty_50",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 90 / 30,
         MinProgress = 2.4,
@@ -933,8 +952,8 @@ SWEP.Attachments = {
         InstalledEles = {"ur_mp5_rail_optic"}
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "9\" Standard Barrel",
+        PrintName = "Upper Receiver",
+        DefaultAttName = "9\" Standard Upper",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
         Slot = "ur_mp5_barrel",
         Bone = "body",
@@ -944,8 +963,8 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Receiver",
-        DefaultAttName = "Navy Receiver",
+        PrintName = "Lower Receiver",
+        DefaultAttName = "Navy Lower",
         DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips"),
         Slot = "ur_mp5_caliber",
         DefaultEles = {"receiver_lower_0"}
@@ -956,15 +975,25 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, .25, 14.4),
+            vpos = Vector(0, 0.3, 14.8),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"barrel_sd"}
+        ExcludeFlags = {"barrel_sd","barrel_sword"}
+    },
+    {
+        PrintName = "Handguard",
+        DefaultAttName = "Tropical Handguard",
+        Slot = {"ur_mp5_hg"},
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, .9, 10),
+            vang = Angle(90, 0, -90),
+        },
+        --VMScale = Vector(.8, .8, .8),
     },
     {
         PrintName = "Underbarrel",
-        DefaultAttName = "Tropical Handguard",
-        Slot = {"foregrip","ur_mp5_hg"},
+        Slot = {"foregrip"},
         Bone = "body",
         Offset = {
             vpos = Vector(0, .9, 10),
@@ -973,7 +1002,7 @@ SWEP.Attachments = {
         --VMScale = Vector(.8, .8, .8),
         InstalledEles = {"ur_mp5_rail_fg"},
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_kurz"}
+        ExcludeFlags = {"mp5_badhg"}
     },
     {
         PrintName = "Tactical",
@@ -986,7 +1015,6 @@ SWEP.Attachments = {
         VMScale = Vector(.8,.8,.8),
         --InstalledEles = {"ur_mp5_clamp"}
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_kurz","hg_surefire"}
     },
     {
         PrintName = "Stock",

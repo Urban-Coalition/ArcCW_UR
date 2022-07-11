@@ -156,8 +156,8 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.546, 3, 1.09),
-     Ang = Angle(0.6, 0, 0),
+     Pos = Vector(-2.529, 3, 1.305),
+     Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 55,
@@ -263,11 +263,6 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
         },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.546, 10, 1.01),
-            Ang = Angle(0.55, 0, 0),
-            Magnification = 1,
-        }
     },
     ["ur_deagle_barrel_marksman"] = {
         VMBodygroups = {{ind = 1, bg = 3}},
@@ -278,11 +273,6 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
         },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.546, 10, 1.10),
-            Ang = Angle(0.35, 0, 0),
-            Magnification = 1,
-        }
     },
     ["ur_deagle_barrel_annihilator"] = {
         VMBodygroups = {{ind = 1, bg = 6}},
@@ -292,11 +282,6 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
         },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.546, 10, 1.25),
-            Ang = Angle(-0.05, 0, 0),
-            Magnification = 1,
-        }
     },
 
     ["ur_deagle_mag_ext"] = {

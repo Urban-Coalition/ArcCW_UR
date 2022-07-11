@@ -1,9 +1,10 @@
 $modelname "weapons/arccw\c_ur_mp5.mdl"
- 
-$bodygroup "iron" { 
-	studio "ironSIGHT.smd"
-}
 
+$bodygroup "0" { 
+	studio "ironSIGHT.smd"
+	blank
+}
+ 
 $bodygroup "1" {
 	studio "mp5UPPER.smd"
 	studio "mp5sdUPPER.smd"
@@ -55,17 +56,9 @@ $bodygroup "6" {
 	studio "mp5RAIL.smd"
 }
 
-//  				ARC9
-$cdmaterials "models\weapons\arc9\ur_mp5"
-$cdmaterials "models\weapons\arc9\ur_mp5\bocw"
+$cdmaterials "models\weapons\arccw\ur_mp5NEW"
 $cdmaterials "models\weapons\arc9\ud_m16"
 $cdmaterials "models\weapons\arc9\ud_common"
-
-
-// 					ARCCW
-// $cdmaterials "models\weapons/arc9\ur_mp5"
-// $cdmaterials "models\weapons/arc9\ur_mp5\bocw"
-// $cdmaterials "models\weapons/arc9\ud_common"
 
 // $texturegroup "skinfamilies"
 // {
@@ -174,6 +167,22 @@ $sequence "reload_10mm" {
 $sequence "reload_empty_10mm" {
 	"anims\reload_empty_10mm.smd"
 	"anims\reload_empty_iron.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+}
+
+$sequence "reload_drum" {
+	"anims\reload_drum.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+}
+
+$sequence "reload_empty_drum" {
+	"anims\reload_empty_drum.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
