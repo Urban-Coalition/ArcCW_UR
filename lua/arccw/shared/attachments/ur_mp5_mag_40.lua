@@ -31,3 +31,5 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 att.ExcludeFlags = {"ur_mp5_cal_10mm","ur_mp5_cal_40sw"}
+
+att.Ignore = true
