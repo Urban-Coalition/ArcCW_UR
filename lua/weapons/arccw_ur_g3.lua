@@ -168,7 +168,8 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_6"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
-SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
+SWEP.ShellScale = 1.145
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
@@ -224,7 +225,7 @@ SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-7, 4, -4.5),
+    pos = Vector(-5, 3, -5.5),
     ang = Angle(-10, 0, 180)
 }
 
