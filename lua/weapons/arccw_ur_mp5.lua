@@ -896,8 +896,8 @@ SWEP.Animations = {
 
     -- 100 Round Reloads --
 
-    ["reload_50"] = {
-        Source = "reload",--"reload_50",
+    ["reload_drum"] = {
+        Source = "reload_drum",--"reload_50",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 67 / 30,
         MinProgress = 1.6,
@@ -917,8 +917,8 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 1.95},
         },
     },
-    ["reload_empty_50"] = {
-        Source = "reload_empty",--"reload_empty_50",
+    ["reload_empty_drum"] = {
+        Source = "reload_empty_drum",--"reload_empty_50",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 90 / 30,
         MinProgress = 2.4,

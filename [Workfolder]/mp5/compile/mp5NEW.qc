@@ -173,6 +173,22 @@ $sequence "reload_empty_10mm" {
 	snap
 }
 
+$sequence "reload_drum" {
+	"anims\reload_drum.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+}
+
+$sequence "reload_empty_drum" {
+	"anims\reload_empty_drum.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+}
+
 // EMPTY KURZ RELOADS GO HERE C:
 
 $sequence "reload_empty_kurz" {
