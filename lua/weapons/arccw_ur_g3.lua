@@ -27,9 +27,9 @@ SWEP.CamAttachment = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModel = "models/weapons/arccw/c_ur_g3a3.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ur_g3a3.mdl"
+SWEP.ViewModelFOV = 80
 
 SWEP.DefaultBodygroups = "000000000000"
 
@@ -182,8 +182,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.61, -2, 0.45),
-    Ang = Angle(0.60, 0.274, 5.53),
+    Pos = Vector(-2.3, 1, 0.95),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -197,7 +197,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 0, 0)
@@ -304,8 +304,7 @@ SWEP.Animations = {
         },
     },
     ["fire"] = {
-        Source = {"fire"},
-        Time = 0.5,
+        Source = {"fire_01","fire_02","fire_03"},
         ShellEjectAt = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
