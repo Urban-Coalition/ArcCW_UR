@@ -33,6 +33,17 @@ $poseparameter "sights" 0 1 loop 0
 
 $sequence "idle" {
     "anims/idle.smd"
+    "anims/idle.smd"
+	blend "sights" 0 1
+    fadein 0.1
+    fadeout 0.1
+    fps 60
+}
+
+$sequence "idle_cocked" {
+    "anims/idle_cocked.smd"
+    "anims/idle_cocked.smd"
+	blend "sights" 0 1
     fadein 0.1
     fadeout 0.1
     fps 60
@@ -40,6 +51,17 @@ $sequence "idle" {
 
 $sequence "reload" {
     "anims/reload.smd"
+    "anims/reload.smd"
+	blend "sights" 0 1
+    snap
+    snap
+    fps 60
+}
+
+$sequence "reload_cocked" {
+    "anims/reload_cocked.smd"
+    "anims/reload_cocked.smd"
+	blend "sights" 0 1
     snap
     snap
     fps 60
@@ -64,16 +86,52 @@ $sequence "fire" {
 
 $sequence "draw" {
     "anims/draw.smd"
+    "anims/draw.smd"
+	blend "sights" 0 1
+    fps 60
+    snap
+}
+
+$sequence "draw_cocked" {
+    "anims/draw_cocked.smd"
+    "anims/draw_cocked.smd"
+	blend "sights" 0 1
     fps 60
     snap
 }
 
 $sequence "holster" {
     "anims/holster.smd"
+    "anims/holster.smd"
+	blend "sights" 0 1
     fadein 0.2
     fadeout 0.2
     fps 60
 }
+
+$sequence "holster_cocked" {
+    "anims/holster_cocked.smd"
+    "anims/holster_cocked.smd"
+	blend "sights" 0 1
+    fadein 0.2
+    fadeout 0.2
+    fps 60
+}
+
+
+$sequence "cocking" {
+    "anims/cocking.smd"
+    "anims/cocking.smd"
+	blend "sights" 0 1
+    fps 55
+}
+$sequence "decocking" {
+    "anims/decocking.smd"
+    "anims/decocking.smd"
+	blend "sights" 0 1
+    fps 50
+}
+
 
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
