@@ -289,6 +289,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        MinProgress = .4,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
@@ -296,6 +297,7 @@ SWEP.Animations = {
     },
     ["draw_cocked"] = {
         Source = "draw_cocked",
+        MinProgress = .4,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
