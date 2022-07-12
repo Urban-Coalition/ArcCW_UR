@@ -7,7 +7,7 @@ att.Desc_Neutrals = {
 }
 att.AutoStats = true
 
-att.Slot = "optic"
+att.Slot = "optic_mp5"
 att.SortOrder = 9999
 
 att.ActivateElements = {"ur_mp5_precision_irons"}
