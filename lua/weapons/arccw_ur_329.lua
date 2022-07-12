@@ -72,11 +72,11 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 -- Jamming --
 
---SWEP.Malfunction = true
-SWEP.MalfunctionJam = true
+SWEP.Malfunction = false
+SWEP.MalfunctionJam = false
 --SWEP.MalfunctionMean = 21
-SWEP.MalfunctionPostFire = true
-SWEP.MalfunctionTakeRound = false
+-- SWEP.MalfunctionPostFire = true
+-- SWEP.MalfunctionTakeRound = false
 
 -- Mag size --
 
@@ -106,13 +106,13 @@ SWEP.Firemodes = {
         Mode = 1,
         PrintName = "ur.329.dact",
     },
---    {
---        Mode = 1,
---        PrintName = "ur.329.sact",
---        Override_ManualAction = true,
---        Mult_AccuracyMOA = .75,
---        Override_TriggerDelay = false,
---    },
+   {
+       Mode = 1,
+       PrintName = "ur.329.sact",
+       Override_ManualAction = true,
+       Mult_AccuracyMOA = .75,
+       Override_TriggerDelay = false,
+   },
     {
         Mode = 0,
         PrintName = "fcg.safe2",
@@ -272,13 +272,30 @@ SWEP.AttachmentElements = {
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 SWEP.RevolverReload = true
 
+SWEP.Hook_TranslateAnimation = function(wep,anim)
+    if wep:GetCurrentFiremode().Override_ManualAction and anim ~= "fire" then
+        return anim .. "_cocked"
+    end
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 3,
     },
+    ["idle_cocked"] = {
+        Source = "idle_cocked",
+        Time = 3,
+    },
     ["draw"] = {
         Source = "draw",
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    ["draw_cocked"] = {
+        Source = "draw_cocked",
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
@@ -291,12 +308,20 @@ SWEP.Animations = {
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
+    ["holster_cocked"] = {
+        Source = "holster_cocked",
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
+    },
 
     ["fire"] = {
         Source = "fire",
         SoundTable = {
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
+        MinProgress = .3,
     },
 
     ["trigger"] = {
@@ -307,8 +332,59 @@ SWEP.Animations = {
         },
     },
 
+    ["cycle"] = {
+        Source = "cocking",
+        SoundTable = {
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+        }
+    },
+
+    ["1_to_2"] = {
+        Source = "cocking",
+        SoundTable = {
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+        }
+    },
+    ["2_to_1"] = {
+        Source = "decocking",
+        SoundTable = {
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+        }
+    },
+    ["2_to_3"] = {
+        Source = "decocking",
+        SoundTable = {
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+        }
+    },
+
     ["reload"] = {
         Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.9,
+        ShellEjectAt = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.6,
+        LHIKOut = 0.62,
+        SoundTable = {
+            { s = rottle, t = 0 },
+            { s = path .. "cyl_latch.ogg", t = 0.1 },
+            { s = path1 .. "cylinder_out.ogg", t = 0.2 },
+            { s = path1 .. "extractor1.ogg", t = 0.65 },
+            { s = path1 .. "extract1.ogg", t = 0.65, p = 110, v = 0.25 },
+            { s = path1 .. "extractor2.ogg", t = 0.75, p = 110 },
+            { s = path1 .. "cylinder_extract.ogg", t = 0.75 },
+            { s = path1 .. "extractor2.ogg", t = 0.825 },
+            { s = common .. "magpouch_pull_small.ogg", t = 1.2, v = 0.2 },
+            { s = path1 .. "speedloader.ogg", t = 1.9 },
+            { s = path1 .. "cylinder_in.ogg", t = 2.4 },
+            { s = rottle, t = 2.4 },
+        },
+    },
+    ["reload_cocked"] = {
+        Source = "reload_cocked",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.9,
         ShellEjectAt = 1,
