@@ -20,7 +20,7 @@ L["ur.mp5.sd"] = "No distant firing sound"
 
 L["ur.spas12.pump"] = "Manual action only"
 L["ur.spas12.dbl"] = "2-round burst"
-L["ur.spas12.dbl.abbrev"] = "2BST"
+L["ur.spas12.dbl.abbrev"] = "2-BST"
 L["ur.spas12.folded"] = "Cannot use optics or iron sights"
 
 L["ur.329.sact"] = "Single-action"
