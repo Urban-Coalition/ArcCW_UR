@@ -3,6 +3,7 @@ $modelname "weapons/arccw\c_ur_mp5.mdl"
 $bodygroup "0" { 
 	studio "ironSIGHT.smd"
 	blank
+	studio "altSIGHT.smd"
 }
  
 $bodygroup "1" {

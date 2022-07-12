@@ -427,6 +427,12 @@ SWEP.AttachmentElements = {
     ["stock_future_folded"] = {
         VMBodygroups = {{ind = 3, bg = 8}},
     },
+    ["ur_mp5_precision_irons"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 2},
+            {ind = 6, bg = 0},
+            },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
