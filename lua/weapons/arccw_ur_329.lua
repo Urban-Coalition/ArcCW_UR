@@ -323,7 +323,7 @@ SWEP.Animations = {
         },
         MinProgress = .3,
     },
-    ["dryfire"] = {
+    ["fire_dry"] = {
         Source = "dryfire",
         SoundTable = {
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
