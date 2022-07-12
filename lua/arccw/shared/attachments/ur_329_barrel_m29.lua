@@ -1,5 +1,5 @@
 att.PrintName = "6\" Model 29 Barrel"
-att.AbbrevName = "6\" Extended Barrel"
+att.AbbrevName = "6\" Full-Size Barrel"
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "6\" Thunderbolt Barrel"
 end
