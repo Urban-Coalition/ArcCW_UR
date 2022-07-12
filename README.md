@@ -11,7 +11,7 @@ urban real  renewal
 	- Dong grip normal rework
 	- Some att icons
 - M1911:
-	- Suppressed sounds
+	- Suppressed sounds for all caliber conversions
 	- Att icons
 - SPAS-12:
 	- Comp rear sight texture
@@ -20,14 +20,25 @@ urban real  renewal
 - MP5:
 	- Sounds: 10mm, 40S&W
 	- Att icons
+	- VMT improvements
 	- Stuff missing from the remodel:
-		- All textures
 		- Carbine barrel
 		- 40-round mag
-		- Drum mag animations
+		- Drum mag animation sounds
 		- Wooden handguard and stock
 - PM:
 	- Holster sounds
+	- Textures for conversions
 	- we need to decide what we want from this gun in the first place
 - AWP: .338 suppressed sound
-- DB, G3, M29: everything
+- M29:
+	- Fire/trigger + fire/cock anim blending
+	- Grip atts
+	- Caliber att balance
+	- Holster sounds
+	- Third person anim state
+- G3:
+	- Textures
+	- Atts
+	- Anims: Wet reload, jam clear, draw/holster
+- DB: just get a new fucking model at this point
