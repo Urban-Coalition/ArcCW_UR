@@ -344,8 +344,8 @@ SWEP.Animations = {
         LastClip1OutTime = 50/30,
         SoundTable = {
             {s = rottle,  t = 0.0},
-            {s = path .. "chback.ogg", t = 8/30},
-            {s = path .. "chlock.ogg", t = 15/30},
+            {s = path .. "chbackold.ogg", t = 8/30},
+            {s = path .. "chlockold.ogg", t = 12/30},
             {s = ratel,  t = 23/30},
             {s = rottle,  t = 23/30},
             {s = path .. "magrel.ogg", t = 32/30},
@@ -358,6 +358,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg", t = 66/30},
             {s = rottle,  t = 75/30},
             {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
             {s = common .. "grab.ogg", t = 92/30},
             {s = common .. "shoulder.ogg", t = 93/30},
         },
