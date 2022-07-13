@@ -4,21 +4,21 @@
 	"$bumpmap" 					"models\weapons\arccw\ur_mp5NEW\topmounts_n"	
 	"$phongexponenttexture"		"models\weapons\arccw\ur_mp5NEW\topmounts_m"
 
-	"$color2" "[0.85 0.85 0.85]"
+	"$color2" "[1.15 1.15 1.15]"
 
 	"$normalmapalphaenvmapmask" 	"1"
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
-	"$phongexponentfactor"		"1"
 	"$phong" 		"1"
-	"$phongboost" "0.5"
-	"$phongalbedotint" 			"0"
-	"$phongfresnelranges" "[1 1 1]"
+	"$phongboost" "15"
+	"$phongalbedotint" 			"1"
+	"$phongfresnelranges" "[0.5 0.5 0.5]"
 	"$halflambert" "1"
 
 	"$envmap" "env_cubemap"
-	"$envmapfresnel" 			"1"
-	"$envmapFresnelMinMaxExp" "[0 5 .4]"
-	"$envmaptint"	"[0.32 0.30 0.33]"
+	"$envmapfresnel" 			"2"
+	"$envmaptint"	"[0.23 0.23 0.23]"
 
-	// "$nocull" "1"
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimmask" "1"
 }

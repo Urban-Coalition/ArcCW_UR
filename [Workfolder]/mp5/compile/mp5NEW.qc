@@ -57,6 +57,11 @@ $bodygroup "6" {
 	studio "mp5RAIL.smd"
 }
 
+$bodygroup "boolet" {
+	studio "boolet.smd"
+	studio "boolet4drum.smd"
+}
+
 $cdmaterials "models\weapons\arccw\ur_mp5NEW"
 $cdmaterials "models\weapons\arccw\ud_m16\scalerworks"
 $cdmaterials "models\weapons\arc9\ud_common"
@@ -250,6 +255,10 @@ $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
+
+$bonemerge "bullet1"
+$bonemerge "bullet2"
+$bonemerge "bullet3"
 
 $collisionmodel "mp5_col.smd"
 {
