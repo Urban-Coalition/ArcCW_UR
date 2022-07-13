@@ -2,7 +2,7 @@ $modelname "weapons/arccw\c_ur_mp5.mdl"
 
 $bodygroup "0" { 
 	studio "ironSIGHT.smd"
-	blank
+	studio "scalarSIGHT.smd"
 	studio "altSIGHT.smd"
 }
  
@@ -58,7 +58,7 @@ $bodygroup "6" {
 }
 
 $cdmaterials "models\weapons\arccw\ur_mp5NEW"
-$cdmaterials "models\weapons\arc9\ud_m16"
+$cdmaterials "models\weapons\arccw\ud_m16\scalerworks"
 $cdmaterials "models\weapons\arc9\ud_common"
 
 // $texturegroup "skinfamilies"

@@ -19,9 +19,9 @@ att.Add_BarrelLength = 3
 
 att.Mult_PhysBulletMuzzleVelocity = 1.15
 
-att.Override_IronSightStruct = { // this does nothing on my end SOMEHOW, sorry - talon
-     Pos = Vector(-3.043, -5.95, 0.782),
-     Ang = Angle(-0.3, -0.53, 4.148),
+att.Override_IronSightStruct = { 
+     Pos = Vector(-2.97, -5.8, -0.18),
+     Ang = Angle(-0.5, -0.55, 5.148),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 74,
