@@ -19,5 +19,13 @@ att.Add_BarrelLength = 3
 
 att.Mult_PhysBulletMuzzleVelocity = 1.15
 
+att.Override_IronSightStruct = { // this does nothing on my end SOMEHOW, sorry - talon
+     Pos = Vector(-3.043, -5.95, 0.782),
+     Ang = Angle(-0.3, -0.53, 4.148),
+     Magnification = 1,
+     SwitchToSound = "",
+     ViewModelFOV = 74,
+} 
+
 att.ActivateElements = {"ur_mp5_barrel_swordfish"}
 att.GivesFlags = {"barrel_sword"}
