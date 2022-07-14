@@ -1062,7 +1062,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
+        Slot = {"charm", "fml_charm", "mp5_charm"},
         FreeSlot = true,
         Bone = "Body",
         Offset = {

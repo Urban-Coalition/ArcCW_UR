@@ -7,7 +7,7 @@ att.Desc_Neutrals = {
 }
 att.AutoStats = true
 
-att.Slot = "charm"
+att.Slot = "mp5_charm"
 att.SortOrder = 9999
 
 att.ActivateElements = {"ur_mp5_rail_optic"}
