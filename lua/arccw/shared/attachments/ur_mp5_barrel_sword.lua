@@ -1,7 +1,7 @@
 att.PrintName = "12\" Swordfish Upper"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_long.png", "smooth mips")
-att.Description = "A fictional upper receiver that provides superior recoil control through precise placement of weights at the end of the SMG. Naturally, handling drastically suffers as a result, and the specially designed barrel shroud prevents usage of muzzle attachments."
+att.Description = "Experimental upper receiver that provides superior recoil control through precise placement of weights at the end of the SMG. Naturally, handling drastically suffers as a result, and the specially designed barrel shroud prevents usage of muzzle attachments."
 att.Desc_Cons = {
     "uc.nomuzzle"
 }

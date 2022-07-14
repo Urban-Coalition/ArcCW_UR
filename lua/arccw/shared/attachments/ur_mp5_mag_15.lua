@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "PK5 15-Round Flush Mag"
 end
 
-att.SortOrder = 20
+att.SortOrder = 30
 att.Icon = Material("entities/att/acwatt_ur_mp5_mag_15.png", "smooth mips")
 att.Description = "Low-capacity magazine. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {

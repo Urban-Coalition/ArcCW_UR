@@ -1,7 +1,7 @@
 att.PrintName = "VFG-K Handguard"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_classic.png", "smooth mips")
-att.Description = "The classic handguard for the Kurz variant, featuring a stubby foregrip and handstop that make the shortened SMG much more comfortable - and safe - to use."
+att.Description = "The iconic handguard for the Kurz machine pistol variant, featuring a stubby foregrip and handstop that make the shortened SMG much more comfortable and controllable."
 att.Desc_Cons = {
     "uc.noubs"
 }

@@ -6,9 +6,9 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 
-att.SortOrder = 50
+att.SortOrder = 10
 att.Icon = Material("entities/att/acwatt_ur_mp5_mag_50.png", "smooth mips")
-att.Description = "Drum magazine for the MP5. Compact and reliable as far as drum magazines come, but still prone to jamming and ergonomics problems."
+att.Description = "Drum magazine with a 50-round capacity. Compact and reliable as far as drum magazines come, but still prone to jamming and ergonomics problems."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
