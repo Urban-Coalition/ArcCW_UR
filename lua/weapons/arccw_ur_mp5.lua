@@ -354,6 +354,9 @@ SWEP.AttachmentElements = {
     ["ur_mp5_ub_surefire"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
     },
+    ["ur_mp5_ub_surelock"] = {
+        VMBodygroups = {{ind = 4, bg = 2}},
+    },
     ["ur_mp5_ub_kurzgrip"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
     },

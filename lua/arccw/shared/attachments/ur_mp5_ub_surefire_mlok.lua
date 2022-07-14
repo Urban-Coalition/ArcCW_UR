@@ -1,7 +1,7 @@
-att.PrintName = "Surefire Handguard"
+att.PrintName = "Sherlock Handguard"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_ris.png", "smooth mips")
-att.Description = "Alternative handguard with an integrated flashlight."
+att.Description = "Alternative handguard with an integrated flashlight and M-LOK pattern attachment points.\n\nFunctionally and statistically identical to the Surefire Handguard."
 att.Desc_Pros = {
     "uc.light"
 }
@@ -39,5 +39,6 @@ att.ToggleStats = {
     }
 }
 
+att.ActivateElements = {"ur_mp5_ub_surelock"}
 att.GivesFlags = {"hg_surefire","mp5_badhg"} -- badhg flag is temporary until underbarrel rail model is implemented (it disables use of underbarrel atts)
 att.ExcludeFlags = {"barrel_sd","mp5_kurz"}
