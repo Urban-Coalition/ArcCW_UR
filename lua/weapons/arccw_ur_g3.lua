@@ -201,8 +201,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(0, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(0.5, 1, 0.5)
+SWEP.SprintAng = Angle(-8.5, 15, -10)
 
 SWEP.CrouchPos = Vector(-2, -2, -0.6)
 SWEP.CrouchAng = Angle(0, 0, -14)
