@@ -300,8 +300,8 @@ SWEP.Animations = {
         ShellEjectAt = 0.1,
         MinProgress = .5,
         SoundTable = {
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 },
             {s = path .. "mech.ogg", t = 0},
-            {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
             {s = path .. "forearm_forward.ogg", t = 0.2}, -- Not temporary
         },
