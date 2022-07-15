@@ -11,7 +11,7 @@ att.Slot = "ur_mp5_barrel"
 
 att.SortOrder = 13
 
-att.Mult_Recoil = 0.85
+att.Mult_Recoil = 0.7
 
 att.Mult_SightTime = 1.25
 att.Mult_Sway = 1.5
