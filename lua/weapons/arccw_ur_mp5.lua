@@ -339,7 +339,7 @@ SWEP.AttachmentElements = {
     },
     ["ur_mp5_barrel_swordfish"] = {
         VMBodygroups = {
-            {ind = 0, bg = 1},
+            --{ind = 0, bg = 1},
             {ind = 1, bg = 3},
             {ind = 6, bg = 0},
         },
@@ -451,6 +451,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         else
             vm:SetBodygroup(4,5)
         end
+    end
+
+    if barr == "sword" then
+        vm:SetBodygroup(0,(atts[1].Installed and 0) or 1)
     end
 end
 
