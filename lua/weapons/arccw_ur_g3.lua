@@ -35,11 +35,11 @@ SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 55 -- 2 shot close range kill
-SWEP.DamageMin = 34 -- 3 shot long range kill
-SWEP.RangeMin = 30
-SWEP.Range = 300 -- 3 shot until ~170m
-SWEP.Penetration = 16
+SWEP.Damage = 75
+SWEP.DamageMin = 40
+SWEP.RangeMin = 50
+SWEP.Range = 400
+SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 715
