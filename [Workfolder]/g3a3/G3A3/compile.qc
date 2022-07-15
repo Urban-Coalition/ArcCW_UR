@@ -41,6 +41,15 @@ $sequence "idle" {
     fps 30
 }
 
+$sequence "reload" {
+    "anims/reload.smd"
+    "anims/reload_iron.smd"
+	blend "sights" 0 1
+    snap
+    fps 30
+}
+
+
 $sequence "reload_empty" {
     "anims/reload_empty.smd"
     "anims/reload_empty_iron.smd"
