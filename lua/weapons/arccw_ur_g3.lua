@@ -242,6 +242,8 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount_optic"},
         ExtraSightDist = 5,
+        CorrectivePos = Vector(0, 0, -0.0),
+        CorrectiveAng = Angle(0, 0.3, 0.45),
     },
     {
         PrintName = "Barrel",
