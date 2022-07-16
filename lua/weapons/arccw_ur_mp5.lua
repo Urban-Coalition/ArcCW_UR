@@ -454,7 +454,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     if barr == "sword" then
-        vm:SetBodygroup(0,(atts[1].Installed and 0) or 1)
+        vm:SetBodygroup(0,(atts[1].Installed and 3) or 1)
     end
 end
 

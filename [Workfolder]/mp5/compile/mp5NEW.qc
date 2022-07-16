@@ -4,6 +4,7 @@ $bodygroup "0" {
 	studio "ironSIGHT.smd"
 	studio "scalarSIGHT.smd"
 	studio "altSIGHT.smd"
+	blank
 }
  
 $bodygroup "1" {
