@@ -190,11 +190,19 @@ SWEP.BarrelOffsetHip = Vector(3, 0, -4.5)
 local path1 = ")^weapons/arccw_ud/870/"
 local path = ")^weapons/arccw_ur/spas12/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 --[[SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg"}
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = common .. "manual_trigger.ogg"
+
+SWEP.ShootSound = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
 SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-01.ogg",
     path .. "fire-dist-02.ogg",
@@ -279,13 +287,13 @@ SWEP.Animations = {
         Source = "fire_semi",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_2bst"] = {
         Source = "fire_semi",
         Time = 35 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
         MinProgress = 0.4
     },
     ["fire_manual"] = { -- No bolt cycling
@@ -300,8 +308,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.1,
         MinProgress = .5,
         SoundTable = {
-            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg"}, t = 0 },
-            {s = path .. "mech.ogg", t = 0},
+            {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
             {s = path .. "forearm_forward.ogg", t = 0.2}, -- Not temporary
         },
@@ -312,7 +319,6 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         MinProgress = .25,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0},
             {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
             {s = path .. "forearm_forward.ogg", t = 0.2}, -- Not temporary
@@ -410,7 +416,6 @@ SWEP.Animations = {
         ShellEjectAt = .1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0},
             {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
             {s = rottle, t = .2},
@@ -434,7 +439,6 @@ SWEP.Animations = {
         ShellEjectAt = .1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0},
             {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
             {s = rottle, t = .2},
