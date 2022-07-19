@@ -318,8 +318,8 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [6] = {
-                vpos = Vector(-1, 0.81, 12),
-                vang = Angle(90, 0, 180),
+                vpos = Vector(0, 0.9, 10),
+                vang = Angle(90, 0, -90),
             },
             [5] = {
                 vpos = Vector(-0.2, 1.6, 10),
@@ -1015,7 +1015,8 @@ SWEP.Attachments = {
         --VMScale = Vector(.8, .8, .8),
         InstalledEles = {"ur_mp5_rail_fg"},
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_badhg"}
+        ExcludeFlags = {"mp5_badhg"},
+		MergeSlots = {15},
     },
     {
         PrintName = "Tactical",
@@ -1074,6 +1075,16 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+	{
+		PrintName = "M203 slot",
+		Slot = "ubgl",
+		Bone = "Body",
+		Offset = {
+			vpos = Vector(0, 0.2, 7.9),
+			vang = Angle(90, 0, -90),
+		},
+		Hidden = true,
+	}
 }
 
 -- SWEP.AttachmentOverrides = {
