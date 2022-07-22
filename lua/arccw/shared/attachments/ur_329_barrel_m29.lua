@@ -9,11 +9,11 @@ att.Slot = "ur_329_barrel"
 att.AutoStats = true
 att.SortOrder = 6
 
-att.Mult_AccuracyMOA = 0.8
-att.Mult_Range = 1.25
+att.Mult_AccuracyMOA = 0.7
+att.Mult_Range = 1.5
 att.Mult_Recoil = 0.9
-att.Mult_SightTime = 1.1
-att.Mult_Sway = 1.15
+att.Mult_SightTime = 1.3
+att.Mult_Sway = 1.3
 att.Mult_HipDispersion = 1.1
 
 att.Add_BarrelLength = 4
