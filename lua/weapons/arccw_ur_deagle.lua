@@ -389,24 +389,24 @@ SWEP.Animations = {
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
             { s = path .. "rack1.ogg", t = 10 / 60, c = ca },
-            { s = path .. "rack2.ogg", t = 25 / 60, c = ca },
+            { s = path .. "chamber.ogg", t = 20 / 60, c = ca },
         },
     },
     ["draw"] = {
-        Source = "idle",
+        Source = "draw",
         ProcDraw = true,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
-    --[[["holster"] = {
-        Source = "idle",
+    ["holster"] = {
+        Source = "holster",
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
-    },]]
+    },
 
     ["fire"] = {
         Source = {"fire_01", "fire_02", "fire_03"},
