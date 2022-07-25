@@ -6,5 +6,5 @@ att.AutoStats = true
 att.Slot = "ur_m1911_grip"
 
 att.Mult_Sway = 0.85
-att.Mult_DrawTime = 1.15
-att.Mult_HolsterTime = 1.15
+att.Mult_DrawTime = 1.2
+att.Mult_HolsterTime = 1.2
