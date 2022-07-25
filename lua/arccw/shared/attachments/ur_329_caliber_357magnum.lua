@@ -1,6 +1,6 @@
 att.PrintName = "Model 329PD .357 Magnum"
 att.AbbrevName = ".357 Magnum"
-att.Icon = Material("entities/att/acwatt_uc_cal_44magnum.png","smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_cal_357magnum.png","smooth mips")
 att.Description = "A smaller caliber that's easier on the wrists. Sporting more manageable recoil, at the cost of raw damage."
 
 if !GetConVar("arccw_truenames"):GetBool() then
