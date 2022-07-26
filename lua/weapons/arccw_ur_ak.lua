@@ -765,7 +765,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 24.6, 2.7),
             vang = Angle(0, 270, 0),
         },
-        ExcludeFlags = {"ur_ak_nomuzzle"}
+        ExcludeFlags = {"ur_ak_nomuzzle"},
+        Installed = "ur_ak_muzzle_akm"
     },
     {
         PrintName = "Receiver",
