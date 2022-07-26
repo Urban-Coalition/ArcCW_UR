@@ -815,14 +815,14 @@ SWEP.Attachments = {
         PrintName = "Grip Type",
         Slot = {"ur_ak_grip"},
         DefaultAttName = "Factory Grip",
-        DefaultAttIcon = Material("entities/att/ur_ak/grip_3.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_ak/grip_modern.png", "mips smooth"),
         ExcludeFlags = {"stock_vepr"},
     },
     {
         PrintName = "Stock",
         Slot = {"ur_ak_stock"},
         DefaultAttName = "Factory Stock",
-        DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_ak/stock/n.png", "mips smooth"),
     },
     {
         PrintName = "Ammo Type",
