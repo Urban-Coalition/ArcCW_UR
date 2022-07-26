@@ -990,7 +990,7 @@ SWEP.Hook_NameChange = function(wep,name)
     end
 
     if cal == "545" then
-        if hg == "74m" or hg == "rpk74m" then
+        if hg == "74m" or hg == "rpk74m" or hg == "ak12" then
             noN = true
             post = "-74M"
         elseif shortBarrs[barr] then
