@@ -895,9 +895,9 @@ SWEP.Hook_NameChange = function(wep,name)
 
     local atts = wep.Attachments
     local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
-    local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
-    local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
-    local upper = atts[10].Installed
+    local cal = string.Replace(atts[5].Installed or "762", "ur_ak_cal_", "")
+    local stock = string.Replace(atts[10].Installed or "default", "ur_ak_stock_", "")
+    local upper = atts[11].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
     local ak12 = alpha and barr == "ak12"
 
