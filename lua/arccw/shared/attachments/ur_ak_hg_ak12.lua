@@ -4,7 +4,7 @@ att.Description = "The most recent handguard module for the AK platform, with po
 att.Slot = {"ur_ak_hg"}
 att.AutoStats = true
 
-att.Desc_Neutrals = {"ur.ak.userail"}
+--att.Desc_Neutrals = {"ur.ak.userail"}
 att.SortOrder = 16
 
 att.Mult_Sway = .9

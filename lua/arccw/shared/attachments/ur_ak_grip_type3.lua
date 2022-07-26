@@ -1,4 +1,4 @@
-att.PrintName = "Modernized Grip"
+att.PrintName = "Vintage Grip"
 att.Icon = Material("entities/att/ur_ak/grip_modern.png", "mips smooth")
 att.Description = "Redesigned pistol grip, carved into a more ergonomic shape with grooves for a more comfortable grip."
 att.AutoStats = true

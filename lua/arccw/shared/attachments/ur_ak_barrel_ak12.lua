@@ -4,7 +4,8 @@ att.Description = "The most recent barrel design for the AK platform. Also equip
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {
-    "uc.cosmetic"
+    "uc.cosmetic",
+    "ur.ak.userail"
 }
 att.Slot = "ur_ak_barrel"
 
@@ -12,4 +13,4 @@ att.SortOrder = 20
 
 att.ActivateElements = {"barrel_ak12","sight_ak12"}
 
-att.Ignore = true
+--att.Ignore = true

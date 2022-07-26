@@ -1,4 +1,4 @@
-att.PrintName = "Modernized Handguard"
+att.PrintName = "Type 3 Handguard"
 att.Icon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth") -- todo
 att.Description = "Enhanced wood handguard with protrusions for increased grip surface."
 att.Slot = {"ur_ak_hg"}

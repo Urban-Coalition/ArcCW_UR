@@ -1,5 +1,5 @@
-att.PrintName = "AKN Pattern Straight Stock"
-att.AbbrevName = "Straight Stock"
+att.PrintName = "Slanted Stock"
+att.AbbrevName = "Slanted Stock"
 att.Icon = Material("entities/att/ur_ak/stock/n.png", "mips smooth")
 att.Description = "A straight, hollow mass-manufacturing stock that eases handling. The heightened cheek rest also allows for better accuracy."
 att.Slot = {"ur_ak_stock"}

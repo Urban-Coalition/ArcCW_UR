@@ -37,7 +37,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.ViewModelFOV = 70
 
-SWEP.DefaultBodygroups = "000000000000"
+SWEP.DefaultBodygroups = "010000800120"
 
 -- Damage --
 
@@ -236,7 +236,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 11}}
     },
     ["barrel_akm"] = {
-        VMBodygroups = {{ind = 1, bg = 1}}
+        VMBodygroups = {{ind = 1, bg = 0}}
     },
     ["barrel_alpha"] = {
         VMBodygroups = {
@@ -512,7 +512,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 5}}
     },
     ["stock_akn"] = {
-        VMBodygroups = {{ind = 6, bg = 8}}
+        VMBodygroups = {{ind = 6, bg = 0}}
     },
     ["stock_skeletal"] = {
         VMBodygroups = {
@@ -562,7 +562,7 @@ SWEP.AttachmentElements = {
     },
 
     ["grip_akm"] = {
-        VMBodygroups = {{ind = 9, bg = 1}}
+        VMBodygroups = {{ind = 9, bg = 0}}
     },
     ["grip_alpha"] = {
         VMBodygroups = {{ind = 9, bg = 2}}
@@ -572,7 +572,7 @@ SWEP.AttachmentElements = {
     },
 
     ["cover_ribbed"] = {
-        VMBodygroups = {{ind = 10, bg = 2}}
+        VMBodygroups = {{ind = 10, bg = 0}}
     },
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
@@ -634,7 +634,12 @@ SWEP.AttachmentElements = {
             vpos = Vector(0, 23.5, 2.9),
             vang = Angle(0, 270, 0),
         }},
-        RequireFlags = {"cover_rail"},
+        Override_IronSightStruct = {
+            Pos = Vector(-2.68, 0, 1.3),
+            Ang = Angle(-2.02, 0.028, 5.53),
+            Magnification = 1,
+        }
+        --RequireFlags = {"cover_rail"},
     },
     ["muzzle_ak12"] = {
         VMBodygroups = {{ind = 8, bg = 2}},
@@ -748,7 +753,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Handguard",
-        DefaultAttName = "Type 3 Handguard",
+        DefaultAttName = "Factory Handguard",
         DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
         Slot = "ur_ak_hg",
         ExcludeFlags = {"barrel_carbine"},
@@ -813,14 +818,14 @@ SWEP.Attachments = {
     {
         PrintName = "Grip Type",
         Slot = {"ur_ak_grip"},
-        DefaultAttName = "Type 3 Grip",
+        DefaultAttName = "Factory Grip",
         DefaultAttIcon = Material("entities/att/ur_ak/grip_3.png", "mips smooth"),
         ExcludeFlags = {"stock_vepr"},
     },
     {
         PrintName = "Stock",
         Slot = {"ur_ak_stock"},
-        DefaultAttName = "Type 3 Stock",
+        DefaultAttName = "Factory Stock",
         DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
     },
     {
@@ -846,7 +851,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Dust Cover",
-        DefaultAttName = "Smooth Dust Cover",
+        DefaultAttName = "Ribbed Dust Cover",
         DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
         Slot = {"ur_ak_cover"},
         FreeSlot = true,
