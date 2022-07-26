@@ -296,9 +296,14 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, 15.4, 2.85),
                 vang = Angle(0, 270, 0),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0,11,1.7),
                 vang = Angle(90, -90, -90),
+            },
+            [8] = {
+                vpos = Vector(-0.8, 11.75, 2.9),
+                vang = Angle(-90, 270, 0),
+                wang = Angle(-90, 270, 0),
             }
         },
         Override_IronSightStruct = {
@@ -319,11 +324,11 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, 17.2, 2.85),
                 vang = Angle(0, 270, 0),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0,11,1.7),
                 vang = Angle(90, -90, -90),
             },
-            [7] = {
+            [8] = {
                 vpos = Vector(-0.8, 11.75, 2.9),
                 vang = Angle(-90, 270, 0),
                 wang = Angle(-90, 270, 0),
@@ -610,12 +615,12 @@ SWEP.AttachmentElements = {
             vang = Angle(90, -90, -90),
         }}]]
         AttPosMods = {
-            [7] = {
+            [8] = {
                 vpos = Vector(-0.7, 13.5, 3.8),
                 vang = Angle(-90, 270, 0),
                 wang = Angle(-90, 270, 0),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0, 11.75, 2.2),
                 vang = Angle(90, -90, -90),
             }
@@ -678,7 +683,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
 
     local optic = wep.Attachments[1].Installed
-    local hg = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
+    local hg = string.Replace(wep.Attachments[3].Installed or "default","ur_ak_hg_","")
     local ub = wep.Attachments[7].Installed
     local upper = wep.Attachments[15].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
@@ -697,7 +702,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    if ub and ub ~= "ur_ak_barrel_dong" then
+    if ub and hg ~= "ur_ak_hg_dong" then
         if railHgs[hg] then
             vm:SetBodygroup(1,13)
         elseif polRailHgs[hg] then
