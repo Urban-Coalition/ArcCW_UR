@@ -12,4 +12,4 @@ att.Mult_ShootSpeedMult = 1.1
 att.Mult_Recoil = 1.1
 
 att.GivesFlags = {"ak_railedguard","nodong"}
-att.ActivateElements = {"barrel_ak12", "handguard_ak12", "sight_ak12"}
+att.ActivateElements = {"handguard_ak12", "sight_ak12"}

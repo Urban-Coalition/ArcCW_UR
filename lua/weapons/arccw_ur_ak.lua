@@ -602,10 +602,6 @@ SWEP.AttachmentElements = {
     },
     ["stock_ak12"] = {
         VMBodygroups = {{ind = 6, bg = 11}},
-        -- VMElements = {Offset = {
-        --     pos = Vector(0,-2,0),
-        --     ang = Vector(0,0,0)
-        -- }} -- BREAKS THE WHOLE FUCKING RENDER SYSTEM
     },
     ["handguard_ak12"] = {
         VMBodygroups = {{ind = 1, bg = 12}},
