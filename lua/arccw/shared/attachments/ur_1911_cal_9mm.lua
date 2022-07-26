@@ -37,15 +37,20 @@ att.Mult_ClipSize = 9 / 7
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
 att.Override_ShellScale = 1
 
-att.Hook_GetShootSound = function(wep, sound)
+local path = ")^weapons/arccw_ur/1911/"
+
+att.Hook_GetShootSound = function(wep, sound) -- Temporary
     if wep:GetBuff_Override("Silencer") then
         return "weapons/arccw_ud/glock/fire_supp.ogg"
     else
-        return "weapons/arccw_ud/glock/fire.ogg"
+        return {path .. "fire-9-01.ogg", path .. "fire-9-02.ogg", path .. "fire-9-03.ogg", path .. "fire-9-04.ogg", path .. "fire-9-05.ogg", path .. "fire-9-06.ogg"}
     end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire.ogg" end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        return -- fallback to script
+    else
+        return {path .. "fire-9-dist-01.ogg", path .. "fire-9-dist-02.ogg", path .. "fire-9-dist-03.ogg", path .. "fire-9-dist-04.ogg", path .. "fire-9-dist-05.ogg", path .. "fire-9-dist-06.ogg"}
+    end
 end

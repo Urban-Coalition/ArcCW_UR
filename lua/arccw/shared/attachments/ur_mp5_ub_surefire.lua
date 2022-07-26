@@ -39,5 +39,5 @@ att.ToggleStats = {
     }
 }
 
-att.GivesFlags = {"hg_surefire"}
-att.ExcludeFlags = {"barrel_sd"}
+att.GivesFlags = {"hg_surefire","mp5_badhg"} -- badhg flag is temporary until underbarrel rail model is implemented (it disables use of underbarrel atts)
+att.ExcludeFlags = {"barrel_sd","mp5_kurz"}

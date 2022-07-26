@@ -27,19 +27,19 @@ SWEP.CamAttachment = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModel = "models/weapons/arccw/c_ur_g3a3.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ur_g3a3.mdl"
+SWEP.ViewModelFOV = 80
 
 SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 55 -- 2 shot close range kill
-SWEP.DamageMin = 34 -- 3 shot long range kill
-SWEP.RangeMin = 30
-SWEP.Range = 300 -- 3 shot until ~170m
-SWEP.Penetration = 16
+SWEP.Damage = 75
+SWEP.DamageMin = 40
+SWEP.RangeMin = 50
+SWEP.Range = 400
+SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 715
@@ -135,9 +135,16 @@ SWEP.ShootSound = {
     path .. "fire-05.ogg",
     path .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = path .. "fire_sup_1.ogg", path .. "fire_sup_2.ogg", path .. "fire_sup_3.ogg" -- Temporary
+SWEP.ShootSoundSilenced = {
+    path .. "fire-sup-01.ogg",
+    path .. "fire-sup-02.ogg",
+    path .. "fire-sup-03.ogg",
+    path .. "fire-sup-04.ogg",
+    path .. "fire-sup-05.ogg",
+    path .. "fire-sup-06.ogg"
+}
 SWEP.DistantShootSound = nil
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
@@ -168,7 +175,8 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_6"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
-SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
+SWEP.ShellScale = 1.145
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
@@ -182,8 +190,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.61, -2, 0.45),
-    Ang = Angle(0.60, 0.274, 5.53),
+    Pos = Vector(-2.3, 1, 0.95),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -197,11 +205,11 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(0.5, 1, 0.5)
+SWEP.SprintAng = Angle(-8.5, 15, -10)
 
 SWEP.CrouchPos = Vector(-2, -2, -0.6)
 SWEP.CrouchAng = Angle(0, 0, -14)
@@ -224,13 +232,73 @@ SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-7, 4, -4.5),
+    pos = Vector(-5, 3, -5.5),
     ang = Angle(-10, 0, 180)
 }
 
 SWEP.MirrorVMWM = true
 
 SWEP.Attachments = {
+    {
+        PrintName = "Optic",
+        Slot = "optic",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, -1.2, -1.5),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"mount_optic"},
+        ExtraSightDist = 5,
+        CorrectivePos = Vector(0, 0, -0.0),
+        CorrectiveAng = Angle(0, 0.3, 0.45),
+    },
+    {
+        PrintName = "Barrel",
+        Slot = "ur_g3_barrel",
+        DefaultAttName = "18\" Standard Barrel",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
+    },
+    {
+        PrintName = "Muzzle",
+        Slot = "muzzle",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, 0.15, 21.7),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
+        PrintName = "Underbarrel",
+        Slot = "foregrip",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, 1.1, 9),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"mount_underbarrel"},
+    },
+    {
+        PrintName = "Tactical",
+        Slot = "tac",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(-0.6, -0.8, 10.5),
+            vang = Angle(90, 0, -180),
+        },
+        InstalledEles = {"mount_tactical"},
+    },
+    {
+        PrintName = "Stock",
+        Slot = "ur_g3_stock",
+        DefaultAttName = "!! G3SG1 Stock !!",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
+    },
+    {
+        PrintName = "Magazine",
+        Slot = "ur_g3_mag",
+        DefaultAttName = "20-Round Mag",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+    },
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
@@ -304,35 +372,33 @@ SWEP.Animations = {
         },
     },
     ["fire"] = {
-        Source = {"fire"},
-        Time = 0.5,
+        Source = {"fire_01","fire_02","fire_03"},
         ShellEjectAt = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
-    ["reload"] = {
-        Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.3,
-        LHIKOut = 0.65,
-        LHIKEaseOut = 0.25,
-        MinProgress = 1.3,
-        SoundTable = {
+   ["reload"] = {
+       Source = "reload",
+       TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+       LHIK = true,
+       LHIKIn = 0.3,
+       LHIKOut = 0.65,
+       LHIKEaseOut = 0.25,
+       MinProgress = 1.3,
+       SoundTable = {
             {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
+            {s = ratel, t = 3/30},
+            {s = path .. "magout.ogg", 	 t = 11/30},
+            {s = common .. "magpouch.ogg", t = 26/30},
             {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.95},
+            {s = path .. "struggle.ogg", t = 39/30},
+            {s = path .. "magin.ogg", t = 44/30},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
-            {s = path .. "scrape.ogg",    t = 1.35},
-            {s = common .. "magpouchin.ogg", t = 1.35},
-            {s = common .. "shoulder.ogg", t = 2.05},
-            {s = common .. "grab.ogg", t = 2.1},
-        },
-    },
+            {s = common .. "grab.ogg", t = 56/30},
+            {s = common .. "shoulder.ogg", t = 61/30},
+       },
+   },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -341,23 +407,26 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LHIKEaseOut = 0.25,
         MinProgress = 2.1,
-        LastClip1OutTime = 2,
+        LastClip1OutTime = 50/30,
         SoundTable = {
             {s = rottle,  t = 0.0},
-            {s = common .. "magpouch.ogg", t = 0.1},
-            {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.45},
-            {s = path .. "bonk.ogg", 	 t = 0.5},
-            {s = ratel, t = 0.5},
-            {s = rottle,  t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.97},
-            {s = ratel, t = 1.1},
-            {s = common .. "rifle_magdrop.ogg", t = 1.15},
-            {s = rottle,  t = 1.15},
-            {s = path .. "chback.ogg",    t = 1.9},
-            {s = path .. "chamber.ogg",    t = 2.0},
-            {s = common .. "grab.ogg", t = 2.4},
-            {s = common .. "shoulder.ogg", t = 2.5},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 57/30},
+            {s = path .. "magin.ogg", t = 62/30},
+            {s = rottle,  t = 75/30},
+            {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
+            {s = common .. "grab.ogg", t = 92/30},
+            {s = common .. "shoulder.ogg", t = 93/30},
         },
     },
     ["unjam"] = {

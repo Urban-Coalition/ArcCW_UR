@@ -374,8 +374,10 @@ SWEP.Animations = {
     --     },]]
     -- },
     ["draw"] = {
-        Source = "idle",
-        ProcDraw = true,
+        Source = "draw",
+        Time = .75,
+        MinProgress = .4,
+        --ProcDraw = true,
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
@@ -383,8 +385,10 @@ SWEP.Animations = {
         },
     },
     ["draw_empty"] = {
-        Source = "idle_empty",
-        ProcDraw = true,
+        Source = "draw_empty",
+        Time = .75,
+        MinProgress = .4,
+        --ProcDraw = true,
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
@@ -392,7 +396,15 @@ SWEP.Animations = {
         },
     },
     ["holster"] = {
-        Source = "idle",
+        Source = "holster",
+        Time = .75,
+        SoundTable = {
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = .75,
         SoundTable = {
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
@@ -408,7 +420,11 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 24 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {
+            {s = rottle, t = 0},
+            { s = path .. "mech_last.ogg", t = 0 },
+            { s = path .. "dryfire.ogg", t = 0.1 }
+        },
     },
 
     -- 7-R Reloads --

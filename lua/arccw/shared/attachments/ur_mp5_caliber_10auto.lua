@@ -31,11 +31,21 @@ att.Mult_MalfunctionMean = 0.75
 --att.Mult_ClipSize = 0.9
 att.Override_ShellScale = 1.1
 
-att.Hook_GetShootSound = function(wep, sound)
+local path = ")^weapons/arccw_ur/1911/"
+
+att.Hook_GetShootSound = function(wep, sound) -- Temporary
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_10.ogg" -- Placeholder
+        return "weapons/arccw_ud/glock/fire_supp.ogg"
     else
-        return "weapons/arccw_ud/glock/fire_10.ogg" -- Not Placeholder
+        return {path .. "fire-10-01.ogg", path .. "fire-10-02.ogg", path .. "fire-10-03.ogg", path .. "fire-10-04.ogg", path .. "fire-10-05.ogg", path .. "fire-10-06.ogg"}
+    end
+end
+
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        return -- fallback to script
+    else
+        return {path .. "fire-10-dist-01.ogg", path .. "fire-10-dist-02.ogg", path .. "fire-10-dist-03.ogg", path .. "fire-10-dist-04.ogg", path .. "fire-10-dist-05.ogg", path .. "fire-10-dist-06.ogg"}
     end
 end
 
