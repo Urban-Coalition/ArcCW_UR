@@ -244,13 +244,6 @@ SWEP.AttachmentElements = {
             -- {ind = 7, bg = 6},
             -- {ind = 8, bg = 2},
         },
-        AttPosMods = {
-            [7] = {
-                vpos = Vector(-1, 14.75, 2.8),
-                vang = Angle(-90, 270, 0),
-                wang = Angle(-90, 270, 0),
-            }
-        },
     },
     ["barrel_rpk"] = {
         VMBodygroups = {
