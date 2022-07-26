@@ -12,7 +12,7 @@ att.SortOrder = 16
 
 att.Mult_SightedSpeedMult = .95
 
-att.ToggleLockDefault = true
+--att.ToggleLockDefault = true
 att.ToggleStats = {
     {
         PrintName = "Extended",
