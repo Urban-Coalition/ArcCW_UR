@@ -891,6 +891,7 @@ SWEP.Hook_NameChange = function(wep,name)
 
     local atts = wep.Attachments
     local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
+    local hg = string.Replace(atts[3].Installed or "default", "ur_ak_hg_", "")
     local cal = string.Replace(atts[5].Installed or "762", "ur_ak_cal_", "")
     local stock = string.Replace(atts[10].Installed or "default", "ur_ak_stock_", "")
     local upper = atts[11].Installed
@@ -989,7 +990,7 @@ SWEP.Hook_NameChange = function(wep,name)
     end
 
     if cal == "545" then
-        if barr == "74m" or barr == "rpk74m" then
+        if hg == "74m" or hg == "rpk74m" then
             noN = true
             post = "-74M"
         elseif shortBarrs[barr] then
