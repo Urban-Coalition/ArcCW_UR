@@ -656,6 +656,7 @@ SWEP.AttachmentElements = {
             Ang = Angle(-1.12, 0.116, 5.53),
             Magnification = 1,
         },
+        Override_IronSightStruct_Priority = 2,
     },
     ["mag_545_ak12"] = {
         VMBodygroups = {{ind = 2, bg = 7}}
