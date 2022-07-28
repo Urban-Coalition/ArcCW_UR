@@ -5,6 +5,6 @@ att.Description = "Aftermarket grip with finger grooves and a pleasant rosewood 
 att.AutoStats = true
 att.Slot = "ur_m1911_grip"
 
-att.Mult_Sway = 0.85
-att.Mult_DrawTime = 1.15
-att.Mult_HolsterTime = 1.15
+att.Mult_Sway = 1.2
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
