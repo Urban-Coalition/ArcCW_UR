@@ -13,7 +13,7 @@ att.Slot = "ur_329_caliber"
 att.Mult_Damage = 0.817
 att.Mult_RangeMin = 1.85
 att.Mult_Recoil = 1.3333
-att.Override_PhysBulletMuzzleVelocity = 750
+att.Override_PhysBulletMuzzleVelocity = 230
 -- att.Override_MuzzleEffect = nil -- I think we should have a cool ass muzzle flash because its blackpowder
 
 att.Override_Trivia_Calibre = ".44 Russian" -- nothing efficient about it strings are not objects
