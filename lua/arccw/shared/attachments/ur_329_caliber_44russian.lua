@@ -1,7 +1,7 @@
 att.PrintName = "Model 329PD .44 Russian"
 att.AbbrevName = ".44 Russian"
 att.Icon = Material("entities/att/acwatt_uc_cal_44magnum.png","smooth mips")
-att.Description = "something about.. BLACK POWDER??? that sounds cool as fuck"
+att.Description = "A black-powder center-fire metallic revolver cartridge, lower overall damage but performs better at range."
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Enforcement .44 Russian"
@@ -10,9 +10,11 @@ end
 att.AutoStats = true
 att.Slot = "ur_329_caliber"
 
-att.Mult_Recoil = 1.5
-
-att.Mult_ShootSpeedMult = 0.8
+att.Mult_Damage = 0.817
+att.Mult_RangeMin = 1.85
+att.Mult_Recoil = 1.3333
+att.Override_PhysBulletMuzzleVelocity = 750
+-- att.Override_MuzzleEffect = nil -- I think we should have a cool ass muzzle flash because its blackpowder
 
 att.Override_Trivia_Calibre = ".44 Russian" -- nothing efficient about it strings are not objects
 
