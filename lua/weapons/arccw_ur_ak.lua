@@ -771,7 +771,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip","ubgl","ur_ak_ub"},
+        Slot = {"foregrip","ur_ak_ub"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(0,12, 1.9),
@@ -784,6 +784,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"ak_noubs"},
+		MergeSlots = {16},
     },
     {
         PrintName = "Tactical",
@@ -847,7 +848,16 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
     },
-
+	{
+		PrintName = "M203 slot",
+		Slot = "uc_ubgl",
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(0,12, 1.9),
+            vang = Angle(90, -90, -90),
+        },
+		Hidden = true,
+	}
 }
 
 function SWEP:Hook_TranslateAnimation(anim)
