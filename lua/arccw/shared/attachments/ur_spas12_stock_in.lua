@@ -41,7 +41,7 @@ att.Hook_TranslateAnimation = function(wep,anim)
     end
 end
 
-att.Override_ActivePos = Vector(0.5, 5, 0)
+att.Override_ActivePos = Vector(-1, 0, -1)
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"
 
