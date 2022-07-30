@@ -101,6 +101,7 @@ SWEP.TriggerDelay = true
 
 SWEP.Delay = 60 / 160
 SWEP.Num = 1
+SWEP.FiremodeSound = false
 SWEP.Firemodes = {
     {
         Mode = 1,
@@ -110,7 +111,9 @@ SWEP.Firemodes = {
        Mode = 1,
        PrintName = "ur.329.sact",
        Override_ManualAction = true,
-       Mult_AccuracyMOA = .75,
+       Mult_AccuracyMOA = 0.75,
+       Mult_MoveDispersion = 0.5,
+       Mult_ShootSpeedMult = 1.2,
        Override_TriggerDelay = false,
    },
     {
@@ -136,7 +139,7 @@ SWEP.NPCWeight = 70
 
 SWEP.AccuracyMOA = 2
 SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 300
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "357"

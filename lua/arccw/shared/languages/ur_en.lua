@@ -27,3 +27,6 @@ L["ur.329.sact"] = "Single-action"
 L["ur.329.sact.abbrev"] = "SACT"
 L["ur.329.dact"] = "Double-action"
 L["ur.329.dact.abbrev"] = "DACT"
+
+L["ur.329.snakeshot.1"] = "Fires 4 pellets instead of one round"
+L["ur.329.snakeshot.2"] = "65MOA Imprecision"
