@@ -704,6 +704,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -3.7, 7),
             vang = Angle(90, 0, -90),
         },
+        MergeSlots = {15},
     },
     {
         PrintName = "Magazine",
@@ -766,4 +767,14 @@ SWEP.Attachments = {
         DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
         FreeSlot = true,
     },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0, -4.8, 6.5),
+            vang = Angle(90, 0, -90),
+        },
+        Hidden = true,
+    }
 }

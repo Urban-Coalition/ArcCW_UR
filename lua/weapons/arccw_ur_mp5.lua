@@ -656,8 +656,8 @@ SWEP.Animations = {
         MinProgress = 1.2,
         LastClip1OutTime = 2,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
@@ -697,6 +697,28 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
+    ["reload_kurz"] = {
+        Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        -- Time = 2,
+        MinProgress = 1.2,
+        LastClip1OutTime = 2,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.6,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = common .. "magpouch.ogg", t = 0.05},
+            {s = path .. "magout.ogg",        t = 0.4, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
+            {s = path .. "magin.ogg",         t = 0.63, c = ci},
+            {s = common .. "magpouchin.ogg", t = 1.25},
+            {s = common .. "rattle2.ogg",  t = 1.55},
+            {s = common .. "shoulder.ogg",  t = 1.5},
+        },
+    },
     ["reload_empty_kurz"] = {
         Source = "reload_empty_kurz",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
@@ -723,28 +745,6 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
-    ["reload_kurz"] = {
-        Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        -- Time = 2,
-        MinProgress = 1.2,
-        LastClip1OutTime = 2,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
-        SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = common .. "magpouch.ogg", t = 0.05},
-            {s = path .. "magout.ogg",        t = 0.4, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
-            {s = path .. "magin.ogg",         t = 0.63, c = ci},
-            {s = common .. "magpouchin.ogg", t = 1.25},
-            {s = common .. "rattle2.ogg",  t = 1.55},
-            {s = common .. "shoulder.ogg",  t = 1.5},
-        },
-    },
 
     -- 15 Round Reloads --
 
@@ -755,8 +755,8 @@ SWEP.Animations = {
         MinProgress = 1.2,
         LastClip1OutTime = 67 / 30,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
@@ -796,7 +796,7 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
-    ["reload_empty__kurz_15"] = {
+    ["reload_empty_kurz_15"] = {
         Source = "reload_empty_kurz",--"reload_empty_15",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         -- Time = 90 / 30,
@@ -1077,7 +1077,7 @@ SWEP.Attachments = {
     },
 	{
 		PrintName = "M203 slot",
-		Slot = "ubgl",
+		Slot = "uc_ubgl",
 		Bone = "Body",
 		Offset = {
 			vpos = Vector(0, 0.2, 7.9),

@@ -12,6 +12,7 @@ att.Slot = "ur_329_caliber"
 
 att.Mult_RangeMin = 1.85
 att.Mult_Recoil = 1.5
+att.Mult_Penetration = 1.25
 att.Override_PhysBulletMuzzleVelocity = 265
 
 att.Override_Trivia_Calibre = ".44 Super"
