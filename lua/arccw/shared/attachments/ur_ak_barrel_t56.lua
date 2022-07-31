@@ -12,7 +12,7 @@ att.SortOrder = 16
 
 att.Mult_SightedSpeedMult = .95
 
-att.ToggleLockDefault = true
+--att.ToggleLockDefault = true
 att.ToggleStats = {
     {
         PrintName = "Extended",
@@ -21,7 +21,7 @@ att.ToggleStats = {
         Add_MeleeRange = 16,
         Mult_MeleeDamage = 3,
         Mult_MeleeWaitTime = 2,
-        Add_BarrelLength = 3,
+        Add_BarrelLength = 10,
         Mult_Sway = 1.2,
         -- Override_BashPreparePos = Vector(4, -5, -1.8),
         -- Override_BashPrepareAng = Angle(-15, -5, -5),

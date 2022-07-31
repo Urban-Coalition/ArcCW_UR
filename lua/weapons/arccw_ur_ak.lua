@@ -37,7 +37,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.ViewModelFOV = 70
 
-SWEP.DefaultBodygroups = "000000000000"
+SWEP.DefaultBodygroups = "010000800120"
 
 -- Damage --
 
@@ -236,7 +236,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 11}}
     },
     ["barrel_akm"] = {
-        VMBodygroups = {{ind = 1, bg = 1}}
+        VMBodygroups = {{ind = 1, bg = 0}}
     },
     ["barrel_alpha"] = {
         VMBodygroups = {
@@ -244,20 +244,13 @@ SWEP.AttachmentElements = {
             -- {ind = 7, bg = 6},
             -- {ind = 8, bg = 2},
         },
-        AttPosMods = {
-            [7] = {
-                vpos = Vector(-1, 14.75, 2.8),
-                vang = Angle(-90, 270, 0),
-                wang = Angle(-90, 270, 0),
-            }
-        },
     },
     ["barrel_rpk"] = {
         VMBodygroups = {
             {ind = 7, bg = 1},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {[4] = {
             vpos = Vector(0, 32.2, 2.6),
             vang = Angle(0, 270, 0),
         }},
@@ -273,7 +266,7 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 1},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {[4] = {
             vpos = Vector(0, 32.2, 2.6),
             vang = Angle(0, 270, 0),
         }},
@@ -292,13 +285,18 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 1}
         },
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(0, 15.4, 2.85),
                 vang = Angle(0, 270, 0),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0,11,1.7),
                 vang = Angle(90, -90, -90),
+            },
+            [8] = {
+                vpos = Vector(-0.8, 11.75, 2.9),
+                vang = Angle(-90, 270, 0),
+                wang = Angle(-90, 270, 0),
             }
         },
         Override_IronSightStruct = {
@@ -315,15 +313,15 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 1}
         },
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(0, 17.2, 2.85),
                 vang = Angle(0, 270, 0),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0,11,1.7),
                 vang = Angle(90, -90, -90),
             },
-            [7] = {
+            [8] = {
                 vpos = Vector(-0.8, 11.75, 2.9),
                 vang = Angle(-90, 270, 0),
                 wang = Angle(-90, 270, 0),
@@ -363,11 +361,11 @@ SWEP.AttachmentElements = {
     },
     ["barrel_vepr"] = {
         VMBodygroups = {
-            {ind = 1, bg = 9},
+            --{ind = 1, bg = 9},
             {ind = 7, bg = 4},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {[4] = {
             vpos = Vector(0, 28.5, 2.7),
             vang = Angle(0, 270, -0),
         }},
@@ -377,14 +375,21 @@ SWEP.AttachmentElements = {
             Magnification = 1,
         }
     },
+
+    ["ur_ak_hg_vepr"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 9},
+        },
+    },
+
     ["barrel_105"] = {
         VMBodygroups = {
-            {ind = 1, bg = 3},
+            --{ind = 1, bg = 3},
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
-            vpos = Vector(0, 20.6, 2.65),
+        AttPosMods = {[4] = {
+            vpos = Vector(0, 20.6, 2.7),
             vang = Angle(0, 270, 0),
         }},
         Override_IronSightStruct = {
@@ -395,12 +400,12 @@ SWEP.AttachmentElements = {
     },
     ["barrel_105_alpha"] = {
         VMBodygroups = {
-            {ind = 1, bg = 7},
+            --{ind = 1, bg = 7},
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(0, 20.6, 2.65),
                 vang = Angle(0, 270, 0),
             },
@@ -422,7 +427,7 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {[4] = {
             vpos = Vector(0, 20.6, 2.65),
             vang = Angle(0, 270, 0),
         }},
@@ -438,7 +443,7 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 2},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
+        AttPosMods = {[4] = {
             vpos = Vector(0, 20, 2.65),
             vang = Angle(0, 270, 0),
         }},
@@ -505,7 +510,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 5}}
     },
     ["stock_akn"] = {
-        VMBodygroups = {{ind = 6, bg = 8}}
+        VMBodygroups = {{ind = 6, bg = 0}}
     },
     ["stock_skeletal"] = {
         VMBodygroups = {
@@ -555,7 +560,7 @@ SWEP.AttachmentElements = {
     },
 
     ["grip_akm"] = {
-        VMBodygroups = {{ind = 9, bg = 1}}
+        VMBodygroups = {{ind = 9, bg = 0}}
     },
     ["grip_alpha"] = {
         VMBodygroups = {{ind = 9, bg = 2}}
@@ -565,7 +570,7 @@ SWEP.AttachmentElements = {
     },
 
     ["cover_ribbed"] = {
-        VMBodygroups = {{ind = 10, bg = 2}}
+        VMBodygroups = {{ind = 10, bg = 0}}
     },
     ["cover_alpha"] = {
         VMBodygroups = {{ind = 10, bg = 1}},
@@ -595,10 +600,6 @@ SWEP.AttachmentElements = {
     },
     ["stock_ak12"] = {
         VMBodygroups = {{ind = 6, bg = 11}},
-        -- VMElements = {Offset = {
-        --     pos = Vector(0,-2,0),
-        --     ang = Vector(0,0,0)
-        -- }} -- BREAKS THE WHOLE FUCKING RENDER SYSTEM
     },
     ["handguard_ak12"] = {
         VMBodygroups = {{ind = 1, bg = 12}},
@@ -607,12 +608,12 @@ SWEP.AttachmentElements = {
             vang = Angle(90, -90, -90),
         }}]]
         AttPosMods = {
-            [7] = {
+            [8] = {
                 vpos = Vector(-0.7, 13.5, 3.8),
                 vang = Angle(-90, 270, 0),
                 wang = Angle(-90, 270, 0),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0, 11.75, 2.2),
                 vang = Angle(90, -90, -90),
             }
@@ -623,11 +624,16 @@ SWEP.AttachmentElements = {
             {ind = 7, bg = 6},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {[3] = {
-            vpos = Vector(0, 23.5, 2.9),
+        AttPosMods = {[4] = {
+            vpos = Vector(0, 23.5, 2.8),
             vang = Angle(0, 270, 0),
         }},
-        RequireFlags = {"cover_rail"},
+        Override_IronSightStruct = {
+            Pos = Vector(-2.68, 0, 1.3),
+            Ang = Angle(-2.02, 0.028, 5.53),
+            Magnification = 1,
+        }
+        --RequireFlags = {"cover_rail"},
     },
     ["muzzle_ak12"] = {
         VMBodygroups = {{ind = 8, bg = 2}},
@@ -643,6 +649,7 @@ SWEP.AttachmentElements = {
             Ang = Angle(-1.12, 0.116, 5.53),
             Magnification = 1,
         },
+        Override_IronSightStruct_Priority = 2,
     },
     ["mag_545_ak12"] = {
         VMBodygroups = {{ind = 2, bg = 7}}
@@ -670,11 +677,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
 
     local optic = wep.Attachments[1].Installed
-    local hg = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
-    local ub = wep.Attachments[6].Installed
-    local upper = wep.Attachments[10].Installed
+    local hg = string.Replace(wep.Attachments[3].Installed or "default","ur_ak_hg_","")
+    local ub = wep.Attachments[7].Installed
+    local upper = wep.Attachments[15].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
-    local taclaser = (wep.Attachments[15].Installed == "ur_ak_charm_tl")
+    local taclaser = (wep.Attachments[16].Installed == "ur_ak_charm_tl")
 
     local vm = data.vm
     if !IsValid(vm) then return end
@@ -689,7 +696,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    if ub and ub ~= "ur_ak_barrel_dong" then
+    if ub and hg ~= "ur_ak_hg_dong" then
         if railHgs[hg] then
             vm:SetBodygroup(1,13)
         elseif polRailHgs[hg] then
@@ -740,6 +747,13 @@ SWEP.Attachments = {
         Slot = "ur_ak_barrel",
     },
     {
+        PrintName = "Handguard",
+        DefaultAttName = "Factory Handguard",
+        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
+        Slot = "ur_ak_hg",
+        ExcludeFlags = {"barrel_carbine"},
+    },
+    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_ak_muzzle"},
@@ -750,7 +764,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 24.6, 2.7),
             vang = Angle(0, 270, 0),
         },
-        ExcludeFlags = {"ur_ak_nomuzzle"}
+        ExcludeFlags = {"ur_ak_nomuzzle"},
+        Installed = "ur_ak_muzzle_akm"
     },
     {
         PrintName = "Receiver",
@@ -800,22 +815,15 @@ SWEP.Attachments = {
     {
         PrintName = "Grip Type",
         Slot = {"ur_ak_grip"},
-        DefaultAttName = "Type 3 Grip",
-        DefaultAttIcon = Material("entities/att/ur_ak/grip_3.png", "mips smooth"),
+        DefaultAttName = "Factory Grip",
+        DefaultAttIcon = Material("entities/att/ur_ak/grip_modern.png", "mips smooth"),
         ExcludeFlags = {"stock_vepr"},
     },
     {
         PrintName = "Stock",
         Slot = {"ur_ak_stock"},
-        DefaultAttName = "Type 3 Stock",
-        DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
-    },
-    {
-        PrintName = "Dust Cover",
-        DefaultAttName = "Smooth Dust Cover",
-        DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
-        Slot = {"ur_ak_cover"},
-        FreeSlot = true,
+        DefaultAttName = "Factory Stock",
+        DefaultAttIcon = Material("entities/att/ur_ak/stock/n.png", "mips smooth"),
     },
     {
         PrintName = "Ammo Type",
@@ -837,6 +845,13 @@ SWEP.Attachments = {
         PrintName = "Internals",
         Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
+    },
+    {
+        PrintName = "Dust Cover",
+        DefaultAttName = "Ribbed Dust Cover",
+        DefaultAttIcon = Material("entities/att/ur_ak/dustcover_stock.png", "mips smooth"),
+        Slot = {"ur_ak_cover"},
+        FreeSlot = true,
     },
     {
         PrintName = "Charm",
@@ -886,9 +901,10 @@ SWEP.Hook_NameChange = function(wep,name)
 
     local atts = wep.Attachments
     local barr = string.Replace(atts[2].Installed or "default", "ur_ak_barrel_", "")
-    local cal = string.Replace(atts[4].Installed or "762", "ur_ak_cal_", "")
-    local stock = string.Replace(atts[9].Installed or "default", "ur_ak_stock_", "")
-    local upper = atts[10].Installed
+    local hg = string.Replace(atts[3].Installed or "default", "ur_ak_hg_", "")
+    local cal = string.Replace(atts[5].Installed or "762", "ur_ak_cal_", "")
+    local stock = string.Replace(atts[10].Installed or "default", "ur_ak_stock_", "")
+    local upper = atts[11].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
     local ak12 = alpha and barr == "ak12"
 
@@ -984,7 +1000,7 @@ SWEP.Hook_NameChange = function(wep,name)
     end
 
     if cal == "545" then
-        if barr == "74m" or barr == "rpk74m" then
+        if hg == "74m" or hg == "rpk74m" or hg == "ak12" then
             noN = true
             post = "-74M"
         elseif shortBarrs[barr] then

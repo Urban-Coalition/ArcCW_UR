@@ -1,7 +1,7 @@
-att.PrintName = "16\" Polymer Barrel"
+att.PrintName = "Polymer Handguard"
 att.Icon = Material("entities/att/ur_ak/barrel/poly.png", "mips smooth")
 att.Description = "Light polymer handguard with superior agility, but higher recoil from the reduced counterweight."
-att.Slot = {"ur_ak_barrel"}
+att.Slot = {"ur_ak_hg"}
 att.AutoStats = true
 
 att.SortOrder = 16
@@ -25,5 +25,3 @@ att.ToggleStats = {
         ActivateElements = {"barrel_74m_green"},
     },
 }
-
-att.GivesFlags = {"nodong"}

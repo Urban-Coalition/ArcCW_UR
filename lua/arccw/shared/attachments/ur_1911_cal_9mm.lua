@@ -31,7 +31,7 @@ att.Mult_ReloadTime = .9
 att.Mult_Recoil = 0.85
 att.Mult_RecoilSide = 0.75
 
-att.Mult_PhysBulletMuzzleVelocity = 1.25 -- 310 / 253
+att.Mult_PhysBulletMuzzleVelocity = 1.4 -- 350 / 253
 
 att.Mult_ClipSize = 9 / 7
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"

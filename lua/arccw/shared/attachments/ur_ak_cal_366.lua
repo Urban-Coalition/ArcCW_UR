@@ -1,8 +1,8 @@
-att.PrintName = "Vepr .366 TKM Receiver"
+att.PrintName = "VPO-209 .366 TKM Receiver"
 att.AbbrevName = ".366 TKM Receiver"
 
 att.Icon = Material("entities/att/ur_ak/recievers/366.png", "mips smooth")
-att.Description = "Hunting round based on 7.62x39mm, with stronger ranged ballistics than the parent cartridge. Weapons chambered for it are exclusively produced for the civilian market, and are therefore semi-automatic only."
+att.Description = "Hunting round based on 7.62x39mm, with more powerful ranged ballistics than the parent cartridge. Weapons chambered for it are exclusively produced for the Russian civilian market, and are therefore semi-automatic only."
 
 att.Desc_Pros = {
 }

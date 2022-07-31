@@ -11,7 +11,7 @@ L["ur.ak.tl.1"] = "Mount tactical lasers on a rail adapter instead of the handgu
 L["ur.ak.tl.2"] = "The sight is changed to a point shooting stance."
 L["ur.ak.burst"] = "Two-round burst mode"
 
-L["ur.ak.userail"] = "Use a railed dust cover for an AK-12 barrel with modern iron sights."
+L["ur.ak.userail"] = "Use a railed dust cover for a modern rear sight aperture."
 
 L["ur.aw.velocity"] = "Increased muzzle velocity"
 
@@ -27,3 +27,6 @@ L["ur.329.sact"] = "Single-action"
 L["ur.329.sact.abbrev"] = "SACT"
 L["ur.329.dact"] = "Double-action"
 L["ur.329.dact.abbrev"] = "DACT"
+
+L["ur.329.snakeshot.1"] = "Fires 4 pellets instead of one round"
+L["ur.329.snakeshot.2"] = "65MOA Imprecision"
