@@ -799,7 +799,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"ak_noubs"},
-		--MergeSlots = {16},
+        MergeSlots = {17},
     },
     {
         PrintName = "Tactical",
