@@ -20,8 +20,8 @@ att.Add_BarrelLength = 3
 att.Mult_PhysBulletMuzzleVelocity = 1.15
 
 att.Override_IronSightStruct = { 
-     Pos = Vector(-2.97, -5.8, -0.18),
-     Ang = Angle(-0.5, -0.55, 5.148),
+     Pos = Vector(-3.17, -4, -0.22),
+     Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 74,
