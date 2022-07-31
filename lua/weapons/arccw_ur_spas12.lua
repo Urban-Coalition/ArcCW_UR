@@ -230,7 +230,7 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.Hook_TranslateAnimation = function(wep,anim)
     if wep:GetCurrentFiremode().Override_ManualAction and anim == "idle_empty" then
@@ -266,22 +266,22 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         --Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw", -- draw_empty
         --Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["holster"] = {
         Source = "holster",
         --Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster", -- holster_empty
         --Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["fire"] = {
         Source = "fire_semi",

@@ -281,7 +281,7 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 -- CHAN_ITEM doesn't sound too right
 local ci = CHAN_AUTO
@@ -396,7 +396,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.1,
         LHIKEaseOut = 0.1,
         LHIKOut = 0.2,
-    },  
+    },
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
