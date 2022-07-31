@@ -347,26 +347,26 @@ SWEP.Animations = {
     ["cycle"] = {
         Source = "cocking",
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
         }
     },
 
     ["1_to_2"] = {
         Source = "cocking",
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
         }
     },
     ["2_to_1"] = {
         Source = "decocking",
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+            { s = common .. "revolver_trigger-02.ogg", t = 0.2 }
         }
     },
     ["2_to_3"] = {
         Source = "decocking",
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+            { s = common .. "revolver_trigger-02.ogg", t = 0.2 }
         }
     },
 
