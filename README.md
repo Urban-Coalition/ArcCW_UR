@@ -13,6 +13,8 @@ urban real  renewal
 - M1911:
 	- Suppressed sounds for all caliber conversions
 	- Att icons
+	- Jam animation
+	- Worldmodel animation (to hide floating mag)
 - SPAS-12:
 	- Comp rear sight texture
 	- Att icons
