@@ -13,8 +13,8 @@ att.Slot = "ur_deagle_caliber"
 
 att.Mult_ClipSize = 1.15
 att.Mult_Recoil = 0.85
-att.Mult_Damage = 0.86
-att.Mult_DamageMin = 0.86
+att.Mult_Damage = 75 / 80
+att.Mult_DamageMin = 16 / 12
 
 att.Mult_ShootSpeedMult = 1.1
 --att.Mult_RPM = 1.1

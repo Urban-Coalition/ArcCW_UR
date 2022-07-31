@@ -58,8 +58,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
-SWEP.Damage = 60 -- 2 shot close range kill
-SWEP.DamageMin = 15 -- 7 shot long range kill
+SWEP.Damage = 75 -- 2 shot close range kill
+SWEP.DamageMin = 16 -- 7 shot long range kill
 SWEP.RangeMin = 10
 SWEP.Range = 160
 SWEP.Penetration = 10
