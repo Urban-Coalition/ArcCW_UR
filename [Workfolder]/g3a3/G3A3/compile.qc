@@ -58,6 +58,14 @@ $sequence "reload_empty" {
     fps 30
 }
 
+$sequence "reload_empty_scope" {
+    "anims/reload_empty_scope.smd"
+    "anims/reload_empty_iron_scope.smd"
+	blend "sights" 0 1
+    snap
+    fps 30
+}
+
 $sequence "fire_01" {
     "anims/fire_01.smd"
     "anims/fire_iron.smd"

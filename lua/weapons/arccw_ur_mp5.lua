@@ -167,8 +167,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.055, -4, 0.7),
-     Ang = Angle(-0.3, -0.53, 4.148),
+     Pos = Vector(-3.17, -4, 0.6),
+     Ang = Angle(0.5, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 60,
@@ -961,6 +961,8 @@ SWEP.Attachments = {
             vpos = Vector(-0.1, -1.6, 3),
             vang = Angle(90, 0, -90),
         },
+        CorrectivePos = Vector(-0.07, 0, 0),
+        CorrectiveAng = Angle(1, 0.5, -5.5),
         VMScale = Vector(.9, .9, .9),
         InstalledEles = {"ur_mp5_rail_optic"}
     },
