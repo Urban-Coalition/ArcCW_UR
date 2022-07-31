@@ -194,6 +194,7 @@ SWEP.WorldModelOffset = {
 
 local path = ")^weapons/arccw_ur/sw329/"
 local path1 = ")^weapons/arccw_ur/sw586/"
+local path2 = ")^weapons/arccw_ur/1911/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
@@ -294,7 +295,7 @@ SWEP.Animations = {
         Source = "draw",
         MinProgress = .4,
         SoundTable = {
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
@@ -302,7 +303,7 @@ SWEP.Animations = {
         Source = "draw_cocked",
         MinProgress = .4,
         SoundTable = {
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
@@ -310,14 +311,14 @@ SWEP.Animations = {
         Source = "holster",
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
     ["holster_cocked"] = {
         Source = "holster_cocked",
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
 
