@@ -77,13 +77,25 @@ att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 att.GivesFlags = {"cal_12g"}
 att.ActivateElements = {"mag_12g"}
 
+local path = ")^weapons/arccw_ur/ak/12ga/"
+local path1 = ")^weapons/arccw_ur/ak/"
+local path2 = ")^weapons/arccw_ur/ak/556/"
+
 att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/m1014/fire.ogg" end
-    if fsound == wep.ShootSoundSilenced then return "weapons/arccw_ud/m1014/fire_supp.ogg" end
+    --[[if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
+        path .. "stalol/fire_545_1.wav",
+     } end]]
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} end
+    if fsound == wep.ShootSoundSilenced then return path1 .. "fire_545_sup.ogg" end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/870/fire_dist.ogg" end
+
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return {path2 .. "fire-dist-01.ogg", path2 .. "fire-dist-02.ogg", path2 .. "fire-dist-03.ogg", path2 .. "fire-dist-04.ogg", path2 .. "fire-dist-05.ogg", path2 .. "fire-dist-06.ogg"}
+    end
 end
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
