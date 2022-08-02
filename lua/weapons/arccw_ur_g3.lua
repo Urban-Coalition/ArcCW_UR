@@ -10,7 +10,7 @@ SWEP.TrueName = "G3A3"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = [[Heckler & Koch's earliest major weapon design, conceived in collaboration with Spanish research group CETME. As a pioneer of the roller-delay system, its success within the Bundeswehr inspired HK to derive subsequent designs from its layout, including the MP5 submachine gun.
 
-Well known for its excellent accuracy and range, but its powerful cartridge can disrupt sustained fire.]]
+Well known for its excellent accuracy and range, but its powerful cartridge makes sustained fire difficult.]]
 SWEP.Trivia_Manufacturer = "Crowdley & Nelson"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
@@ -72,10 +72,12 @@ SWEP.Delay = 60 / 560
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
-        Mode = 2,
+        Mode = 1,
     },
     {
-        Mode = 1,
+        Mode = 2,
+        Mult_AccuracyMOA = 2,
+        Mult_RecoilSide = 2,
     },
     {
         Mode = 0,
@@ -97,7 +99,7 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 5
+SWEP.AccuracyMOA = 2
 SWEP.HipDispersion = 950
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 1000
