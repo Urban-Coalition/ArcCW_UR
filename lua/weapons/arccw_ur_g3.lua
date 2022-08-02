@@ -35,8 +35,8 @@ SWEP.DefaultBodygroups = "000000000000"
 
 -- Damage --
 
-SWEP.Damage = 75
-SWEP.DamageMin = 40
+SWEP.Damage = 65
+SWEP.DamageMin = 35
 SWEP.RangeMin = 50
 SWEP.Range = 400
 SWEP.Penetration = 20
@@ -54,7 +54,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1
+SWEP.Recoil = 1.2
 SWEP.RecoilSide = 0.45
 
 SWEP.RecoilRise = 0.6

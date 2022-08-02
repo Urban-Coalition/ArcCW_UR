@@ -16,8 +16,8 @@ att.Mult_Range = 2
 att.Mult_Penetration = 2
 att.Mult_RPM = 1.167 -- 700 rpm
 att.Mult_AccuracyMOA = .75
-att.Mult_Damage = 75 / 50
-att.Mult_DamageMin = 40 / 25
+att.Mult_Damage = 65 / 50
+att.Mult_DamageMin = 35 / 25
 
 att.Mult_ReloadTime = 1.25
 att.Mult_Recoil = 1.75

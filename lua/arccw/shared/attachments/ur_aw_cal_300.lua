@@ -4,13 +4,13 @@ att.Icon = Material("entities/att/ur_aw/rec300.png", "mips smooth")
 att.Description = "Versatile magnum cartridge identical in diameter to 7.62x51mm rounds but with significantly higher muzzle energy. Liable to overpenetration at close range."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
-    "ur.aw.velocity"
+    --"ur.aw.velocity"
 }
 
 att.AutoStats = true
 
-att.Mult_Damage = 44 / 75
-att.Mult_DamageMin = 85 / 40
+att.Mult_Damage = 44 / 80
+att.Mult_DamageMin = 85 / 50
 --att.Mult_Range = 2
 att.Override_Range = 50
 att.Override_RangeMin = 10

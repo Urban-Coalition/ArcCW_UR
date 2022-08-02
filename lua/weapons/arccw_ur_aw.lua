@@ -35,8 +35,8 @@ SWEP.BulletBones = {
 
 -- Damage --
 
-SWEP.Damage = 75 -- 2 shot close range
-SWEP.DamageMin = 40 -- 3 shot long range
+SWEP.Damage = 80 -- 2 shot close range
+SWEP.DamageMin = 50 -- 2 shot long range
 SWEP.RangeMin = 50
 SWEP.Range = 400 -- 2 shot at ~300m
 
