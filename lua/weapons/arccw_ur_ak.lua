@@ -263,18 +263,18 @@ SWEP.AttachmentElements = {
     ["barrel_rpk74m"] = {
         VMBodygroups = {
             {ind = 1, bg = 5},
-            {ind = 7, bg = 1},
-            {ind = 8, bg = 2}
+            -- {ind = 7, bg = 1},
+            -- {ind = 8, bg = 2}
         },
-        AttPosMods = {[4] = {
-            vpos = Vector(0, 32.2, 2.6),
-            vang = Angle(0, 270, 0),
-        }},
-        Override_IronSightStruct = {
-    		Pos = Vector(-2.625, -2, 0.68),
-    		Ang = Angle(-0.1, 0.274, 5.53),
-    		Magnification = 1,
-	}
+        -- AttPosMods = {[4] = {
+        --     vpos = Vector(0, 32.2, 2.6),
+        --     vang = Angle(0, 270, 0),
+        -- }},
+        -- Override_IronSightStruct = {
+    	-- 	Pos = Vector(-2.625, -2, 0.68),
+    	-- 	Ang = Angle(-0.1, 0.274, 5.53),
+    	-- 	Magnification = 1,
+	    -- }
     },
     ["barrel_krinkov"] = {
         VMBodygroups = {
@@ -581,7 +581,7 @@ SWEP.AttachmentElements = {
     },
     ["optic_raillaser"] = {
         AttPosMods = {
-            [7] = {
+            [8] = {
                 vpos = Vector(0.95, 2.5, 4.05),
                 vang = Angle(0, -90, 125),
             },
@@ -673,10 +673,12 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
     local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
-    local bipodHgs = {["rpk"] = true, ["rpk74m"] = true}
+    local bipodBarrs = {["rpk"] = true, ["rpk74m"] = true}
     local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
+    local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
 
     local optic = wep.Attachments[1].Installed
+    local barr = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
     local hg = string.Replace(wep.Attachments[3].Installed or "default","ur_ak_hg_","")
     local ub = wep.Attachments[7].Installed
     local upper = wep.Attachments[15].Installed
@@ -696,7 +698,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    if ub and hg ~= "ur_ak_hg_dong" then
+    if ub and hg ~= "ur_ak_hg_dong" and !shortBarrs[barr] then
         if railHgs[hg] then
             vm:SetBodygroup(1,13)
         elseif polRailHgs[hg] then
@@ -704,7 +706,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    if bipodHgs[hg] then
+    if bipodBarrs[barr] then
         vm:SetBodygroup(7, (wep:GetInBipod() and (wep.LastAnimKey ~= "enter_bipod" or wep.LastAnimFinishTime < CurTime())) and 7 or 1)
     end
 end
