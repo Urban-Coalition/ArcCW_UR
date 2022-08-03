@@ -4,13 +4,13 @@ att.Icon = Material("entities/att/ur_aw/rec300.png", "mips smooth")
 att.Description = "Versatile magnum cartridge identical in diameter to 7.62x51mm rounds but with significantly higher muzzle energy. Liable to overpenetration at close range."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {
-    "ur.aw.velocity"
+    --"ur.aw.velocity"
 }
 
 att.AutoStats = true
 
-att.Mult_Damage = 44 / 75
-att.Mult_DamageMin = 85 / 40
+att.Mult_Damage = 50 / 80
+att.Mult_DamageMin = 90 / 50
 --att.Mult_Range = 2
 att.Override_Range = 50
 att.Override_RangeMin = 10
@@ -48,15 +48,15 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_338"
 end
 
-local slotinfo = {
-    [5] = {"5-Round Mag", "5-Round Mag", Material("entities/att/ur_aw/mag338_5.png", "mips smooth")},
-}
+-- local slotinfo = {
+--     [5] = {"5-Round Mag", "5-Round Mag", Material("entities/att/ur_aw/mag338_5.png", "mips smooth")},
+-- }
 
-att.Hook_GetDefaultAttIcon = function(wep, slot)
-    if slotinfo[slot] then
-        return slotinfo[slot][3]
-    end
-end
+-- att.Hook_GetDefaultAttIcon = function(wep, slot)
+--     if slotinfo[slot] then
+--         return slotinfo[slot][3]
+--     end
+-- end
 
 att.Override_Trivia_Calibre = ".300 Winchester Magnum"
 att.Override_ShellModel = "models/weapons/arccw/ud_shells/338.mdl"

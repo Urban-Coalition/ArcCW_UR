@@ -6,14 +6,14 @@ att.Slot = "ur_aw_cal"
 
 att.AutoStats = true
 att.Desc_Pros = {
-    "ur.aw.velocity"
+    --"ur.aw.velocity"
 }
 att.Desc_Cons = {
     "Disables Magazine attachments"
 }
 
-att.Mult_Damage = 85 / 75
-att.Mult_DamageMin = 160 / 40
+--att.Mult_Damage = 85 / 80
+att.Mult_DamageMin = 160 / 50
 --att.Mult_Range = 2
 att.Override_Range = 100
 att.Override_RangeMin = 20
