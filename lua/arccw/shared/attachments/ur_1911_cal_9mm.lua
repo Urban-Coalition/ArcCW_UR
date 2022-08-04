@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 9
-att.Icon = Material("entities/att/acwatt_uc_cal_9mm.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/9x19.png", "smooth mips")
 att.Description = "A popular alternative caliber to .45 ACP. With a reduced diameter, the round achieves greater muzzle velocity and magazine capacity."
 att.Desc_Pros = {
 }

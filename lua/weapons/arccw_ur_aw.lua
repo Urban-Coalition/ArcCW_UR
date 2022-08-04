@@ -356,7 +356,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "7.62x51mm NATO",
-        DefaultAttIcon = Material("entities/att/ur_aw/rec308.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/uc_bullets/762x51.png", "mips smooth"),
         Slot = {"ur_aw_cal"},
         Bone = "tag_weapon",
         Offset = {

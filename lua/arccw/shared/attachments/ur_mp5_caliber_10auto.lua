@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 80
-att.Icon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/10.png", "smooth mips")
 att.Description = "The FBI's preferred caliber of choice.\nSignificantly more powerful, but weapon handling suffers."
 att.Desc_Pros = {
 }

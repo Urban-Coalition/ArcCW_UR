@@ -1,6 +1,6 @@
 att.PrintName = "Desert Eagle .357 Magnum Conversion"
 att.AbbrevName = ".357 Magnum"
-att.Icon = Material("entities/att/acwatt_uc_cal_357magnum.png","smooth mips")
+att.Icon = Material("entities/att/uc_bullets/357magnum.png","smooth mips")
 att.Description = "A more practical caliber with higher capacity magazines and actually manageable recoil, but not as much raw power."
 
 if !GetConVar("arccw_truenames"):GetBool() then

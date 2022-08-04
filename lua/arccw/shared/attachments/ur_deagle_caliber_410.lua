@@ -1,6 +1,6 @@
 att.PrintName = "Desert Eagle .410 Bore Conversion"
 att.AbbrevName = ".410 Bore"
-att.Icon = Material("entities/att/acwatt_ur_deagle_bullets_410b.png","smooth mips")
+att.Icon = Material("entities/att/uc_bullets/20g.png","smooth mips")
 att.Description = "Hobbyist conversion that allows the weapon to accept .410 bore shotgun shells. Because the weapon was never meant to fire these, performance beyond point blank is poor."
 
 if !GetConVar("arccw_truenames"):GetBool() then

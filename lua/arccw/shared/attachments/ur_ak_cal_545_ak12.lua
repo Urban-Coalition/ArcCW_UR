@@ -1,5 +1,5 @@
 att.PrintName = "AK-12 5.45x39mm Receiver"
-att.AbbrevName = "AK-12 Receiver"
+att.AbbrevName = "5.45x39mm AK-12 Receiver"
 att.Icon = Material("entities/att/ur_ak/recievers/ak12.png", "mips smooth")
 att.Description = [[Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration.
 Features a dark, glossy finish and a 2-round burst group.]]
@@ -63,7 +63,7 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
 end
 
 local slotinfo = {
-    [5] = {"30-Round Mag", "30-Round Mag", Material("entities/att/ur_ak/magazines/545_30.png", "mips smooth")},
+    [6] = {"30-Round Mag", "30-Round Mag", Material("entities/att/ur_ak/magazines/545_30.png", "mips smooth")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

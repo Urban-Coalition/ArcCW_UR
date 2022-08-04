@@ -1,6 +1,6 @@
 att.PrintName = "Desert Eagle .44 Magnum Conversion"
 att.AbbrevName = ".44 Magnum"
-att.Icon = Material("entities/att/acwatt_uc_cal_44magnum.png","smooth mips")
+att.Icon = Material("entities/att/uc_bullets/44magnum.png","smooth mips")
 att.Description = "Smaller (comparatively speaking) caliber that retains most of .50 AE's iconic punch, but is small enough to fit an extra round in the magazine."
 
 if !GetConVar("arccw_truenames"):GetBool() then

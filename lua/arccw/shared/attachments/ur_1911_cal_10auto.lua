@@ -10,7 +10,7 @@ end
 -- end
 
 att.SortOrder = 10
-att.Icon = Material("entities/att/acwatt_uc_cal_10mm.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/10.png", "smooth mips")
 att.Description = "The FBI's preferred caliber of choice.\nDespite its distinctive power, it's not as large as .45 ACP, though its damage curve is more balanced."
 att.Desc_Pros = {
 }

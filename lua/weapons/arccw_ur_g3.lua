@@ -76,7 +76,7 @@ SWEP.Firemodes = {
     },
     {
         Mode = 2,
-        Mult_AccuracyMOA = 2,
+        Mult_AccuracyMOA = 6,
         Mult_Recoil = 1,
         Mult_RecoilSide = 2,
     },

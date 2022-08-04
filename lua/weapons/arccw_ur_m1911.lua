@@ -624,7 +624,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         Slot = {"ur_m1911_caliber"},
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_bullets_50ae.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/uc_bullets/50ae.png","mips smooth"),
         DefaultAttName = ".45 ACP",
         Bone = "vm_pivot",
         Offset = {

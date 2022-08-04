@@ -1,6 +1,6 @@
 att.PrintName = "AWM .338 Lapua Magnum Receiver"
 att.AbbrevName = ".338 Lapua Magnum"
-att.Icon = Material("entities/att/ur_aw/rec338.png", "mips smooth")
+att.Icon = Material("entities/att/uc_bullets/338lapua.png", "mips smooth")
 att.Description = "Powerful sniper cartridge that exerts substantially more muzzle energy, practically guaranteed to be fatal on a successful hit beyond point blank. The recoil is tremendous, and the lengthened bolt required to accommodate the cartridge is harder to cycle."
 att.Slot = "ur_aw_cal"
 

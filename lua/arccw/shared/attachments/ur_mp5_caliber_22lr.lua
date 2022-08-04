@@ -7,7 +7,7 @@ end
 
 att.Description = "A semi-automatic civilian model of the MP5 rechambered in .22 Long Rifle.\nThe low lethality of the cartridge makes this unfit for tactical operations, but far more fun to plink with."
 
---att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/22lr.png", "smooth mips")
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

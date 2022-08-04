@@ -1,6 +1,6 @@
 att.PrintName = "Saiga-12 12 Gauge Receiver"
 att.AbbrevName = "12G Receiver"
-att.Icon = Material("entities/att/ur_ak/recievers/12.png", "mips smooth")
+att.Icon = Material("entities/att/uc_bullets/12g.png", "mips smooth")
 --att.Icon = Material("entities/att/obsolete.png", "mips smooth") not obsolete anymore
 att.Description = "Turns the rifle into a semi-automatic, mag-fed combat shotgun."
 
@@ -113,7 +113,7 @@ end
 --     end
 -- end
 local slotinfo = {
-    [5] = {"8-Round Mag", "8-Round Mag", Material("entities/att/ur_ak/magazines/12_8.png", "mips smooth")},
+    [6] = {"8-Round Mag", "8-Round Mag", Material("entities/att/ur_ak/magazines/12_8.png", "mips smooth")},
     [11] = {"\"BUCK\" #00 Buckshot", "\"BUCK\" #00 Buckshot", Material("entities/att/arccw_uc_ammo_shotgun_generic.png", "mips smooth")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)

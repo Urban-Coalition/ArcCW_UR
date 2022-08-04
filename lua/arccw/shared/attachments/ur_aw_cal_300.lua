@@ -1,6 +1,6 @@
 att.PrintName = "AWM .300 Winchester Magnum Receiver"
-att.AbbrevName = ".300 Win Mag"
-att.Icon = Material("entities/att/ur_aw/rec300.png", "mips smooth")
+att.AbbrevName = ".300 Winchester Magnum"
+att.Icon = Material("entities/att/uc_bullets/300winchester.png", "mips smooth")
 att.Description = "Versatile magnum cartridge identical in diameter to 7.62x51mm rounds but with significantly higher muzzle energy. Liable to overpenetration at close range."
 att.Slot = "ur_aw_cal"
 att.Desc_Pros = {

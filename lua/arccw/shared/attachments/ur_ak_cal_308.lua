@@ -1,6 +1,6 @@
 att.PrintName = "AK-308 7.62x51mm NATO Receiver"
 att.AbbrevName = ".308 Receiver"
-att.Icon = Material("entities/att/ur_ak/recievers/308.png", "mips smooth")
+att.Icon = Material("entities/att/uc_bullets/762x51.png", "mips smooth")
 att.Description = "Converts the weapon to a battle rifle, boasting an even larger bullet, passable accuracy, and a kick like a mule.\nAccuracy becomes extremely low in fully automatic mode."
 att.Slot = {"ur_ak_cal"}
 att.AutoStats = true
@@ -60,7 +60,7 @@ end
 -- end
 
 local slotinfo = {
-    [5] = {"20-Round Mag", "20-Round Mag", Material("entities/att/ur_ak/magazines/308_20.png", "mips smooth")},
+    [6] = {"20-Round Mag", "20-Round Mag", Material("entities/att/ur_ak/magazines/308_20.png", "mips smooth")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then
