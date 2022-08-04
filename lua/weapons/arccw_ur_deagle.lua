@@ -236,12 +236,6 @@ SWEP.DefaultBodygroups = "000000000"
 SWEP.AttachmentElements = {
     ["ur_deagle_barrel_modern"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, 0.4),
-                vang = Angle(90, 0, -90),
-            },
-        },
     },
     ["ur_deagle_barrel_compact"] = {
         VMBodygroups = {{ind = 1, bg = 5}},
