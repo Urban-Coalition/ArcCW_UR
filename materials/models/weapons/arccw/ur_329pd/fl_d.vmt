@@ -3,7 +3,7 @@
     "$basetexture" "models/weapons/arccw/ur_329pd\FL_D"
     "$bumpmap" "models/weapons/arccw/ur_329pd\FL_N"
     "$phongexponenttexture" "models/weapons/arccw/ur_329pd\FL_S"
-    "$envmap"                        "env_cubemap"      
+    "$envmap" "models/weapons/arccw/ur_m1911/envmap_fixed"
     "$envmaptint"                    "[.02 .02 .021]" 
     "$normalmapalphaenvmapmask"      "1"  
     "$phong"                         "1"                      
