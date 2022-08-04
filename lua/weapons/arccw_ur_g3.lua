@@ -54,8 +54,8 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1.2
-SWEP.RecoilSide = 0.45
+SWEP.Recoil = 1.6
+SWEP.RecoilSide = 1.1
 
 SWEP.RecoilRise = 0.6
 SWEP.RecoilPunch = 1
@@ -77,6 +77,7 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Mult_AccuracyMOA = 2,
+        Mult_Recoil = 1,
         Mult_RecoilSide = 2,
     },
     {
@@ -230,7 +231,7 @@ SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
 }
 
-SWEP.ExtraSightDist = 10
+SWEP.ExtraSightDist = 4
 SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {
@@ -250,7 +251,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_optic"},
-        ExtraSightDist = 5,
         CorrectivePos = Vector(0, 0, -0.0),
         CorrectiveAng = Angle(0, 0.3, 0.45),
     },
@@ -278,6 +278,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_underbarrel"},
+        MergeSlots = {13},
     },
     {
         PrintName = "Tactical",
@@ -332,6 +333,17 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
     },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, 0.1, 6.9),
+            vang = Angle(90, 0, -90),
+        },
+        Hidden = true,
+        InstalledEles = {"mount_underbarrel"},
+    }
 }
 
 SWEP.Animations = {

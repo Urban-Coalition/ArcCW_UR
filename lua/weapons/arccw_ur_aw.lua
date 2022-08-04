@@ -304,7 +304,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 5
+SWEP.ExtraSightDist = 4
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {

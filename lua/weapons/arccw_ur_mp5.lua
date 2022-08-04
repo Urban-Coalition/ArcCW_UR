@@ -155,7 +155,7 @@ SWEP.ShootSpeedMult = 0.95
 -- Length --
 
 SWEP.BarrelLength = 24
-SWEP.ExtraSightDist = 5
+SWEP.ExtraSightDist = 4
 
 -- Ironsights / Customization / Poses --
 
@@ -1082,7 +1082,7 @@ SWEP.Attachments = {
 		Slot = "uc_ubgl",
 		Bone = "Body",
 		Offset = {
-			vpos = Vector(0, 0.2, 7.9),
+			vpos = Vector(0, 0, 7.9),
 			vang = Angle(90, 0, -90),
 		},
 		Hidden = true,

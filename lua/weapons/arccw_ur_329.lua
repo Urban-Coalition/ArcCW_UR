@@ -11,6 +11,7 @@ SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"
 SWEP.ShellEffect = "arccw_uc_shelleffect"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/50ae.mdl"
 SWEP.ShellScale = 1
+SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -155,7 +156,7 @@ SWEP.ShootSpeedMult = 0.8
 -- Length --
 
 SWEP.BarrelLength = 12
-SWEP.ExtraSightDist = 7
+SWEP.ExtraSightDist = 10
 
 -- Ironsights / Customization / Poses --
 

@@ -57,7 +57,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_pm.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_pm.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.DefaultBodygroups = "00000"
@@ -146,7 +146,7 @@ SWEP.ShootSpeedMult = 1
 -- Length --
 
 SWEP.BarrelLength = 8
-SWEP.ExtraSightDist = 20
+SWEP.ExtraSightDist = 10
 
 -- Ironsights / Customization / Poses --
 
@@ -158,7 +158,7 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.327, 5, 1),
+     Pos = Vector(-2.327, 3, 1),
      Ang = Angle(0.195, 0, 3.3),
      Magnification = 1,
      ViewModelFOV = 55,
@@ -166,7 +166,7 @@ SWEP.IronSightStruct = {
      SwitchFromSound = ratel
 }
 
-SWEP.ActivePos = Vector(1, 3, 0)
+SWEP.ActivePos = Vector(0.5, -0.5, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(7, -2, -2)
