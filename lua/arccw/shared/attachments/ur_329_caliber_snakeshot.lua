@@ -1,6 +1,6 @@
 att.PrintName = "Model 329PD .44 Snakeshot Conversion"
 att.AbbrevName = ".44 Snakeshot"
-att.Icon = Material("entities/att/acwatt_ur_deagle_bullets_410b.png","smooth mips")
+att.Icon = Material("entities/att/uc_bullets/20g.png","smooth mips")
 att.Description = "Rounds containing small lead shots. Due to bullet diameter and barrel length, this round has an extremely low effective range.\nAs its name implies, it's mostly useful for shooting snakes and rodents only."
 
 if !GetConVar("arccw_truenames"):GetBool() then

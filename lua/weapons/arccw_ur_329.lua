@@ -453,7 +453,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         Slot = {"ur_329_caliber"},
-        DefaultAttIcon = Material("entities/att/acwatt_uc_cal_44magnum.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/uc_bullets/44magnum.png","mips smooth"),
         DefaultAttName = ".44 Magnum",
         Bone = "Body",
         Offset = {

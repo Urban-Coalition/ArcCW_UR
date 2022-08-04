@@ -1,6 +1,6 @@
 att.PrintName = "Model 329PD .44 Super"
 att.AbbrevName = ".44 Special"
-att.Icon = Material("entities/att/acwatt_uc_cal_44magnum.png","smooth mips")
+att.Icon = Material("entities/att/uc_bullets/44special.png","smooth mips")
 att.Description = "you're too extra :3"
 
 if !GetConVar("arccw_truenames"):GetBool() then

@@ -258,7 +258,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = "ur_g3_barrel",
         DefaultAttName = "18\" Standard Barrel",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
     },
     {
         PrintName = "Muzzle",
@@ -293,7 +293,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = "ur_g3_stock",
-        DefaultAttName = "!! G3SG1 Stock !!",
+        DefaultAttName = "Sniper Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
     },
     {
