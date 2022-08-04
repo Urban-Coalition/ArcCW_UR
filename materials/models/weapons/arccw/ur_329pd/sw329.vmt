@@ -13,9 +13,9 @@
 	"$phongfresnelranges"	"[2 4 6]"
 	"$phongexponenttexture" "models/weapons/arccw/ur_329pd/sw329_e"
 	
-	"$envmap" "models/weapons/arccw/ur_m1911/envmap_fixed"
+	"$envmap" "environment maps/train_01"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint" "[0.1 0.1 0.1]"		
+	$envmaptint 		"[0.050 0.050 0.050]"
 	//"$phongtint" 			"[0.5 0.5 0.5]"			
 	"$PhongAlbedoTint" "1"
 
