@@ -18,4 +18,4 @@ att.Mult_Range = 0.65
 att.Add_BarrelLength = 4
 
 att.ActivateElements = {"ur_mp5_barrel_eod"}
---att.GivesFlags = {"barrel_sd", "powder_subsonic"}
+att.GivesFlags = {"barrel_eod"}
