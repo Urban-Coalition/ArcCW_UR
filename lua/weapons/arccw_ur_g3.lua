@@ -54,8 +54,8 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1.6
-SWEP.RecoilSide = 1.1
+SWEP.Recoil = 1.2
+SWEP.RecoilSide = 0.6
 
 SWEP.RecoilRise = 0.6
 SWEP.RecoilPunch = 1
@@ -76,7 +76,7 @@ SWEP.Firemodes = {
     },
     {
         Mode = 2,
-        Mult_AccuracyMOA = 6,
+        Add_AccuracyMOA = 10,
         Mult_Recoil = 1,
         Mult_RecoilSide = 2,
     },
