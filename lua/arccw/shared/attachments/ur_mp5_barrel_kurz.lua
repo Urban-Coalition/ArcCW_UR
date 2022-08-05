@@ -22,6 +22,8 @@ att.Mult_Recoil = 1.25
 att.Mult_AccuracyMOA = 3
 att.Mult_Range = .5
 
+att.Mult_HipDispersion = 0.85
+
 att.GivesFlags = {"mp5_kurz"}
 att.Override_Trivia_Class = "Machine Pistol"
 

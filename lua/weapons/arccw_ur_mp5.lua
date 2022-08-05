@@ -1004,6 +1004,7 @@ SWEP.Attachments = {
         PrintName = "Handguard",
         DefaultAttName = "Tropical Handguard",
         Slot = {"ur_mp5_hg"},
+        ExcludeFlags = {"barrel_sd", "barrel_eod"},
         Bone = "body",
         Offset = {
             vpos = Vector(0, .9, 10),
