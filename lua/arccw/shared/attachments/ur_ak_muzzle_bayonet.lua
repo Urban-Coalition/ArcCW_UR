@@ -4,7 +4,7 @@ att.Description = "External bayonet unique to early AK-pattern rifles. Wide and 
 att.AutoStats = true
 att.Slot = {"ur_ak_muzzle"}
 
-att.SortOrder = 998
+att.SortOrder = 997
 
 att.Add_MeleeRange = 16
 att.Mult_MeleeDamage = 3.5

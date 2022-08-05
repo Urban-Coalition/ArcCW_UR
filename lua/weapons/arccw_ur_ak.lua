@@ -779,6 +779,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+        DefaultFlags = {"cal_default"}
     },
     {
         PrintName = "Magazine",
