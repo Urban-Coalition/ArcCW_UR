@@ -44,6 +44,7 @@ $bodygroup "4" {
 	studio "kurzslimHG.smd"
 	studio "kurzmlokHG.smd"
 	blank
+	studio "eodHG.smd"
 }
 
 $bodygroup "5" {

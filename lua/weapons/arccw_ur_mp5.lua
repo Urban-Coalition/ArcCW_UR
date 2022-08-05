@@ -327,6 +327,11 @@ SWEP.AttachmentElements = {
             }
         },
     },
+    ["ur_mp5_barrel_eod"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 10},
+        },
+    },
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
             {ind = 1, bg = 2},
