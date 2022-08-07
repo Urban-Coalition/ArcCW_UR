@@ -1,7 +1,7 @@
 att.PrintName = "13\" EOD Barrel"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
-att.Description = "Extended barrel and handguard assembly with integrated compensator. Comfortable to shoot, but performs poorly when hip firing.."
+att.Description = "Extended barrel and handguard assembly with an integrated muzzle break.\nDecreases muzzle rise, but performs poorly when hip firing."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
