@@ -968,7 +968,6 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(-0.07, 0, 0),
         CorrectiveAng = Angle(1, 0.5, -5.5),
-        VMScale = Vector(.9, .9, .9),
         InstalledEles = {"ur_mp5_rail_optic"}
     },
     {
