@@ -686,7 +686,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local optic = wep.Attachments[1].Installed
     local barr = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
     local hg = string.Replace(wep.Attachments[3].Installed or "default","ur_ak_hg_","")
-    local ub = wep.Attachments[7].Installed
+    local ub = wep.Attachments[7].Installed or wep.Attachments[17].Installed
     local upper = wep.Attachments[15].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
     local taclaser = (wep.Attachments[16].Installed == "ur_ak_charm_tl")
@@ -872,16 +872,18 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
     },
-	{
-		PrintName = "M203 slot",
-		Slot = "uc_ubgl",
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 10, 3),
+            vpos = Vector(0, 9.9, 2.9),
             vang = Angle(90, -90, -90),
         },
-		Hidden = true,
-	}
+        InstalledEles = {"rail_fg"},
+        ExcludeFlags = {"ak_noubs"},
+        Hidden = true,
+    }
 }
 
 function SWEP:Hook_TranslateAnimation(anim)

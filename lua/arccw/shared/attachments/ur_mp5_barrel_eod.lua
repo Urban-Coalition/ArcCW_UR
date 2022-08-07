@@ -24,3 +24,8 @@ att.Add_BarrelLength = 4
 
 att.ActivateElements = {"ur_mp5_barrel_eod"}
 att.GivesFlags = {"barrel_eod"}
+
+att.Hook_AddShootSound = function(wep)
+    wep:EmitSound("weapons/arccw_ur/mp5/eod" .. math.random(1, 5) .. ".ogg", 70, math.Rand(98, 102), 1, CHAN_STATIC)
+    wep:EmitSound("weapons/arccw_ur/mp5/eo2" .. math.random(1, 6) .. ".ogg", 70, 100, 0.5, CHAN_STATIC)
+end
