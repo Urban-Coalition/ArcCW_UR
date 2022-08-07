@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	"$basetexture"				"models/weapons/arccw/ur_mp5NEW/eodrail_D"
+	"$bumpmap"					"models/weapons/arccw/ur_mp5NEW/eodrail_N"
+	"$phongexponenttexture"		"models/weapons/arccw/ur_mp5NEW/eodrail_M"
+
+	"$phong"				"1"
+	"$phongboost"			"2"
+	"$phongfresnelranges"		"[1 4 6]"
+//	"$phongalbedotint"			"1"
+//	"$phongalbedoboost"		"1"
+	"$halflambert"			"1"
+
+}
