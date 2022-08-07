@@ -1,4 +1,4 @@
-att.PrintName = "12\" Swordfish Upper"
+att.PrintName = "9\" Swordfish Upper"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_long.png", "smooth mips")
 att.Description = "Aftermarket upper receiver that aggressively counters recoil using an integrated compensator. The added weight makes the weapon harder to aim with."
