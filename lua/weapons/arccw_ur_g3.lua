@@ -231,7 +231,7 @@ SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
 }
 
-SWEP.ExtraSightDist = 4
+SWEP.ExtraSightDist = 2
 SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {

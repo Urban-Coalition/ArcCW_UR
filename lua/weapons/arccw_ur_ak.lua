@@ -717,7 +717,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-SWEP.ExtraSightDist = 4
+SWEP.ExtraSightDist = 2
 SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {
