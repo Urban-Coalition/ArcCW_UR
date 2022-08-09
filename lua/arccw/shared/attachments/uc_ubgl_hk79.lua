@@ -1,7 +1,7 @@
 att.PrintName = "HK79 Underbarrel Grenade Launcher"
 att.AbbrevName = "HK79 Grenade Launcher"
 att.Icon = Material("entities/att/acwatt_uc_ubgl_hk79.png", "mips smooth")
-att.Description = "Single-shot underbarrel grenade launcher designed for the G3. The trigger is on the side, and the barrel release is on the bottom. Fires specialized 40x46mm grenade types."
+att.Description = "Single-shot long-barreled underbarrel grenade launcher designed for the G3. The trigger is on the side, and the barrel release is on the bottom. Fires specialized 40x46mm grenade types."
 
 att.SortOrder = -100000
 
@@ -83,12 +83,12 @@ att.UBGL_Fire = function(wep, ubgl)
     local owner = wep:GetOwner()
     local class = wep:GetBuff_Override("UBGL_Entity")
 
-    local vel, dmg = 5000, 150
+    local vel, dmg = 5000, 130
 
     -- hacky
     if class == "arccw_uc_40mm_hv" then
-        vel = vel * 1.5
-        dmg = dmg * 0.7
+        vel = vel * 1.75
+        dmg = dmg * 0.85
     elseif class == "arccw_uc_40mm_dp" then
         dmg = dmg * 0.6
     elseif class == "arccw_uc_40mm_airburst" then

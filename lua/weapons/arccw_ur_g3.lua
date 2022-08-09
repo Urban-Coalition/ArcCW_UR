@@ -68,7 +68,7 @@ SWEP.Sway = 0.6
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 560
+SWEP.Delay = 60 / 520
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -208,7 +208,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, -1, 1)
+SWEP.ActivePos = Vector(0, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0.5, 1, 0.5)
