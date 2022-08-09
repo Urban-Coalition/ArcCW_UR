@@ -398,62 +398,6 @@ SWEP.AttachmentElements = {
             Magnification = 1,
         }
     },
-    ["barrel_105_alpha"] = {
-        VMBodygroups = {
-            --{ind = 1, bg = 7},
-            {ind = 7, bg = 2},
-            {ind = 8, bg = 2}
-        },
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 20.6, 2.65),
-                vang = Angle(0, 270, 0),
-            },
-            [7] = {
-                vpos = Vector(-1, 14.75, 2.8),
-                vang = Angle(-90, 270, 0),
-                wang = Angle(-90, 270, 0),
-            }
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.6, -2, 0.5),
-            Ang = Angle(0.55, 0.265, 5.53),
-            Magnification = 1,
-        }
-    },
-    ["barrel_105_red"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 10},
-            {ind = 7, bg = 2},
-            {ind = 8, bg = 2}
-        },
-        AttPosMods = {[4] = {
-            vpos = Vector(0, 20.6, 2.65),
-            vang = Angle(0, 270, 0),
-        }},
-        Override_IronSightStruct = {
-            Pos = Vector(-2.6, 0, 0.45),
-            Ang = Angle(0.55, 0.265, 5.53),
-            Magnification = 1,
-        }
-    },
-    ["barrel_105_green"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 11},
-            {ind = 7, bg = 2},
-            {ind = 8, bg = 2}
-        },
-        AttPosMods = {[4] = {
-            vpos = Vector(0, 20, 2.65),
-            vang = Angle(0, 270, 0),
-        }},
-        Override_IronSightStruct = {
-            Pos = Vector(-2.6, 0, 0.45),
-            Ang = Angle(0.55, 0.265, 5.53),
-            Magnification = 1,
-        }
-    },
-
     ["barrel_dong"] = {
         VMBodygroups = {{ind = 1, bg = 2}}, -- This will show up regardless of barrel selection because underbarrel atts are always processed after barrel atts
         AttPosMods = {[6] = {

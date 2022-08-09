@@ -17,20 +17,21 @@ att.Mult_Range = .75
 att.Mult_RPM = 625/600
 att.Mult_ShootPitch = 105/100
 
-att.ToggleLockDefault = true
-att.ToggleStats = {
-    {
-        PrintName = "Black",
-        ActivateElements = {"barrel_105"},
-    },
-    {
-        PrintName = "Plum",
-        ActivateElements = {"barrel_105_red"},
-    },
-    {
-        PrintName = "Olive Drab",
-        ActivateElements = {"barrel_105_green"},
-    },
-}
+-- att.ToggleLockDefault = true
+-- att.ToggleStats = {
+--     {
+--         PrintName = "Black",
+--         ActivateElements = {"barrel_105"},
+--     },
+--     {
+--         PrintName = "Plum",
+--         ActivateElements = {"barrel_105_red"},
+--     },
+--     {
+--         PrintName = "Olive Drab",
+--         ActivateElements = {"barrel_105_green"},
+--     },
+-- }
 
+att.ActivateElements = {"barrel_105"}
 att.GivesFlags = {"ak_barrelchange","nodong"}
