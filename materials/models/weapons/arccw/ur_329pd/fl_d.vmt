@@ -1,10 +1,11 @@
+// fast loader makes zero difference appearance-wise regardless of settings
 "vertexlitgeneric"
 {
     "$basetexture" "models/weapons/arccw/ur_329pd\FL_D"
     "$bumpmap" "models/weapons/arccw/ur_329pd\FL_N"
     "$phongexponenttexture" "models/weapons/arccw/ur_329pd\FL_S"
-    "$envmap" "environment maps/train_01"
-    "$envmaptint" 		"[0.050 0.050 0.050]"
+    "$envmap" "env_cubemap"
+    "$envmaptint" 		"[0.025 0.025 0.025]"
     "$normalmapalphaenvmapmask"      "1"  
     "$phong"                         "1"                      
     "$phongboost"                    "25"          

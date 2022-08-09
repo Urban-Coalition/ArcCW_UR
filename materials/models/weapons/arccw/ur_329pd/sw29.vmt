@@ -3,19 +3,21 @@
 	$basetexture 	"models\weapons\arccw\ur_329pd\sw29"
 	$bumpmap 	"models\weapons\arccw\ur_329pd\sw29_normal"
 
-	$color2 "[0.84 0.84 0.86]"
+	$color2 "[1 1 1]"
 
 	$normalmapalphaenvmapmask "1"
 	$normalmapalphaphongmask 	"1"
 
-	"$envmap" "environment maps/train_01"
-	$envmaptint 		"[0.050 0.050 0.050]"
+	"$envmap" "env_cubemap"
+	$envmaptint 		"[0.01 0.01 0.01]"
 	$envmapfresnel 		"1"
 	//$envmapfresnelMinMaxExp 	"[0 5 0.4]"
 
 	$phong 			"1"
-	$phongboost 		"2.0"
-	$phongfresnelranges 	"[0.5 1.5 1]"
+	$phongboost 		"3"
+	$phongexponent                     "30"
+	$phongtint 		"[0.5 0.5 0.5]"			
+	$phongfresnelranges 	"[2 4 6]"
 	$phongexponenttexture 	"models\weapons\arccw\ur_329pd\sw29_gloss"
 	$phongalbedotint 		"1"
 	$phongalbedoboost 	"40"
