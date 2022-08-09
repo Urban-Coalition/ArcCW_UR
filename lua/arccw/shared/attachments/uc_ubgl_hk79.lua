@@ -14,7 +14,7 @@ att.Slot = "uc_ubgl"
 att.LHIK = true
 
 att.ModelOffset = Vector(3.2, 0, -1.5)
-att.Model = "models/weapons/arccw/atts/uc_ubgl_hk79_2.mdl"
+att.Model = "models/weapons/arccw/atts/uc_ubgl_hk79_3.mdl"
 
 att.SelectUBGLSound =  ""
 att.ExitUBGLSound = ""
@@ -29,8 +29,8 @@ att.UBGL_RPM = 600
 att.UBGL_Recoil = 2
 att.UBGL_Capacity = 1
 
---att.LHIK_GunDriver = 2
---att.LHIK_CamDriver = 3
+att.LHIK_GunDriver = 2
+att.LHIK_CamDriver = 3
 
 att.Hook_ModifyAttBodygroups = function(wep, data)
     if wep:GetBuff_Override("UC_UseClassicHK79Mount") then
@@ -100,17 +100,17 @@ att.UBGL_Reload = function(wep, ubgl)
     if wep:Clip2() >= 1 then return end
     if Ammo(wep) <= 0 then return end
 
-    wep:SetNextSecondaryFire(CurTime() + 2.75)
+    wep:SetNextSecondaryFire(CurTime() + 3)
 
-    wep:DoLHIKAnimation("reload", 2.75)
+    wep:DoLHIKAnimation("reload", 3)
     wep:PlaySoundTable({
         {s = { "arccw_uc/common/rattle1.ogg", "arccw_uc/common/rattle2.ogg", "arccw_uc/common/rattle3.ogg" }, t = 0},
         {s = "arccw_uc/common/40mm/203open.ogg", t = 0.2},
         {s = "arccw_uc/common/magpouch_replace_small.ogg", t = 0.9},
-        {s = "arccw_uc/common/40mm/203insert.ogg", t = 1.2},
-        {s = "arccw_uc/common/shoulder.ogg", t = 1.5},
-        {s = "arccw_uc/common/40mm/203close.ogg", t = 1.7},
-        {s = "arccw_uc/common/shoulder.ogg", t = 2.3},
+        {s = "arccw_uc/common/40mm/203insert.ogg", t = 1.7},
+        {s = "arccw_uc/common/shoulder.ogg", t = 2.0},
+        {s = "arccw_uc/common/40mm/203close.ogg", t = 2.2},
+        {s = "arccw_uc/common/shoulder.ogg", t = 2.7},
     })
 
     local reserve = Ammo(wep)
