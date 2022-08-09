@@ -1,0 +1,25 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models\weapons\arccw\ur_g3\G3_drum_a"
+	"$bumpmap" 					"models\weapons\arccw\ur_g3\G3_drum_n"	
+	"$phongexponenttexture"		"models\weapons\arccw\ur_g3\G3_drum_m"
+
+	"$color2" "[0.96 0.96 0.96]"
+
+	"$normalmapalphaenvmapmask" 	"1"
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
+	"$phong" 		"1"
+	"$phongboost" "1"
+	"$phongalbedotint" 			"1"
+                "$phongexponent" "180"
+	"$phongfresnelranges" "[0.5 1.5 3.0]"
+	"$halflambert" "1"
+
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"2"
+	"$envmaptint"	"[0.02 0.02 0.02]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimmask" "1"
+}

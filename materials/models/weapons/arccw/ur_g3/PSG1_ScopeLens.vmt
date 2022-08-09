@@ -1,0 +1,26 @@
+ // PLACEHOLDER COPIED FROM L4D2 WORSHOP dont use
+
+
+"VertexLitGeneric"
+{
+
+	"$basetexture" "models\weapons\arccw\ur_g3\placeholders\lens"
+	"$bumpmap" "models\weapons\arccw\ur_g3\placeholders\lens_b"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models\weapons\arccw\ur_g3\placeholders\lens"
+	"$envmapfresnel" 1
+	"$envmaptint" "[.005 .005 .005]"
+	
+	"$phong" 1
+	"$phongboost" 0.3
+	"$normalmapalphaphongmask" 1
+	"$phongexponent"  128
+	"$phongfresnelranges" "[54 65 82]"
+	"$phongalbedotint" 1
+
+
+	"$rimlight"        1
+	"$rimlightexponent" 2
+	"$rimlightboost"   15	
+	
+}
