@@ -1,7 +1,7 @@
 att.PrintName = "Model 329PD .44 Super"
 att.AbbrevName = ".44 Special"
 att.Icon = Material("entities/att/uc_bullets/44special.png","smooth mips")
-att.Description = "you're too extra :3"
+att.Description = "A shorter length cartridge with lower recoil but reduced stopping power."
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Enforcement .44 Special"
@@ -10,9 +10,8 @@ end
 att.AutoStats = true
 att.Slot = "ur_329_caliber"
 
-att.Mult_RangeMin = 1.85
-att.Mult_Recoil = 1.5
-att.Mult_Penetration = 1.25
+att.Mult_RangeMin = 0.5
+att.Mult_Recoil = 0.75
 att.Override_PhysBulletMuzzleVelocity = 265
 
 att.Override_Trivia_Calibre = ".44 Super"
