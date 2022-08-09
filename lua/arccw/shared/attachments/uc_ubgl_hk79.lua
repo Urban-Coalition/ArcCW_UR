@@ -83,13 +83,25 @@ att.UBGL_Fire = function(wep, ubgl)
     local owner = wep:GetOwner()
     local class = wep:GetBuff_Override("UBGL_Entity")
 
-	local proj = wep:FireRocket(class, 5000)
-	if SERVER then
-		proj.Damage = 120 -- lower than the m79 (200) for balance reasons
-	end
-	wep:MyEmitSound(")^/arccw_uc/common/40mm/fire-0" .. math.random(1, 6) .. ".ogg", 100, 100, 1, CHAN_WEAPON)
-	wep:MyEmitSound(")^/arccw_uc/common/40mm/fire-dist-0" .. math.random(1, 6) .. ".ogg", 149, 100, 0.5, CHAN_BODY)
-	wep:MyEmitSound(")^/arccw_uc/common/40mm/mech-0" .. math.random(1, 6) .. ".ogg", 149, 100, 0.5, CHAN_AUTO)
+    local vel, dmg = 5000, 150
+
+    -- hacky
+    if class == "arccw_uc_40mm_hv" then
+        vel = vel * 1.5
+        dmg = dmg * 0.7
+    elseif class == "arccw_uc_40mm_dp" then
+        dmg = dmg * 0.6
+    elseif class == "arccw_uc_40mm_airburst" then
+        vel = vel * 0.75
+    end
+
+    local proj = wep:FireRocket(class, vel)
+    if SERVER then
+        proj.Damage = dmg -- lower than the m79 (200) for balance reasons
+    end
+    wep:MyEmitSound(")^/arccw_uc/common/40mm/fire-0" .. math.random(1, 6) .. ".ogg", 100, 100, 1, CHAN_WEAPON)
+    wep:MyEmitSound(")^/arccw_uc/common/40mm/fire-dist-0" .. math.random(1, 6) .. ".ogg", 149, 100, 0.5, CHAN_BODY)
+    wep:MyEmitSound(")^/arccw_uc/common/40mm/mech-0" .. math.random(1, 6) .. ".ogg", 149, 100, 0.5, CHAN_AUTO)
 
     wep:DoLHIKAnimation("fire")
     wep:SetClip2(wep:Clip2() - 1)
