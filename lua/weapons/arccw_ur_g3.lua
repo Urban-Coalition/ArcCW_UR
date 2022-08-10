@@ -352,6 +352,13 @@ local rep = {
 		["mag_40_556"] = 5,
 	},
 	barrel = {
+		["barrel_18"] = 0,
+		["barrel_26"] = 3,
+		["barrel_12"] = 1,
+		["barrel_8"] = 2,
+	},
+	muzzle = {
+		["barrel_18"] = 0,
 		["barrel_26"] = 3,
 		["barrel_12"] = 1,
 		["barrel_8"] = 2,
@@ -414,6 +421,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
 		vm:SetBodygroup(6, meth)
 	end
+
+	vm:SetBodygroup(2, rep.barrel[ATT.barrel] or 0)
+	vm:SetBodygroup(9, rep.muzzle[ATT.barrel] or 0)
+
 
 	-- HK79
 	if ATT["underbarrel"] == "uc_ubgl_hk79" and ATT["barrel"] == "barrel_18" then

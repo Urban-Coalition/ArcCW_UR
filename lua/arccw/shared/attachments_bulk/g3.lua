@@ -22,18 +22,6 @@ local makeg3 = {
 		PrintName = "Drum 50-Round",
 		Slot = "ur_g3_mag",
 	},
-	["mag_20_556"] = {
-		PrintName = "5.56mm 20-Round",
-		Slot = "ur_g3_mag",
-	},
-	["mag_30_556"] = {
-		PrintName = "5.56mm 30-Round",
-		Slot = "ur_g3_mag",
-	},
-	["mag_40_556"] = {
-		PrintName = "5.56mm 40-Round",
-		Slot = "ur_g3_mag",
-	},
 	-- Magazines
 	["hg_slim"] = {
 		PrintName = "G3 Slim Handguard",

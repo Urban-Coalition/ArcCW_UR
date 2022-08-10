@@ -1,5 +1,5 @@
 att.PrintName = "HK33 5.56x45mm NATO Conversion"
-att.AbbrevName = "30-Round 5.56 Mag"
+att.AbbrevName = "20-Round 5.56 Mag"
 att.Icon = Material("entities/att/uc_bullets/556x45.png", "mips smooth")
 att.Description = "Tiny boolets."
 att.Slot = {"ur_g3_mag"}
@@ -7,7 +7,7 @@ att.AutoStats = true
 
 att.SortOrder = 10
 
-
+att.Override_ClipSize = 20
 att.Override_Ammo = "smg1"
 att.Override_Trivia_Calibre = "5.56x45mm NATO"
 
