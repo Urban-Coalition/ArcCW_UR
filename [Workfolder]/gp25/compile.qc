@@ -9,13 +9,41 @@ $surfaceprop "weapon"
 $contents "solid"
 
 $attachment "1" "gp25" 0 14 0.5 rotate 0 90 -180 // Muzzle
-$attachment "2" "root"   0 0 0 rotate 0 0 0      // VM movement, offset to be at world origin
+$attachment "2" "root"   0 -1.2 6 rotate 0 0 0      // VM movement, offset to be at world origin
 $attachment "3" "camera" 0 0 0 rotate 0 0 0      // Camera rotation (only rotation!)
 
 $collisionmodel "gp25.smd"
 
 $sequence "idle" {
 	"anims/idle.smd"
+	fps 30
+}
+$sequence "idle_armed" {
+	"anims/idle_armed.smd"
+	fps 30
+}
+$sequence "reload" {
+	"anims/reload.smd"
+	fadein 0.1
+	fadeout 0.1
+	fps 30
+}
+$sequence "fire" {
+	"anims/fire.smd"
+	fadein 0.03
+	fadeout 0.2
+	fps 30
+}
+$sequence "to_armed" {
+	"anims/to_armed.smd"
+	fadein 0.1
+	fadeout 0.1
+	fps 30
+}
+$sequence "to_idle" {
+	"anims/to_idle.smd"
+	fadein 0.1
+	fadeout 0.1
 	fps 30
 }
 

@@ -1,7 +1,7 @@
 att.PrintName = "GP-25 Underbarrel Grenade Launcher"
 att.AbbrevName = "GP-25 Grenade Launcher"
 att.Icon = Material("entities/att/acwatt_uc_ubgl_gp25.png", "mips smooth")
-att.Description = "Single-shot long-barreled underbarrel grenade launcher designed for the G3. The trigger is on the side, and the barrel release is on the bottom. Fires specialized 40x46mm grenade types."
+att.Description = "Single-shot long-barreled underbarrel grenade launcher designed for the AK. The caseless"
 
 att.SortOrder = -100000
 
@@ -29,7 +29,7 @@ att.UBGL_RPM = 600
 att.UBGL_Recoil = 2
 att.UBGL_Capacity = 1
 
-att.LHIK_GunDriver = nil--2
+att.LHIK_GunDriver = 2
 att.LHIK_CamDriver = nil--3
 
 att.Hook_ModifyAttBodygroups = function(wep, data)
@@ -60,7 +60,7 @@ end
 
 att.Hook_OnSelectUBGL = function(wep)
     wep:SetNextSecondaryFire(CurTime() + 0.6)
---    wep:DoLHIKAnimation("to_armed", 0.6)
+    wep:DoLHIKAnimation("to_armed", 0.6)
     wep:PlaySoundTable({
         {s = "arccw_uc/common/rattle_b2i_rifle.ogg", t = 0},
         {s = "arccw_uc/common/raise.ogg", t = 0.2},
@@ -70,7 +70,7 @@ end
 
 att.Hook_OnDeselectUBGL = function(wep)
     wep:SetNextSecondaryFire(CurTime() + 0.6)
---    wep:DoLHIKAnimation("to_idle", 0.6)
+    wep:DoLHIKAnimation("to_idle", 0.6)
     wep:PlaySoundTable({
         {s = "arccw_uc/common/rattle_b2i_rifle.ogg", t = 0},
         {s = "arccw_uc/common/shoulder.ogg", t = 0.4},
@@ -114,16 +114,14 @@ att.UBGL_Reload = function(wep, ubgl)
 
     wep:SetNextSecondaryFire(CurTime() + 2)
 
---    wep:DoLHIKAnimation("reload", 3)
---    wep:PlaySoundTable({
---        {s = { "arccw_uc/common/rattle1.ogg", "arccw_uc/common/rattle2.ogg", "arccw_uc/common/rattle3.ogg" }, t = 0},
---        {s = "arccw_uc/common/40mm/203open.ogg", t = 0.2},
---        {s = "arccw_uc/common/magpouch_replace_small.ogg", t = 0.9},
---        {s = "arccw_uc/common/40mm/203insert.ogg", t = 1.7},
---        {s = "arccw_uc/common/shoulder.ogg", t = 2.0},
---        {s = "arccw_uc/common/40mm/203close.ogg", t = 2.2},
---        {s = "arccw_uc/common/shoulder.ogg", t = 2.7},
---    })
+    wep:DoLHIKAnimation("reload", 2)
+    wep:PlaySoundTable({
+        {s = { "arccw_uc/common/rattle1.ogg", "arccw_uc/common/rattle2.ogg", "arccw_uc/common/rattle3.ogg" }, t = 0},
+        {s = "arccw_uc/common/magpouch_replace_small.ogg", t = 0.2},
+        {s = "arccw_uc/common/40mm/203insert.ogg", t = 0.8},
+        {s = "arccw_uc/common/shoulder.ogg", t = 1.2},
+        {s = "arccw_uc/common/shoulder.ogg", t = 1.7},
+    })
 
     local reserve = Ammo(wep)
     reserve = reserve + wep:Clip2()
