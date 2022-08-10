@@ -1,6 +1,6 @@
 att.PrintName = "M1911 Pachmayr Grip"
 att.AbbrevName = "Pachmayr Grip"
-att.Description = "Aftermarket grip with finger grooves and a pleasant rosewood texture.\nReduces draw and holster time, but increases weapon sway."
+att.Description = "Aftermarket grip with finger grooves and a pleasant rosewood texture.\nBulkier overall, but the grooves allow a quick grip for a smoother draw and holster."
 
 att.AutoStats = true
 att.Slot = "ur_m1911_grip"
