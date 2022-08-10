@@ -825,7 +825,7 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
         InstalledEles = {"rail_fg"},
-        ExcludeFlags = {"ak_noubs"},
+        ExcludeFlags = {"ak_noubs","barrel_rpk"},
         Hidden = true,
     }
 }

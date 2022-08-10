@@ -10,6 +10,7 @@ att.Desc_Pros = {
     "uc.ubgl"
 }
 att.Slot = "uc_ubgl"
+att.ExcludeFlags = {"uc_noubgl"}
 
 att.LHIK = true
 
