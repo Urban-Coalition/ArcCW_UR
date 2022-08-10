@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models\weapons\arccw\ur_g3\G3_shorts_a_custom"
+	"$bumpmap" 					"models\weapons\arccw\ur_g3\G3_shorts_n"	
+	"$phongexponenttexture"		"models\weapons\arccw\ur_g3\G3_shorts_m"
+
+	"$color2" "[0.666 0.51 0.357]"	
+	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
+
+	"$normalmapalphaenvmapmask" 	"1"
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
+	"$phong" 		"1"
+	"$phongboost" "10"
+	"$phongalbedotint" 			"1"
+                "$phongexponent" "35"
+	"$phongfresnelranges" "[0.5 1.5 3.0]"
+                "$phongtint" "[0.5 0.5 0.5]"
+	"$halflambert" "1"
+
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"2"
+	"$envmaptint"	"[0.008 0.008 0.008]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimmask" "1"
+}
