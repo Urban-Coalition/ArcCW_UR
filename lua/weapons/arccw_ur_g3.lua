@@ -54,7 +54,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1.2
+SWEP.Recoil = 1.0
 SWEP.RecoilSide = 0.6
 
 SWEP.RecoilRise = 0.6
@@ -72,13 +72,10 @@ SWEP.Delay = 60 / 520
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
-        Mode = 1,
+        Mode = 2,
     },
     {
-        Mode = 2,
-        Add_AccuracyMOA = 10,
-        Mult_Recoil = 1,
-        Mult_RecoilSide = 2,
+        Mode = 1,
     },
     {
         Mode = 0,
@@ -231,6 +228,222 @@ SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
 }
 
+--[[
+1 --- 	id: 0
+     [	name: base
+	num: 2
+	submodels:
+	0 --- base def.smd
+	1 --- base hk33.smd
+2 --- 	id: 1
+     [	name: upper
+	num: 2
+	submodels:
+	0 --- upper def.smd
+	1 --- upper psg.smd
+3 --- 	id: 2
+     [	name: barrel
+	num: 4
+	submodels:
+	0 --- barrel def.smd
+	1 --- barrel k.smd
+	2 --- barrel 51.smd
+	3 --- barrel psg.smd
+4 --- 	id: 3
+     [	name: grip
+	num: 3
+	submodels:
+	0 --- grip def.smd
+	1 --- grip sef.smd
+	2 --- grip psg.smd
+5 --- 	id: 4
+     [	name: mag
+	num: 6
+	submodels:
+	0 --- mag def.smd
+	1 --- mag psg.smd
+	2 --- mag drum.smd
+	3 --- mag hk33 20rnd.smd
+	4 --- mag hk33 30rnd.smd
+	5 --- mag hk33 40rnd.smd
+6 --- 	id: 5
+     [	name: stock
+	num: 7
+	submodels:
+	0 --- stock def.smd
+	1 --- stock sg.smd
+	2 --- stock collapsable.smd
+	3 --- stock collapsed.smd
+	4 --- stock psg.smd
+	5 --- stock rucar.smd
+	6 --- 
+7 --- 	id: 6
+     [	name: hg
+	num: 12
+	submodels:
+	0 --- hg def.smd
+	1 --- hg slim.smd
+	2 --- hg pica.smd
+	3 --- hg k def.smd
+	4 --- hg k slim.smd
+	5 --- hg k pica.smd
+	6 --- hg 51.smd
+	7 --- hg 51 slim.smd
+	8 --- hg 51 pica.smd
+	9 --- hg 51 mlok.smd
+	10 --- hg 51 flash.smd
+	11 --- 
+8 --- 	id: 7
+     [	name: underbarrel
+	num: 5
+	submodels:
+	0 --- 
+	1 --- underbarrel bayonet.smd
+	2 --- underbarrel bayonet k.smd
+	3 --- underbarrel bipod.smd
+	4 --- underbarrel bipod k.smd
+9 --- 	id: 8
+     [	name: hg mount
+	num: 3
+	submodels:
+	0 --- 
+	1 --- hg rail def.smd
+	2 --- hg rail slim.smd
+10 --- 	id: 9
+     [	name: muzzle
+	num: 4
+	submodels:
+	0 --- muzzle def.smd
+	1 --- muzzle k.smd
+	2 --- muzzle 51.smd
+	3 --- 
+11 --- 	id: 10
+     [	name: optic
+	num: 4
+	submodels:
+	0 --- 
+	1 --- top rail.smd
+	2 --- top scope psg.smd
+	3 --- top scope sg1.smd
+
+1 optic
+2 barrel
+3 barrel
+4 muzzle
+5 underbarrel
+6 tactical
+7 stock
+8 mag
+	9 ammotype
+	10 powder
+	11 training
+	12 internals
+	13 charm
+14 ubgl
+]]
+
+local rep = {
+	mag = {
+		["mag_20"] = 0,
+		["mag_10"] = 1,
+		["mag_50"] = 2,
+		["mag_20_556"] = 3,
+		["mag_30_556"] = 4,
+		["mag_40_556"] = 5,
+	},
+	barrel = {
+		["barrel_26"] = 3,
+		["barrel_12"] = 1,
+		["barrel_8"] = 2,
+	},
+	handguard = {
+		["hg_slim"] = 1,
+		["hg_pica"] = 2,
+		["hg_51_mlok"] = 9,
+		["hg_51_flash"] = 10,
+	},
+}
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+	local vm = data.vm
+
+	local x = wep.Attachments
+	local ATT = {
+		["optic"]		= x[1].Installed or "std",
+		["barrel"]		= x[2].Installed or "barrel_18",
+		["handguard"]	= x[3].Installed or "std",
+		["muzzle"]		= x[4].Installed,
+		["underbarrel"]	= x[14].Installed or x[5].Installed,
+		["tactical"]	= x[6].Installed,
+		["stock"]		= x[7].Installed or "std",
+		["mag"]			= x[8].Installed or "mag_20",
+	}
+
+	for i, v in pairs(ATT) do
+		local modv = v
+		modv = string.Replace( modv, "ur_g3_", "")
+
+		ATT[i] = modv
+	end
+
+	-- Magazine and base
+	if string.find( ATT["mag"], "_556" ) then
+		vm:SetBodygroup(0, 1)
+	end
+	vm:SetBodygroup(4, rep.mag[ATT.mag] or 0)
+
+	-- Handguard
+	do
+		local meth = 0
+		if ATT["handguard"] == "hg_slim" then
+			meth = meth + 1
+		elseif ATT["handguard"] == "hg_pica" then
+			meth = meth + 2
+		end
+		if ATT["barrel"] == "barrel_26" then
+		elseif ATT["barrel"] == "barrel_12" then
+			meth = meth + 3
+		elseif ATT["barrel"] == "barrel_8" then
+			meth = meth + 6
+		end
+		if ATT["handguard"] == "hg_51_flash" then
+			meth = 10
+		elseif ATT["handguard"] == "hg_51_mlok" then
+			meth = 9
+		end
+
+		vm:SetBodygroup(6, meth)
+	end
+
+	-- HK79
+	if ATT["underbarrel"] == "uc_ubgl_hk79" and ATT["barrel"] == "barrel_18" then
+		vm:SetBodygroup(6, 11)
+		x[14].Offset.vpos = Vector(0, -0.7, 7.3)
+	else
+		x[14].Offset.vpos = Vector(0, 0.1, 6.9)
+	end
+
+end
+
+SWEP.O_Hook_UC_UseClassicHK79Mount = function(wep, data)
+	-- copy and paste this
+	local x = wep.Attachments
+	local ATT = {
+		["optic"]		= x[1].Installed or "std",
+		["barrel"]		= x[2].Installed or "18in",
+		["handguard"]	= x[3].Installed or "std",
+		["muzzle"]		= x[4].Installed,
+		["underbarrel"]	= x[14].Installed or x[5].Installed,
+		["tactical"]	= x[6].Installed,
+		["stock"]		= x[7].Installed or "std",
+		["mag"]			= x[8].Installed or "mag_20",
+	}
+
+	if ATT["underbarrel"] == "uc_ubgl_hk79" and ATT["barrel"] == "18in" then
+		data.current = true
+	end
+end
+
 SWEP.ExtraSightDist = 2
 SWEP.GuaranteeLaser = false
 
@@ -261,6 +474,13 @@ SWEP.Attachments = {
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
     },
     {
+        PrintName = "Handguard",
+        Slot = "ur_g3_handguard",
+        DefaultAttName = "Standard Handguard",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
+        ExcludeFlags = {"hk79_pro"},
+    },
+    {
         PrintName = "Muzzle",
         Slot = "muzzle",
         Bone = "body",
@@ -278,7 +498,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_underbarrel"},
-        MergeSlots = {13},
+        MergeSlots = {14},
     },
     {
         PrintName = "Tactical",
@@ -338,7 +558,7 @@ SWEP.Attachments = {
         Slot = "uc_ubgl",
         Bone = "body",
         Offset = {
-            vpos = Vector(0, 0.1, 6.9),
+            vpos = Vector(0, 0.1, 6.9), -- this is also changed by ModifyBodygroups
             vang = Angle(90, 0, -90),
         },
         Hidden = true,
