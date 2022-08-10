@@ -29,7 +29,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_ur_g3.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_g3.mdl"
-SWEP.ViewModelFOV = 80
+SWEP.ViewModelFOV = 70
 
 SWEP.DefaultBodygroups = "000000000000"
 
@@ -205,7 +205,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(0, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0.5, 1, 0.5)
