@@ -1,7 +1,4 @@
- // PLACEHOLDER COPIED FROM L4D2 WORSHOP dont use
-
-
- "VertexLitGeneric"
+"VertexLitGeneric"
 {
 
 	"$basetexture" "models\weapons\arccw\ur_g3\placeholders\psg_scope_d"
