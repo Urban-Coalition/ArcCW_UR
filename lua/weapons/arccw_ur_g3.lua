@@ -54,7 +54,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1.0
+SWEP.Recoil = 1.75
 SWEP.RecoilSide = 0.6
 
 SWEP.RecoilRise = 0.6
@@ -703,6 +703,8 @@ SWEP.Animations = {
    },
     ["reload_empty_30rnd"] = {
         Source = "reload_empty_30rnd",
+        RareSource = "reload_empty_30rnd_rare",
+        RareSourceChance = 8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.3,
