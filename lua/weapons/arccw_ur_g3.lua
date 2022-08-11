@@ -226,6 +226,32 @@ SWEP.CustomizeAng = Angle(8, 22, 15)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
+
+    ["skin_wood"] = {
+        VMSkin = 1
+    },
+    ["skin_olive"] = {
+        VMSkin = 2
+    },
+    ["skin_tan"] = {
+        VMSkin = 3
+    },
+    ["skin_cust"] = {
+        VMSkin = 4
+    },
+
+    ["stock_g3_collapsible"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 2},
+    }
+    },
+    ["stock_g3_collapsed"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 3},
+        }
+
+    },
+
 }
 
 --[[
@@ -334,12 +360,13 @@ SWEP.AttachmentElements = {
 6 tactical
 7 stock
 8 mag
-	9 ammotype
-	10 powder
-	11 training
-	12 internals
-	13 charm
-14 ubgl
+9 grip
+	10 ammotype
+	11 powder
+	12 training
+	13 internals
+	14 charm
+15 ubgl
 ]]
 
 local rep = {
@@ -350,6 +377,19 @@ local rep = {
 		["mag_20_556"] = 3,
 		["mag_30_556"] = 4,
 		["mag_40_556"] = 5,
+	},
+    grip = {
+		["std"] = 0,
+		["grip_sef"] = 1,
+		["grip_psg"] = 2,
+	},
+    stock = {
+		["std"] = 0,
+		["stock_sg"] = 1,
+		["stock_collapsable"] = 2,
+        ["stock_collapsed"] = 3,
+        ["stock_psg"] = 4,
+        ["stock_rucar"] = 5,
 	},
 	barrel = {
 		["barrel_18"] = 0,
@@ -380,10 +420,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 		["barrel"]		= x[2].Installed or "barrel_18",
 		["handguard"]	= x[3].Installed or "std",
 		["muzzle"]		= x[4].Installed,
-		["underbarrel"]	= x[14].Installed or x[5].Installed,
+		["underbarrel"]	= x[15].Installed or x[5].Installed,
 		["tactical"]	= x[6].Installed,
 		["stock"]		= x[7].Installed or "std",
 		["mag"]			= x[8].Installed or "mag_20",
+        ["grip"]		= x[9].Installed or "std",
 	}
 
 	for i, v in pairs(ATT) do
@@ -392,6 +433,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
 		ATT[i] = modv
 	end
+
+    --Grip
+    vm:SetBodygroup(3, rep.grip[ATT.grip] or 0)
+
+    --Stock
+    if ATT["stock"] != "stock_collapsible" then
+        vm:SetBodygroup(5, rep.stock[ATT.stock] or 0)
+    end
 
 	-- Magazine and base
 	if string.find( ATT["mag"], "_556" ) then
@@ -408,6 +457,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 			meth = meth + 2
 		end
 		if ATT["barrel"] == "barrel_26" then
+            meth = 11
 		elseif ATT["barrel"] == "barrel_12" then
 			meth = meth + 3
 		elseif ATT["barrel"] == "barrel_8" then
@@ -429,9 +479,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 	-- HK79
 	if ATT["underbarrel"] == "uc_ubgl_hk79" and ATT["barrel"] == "barrel_18" then
 		vm:SetBodygroup(6, 11)
-		x[14].Offset.vpos = Vector(0, -0.7, 7.3)
+		x[15].Offset.vpos = Vector(0, -0.7, 7.3)
 	else
-		x[14].Offset.vpos = Vector(0, 0.1, 6.9)
+		x[15].Offset.vpos = Vector(0, 0.1, 6.9)
 	end
 
 end
@@ -444,7 +494,7 @@ SWEP.O_Hook_UC_UseClassicHK79Mount = function(wep, data)
 		["barrel"]		= x[2].Installed or "18in",
 		["handguard"]	= x[3].Installed or "std",
 		["muzzle"]		= x[4].Installed,
-		["underbarrel"]	= x[14].Installed or x[5].Installed,
+		["underbarrel"]	= x[15].Installed or x[5].Installed,
 		["tactical"]	= x[6].Installed,
 		["stock"]		= x[7].Installed or "std",
 		["mag"]			= x[8].Installed or "mag_20",
@@ -487,9 +537,14 @@ SWEP.Attachments = {
     {
         PrintName = "Handguard",
         Slot = "ur_g3_handguard",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, 1.5, 10),
+            vang = Angle(90, 0, -90),
+        },
         DefaultAttName = "Standard Handguard",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
-        ExcludeFlags = {"hk79_pro"},
+        ExcludeFlags = {"hk79_pro","g3_nohg"},
     },
     {
         PrintName = "Muzzle",
@@ -509,7 +564,8 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_underbarrel"},
-        MergeSlots = {14},
+        ExcludeFlags = {"g3_noub"},
+        MergeSlots = {15},
     },
     {
         PrintName = "Tactical",
@@ -531,6 +587,12 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = "ur_g3_mag",
         DefaultAttName = "20-Round Mag",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+    },
+    {
+        PrintName = "Lower Reciever",
+        Slot = "ur_g3_grip",
+        DefaultAttName = "Standard Lower Reciever",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
     },
     {
@@ -574,7 +636,13 @@ SWEP.Attachments = {
         },
         Hidden = true,
         InstalledEles = {"mount_underbarrel"},
+    },
+    {
+        PrintName = "Furniture",
+        Slot = "ur_g3_skin",
+        DefaultAttName = "Gray"
     }
+
 }
 
 SWEP.Animations = {

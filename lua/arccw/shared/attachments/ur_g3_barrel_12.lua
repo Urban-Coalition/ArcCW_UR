@@ -1,0 +1,15 @@
+att.PrintName = "12\" G3KA4 Barrel"
+att.Description = "Shortened barrel for the G3KA4 carbine. Improves firerate for the cost of recoil."
+att.Slot = "ur_g3_barrel"
+att.AutoStats = true
+
+att.SortOrder = 12
+
+att.Mult_SightTime = 0.9
+att.Add_BarrelLength = -4
+att.Mult_SightedSpeedMult = 1.05
+
+att.Mult_Recoil = 1.1
+att.Mult_AccuracyMOA = 1.1
+att.Mult_Range = 0.9
+att.Mult_RPM = 1.1
