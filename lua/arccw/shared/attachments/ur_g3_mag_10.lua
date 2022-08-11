@@ -1,5 +1,6 @@
-att.PrintName = "G3 7.62 10-Round Mag"
-att.Description = "Magazine with a very low capacity. The lighter load reduces the weapon's weight significantly. balance this shit"
+att.PrintName = "G3 10-Round Marksman Mag"
+att.AbbrevName = "10-Round Marksman Mag"
+att.Description = "Magazine with a very low capacity. The lighter load reduces the weapon's weight significantly."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true
 

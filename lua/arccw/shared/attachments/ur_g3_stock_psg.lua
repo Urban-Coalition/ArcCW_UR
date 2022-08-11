@@ -1,4 +1,5 @@
-att.PrintName = "PSG-1 Heavy Stock" 
+att.PrintName = "PSG-1 Sniper Stock" 
+att.AbbrevName = "Sniper Stock"
 att.Description = [[Heavy stock made for the PSG-1 sniper rifle. Greatly reduces recoil at the cost of mobility.]]
 att.AutoStats = true
 att.Slot = {"ur_g3_stock"}

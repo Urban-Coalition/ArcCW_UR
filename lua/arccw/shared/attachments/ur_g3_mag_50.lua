@@ -1,4 +1,5 @@
-att.PrintName = "G3 7.62 50-Round Drum"
+att.PrintName = "G3 50-Round Drum Mag"
+att.AbbrevName = "50-Round Drum Mag"
 att.Description = "Extremely cumbersome drum magazine."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true

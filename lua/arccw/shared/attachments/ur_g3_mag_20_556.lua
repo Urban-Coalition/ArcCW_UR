@@ -1,14 +1,24 @@
-att.PrintName = "HK33 20rnd 5.56x45 magazine"
-att.AbbrevName = "20-Round 5.56 Mag"
+att.PrintName = "HK33 20-Round Compact Mag"
+att.AbbrevName = "20-Round Compact Mag"
 -- att.Icon = Material("entities/att/uc_bullets/556x45.png", "mips smooth")
-att.Description = "rarwarwarawr"
+att.Description = "Low-capacity magazine for the HK33. The lighter load makes the weapon more ergonomic."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true
 
 att.HideIfBlocked = true
 att.SortOrder = 10
 
-att.Mult_ClipSize = 0.66
+att.Override_ClipSize = 20
+
+att.Mult_SightTime = 0.85
+att.Mult_ReloadTime = 0.9
+att.Mult_Sway = 0.75
+
+att.Mult_SpeedMult = 1.025
+att.Mult_SightedSpeedMult = 1.05
+att.Mult_ShootSpeedMult = 1.05
+
+att.Mult_MalfunctionMean = 1.5
 
 att.RequireFlags = {"cal_556"}
 

@@ -1,5 +1,5 @@
-att.PrintName = "Hensoldt ZF 6×42 PSG1 telescopic sight with illuminated reticle"
-att.AbbrevName = "PSG-1 optic(6x)"
+att.PrintName = "Hensoldt ZF 6x42 PSG1"
+att.AbbrevName = "PSG-1 Optic (6x)"
 att.Icon = Material("entities/att/pso1.png", "mips smooth")
 att.Description = "owo Medium range combat scope for improved precision at longer ranges.\nExclusive to the \"Warsaw Pact\" optic mount, and is slightly more agile than rail mounted optics."
 

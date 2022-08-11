@@ -533,7 +533,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = "ur_g3_stock",
-        DefaultAttName = "Sniper Stock",
+        DefaultAttName = "Factory Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
     },
     {
