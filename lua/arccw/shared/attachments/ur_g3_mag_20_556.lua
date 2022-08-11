@@ -9,6 +9,7 @@ att.HideIfBlocked = true
 att.SortOrder = 10
 
 att.Override_ClipSize = 20
+att.Override_ClipSize_Priority = 2
 
 att.Mult_SightTime = 0.85
 att.Mult_ReloadTime = 0.9
