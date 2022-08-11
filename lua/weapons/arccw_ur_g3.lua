@@ -370,6 +370,17 @@ SWEP.AttachmentElements = {
             },
         }
     },
+
+    ["ur_g3_optic_psg1"] = {
+        VMBodygroups = {
+            {ind = 10, bg = 2},
+        },
+    },
+    ["ur_g3_optic_sg1"] = {
+        VMBodygroups = {
+            {ind = 10, bg = 3},
+        },
+    }
 }
 
 local hgbg = {
@@ -385,7 +396,7 @@ local muzzlebg = {
     ["ur_g3_barrel_26"] = 3,
 }
 local opticbg = {
-    ["ur_g3_optic_psg"] = 2,
+    ["ur_g3_optic_psg1"] = 2,
     ["ur_g3_optic_sg1"] = 3,
 }
 local ubmountbg = {
@@ -454,7 +465,7 @@ SWEP.MirrorVMWM = true
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = "optic",
+        Slot = {"ur_g3_optic", "optic"},
         Bone = "body",
         Offset = {
             vpos = Vector(0, -1.7, -0.55),
