@@ -6,7 +6,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 
-att.SortOrder = 13
+att.SortOrder = 26
 
 att.Mult_SightTime = 1.2
 att.Add_BarrelLength = 6

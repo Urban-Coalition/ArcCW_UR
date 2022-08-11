@@ -3,7 +3,7 @@ att.Description = "Extremely shortened barrel for the HK51 carbine. Drastically 
 att.Slot = "ur_g3_barrel"
 att.AutoStats = true
 
-att.SortOrder = 11
+att.SortOrder = 8
 
 att.Mult_SightTime = 0.85
 att.Add_BarrelLength = -6
