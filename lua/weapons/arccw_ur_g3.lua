@@ -54,7 +54,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1.75
+SWEP.Recoil = 1.5
 SWEP.RecoilSide = 0.6
 
 SWEP.RecoilRise = 0.6
@@ -263,13 +263,14 @@ SWEP.AttachmentElements = {
             {ind = 0, bg = 1},
             {ind = 3, bg = 1},
             {ind = 4, bg = 4},
-        }
+        },
     },
     ["ur_g3_rec_psg"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 3, bg = 2},
-        }
+        },
+        TrueNameChange = "PSG-1",
     },
 
     ["ur_g3_mag_10"] = {
