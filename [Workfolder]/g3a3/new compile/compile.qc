@@ -19,6 +19,7 @@ $bodygroup "barrel" // id 2
     studio "barrel k.smd" // 1
     studio "barrel 51.smd" // 2
     studio "barrel psg.smd" // 3
+    studio "barrel 33.smd" // 4
 }
 
 $bodygroup "grip" //  id 3
@@ -89,6 +90,7 @@ $bodygroup "muzzle" //  id 9
     studio "muzzle k.smd" // 1
     studio "muzzle 51.smd" // 2
     blank // 3
+    studio "muzzle 33.smd" // 4
 }
 
 $bodygroup "optic" //  id 10
