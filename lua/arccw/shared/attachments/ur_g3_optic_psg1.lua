@@ -1,7 +1,7 @@
 att.PrintName = "Hensoldt ZF 6x42 PSG1"
 att.AbbrevName = "PSG-1 Optic (6x)"
 att.Icon = Material("entities/att/pso1.png", "mips smooth")
-att.Description = "owo Medium range combat scope for improved precision at longer ranges.\nExclusive to the \"Warsaw Pact\" optic mount, and is slightly more agile than rail mounted optics."
+att.Description = "Long range combat scope for extreme distance combat.\nExclusive to the G3 pattern."
 
 att.SortOrder = 300
 

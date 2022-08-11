@@ -1,7 +1,7 @@
-att.PrintName = "Zeiss Diavari DA 1.5-6x36"
+att.PrintName = "Zeiss Diavari DA 1.5-6x Sniper Scope"
 att.AbbrevName = "G3SG/1 Optic (1.5-6x)"
 att.Icon = Material("entities/att/pso1.png", "mips smooth")
-att.Description = "owo Vintage CARL ZEISS DIAVARI - 1.5 - 6 X 36mm # 4 Reticle 30mm Tube Claw Mounts . Excellent VINTAGE CLASSIC Carl ZEISS MODEL  DIAVARI - D  1,5 - 6 X 36 RETICLE GERMAN # 4 Post WITH ELEVATION ADJUSTMENTS WORKS PERFECT! with 14mm 70° RAIL, TUBE 30mm VERY EASY TO MOUNT. FANTASTIC & STRONG SCOPE FOR ANY HUNT! PERFECT FOR RIFLE WITH LONG or MAGNUM ACTION. VERY HIGH LIGHT TRANSMISSION for THIS MODEL! BUILD FOREVER, EASY to SERVICE! THIS SCOPE HAS CLAW MOUNTS MADE IN WETZLAR GERMANY, VERY HIGH\nExclusive to the \"Warsaw Pact\" optic mount, and is slightly more agile than rail mounted optics."
+att.Description = "Variable power scope, adjustable for a very wide range of magnifications.\nExclusive to the G3 pattern."
 
 att.SortOrder = 300
 
@@ -22,6 +22,10 @@ att.AdditionalSights = {
         Pos = Vector(0.01, 10.5, -1.18),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
+        ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ScopeMagnificationMin = 1.5,
+        ScopeMagnificationMax = 6,
+        ScopeMagnification = 4.5,
         HolosightData = {
             Holosight = true,
             HolosightReticle = Material("hud/scopes/uc_pso.png", "mips smooth"),
@@ -29,7 +33,9 @@ att.AdditionalSights = {
             HolosightSize = 10.5,
             HolosightPiece = "models/weapons/arccw/atts/ur_pso1_hsp.mdl",
             HolosightBlackbox = true,
-            HolosightMagnification = 6,
+            HolosightMagnification = 4.5,
+            HolosightMagnificationMin = 1.5,
+            HolosightMagnificationMax = 6,
             Colorable = true,
         },
     }
