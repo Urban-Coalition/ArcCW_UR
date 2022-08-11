@@ -16,7 +16,7 @@ att.Override_Trivia_Class = "Assault Rifle"
 att.Mult_RPM = 1.083 -- 650 rpm
 att.Mult_SightedSpeedMult = 1.05
 att.Mult_ReloadTime = .95
-att.Mult_Recoil = .6
+att.Mult_Recoil = .4
 att.Mult_HipDispersion = .75
 
 att.Mult_Penetration = 14 / 20
