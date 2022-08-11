@@ -124,9 +124,11 @@ $texturegroup "skinfamilies" {
 $surfaceprop "weapon"
 $contents "solid"
 
-// $collisionmodel "base.smd"
+$collisionmodel "collision.smd"
 
 $poseparameter "sights" 0 1 loop 0
+$poseparameter "short" 0 1 loop 0
+// $poseparameter "scoped" 0 1 loop 0
 
 $sequence "idle" {
     "anims/idle.smd"
@@ -136,6 +138,8 @@ $sequence "idle" {
     fps 30
 }
 
+
+
 $sequence "reload" {
     "anims/reload.smd"
     "anims/reload_iron.smd"
@@ -143,23 +147,125 @@ $sequence "reload" {
     snap
     fps 30
 }
-
-
 $sequence "reload_empty" {
-    "anims/reload_empty.smd"
-    "anims/reload_empty_iron.smd"
+    "anims/reload_empty.smd" // ref
+    "anims/reload_empty_iron.smd" // sights
+    "anims/reload_empty_short.smd" // short
+    "anims/reload_empty_iron_short.smd" // sights short
+
 	blend "sights" 0 1
+	blend "short" 0 1
     snap
     fps 30
 }
-
 $sequence "reload_empty_scope" {
     "anims/reload_empty_scope.smd"
     "anims/reload_empty_iron_scope.smd"
+    "anims/reload_empty_scope_short.smd"
+    "anims/reload_empty_iron_scope_short.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+
+
+$sequence "reload_10rnd" {
+    "anims/reload_10rnd.smd"
+    "anims/reload_iron.smd"
 	blend "sights" 0 1
     snap
     fps 30
 }
+$sequence "reload_empty_10rnd" {
+    "anims/reload_empty_10rnd.smd"
+    "anims/reload_empty_iron.smd"
+    "anims/reload_empty_short_10rnd.smd"
+    "anims/reload_empty_iron_short.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+$sequence "reload_empty_scope_10rnd" {
+    "anims/reload_empty_scope_10rnd.smd"
+    "anims/reload_empty_iron_scope.smd"
+    "anims/reload_empty_scope_short_10rnd.smd"
+    "anims/reload_empty_iron_scope.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+
+
+$sequence "reload_30rnd" {
+    "anims/reload_30rnd.smd"
+    "anims/reload_iron.smd"
+	blend "sights" 0 1
+    snap
+    fps 30
+}
+$sequence "reload_empty_30rnd" {
+    "anims/reload_empty_30rnd.smd"
+    "anims/reload_empty_iron.smd"
+    "anims/reload_empty_short_30rnd.smd"
+    "anims/reload_empty_iron_short.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+$sequence "reload_empty_30rnd_rare" {
+    "anims/reload_empty_30rnd_rare.smd"
+    "anims/reload_empty_iron.smd"
+    "anims/reload_empty_short_30rnd_rare.smd"
+    "anims/reload_empty_iron_short.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+$sequence "reload_empty_scope_30rnd" {
+    "anims/reload_empty_scope_30rnd.smd"
+    "anims/reload_empty_iron_scope.smd"
+    "anims/reload_empty_scope_short_30rnd.smd"
+    "anims/reload_empty_iron_scope.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+
+$sequence "reload_50rnd" {
+    "anims/reload_50rnd.smd"
+    "anims/reload_iron.smd"
+	blend "sights" 0 1
+    snap
+    fps 30
+}
+$sequence "reload_empty_50rnd" {
+    "anims/reload_empty_50rnd.smd"
+    "anims/reload_empty_iron.smd"
+    "anims/reload_empty_short_50rnd.smd"
+    "anims/reload_empty_iron_short.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+$sequence "reload_empty_scope_50rnd" {
+    "anims/reload_empty_scope_50rnd.smd"
+    "anims/reload_empty_iron_scope.smd"
+    "anims/reload_empty_scope_short_50rnd.smd"
+    "anims/reload_empty_iron_scope.smd"
+	blend "sights" 0 1
+	blend "short" 0 1
+    snap
+    fps 30
+}
+
+
 
 $sequence "fire_01" {
     "anims/fire_01.smd"
