@@ -4,7 +4,7 @@
 	"$bumpmap" 					"models\weapons\arccw\ur_g3\G3_n"	
 	"$phongexponenttexture"		"models\weapons\arccw\ur_g3\G3_m"
 
-	"$color2" "[0.2 0.2 0.2]"	
+	"$color2" "[0.23 0.23 0.241]"	
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 	"$normalmapalphaenvmapmask" 	"1"

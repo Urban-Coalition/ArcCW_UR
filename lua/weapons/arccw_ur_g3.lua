@@ -226,281 +226,164 @@ SWEP.CustomizeAng = Angle(8, 22, 15)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
-
-    ["skin_wood"] = {
-        VMSkin = 1
-    },
-    ["skin_olive"] = {
-        VMSkin = 2
-    },
-    ["skin_tan"] = {
-        VMSkin = 3
-    },
-    ["skin_cust"] = {
-        VMSkin = 4
-    },
+    ["ur_g3_skin_wood"] = { VMSkin = 1 },
+    ["ur_g3_skin_olive"] = { VMSkin = 2 },
+    ["ur_g3_skin_tan"] = { VMSkin = 3 },
+    ["ur_g3_skin_custom"] = { VMSkin = 4 },
 
     ["stock_g3_collapsible"] = {
         VMBodygroups = {
             {ind = 5, bg = 2},
-    }
+        }
     },
     ["stock_g3_collapsed"] = {
         VMBodygroups = {
             {ind = 5, bg = 3},
         }
+    },
+    ["ur_g3_stock_psg"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 4},
+        }
+    },
+    ["ur_g3_stock_sg"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
+        }
+    },
+    ["ur_g3_stock_rucar"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 5},
+        }
+    },
 
+    ["ur_g3_rec_hk33"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 1},
+            {ind = 3, bg = 1},
+            {ind = 4, bg = 4},
+        }
+    },
+    ["ur_g3_rec_psg"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+            {ind = 3, bg = 2},
+        }
+    },
+
+    ["ur_g3_mag_10"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        }
+    },
+    ["ur_g3_mag_50"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+        }
+    },
+    ["ur_g3_mag_20_556"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+        }
+    },
+    ["ur_g3_mag_40_556"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 5},
+        }
+    },
+
+    ["ur_g3_barrel_12"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+        }
+    },
+    ["ur_g3_barrel_15"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 4},
+        }
+    },
+    ["ur_g3_barrel_8"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 2},
+        }
+    },
+    ["ur_g3_barrel_26"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 3},
+        }
     },
 
 }
 
---[[
-1 --- 	id: 0
-     [	name: base
-	num: 2
-	submodels:
-	0 --- base def.smd
-	1 --- base hk33.smd
-2 --- 	id: 1
-     [	name: upper
-	num: 2
-	submodels:
-	0 --- upper def.smd
-	1 --- upper psg.smd
-3 --- 	id: 2
-     [	name: barrel
-	num: 4
-	submodels:
-	0 --- barrel def.smd
-	1 --- barrel k.smd
-	2 --- barrel 51.smd
-	3 --- barrel psg.smd
-4 --- 	id: 3
-     [	name: grip
-	num: 3
-	submodels:
-	0 --- grip def.smd
-	1 --- grip sef.smd
-	2 --- grip psg.smd
-5 --- 	id: 4
-     [	name: mag
-	num: 6
-	submodels:
-	0 --- mag def.smd
-	1 --- mag psg.smd
-	2 --- mag drum.smd
-	3 --- mag hk33 20rnd.smd
-	4 --- mag hk33 30rnd.smd
-	5 --- mag hk33 40rnd.smd
-6 --- 	id: 5
-     [	name: stock
-	num: 7
-	submodels:
-	0 --- stock def.smd
-	1 --- stock sg.smd
-	2 --- stock collapsable.smd
-	3 --- stock collapsed.smd
-	4 --- stock psg.smd
-	5 --- stock rucar.smd
-	6 --- 
-7 --- 	id: 6
-     [	name: hg
-	num: 12
-	submodels:
-	0 --- hg def.smd
-	1 --- hg slim.smd
-	2 --- hg pica.smd
-	3 --- hg k def.smd
-	4 --- hg k slim.smd
-	5 --- hg k pica.smd
-	6 --- hg 51.smd
-	7 --- hg 51 slim.smd
-	8 --- hg 51 pica.smd
-	9 --- hg 51 mlok.smd
-	10 --- hg 51 flash.smd
-	11 --- 
-8 --- 	id: 7
-     [	name: underbarrel
-	num: 5
-	submodels:
-	0 --- 
-	1 --- underbarrel bayonet.smd
-	2 --- underbarrel bayonet k.smd
-	3 --- underbarrel bipod.smd
-	4 --- underbarrel bipod k.smd
-9 --- 	id: 8
-     [	name: hg mount
-	num: 3
-	submodels:
-	0 --- 
-	1 --- hg rail def.smd
-	2 --- hg rail slim.smd
-10 --- 	id: 9
-     [	name: muzzle
-	num: 4
-	submodels:
-	0 --- muzzle def.smd
-	1 --- muzzle k.smd
-	2 --- muzzle 51.smd
-	3 --- 
-11 --- 	id: 10
-     [	name: optic
-	num: 4
-	submodels:
-	0 --- 
-	1 --- top rail.smd
-	2 --- top scope psg.smd
-	3 --- top scope sg1.smd
+SWEP.Hook_ModifyBodygroups = function(wep,data)
+    local vm = data.vm
+    if !IsValid(vm) then return end
 
-1 optic
-2 barrel
-3 barrel
-4 muzzle
-5 underbarrel
-6 tactical
-7 stock
-8 mag
-9 grip
-	10 ammotype
-	11 powder
-	12 training
-	13 internals
-	14 charm
-15 ubgl
-]]
+    local atts = wep.Attachments
+    local barrel = atts[2].Installed
+    local hg = atts[4].Installed
+    local muzzle = atts[5].Installed
+    local ub = atts[6].Installed or atts[15].Installed
+    local optic = atts[1].Installed
 
-local rep = {
-	mag = {
-		["mag_20"] = 0,
-		["mag_10"] = 1,
-		["mag_50"] = 2,
-		["mag_20_556"] = 3,
-		["mag_30_556"] = 4,
-		["mag_40_556"] = 5,
-	},
-    grip = {
-		["std"] = 0,
-		["grip_sef"] = 1,
-		["grip_psg"] = 2,
-	},
-    stock = {
-		["std"] = 0,
-		["stock_sg"] = 1,
-		["stock_collapsable"] = 2,
-        ["stock_collapsed"] = 3,
-        ["stock_psg"] = 4,
-        ["stock_rucar"] = 5,
-	},
-	barrel = {
-		["barrel_18"] = 0,
-		["barrel_26"] = 3,
-		["barrel_12"] = 1,
-		["barrel_8"] = 2,
-	},
-	muzzle = {
-		["barrel_18"] = 0,
-		["barrel_26"] = 3,
-		["barrel_12"] = 1,
-		["barrel_8"] = 2,
-	},
-	handguard = {
-		["hg_slim"] = 1,
-		["hg_pica"] = 2,
-		["hg_51_mlok"] = 9,
-		["hg_51_flash"] = 10,
-	},
-}
-
-SWEP.Hook_ModifyBodygroups = function(wep, data)
-	local vm = data.vm
-
-	local x = wep.Attachments
-	local ATT = {
-		["optic"]		= x[1].Installed or "std",
-		["barrel"]		= x[2].Installed or "barrel_18",
-		["handguard"]	= x[3].Installed or "std",
-		["muzzle"]		= x[4].Installed,
-		["underbarrel"]	= x[15].Installed or x[5].Installed,
-		["tactical"]	= x[6].Installed,
-		["stock"]		= x[7].Installed or "std",
-		["mag"]			= x[8].Installed or "mag_20",
-        ["grip"]		= x[9].Installed or "std",
-	}
-
-	for i, v in pairs(ATT) do
-		local modv = v
-		modv = string.Replace( modv, "ur_g3_", "")
-
-		ATT[i] = modv
-	end
-
-    --Grip
-    vm:SetBodygroup(3, rep.grip[ATT.grip] or 0)
-
-    --Stock
-    if ATT["stock"] != "stock_collapsible" then
-        vm:SetBodygroup(5, rep.stock[ATT.stock] or 0)
+            -- hg based on barrel length + hk79 support
+    local hgbg = {
+        ["ur_g3_hg_slim"] = 1,
+        ["ur_g3_hg_pica"] = 2,
+        ["ur_g3_hg_51_mlok"] = 3,
+        ["ur_g3_hg_51_flash"] = 4,
+    }
+    
+    local hgind = hgbg[hg] or 0
+    
+    if barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15" then
+        vm:SetBodygroup(6, hgind + 3)
+        
+        if ub == "ur_g3_ub_bayonet" then
+            vm:SetBodygroup(7, 2)
+        elseif ub == "ur_g3_ub_bipod" then
+            vm:SetBodygroup(7, 4)
+        end
+    elseif barrel == "ur_g3_barrel_8" then
+        vm:SetBodygroup(6, hgind + 6)
+    elseif barrel == "ur_g3_barrel_26" or ub == "uc_ubgl_hk79" then
+        vm:SetBodygroup(6, 11)
+		atts[15].Offset.vpos = Vector(0, -0.7, 7.3)
+    else
+        vm:SetBodygroup(6, hgind)
+		atts[15].Offset.vpos = Vector(0, 0.1, 6.9)
     end
 
-	-- Magazine and base
-	if string.find( ATT["mag"], "_556" ) then
-		vm:SetBodygroup(0, 1)
-	end
-	vm:SetBodygroup(4, rep.mag[ATT.mag] or 0)
+            -- muzzle   Maybe remove it at all?
+    local muzzlebg = {
+        ["ur_g3_barrel_8"] = 2,
+        ["ur_g3_barrel_12"] = 1,
+        ["ur_g3_barrel_15"] = 4,
+        ["ur_g3_barrel_26"] = 3,
+    }
+    vm:SetBodygroup(9, !muzzle and muzzlebg[barrel] or 3)
+    
+            -- optic 
+    local opticbg = {
+        ["ur_g3_optic_psg"] = 2,
+        ["ur_g3_optic_sg1"] = 3,
+    }
+    vm:SetBodygroup(10, optic and (opticbg[optic] or 1) or 0)
 
-	-- Handguard
-	do
-		local meth = 0
-		if ATT["handguard"] == "hg_slim" then
-			meth = meth + 1
-		elseif ATT["handguard"] == "hg_pica" then
-			meth = meth + 2
-		end
-		if ATT["barrel"] == "barrel_26" then
-            meth = 11
-		elseif ATT["barrel"] == "barrel_12" then
-			meth = meth + 3
-		elseif ATT["barrel"] == "barrel_8" then
-			meth = meth + 6
-		end
-		if ATT["handguard"] == "hg_51_flash" then
-			meth = 10
-		elseif ATT["handguard"] == "hg_51_mlok" then
-			meth = 9
-		end
-
-		vm:SetBodygroup(6, meth)
-	end
-
-	vm:SetBodygroup(2, rep.barrel[ATT.barrel] or 0)
-	vm:SetBodygroup(9, rep.muzzle[ATT.barrel] or 0)
-
-
-	-- HK79
-	if ATT["underbarrel"] == "uc_ubgl_hk79" and ATT["barrel"] == "barrel_18" then
-		vm:SetBodygroup(6, 11)
-		x[15].Offset.vpos = Vector(0, -0.7, 7.3)
-	else
-		x[15].Offset.vpos = Vector(0, 0.1, 6.9)
-	end
-
+            -- underbarrel mount 
+    local ubmountbg = {
+        ["ur_g3_hg_slim"] = 2,
+        ["ur_g3_hg_pica"] = 0,
+    }
+    vm:SetBodygroup(8, ub and (ubmountbg[hg] or 1) or 0)
 end
 
 SWEP.O_Hook_UC_UseClassicHK79Mount = function(wep, data)
-	-- copy and paste this
-	local x = wep.Attachments
-	local ATT = {
-		["optic"]		= x[1].Installed or "std",
-		["barrel"]		= x[2].Installed or "18in",
-		["handguard"]	= x[3].Installed or "std",
-		["muzzle"]		= x[4].Installed,
-		["underbarrel"]	= x[15].Installed or x[5].Installed,
-		["tactical"]	= x[6].Installed,
-		["stock"]		= x[7].Installed or "std",
-		["mag"]			= x[8].Installed or "mag_20",
-	}
+    local atts = wep.Attachments
+    local barrel = atts[2].Installed
+    local ub = atts[6].Installed or atts[15].Installed
 
-	if ATT["underbarrel"] == "uc_ubgl_hk79" and ATT["barrel"] == "18in" then
+	if ub == "uc_ubgl_hk79" and !barrel then
 		data.current = true
 	end
 end
@@ -533,6 +416,12 @@ SWEP.Attachments = {
         Slot = "ur_g3_barrel",
         DefaultAttName = "18\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
+    },
+    {
+        PrintName = "Reciever",
+        Slot = "ur_g3_rec",
+        DefaultAttName = "G3 Reciever",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
     },
     {
         PrintName = "Handguard",
@@ -587,12 +476,6 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = "ur_g3_mag",
         DefaultAttName = "20-Round Mag",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
-    },
-    {
-        PrintName = "Lower Reciever",
-        Slot = "ur_g3_grip",
-        DefaultAttName = "Standard Lower Reciever",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
     },
     {
