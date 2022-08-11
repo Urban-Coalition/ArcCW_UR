@@ -8,5 +8,10 @@ att.AutoStats = true
 att.HideIfBlocked = true
 att.SortOrder = 10
 
-att.Override_ClipSize = 40
+att.Mult_ClipSize = 1.5
+
 att.RequireFlags = {"cal_556"}
+
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_30rnd"
+end

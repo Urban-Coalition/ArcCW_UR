@@ -19,6 +19,6 @@ att.Mult_MalfunctionMean = 0.9
 
 att.ExcludeFlags = {"cal_556"}
 
---[[att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_10rnd"
-end]] --for later
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_50rnd"
+end

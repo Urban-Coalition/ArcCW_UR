@@ -4,3 +4,5 @@ att.AutoStats = true
 att.Slot = {"ur_g3_stock"}
 
 att.SortOrder = 9
+
+att.Override_ActivePos = Vector(0.5, 1.5, 0.7)

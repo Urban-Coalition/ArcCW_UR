@@ -7,6 +7,7 @@ att.SortOrder = 10
 
 att.Mult_SightTime = 0.75
 
+
 att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 att.ToggleStats = {
@@ -16,6 +17,7 @@ att.ToggleStats = {
         ActivateElements = {"stock_g3_collapsible"},
         AutoStats = true,
         Mult_Recoil = 1.25,
+        Override_ActivePos = Vector(0.3, 1.7, 0.8)
     },
     {
         PrintName = "Collapsed",
@@ -29,5 +31,6 @@ att.ToggleStats = {
         Mult_Recoil = 2,
         Mult_RecoilSide = 1.25,
         Mult_Sway = 3,
+        Override_ActivePos = Vector(0.3, 2.1, 0.95)
     }
 }

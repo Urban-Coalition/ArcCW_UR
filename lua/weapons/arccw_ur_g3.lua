@@ -190,9 +190,10 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.3, 1, 0.95),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.3, -1, 0.9),
+    Ang = Angle(0, 0.02, 0),
     Magnification = 1.1,
+    ViewModelFOV = 65,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
 }
@@ -205,13 +206,13 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, -1, 1)
+SWEP.ActivePos = Vector(0.3, 1, 0.8)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0.5, 1, 0.5)
 SWEP.SprintAng = Angle(-8.5, 15, -10)
 
-SWEP.CrouchPos = Vector(-2, -2, -0.6)
+SWEP.CrouchPos = Vector(-0.7, 0.6, 0)
 SWEP.CrouchAng = Angle(0, 0, -14)
 
 SWEP.HolsterPos = Vector(-1, -1, 1.2)
@@ -220,8 +221,8 @@ SWEP.HolsterAng = Angle(-15, 8, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
-SWEP.CustomizePos = Vector(6.5, 0.8, -0.2)
-SWEP.CustomizeAng = Angle(8, 22, 15)
+SWEP.CustomizePos = Vector(10.5, 4, 1)
+SWEP.CustomizeAng = Angle(8, 30, 15)
 
 SWEP.BarrelLength = 24
 
@@ -295,24 +296,101 @@ SWEP.AttachmentElements = {
     ["ur_g3_barrel_12"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
+        },
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0.06, 18),
+                vang = Angle(90, 0, -90),
+            },
+            [7] = {
+                vpos = Vector(-0.94, 0.2, 14),
+                vang = Angle(90, 0, 180),
+            },
         }
     },
     ["ur_g3_barrel_15"] = {
         VMBodygroups = {
             {ind = 2, bg = 4},
+        },
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0.06, 20.5),
+                vang = Angle(90, 0, -90),
+            },
+            [7] = {
+                vpos = Vector(-0.94, 0.2, 14),
+                vang = Angle(90, 0, 180),
+            },
         }
     },
     ["ur_g3_barrel_8"] = {
         VMBodygroups = {
             {ind = 2, bg = 2},
+        },
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0.06, 14),
+                vang = Angle(90, 0, -90),
+            },
+            [7] = {
+                vpos = Vector(-0.94, 0.2, 11),
+                vang = Angle(90, 0, 180),
+            },
         }
     },
     ["ur_g3_barrel_26"] = {
         VMBodygroups = {
             {ind = 2, bg = 3},
+        },
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0.06, 29.7),
+                vang = Angle(90, 0, -90),
+            },
+            [7] = {
+                vpos = Vector(-0.94, 0.2, 17),
+                vang = Angle(90, 0, 180),
+            },
         }
     },
 
+    ["ur_g3_hg_slim"] = {
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.66, 9),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ur_g3_hg_pica"] = {
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.75, 9.2),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+}
+
+local hgbg = {
+    ["ur_g3_hg_slim"] = 1,
+    ["ur_g3_hg_pica"] = 2,
+    ["ur_g3_hg_51_mlok"] = 3,
+    ["ur_g3_hg_51_flash"] = 4,
+}
+local muzzlebg = {
+    ["ur_g3_barrel_8"] = 2,
+    ["ur_g3_barrel_12"] = 1,
+    ["ur_g3_barrel_15"] = 4,
+    ["ur_g3_barrel_26"] = 3,
+}
+local opticbg = {
+    ["ur_g3_optic_psg"] = 2,
+    ["ur_g3_optic_sg1"] = 3,
+}
+local ubmountbg = {
+    ["ur_g3_hg_slim"] = 2,
+    ["ur_g3_hg_pica"] = 0,
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
@@ -326,14 +404,6 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     local ub = atts[6].Installed or atts[15].Installed
     local optic = atts[1].Installed
 
-            -- hg based on barrel length + hk79 support
-    local hgbg = {
-        ["ur_g3_hg_slim"] = 1,
-        ["ur_g3_hg_pica"] = 2,
-        ["ur_g3_hg_51_mlok"] = 3,
-        ["ur_g3_hg_51_flash"] = 4,
-    }
-    
     local hgind = hgbg[hg] or 0
     
     if barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15" then
@@ -354,27 +424,10 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 		atts[15].Offset.vpos = Vector(0, 0.1, 6.9)
     end
 
-            -- muzzle   Maybe remove it at all?
-    local muzzlebg = {
-        ["ur_g3_barrel_8"] = 2,
-        ["ur_g3_barrel_12"] = 1,
-        ["ur_g3_barrel_15"] = 4,
-        ["ur_g3_barrel_26"] = 3,
-    }
     vm:SetBodygroup(9, !muzzle and muzzlebg[barrel] or 3)
-    
-            -- optic 
-    local opticbg = {
-        ["ur_g3_optic_psg"] = 2,
-        ["ur_g3_optic_sg1"] = 3,
-    }
+
     vm:SetBodygroup(10, optic and (opticbg[optic] or 1) or 0)
 
-            -- underbarrel mount 
-    local ubmountbg = {
-        ["ur_g3_hg_slim"] = 2,
-        ["ur_g3_hg_pica"] = 0,
-    }
     vm:SetBodygroup(8, ub and (ubmountbg[hg] or 1) or 0)
 end
 
@@ -404,7 +457,7 @@ SWEP.Attachments = {
         Slot = "optic",
         Bone = "body",
         Offset = {
-            vpos = Vector(0, -1.2, 0.5),
+            vpos = Vector(0, -1.7, -0.55),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_optic"},
@@ -440,7 +493,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "body",
         Offset = {
-            vpos = Vector(0, 0.15, 21.7),
+            vpos = Vector(0, 0.06, 22.5),
             vang = Angle(90, 0, -90),
         },
     },
@@ -449,7 +502,7 @@ SWEP.Attachments = {
         Slot = "foregrip",
         Bone = "body",
         Offset = {
-            vpos = Vector(0, 1.1, 9),
+            vpos = Vector(0, 1.17, 8.6),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_underbarrel"},
@@ -461,8 +514,8 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "body",
         Offset = {
-            vpos = Vector(-0.6, -0.8, 10.5),
-            vang = Angle(90, 0, -180),
+            vpos = Vector(-0.8, 0, 17),
+            vang = Angle(90, 0, 180),
         },
         InstalledEles = {"mount_tactical"},
     },
@@ -503,10 +556,10 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm", "ur_ak_charm"},
         FreeSlot = true,
-        Bone = "tag_weapon",
+        Bone = "body",
         Offset = {
-            vpos = Vector(0.6, 2, 2.25),
-            vang = Angle(90, -90, -90),
+            vpos = Vector(0.5, 1.3, 3),
+            vang = Angle(90, 0, -90),
         },
     },
     {
@@ -625,6 +678,165 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 93/30},
         },
     },
+   ["reload_30rnd"] = {
+       Source = "reload_30rnd",
+       TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+       LHIK = true,
+       LHIKIn = 0.3,
+       LHIKOut = 0.65,
+       LHIKEaseOut = 0.25,
+       MinProgress = 1.3,
+       SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = ratel, t = 3/30},
+            {s = path .. "magout.ogg", 	 t = 11/30},
+            {s = common .. "magpouch.ogg", t = 26/30},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "struggle.ogg", t = 39/30},
+            {s = path .. "magin.ogg", t = 44/30},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = common .. "grab.ogg", t = 56/30},
+            {s = common .. "shoulder.ogg", t = 61/30},
+       },
+   },
+    ["reload_empty_30rnd"] = {
+        Source = "reload_empty_30rnd",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 57/30},
+            {s = path .. "magin.ogg", t = 62/30},
+            {s = rottle,  t = 75/30},
+            {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
+            {s = common .. "grab.ogg", t = 92/30},
+            {s = common .. "shoulder.ogg", t = 93/30},
+        },
+    },
+   ["reload_10rnd"] = {
+       Source = "reload_10rnd",
+       TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+       LHIK = true,
+       LHIKIn = 0.3,
+       LHIKOut = 0.65,
+       LHIKEaseOut = 0.25,
+       MinProgress = 1.3,
+       SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = ratel, t = 3/30},
+            {s = path .. "magout.ogg", 	 t = 11/30},
+            {s = common .. "magpouch.ogg", t = 26/30},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "struggle.ogg", t = 39/30},
+            {s = path .. "magin.ogg", t = 44/30},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = common .. "grab.ogg", t = 56/30},
+            {s = common .. "shoulder.ogg", t = 61/30},
+       },
+   },
+    ["reload_empty_10rnd"] = {
+        Source = "reload_empty_10rnd",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 57/30},
+            {s = path .. "magin.ogg", t = 62/30},
+            {s = rottle,  t = 75/30},
+            {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
+            {s = common .. "grab.ogg", t = 92/30},
+            {s = common .. "shoulder.ogg", t = 93/30},
+        },
+    },
+   ["reload_50rnd"] = {
+       Source = "reload_50rnd",
+       TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+       LHIK = true,
+       LHIKIn = 0.3,
+       LHIKOut = 0.65,
+       LHIKEaseOut = 0.25,
+       MinProgress = 1.3,
+       SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = ratel, t = 3/30},
+            {s = path .. "magout.ogg", 	 t = 11/30},
+            {s = common .. "magpouch.ogg", t = 26/30},
+            {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.75},
+            {s = path .. "struggle.ogg", t = 44/30},
+            {s = path .. "magin.ogg", t = 49/30},
+            {s = ratel, t = 1.1+5/30},
+            {s = rottle,  t = 1.15+5/30},
+            {s = common .. "grab.ogg", t = 61/30},
+            {s = common .. "shoulder.ogg", t = 66/30},
+       },
+   },
+    ["reload_empty_50rnd"] = {
+        Source = "reload_empty_50rnd",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 62/30},
+            {s = path .. "magin.ogg", t = 67/30},
+            {s = rottle,  t = 80/30},
+            {s = path .. "chslap.ogg", t = 85/30},
+            {s = ratel,  t = 86/30},
+            {s = common .. "grab.ogg", t = 97/30},
+            {s = common .. "shoulder.ogg", t = 98/30},
+        },
+    },
     ["unjam"] = {
         Source = "jamfix",
         ShellEjectAt = 0.65,
@@ -638,4 +850,12 @@ SWEP.Animations = {
     },
 }
 
-SWEP.Hook_Think = ArcCW.UC.ADSReload
+-- SWEP.Hook_Think = ArcCW.UC.ADSReload
+
+SWEP.Hook_Think = function(wep) 
+    local vm = wep:GetOwner():GetViewModel()
+    
+    vm:SetPoseParameter("short", wep.Attachments[2].Installed == "ur_g3_barrel_8" and 1 or 0)
+
+    ArcCW.UC.ADSReload(wep)
+end
