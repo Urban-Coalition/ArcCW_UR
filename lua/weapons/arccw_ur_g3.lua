@@ -472,7 +472,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_optic"},
-        CorrectivePos = Vector(0, 0, -0.0),
+        CorrectivePos = Vector(0.018, 0, -0.0),
         CorrectiveAng = Angle(0, 0.3, 0.45),
     },
     {
