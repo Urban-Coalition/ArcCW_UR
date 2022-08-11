@@ -1,6 +1,6 @@
 att.PrintName = "G3 Slim Handguard"
 
-att.Description = "Slim handguard made for the G3. Yet again i dont know what to put here."
+att.Description = "Alternative factory handguard influenced by older G3 models. Lighter than the bulkier standard, but marginally more difficult to brace."
 att.AutoStats = true
 
 att.Slot = "ur_g3_handguard"

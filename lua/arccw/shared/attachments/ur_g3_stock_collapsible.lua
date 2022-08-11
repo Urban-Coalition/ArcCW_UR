@@ -1,5 +1,5 @@
 att.PrintName = "G3 Collapsible Stock" -- I just copied the mp5 collapsible stock for the stats.
-att.Description = [[G3 light collapsible stock. Collapsing it changes performance accordingly.]]
+att.Description = [[Collapsible G3 stock seen on later models. Collapsing it changes performance accordingly.]]
 att.AutoStats = true
 att.Slot = {"ur_g3_stock"}
 
