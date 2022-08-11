@@ -1,4 +1,4 @@
-att.PrintName = "HK51 Flashlight Handguard"
+att.PrintName = "Surefire Handguard"
 
 att.Description = "Surefire handguard, custom-fitted for the HK51."
 att.Desc_Cons = {

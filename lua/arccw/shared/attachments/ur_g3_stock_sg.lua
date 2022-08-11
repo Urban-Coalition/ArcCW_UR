@@ -1,4 +1,4 @@
-att.PrintName = "G3 Padded Stock" 
+att.PrintName = "Padded Stock" 
 att.Description = [[Padded stock typically found on the SG1 variant. Increases handling at a tiny cost of speed.]]
 att.AutoStats = true
 att.Slot = {"ur_g3_stock"}

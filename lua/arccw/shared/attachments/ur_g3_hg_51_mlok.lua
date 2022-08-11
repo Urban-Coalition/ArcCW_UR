@@ -1,4 +1,4 @@
-att.PrintName = "HK51 MLOK Handguard"
+att.PrintName = "MLOK Handguard"
 
 att.Description = "Aftermarket hanguard designed for the HK51 Carbine. Light but unwieldy."
 att.Desc_Cons = {
