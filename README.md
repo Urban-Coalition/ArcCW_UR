@@ -1,46 +1,4 @@
 # ArcCW_UR
 urban real  renewal
 
-# TODO
-- AKM:
-	- Sounds: 12g (currently uses UD sounds, we don't want that)
-	- Suppressed sounds: 5.45, 9mm, 308, 12g
-	- Balancing
-	- Cosmetic dovetail mount
-	- Wood RPK stock :pleading_face:
-	- Dong grip normal rework
-	- Some att icons
-- M1911:
-	- Suppressed sounds for all caliber conversions
-	- Att icons
-	- Jam animation
-	- Worldmodel animation (to hide floating mag)
-- SPAS-12:
-	- Comp rear sight texture
-	- Att icons
-	- Find a remodel
-- MP5:
-	- Sounds: 10mm, 40S&W
-	- Att icons
-	- VMT improvements
-	- Stuff missing from the remodel:
-		- Carbine barrel
-		- 40-round mag
-		- Drum mag animation sounds
-		- Wooden handguard and stock
-- PM:
-	- Holster sounds
-	- Textures for conversions
-	- we need to decide what we want from this gun in the first place
-- AWP: .338 suppressed sound
-- M29:
-	- Fire/trigger + fire/cock anim blending
-	- Grip atts
-	- Caliber att balance
-	- Holster sounds
-	- Third person anim state
-- G3:
-	- Textures
-	- Atts
-	- Anims: Wet reload, jam clear, draw/holster
-- DB: just get a new fucking model at this point
+https://trello.com/b/ukOphim9/urban-rewewal
