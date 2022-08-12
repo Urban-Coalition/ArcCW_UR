@@ -100,7 +100,7 @@ SWEP.Sway = 1.1
 
 SWEP.TriggerDelay = true
 
-SWEP.Delay = 60 / 160
+SWEP.Delay = 60 / 180
 SWEP.Num = 1
 SWEP.FiremodeSound = false
 SWEP.Firemodes = {
@@ -348,6 +348,7 @@ SWEP.Animations = {
 
     ["cycle"] = {
         Source = "cocking",
+        MinProgress = 0.5,
         SoundTable = {
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
         }
