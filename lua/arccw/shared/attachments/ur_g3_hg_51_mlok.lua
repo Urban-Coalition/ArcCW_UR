@@ -10,6 +10,10 @@ att.Slot = "ur_g3_handguard"
 
 att.SortOrder = 2
 
+att.ModelOffset = Vector(-21, -2.2, 4.3)
+att.Model = "models/weapons/arccw/ur_g3_lhik_slim.mdl"
+att.LHIK = true
+
 att.HideIfBlocked = true
 
 att.Mult_Sway = .85

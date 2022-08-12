@@ -690,6 +690,36 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 93/30},
         },
     },
+    ["reload_empty_scope"] = {
+        Source = "reload_empty_scope",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 57/30},
+            {s = path .. "magin.ogg", t = 62/30},
+            {s = rottle,  t = 75/30},
+            {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
+            {s = common .. "grab.ogg", t = 92/30},
+            {s = common .. "shoulder.ogg", t = 93/30},
+        },
+    },
    ["reload_30rnd"] = {
        Source = "reload_30rnd",
        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -717,6 +747,36 @@ SWEP.Animations = {
         Source = "reload_empty_30rnd",
         RareSource = "reload_empty_30rnd_rare",
         RareSourceChance = 8,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 57/30},
+            {s = path .. "magin.ogg", t = 62/30},
+            {s = rottle,  t = 75/30},
+            {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
+            {s = common .. "grab.ogg", t = 92/30},
+            {s = common .. "shoulder.ogg", t = 93/30},
+        },
+    },
+    ["reload_empty_30rnd_scope"] = {
+        Source = "reload_empty_scope_30rnd",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.3,
@@ -798,6 +858,36 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 93/30},
         },
     },
+    ["reload_empty_10rnd_scope"] = {
+        Source = "reload_empty_scope_10rnd",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 57/30},
+            {s = path .. "magin.ogg", t = 62/30},
+            {s = rottle,  t = 75/30},
+            {s = path .. "chslap.ogg", t = 80/30},
+            {s = ratel,  t = 81/30},
+            {s = common .. "grab.ogg", t = 92/30},
+            {s = common .. "shoulder.ogg", t = 93/30},
+        },
+    },
    ["reload_50rnd"] = {
        Source = "reload_50rnd",
        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -851,6 +941,36 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 98/30},
         },
     },
+    ["reload_empty_50rnd_scope"] = {
+        Source = "reload_empty_scope_50rnd",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.5,
+        LHIKEaseOut = 0.25,
+        MinProgress = 2.1,
+        LastClip1OutTime = 50/30,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = path .. "chback.ogg", t = 6/30, v = 1.95},
+            {s = path .. "chlock.ogg", t = 13/30, v = 1.95},
+            {s = ratel,  t = 23/30},
+            {s = rottle,  t = 23/30},
+            {s = path .. "magrel.ogg", t = 27/30},
+            {s = path .. "magout.ogg", t = 30/30},
+            {s = common .. "magpouch.ogg", t = 47/30},
+            {s = rottle,  t = 49/30},
+            {s = rottle,  t = 55/30},
+            {s = {common .. "rifle_magdrop_1.ogg",common .. "rifle_magdrop_2.ogg",common .. "rifle_magdrop_3.ogg",common .. "rifle_magdrop_4.ogg",common .. "rifle_magdrop.ogg"}, t = 51/30, v = 0.25},
+            {s = path .. "struggle.ogg", t = 62/30},
+            {s = path .. "magin.ogg", t = 67/30},
+            {s = rottle,  t = 80/30},
+            {s = path .. "chslap.ogg", t = 85/30},
+            {s = ratel,  t = 86/30},
+            {s = common .. "grab.ogg", t = 97/30},
+            {s = common .. "shoulder.ogg", t = 98/30},
+        },
+    },
     ["unjam"] = {
         Source = "jamfix",
         ShellEjectAt = 0.65,
@@ -872,4 +992,21 @@ SWEP.Hook_Think = function(wep)
     vm:SetPoseParameter("short", wep.Attachments[2].Installed == "ur_g3_barrel_8" and 1 or 0)
 
     ArcCW.UC.ADSReload(wep)
+end
+
+SWEP.Hook_SelectReloadAnimation = function(wep, anim) -- not in atts cause _scope wont work
+    local seq = anim
+
+    if wep.Attachments[9].Installed == "ur_g3_mag_50" then
+        seq = seq .. "_50rnd"
+    elseif wep.Attachments[9].Installed == "ur_g3_mag_10" then
+        seq = seq .. "_10rnd"
+    elseif wep.Attachments[9].Installed == "ur_g3_mag_40_556" or wep.Attachments[3].Installed == "ur_g3_rec_hk33" and !wep.Attachments[9].Installed then
+        seq = seq .. "_30rnd"
+    end
+    if anim == "reload_empty" and wep.Attachments[1].Installed then
+        seq = seq .. "_scope"
+    end
+
+    return seq
 end

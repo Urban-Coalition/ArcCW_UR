@@ -23,6 +23,6 @@ att.Mult_MalfunctionMean = 1.5
 
 att.RequireFlags = {"cal_556"}
 
-att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim
-end
+-- att.Hook_SelectReloadAnimation = function(wep, anim)
+--     return anim
+-- end

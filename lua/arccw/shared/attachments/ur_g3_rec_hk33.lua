@@ -73,6 +73,6 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
 end
 
 
-att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_30rnd"
-end
+-- att.Hook_SelectReloadAnimation = function(wep, anim)
+--     return anim .. "_30rnd"
+-- end
