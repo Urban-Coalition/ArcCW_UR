@@ -415,6 +415,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     local muzzle = atts[5].Installed
     local ub = atts[6].Installed or atts[15].Installed
     local optic = atts[1].Installed
+    local charm = atts[14].Installed
 
     local hgind = hgbg[hg] or 0
     
@@ -438,7 +439,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 
     vm:SetBodygroup(9, !muzzle and muzzlebg[barrel] or 3)
 
-    vm:SetBodygroup(10, optic and (opticbg[optic] or 1) or 0)
+    vm:SetBodygroup(10, (optic or charm == "ur_mp5_optic_mount") and (opticbg[optic] or 1) or 0)
 
     vm:SetBodygroup(8, ub and (ubmountbg[hg] or 1) or 0)
 end
@@ -566,7 +567,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm", "ur_ak_charm"},
+        Slot = {"charm", "fml_charm", "mp5_charm"},
         FreeSlot = true,
         Bone = "body",
         Offset = {
