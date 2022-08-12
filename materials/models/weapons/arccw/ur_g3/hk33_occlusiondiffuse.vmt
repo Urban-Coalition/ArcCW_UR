@@ -8,7 +8,7 @@
 	"$phongexponenttexture"       	"models\weapons\arccw\ur_g3\placeholders\hk33_g"
 
 	"$envmap" 			"env_cubemap"
-
+	"$color2" "[1.7 1.7 1.7]"
 	"$nocull" 			"1"
 	"$basemapalphaenvmapmask" 	"1"
 	"$normalmapalphaphongmask"    	"1"
@@ -25,7 +25,6 @@
 	//"$basetexture"			"models\weapons\hk33\hk33_d"
    	//"$bumpmap"   			"models\weapons\hk33\hk33_n"
 
-	"$nocull" "1"
 
 	// PHONG SHADING
 	//$phong                      	1
