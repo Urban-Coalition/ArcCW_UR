@@ -100,7 +100,7 @@ SWEP.Sway = 1.1
 
 SWEP.TriggerDelay = true
 
-SWEP.Delay = 60 / 180
+SWEP.Delay = 60 / 160
 SWEP.Num = 1
 SWEP.FiremodeSound = false
 SWEP.Firemodes = {
@@ -294,6 +294,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        Time = 0.7,
         MinProgress = .4,
         SoundTable = {
             {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
@@ -302,6 +303,7 @@ SWEP.Animations = {
     },
     ["draw_cocked"] = {
         Source = "draw_cocked",
+        Time = 0.7,
         MinProgress = .4,
         SoundTable = {
             {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
@@ -310,16 +312,18 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
+        Time = 0.5,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.12}, -- Not Temporary
         },
     },
     ["holster_cocked"] = {
         Source = "holster_cocked",
+        Time = 0.5,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.12}, -- Not Temporary
         },
     },
 
@@ -340,7 +344,7 @@ SWEP.Animations = {
 
     ["trigger"] = {
         Source = "trigger",
-        Time = 0.15,
+        Time = 0.12,
         SoundTable = {
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0 }
         },
