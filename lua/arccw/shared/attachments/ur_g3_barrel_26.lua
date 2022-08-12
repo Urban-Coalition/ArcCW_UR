@@ -1,5 +1,5 @@
 att.PrintName = "26\" PSG-1 Barrel"
-att.Description = "Long barrel for the PSG-1 sniper rifle. Drastically impoves accuracy at the cost of firerate. Also lacks an iron sight."
+att.Description = "Long barrel and handguard assembly for the PSG-1 sniper rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned for long range usage, this barrel lacks iron sights."
 att.Slot = "ur_g3_barrel"
 att.Desc_Cons = {
     "uc.nofs",
@@ -11,11 +11,13 @@ att.SortOrder = 26
 att.Mult_SightTime = 1.2
 att.Add_BarrelLength = 6
 att.Mult_SightedSpeedMult = 0.9
+att.Mult_Sway = 1.5
 
-att.Mult_Recoil = 0.8
-att.Mult_AccuracyMOA = 0.7
-att.Mult_Range = 1.5
-att.Mult_RPM = 0.5
+att.Mult_Recoil = 0.75
+att.Mult_AccuracyMOA = 0.5
+att.Mult_RangeMin = 2
+att.Mult_Range = 1.25
+att.Mult_RPM = 360 / 400
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then
