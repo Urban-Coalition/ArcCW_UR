@@ -86,8 +86,12 @@ $sequence "fire" {
 
 $sequence "dryfire" {
     "anims/dryfire.smd"
-    "anims/dryfire.smd"
-	blend "sights" 0 1
+    fps 60
+    snap
+}
+
+$sequence "dryfire_sact" {
+    "anims/dryfire_sact.smd"
     fps 60
     snap
 }

@@ -149,8 +149,8 @@ SWEP.MagID = "deagle"
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.925
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.375
+SWEP.SightedSpeedMult = 0.9
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.8
 
 -- Length --
@@ -278,6 +278,9 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 SWEP.RevolverReload = true
 
 SWEP.Hook_TranslateAnimation = function(wep,anim)
+    if wep:GetCurrentFiremode().Override_ManualAction and anim == "fire_dry" then
+        return "fire_dry_sact"
+    end
     if wep:GetCurrentFiremode().Override_ManualAction and anim ~= "fire" then
         return anim .. "_cocked"
     end
@@ -339,7 +342,13 @@ SWEP.Animations = {
         SoundTable = {
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
-        MinProgress = .3,
+    },
+    ["fire_dry_sact"] = {
+        Source = "dryfire_sact",
+        SoundTable = {
+            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 },
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.25 + 0.2 },
+        },
     },
 
     ["trigger"] = {
