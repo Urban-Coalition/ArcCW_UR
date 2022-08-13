@@ -1,4 +1,12 @@
 # ArcCW_UR
-urban real  renewal
-
-https://trello.com/b/ukOphim9/urban-rewewal
+Second major weapon pack for Garry's Mod  
+https://trello.com/b/ukOphim9/urbna
+- AI AW
+- AKM
+- IMI Desert Eagle
+- Colt M1911
+- H&K MP5
+- H&K G3A3
+- Makarov PM
+- Franchi SPAS-12
+- S&W Model 329PD
