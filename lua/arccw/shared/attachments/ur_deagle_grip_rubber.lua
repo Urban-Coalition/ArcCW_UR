@@ -8,7 +8,7 @@ att.Description = "Creates higher friction against the shooter's hands, dampenin
 att.Slot = "ur_deagle_grip"
 att.AutoStats = true
 
-att.Mult_Recoil = 0.9825
+att.Mult_Recoil = 0.95
 att.Mult_RecoilSide = 0.9
 att.Mult_SightedSpeedMult = 0.95
 

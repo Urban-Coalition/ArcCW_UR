@@ -8,8 +8,8 @@ att.Description = "Premium and hand-carved. Classy and smooth, but more difficul
 att.Slot = "ur_deagle_grip"
 att.AutoStats = true
 
-att.Mult_Recoil = 1.0125
+att.Mult_Recoil = 1.05
 att.Mult_RecoilSide = 1.1
-att.Mult_SightTime = 0.975
+att.Mult_SightTime = 0.95
 
 att.ActivateElements = {"ur_deagle_grip_wooden"}
