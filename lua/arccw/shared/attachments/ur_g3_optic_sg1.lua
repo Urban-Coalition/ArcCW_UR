@@ -15,7 +15,7 @@ att.AutoStats = true
 att.Slot = {"ur_g3_optic"}
 
 att.Model = "models/weapons/arccw/atts/g3_optic_sg1.mdl"
-att.ModelOffset = Vector(0, 0, 0)
+att.ModelOffset = Vector(0.55, 0, -1.7)
 
 att.AdditionalSights = {
     {
@@ -30,7 +30,7 @@ att.AdditionalSights = {
             Holosight = true,
             HolosightReticle = Material("hud/scopes/SG1_reticle.png", "mips smooth"),
             HolosightNoFlare = true,
-            HolosightSize = 10.5,
+            HolosightSize = 9.5,
             HolosightPiece = "models/weapons/arccw/atts/g3_optic_sg1_hsp.mdl",
             HolosightBlackbox = true,
             HolosightMagnification = 4.5,

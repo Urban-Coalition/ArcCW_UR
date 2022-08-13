@@ -371,17 +371,6 @@ SWEP.AttachmentElements = {
             },
         }
     },
-
-    ["ur_g3_optic_psg1"] = {
-        VMBodygroups = {
-            {ind = 10, bg = 2},
-        },
-    },
-    ["ur_g3_optic_sg1"] = {
-        VMBodygroups = {
-            {ind = 10, bg = 3},
-        },
-    }
 }
 
 local hgbg = {
@@ -445,7 +434,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 
     vm:SetBodygroup(9, !muzzle and muzzlebg[barrel] or 3)
 
-    vm:SetBodygroup(10, (optic or charm == "ur_mp5_optic_mount") and (opticbg[optic] or 1) or 0)
+    vm:SetBodygroup(10, (optic or charm == "ur_mp5_optic_mount") and (opticbg[optic] and 0 or 1) or 0)
 
     vm:SetBodygroup(8, ub and (ubmountbg[hg] or 1) or 0)
 end

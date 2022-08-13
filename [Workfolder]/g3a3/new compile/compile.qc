@@ -97,8 +97,6 @@ $bodygroup "optic" //  id 10
 {
     blank // 0
     studio "top rail.smd" // 1
-    studio "top scope psg.smd" // 2
-    studio "top scope sg1.smd" // 3
 }
 
 
