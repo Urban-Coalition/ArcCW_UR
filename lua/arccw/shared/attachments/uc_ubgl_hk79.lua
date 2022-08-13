@@ -88,7 +88,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     -- hacky
     if class == "arccw_uc_40mm_hv" then
-        vel = vel * 1.75
+        vel = vel * 2
         dmg = dmg * 0.85
     elseif class == "arccw_uc_40mm_dp" then
         dmg = dmg * 0.6
