@@ -20,6 +20,6 @@ att.Mult_ShootSpeedMult = 0.95
 
 att.RequireFlags = {"cal_556"}
 
-att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_30rnd"
-end
+-- att.Hook_SelectReloadAnimation = function(wep, anim)
+--     return anim .. "_30rnd"
+-- end

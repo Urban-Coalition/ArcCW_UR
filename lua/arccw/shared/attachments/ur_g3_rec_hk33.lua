@@ -13,10 +13,10 @@ att.Override_Ammo = "smg1"
 att.Override_Trivia_Calibre = "5.56x45mm NATO"
 att.Override_Trivia_Class = "Assault Rifle"
 
-att.Mult_RPM = 1.083 -- 650 rpm
+att.Mult_RPM = 650 / 520 -- 650 rpm
 att.Mult_SightedSpeedMult = 1.05
 att.Mult_ReloadTime = .95
-att.Mult_Recoil = .4
+att.Mult_Recoil = 0.3
 att.Mult_HipDispersion = .75
 
 att.Mult_Penetration = 14 / 20
@@ -27,6 +27,19 @@ att.Override_ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
 att.Override_ShellScale = 1
 
 att.GivesFlags = {"cal_556"}
+
+att.Override_Firemodes_Priority = 0.5
+att.Override_Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = 1,
+    },
+    {
+        Mode = 0
+    }
+}
 
 local path = ")^weapons/arccw_ur/g3/"
 local path1 = ")^weapons/arccw_ur/ak/"
@@ -60,6 +73,6 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
 end
 
 
-att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_30rnd"
-end
+-- att.Hook_SelectReloadAnimation = function(wep, anim)
+--     return anim .. "_30rnd"
+-- end

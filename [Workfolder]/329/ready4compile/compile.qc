@@ -86,8 +86,12 @@ $sequence "fire" {
 
 $sequence "dryfire" {
     "anims/dryfire.smd"
-    "anims/dryfire.smd"
-	blend "sights" 0 1
+    fps 60
+    snap
+}
+
+$sequence "dryfire_sact" {
+    "anims/dryfire_sact.smd"
     fps 60
     snap
 }
@@ -131,15 +135,17 @@ $sequence "cocking" {
     "anims/cocking.smd"
     "anims/cocking.smd"
 	blend "sights" 0 1
-    fadein 0
+    fadein 0.05
     fadeout 0.2
-    fps 55
+    fps 60
 }
 $sequence "decocking" {
     "anims/decocking.smd"
     "anims/decocking.smd"
 	blend "sights" 0 1
-    fps 50
+    fadein 0.05
+    fadeout 0.2
+    fps 60
 }
 
 

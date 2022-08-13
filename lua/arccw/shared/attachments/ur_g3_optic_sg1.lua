@@ -14,8 +14,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"ur_g3_optic"}
 
-att.Model = "models/weapons/arccw/scope_nomodel.mdl"
-att.ModelOffset = Vector(-5.7, 0, 1.18)
+att.Model = "models/weapons/arccw/atts/g3_optic_sg1.mdl"
+att.ModelOffset = Vector(0, 0, 0)
 
 att.AdditionalSights = {
     {
@@ -28,10 +28,10 @@ att.AdditionalSights = {
         ScopeMagnification = 4.5,
         HolosightData = {
             Holosight = true,
-            HolosightReticle = Material("hud/scopes/uc_pso.png", "mips smooth"),
+            HolosightReticle = Material("hud/scopes/SG1_reticle.png", "mips smooth"),
             HolosightNoFlare = true,
             HolosightSize = 10.5,
-            HolosightPiece = "models/weapons/arccw/atts/ur_pso1_hsp.mdl",
+            HolosightPiece = "models/weapons/arccw/atts/g3_optic_sg1_hsp.mdl",
             HolosightBlackbox = true,
             HolosightMagnification = 4.5,
             HolosightMagnificationMin = 1.5,
@@ -44,7 +44,7 @@ att.AdditionalSights = {
 -- att.Holosight = true
 -- att.HolosightReticle = Material("mifl_tarkov_reticle/dot.png", "mips smooth")
 
-att.HolosightPiece = "models/weapons/arccw/g3_optic_sg1_hsp.mdl"
+att.HolosightPiece = "models/weapons/arccw/atts/g3_optic_sg1_hsp.mdl"
 -- att.HolosightNoFlare = true
 -- att.HolosightSize = 1
 -- att.HolosightBone = "holosight"

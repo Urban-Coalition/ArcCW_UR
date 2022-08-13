@@ -149,8 +149,8 @@ SWEP.MagID = "deagle"
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.925
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.375
+SWEP.SightedSpeedMult = 0.9
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.8
 
 -- Length --
@@ -278,6 +278,9 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 SWEP.RevolverReload = true
 
 SWEP.Hook_TranslateAnimation = function(wep,anim)
+    if wep:GetCurrentFiremode().Override_ManualAction and anim == "fire_dry" then
+        return "fire_dry_sact"
+    end
     if wep:GetCurrentFiremode().Override_ManualAction and anim ~= "fire" then
         return anim .. "_cocked"
     end
@@ -294,6 +297,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        Time = 0.7,
         MinProgress = .4,
         SoundTable = {
             {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
@@ -302,6 +306,7 @@ SWEP.Animations = {
     },
     ["draw_cocked"] = {
         Source = "draw_cocked",
+        Time = 0.7,
         MinProgress = .4,
         SoundTable = {
             {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
@@ -310,16 +315,18 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
+        Time = 0.5,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.12}, -- Not Temporary
         },
     },
     ["holster_cocked"] = {
         Source = "holster_cocked",
+        Time = 0.5,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.12}, -- Not Temporary
         },
     },
 
@@ -335,12 +342,18 @@ SWEP.Animations = {
         SoundTable = {
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
-        MinProgress = .3,
+    },
+    ["fire_dry_sact"] = {
+        Source = "dryfire_sact",
+        SoundTable = {
+            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 },
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.25 + 0.2 },
+        },
     },
 
     ["trigger"] = {
         Source = "trigger",
-        Time = 0.15,
+        Time = 0.12,
         SoundTable = {
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0 }
         },
@@ -348,6 +361,7 @@ SWEP.Animations = {
 
     ["cycle"] = {
         Source = "cocking",
+        MinProgress = 0.5,
         SoundTable = {
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
         }
@@ -514,9 +528,9 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.65, -4.1, 8.5),
-            vang = Angle(90, 0, -100),
+            vpos = Vector(7.1, -2.4, -0.1),
+            vang = Angle(0, 0, -90),
         },
-        VMScale = Vector(.6,.6,.6),
+        VMScale = Vector(.75,.75,.75),
     },
 }

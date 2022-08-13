@@ -10,7 +10,7 @@
 	//"$halflambert"              "1"
 	
 // map interp
-    "$color2"					"[0.82 0.71 0.57]" // vector -- rgb tinting of the basetexture
+    "$color2"					"[0.5  0.435 0.325]" // vector -- rgb tinting of the basetexture
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
