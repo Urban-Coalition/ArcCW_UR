@@ -456,7 +456,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Slot = {"ur_329_barrel"},
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/acwatt_ur_329_barrel.png","mips smooth"),
         DefaultAttName = "4\" Snubnose Barrel",
         Bone = "Body",
         Offset = {
@@ -498,7 +498,7 @@ SWEP.Attachments = {
     {
         PrintName = "Grip",
         DefaultAttName = "Factory Grip",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_grip_plastic.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/acwatt_ur_329_grip.png","mips smooth"),
         Slot = "ur_329_grip"
     },
     {
