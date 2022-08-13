@@ -187,7 +187,7 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.37, -5, 0.68),
+    Pos = Vector(-3.37, 2, 0.68),
     Ang = Angle(0, 0, 2),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight

@@ -190,7 +190,7 @@ SWEP.BulletBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.3, -1, 0.9),
+    Pos = Vector(-2.3, 7, 0.9),
     Ang = Angle(0, 0.02, 0),
     Magnification = 1.1,
     ViewModelFOV = 65,
