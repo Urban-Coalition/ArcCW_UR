@@ -1,6 +1,6 @@
 att.PrintName = "Hensoldt ZF 6x42 PSG1"
 att.AbbrevName = "PSG-1 Optic (6x)"
-att.Icon = Material("entities/att/pso1.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_ur_g3_optic_psg1.png", "mips smooth")
 att.Description = "Long range combat scope for extreme distance combat.\nExclusive to the G3 pattern."
 
 att.SortOrder = 300
