@@ -1,7 +1,7 @@
 att.PrintName = "GP-25 Underbarrel Grenade Launcher"
 att.AbbrevName = "GP-25 Grenade Launcher"
 att.Icon = Material("entities/att/acwatt_uc_ubgl_gp25.png", "mips smooth")
-att.Description = "Single-shot long-barreled underbarrel grenade launcher designed for the AK. The caseless"
+att.Description = "Single-shot long-barreled underbarrel grenade launcher designed for the AK. The VOG-25 caseless projectiles can be reloaded faster, but hold less propellant and explosive yield."
 
 att.SortOrder = -100000
 
