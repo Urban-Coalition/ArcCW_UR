@@ -329,7 +329,6 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
-            {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
@@ -623,6 +622,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "pump",
+        MergeSlots = {13},
         Offset = {
             vpos = Vector(0, -5, .1),
             vang = Angle(90, -90, -90),
@@ -679,6 +679,16 @@ SWEP.Attachments = {
             vpos = Vector(0.6, .5, -1.5),
             vang = Angle(90, -90, -90),
         },
+    },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "pump",
+        Offset = {
+            vpos = Vector(0, -5, 1.25),
+            vang = Angle(90, -90, -90),
+        },
+        Hidden = true,
     },
 }
 
