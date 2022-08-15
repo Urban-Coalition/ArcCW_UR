@@ -623,6 +623,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "pump",
+        MergeSlots = {13},
         Offset = {
             vpos = Vector(0, -5, .1),
             vang = Angle(90, -90, -90),
@@ -679,6 +680,16 @@ SWEP.Attachments = {
             vpos = Vector(0.6, .5, -1.5),
             vang = Angle(90, -90, -90),
         },
+    },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "pump",
+        Offset = {
+            vpos = Vector(0, -5, 1.25),
+            vang = Angle(90, -90, -90),
+        },
+        Hidden = true,
     },
 }
 
