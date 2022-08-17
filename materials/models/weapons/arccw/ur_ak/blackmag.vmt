@@ -14,7 +14,7 @@
 
 // phong (convar: mat_phong "bool")
 	"$phong"					"1" // bool -- phong enabler, have this on 1 if you have a central neural system
-	"$phongboost"				"10" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
+	"$phongboost"				"15" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
 	"$phongfresnelranges"		"[0.32 0.72 0.99]" // vector -- phong fresnel ranges, default are [0 0.5 1]
 	"$phongalbedotint" 			"1" // bool -- enables basetexture tinting of the phong's color but masks it with phongexponent's green channel
 

@@ -5,11 +5,11 @@
 	"$phongexponenttexture"			"models\weapons\arccw\ur_ak\ak12\body_e"
 
 	"$envmap"						"env_cubemap"
-	"$envmaptint"					"[0.25 0.25 0.25]"
+	"$envmaptint"					"[0.05 0.05 0.05]"
 
 	"$phong"						"1"
 	"$phongboost"					"55"
 	"$phongfresnelranges"			"[0.88 0.4 1]"
 	"$phongalbedotint" 				"1"
-	"$color2" "[1.8 1.8 1.8]"
+	"$color2" "[2 2 2]"
 }

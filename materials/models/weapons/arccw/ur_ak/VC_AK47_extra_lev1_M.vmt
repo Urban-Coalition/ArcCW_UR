@@ -8,14 +8,15 @@
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 	"$nocull"	"1"
 // map interp
-	"$color2"					"[0.35 0.35 0.35]" // vector -- rgb tinting of the basetexture
+	"$color2"					"[0.4 0.4 0.4]" // vector -- rgb tinting of the basetexture
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
 
 // phong (convar: mat_phong "bool")
 	"$phong"					"1" // bool -- phong enabler, have this on 1 if you have a central neural system
-	"$phongboost"				"8" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
-	"$phongfresnelranges"		"[0.32 0.72 0.99]" // vector -- phong fresnel ranges, default are [0 0.5 1]
+	"$phongboost"				"15" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
+	"$phongfresnelranges"		"[0.5 1.5 3.0]" // vector -- phong fresnel ranges, default are [0 0.5 1]
 	"$phongalbedotint" 			"1" // bool -- enables basetexture tinting of the phong's color but masks it with phongexponent's green channel
+    "$phongtint" "[0.1 0.1 0.12]"
 
 // rimlight (convar: mat_rimlight "bool")
 	"$rimlight"					"1" // bool -- rimlight enabler, doesn't have to be on, use if needed

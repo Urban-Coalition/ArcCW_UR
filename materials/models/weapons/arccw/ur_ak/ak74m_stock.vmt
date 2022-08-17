@@ -12,10 +12,11 @@
 	"$basemapalphaenvmapmask" "1"
 
 	"$phong" "1"
-	"$phongboost" "0.2"
+	"$phongboost" "15"
 	"$phongalbedotint" "1"
-	"$phongfresnelranges" "[0.5 1 1]"
-	
+	"$phongfresnelranges"		"[0.32 0.72 0.99]"
+	"$phongtint" "[0.05 0.05 0.05]"
+	"$phongexponent" "25"
 	"$rimlight" "1"
 	"$rimlightexponent" "4"
 	"$rimmask" "1"

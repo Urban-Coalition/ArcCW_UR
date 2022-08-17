@@ -19,6 +19,6 @@
 // rimlight (convar: mat_rimlight "bool")
 	"$rimlight"					"1" // bool -- rimlight enabler, doesn't have to be on, use if needed
 	"$rimmask"					"1" // bool -- rimlight masking through exponent's alpha channel (use alpha vtf format)
-	"$rimlightboost"			"1" // float -- rimlight intensity coefficient
+	"$rimlightboost"			"0.25" // float -- rimlight intensity coefficient
 	"$rimlightexponent"			"33" // float -- rimlight exponent
 }
