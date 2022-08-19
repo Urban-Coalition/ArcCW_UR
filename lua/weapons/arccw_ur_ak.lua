@@ -1099,7 +1099,7 @@ SWEP.Animations = {
             {s = ratel, t = 1.1},
             {s = common .. "rifle_magdrop.ogg", t = 1.15},
             {s = rottle,  t = 1.15},
-            {s = path .. "chback.ogg",    t = 1.9},
+            {s = path .. "chback.ogg",    t = 1.8},
             {s = path .. "chamber.ogg",    t = 2.0},
             {s = common .. "grab.ogg", t = 2.4},
             {s = common .. "shoulder.ogg", t = 2.5},
