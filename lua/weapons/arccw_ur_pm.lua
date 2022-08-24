@@ -33,9 +33,9 @@ SWEP.TrueName = "PM"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Basic Soviet pistol that can be found around the globe. Better known by its colloquial moniker, the "Makarov," after its designer. Although it lacks the modularity of modern sidearms, the weapon and its many derivatives remain trustworthy among both police and irregular forces.
+SWEP.Trivia_Desc = [[Basic Soviet pistol designed for mass production. Better known by its colloquial moniker, the "Makarov," after its designer. Although it lacks the modularity of contemporary sidearms, the Makarov and its many derivatives remain in use by both police and irregular forces around the globe.
 
-With low offensive potential but very compact handling, its main use is as an emergency backup weapon.]]
+Weak offensive potential with a quick draw. Its main use is as an emergency backup weapon.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
 SWEP.Trivia_Calibre = "9x18mm Makarov"
 SWEP.Trivia_Mechanism = "Blowback"
@@ -188,7 +188,7 @@ SWEP.WorldModelOffset = {
 
 local path = ")^weapons/arccw_ur/pm/"
 local path1 = ")^weapons/arccw_ud/glock/"
-local path2 = ")^weapons/arccw_ud/uzi/"
+local path2 = ")^weapons/arccw_ur/1911/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
@@ -285,7 +285,7 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 -- CHAN_ITEM doesn't sound too right
 local ci = CHAN_AUTO
-local ratel = {path1 .. "pistol_rattle_1.ogg", path1 .. "pistol_rattle_2.ogg", path1 .. "pistol_rattle_3.ogg"}
+local ratel = {common .. "pistol_rattle_1.ogg", common .. "pistol_rattle_2.ogg", common .. "pistol_rattle_3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.Animations = {
@@ -301,16 +301,20 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        Time = .6,
+        MinProgress = .3,
         SoundTable = {
-            {s = path1 .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
+            {s = "weapons/arccw/firemode.wav", t = 0.15},
         },
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         SoundTable = {
-            {s = path1 .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path2 .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
+            {s = "weapons/arccw/firemode.wav", t = 0.15},
         },
     },
     ["holster"] = {
@@ -324,7 +328,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
             {s = "weapons/arccw/firemode.wav", t = 0.15},
-            {s = path1 .. "holster.ogg", t = 0.25}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
     ["holster_empty"] = {
@@ -337,19 +341,19 @@ SWEP.Animations = {
         Time = 20/30,
         SoundTable = {
             {s = common .. "cloth_2.ogg", t = 0},
-            {s = path1 .. "holster.ogg", t = 0.25}, -- Not Temporary
+            {s = path2 .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
     ["fire"] = {
         Source = "fire",
         ShellEjectAt = 0.03,
-        Time = .5,
+        Time = .65,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         ShellEjectAt = 0.03,
-        Time = .5,
+        Time = .65,
         SoundTable = {
             {s = path1 .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
@@ -357,13 +361,13 @@ SWEP.Animations = {
     ["fire_stock"] = {
         Source = "fire_stock",
         ShellEjectAt = 0.03,
-        Time = .5,
+        Time = .65,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty_stock"] = {
         Source = "fire_empty_stock",
         ShellEjectAt = 0.03,
-        Time = .5,
+        Time = .65,
         SoundTable = {
             {s = path1 .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
@@ -433,9 +437,10 @@ SWEP.Animations = {
         LHIKOut = 0.3,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = rattel, t = 0.3},
-            {s = path .. "magout.ogg",        t = 0.3, c = ci},
-            {s = rattel, t = 0.5},
+            --{s = ratel, t = 0.3},
+            {s = path .. "magstruggle.ogg",        t = 0.3, c = ci},
+            {s = ratel, t = 0.5},
+            {s = path .. "magout.ogg",        t = 0.5, c = ci},
             {s = common .. "magpouch_pull_small.ogg", t = 0.8},
             {s = common .. "pistol_magdrop.ogg",  t = .8},
             {s = rottle, t = 1.15},
