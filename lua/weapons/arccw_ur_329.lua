@@ -30,7 +30,7 @@ SWEP.TrueName = "Model 329PD"
 -- Trivia --
 
 SWEP.Trivia_Class = "Revolver"
-SWEP.Trivia_Desc = [[Though commonly viewed as archaic, revolvers maintain a large following today for their reliability, accuracy, and evocative sentiment. This model was famously the "most powerful handgun in the world" at its time, though its usurpers have not changed the fact that it packs a mean punch.
+SWEP.Trivia_Desc = [[Though commonly viewed as archaic, revolvers maintain a large following today for their reliability, accuracy, and evocative sentiment. This model was famously "the most powerful handgun in the world" at its time, though its usurpers have not changed the fact that it packs a mean punch.
 
 Has a heavy trigger pull. Single-action mode removes trigger delay and increases accuracy, but requires manual cocking of the hammer.]]
 SWEP.Trivia_Manufacturer = "Sneed & Walwakashi"
