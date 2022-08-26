@@ -465,7 +465,7 @@ SWEP.Hook_NameChange = function(wep)
         end
     elseif rec == "default" then -- not "else" here to allow the base's PSG1 namechange to happen
         if trueNames then
-            if atts[13].Installed == "arccw_uc_fg_civvy" then return "HK91" end
+            if atts[13].Installed == "uc_fg_civvy" then return "HK91" end
 
             local bLookupTrue = {
                 ["8"] = "HK51",
