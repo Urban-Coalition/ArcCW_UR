@@ -439,6 +439,49 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     vm:SetBodygroup(8, ub and (ubmountbg[hg] or 1) or 0)
 end
 
+SWEP.Hook_NameChange = function(wep)
+    local atts = wep.Attachments
+    local barr = string.Replace(atts[2].Installed or "default","ur_g3_barrel_","")
+    local rec = string.Replace(atts[3].Installed or "default","ur_g3_rec_","")
+    local stock = string.Replace(atts[8].Installed or "default","ur_g3_stock_","")
+    local trueNames = GetConVar("arccw_truenames"):GetBool()
+
+    
+    if rec == "hk33" then
+        if trueNames then
+            local bLookupTrue = {
+                ["8"] = "HK53",
+                ["12"] = "HK33KA3",
+            }
+    
+            if bLookupTrue[barr] then
+                return bLookupTrue[barr]
+            elseif atts[1].Installed == "ur_g3_optic_sg1" then
+                return "HK33SG/1"
+            else
+                return (stock == "collapsible" and "HK33A3") or "HK33A2"
+            end
+        end
+    elseif rec == "default" then -- not "else" here to allow the base's PSG1 namechange to happen
+        if trueNames then
+            if atts[13].Installed == "arccw_uc_fg_civvy" then return "HK91" end
+
+            local bLookupTrue = {
+                ["8"] = "HK51",
+                ["12"] = "G3KA4",
+            }
+
+            if bLookupTrue[barr] then
+                return bLookupTrue[barr]
+            elseif atts[1].Installed == "ur_g3_optic_sg1" then
+                return "G3SG/1"
+            else
+                return wep.TrueName
+            end
+        end
+    end
+end
+
 SWEP.O_Hook_UC_UseClassicHK79Mount = function(wep, data)
     local atts = wep.Attachments
     local barrel = atts[2].Installed
@@ -458,6 +501,7 @@ SWEP.WorldModelOffset = {
 }
 
 SWEP.MirrorVMWM = true
+
 
 SWEP.Attachments = {
     {
