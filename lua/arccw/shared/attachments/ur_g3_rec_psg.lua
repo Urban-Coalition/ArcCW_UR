@@ -1,5 +1,5 @@
 att.PrintName = "PSG-1 Receiver"
-att.Description = "Semi-automatic PSG-1 reciever. Comes with enhanced performance and a comfortable wooden grip that improves handling."
+att.Description = "Infamously expensive semi-automatic reciever. Comes with sublime long-range performance and a comfortable wooden grip that improves handling."
 att.Slot = "ur_g3_rec"
 att.Desc_Cons = {
     "uc.semionly"
@@ -25,3 +25,5 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+
+att.Override_Trivia_Class = "Sniper Rifle"
