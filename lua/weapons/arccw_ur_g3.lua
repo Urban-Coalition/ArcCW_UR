@@ -384,6 +384,7 @@ local muzzlebg = {
     ["ur_g3_barrel_12"] = 1,
     ["ur_g3_barrel_15"] = 4,
     ["ur_g3_barrel_26"] = 3,
+    ["default"] = 0,
 }
 local opticbg = {
     ["ur_g3_optic_psg1"] = 2,
@@ -399,7 +400,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     if !IsValid(vm) then return end
 
     local atts = wep.Attachments
-    local barrel = atts[2].Installed
+    local barrel = atts[2].Installed or "default"
     local hg = atts[4].Installed
     local muzzle = atts[5].Installed
     local ub = atts[6].Installed or atts[15].Installed
