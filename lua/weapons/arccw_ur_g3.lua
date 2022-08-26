@@ -477,7 +477,7 @@ SWEP.Hook_NameChange = function(wep)
             elseif atts[1].Installed == "ur_g3_optic_sg1" then
                 return "G3SG/1"
             else
-                return wep.TrueName
+                return (stock == "collapsible" and "G3A4") or wep.TrueName
             end
         end
     end
