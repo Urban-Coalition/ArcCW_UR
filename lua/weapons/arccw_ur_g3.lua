@@ -270,7 +270,7 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1},
             {ind = 3, bg = 2},
         },
-        TrueNameChange = "PSG-1",
+        TrueNameChange = "PSG1",
     },
 
     ["ur_g3_mag_10"] = {
