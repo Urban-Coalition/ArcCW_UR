@@ -26,4 +26,4 @@ att.A_Hook_Add_SightsDispersion = function(wep, data)
 end
 
 
-att.GivesFlags = {"g3_nohg"}
+att.GivesFlags = {"g3_nohg","g3_not8"}

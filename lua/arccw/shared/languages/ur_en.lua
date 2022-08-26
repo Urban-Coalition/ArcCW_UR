@@ -30,3 +30,5 @@ L["ur.329.dact.abbrev"] = "DACT"
 
 L["ur.329.snakeshot.1"] = "Fires 4 pellets instead of one round"
 L["ur.329.snakeshot.2"] = "65MOA Imprecision"
+
+L["ur.g3.8"] = "Accepts MP5 handguards"

@@ -376,8 +376,8 @@ SWEP.AttachmentElements = {
 local hgbg = {
     ["ur_g3_hg_slim"] = 1,
     ["ur_g3_hg_pica"] = 2,
-    ["ur_g3_hg_51_mlok"] = 3,
-    ["ur_g3_hg_51_flash"] = 4,
+    ["ur_mp5_ub_mlok"] = 3,
+    ["ur_mp5_ub_surefire"] = 4,
 }
 local muzzlebg = {
     ["ur_g3_barrel_8"] = 2,
@@ -521,6 +521,7 @@ SWEP.Attachments = {
         Slot = "ur_g3_barrel",
         DefaultAttName = "18\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
+        DefaultFlags = {"g3_not8"}
     },
     {
         PrintName = "Reciever",

@@ -1,4 +1,5 @@
-att.PrintName = "Surefire Handguard"
+att.PrintName = "MP5 Surefire Handguard"
+att.AbbrevName = "Surefire Handguard"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_ris.png", "smooth mips")
 att.Description = "Alternative handguard with an integrated flashlight."
@@ -10,7 +11,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 
-att.Slot = "ur_mp5_hg"
+att.Slot = {"ur_mp5_hg","ur_g3_handguard"}
 att.SortOrder = 998
 
 att.Model = "models/weapons/arccw/atts/ud_flashlight_1.mdl"
@@ -40,4 +41,5 @@ att.ToggleStats = {
 }
 
 att.GivesFlags = {"hg_surefire","mp5_badhg"} -- badhg flag is temporary until underbarrel rail model is implemented (it disables use of underbarrel atts)
-att.ExcludeFlags = {"barrel_sd","mp5_kurz"}
+att.ExcludeFlags = {"barrel_sd","mp5_kurz","g3_not8"}
+att.HideIfBlocked = true

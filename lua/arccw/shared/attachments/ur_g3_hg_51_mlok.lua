@@ -23,3 +23,5 @@ att.Mult_Recoil = .9
 
 att.GivesFlags = {"g3_noub"}
 att.RequireFlags = {"g3_hk51hg"}
+
+att.Ignore = true

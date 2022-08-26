@@ -15,3 +15,5 @@ att.Mult_Recoil = 1.15
 att.Mult_AccuracyMOA = 1.5
 att.Mult_Range = 0.5
 att.Mult_RPM = 1.1
+
+att.GivesFlags = {"g3_not8"}

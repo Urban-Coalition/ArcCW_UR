@@ -1,6 +1,9 @@
 att.PrintName = "8\" HK51 Barrel"
-att.Description = "Extremely shortened barrel for the HK51 carbine. Colloqually known as a \"flashbang dispenser,\" the tiny barrel drastically improves firerate.\n\nNot produced by H&K, but as a product of the ingenious American aftermarket. It can take MP5 handguards."
+att.Description = "Extremely shortened barrel for the HK51 carbine. Colloqually known as a \"flashbang dispenser,\" the tiny barrel drastically increases fire rate - for better and for worse.\n\nThe reduced dimensions are compatible with some MP5 furniture."
 att.Slot = "ur_g3_barrel"
+att.Desc_Pros = {
+    "ur.g3.8"
+}
 att.AutoStats = true
 
 att.SortOrder = 8
