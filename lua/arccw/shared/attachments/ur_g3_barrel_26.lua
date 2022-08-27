@@ -1,4 +1,5 @@
-att.PrintName = "26\" PSG-1 Barrel"
+att.PrintName = "PSG-1 26\" Sniper Barrel"
+att.AbbrevName = "26\" Sniper Barrel"
 att.Description = "Long barrel and handguard assembly for the PSG-1 sniper rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned for long range usage, this barrel lacks iron sights."
 att.Slot = "ur_g3_barrel"
 att.Desc_Cons = {

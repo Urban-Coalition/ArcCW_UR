@@ -1,4 +1,5 @@
-att.PrintName = "15\" HK33A2 Barrel"
+att.PrintName = "HK33A2 15\" Assault Barrel"
+att.AbbrevName = "15\" Assault Barrel"
 att.Description = "Standard barrel for the HK33A2 carbine. Improves weapon handling while marginally reducing range."
 att.Slot = "ur_g3_barrel"
 att.AutoStats = true

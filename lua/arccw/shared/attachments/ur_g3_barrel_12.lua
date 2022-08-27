@@ -1,4 +1,5 @@
-att.PrintName = "12\" G3KA4 Barrel"
+att.PrintName = "G3KA4 12\" Carbine Barrel"
+att.AbbrevName = "12\" Carbine Barrel"
 att.Description = "Shortened barrel for the G3KA4 carbine. Improves both fire rate and handling."
 att.Slot = "ur_g3_barrel"
 att.AutoStats = true
