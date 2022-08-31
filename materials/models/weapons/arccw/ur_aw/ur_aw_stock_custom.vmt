@@ -30,6 +30,7 @@
 	//"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
 	//"$envmaptint"				"[ 0.01 0.01 0.01 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
 	
+	"$blendtintcoloroverbase" "-0.02"
 	Proxies {
     		UC_Weapon_Color1 {
        			resultVar $color2

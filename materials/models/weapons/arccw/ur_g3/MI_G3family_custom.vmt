@@ -25,6 +25,7 @@
 	"$rimlightexponent" "15"
 	"$rimmask" "1"
 
+	"$blendtintcoloroverbase" "-0.05"
 	Proxies {
     		UC_Weapon_Color1 {
        			resultVar $color2

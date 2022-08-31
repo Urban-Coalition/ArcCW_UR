@@ -26,6 +26,8 @@
 	"$envmaptint" "[0.025 0.025 0.025]"
 	"$color2" "[1 1 1]"
 
+	"$blendtintcoloroverbase" "-0.025"
+
 	Proxies {
 			UC_Weapon_Color1 {
 				resultVar $color2
