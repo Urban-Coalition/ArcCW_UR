@@ -1,7 +1,7 @@
 att.PrintName = "11\" EOD Barrel"
 
 att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
-att.Description = "Extended barrel and handguard assembly with integrated muzzle break to assist in mounting underbarrel weapons. Comfortable to shoot, but performs poorly when hip firing. The mount also incorporates a large muzzle brake which protects underbarrel weapons from the muzzle flash of the MP5.\nDecreases muzzle rise, but performs poorly when hip firing."
+att.Description = "Extended barrel and handguard assembly with a massive integrated muzzle brake to protect underbarrel weapons.\nDecreases muzzle rise, but performs poorly when hip firing."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
