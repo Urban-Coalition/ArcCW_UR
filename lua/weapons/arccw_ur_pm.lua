@@ -60,7 +60,7 @@ SWEP.WorldModel = "models/weapons/arccw/c_ur_pm.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.DefaultBodygroups = "00000"
+SWEP.DefaultBodygroups = "0000000"
 
 -- Damage --
 
@@ -276,6 +276,9 @@ SWEP.AttachmentElements = {
     },
     ["ur_pb_supp"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
+    },
+    ["ur_pm_attpoint"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
 }
 
@@ -503,9 +506,10 @@ SWEP.Attachments = {
          Slot = {"tac_pistol"},
          Bone = "pm_parent",
          Offset = {
-             vpos = Vector(0, -5.6, -0.2),
+             vpos = Vector(0, -6.35, 0.2),
              vang = Angle(0, 90, 180),
          },
+         InstalledEles = {"ur_pm_attpoint"},
     },
     {
         PrintName = "Stock",

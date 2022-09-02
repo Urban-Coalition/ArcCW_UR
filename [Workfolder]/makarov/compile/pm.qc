@@ -30,7 +30,13 @@ $bodygroup "5" {
 	studio "pm_barrel_autosilent.smd" // aps suppressor, dunno whether or not it should be its own att or a bg
 }
 
+$bodygroup "6" { 
+	blank
+	studio "mount tac.smd" 
+}
+
 $cdmaterials "models\weapons\arccw\shared"
+$cdmaterials "models\weapons\arccw\ur_m1911"
 $cdmaterials "models\weapons\arccw\ur_pm"
 $cdmaterials "models\weapons\arccw\ud_common"
 
