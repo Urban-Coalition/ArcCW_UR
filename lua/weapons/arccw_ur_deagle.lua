@@ -36,7 +36,7 @@ SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an 
 SWEP.Trivia_Manufacturer = "ISM"
 SWEP.Trivia_Calibre = ".50 Action Express"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-SWEP.Trivia_Country = "Israel"
+SWEP.Trivia_Country = "United States & Israel"
 SWEP.Trivia_Year = 1983
 
 -- Weapon slot --
@@ -47,7 +47,7 @@ SWEP.Slot = 1
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Magnum Research"
+    SWEP.Trivia_Manufacturer = "Israel Military Industries & Magnum Research"
 end
 
 -- Viewmodel / Worldmodel / FOV --
