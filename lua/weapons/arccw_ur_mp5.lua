@@ -167,8 +167,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.17, -4, 0.6),
-     Ang = Angle(0.5, 0, 0),
+     Pos = Vector(-3.17, -1, 0.6),
+     Ang = Angle(0.45, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 60,
@@ -582,9 +582,9 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-    ["idle_empty"] = {
-        Source = "idle",
-    },
+    -- ["idle_empty"] = {
+    --     Source = "idle",
+    -- },
     ["ready"] = {
         Source = "ready",
         LHIK = true,
@@ -603,44 +603,44 @@ SWEP.Animations = {
         Source = "draw",
         SoundTable = ArcCW.UC.DrawSounds,
     },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        SoundTable = ArcCW.UC.DrawSounds,
-    },
+    -- ["draw_empty"] = {
+    --     Source = "draw_empty",
+    --     SoundTable = ArcCW.UC.DrawSounds,
+    -- },
     ["holster"] = {
         Source = "holster",
         --Time = 0.25,
         SoundTable = ArcCW.UC.HolsterSounds,
     },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        --Time = 0.25,
-        SoundTable = ArcCW.UC.HolsterSounds,
-    },
+    -- ["holster_empty"] = {
+    --     Source = "holster_empty",
+    --     --Time = 0.25,
+    --     SoundTable = ArcCW.UC.HolsterSounds,
+    -- },
     ["fire"] = {
         Source = "fire",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
-    ["fire_empty"] = {
-        Source = "fire",
-        Time = 13 / 30,
-        ShellEjectAt = 0.03,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
-    },
+    -- ["fire_empty"] = {
+    --     Source = "fire",
+    --     Time = 13 / 30,
+    --     ShellEjectAt = 0.03,
+    --     SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+    -- },
     ["fire_iron"] = {
         Source = "idle",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
-    ["fire_empty_iron"] = {
-        Source = "idle",
-        Time = 13 / 30,
-        ShellEjectAt = 0.03,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
-    },
+    -- ["fire_empty_iron"] = {
+    --     Source = "idle",
+    --     Time = 13 / 30,
+    --     ShellEjectAt = 0.03,
+    --     SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+    -- },
 
     ["fix"] = {
         Source = "fix",
