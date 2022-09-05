@@ -15,9 +15,9 @@ att.ExcludeFlags = {"barrel_sword"}
 att.IgnorePickX = true
 
 att.Override_IronSightStruct = {
-     Pos = Vector(-3.17, -5.85, 0.74),
-     Ang = Angle(-0.1, 0, 0),
+     Pos = Vector(-3.17, -4.85, 0.74),
+     Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
-     ViewModelFOV = 60,
+     ViewModelFOV = 80,
 }
