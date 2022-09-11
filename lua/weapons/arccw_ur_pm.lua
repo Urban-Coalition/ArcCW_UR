@@ -553,4 +553,9 @@ SWEP.Attachments = {
         },
         VMScale = Vector(0.7, 0.7, 0.7),
     },
+    {
+        PrintName = "Subsonic Flag",
+        Hidden = true,
+        DefaultFlags = {"cal_subsonic"},
+    }
 }
