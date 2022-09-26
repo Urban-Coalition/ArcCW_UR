@@ -423,7 +423,6 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             { s = path .. "mech_last.ogg", t = 0 },
-            { s = path .. "dryfire.ogg", t = 0.1 }
         },
     },
 
@@ -493,7 +492,7 @@ SWEP.Animations = {
             { s = rottle,                                   t = 10 / 60, c = ca },
             { s = common .. "magrelease.ogg",               t = 17 / 60, c = ca },
             { s = path .. "magout.ogg",                     t = 26 / 60, c = ca },
-            { s = path .. "magin.ogg",                      t = 50 / 60, c = ca },
+            { s = path .. "magin.ogg",                      t = 45 / 60, c = ca },
             { s = rottle,                                   t = 55 / 60, c = ca },
             { s = common ..  "magpouch_replace_small.ogg",  t = 80 / 60, c = ca },
         },
