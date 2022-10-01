@@ -16,7 +16,6 @@
 	"$phongalbedotint" "1"
 	"$phongfresnelranges"		"[0.32 0.72 0.99]"
 	"$phongtint" "[0.05 0.05 0.05]"
-	"$phongexponent" "25"
 	"$rimlight" "1"
 	"$rimlightexponent" "4"
 	"$rimmask" "1"

@@ -10,7 +10,6 @@
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
 	"$phong" 		"1"
 	"$phongboost" "16"
-
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[0.5 1.5 3.0]"
 	"$halflambert" "1"

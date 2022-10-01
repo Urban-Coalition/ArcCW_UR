@@ -9,7 +9,6 @@
 
 	"$phong" "1"
 	"$phongboost" "1"
-	//"$phongexponent" "20"
 	"$phongfresnelranges"	"[0.5 1 2]"
 	"$phongexponenttexture" "models/weapons/arccw/ur_329pd/sw329_e"
 	

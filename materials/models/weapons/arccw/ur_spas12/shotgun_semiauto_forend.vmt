@@ -7,7 +7,6 @@ VertexlitGeneric
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
 	"$phongboost"               "0.8"
 	"$phongfresnelranges"       "[1 4 8]"
-	"$phongexponent"            "38"
 	
 	"$color2"					"[0.6 0.6 0.6]"
 	"$blendTintByBaseAlpha"		"0" 

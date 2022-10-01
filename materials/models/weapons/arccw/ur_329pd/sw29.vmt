@@ -15,7 +15,6 @@
 
 	$phong 			"1"
 	$phongboost 		"3"
-	$phongexponent                     "30"
 	$phongtint 		"[0.5 0.5 0.5]"			
 	$phongfresnelranges 	"[2 4 6]"
 	$phongexponenttexture 	"models\weapons\arccw\ur_329pd\sw29_gloss"

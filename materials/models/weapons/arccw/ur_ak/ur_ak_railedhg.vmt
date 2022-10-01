@@ -18,7 +18,6 @@
 	"$phongboost"				"15" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
 	"$phongfresnelranges"		"[0.25 0.5 1]" // vector -- phong fresnel ranges, default are [0 0.5 1]
 	"$phongalbedotint" 			"1" // bool -- enables basetexture tinting of the phong's color but masks it with phongexponent's green channel
-	"$phongexponent"	        "25"
 
 // rimlight (convar: mat_rimlight "bool")
 	"$rimlight"					"1" // bool -- rimlight enabler, doesn't have to be on, use if needed

@@ -11,7 +11,6 @@
 	"$phong" 		"1"
 	"$phongboost" "19"
 	"$phongalbedotint" 			"1"
-                "$phongexponent" "25"
 	"$phongfresnelranges" "[0.5 1.5 3.0]"
 	"$halflambert" "1"
 
