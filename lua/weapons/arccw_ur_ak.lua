@@ -14,7 +14,7 @@ end
 local descStart = "One of the first assault rifles, wielded around the world to this day for its cheap price, ease of maintenance, and infallible reliability. Consequently, it has become the most popular rifle to ever enter service. One fifth of all small arms in existence can be traced to this design.\n\n"
 local desc_762 = "The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
 local desc_545 = "With a heavier frame than other service rifles, the AK-74 platform is accurate and easy to control."
-local desc_74u = "This PDW variant sacrifices range for a compact profile and a high rate of fire."
+local desc_74u = "This PDW variant sacrifices range and control to fit the power of a rifle into a very compact form."
 local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
 local desc_12g = "Magazine-fed semi automatic shotgun, based on the Kalashnikov pattern. Its low accuracy is compensated for by a much faster reload time than tube-fed designs."
 local desc_556 = "This international variant has a lower damage output than the Russian cartridges, but boasts substantially lower recoil."
@@ -962,6 +962,7 @@ SWEP.Hook_NameChange = function(wep,name)
     end
 
     if cal == "545" then
+        wep.Trivia_Desc = descStart .. desc_545
         if hg == "74m" or hg == "rpk74m" or hg == "ak12" then
             noN = true
             post = "-74M"
@@ -971,7 +972,6 @@ SWEP.Hook_NameChange = function(wep,name)
         else
             post = "-74"
         end
-        wep.Trivia_Desc = descStart .. desc_545
     end
 
     if foldStocks[stock] and akCals[cal] and !string.StartWith(barr,"105") then
