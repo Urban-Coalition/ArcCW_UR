@@ -32,7 +32,7 @@ SWEP.TrueName = "Desert Eagle"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its huge rounds, unrivaled in power for a handgun cartridge, can easily blast a human skull apart.\nDespite being one of the most famous weapons in action culture, it's unpopular for practical use because of its massive, bulky frame and needlessly large caliber.\n\nWe both know that won't stop you."
+SWEP.Trivia_Desc = "Unorthodox pistol in both weight and design, marketed as an alternative to high-caliber revolvers. Its huge rounds, unrivaled in power for a handgun cartridge, can easily blast a human skull apart.\nDespite being one of the most famous weapons in action culture, it rarely sees practical use because of its massive, bulky frame and pointlessly large caliber.\n\nWe both know that won't stop you."
 SWEP.Trivia_Manufacturer = "ISM"
 SWEP.Trivia_Calibre = ".50 Action Express"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"

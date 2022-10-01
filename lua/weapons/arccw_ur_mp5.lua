@@ -497,7 +497,7 @@ SWEP.Hook_NameChange = function(wep,name)
             if barr == "long" or barr == "sd" then
                 start = "HK94" -- I know how prolific civies can get with their gunbuilds, so the nonsensical names will continue
             else
-                return "SP5" .. ((barr == "kurz" and "K") or "")
+                return "SP5" .. ((barr == "kurz" and "K-PDW") or "")
             end
         end
     end
