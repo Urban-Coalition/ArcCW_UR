@@ -187,16 +187,33 @@ $sequence "reload_empty_exte" "talonAnims/reload_empty3_exte.smd" {
 
 
 
-$sequence "reload_exte_magnum" "talonAnims/reload_exte_magnum.smd" {
+$sequence "reload_exte_magnum" "talonAnims/reload3_exte.smd" {
 	fps 48
 	"ACT_VM_RELOAD" 1
 	snap
 }
 
-$sequence "reload_empty_exte_magnum" "talonAnims/reload_empty_exte_magnum.smd" {
+$sequence "reload_empty_exte_magnum" "talonAnims/reload_empty3_exte.smd" {
 	fps 48
 	"ACT_VM_RELOAD" 1
 	snap
+}
+
+
+$sequence "inspect_enter" {
+	"talonAnims\awinspect_enter"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop" {
+	"talonAnims\awinspect_loop"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit" {
+	"talonAnims\awinspect_exit"
+	fps 37
+	// snap
 }
 
 $bonemerge "ValveBiped.Bip01_Spine4"
