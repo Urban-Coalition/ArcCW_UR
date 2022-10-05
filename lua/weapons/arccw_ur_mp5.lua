@@ -177,11 +177,15 @@ SWEP.IronSightStruct = {
 SWEP.ActivePos = Vector(-0.3, 1.1, 0.6)
 SWEP.ActiveAng = Angle(0, 0, -1)
 
--- SWEP.SprintPos = Vector(-0.5, 3, 1.5)
--- SWEP.SprintAng = Angle(-12, 15, -15)
+SWEP.SprintPos = Vector(-0.5, 3, 1.5)
+SWEP.SprintAng = Angle(-12, 15, -15)
 
-SWEP.CustomizePos = Vector(6, -2, -1.5)
-SWEP.CustomizeAng = Angle(16, 28, 0)
+-- SWEP.SprintPos = Vector(0, 0, 0)
+-- SWEP.SprintAng = Angle(0, 0, 0)
+-- SWEP.CustomizePos = Vector(6, -2, -1.5)
+-- SWEP.CustomizeAng = Angle(16, 28, 0)
+SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-2, 0.5, 0)
 SWEP.CrouchAng = Angle(0, 0, -14)
@@ -982,16 +986,16 @@ SWEP.Animations = {
         LHIKOut = 999,
     },
 
-    ["enter_sprint"] = {
-        Source = "sprint_start",
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_idle",
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_end",
-        Time = 0.9,
-    },
+    -- ["enter_sprint"] = {
+    --     Source = "sprint_enter",
+    -- },
+    -- ["idle_sprint"] = {
+    --     Source = "sprint_loop",
+    -- },
+    -- ["exit_sprint"] = {
+    --     Source = "sprint_exit",
+    --     Time = 0.9,
+    -- },
 }
 
 SWEP.AutosolveSourceSeq = "idle"

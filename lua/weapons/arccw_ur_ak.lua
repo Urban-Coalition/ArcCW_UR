@@ -230,7 +230,7 @@ SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 -- SWEP.CustomizePos = Vector(6.5, 0.8, -0.2)
 -- SWEP.CustomizeAng = Angle(8, 22, 15)
 
-SWEP.CustomizePos = Vector(0.5, 0, 0)
+SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 24
