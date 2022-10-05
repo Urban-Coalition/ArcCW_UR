@@ -514,6 +514,28 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 0.55},
         },
     },
+
+    ["enter_inspect"] = {
+        Source = "inspect_enter",
+        -- time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+    },
+    ["idle_inspect"] = {
+        Source = "inspect_loop",
+        -- time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999,
+    },
+    ["exit_inspect"] = {
+        Source = "inspect_exit",
+        -- time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999,
+    },
 }
 
 SWEP.BulletBones = {
