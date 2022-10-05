@@ -207,7 +207,6 @@ $sequence "reload_empty_kurz" {
 	blend "sights" 0 1
 	snap
 }
-
 $sequence "reload_empty_kurz_10mm" {
 	"anims\reload_empty_kurz_10mm.smd"
 	"anims\reload_empty_iron_kurz.smd"
@@ -216,6 +215,47 @@ $sequence "reload_empty_kurz_10mm" {
 	blend "sights" 0 1
 	snap
 }
+
+
+
+
+
+
+
+$sequence "inspect_enter" {
+	"anims\mp5inspect_enter"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop" {
+	"anims\mp5inspect_loop"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit" {
+	"anims\mp5inspect_exit"
+	fps 37
+	// snap
+}
+
+
+$sequence "sprint_enter" {
+	"anims\a9_sprint_start"
+	fps 60
+	// snap
+}
+$sequence "sprint_loop" {
+	"anims\a9_sprint_loop"
+	fps 60
+	// snap
+}
+$sequence "sprint_exit" {
+	"anims\a9_sprint_end"
+	fps 60
+	// snap
+}
+
+
 
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
