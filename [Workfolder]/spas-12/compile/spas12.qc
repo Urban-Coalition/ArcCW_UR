@@ -225,6 +225,23 @@ $sequence "sgreload_finish_fold" {
 
 
 
+$sequence "inspect_enter" {
+	"anims\spasins_enter"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop" {
+	"anims\spasins_loop"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit" {
+	"anims\spasins_exit"
+	fps 37
+	// snap
+}
+
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"
