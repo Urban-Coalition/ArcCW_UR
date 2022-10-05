@@ -1,4 +1,5 @@
-att.PrintName = "23\" SAW Barrel"
+att.PrintName = "RPK 23\" SAW Barrel"
+att.AbbrevName = "23\" SAW Barrel"
 att.Icon = Material("entities/att/ur_ak/barrel/rpk.png", "mips smooth")
 att.Description = "Light machine gun barrel as used on the RPK. In addition to improved precision from the elongated barrel, it features an integrated bipod which can be deployed for even greater accuracy and control.\nVery front-heavy due to the long, more massive barrel."
 att.Slot = {"ur_ak_barrel"}
