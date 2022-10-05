@@ -221,8 +221,10 @@ SWEP.HolsterAng = Angle(-15, 8, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
-SWEP.CustomizePos = Vector(10.5, 4, 1)
-SWEP.CustomizeAng = Angle(8, 30, 15)
+-- SWEP.CustomizePos = Vector(10.5, 4, 1)
+-- SWEP.CustomizeAng = Angle(8, 30, 15)
+SWEP.CustomizePos = Vector(0.3, 1, 0.8)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 24
 
@@ -674,6 +676,7 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",    t = .6},
         },
     },
+
     ["fire"] = {
         Source = {"fire_01","fire_02","fire_03"},
         ShellEjectAt = 0,
@@ -684,6 +687,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
+    
    ["reload"] = {
        Source = "reload",
        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -1032,6 +1036,28 @@ SWEP.Animations = {
             {s = common .. "grab.ogg", t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.15},
         }
+    },
+
+    ["enter_inspect"] = {
+        Source = "inspect_enter",
+        -- time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+    },
+    ["idle_inspect"] = {
+        Source = "inspect_loop",
+        -- time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+    },
+    ["exit_inspect"] = {
+        Source = "inspect_exit",
+        -- time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
     },
 }
 

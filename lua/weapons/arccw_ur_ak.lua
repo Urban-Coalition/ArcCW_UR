@@ -1370,8 +1370,6 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 2.5,
-        SoundTable = {
-        },
     },
     ["idle_inspect"] = {
         Source = "inspect_loop",
@@ -1386,17 +1384,6 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 999, -- maybe im dumb
-        SoundTable = {
-            -- { s = rottle, t = 0 / 60, c = ca },
-            -- { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-            -- { s = path .. "magout.ogg", t = 8 / 60, c = ca },
-            -- { s = rottle, t = 100 / 60, c = ca },
-            -- { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
-            -- { s = path .. "magin_old.ogg", t = 114 / 60, c = ca },
-            -- { s = path .. "rack1.ogg", t = 155 / 60, c = ca },
-            -- { s = rottle, t = 160 / 60, c = ca },
-            -- { s = path .. "rack2.ogg", t = 178 / 60, c = ca },
-        },
     },
     ["enter_sprint"] = {
         Source = "sprint_start",
