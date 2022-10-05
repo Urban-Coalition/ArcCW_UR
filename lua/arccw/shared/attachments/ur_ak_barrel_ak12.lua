@@ -1,4 +1,5 @@
-att.PrintName = "16\" Ratnik Barrel"
+att.PrintName = "AK-12 16\" Ratnik Barrel"
+att.AbbrevName = "16\" Ratnik Barrel"
 att.Icon = Material("entities/att/ur_ak/barrel/ak12.png", "smooth mips")
 att.Description = "The most recent barrel design for the AK platform. Also equips a new rear sight aperture."
 att.Desc_Pros = {}

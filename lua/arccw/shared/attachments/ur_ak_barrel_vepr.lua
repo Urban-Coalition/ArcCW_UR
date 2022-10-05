@@ -1,4 +1,5 @@
-att.PrintName = "20\" Marksman Barrel"
+att.PrintName = "Vepr 20\" Marksman Barrel"
+att.AbbrevName = "20\" Marksman Barrel"
 att.Icon = Material("entities/att/ur_ak/barrel/vepr.png", "mips smooth")
 att.Description = "Long civilian hunting barrel with a bottom-heavy handguard. Slow to handle and aim, but steady and accurate."
 att.Slot = {"ur_ak_barrel"}

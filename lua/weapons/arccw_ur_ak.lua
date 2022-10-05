@@ -227,8 +227,11 @@ SWEP.HolsterAng = Angle(-15, 8, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
-SWEP.CustomizePos = Vector(6.5, 0.8, -0.2)
-SWEP.CustomizeAng = Angle(8, 22, 15)
+-- SWEP.CustomizePos = Vector(6.5, 0.8, -0.2)
+-- SWEP.CustomizeAng = Angle(8, 22, 15)
+
+SWEP.CustomizePos = Vector(0.5, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 24
 
@@ -1361,9 +1364,40 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 2.5},
         },
     },
-    ["enter_inspect"] = false,
-    ["idle_inspect"] = false,
-    ["exit_inspect"] = false,
+    ["enter_inspect"] = {
+        Source = "inspect_enter",
+        -- time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect"] = {
+        Source = "inspect_loop",
+        -- time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+    },
+    ["exit_inspect"] = {
+        Source = "inspect_exit",
+        -- time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+        SoundTable = {
+            -- { s = rottle, t = 0 / 60, c = ca },
+            -- { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
+            -- { s = path .. "magout.ogg", t = 8 / 60, c = ca },
+            -- { s = rottle, t = 100 / 60, c = ca },
+            -- { s = path .. "magin_miss.ogg", t = 106 / 60, c = ca },
+            -- { s = path .. "magin_old.ogg", t = 114 / 60, c = ca },
+            -- { s = path .. "rack1.ogg", t = 155 / 60, c = ca },
+            -- { s = rottle, t = 160 / 60, c = ca },
+            -- { s = path .. "rack2.ogg", t = 178 / 60, c = ca },
+        },
+    },
     ["enter_sprint"] = {
         Source = "sprint_start",
     },
