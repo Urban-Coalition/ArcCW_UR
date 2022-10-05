@@ -292,6 +292,23 @@ $sequence "fire_03" {
 	fadeout 0.03
 }
 
+
+$sequence "inspect_enter" {
+	"anims\g3inspect_enter"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop" {
+	"anims\g3inspect_loop"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit" {
+	"anims\g3inspect_exit"
+	fps 37
+	// snap
+}
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"
