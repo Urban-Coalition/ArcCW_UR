@@ -371,6 +371,23 @@ $sequence "bipod_undeploy" {
 // 	fps 60
 // }
 
+$sequence "inspect_enter" {
+	"anims\ak_inspect_enter"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop" {
+	"anims\ak_inspect_loop"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit" {
+	"anims\ak_inspect_exit"
+	fps 37
+	// snap
+}
+
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"
