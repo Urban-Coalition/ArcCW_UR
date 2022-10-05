@@ -677,7 +677,7 @@ SWEP.Animations = {
             {s = common .. "magpouch.ogg", t = 0.05},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.25},
-            {s = path .. "magin.ogg",         t = 0.63, c = ci},
+            {s = path .. "magin.ogg",         t = 0.61, c = ci},
             {s = common .. "magpouchin.ogg", t = 1.25},
             {s = common .. "rattle2.ogg",  t = 1.55},
             {s = common .. "shoulder.ogg",  t = 1.5},
