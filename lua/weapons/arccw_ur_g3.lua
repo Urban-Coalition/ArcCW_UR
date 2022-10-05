@@ -687,7 +687,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
-    
+
    ["reload"] = {
        Source = "reload",
        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -1044,20 +1044,27 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 2.5,
+        SoundTable = {
+            {s = rottle, t = 0},
+        },
     },
     ["idle_inspect"] = {
         Source = "inspect_loop",
         -- time = 72 / 60,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 999, -- maybe im dumb
+        LHIKOut = 999,
     },
     ["exit_inspect"] = {
         Source = "inspect_exit",
         -- time = 66 / 60,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 999, -- maybe im dumb
+        LHIKOut = 999,
+        SoundTable = {
+            {s = rottle, t = 0.25},
+            {s = rottle, t = 1.25},
+        },
     },
 }
 

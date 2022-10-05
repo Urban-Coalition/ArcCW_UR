@@ -1370,6 +1370,9 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 2.5,
+        SoundTable = {
+            {s = rottle, t = 0},
+        },
     },
     ["idle_inspect"] = {
         Source = "inspect_loop",
@@ -1384,6 +1387,10 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 999, -- maybe im dumb
+        SoundTable = {
+            {s = rottle, t = 0.25},
+            {s = rottle, t = 1.25},
+        },
     },
     ["enter_sprint"] = {
         Source = "sprint_start",
