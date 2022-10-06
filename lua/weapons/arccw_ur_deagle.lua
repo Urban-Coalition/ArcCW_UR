@@ -311,6 +311,10 @@ SWEP.AttachmentElements = {
     ["ur_deagle_skin_chrome"] = {
         VMSkin = 3,
     },
+    ["ur_deagle_skin_modern"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        VMSkin = 3,
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
