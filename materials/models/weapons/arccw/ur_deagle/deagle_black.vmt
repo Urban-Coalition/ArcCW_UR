@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models\weapons\arccw\ur_deagle/deagle_c"
 	"$bumpmap" "models\weapons\arccw\ur_deagle/deagle_n"
-	"$color2" "[0.65 0.665 0.67]"
+	"$color2" "[0.45 0.45 0.45]"
 	"$normalmapalphaenvmapmask" 	1
 
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)	
@@ -19,5 +19,4 @@
 	//"$envmaptint"	"[0.12 0.10 0.13]"
 
 	"$nocull" "1"
-	$color2 "[0.9 0.9 0.9]"
 }
