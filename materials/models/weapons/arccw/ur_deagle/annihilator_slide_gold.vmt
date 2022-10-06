@@ -3,7 +3,7 @@
 	"$basetexture" "models/weapons/arccw/ur_deagle/annihilator_slide_d"
 	"$bumpmap" "models/weapons/arccw/ur_deagle/annihilator_slide_n"
 	"$normalmapalphaenvmapmask" 	1
-	"$color2" "[0.8 0.75 0.5]"
+	"$color2" "[0.9 0.85 0.45]"
 	
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_gold" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 	"$phongexponent"		"8"
@@ -15,7 +15,7 @@
 	
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 			"1"
-	"$envmaptint"				"[0.23 0.24 0.15]"
+	"$envmaptint"				"[0.225 0.25 0.15]"
 
 	"$nocull" "1"
 }
