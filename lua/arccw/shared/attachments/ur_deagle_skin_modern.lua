@@ -1,10 +1,10 @@
-att.PrintName = "write here something about modern"
-att.AbbrevName = "write here something about warfare"
+att.PrintName = "Desert Eagle Two-Tone Finish"
+att.AbbrevName = "Two-Tone"
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "write here something about two"
+    att.PrintName = "Predator Two-Tone Finish"
 end
-att.Icon = Material("entities/att/acwatt_ur_deagle_finish_chrome.png","mips smooth")
-att.Description = "write here something about mdern fare two"
+att.Icon = Material("entities/att/acwatt_ur_deagle_finish_modern.png","mips smooth")
+att.Description = "Double trouble. Yin and yang. Call it whatever you like; it will remain an ornate look for an ornate man.\n\n\"You ever hear the old saying, 'the enemy of my enemy is my friend?'\""
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"
