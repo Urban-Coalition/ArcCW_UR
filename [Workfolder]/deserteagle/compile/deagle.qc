@@ -2,6 +2,7 @@ $modelname "weapons\arccw\c_ud_deagle.mdl"
  
 $bodygroup "base" {
 	studio "deserteagle.smd"
+	studio "deserteagle_blackbase.smd"
 } 
 $bodygroup "barrel" {
 	studio "barrel.smd"
