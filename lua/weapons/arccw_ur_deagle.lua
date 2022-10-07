@@ -319,6 +319,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_ModifyBodygroups = function(wep,data)
     local vm = data.vm
+    if !IsValid(vm) then return end
     local optic = wep.Attachments[1].Installed
     local tritium = (optic == "ur_deagle_tritium")
     local barrel = wep.Attachments[2].Installed or 0
@@ -338,6 +339,12 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         end
     -- elseif optic and barrel == 0 then
     --     vm:SetBodygroup(1,1)
+    end
+
+    if barrel == "ur_deagle_barrel_annihilator" then
+        if vm:GetBodygroup(5) == 1 then
+            vm:SetBodygroup(5,2)
+        end
     end
 end
 
@@ -700,7 +707,7 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -3.7, 7),
+            vpos = Vector(0, -3.5, 7),
             vang = Angle(90, 0, -90),
         },
         MergeSlots = {15},

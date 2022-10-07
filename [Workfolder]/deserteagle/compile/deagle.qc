@@ -23,6 +23,7 @@ $bodygroup "tritium" {
 	studio "tritium_long.smd"
 	studio "tritium_police.smd"
 	studio "tritium_compact.smd"
+	studio "tritium_annihilator.smd"
 }
 $bodygroup "grip" {
 	studio "grip_plastic.smd"
@@ -32,6 +33,7 @@ $bodygroup "grip" {
 $bodygroup "rail" {
     blank
 	studio "lower_rail.smd"
+	studio "lower_rail_anil.smd"
 }
 $bodygroup "bullets" {
 	studio "bullets_50ae.smd"
