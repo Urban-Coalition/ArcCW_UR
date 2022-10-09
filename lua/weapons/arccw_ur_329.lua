@@ -281,7 +281,7 @@ SWEP.Hook_TranslateAnimation = function(wep,anim)
     if wep:GetCurrentFiremode().Override_ManualAction and anim == "fire_dry" then
         return "fire_dry_sact"
     end
-    if wep:GetCurrentFiremode().Override_ManualAction and anim ~= "fire" then
+    if wep:GetCurrentFiremode().Override_ManualAction and anim ~= "fire" and (anim ~= "reload" or !wep:GetNeedCycle()) then
         return anim .. "_cocked"
     end
 end
