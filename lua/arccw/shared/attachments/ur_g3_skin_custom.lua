@@ -1,4 +1,4 @@
-att.PrintName = "Custom Furniture"
+att.PrintName = "G3 Custom Furniture"
 att.AbbrevName = "Custom"
 att.Description = "Custom color furniture. Let your imagination run wild."
 att.Slot = "ur_g3_skin"

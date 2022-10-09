@@ -1,4 +1,4 @@
-att.PrintName = "Olive Drab Furniture"
+att.PrintName = "G3 Olive Drab Furniture"
 att.AbbrevName = "Olive"
 att.Description = "Olive drab furniture."
 att.Slot = "ur_g3_skin"

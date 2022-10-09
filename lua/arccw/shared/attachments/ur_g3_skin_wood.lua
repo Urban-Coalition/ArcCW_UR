@@ -1,6 +1,6 @@
-att.PrintName = "Wooden Furniture"
+att.PrintName = "G3 CETME Wooden Furniture"
 att.AbbrevName = "Wood"
-att.Description = "Wooden furniture that makes you feel like the apocalypse is near."
+att.Description = "Old-fashioned wooden furniture that makes you feel like the apocalypse is near."
 att.Slot = "ur_g3_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic",

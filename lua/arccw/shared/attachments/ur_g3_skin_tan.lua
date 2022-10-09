@@ -1,4 +1,4 @@
-att.PrintName = "Flat Dark Earth Furniture"
+att.PrintName = "G3 Flat Dark Earth Furniture"
 att.AbbrevName = "FDE"
 att.Description = "FDE furniture for the tactical feel."
 att.Slot = "ur_g3_skin"
