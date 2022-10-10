@@ -997,13 +997,23 @@ SWEP.Animations = {
 
     ["enter_sprint"] = {
         Source = "sprint_enter",
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKOut = 0,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
     },
     ["exit_sprint"] = {
         Source = "sprint_exit",
-        Time = 0.9,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.4,
+        LHIKOut = 0.5,
     },
 }
 
