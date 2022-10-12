@@ -656,16 +656,16 @@ SWEP.Attachments = {
         },
         ExcludeFlags = {"nomuzzle"}
     },
-    {
-        PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        Bone = "pump",
-        MergeSlots = {13},
-        Offset = {
-            vpos = Vector(0, -5, .1),
-            vang = Angle(90, -90, -90),
-        },
-    },
+    -- {
+    --     PrintName = "Underbarrel",
+    --     Slot = {"foregrip"},
+    --     Bone = "pump",
+    --     MergeSlots = {13},
+    --     Offset = {
+    --         vpos = Vector(0, -5, .1),
+    --         vang = Angle(90, -90, -90),
+    --     },
+    -- },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
@@ -718,16 +718,16 @@ SWEP.Attachments = {
             vang = Angle(90, -90, -90),
         },
     },
-    {
-        PrintName = "M203 slot",
-        Slot = "uc_ubgl",
-        Bone = "pump",
-        Offset = {
-            vpos = Vector(0, -5, 1.25),
-            vang = Angle(90, -90, -90),
-        },
-        Hidden = true,
-    },
+    -- {
+    --     PrintName = "M203 slot",
+    --     Slot = "uc_ubgl",
+    --     Bone = "pump",
+    --     Offset = {
+    --         vpos = Vector(0, -5, 1.25),
+    --         vang = Angle(90, -90, -90),
+    --     },
+    --     Hidden = true,
+    -- },
 }
 
 local lookup_barrel = {
