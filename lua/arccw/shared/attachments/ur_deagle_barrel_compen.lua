@@ -8,7 +8,7 @@ att.Description = "Barrel with an integral muzzle brake. Redirects propellant ga
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
 att.Desc_Cons = {
-    "uc.nomuzzle"
+    --"uc.nomuzzle"
 }
 att.SortOrder = 6
 
