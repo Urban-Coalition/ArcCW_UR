@@ -388,7 +388,7 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         MinProgress = 1.9,
         ShellEjectAt = 1,
         LHIK = true,
@@ -413,7 +413,7 @@ SWEP.Animations = {
     },
     ["reload_cocked"] = {
         Source = "reload_cocked",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         MinProgress = 1.9,
         ShellEjectAt = 1,
         LHIK = true,
