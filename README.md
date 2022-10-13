@@ -8,6 +8,6 @@ https://trello.com/b/ukOphim9/urbna
 - Colt M1911
 - H&K MP5
 - H&K G3A3
-- Makarov PM
+- ~~Makarov PM~~ (moved to one-off)
 - Franchi SPAS-12
 - S&W Model 329PD

@@ -9,7 +9,7 @@ att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
 att.Desc_Cons = {
     "+150% Visual recoil",
-    "uc.nomuzzle"
+    --"uc.nomuzzle"
 }
 att.SortOrder = 6
 

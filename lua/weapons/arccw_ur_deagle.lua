@@ -689,18 +689,18 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, 0.75),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nofh"},
-        ExcludeFlags = {"barrel_annihilator"},
-    },
+    -- {
+    --     PrintName = "Muzzle",
+    --     DefaultAttName = "Standard Muzzle",
+    --     Slot = {"muzzle"},
+    --     Bone = "Barrel",
+    --     Offset = {
+    --         vpos = Vector(0, 0, 0.75),
+    --         vang = Angle(90, 0, -90),
+    --     },
+    --     InstalledEles = {"nofh"},
+    --     ExcludeFlags = {"barrel_annihilator"},
+    -- },
     {
         PrintName = "Tactical",
         InstalledEles = {"tac_rail"},
