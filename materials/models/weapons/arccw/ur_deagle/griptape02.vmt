@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models/weapons/arccw/ur_deagle/griptape02"
-	"$bumpmap"					"models/weapons/arccw/ur_deagle/griptape02_n"
+	"$basetexture" "models\weapons\arccw\ur_deagle/griptape02"
+	"$bumpmap" "models\weapons\arccw\ur_deagle/griptape02_n"
 
 	"$phong"	"1"
 	"$phongexponent"	"3"
