@@ -19,4 +19,13 @@
 	"$envmaptint"	"[.95 .95 .95]"
 
 	"$nocull" "1"
+
+	"Proxies"
+	{
+		"MwEnvMapTint"
+		{
+			"min" "0.01"
+			"max" "0.95"
+		}
+	}
 }
