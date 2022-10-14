@@ -710,7 +710,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -3.5, 7),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {15},
+        MergeSlots = {14},
     },
     {
         PrintName = "Magazine",
