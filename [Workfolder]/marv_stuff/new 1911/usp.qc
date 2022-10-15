@@ -75,7 +75,10 @@ $bbox 0 0 0 0 0 0
 $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
-
+$sequence "ref"{
+	"anims\wmfix.smd" 
+	fps 30
+}
 $sequence "idle"{
 	"anims\vm_m1911_idle.smd" 
 	// "anims\idle_iron.smd"
@@ -216,7 +219,7 @@ $sequence "reload_empty_ext" {
 $sequence "enter_inspect" {
 	"anims\vm_m1911_inspect.smd"
 	"ACT_VM_IDLE" 1
-	frame 0 30
+	frame 0 18
 	fadein 0
 	fadeout 0.2
 	fps 32
@@ -225,65 +228,65 @@ $sequence "enter_inspect" {
 $sequence "idle_inspect" {
 	"anims\vm_m1911_inspect.smd"
 	"ACT_VM_IDLE" 1
-	frame 30 30
+	frame 18 120
 	fps 30
 }
 
 $sequence "exit_inspect" {
 	"anims\vm_m1911_inspect.smd"
 	"ACT_VM_IDLE" 1
-	frame 31 120
+	frame 120 168
 	fadein 0.2
 	fadeout 0
 	fps 32
 }
 
 $sequence "enter_inspect_jam" {
-	"anims\vm_m1911_inspect_jam.smd"
+	"anims\vm_m1911_inspect_jam2.smd"
 	"ACT_VM_IDLE" 1
-	frame 0 30
+	frame 0 18
 	fadein 0
 	fadeout 0.2
 	fps 32
 }
 
 $sequence "idle_inspect_jam" {
-	"anims\vm_m1911_inspect_jam.smd"
+	"anims\vm_m1911_inspect_jam2.smd"
 	"ACT_VM_IDLE" 1
-	frame 30 30
+	frame 18 120
 	fps 30
 }
 
 $sequence "exit_inspect_jam" {
-	"anims\vm_m1911_inspect_jam.smd"
+	"anims\vm_m1911_inspect_jam2.smd"
 	"ACT_VM_IDLE" 1
-	frame 31 120
+	frame 120 168
 	fadein 0.2
 	fadeout 0
 	fps 32
 }
 
 $sequence "enter_inspect_empty" {
-	"anims\vm_m1911_inspect_empty.smd"
+	"anims\vm_m1911_inspect_empty2.smd"
 	"ACT_VM_IDLE" 1
-	frame 0 30
+	frame 0 18
 	fadein 0
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "idle_inspect_empty" {
-	"anims\vm_m1911_inspect_empty.smd"
+	"anims\vm_m1911_inspect_empty2.smd"
 	"ACT_VM_IDLE" 1
-	frame 30 30
+	frame 18 120
 	snap
 	fps 30
 }
 
 $sequence "exit_inspect_empty" {
-	"anims\vm_m1911_inspect_empty.smd"
+	"anims\vm_m1911_inspect_empty2.smd"
 	"ACT_VM_IDLE" 1
-	frame 31 120
+	frame 120 168
 	fadein 0.2
 	fadeout 0
 	fps 32
