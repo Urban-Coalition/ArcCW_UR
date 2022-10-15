@@ -1,6 +1,6 @@
 att.PrintName = "AK-105 12\" Carbine Barrel"
 att.AbbrevName = "12\" Carbine Barrel"
-att.Icon = Material("entities/att/ur_ak/barrel/100.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/barrel/105.png", "mips smooth")
 att.Description = "Reduced length barrel that serves as a middle ground between full-size and SMG-length barrels. Reduces weight and profile while keeping the weapon accurate and controllable."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

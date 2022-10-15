@@ -1,6 +1,6 @@
 att.PrintName = "PP-19 8\" SMG Barrel"
 att.AbbrevName = "8\" SMG Barrel"
-att.Icon = Material("entities/att/ur_ak/barrel/pp19.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/barrel/smg.png", "mips smooth")
 att.Description = "Submachine gun barrel with a rail interface for additional modularity. Functions identically to the Compact barrel."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true

@@ -1,11 +1,12 @@
-att.PrintName = "16\" Type 56 Barrel"
-att.Icon = Material("entities/att/ur_ak/barrel/type56.png", "mips smooth")
+att.PrintName = "Type 56 16\" Bayonet Barrel"
+att.AbbrevName = "16\" Bayonet Barrel"
+att.Icon = Material("entities/att/ur_ak/barrel/type.png", "mips smooth")
 att.Description = "Chinese derivative barrel with a fully hooded front sight and a folding spike bayonet. When unfolded, the bayonet increases melee damage substantially, but adds some forward weight."
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "16\" Yucha 7 Barrel" -- Chinese for harpoon
+    att.PrintName = "Yucha 7 16\" Bayonet Barrel" -- Chinese for harpoon
 end
 
 att.SortOrder = 16

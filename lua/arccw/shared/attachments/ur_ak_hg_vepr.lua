@@ -1,5 +1,5 @@
 att.PrintName = "Heavy Handguard"
-att.Icon = Material("entities/att/ur_ak/barrel/vepr.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/handguards/vepr.png", "mips smooth")
 att.Description = "Bottom-heavy marksman handguard. Slow to handle and aim, but steady and accurate. Does not have a bottom rail, and thus cannot accept underbarrel attachments."
 att.Slot = {"ur_ak_hg"}
 att.Desc_Cons = {"uc.noubs"}

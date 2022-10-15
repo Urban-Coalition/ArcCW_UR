@@ -1,5 +1,5 @@
 att.PrintName = "Ratnik Handguard"
-att.Icon = Material("entities/att/ur_ak/barrel/ak12.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/handguards/ak12.png", "mips smooth")
 att.Description = "The most recent handguard module for the AK platform, with polymerized construction and an upper rail interface. Practical, yet comfortable."
 att.Slot = {"ur_ak_hg"}
 att.AutoStats = true

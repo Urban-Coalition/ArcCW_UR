@@ -1,6 +1,6 @@
 att.PrintName = "AK-47 10-Round Compact Mag"
 att.AbbrevName = "10-Round Compact Mag"
-att.Icon = Material("entities/att/ur_ak/magazines/762_10.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/magazines/366_10.png", "mips smooth")
 att.Description = "Sporting purpose magazine with a very low capacity. The lighter load reduces the weapon's weight significantly."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true

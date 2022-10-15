@@ -1,5 +1,5 @@
 att.PrintName = "Zenitco Handguard"
-att.Icon = Material("entities/att/ur_ak/barrel/alpha.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/handguards/alpha.png", "mips smooth")
 att.Description = "US production handguard featuring a rail interface for additional modularity. Especially lightweight, though less comfortable to grip."
 att.Slot = {"ur_ak_hg"}
 att.AutoStats = true

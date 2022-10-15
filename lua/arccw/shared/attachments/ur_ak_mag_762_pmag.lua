@@ -1,6 +1,6 @@
 att.PrintName = "PMAG 30 AK/AKM MOE"
 att.AbbrevName = "30-Round PMAG"
-att.Icon = Material("entities/att/ur_ak/magazines/762_pmag.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/magazines/762_p.png", "mips smooth")
 att.Description = "American aftermarket magazine. The grooves give it a slightly better grip surface, but the difference in practice is negligible."
 att.Slot = {"ur_ak_mag"}
 att.AutoStats = true
