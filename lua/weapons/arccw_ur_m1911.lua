@@ -32,9 +32,9 @@ SWEP.TrueName = "M1911"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[Venerable semi-automatic pistol issued by the US Army throughout both World Wars and then some. In spite of a lack of NATO standards and a concurrent service history of over 110 years, it is rarely considered an obsolete design. Its short recoil mechanism has been inherited by most modern pistols.
+SWEP.Trivia_Desc = [[Venerable semi-automatic pistol issued by the US Army throughout both World Wars and then some. Even after more than a century of service, it is rarely considered an obsolete design, and its short recoil mechanism has been inherited by most modern pistols.
 
-Has better stopping power than many other pistols, but its single-stacked magazine can only hold a few of the large rounds.]]
+Easy to handle and packing respectable stopping power, the antiquated single-stack magazine is its only notable downside.]]
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
@@ -119,8 +119,8 @@ SWEP.NPCWeight = 70
 -- Accuracy --
 
 SWEP.AccuracyMOA = 5
-SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 250
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "pistol"
@@ -128,9 +128,9 @@ SWEP.MagID = "m1911"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.965
+SWEP.SpeedMult = 0.97
 SWEP.SightedSpeedMult = 0.875
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.32
 SWEP.ShootSpeedMult = 1
 
 -- Length --
