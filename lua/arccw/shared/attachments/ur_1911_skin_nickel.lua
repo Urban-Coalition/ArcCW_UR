@@ -1,5 +1,6 @@
 att.PrintName = "M1911 Nickel Finish"
 att.AbbrevName = "Nickel"
+att.Icon = Material("entities/att/ur_1911/skin_dark.png","mips smooth")
 att.Description = "A warm, shiny nickel finish that glows vibrantly under the sun."
 att.SortOrder = 9
 

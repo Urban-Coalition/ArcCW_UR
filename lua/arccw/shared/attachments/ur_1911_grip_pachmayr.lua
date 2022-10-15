@@ -1,5 +1,6 @@
 att.PrintName = "M1911 Pachmayr Grip"
 att.AbbrevName = "Pachmayr Grip"
+att.Icon = Material("entities/att/ur_1911/grip_pach.png","mips smooth")
 att.Description = "Aftermarket grip with finger grooves and a pleasant rosewood texture.\nBulkier overall, but the grooves allow a quick grip for a smoother draw and holster."
 
 att.AutoStats = true

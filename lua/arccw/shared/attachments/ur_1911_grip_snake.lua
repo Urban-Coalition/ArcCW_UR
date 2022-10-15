@@ -1,5 +1,6 @@
 att.PrintName = "M1911 Snake Grip"
 att.AbbrevName = "Snake Grip"
+att.Icon = Material("entities/att/ur_1911/grip_snake.png","mips smooth")
 att.Description = "A gaudy grip for those with too much taste and those with too little taste.\nIts rough texture marginally reduces moving spread.\n\n\"Whoever did this is a professional, no question. This thing could shoot a one-hole at 25 yards in a machine rest.\""
 
 att.AutoStats = true

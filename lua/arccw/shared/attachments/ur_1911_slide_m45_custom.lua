@@ -1,5 +1,6 @@
 att.PrintName = "M45 MEUSOC 5\" Slide w/ Custom Finish"
 att.AbbrevName = "5\" M45 Slide (Custom)"
+att.Icon = Material("entities/att/ur_1911/slide_45.png","mips smooth")
 att.Description = "Modernized slide, hammer and trigger assembly designed and hand-built for the U.S. Marine Corps, bringing an old gun to a new age.\nImproves handling and ballistics, but is worse when hip fired.\n\nThis variant will use your configured custom color for that extra flair."
 
 att.Desc_Neutrals = {

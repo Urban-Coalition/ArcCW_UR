@@ -3,7 +3,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M1911 11-Round Extended Magazine"
 end
 att.AbbrevName = "11-Round Extended Mag"
-att.Icon = Material("entities/att/acwatt_ur_deagle_mag_10.png","mips smooth")
+att.Icon = Material("entities/att/ur_1911/mag11.png","mips smooth")
 att.Description = "A higher capacity magazine increases the time you can spend without reloading."
 att.Slot = "ur_m1911_mag"
 att.AutoStats = true

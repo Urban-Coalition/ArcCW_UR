@@ -1,5 +1,6 @@
 att.PrintName = "M1911 Custom Finish"
 att.AbbrevName = "Custom"
+att.Icon = Material("entities/att/ur_1911/skin.png","mips smooth")
 att.Description = "A configurable finish for your gun. There are many like it, but this one is yours."
 att.SortOrder = 7
 

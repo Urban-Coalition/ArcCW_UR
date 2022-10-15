@@ -719,13 +719,13 @@ SWEP.Attachments = {
     {
         PrintName = "Slide",
         Slot = {"ur_m1911_slide"},
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_barrel.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_1911/slide_std.png","mips smooth"),
         DefaultAttName = "5\" Government Slide",
     },
     {
         PrintName = "Caliber",
         Slot = {"ur_m1911_caliber"},
-        DefaultAttIcon = Material("entities/att/uc_bullets/50ae.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/uc_bullets/45acp.png","mips smooth"),
         DefaultAttName = ".45 ACP",
         Bone = "vm_pivot",
         Offset = {
@@ -760,7 +760,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"ur_m1911_mag"},
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_mag_7.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_1911/mag7.png","mips smooth"),
         DefaultAttName = "7-Round Mag",
     },
     {
@@ -776,7 +776,7 @@ SWEP.Attachments = {
     {
         PrintName = "Grip",
         DefaultAttName = "Factory Grip",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_grip_plastic.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_1911/grip.png","mips smooth"),
         Slot = "ur_m1911_grip"
     },
     {
@@ -815,7 +815,7 @@ SWEP.Attachments = {
         PrintName = "Finish",
         Slot = {"ur_m1911_skin"},
         DefaultAttName = "Grey",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_deagle_finish_default.png","mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_1911/skin.png","mips smooth"),
         FreeSlot = true,
     },
 }
