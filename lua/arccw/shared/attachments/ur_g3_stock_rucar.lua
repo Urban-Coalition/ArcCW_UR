@@ -1,6 +1,6 @@
 att.PrintName = "RU556 Fixed-Adjustable Stock"
 att.AbbrevName = "Fixed-Adjustable Stock"
-
+att.Icon = Material("entities/att/ur_g3/stock_ar.png","smooth mips")
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Magpul UBR GEN2 Stock"
 end

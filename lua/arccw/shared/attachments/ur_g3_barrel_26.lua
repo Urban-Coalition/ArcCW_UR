@@ -1,5 +1,6 @@
 att.PrintName = "PSG-1 26\" Sniper Barrel"
 att.AbbrevName = "26\" Sniper Barrel"
+att.Icon = Material("entities/att/ur_g3/barrel_psg.png","smooth mips")
 att.Description = "Long barrel and handguard assembly for the PSG-1 sniper rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned for long range usage, this barrel lacks iron sights."
 att.Slot = "ur_g3_barrel"
 att.Desc_Cons = {

@@ -523,14 +523,14 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = "ur_g3_barrel",
         DefaultAttName = "18\" Standard Barrel",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_g3/barrel_std.png", "smooth mips"),
         DefaultFlags = {"g3_not8"}
     },
     {
         PrintName = "Reciever",
         Slot = "ur_g3_rec",
         DefaultAttName = "G3 Reciever",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_g3/rec_std.png", "smooth mips"),
     },
     {
         PrintName = "Handguard",
@@ -541,7 +541,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         DefaultAttName = "Standard Handguard",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_g3/hg_std.png", "smooth mips"),
         ExcludeFlags = {"hk79_pro","g3_nohg"},
     },
     {
@@ -579,13 +579,13 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = "ur_g3_stock",
         DefaultAttName = "Factory Stock",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_g3/stock_std.png", "smooth mips"),
     },
     {
         PrintName = "Magazine",
         Slot = "ur_g3_mag",
         DefaultAttName = "20-Round Mag",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_g3/mag_20.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",
@@ -632,7 +632,8 @@ SWEP.Attachments = {
     {
         PrintName = "Furniture",
         Slot = "ur_g3_skin",
-        DefaultAttName = "Gray"
+        DefaultAttName = "Gray",
+        DefaultAttIcon = Material("entities/att/ur_g3/skin_gray.png", "smooth mips"),
     }
 
 }

@@ -1,6 +1,6 @@
 att.PrintName = "HK33 20-Round Compact Mag"
 att.AbbrevName = "20-Round Compact Mag"
--- att.Icon = Material("entities/att/uc_bullets/556x45.png", "mips smooth")
+att.Icon = Material("entities/att/ur_g3/mag556_20.png","smooth mips")
 att.Description = "Low-capacity magazine for the HK33. The lighter load makes the weapon more ergonomic."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true

@@ -1,5 +1,5 @@
 att.PrintName = "RIS Handguard"
-
+att.Icon = Material("entities/att/ur_g3/hk_pica.png","smooth mips")
 att.Description = "RIS handguard for modernizing the G3. Cosmetic only."
 att.AutoStats = true
 att.Desc_Neutrals = {

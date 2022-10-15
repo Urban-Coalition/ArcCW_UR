@@ -1,5 +1,6 @@
 att.PrintName = "PSG-1 Sniper Stock" 
 att.AbbrevName = "Sniper Stock"
+att.Icon = Material("entities/att/ur_g3/stock_psg.png","smooth mips")
 att.Description = [[Heavy-duty marksman stock made for the PSG-1 sniper rifle. Cumbersome, but very comfortable to shoot with.]]
 att.AutoStats = true
 att.Slot = {"ur_g3_stock"}

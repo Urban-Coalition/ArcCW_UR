@@ -1,6 +1,6 @@
 att.PrintName = "HK33 40-Round Extended Mag"
 att.AbbrevName = "40-Round Extended Mag"
--- att.Icon = Material("entities/att/uc_bullets/556x45.png", "mips smooth")
+att.Icon = Material("entities/att/ur_g3/mag556_40.png","smooth mips")
 att.Description = "Extended magazine for the HK33. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true

@@ -1,6 +1,7 @@
 att.PrintName = "HK33 5.56x45mm Receiver"
 att.AbbrevName = "HK33 5.56 Receiver"
 att.Description = "Receiver and barrel group that accepts an intermediate cartridge, changing the weapon into an assault rifle."
+att.Icon = Material("entities/att/ur_g3/rec_33.png","smooth mips")
 att.Slot = "ur_g3_rec"
 att.AutoStats = true
 
@@ -58,7 +59,7 @@ end
 
 
 local slotinfo = {
-    [9] = {"30-Round 5.56 Mag", "30-Round 5.56 Mag", Material("entities/att/ur_ak/magazines/545_30.png", "mips smooth")},
+    [9] = {"30-Round 5.56 Mag", "30-Round 5.56 Mag", Material("entities/att/ur_g3/mag556_30.png", "mips smooth")},
 }
 
 att.Hook_GetDefaultAttName = function(wep, slot)
