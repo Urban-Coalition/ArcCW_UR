@@ -31,6 +31,11 @@ $collisionmodel "v_sw329.smd"
 
 $poseparameter "sights" 0 1 loop 0
 
+$sequence "ref" {
+    "anims/wmfix.smd"
+    fps 60
+}
+
 $sequence "idle" {
     "anims/idle.smd"
     "anims/idle.smd"
