@@ -666,6 +666,35 @@ SWEP.Animations = {
             {s = rottle, t = 1},
         },
     },
+    ["enter_inspect_jammed"] = {
+        Source = "enter_inspect_jam",
+        time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKOut = 0,
+        SoundTable = {
+            {s = rottle, t = 0},
+        },
+    },
+    ["idle_inspect_jammed"] = {
+        Source = "idle_inspect_jam",
+        time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_jammed"] = {
+        Source = "exit_inspect_jam",
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        SoundTable = {
+            {s = rottle, t = 0.05},
+            {s = rottle, t = 1},
+        },
+    },
 }
 
 -- ADS animation blending, thanks fesiug -- 
