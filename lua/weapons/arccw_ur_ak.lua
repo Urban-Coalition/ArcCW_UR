@@ -705,13 +705,13 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "16\" Standard Barrel",
-        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_ak/barrel/std.png", "mips smooth"),
         Slot = "ur_ak_barrel",
     },
     {
         PrintName = "Handguard",
         DefaultAttName = "Factory Handguard",
-        DefaultAttIcon = Material("entities/att/ur_ak/barrel/stock_barrel.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_ak/handguards/std.png", "mips smooth"),
         Slot = "ur_ak_hg",
         ExcludeFlags = {"barrel_carbine"},
     },

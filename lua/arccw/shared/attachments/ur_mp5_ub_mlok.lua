@@ -1,7 +1,7 @@
 att.PrintName = "MP5 M-LOK Handguard"
 att.AbbrevName = "M-LOK Handguard"
 
-att.Icon = Material("entities/att/ur_g3/hk_51_flash.png","smooth mips")
+att.Icon = Material("entities/att/ur_g3/hg_51_mlok.png","smooth mips")
 att.Description = "American aftermarket handguard. Lighter than the basic, polymer handguard it replaces, improving handling, but somewhat unwieldy."
 att.AutoStats = true
 
