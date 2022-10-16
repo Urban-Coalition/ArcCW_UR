@@ -585,7 +585,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = "ur_g3_mag",
         DefaultAttName = "20-Round Mag",
-        DefaultAttIcon = Material("entities/att/ur_g3/mag_20.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_g3/mag20.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",

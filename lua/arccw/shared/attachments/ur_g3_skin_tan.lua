@@ -1,7 +1,7 @@
 att.PrintName = "G3 Flat Dark Earth Furniture"
 att.AbbrevName = "FDE"
 att.Description = "FDE furniture for the tactical feel."
-att.Icon = Material("entities/att/ur_g3/fde.png","smooth mips")
+att.Icon = Material("entities/att/ur_g3/skin_fde.png","smooth mips")
 att.Slot = "ur_g3_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic",
