@@ -10,6 +10,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "ur.spas12.pump"
 }
+att.Icon = Material("entities/att/ur_spas/barrel_std.png", "smooth mips")
 
 att.SortOrder = 21.5
 att.Slot = "ur_spas12_barrel"

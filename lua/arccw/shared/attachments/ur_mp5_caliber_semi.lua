@@ -7,7 +7,7 @@ end
 
 att.Description = "A semi-automatic receiver sold in civilian markets. Designed for sport shooting, this receiver is more accurate and lightweight."
 
---att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/grip.png", "smooth mips")
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

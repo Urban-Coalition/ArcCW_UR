@@ -2,12 +2,7 @@ att.PrintName = "18\" SPAS-12 Compact Barrel"
 att.AbbrevName = "18\" Compact Barrel"
 att.Icon = Material("entities/att/acwatt_ud_m1014_barrel_short.png", "smooth mips")
 att.Description = "Rare short barrel intended for breaching and close quarters use. Noticeably increases pellet spread, but is easier to manuver."
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-}
-att.Desc_Neutrals = {
-}
+att.Icon = Material("entities/att/ur_spas/barrel_short.png", "smooth mips")
 att.Slot = "ur_spas12_barrel"
 
 att.SortOrder = 18

@@ -1,6 +1,6 @@
 att.PrintName = "4.5\" Kurz Upper"
 
-att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_kurz.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/upper_k.png", "smooth mips")
 att.Description = "Machine pistol variant with a maximally compact barrel and a lightened bolt assembly for increased cyclic rate.\nMid-range accuracy is poor, and recoil is noticibly increased."
 att.AutoStats = true
 

@@ -1,5 +1,5 @@
 att.PrintName = "Folded Stock"
-att.Icon = Material("entities/att/acwatt_ud_m1014_stock_in.png", "smooth mips")
+att.Icon = Material("entities/att/ur_spas/stock_fold.png", "smooth mips")
 att.Description = [[Folding the stock makes the weapon significantly shorter, allowing for easier use around corners and making it easier on the move at the cost of less stability.
 
 Contrary to some depictions, the stock obstructs iron sights when folded.]]

@@ -1,6 +1,6 @@
 att.PrintName = "Slim Handguard"
 
-att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_classic.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/hg_slim.png", "smooth mips")
 att.Description = "Early rounded handguard, lighter than the current iteration but more difficult to brace."
 att.AutoStats = true
 

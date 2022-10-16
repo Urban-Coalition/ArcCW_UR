@@ -975,9 +975,9 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect_enter",
         -- time = 35 / 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 2.5,
+        -- LHIK = true,
+        -- LHIKIn = 0,
+        -- LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
         },
@@ -985,16 +985,16 @@ SWEP.Animations = {
     ["idle_inspect"] = {
         Source = "inspect_loop",
         -- time = 72 / 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 999,
+        -- LHIK = true,
+        -- LHIKIn = 0,
+        -- LHIKOut = 999,
     },
     ["exit_inspect"] = {
         Source = "inspect_exit",
         -- time = 66 / 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 999,
+        -- LHIK = true,
+        -- LHIKIn = 0,
+        -- LHIKOut = 999,
         SoundTable = {
             {s = rottle, t = 0.25},
             {s = rottle, t = 1.25},
@@ -1007,6 +1007,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKOut = 0,
+        Time = .75,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -1020,6 +1021,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseOut = 0.4,
         LHIKOut = 0.5,
+        Time = .75,
     },
 }
 
@@ -1042,7 +1044,7 @@ SWEP.Attachments = {
     {
         PrintName = "Upper Receiver",
         DefaultAttName = "9\" Standard Upper",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_body.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_mp5/upper_std.png", "smooth mips"),
         Slot = "ur_mp5_barrel",
         Bone = "body",
         Offset = {
@@ -1053,7 +1055,7 @@ SWEP.Attachments = {
     {
         PrintName = "Lower Receiver",
         DefaultAttName = "Navy Lower",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_mp5/grip.png", "smooth mips"),
         Slot = "ur_mp5_caliber",
         DefaultEles = {"receiver_lower_0"}
     },
@@ -1071,6 +1073,7 @@ SWEP.Attachments = {
     {
         PrintName = "Handguard",
         DefaultAttName = "Tropical Handguard",
+        DefaultAttIcon = Material("entities/att/ur_mp5/hg_std.png", "smooth mips"),
         Slot = {"ur_mp5_hg"},
         ExcludeFlags = {"barrel_sd", "barrel_eod"},
         Bone = "body",
@@ -1110,13 +1113,13 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ur_mp5_stock"},
         DefaultAttName = "Full Stock",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_stock.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_mp5/stock_std.png", "smooth mips"),
     },
     {
         PrintName = "Magazine",
         Slot = {"ur_mp5_mag"},
         DefaultAttName = "30-Round Mag",
-        DefaultAttIcon = Material("entities/att/acwatt_ur_mp5_mag_32.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_mp5/mag30.png", "smooth mips"),
         ExcludeFlags = {"ur_mp5_cal_40sw","ur_mp5_cal_10mm"}
     },
     {
@@ -1160,6 +1163,7 @@ SWEP.Attachments = {
 			vang = Angle(90, 0, -90),
 		},
 		Hidden = true,
+        --RequireFlags = {"barrel_eod"},
 	}
 }
 

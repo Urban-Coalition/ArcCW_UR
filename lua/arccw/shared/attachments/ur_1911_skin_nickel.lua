@@ -11,3 +11,5 @@ att.Desc_Neutrals = {
 att.AutoStats = true
 att.Slot = "ur_m1911_skin"
 att.Free = true
+
+att.Ignore = true

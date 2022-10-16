@@ -1,6 +1,6 @@
 att.PrintName = "11\" EOD Barrel"
 
-att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_sd.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/upper_eod.png", "smooth mips")
 att.Description = "Extended barrel and handguard assembly with a massive integrated muzzle brake to protect underbarrel weapons.\nDecreases muzzle rise, but performs poorly when hip firing."
 att.Desc_Pros = {
 }

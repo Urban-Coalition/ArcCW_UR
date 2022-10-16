@@ -1,5 +1,5 @@
 att.PrintName = "No Stock"
-att.Icon = Material("entities/att/acwatt_ud_m1014_stock_buffer.png", "smooth mips")
+att.Icon = Material("entities/att/ur_spas/grip_std.png", "smooth mips")
 att.Description = "A real theoretical physicist won't need this."
 att.Desc_Pros = {
 }

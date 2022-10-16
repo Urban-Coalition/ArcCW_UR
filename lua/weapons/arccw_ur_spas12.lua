@@ -650,7 +650,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "21.5\" Special Purpose Barrel", --16\" M4 Super 90 SBS Barrel
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_barrel.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_spas/barrel_std.png", "smooth mips"),
         Slot = "ur_spas12_barrel",
     },
     {
@@ -687,13 +687,13 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ur_spas12_stock"},
         DefaultAttName = "Extended Stock",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_stock.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_spas/stock_std.png", "smooth mips"),
     },
     {
         PrintName = "Tube Type",
         Slot = {"ur_spas12_tube"},
         DefaultAttName = "8 Shell Tube",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_tube.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_spas/magbig.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",

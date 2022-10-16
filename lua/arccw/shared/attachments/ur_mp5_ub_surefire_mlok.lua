@@ -1,6 +1,6 @@
 att.PrintName = "Sherlock Handguard"
 
-att.Icon = Material("entities/att/ur_g3/hk_51_flash.png","smooth mips")
+att.Icon = Material("entities/att/ur_mp5/hg_flash_mlok.png", "smooth mips")
 att.Description = "Alternative handguard with an integrated flashlight and M-LOK pattern attachment points.\n\nFunctionally and statistically identical to the Surefire Handguard."
 att.Desc_Pros = {
     "uc.light"

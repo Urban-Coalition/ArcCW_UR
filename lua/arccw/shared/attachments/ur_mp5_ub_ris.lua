@@ -1,6 +1,6 @@
 att.PrintName = "RIS Handguard"
 
-att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_ris.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/hg_pica.png", "smooth mips")
 att.Description = "Alternative handguard with a tacticool picatinny rail interface. Does not have any tacticool benefits."
 att.Desc_Neutrals = {
     "uc.cosmetic"

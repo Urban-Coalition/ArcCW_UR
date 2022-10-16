@@ -6,8 +6,8 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 201
-att.Icon = Material("entities/att/acwatt_ur_mp5_caliber.png", "smooth mips")
-att.Description = "Original receiver that lacks the Navy receiver's three-round burst fire mode. Its grooved grip is more comfortable to hold."
+att.Icon = Material("entities/att/ur_mp5/sef.png", "smooth mips")
+att.Description = "Vintage receiver that lacks the Navy receiver's three-round burst fire mode. Its grooved grip is more comfortable to hold."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -1,6 +1,6 @@
 att.PrintName = "G3 50-Round Drum Mag"
 att.AbbrevName = "50-Round Drum Mag"
-att.Icon = Material("entities/att/ur_g3/mag_50.png","smooth mips")
+att.Icon = Material("entities/att/ur_g3/mag50.png","smooth mips")
 att.Description = "Extremely cumbersome drum magazine."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true

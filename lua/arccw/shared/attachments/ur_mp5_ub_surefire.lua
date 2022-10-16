@@ -1,7 +1,7 @@
 att.PrintName = "MP5 Surefire Handguard"
 att.AbbrevName = "Surefire Handguard"
 
-att.Icon = Material("entities/att/ur_g3/hg_51_flash.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/hg_flash.png", "smooth mips")
 att.Description = "Alternative handguard with an integrated flashlight."
 att.Desc_Pros = {
     "uc.light"

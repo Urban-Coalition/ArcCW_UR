@@ -1,6 +1,6 @@
 att.PrintName = "Closed Irons"
 
-att.Icon = Material("entities/att/acwatt_ur_mp5_barrel_ris.png", "smooth mips")
+att.Icon = Material("entities/att/ur_mp5/altirons.png", "smooth mips")
 att.Description = "Closed iron sights with a smaller field of view, potentially increasing user precision.\nIn reality, it's all preference."
 att.Desc_Neutrals = {
     "uc.cosmetic"
