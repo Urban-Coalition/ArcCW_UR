@@ -83,7 +83,7 @@ SWEP.MalfunctionJam = false
 
 SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 6
-SWEP.RejectMagSizeChange = true
+SWEP.RejectMagSizeChange = true -- Signals to attachments that mag size shouldn't be changeable; needs to be implemented attachment-side with att.Compatible
 
 -- Recoil --
 
