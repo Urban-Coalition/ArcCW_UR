@@ -83,6 +83,7 @@ SWEP.MalfunctionJam = false
 
 SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 6
+SWEP.RejectMagSizeChange = true
 
 -- Recoil --
 
@@ -520,7 +521,7 @@ SWEP.Attachments = {
     {
         PrintName = "Internals",
         Slot = "uc_fg", -- Fire group
-        DefaultAttName = "Standard Internals"
+        DefaultAttName = "Standard Internals",
     },
     {
         PrintName = "Charm",
