@@ -1,3 +1,7 @@
+att.Ignore = true
+
+
+
 att.PrintName = "MP5A2 Wooden Stock"
 att.AbbrevName = "Wooden Stock"
 

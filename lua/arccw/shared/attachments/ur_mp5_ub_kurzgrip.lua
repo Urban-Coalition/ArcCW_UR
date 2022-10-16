@@ -11,7 +11,7 @@ att.Slot = "ur_mp5_hg"
 
 att.LHIK = true
 
-att.ModelOffset = Vector(0, 0, -0)
+att.ModelOffset = Vector(-1.3, 0, -0)
 att.Model = "models/weapons/arccw/atts/ur_kurzlhik.mdl" // stole this pose from the tall troy grip lol!!!
 att.Override_HoldtypeActive = "smg"
 
