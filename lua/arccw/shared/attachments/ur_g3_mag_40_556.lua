@@ -1,7 +1,12 @@
 att.PrintName = "HK33 40-Round Extended Mag"
 att.AbbrevName = "40-Round Extended Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "CN66 40-Round Extended Mag"
+end
+
 att.Icon = Material("entities/att/ur_g3/mag556_40.png","smooth mips")
-att.Description = "Extended magazine for the HK33. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."
+att.Description = "Extended magazine for the 5.56 variant of the rifle. Though very reliable, its oblong design makes it awkward to load."
 att.Slot = {"ur_g3_mag"}
 att.AutoStats = true
 

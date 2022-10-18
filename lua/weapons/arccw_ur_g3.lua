@@ -529,7 +529,7 @@ SWEP.Attachments = {
     {
         PrintName = "Reciever",
         Slot = "ur_g3_rec",
-        DefaultAttName = "G3 Reciever",
+        DefaultAttName = "Standard Reciever",
         DefaultAttIcon = Material("entities/att/ur_g3/rec_std.png", "smooth mips"),
     },
     {

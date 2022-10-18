@@ -1,6 +1,10 @@
 att.PrintName = "MP5 Surefire Handguard"
 att.AbbrevName = "Surefire Handguard"
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "PK5 Surefire Handguard"
+end
+
 att.Icon = Material("entities/att/ur_mp5/hg_flash.png", "smooth mips")
 att.Description = "Alternative handguard with an integrated flashlight."
 att.Desc_Pros = {

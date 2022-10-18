@@ -1,5 +1,11 @@
 att.PrintName = "HK33 5.56x45mm Receiver"
 att.AbbrevName = "HK33 5.56 Receiver"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "CN66 5.56x45mm Receiver"
+    att.AbbrevName = "CN66 5.56 Receiver"
+end
+
 att.Description = "Receiver and barrel group that accepts an intermediate cartridge, changing the weapon into an assault rifle."
 att.Icon = Material("entities/att/ur_g3/rec_33.png","smooth mips")
 att.Slot = "ur_g3_rec"

@@ -1,6 +1,6 @@
 att.PrintName = "RIS Handguard"
 att.Icon = Material("entities/att/ur_g3/hg_pica.png","smooth mips")
-att.Description = "RIS handguard for modernizing the G3. Cosmetic only."
+att.Description = "A handguard with three picatinny rails extending down the barrel, enabling higher modularity."
 att.AutoStats = true
 att.Desc_Neutrals = {
     "uc.cosmetic"

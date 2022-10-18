@@ -1,5 +1,10 @@
 att.PrintName = "G3 10-Round Marksman Mag"
 att.AbbrevName = "10-Round Marksman Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "G58 10-Round Marksman Mag"
+end
+
 att.Icon = Material("entities/att/ur_g3/mag10.png","smooth mips")
 att.Description = "Magazine with a very low capacity. The lighter load reduces the weapon's weight significantly."
 att.Slot = {"ur_g3_mag"}

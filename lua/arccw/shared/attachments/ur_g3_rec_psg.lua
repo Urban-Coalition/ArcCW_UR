@@ -1,4 +1,9 @@
 att.PrintName = "PSG-1 Receiver"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "PMR-2 Receiver"
+end
+
 att.Description = "Infamously expensive semi-automatic reciever. Comes with sublime long-range performance and a comfortable wooden grip that improves handling."
 att.Icon = Material("entities/att/ur_g3/rec_psg.png","smooth mips")
 att.Slot = "ur_g3_rec"
