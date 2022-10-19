@@ -1,7 +1,13 @@
 att.PrintName = "HK51 8\" Compact Barrel"
 att.AbbrevName = "8\" Compact Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "CN102 8\" Blitz Barrel"
+    att.AbbrevName = "8\" Blitz Barrel"
+end
+
 att.Icon = Material("entities/att/ur_g3/barrel_51.png","smooth mips")
-att.Description = "Extremely shortened barrel for the HK51 carbine. Colloqually known as a \"flashbang dispenser,\" the tiny barrel drastically increases fire rate - for better and for worse.\n\nThe reduced dimensions are compatible with some MP5 furniture."
+att.Description = "Ridiculously short aftermarket barrel. Colloqually known as a \"flashbang dispenser,\" the tiny barrel drastically increases fire rate - for better and for worse.\n\nThe reduced dimensions are compatible with some MP5 furniture."
 att.Slot = "ur_g3_barrel"
 att.Desc_Pros = {
     "ur.g3.8"

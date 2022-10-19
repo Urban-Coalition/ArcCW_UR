@@ -1,7 +1,12 @@
 att.PrintName = "PSG-1 26\" Sniper Barrel"
 att.AbbrevName = "26\" Sniper Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "PMR-2 26\" Sniper Barrel"
+end
+
 att.Icon = Material("entities/att/ur_g3/barrel_psg.png","smooth mips")
-att.Description = "Long barrel and handguard assembly for the PSG-1 sniper rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned for long range usage, this barrel lacks iron sights."
+att.Description = "Long barrel and handguard assembly for the sniper variant of the rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned purely for long range usage, this barrel lacks iron sights."
 att.Slot = "ur_g3_barrel"
 att.Desc_Cons = {
     "uc.nofs",

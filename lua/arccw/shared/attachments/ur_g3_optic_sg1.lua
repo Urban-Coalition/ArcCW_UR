@@ -1,5 +1,10 @@
 att.PrintName = "Zeiss Diavari DA 1.5-6x Sniper Scope"
 att.AbbrevName = "G3SG/1 Optic (1.5-6x)"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.AbbrevName = "G58-SSR Optic (1.5-6x)"
+end
+
 att.Icon = Material("entities/att/acwatt_ur_g3_optic_sg1.png", "mips smooth")
 att.Description = "Variable power scope, adjustable for a very wide range of magnifications.\nExclusive to the G3 pattern."
 -- need icon

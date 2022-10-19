@@ -38,4 +38,6 @@ att.Override_Firemodes = {
     }
 }
 
+att.Override_Trivia_Class = "Pistol"
+
 att.ActivateElements = {"receiver_lower_semi"}
