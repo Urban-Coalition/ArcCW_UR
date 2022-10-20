@@ -129,6 +129,8 @@ SWEP.Firemodes = {
     }
 }
 
+SWEP.UC_CanManualAction = true
+
 SWEP.ShootVol = 160
 SWEP.ShootPitch = 100
 
@@ -144,7 +146,7 @@ SWEP.NPCWeight = 210
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 25
+SWEP.AccuracyMOA = 28
 SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 125
 SWEP.JumpDispersion = 1000
@@ -153,14 +155,14 @@ SWEP.Primary.Ammo = "buckshot"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.88
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.625
+SWEP.SpeedMult = 0.91
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.475
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --
 
-SWEP.BarrelLength = 46
+SWEP.BarrelLength = 49
 SWEP.ExtraSightDist = 2
 
 -- Ironsights / Customization / Poses --
@@ -411,6 +413,10 @@ SWEP.Attachments = {
         DefaultAttName = "28\" Factory Barrel",
         DefaultAttIcon = Material("entities/att/ur_spas/barrel_std.png", "smooth mips"),
         Slot = "ur_db_barrel",
+    },
+    {
+        PrintName = "Muzzle",
+        Slot = "choke",
     },
     -- {
     --     PrintName = "Underbarrel",
