@@ -236,7 +236,13 @@ SWEP.DistantShootSoundIndoorsSilenced = {
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
-SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
+SWEP.Hook_AddShootSound = function(wep,data)
+    ArcCW.UC.InnyOuty(wep)
+
+    if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
+        wep:EmitSound(wep.ShootSound[math.random(1,#wep.ShootSound)], data.volume * .25,data.pitch,1,CHAN_WEAPON - 1)
+    end
+end
 
 -- Animations --
 
