@@ -36,7 +36,7 @@ att.Hook_GetShootSound = function(wep, fsound)
         path .. "stalol/fire_545_1.wav",
      } end]]
     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} end
-    if fsound == wep.ShootSoundSilenced then return path1 .. "fire_545_sup.ogg" end
+    if fsound == wep.ShootSoundSilenced then return {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"} end
 end
 
 
