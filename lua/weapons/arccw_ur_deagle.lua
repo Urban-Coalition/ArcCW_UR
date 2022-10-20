@@ -538,7 +538,11 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "unjam.ogg", t = .4}
-        }
+        },
+        LHIK = true,
+        LHIKIn = .2,
+        LHIKOut = .2,
+        LHIKEaseOut = .75,
     },
     -- Inspecc --
                                     -- disabled due to suck balls
