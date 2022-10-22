@@ -25,7 +25,7 @@ SWEP.PrintName = "Volga SuperShotgun" -- it's marketed to Americans
 
 -- True name --
 
-SWEP.TrueName = "IZh-43"
+SWEP.TrueName = "IZh-58"
 
 -- Trivia --
 
@@ -37,7 +37,7 @@ SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Break Action"
 SWEP.Trivia_Country = "Soviet Union"
-SWEP.Trivia_Year = 1986
+SWEP.Trivia_Year = 1958
 
 -- Weapon slot --
 
@@ -130,6 +130,8 @@ SWEP.Firemodes = {
 }
 
 SWEP.UC_CanManualAction = true
+
+SWEP.MalfunctionTakeRound = false
 
 SWEP.ShootVol = 160
 SWEP.ShootPitch = 100
