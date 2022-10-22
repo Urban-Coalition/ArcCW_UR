@@ -131,6 +131,8 @@ SWEP.Firemodes = {
 
 SWEP.UC_CanManualAction = true
 
+SWEP.MalfunctionTakeRound = false
+
 SWEP.ShootVol = 160
 SWEP.ShootPitch = 100
 
