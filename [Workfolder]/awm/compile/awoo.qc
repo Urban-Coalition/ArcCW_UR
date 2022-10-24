@@ -137,7 +137,7 @@ $sequence "fire" {
 
 $sequence "cycle" {
 	"talonAnims/cycle.smd"
-	"talonAnims/cycle.smd"
+	"talonAnims/cycle_irons.smd"
 	blend "sights" 0 1
 	fps 40
 	"ACT_VM_IDLE" 1
@@ -147,7 +147,7 @@ $sequence "cycle" {
 
 
 
-$sequence "reload" "talonAnims/reload3.smd" {
+$sequence "reload" "talonAnims/reload.smd" {
 	fps 40
 	"ACT_VM_RELOAD" 1
 	snap
