@@ -37,7 +37,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_ak.mdl"
 SWEP.ViewModelFOV = 70
 
-SWEP.DefaultBodygroups = "010000800120"
+SWEP.DefaultBodygroups = "010000000120"
 
 -- Damage --
 
@@ -470,7 +470,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 5}}
     },
     ["stock_akn"] = {
-        VMBodygroups = {{ind = 6, bg = 0}}
+        VMBodygroups = {
+            {ind = 6, bg = 8},
+            {ind = 3, bg = 1},
+        }
     },
     ["stock_skeletal"] = {
         VMBodygroups = {
@@ -786,7 +789,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ur_ak_stock"},
         DefaultAttName = "Factory Stock",
-        DefaultAttIcon = Material("entities/att/ur_ak/stock/n.png", "mips smooth"),
+        DefaultAttIcon = Material("entities/att/ur_ak/stock/3.png", "mips smooth"),
     },
     {
         PrintName = "Ammo Type",
