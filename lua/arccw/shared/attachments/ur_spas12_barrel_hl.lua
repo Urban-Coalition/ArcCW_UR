@@ -65,5 +65,5 @@ end
 ]]
 
 att.Mult_CycleTime = 1.15
-att.Override_ActivePos = Vector(1.90, -1.50, -0.40) --Vector(1, -3, 0)
+att.Override_ActivePos = Vector(1.90, -3, -0.40) --Vector(1, -3, 0)
 att.Override_ActivePos_Priority = 10

@@ -28,6 +28,6 @@ att.Mult_ShootSpeedMult = 1.15
 att.Add_BarrelLength = -12
 att.Mult_Sway = 3
 
-att.Override_ActivePos = Vector(0.5, 5, 0)
+att.Override_ActivePos = Vector(0.5, 5, -1)
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"
