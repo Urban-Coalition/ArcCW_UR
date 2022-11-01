@@ -590,7 +590,7 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
-local rutle = {common .. "movement-smg-01.ogg",common .. "movement-smg-03.ogg",common .. "movement-smg-04.ogg"}
+local rutle = {common .. "movement-smg-03.ogg",common .. "movement-smg-04.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
