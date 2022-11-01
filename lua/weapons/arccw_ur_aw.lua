@@ -132,6 +132,7 @@ local path1 = ")^weapons/arccw_ur/mp5/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
+local rutle = {common .. "movement-sniper-03.ogg",common .. "movement-sniper-04.ogg"}
 
 SWEP.ShootSound = {
     testpath .. "fire-01.ogg",
@@ -828,29 +829,63 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect_enter",
         -- time = 35 / 60,
-        --LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = rutle, t = 0.1},
         },
     },
     ["idle_inspect"] = {
         Source = "inspect_loop",
         -- time = 72 / 60,
-        --LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 999,
+        LHIKOut = 999, -- maybe im dumb
     },
     ["exit_inspect"] = {
         Source = "inspect_exit",
         -- time = 66 / 60,
-        --LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 999,
+        LHIKOut = 999, -- maybe im dumb
         SoundTable = {
+            {s = rutle, t = 0.2},
             {s = rottle, t = 0.25},
-            {s = rottle, t = 1.25},
+            {s = rottle, t = 1.2},
+            {s = rutle, t = 1.25},
+        },
+    },
+    ["enter_inspect_empty"] = { -- Animations needed!
+        Source = "inspect_enter",
+        -- time = 35 / 60,
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = rutle, t = 0.1},
+        },
+    },
+    ["idle_inspect_empty"] = {
+        Source = "inspect_loop",
+        -- time = 72 / 60,
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+    },
+    ["exit_inspect_empty"] = {
+        Source = "inspect_exit",
+        -- time = 66 / 60,
+        LHIK = false,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+        SoundTable = {
+            {s = rutle, t = 0.2},
+            {s = rottle, t = 0.25},
+            {s = rottle, t = 1.2},
+            {s = rutle, t = 1.25},
         },
     },
 }

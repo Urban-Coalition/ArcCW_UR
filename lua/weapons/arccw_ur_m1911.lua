@@ -186,6 +186,7 @@ SWEP.WorldModelOffset = {
 local path = ")^weapons/arccw_ur/1911/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local rutle = {common .. "movement-pistol-01.ogg",common .. "movement-pistol-02.ogg",common .. "movement-pistol-03.ogg",common .. "movement-pistol-04.ogg"}
 
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
@@ -400,6 +401,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = rutle, t = 0.1},
             --{s = common .. "raise.ogg", t = 0.05},
         },
     },
@@ -411,6 +413,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = rutle, t = 0.1},
             --{s = common .. "raise.ogg", t = 0.05},
         },
     },
@@ -419,7 +422,9 @@ SWEP.Animations = {
         Time = .75,
         MinProgress = .4,
         SoundTable = {
+            {s = rottle, t = 0},
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = rutle, t = 0.1},
             --{s = common .. "raise.ogg", t = 0.05},
         },
     },
@@ -427,6 +432,7 @@ SWEP.Animations = {
         Source = "holster",
         Time = .75,
         SoundTable = {
+            {s = rutle, t = 0.05},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
@@ -434,6 +440,7 @@ SWEP.Animations = {
         Source = "holster_empty",
         Time = .75,
         SoundTable = {
+            {s = rutle, t = 0.05},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
@@ -441,6 +448,7 @@ SWEP.Animations = {
         Source = "holster_jam",
         Time = 18 / 30,
         SoundTable = {
+            {s = rutle, t = 0.05},
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
@@ -615,6 +623,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = rutle, t = 0},
         },
     },
     ["idle_inspect"] = {
@@ -633,6 +642,8 @@ SWEP.Animations = {
         LHIKOut = 0.84,
         SoundTable = {
             {s = rottle, t = 0.05},
+            {s = rutle, t = 0.1},
+            {s = rutle, t = 0.9},
             {s = rottle, t = 1},
         },
     },
@@ -645,6 +656,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = rutle, t = 0},
         },
     },
     ["idle_inspect_empty"] = {
@@ -663,6 +675,8 @@ SWEP.Animations = {
         LHIKOut = 0.84,
         SoundTable = {
             {s = rottle, t = 0.05},
+            {s = rutle, t = 0.1},
+            {s = rutle, t = 0.9},
             {s = rottle, t = 1},
         },
     },
@@ -674,6 +688,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = rutle, t = 0},
         },
     },
     ["idle_inspect_jammed"] = {
@@ -692,6 +707,8 @@ SWEP.Animations = {
         LHIKOut = 0.84,
         SoundTable = {
             {s = rottle, t = 0.05},
+            {s = rutle, t = 0.1},
+            {s = rutle, t = 0.9},
             {s = rottle, t = 1},
         },
     },
