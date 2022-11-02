@@ -535,7 +535,7 @@ SWEP.Animations = {
         LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = rutle, t = 0.1},
+            {s = common .. "movement-shotgun-01.ogg", t = 0.1},
         },
     },
     ["idle_inspect"] = {
@@ -552,10 +552,10 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 999, -- maybe im dumb
         SoundTable = {
-            {s = rutle, t = 0.2},
+            {s = common .. "movement-shotgun-02.ogg", t = 0.3},
             {s = rottle, t = 0.25},
             {s = rottle, t = 1.2},
-            {s = rutle, t = 1.25},
+            {s = common .. "movement-shotgun-04.ogg", t = 1.3},
         },
     },
     ["enter_inspect_empty"] = { -- Animations needed!
@@ -566,7 +566,7 @@ SWEP.Animations = {
         LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = rutle, t = 0.1},
+            {s = common .. "movement-shotgun-01.ogg", t = 0.1},
         },
     },
     ["idle_inspect_empty"] = {
@@ -583,10 +583,10 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 999, -- maybe im dumb
         SoundTable = {
-            {s = rutle, t = 0.2},
+            {s = common .. "movement-shotgun-02.ogg", t = 0.3},
             {s = rottle, t = 0.25},
             {s = rottle, t = 1.2},
-            {s = rutle, t = 1.25},
+            {s = common .. "movement-shotgun-04.ogg", t = 1.3},
         },
     },
 }
