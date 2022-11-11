@@ -73,8 +73,6 @@ $sequence "holster" {
 
 $sequence "fire" {
 	"anims\fire.smd"
-	"anims\fire_iron.smd"
-	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
