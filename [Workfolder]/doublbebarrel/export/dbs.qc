@@ -1,4 +1,4 @@
-$modelname = "weapons\arccw\c_ur_dbs.mdl"
+$modelname "weapons\arccw\c_ur_dbs.mdl"
 
 // Bodygroups
 $bodygroup "studio" {
@@ -31,11 +31,11 @@ $bodygroup "boolet" {
 // Materials
 $cdmaterials "models\weapons\arccw\ur_dbs"
 
-// Attachments (PROBABLY BROKEN I HAVE NO IDEA WHAT I'M DOING)
-$attachment "1" "muzzle_long" 0 0 0 rotate -90 0 0
-$attachment "2" "shell1" 0.00 -0.75 -1.00 rotate -10 140 180
-$attachment "3" "camera" 0 0 0 rotate -90 0 0
-$attachment "4" "barrel" 0 0 5 rotate -90 0 0
+//[[ Attachments (PROBABLY BROKEN I HAVE NO IDEA WHAT I'M DOING)
+//$attachment "1" "muzzle" 0 0 0 rotate -90 0 0
+//$attachment "2" "shell1" 0.00 -0.75 -1.00 rotate -10 140 180
+//$attachment "3" "camera" 0 0 0 rotate -90 0 0
+//$attachment "4" "barrel" 0 0 5 rotate -90 0 0
 
 // Surface properties and other stuff
 $surfaceprop "weapon"

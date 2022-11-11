@@ -1,0 +1,20 @@
+"SurfaceGGX" 
+{
+	"$basetexture" 				"models\weapons\izh43\w_izh43"
+	"$bumpmap" 					"models\weapons\izh43\n_izh43"
+	$phongexponenttexture		"models\weapons\izh43\exp_izh43"
+	
+"$roughnessmultiplier" "1" 
+"$metal" "1" 
+"$phong" "1" 
+//"$phongexponent" "80" 
+"$phongboost" ".2" 
+"$phongfresnelranges" "[1 2 3]" 
+"$phongtint" "[0.6 0.8 1]" 
+//"$phongalbedotint" "1" 
+"$BasemapLuminancePhongMask" "1" 
+//"$envmapfresnel" "0.1" 
+//"$envmap" "env_cubemap" 
+//"$envmaptint" "[0.01 0.01 0.01]" 
+//"$normalmapalphaenvmapmask" "1" 
+}

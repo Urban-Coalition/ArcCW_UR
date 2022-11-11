@@ -52,8 +52,8 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
--- SWEP.ViewModel = "models/weapons/arccw/c_ur_spas12.mdl"
--- SWEP.WorldModel = "models/weapons/arccw/c_ur_spas12.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ur_dbs.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ur_dbs.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
@@ -348,10 +348,42 @@ SWEP.Animations = {
     },
 
     ["reload"] = {
-
+        Source = "tac_manual",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {33, 55},
+        FrameRate = 30,
+        SoundTable = {
+            {s = common .. "cloth_4.ogg", t = 0},
+            {s = path .. "magrel.ogg", t = 1.1},
+            {s = path .. "magout.ogg", t = 1.3},
+            {s = common .. "cloth_2.ogg", t = 1.6},
+            {s = path .. "magin.ogg", t = 2.6},
+            {s = common .. "shoulder.ogg", t = 3.8},
+        },
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
     },
     ["reload_empty"] = {
-        
+        Source = "empty_manual",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {33, 55, 88},
+        FrameRate = 30,
+        SoundTable = {
+            {s = common .. "cloth_4.ogg", t = 0},
+            {s = path .. "magrel.ogg", t = 1.1},
+            {s = path .. "magout.ogg", t = 1.3},
+            {s = common .. "cloth_2.ogg", t = 1.6},
+            {s = path .. "magin.ogg", t = 2.6},
+            {s = common .. "cloth_1.ogg", t = 2.0},
+            {s = path .. "chback.ogg", t = 4.5},
+            {s = common .. "cloth_3.ogg", t = 4.6},
+            {s = path .. "chamber.ogg", t = 5.0},
+            {s = common .. "shoulder.ogg", t = 5.8},
+        },
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
     },
 
     ["enter_inspect"] = {
