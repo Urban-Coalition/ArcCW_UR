@@ -11,7 +11,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "The Arctic Warfare, a heavy, purpose-designed rifle for extreme-range combat under extreme climates. A rifle of this family claimed what was once the most distant confirmed sniper kill in military history, at almost 2.5 kilometers.\nFew targets can stand up to a well-placed shot, but its long bolt pull and reload time are an encumbrance outside of its preferred environment.\n\nOne shot. One kill. You know the routine."
+SWEP.Trivia_Desc = "The Arctic Warfare: a heavy, purpose-designed rifle for extreme-range combat under extreme climates. A rifle of this family claimed what was once the most distant confirmed sniper kill in military history, at almost 2.5 kilometers.\nFew targets can stand up to a well-placed shot, but its long bolt pull and reload time are an encumbrance outside of its preferred environment.\n\nOne shot. One kill. You know the routine."
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Bolt Action"
