@@ -297,16 +297,12 @@ SWEP.Animations = {
     ["fire_empty"] = { -- second barrel
         Source = "fire_empty", -- fire_empty
         -- Time = 23 / 25,--30,
-        SoundTable = {
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
     },
     ["fire_iron_empty"] = {
         Source = "fire_empty", -- fire_empty
         -- Time = 23 / 25,--30,
-        SoundTable = {
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0}},
     },
 
     ["fire_2bst"] = { -- both
