@@ -5,7 +5,7 @@ $bodygroup "studio" {
 	studio "body.smd"
 }
 
-$bodygroup "0" {
+$bodygroup "1" {
 	studio "barrel long.smd"
 	studio "barrel mid.smd"
 	studio "barrel sw.smd"
@@ -13,12 +13,12 @@ $bodygroup "0" {
 	studio "barrel compact.smd"
 }
 
-$bodygroup "1" {
+$bodygroup "2" {
 	studio "stock.smd"
 	studio "stock sw.smd"
 }
 
-$bodygroup "2" {
+$bodygroup "3" {
 	studio "underbarrel.smd"
 	studio "underbarrel swplus.smd"
 }
@@ -28,14 +28,17 @@ $bodygroup "boolet" {
 }
 
 
-// Materials
 $cdmaterials "models\weapons\arccw\ur_dbs"
+$cdmaterials "models\weapons\arccw\uc_shells\"
 
-//[[ Attachments (PROBABLY BROKEN I HAVE NO IDEA WHAT I'M DOING)
-//$attachment "1" "muzzle" 0 0 0 rotate -90 0 0
-//$attachment "2" "shell1" 0.00 -0.75 -1.00 rotate -10 140 180
-//$attachment "3" "camera" 0 0 0 rotate -90 0 0
-//$attachment "4" "barrel" 0 0 5 rotate -90 0 0
+$attachment "1" "muzzle_long" 0 0 0 rotate 0 0 0
+$attachment "2" "muzzle_mid" 0 0 0 rotate 0 0 0
+$attachment "3" "muzzle_compact" 0 0 0 rotate 0 0 0
+$attachment "4" "muzzle_sw" 0 0 0 rotate 0 0 0
+$attachment "5" "muzzle_swplus" 0 0 0 rotate 0 0 0
+
+$attachment "6" "shell1" 0 0 0 rotate 0 90 -30
+$attachment "7" "camera" 0 0 0 rotate -90 0 0
 
 // Surface properties and other stuff
 $surfaceprop "weapon"
@@ -48,12 +51,14 @@ $cbox 0 0 0 0 0 0
 
 // Animations
 
+// $poseparameter "sights" 0 1 loop 0
+$poseparameter "long" 0 1 loop 0
+
 $sequence "idle" {
 	"anims\idle.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
 	loop
-	snap
 	node "Ready"
 }
 
@@ -61,18 +66,30 @@ $sequence "draw" {
 	"anims\draw.smd"
 	fps 30
 	"ACT_VM_DRAW" 1
-	snap
 }
 
 $sequence "holster" {
 	"anims\holster.smd"
 	fps 30
 	"ACT_VM_HOLSTER" 1
-	snap
 }
 
 $sequence "fire" {
-	"anims\fire.smd"
+	"anims\firefirst.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.03
+	fadeout 0.03
+}
+$sequence "fire_empty" {
+	"anims\firesecond.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.03
+	fadeout 0.03
+}
+$sequence "fireboth" {
+	"anims\fireboth.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
@@ -83,23 +100,28 @@ $sequence "reload" {
 	"anims\tac_manual.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
 	snap
 }
-
 $sequence "reload_empty" {
+	"anims\empty_manual.smd"
 	"anims\empty_manual_long.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
+	blend "long" 0 1
 	snap
 }
 
-$sequence "reload_empty_compact" {
-	"anims\empty_manual.smd"
+
+$sequence "reload_fast" {
+	"anims\tac.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
+	snap
+}
+$sequence "reload_empty_fast" {
+	"anims\empty.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
 	snap
 }
 
