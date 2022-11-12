@@ -340,6 +340,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        MinProgress = 2.05,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -365,6 +366,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        MinProgress = 2.05,
     },
 }
 
