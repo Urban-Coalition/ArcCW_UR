@@ -130,7 +130,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.UC_CanManualAction = false
+SWEP.UC_CanManualAction = true
 
 SWEP.MalfunctionTakeRound = false
 
