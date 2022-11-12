@@ -20,7 +20,8 @@
 
 	"$nocull" "1"
 
-	"Proxies"
+	// if you have modern warfare base installed will be little cooler
+	"Proxies" 
 	{
 		"MwEnvMapTint"
 		{

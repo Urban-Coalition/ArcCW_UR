@@ -129,7 +129,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.UC_CanManualAction = true
+SWEP.UC_CanManualAction = false
 
 SWEP.MalfunctionTakeRound = false
 
@@ -139,7 +139,8 @@ SWEP.ShootPitch = 100
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
-SWEP.ReloadInSights = true
+SWEP.ReloadInSights = false
+SWEP.RevolverReload = true
 
 -- NPC --
 
@@ -367,7 +368,12 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
-    
+    ["barrel_mid"] = { VMBodygroups = { {ind = 1, bg = 1} } },
+    ["barrel_compact"] = { VMBodygroups = { {ind = 1, bg = 4} } },
+    ["barrel_sw"] = { VMBodygroups = { {ind = 1, bg = 2} } },
+    ["barrel_swplus"] = { VMBodygroups = { {ind = 1, bg = 3}, {ind = 3, bg = 1} } },
+
+    ["stock_sw"] = { VMBodygroups = { {ind = 2, bg = 1} } },
 }
 
 SWEP.DefaultBodygroups = "00000000"
@@ -375,7 +381,7 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.Attachments = {
     {
         PrintName = "Barrel",
-        DefaultAttName = "28\" Factory Barrel",
+        DefaultAttName = "99\" Factory Barrel",
         DefaultAttIcon = Material("entities/att/ur_spas/barrel_std.png", "smooth mips"),
         Slot = "ur_db_barrel",
     },
@@ -412,33 +418,12 @@ SWEP.Attachments = {
     -- },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm", "ur_spas12_charm"},
+        Slot = {"charm", "fml_charm"},
         FreeSlot = true,
         Bone = "body",
         Offset = {
-            vpos = Vector(0.6, .5, -1.5),
-            vang = Angle(90, -90, -90),
+            vpos = Vector(-0.55, 1, -0.5),
+            vang = Angle(0, 90, 0),
         },
     },
 }
-
-local lookup_barrel = {
-    default = 1,
-    ur_spas12_comp = 1,
-    ur_spas12_barrel_short = 0,
-}
-
-local lookup_tube = {
-    default = 1,
-    ur_spas12_tube_reduced = 0,
-}
-
-SWEP.Hook_ExtraFlags = function(wep, data)
-
-    local barrel = wep.Attachments[2].Installed and lookup_barrel[wep.Attachments[2].Installed] or lookup_barrel["default"]
-    local tube = wep.Attachments[7].Installed and lookup_tube[wep.Attachments[7].Installed] or lookup_tube["default"]
-
-    if barrel < tube then
-        table.insert(data, "nomuzzleblocking")
-    end
-end

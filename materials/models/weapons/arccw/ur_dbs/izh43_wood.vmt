@@ -2,31 +2,14 @@
 {
 	"$basetexture" 				"models\weapons\arccw\ur_dbs\d_izh43"
 	"$bumpmap" 					"models\weapons\arccw\ur_dbs\n_izh43"
-    "$color"						"[1 1 1]"
+    "$color2"						"[0.94 0.99 1.5]"
 
 	"$phong"                        "1"
 	"$phongalbedotint"              "1"
 	
-	"$phongtint"                    "[.6 .8 1]"
-	"$phongboost"                   "0.39"
+	"$phongtint"                    "[.8 .8 .9]"
+	"$phongexponent"                "10"
+	"$phongboost"                   "0.2"
 	"$phongfresnelranges"           "[1 2.5 7]"
-	
-		"$phongexponent"                "37"
-
-
-
-	
-
-
-	"$envmap"                       "env_cubemap"
-	"$normalmapalphaenvmapmask"		"1"
-	"$envmaptint"                   "[0.018 0.018 0.018]"
-	
-	
-		"$halflambert"			"1"
-		
-		"$nocull" "1"
-		
-
 	
 }
