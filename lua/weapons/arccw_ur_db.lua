@@ -265,6 +265,8 @@ end
 
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local shellin = {common .. "dbs-shell-insert-01.ogg", common .. "dbs-shell-insert-02.ogg", common .. "dbs-shell-insert-03.ogg", common .. "dbs-shell-insert-04.ogg", common .. "dbs-shell-insert-05.ogg", common .. "dbs-shell-insert-06.ogg", common .. "dbs-shell-insert-07.ogg", common .. "dbs-shell-insert-08.ogg", common .. "dbs-shell-insert-09.ogg", common .. "dbs-shell-insert-10.ogg", common .. "dbs-shell-insert-11.ogg", common .. "dbs-shell-insert-12.ogg"}
+local shellfall = {path .. "shell-fall-01.ogg", path .. "shell-fall-02.ogg", path .. "shell-fall-03.ogg", path .. "shell-fall-04.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -322,10 +324,14 @@ SWEP.Animations = {
         FrameRate = 30,
         SoundTable = {
             {s = common .. "cloth_4.ogg", t = 0},
-            {s = path .. "magrel.ogg", t = 1.1},
-            {s = path .. "magout.ogg", t = 1.3},
-            {s = common .. "cloth_2.ogg", t = 1.6},
-            {s = path .. "magin.ogg", t = 2.6},
+            {s = path .. "open.ogg", t = 0.2},
+            {s = path .. "eject.ogg", t = 0.8},
+            {s = shellfall, t = 1.0},
+            {s = common .. "cloth_2.ogg", t = 1.1},
+            {s = path .. "struggle.ogg", t = 1.5, v = 0.5},
+            {s = shellin, t = 1.8},
+            {s = path .. "grab.ogg", t = 2.15, v = 0.5},
+            {s = path .. "close.ogg", t = 2.3},
             {s = common .. "shoulder.ogg", t = 3.8},
         },
         LHIK = true,
@@ -335,20 +341,22 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {33, 55, 88},
+        Checkpoints = {33, 55, 88}, 
         ShellEjectAt = 1.2,
         FrameRate = 30,
         SoundTable = {
             {s = common .. "cloth_4.ogg", t = 0},
-            {s = path .. "magrel.ogg", t = 1.1},
-            {s = path .. "magout.ogg", t = 1.3},
-            {s = common .. "cloth_2.ogg", t = 1.6},
-            {s = path .. "magin.ogg", t = 2.6},
-            {s = common .. "cloth_1.ogg", t = 2.0},
-            {s = path .. "chback.ogg", t = 4.5},
-            {s = common .. "cloth_3.ogg", t = 4.6},
-            {s = path .. "chamber.ogg", t = 5.0},
-            {s = common .. "shoulder.ogg", t = 5.8},
+            {s = path .. "open.ogg", t = 0.3},
+            {s = path .. "eject.ogg", t = 0.9},
+            {s = shellfall, t = 1.0},
+            {s = shellfall, t = 1.05},
+            {s = common .. "cloth_2.ogg", t = 1.1},
+            {s = path .. "struggle.ogg", t = 1.7, v = 0.5},
+            {s = shellin, t = 1.99},
+            {s = shellin, t = 2.0},
+            {s = path .. "grab.ogg", t = 2.37, v = 0.5},
+            {s = path .. "close.ogg", t = 2.5},
+            {s = common .. "shoulder.ogg", t = 3.8},
         },
         LHIK = true,
         LHIKIn = 0.5,
