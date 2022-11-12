@@ -276,7 +276,11 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         --Time = 20 / 30,
-        SoundTable = ArcCW.UC.DrawSounds,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path .. "grab.ogg", t = 0.2},
+            {s = path .. "shoulder.ogg", t = 0.5},
+        },
     },
     ["holster"] = {
         Source = "holster",
@@ -329,7 +333,8 @@ SWEP.Animations = {
             {s = shellin, t = 1.8},
             {s = path .. "grab.ogg", t = 2.15, v = 0.5},
             {s = path .. "close.ogg", t = 2.3},
-            {s = common .. "shoulder.ogg", t = 3.8},
+            {s = common .. "shoulder.ogg", t = 2.4},
+            {s = path .. "shoulder.ogg", t = 2.675},
         },
         LHIK = true,
         LHIKIn = 0.5,
@@ -353,7 +358,8 @@ SWEP.Animations = {
             {s = shellin, t = 2.0},
             {s = path .. "grab.ogg", t = 2.37, v = 0.5},
             {s = path .. "close.ogg", t = 2.5},
-            {s = common .. "shoulder.ogg", t = 3.8},
+            {s = common .. "shoulder.ogg", t = 2.84},
+            {s = path .. "shoulder.ogg", t = 3.0},
         },
         LHIK = true,
         LHIKIn = 0.5,
