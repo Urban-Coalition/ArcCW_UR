@@ -16,6 +16,7 @@ att.Mult_SightTime = .9
 
 att.Mult_Recoil = 1.2
 att.Mult_AccuracyMOA = 1.25
+att.Mult_Range = .85
 
 att.ActivateElements = {"barrel_compact"}
 
