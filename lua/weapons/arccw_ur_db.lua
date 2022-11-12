@@ -89,7 +89,7 @@ SWEP.RejectMagSizeChange = true -- Signals to attachments that mag size shouldn'
 
 -- Recoil --
 
-SWEP.Recoil = 8
+SWEP.Recoil = 2.8
 SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0.24
@@ -171,8 +171,8 @@ SWEP.ExtraSightDist = 2
 -- Ironsights / Customization / Poses --
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "shotgun"
-SWEP.HoldtypeSights = "ar2"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-1.5, 0, 2.5),
@@ -387,8 +387,8 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.Attachments = {
     {
         PrintName = "Barrel",
-        DefaultAttName = "99\" Factory Barrel",
-        DefaultAttIcon = Material("entities/att/ur_spas/barrel_std.png", "smooth mips"),
+        DefaultAttName = "26\" Full-size Barrel",
+        DefaultAttIcon = Material("entities/att/ur_dbs/blong.png", "smooth mips"),
         Slot = "ur_db_barrel",
     },
     {
@@ -399,7 +399,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ur_db_stock"},
         DefaultAttName = "Wooden Stock",
-        DefaultAttIcon = Material("entities/att/ur_spas/stock_std.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/ur_dbs/s.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",
@@ -417,11 +417,11 @@ SWEP.Attachments = {
         Slot = "uc_tp",
         DefaultAttName = "Basic Training"
     },
-    -- { -- i dont think any of these is valid for such gun
-    --     PrintName = "Internals",
-    --     Slot = "uc_fg", -- Fire group
-    --     DefaultAttName = "Standard Internals"
-    -- },
+    { -- i dont think any of these is valid for such gun
+        PrintName = "Internals",
+        Slot = "uc_fg_singleshot", -- Fire group
+        DefaultAttName = "Standard Internals"
+    },
     {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},

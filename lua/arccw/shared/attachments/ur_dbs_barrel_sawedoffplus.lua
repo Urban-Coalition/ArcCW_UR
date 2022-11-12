@@ -1,12 +1,12 @@
-att.PrintName = "very sawed off size baral"
-att.AbbrevName = "very sawed off size bara "
+att.PrintName = "IZh-58 10\" Sawed-off Barrel"
+att.AbbrevName = "10\" Sawed-off Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "very fake sawed off size bara"
+    att.PrintName = "Volga SuperShotgun 10\" Sawed-off Barrel"
 end
 
-att.Icon = Material("entities/att/ur_g3/mag10.png","smooth mips")
-att.Description = "shh  add lhik here"
+att.Icon = Material("entities/att/ur_dbs/bswp.png","smooth mips")
+att.Description = "Cut down by so much that you need a custom handguard to go with it. Reduces the weapon to a pistol-like profile, ruining accuracy."
 att.Slot = {"ur_db_barrel"}
 att.AutoStats = true
 
@@ -14,6 +14,19 @@ att.ModelOffset = Vector(-21, -2.2, 8.3)
 att.Model = "models/weapons/arccw/ur_g3_lhik_slim.mdl"
 att.LHIK = true
 
-att.ActivateElements = {"barrel_swplus"}
+att.SortOrder = 10
 
-att.SortOrder = 4
+
+att.Add_BarrelLength = -20
+att.Mult_Sway = .5
+att.Mult_SightTime = .75
+att.Mult_DrawTime = .75
+att.Mult_HolsterTime = .75
+att.Mult_SpeedMult = 1.05
+
+att.Mult_Recoil = 1.5
+att.Mult_AccuracyMOA = 2.5
+att.Mult_Range = .5
+
+
+att.ActivateElements = {"barrel_swplus"}

@@ -1,16 +1,34 @@
-att.PrintName = "sawed off stock"
-att.AbbrevName = "sawed off stock"
+att.PrintName = "IZh-58 Sawed-off Stock"
+att.AbbrevName = "Sawed-off Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "fake sawed off stock"
+    att.PrintName = "Volga SuperShotgun Sawed-off Stock"
 end
 
-att.Icon = Material("entities/att/ur_g3/mag10.png","smooth mips")
-att.Description = "shh"
+att.Icon = Material("entities/att/ur_dbs/ssw.png","smooth mips")
+att.Description = "You can keep it under your trenchcoat now."
 att.Slot = {"ur_db_stock"}
 att.AutoStats = true
+att.Free = true
+att.SortOrder = -1
 
+att.Mult_SpeedMult = 1.05
+
+att.Mult_SightTime = 0.75
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
+
+att.Mult_Recoil = 1.4
+att.Mult_RecoilSide = 2
+
+att.Mult_SightedSpeedMult = 1.2
+att.Mult_ShootSpeedMult = 1.15
+
+att.Add_BarrelLength = -12
+att.Mult_Sway = 3
+
+att.Override_ActivePos = Vector(0.5, 5, -1)
+att.Override_HoldtypeActive = "shotgun"
+att.Override_HoldtypeSights = "ar2"
 
 att.ActivateElements = {"stock_sw"}
-
-att.SortOrder = 5
