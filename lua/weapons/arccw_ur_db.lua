@@ -116,6 +116,7 @@ SWEP.Firemodes = {
         Mult_Damage = 2,
         Mult_DamageMin = 2,
         Mult_Recoil = 1.5,
+        Mult_RPM = .5,
 
         -- Mode = -2,
         -- Mult_RPM = 3,
