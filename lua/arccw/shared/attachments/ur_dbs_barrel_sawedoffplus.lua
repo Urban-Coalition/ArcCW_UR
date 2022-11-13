@@ -1,12 +1,12 @@
-att.PrintName = "IZh-58 10\" Sawed-off Barrel"
-att.AbbrevName = "10\" Sawed-off Barrel"
+att.PrintName = "IZh-58 10\" Jury-rigged Barrel"
+att.AbbrevName = "10\" Jury-rigged Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Volga SuperShotgun 10\" Sawed-off Barrel"
+    att.PrintName = "Volga SuperShotgun 10\" Jury-rigged Barrel"
 end
 
 att.Icon = Material("entities/att/ur_dbs/bswp.png","smooth mips")
-att.Description = "Cut down by so much that you need a custom handguard to go with it. Reduces the weapon to a pistol-like profile, ruining accuracy."
+att.Description = "So cut down that you need a custom handguard to go with it. Reduces the weapon to a pistol-like profile, ruining accuracy."
 att.Slot = {"ur_db_barrel"}
 att.AutoStats = true
 

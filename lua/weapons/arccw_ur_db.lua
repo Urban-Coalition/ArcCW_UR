@@ -390,7 +390,7 @@ SWEP.DefaultBodygroups = "00000000"
 SWEP.Attachments = {
     {
         PrintName = "Barrel",
-        DefaultAttName = "26\" Full-size Barrel",
+        DefaultAttName = "26\" Factory Barrel",
         DefaultAttIcon = Material("entities/att/ur_dbs/blong.png", "smooth mips"),
         Slot = "ur_db_barrel",
     },

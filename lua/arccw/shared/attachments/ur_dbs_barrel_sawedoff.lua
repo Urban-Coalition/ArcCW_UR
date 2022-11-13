@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/ur_dbs/bsw.png","smooth mips")
-att.Description = "Sawed-off barrel, often associated with outlaws and personal protection. Enhances portability and looks the part for hunting unholy creatures."
+att.Description = "Sawed-off barrel, often associated with outlaws. Enhances portability and looks the part for hunting unholy creatures."
 att.Slot = {"ur_db_barrel"}
 att.AutoStats = true
 att.SortOrder = 12

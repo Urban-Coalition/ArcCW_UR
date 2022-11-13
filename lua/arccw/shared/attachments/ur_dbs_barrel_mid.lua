@@ -1,8 +1,8 @@
-att.PrintName = "IZh-58 22\" Mid-size Barrel"
-att.AbbrevName = "22\" Mid-size Barrel"
+att.PrintName = "IZh-58 22\" Trimmed Barrel"
+att.AbbrevName = "22\" Trimmed Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Volga SuperShotgun 22\" Mid-size Barrel"
+    att.PrintName = "Volga SuperShotgun 22\" Trimmed Barrel"
 end
 
 att.Icon = Material("entities/att/ur_dbs/bmid.png","smooth mips")
