@@ -14,8 +14,12 @@ att.SortOrder = 22
 
 att.Mult_Sway = .85
 att.Add_BarrelLength = -4
+att.Mult_SightTime = 0.95
+att.Mult_HipDispersion = 0.9
+
 att.Mult_Recoil = 1.1
-att.Mult_Range = .9
+att.Mult_AccuracyMOA = 1.1
+att.Mult_Range = 0.9
 
 
 att.ActivateElements = {"barrel_mid"}

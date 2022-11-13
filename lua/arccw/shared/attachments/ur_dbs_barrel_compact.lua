@@ -13,6 +13,7 @@ att.AutoStats = true
 att.Mult_Sway = .75
 att.Add_BarrelLength = -9
 att.Mult_SightTime = .9
+att.Mult_HipDispersion = 0.8
 
 att.Mult_Recoil = 1.2
 att.Mult_AccuracyMOA = 1.25
