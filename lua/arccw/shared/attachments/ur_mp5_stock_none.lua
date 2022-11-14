@@ -19,7 +19,7 @@ att.AutoStats = true
 att.Free = true
 att.SortOrder = -1
 
-att.Mult_Recoil = 2.15
+att.Mult_Recoil = 2
 att.Mult_RecoilSide = 1.25
 att.Mult_Sway = 3
 

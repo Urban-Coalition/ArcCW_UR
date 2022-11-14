@@ -31,8 +31,8 @@ att.ToggleStats = {
         Mult_HolsterTime = 0.85,
         Mult_ShootSpeedMult = 1.15,
         Add_BarrelLength = -9,
-        Mult_Recoil = 2,
-        Mult_RecoilSide = 1.25,
+        Mult_Recoil = 1.5,
+        Mult_RecoilSide = 1.1,
         Mult_Sway = 3,
     }
 }
