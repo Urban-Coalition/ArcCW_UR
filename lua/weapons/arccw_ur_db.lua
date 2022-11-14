@@ -133,6 +133,7 @@ SWEP.Firemodes = {
 SWEP.UC_CanManualAction = true
 
 SWEP.MalfunctionTakeRound = false
+SWEP.MalfunctionMean = math.huge -- Theoretically it will never malfunction
 
 SWEP.ShootVol = 160
 SWEP.ShootPitch = 100
