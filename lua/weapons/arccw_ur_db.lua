@@ -286,7 +286,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        --Time = 20 / 30,
+        Time = 20 / 30,
         SoundTable = ArcCW.UC.HolsterSounds,
     },
 
