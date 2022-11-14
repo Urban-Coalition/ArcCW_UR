@@ -395,7 +395,7 @@ SWEP.Attachments = {
         Slot = "ur_db_barrel",
     },
     {
-        PrintName = "Choke",
+        PrintName = "Muzzle",
         Slot = "choke",
     },
     {

@@ -12,4 +12,5 @@
 	"$phongboost"                   "0.2"
 	"$phongfresnelranges"           "[1 2.5 7]"
 	
+	"$nocull"						"1"
 }
