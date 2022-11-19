@@ -136,6 +136,30 @@ $sequence "idle" {
     fps 30
 }
 
+$sequence "ready" {
+    "anims/readyy.smd"
+    snap
+    fps 30
+}
+
+$sequence "draw" {
+    "anims/draw.smd"
+    snap
+    fps 30
+}
+
+$sequence "holster" {
+    "anims/holster.smd"
+    snap
+    fps 30
+}
+
+$sequence "jamfix" {
+    "anims/jamfix.smd"
+    snap
+    fps 30
+}
+
 
 
 $sequence "reload" {
