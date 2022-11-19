@@ -21,7 +21,7 @@ SWEP.CamAttachment = 7
 
 -- Fake name --
 
-SWEP.PrintName = "Volga SuperShotgun" -- it's marketed to Americans
+SWEP.PrintName = "Volga Super" -- it's marketed to Americans
 
 -- True name --
 
