@@ -1,11 +1,11 @@
- // PLACEHOLDER COPIED FROM gamebabana   dont use
+ // PLACEHOLDER COPIED FROM gamebabana
 
 
 "Vertexlitgeneric"
 {
-	"$basetexture"			"models\weapons\arccw\ur_g3\placeholders\hk33_d"
-   	"$bumpmap"   			"models\weapons\arccw\ur_g3\placeholders\hk33_n"
-	"$phongexponenttexture"       	"models\weapons\arccw\ur_g3\placeholders\hk33_g"
+	"$basetexture"			"models\weapons\arccw\ur_g3\\hk33_d"
+   	"$bumpmap"   			"models\weapons\arccw\ur_g3\hk33_n"
+	"$phongexponenttexture"       	"models\weapons\arccw\ur_g3\hk33_g"
 
 	"$envmap" 			"env_cubemap"
 	"$color2" "[1.7 1.7 1.7]"

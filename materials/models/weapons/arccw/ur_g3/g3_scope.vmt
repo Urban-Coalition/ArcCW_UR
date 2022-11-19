@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ur_g3\placeholders\g3_scope_color"
-	"$bumpmap" "models\weapons\arccw\ur_g3\placeholders\g3_scope_normals"
+	"$basetexture" "models\weapons\arccw\ur_g3\g3_scope_color"
+	"$bumpmap" "models\weapons\arccw\ur_g3\g3_scope_normals"
 	"$normalmapalphaenvmapmask" 	1
 	"$color2" "[0.8 0.8 0.8]"	
 

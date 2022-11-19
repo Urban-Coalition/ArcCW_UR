@@ -1,12 +1,12 @@
 "VertexLitGeneric"
 {
 
-	"$basetexture" "models\weapons\arccw\ur_g3\placeholders\psg1_d"
-	"$bumpmap" "models\weapons\arccw\ur_g3\placeholders\psg1_n"
+	"$basetexture" "models\weapons\arccw\ur_g3\psg1_d"
+	"$bumpmap" "models\weapons\arccw\ur_g3\psg1_n"
 	"$color2" "[0.55 0.55 0.55]"
 	"$phong" 1
 	"$phongboost" 0.07
-	"$phongexponenttexture"  "models\weapons\arccw\ur_g3\placeholders\psg1_e"
+	"$phongexponenttexture"  "models\weapons\arccw\ur_g3\psg1_e"
 	"$phongfresnelranges" "[65 70 60]"
 	"$phongtint"                  "[.8 .8 1]"
 	"$phongalbedotint"	1

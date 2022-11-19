@@ -1,13 +1,9 @@
- // PLACEHOLDER COPIED FROM insurgency worskohop   dont use
-
-
-
 "VertexlitGeneric"
 {
 	"$color"							"[1.25 1.25 1.25]"
-	$basetexture 						"models\weapons\arccw\ur_g3\placeholders\g3_mount_d"
-	$bumpmap 							"models\weapons\arccw\ur_g3\placeholders\g3_mount_n"
-	$phongexponenttexture				"models\weapons\arccw\ur_g3\placeholders\g3_mount_e"
+	$basetexture 						"models\weapons\arccw\ur_g3\g3_mount_d"
+	$bumpmap 							"models\weapons\arccw\ur_g3\g3_mount_n"
+	$phongexponenttexture				"models\weapons\arccw\ur_g3\g3_mount_e"
 
 	$normalmapalphaenvmapmask			1
 	$normalmapalphaphongmask			1

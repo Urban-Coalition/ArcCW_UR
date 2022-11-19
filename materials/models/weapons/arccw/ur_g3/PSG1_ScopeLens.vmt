@@ -1,13 +1,13 @@
- // PLACEHOLDER COPIED FROM L4D2 WORSHOP dont use
+ // PLACEHOLDER COPIED FROM L4D2 WORSHOP 
 
 
 "VertexLitGeneric"
 {
 
-	"$basetexture" "models\weapons\arccw\ur_g3\placeholders\lens"
-	"$bumpmap" "models\weapons\arccw\ur_g3\placeholders\lens_b"
+	"$basetexture" "models\weapons\arccw\ur_g3\lens"
+	"$bumpmap" "models\weapons\arccw\ur_g3\lens_b"
 	"$envmap" "env_cubemap"
-	"$envmapmask" "models\weapons\arccw\ur_g3\placeholders\lens"
+	"$envmapmask" "models\weapons\arccw\ur_g3\lens"
 	"$envmapfresnel" 1
 	"$envmaptint" "[.005 .005 .005]"
 	
