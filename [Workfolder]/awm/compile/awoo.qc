@@ -128,7 +128,7 @@ $sequence "fire" {
 	"talonAnims/fire.smd"
 	"talonAnims/idle.smd"
 	blend "sights" 0 1
-	fps 40
+	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
 	fadeout 0.5
@@ -139,7 +139,7 @@ $sequence "cycle" {
 	"talonAnims/cycle.smd"
 	"talonAnims/cycle_irons.smd"
 	blend "sights" 0 1
-	fps 40
+	fps 30
 	"ACT_VM_IDLE" 1
 	fadein 0.3
 	fadeout 0
@@ -148,24 +148,24 @@ $sequence "cycle" {
 
 
 $sequence "reload" "talonAnims/reload.smd" {
-	fps 40
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
 $sequence "reload_empty" "talonAnims/reload_empty3.smd" {
-	fps 40
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
 
 
-$sequence "reload_magnum" "talonAnims/reload3_magnum.smd" {
-	fps 40
+$sequence "reload_magnum" "talonAnims/reload_magnum.smd" {
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
 $sequence "reload_empty_magnum" "talonAnims/reload_empty3_magnum.smd" {
-	fps 40
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
@@ -173,12 +173,12 @@ $sequence "reload_empty_magnum" "talonAnims/reload_empty3_magnum.smd" {
 
 
 $sequence "reload_exte" "talonAnims/reload3_exte.smd" {
-	fps 40
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
 $sequence "reload_empty_exte" "talonAnims/reload_empty3_exte.smd" {
-	fps 40
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
