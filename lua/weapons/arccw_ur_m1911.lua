@@ -547,6 +547,7 @@ SWEP.Animations = {
             { s = path .. "magin.ogg",                      t = 45 / 60, c = ca },
             { s = rottle,                                   t = 55 / 60, c = ca },
             { s = common ..  "magpouch_replace_small.ogg",  t = 80 / 60, c = ca },
+            { s = path .. "grab.ogg",                       t = 110 / 60, c = ca },
         },
     },
     ["reload_empty"] = {
@@ -571,6 +572,7 @@ SWEP.Animations = {
             { s = path .. "magin.ogg", t = 64 / 60, c = ca },
             { s = rottle, t = 90 / 60, c = ca },
             { s = path .. "slidedrop.ogg", t = 94 / 60, c = ca },
+            { s = path .. "grab.ogg", t = 125 / 60, c = ca },
         },
     },
 
