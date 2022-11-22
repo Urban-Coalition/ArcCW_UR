@@ -22,3 +22,5 @@ att.SortOrder = 999
 att.AttachSound = "arccw_uc/common/gunsmith/suppressor_thread.ogg"
 att.ActivateElements = {"muzzle_ak74"}
 att.ExcludeFlags = {"ak_barrelchange"}
+
+att.Ignore = true

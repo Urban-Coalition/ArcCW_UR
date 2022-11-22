@@ -22,3 +22,5 @@ att.AttachSound = "arccw_uc/common/gunsmith/suppressor_thread.ogg"
 att.ActivateElements = {"muzzle_akm"}
 att.ExcludeFlags = {"ak_barrelchange"}
 att.RequireFlags = {"cal_default"}
+
+att.Ignore = true

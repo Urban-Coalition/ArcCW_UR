@@ -639,11 +639,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
     local bipodBarrs = {["rpk"] = true, ["rpk74m"] = true}
     local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
-    local shortBarrs = {["krinkov"] = true,["vityaz"] = true}
+    local shortBarrs = {["krinkov"] = true, ["vityaz"] = true}
+    local intCals = {["545"] = true, ["556"] = true, ["545_ak12"] = true}
 
     local optic = wep.Attachments[1].Installed
     local barr = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
     local hg = string.Replace(wep.Attachments[3].Installed or "default","ur_ak_hg_","")
+    local muzz = wep.Attachments[15].Installed
+    local cal = string.Replace(wep.Attachments[5].Installed or "default","ur_ak_cal_","")
     local ub = wep.Attachments[7].Installed-- or wep.Attachments[17].Installed
     local upper = wep.Attachments[15].Installed
     local alpha = (upper == "ur_ak_cover_alpha" or upper == "ur_ak_cover_ak12" or upper == "ur_ak_cover_truniun_rail")
@@ -651,6 +654,20 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     local vm = data.vm
     if !IsValid(vm) then return end
+
+    if !muzz then
+        if barr == "ak12" and (cal == "default" or intCals[cal]) then
+            vm:SetBodygroup(8,4)
+        elseif barr == "default" or barr == "t56" then
+            if cal == "default" then
+                vm:SetBodygroup(8,1)
+            elseif intCals[cal] then
+                vm:SetBodygroup(8,3)
+            else
+                vm:SetBodygroup(8,0)
+            end
+        end
+    end
 
     if taclaser and !akOptics[optic] then
         vm:SetBodygroup(12,2)
@@ -731,7 +748,7 @@ SWEP.Attachments = {
             vang = Angle(0, 270, 0),
         },
         ExcludeFlags = {"ur_ak_nomuzzle"},
-        Installed = "ur_ak_muzzle_akm"
+        --Installed = "ur_ak_muzzle_akm"
     },
     {
         PrintName = "Receiver",
