@@ -645,7 +645,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local optic = wep.Attachments[1].Installed
     local barr = string.Replace(wep.Attachments[2].Installed or "default","ur_ak_barrel_","")
     local hg = string.Replace(wep.Attachments[3].Installed or "default","ur_ak_hg_","")
-    local muzz = wep.Attachments[15].Installed
+    local muzz = wep.Attachments[4].Installed
     local cal = string.Replace(wep.Attachments[5].Installed or "default","ur_ak_cal_","")
     local ub = wep.Attachments[7].Installed-- or wep.Attachments[17].Installed
     local upper = wep.Attachments[15].Installed
@@ -655,7 +655,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
 
-    if !muzz then
+    if !muzz or muzz == "ur_ak_muzzle_bayonet" then
         if barr == "ak12" and (cal == "default" or intCals[cal]) then
             vm:SetBodygroup(8,4)
         elseif barr == "default" or barr == "t56" then
@@ -667,6 +667,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 vm:SetBodygroup(8,0)
             end
         end
+    else
+        vm:SetBodygroup(8,0)
     end
 
     if taclaser and !akOptics[optic] then
