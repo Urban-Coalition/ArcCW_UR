@@ -437,6 +437,12 @@ SWEP.Animations = {
         ShellEjectAt = 0.05,
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
     },
+    ["fire_iron_empty"] = {
+        Source = "fire_empty",
+        Time = 0.9,
+        ShellEjectAt = 0.05,
+        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+    },
 
     -- 7-R Reloads --
 

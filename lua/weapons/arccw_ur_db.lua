@@ -189,7 +189,7 @@ SWEP.SprintAng = Angle(-10, 40, -10)
 SWEP.HolsterPos = Vector(7, 0, 0)
 SWEP.HolsterAng = Angle(-10, 40, -10)
 
-SWEP.ActivePos = Vector(1, 1, 2)
+SWEP.ActivePos = Vector(1, 1.5, 1.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-1, 2, 1)
@@ -329,6 +329,7 @@ SWEP.Animations = {
             {s = common .. "cloth_4.ogg", t = 0},
             {s = path .. "open.ogg", t = 0.2},
             {s = path .. "eject.ogg", t = 0.8},
+            {s = common .. "magpouch_pull_small.ogg", t = 1.0},
             {s = shellfall, t = 1.0},
             {s = common .. "cloth_2.ogg", t = 1.1},
             {s = path .. "struggle.ogg", t = 1.5, v = 0.5},
@@ -356,6 +357,7 @@ SWEP.Animations = {
             {s = shellfall, t = 1.0},
             {s = shellfall, t = 1.05},
             {s = common .. "cloth_2.ogg", t = 1.1},
+            {s = common .. "magpouch_pull_small.ogg", t = 1.2},
             {s = path .. "struggle.ogg", t = 1.7, v = 0.5},
             {s = shellin, t = 1.99},
             {s = shellin, t = 2.0},

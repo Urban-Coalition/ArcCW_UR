@@ -256,7 +256,7 @@ SWEP.AttachmentElements = {
             }
         },
         NameChange = "AMAD",
-        TrueNameChange = "Colt Officer",
+        TrueNameChange = "Colt Officer's ACP",
     },
 
     ["ur_1911_slide_m45"] = {
