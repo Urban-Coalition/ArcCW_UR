@@ -792,8 +792,8 @@ SWEP.Animations = {
         LHIKIn = 0.3,
         LHIKOut = 0.65,
         LHIKEaseOut = 0.25,
-        MinProgress = 2.5,
-        Time = 3.8,
+        MinProgress = 2.8,
+        Time = 3,
         SoundTable = {
             {s = rottle,                             t = 0.1},
             {s = testpath .. "magrel.ogg", 	t = 0.4},
