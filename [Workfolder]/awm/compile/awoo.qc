@@ -152,7 +152,7 @@ $sequence "reload" "talonAnims/reload.smd" {
 	"ACT_VM_RELOAD" 1
 	snap
 }
-$sequence "reload_empty" "talonAnims/reload_empty3.smd" {
+$sequence "reload_empty" "talonAnims/reload_empty.smd" {
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -172,7 +172,7 @@ $sequence "reload_empty_magnum" "talonAnims/reload_empty3_magnum.smd" {
 
 
 
-$sequence "reload_exte" "talonAnims/reload3_exte.smd" {
+$sequence "reload_exte" "talonAnims/reload_ext.smd" {
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -187,7 +187,7 @@ $sequence "reload_empty_exte" "talonAnims/reload_empty3_exte.smd" {
 
 
 
-$sequence "reload_exte_magnum" "talonAnims/reload3_exte.smd" {
+$sequence "reload_exte_magnum" "talonAnims/reload_magnum_ext.smd" {
 	fps 48
 	"ACT_VM_RELOAD" 1
 	snap
