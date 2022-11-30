@@ -696,8 +696,8 @@ SWEP.Animations = {
         LHIKEaseIn = 0.1,
         LHIKEaseOut = 0.5,
         ShellEjectAt = .5,
-        MinProgress = 4.5,
-        Time = 5.15,
+        MinProgress = 3.5,
+        Time = 3.8,
         SoundTable = {
             {s = ratel,                             t = 0.05},
             {s = testpath .. "boltup.ogg",          t = 0.1},

@@ -85,7 +85,7 @@ $poseparameter "sights" 0 1 loop 0
 
 
 $sequence "idle" "talonAnims/idle.smd" {
-	fps 37
+	fps 30
 	loop
 	snap
 	"ACT_VM_IDLE" 1
@@ -93,7 +93,7 @@ $sequence "idle" "talonAnims/idle.smd" {
 }
 
 $sequence "idle_empty" "talonAnims/idle_empty.smd" {
-	fps 37
+	fps 30
 	loop
 	snap
 	"ACT_VM_IDLE_EMPTY" 1
@@ -101,25 +101,25 @@ $sequence "idle_empty" "talonAnims/idle_empty.smd" {
 }
 
 $sequence "draw" "talonAnims/draw.smd" {
-	fps 48
+	fps 30
 	snap
 	"ACT_VM_DRAW" 1
 }
 
 $sequence "holster" "talonAnims/holster.smd" {
-	fps 48
+	fps 30
 	snap
 	"ACT_VM_HOLSTER" 1
 }
 
 $sequence "draw_empty" "talonAnims/draw_empty.smd" {
-	fps 48
+	fps 30
 	snap
 	"ACT_VM_DRAW_EMPTY" 1
 }
 
 $sequence "holster_empty" "talonAnims/holster_empty.smd" {
-	fps 48
+	fps 30
 	snap
 	"ACT_VM_HOLSTER_EMPTY" 1
 }
@@ -177,7 +177,7 @@ $sequence "reload_exte" "talonAnims/reload_ext.smd" {
 	"ACT_VM_RELOAD" 1
 	snap
 }
-$sequence "reload_empty_exte" "talonAnims/reload_empty3_exte.smd" {
+$sequence "reload_empty_exte" "talonAnims/reload_empty_ext.smd" {
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -188,13 +188,13 @@ $sequence "reload_empty_exte" "talonAnims/reload_empty3_exte.smd" {
 
 
 $sequence "reload_exte_magnum" "talonAnims/reload_magnum_ext.smd" {
-	fps 48
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
 
 $sequence "reload_empty_exte_magnum" "talonAnims/reload_empty3_exte.smd" {
-	fps 48
+	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
 }
@@ -202,17 +202,17 @@ $sequence "reload_empty_exte_magnum" "talonAnims/reload_empty3_exte.smd" {
 
 $sequence "inspect_enter" {
 	"talonAnims\awinspect_enter"
-	fps 37
+	fps 30
 	// snap
 }
 $sequence "inspect_loop" {
 	"talonAnims\awinspect_loop"
-	fps 24
+	fps 30
 	// snap
 }
 $sequence "inspect_exit" {
 	"talonAnims\awinspect_exit"
-	fps 37
+	fps 30
 	// snap
 }
 
