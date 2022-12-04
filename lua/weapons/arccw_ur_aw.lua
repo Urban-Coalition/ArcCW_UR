@@ -812,15 +812,15 @@ SWEP.Animations = {
     ["cycle"] = {
         Source = "cycle",
         Time = 1.47,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = 0.45,
         MinProgress = 1.2,
         SoundTable = {
             {s = ratel,                             t = 0.05},
             {s = testpath .. "boltup.ogg",          t = 0.1},
             {s = testpath .. "boltback.ogg",        t = 0.2},
-            {s = testpath .. "eject.ogg",           t = 0.5},
-            {s = testpath .. "boltforward.ogg",     t = 0.6},
-            {s = testpath .. "boltdown.ogg",        t = 0.8},
+            {s = testpath .. "eject.ogg",           t = 0.4},
+            {s = testpath .. "boltforward.ogg",     t = 0.55},
+            {s = testpath .. "boltdown.ogg",        t = 0.75},
 
             --{s = common .. "shoulder.ogg",          t = 0.7},
         },
