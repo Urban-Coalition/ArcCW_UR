@@ -11,8 +11,8 @@ if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
 end
 
-local descStart = "One of the first assault rifles, wielded around the world to this day for its cheap price, ease of maintenance, and infallible reliability. Consequently, it has become the most popular rifle to ever enter service. One fifth of all small arms in existence can be traced to this design.\n\n"
-local desc_762 = "The default pattern is well-rounded and hard-hitting, but recoils harder than other weapons of its class."
+local descStart = "One of the first assault rifles, wielded around the world to this day for its cheap price, quick production, ease of maintenance, and infallible reliability. Consequently, it has become the most popular rifle to ever enter service. One fifth of all small arms in existence can be traced to this design.\n\n"
+local desc_762 = "The default pattern is well-rounded and hard-hitting, but kicks harder than other weapons of its class."
 local desc_545 = "With a heavier frame than other service rifles, the AK-74 platform is accurate and easy to control."
 local desc_74u = "This PDW variant sacrifices range and control to fit the power of a rifle into a very compact form."
 local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
@@ -655,6 +655,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
 
+    -- Default muzzle devices
     if !muzz or muzz == "ur_ak_muzzle_bayonet" then
         if barr == "ak12" and (cal == "default" or intCals[cal]) then
             vm:SetBodygroup(8,4)
@@ -671,6 +672,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(8,0)
     end
 
+    -- 
     if taclaser and !akOptics[optic] then
         vm:SetBodygroup(12,2)
     else
@@ -681,6 +683,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
+    -- Railed underbarrel
     if ub and hg ~= "ur_ak_hg_dong" and !shortBarrs[barr] then
         if railHgs[hg] then
             vm:SetBodygroup(1,13)
@@ -689,6 +692,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
+    -- RPK bipod
     if bipodBarrs[barr] then
         vm:SetBodygroup(7, (wep:GetInBipod() and (wep.LastAnimKey ~= "enter_bipod" or wep.LastAnimFinishTime < CurTime())) and 7 or 1)
     end
@@ -1431,13 +1435,14 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_start",
+        Time = 0.9,
     },
     ["idle_sprint"] = {
         Source = "sprint_idle",
     },
     ["exit_sprint"] = {
         Source = "sprint_end",
-        Time = 0.9,
+        Time = 1.25,
     },
     ["unjam"] = {
         Source = "jamfix",
