@@ -541,6 +541,7 @@ SWEP.Animations = {
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        Time = .75,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "raise.ogg", t = 0.2},
@@ -551,6 +552,7 @@ SWEP.Animations = {
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
+        Time = .75,
         SoundTable = {
             {s = ratel, t = 0},
         },
