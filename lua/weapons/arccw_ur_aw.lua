@@ -155,12 +155,12 @@ SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = testpath .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
-    testpath .. "fire-dist-01.ogg",
-    testpath .. "fire-dist-02.ogg",
-    testpath .. "fire-dist-03.ogg",
-    testpath .. "fire-dist-04.ogg",
-    testpath .. "fire-dist-05.ogg",
-    testpath .. "fire-dist-06.ogg"
+    path1 .. "fire-dist-01.ogg",
+    path1 .. "fire-dist-02.ogg",
+    path1 .. "fire-dist-03.ogg",
+    path1 .. "fire-dist-04.ogg",
+    path1 .. "fire-dist-05.ogg",
+    path1 .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",
