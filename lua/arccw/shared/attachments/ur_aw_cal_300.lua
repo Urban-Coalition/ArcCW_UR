@@ -30,7 +30,7 @@ local path1 = ")^weapons/arccw_ur/aw_placeholders/"
 
 att.Hook_GetShootSound = function(wep, sound) -- Temporary
     if wep:GetBuff_Override("Silencer") then
-        return path .. "fire_sup.ogg"
+        return {path .. "fire-300-sup-01.ogg", path .. "fire-300-sup-02.ogg", path .. "fire-300-sup-03.ogg", path .. "fire-300-sup-04.ogg", path .. "fire-300-sup-05.ogg", path .. "fire-300-sup-06.ogg"}
     else
         return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"}
     end

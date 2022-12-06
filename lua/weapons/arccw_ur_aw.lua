@@ -142,7 +142,14 @@ SWEP.ShootSound = {
     testpath .. "fire-05.ogg",
     testpath .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = testpath .. "fire-sup-06.ogg"
+SWEP.ShootSoundSilenced = {
+    testpath .. "fire-sup-01.ogg",
+    testpath .. "fire-sup-02.ogg",
+    testpath .. "fire-sup-03.ogg",
+    testpath .. "fire-sup-04.ogg",
+    testpath .. "fire-sup-05.ogg",
+    testpath .. "fire-sup-06.ogg"
+}
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = testpath .. "dryfire.ogg"
@@ -581,7 +588,7 @@ SWEP.Animations = {
         Time = 27 / 30,
         MinProgress = 0.2,
         SoundTable = {
-            {s = testpath .. "mech-01.ogg", t = 0}, -- Temporary
+            SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
         },
     },
 
@@ -590,7 +597,7 @@ SWEP.Animations = {
         Time = 27 / 30,
         MinProgress = 0.2,
         SoundTable = {
-            {s = testpath .. "mech-01.ogg", t = 0}, -- Temporary
+            SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
         },
     },
 
