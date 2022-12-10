@@ -57,3 +57,17 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
         return slotinfo[slot][3]
     end
 end
+att.Hook_GetShootSound = function(wep, sound)
+    if wep:GetBuff_Override("Silencer") then
+        return "weapons/arccw_ur/deagle/fire_supp_10.ogg" -- Placeholder
+    else
+        return {"weapons/arccw_ur/deagle/fire-410-01.ogg", "weapons/arccw_ur/deagle/fire-410-02.ogg", "weapons/arccw_ur/deagle/fire-410-03.ogg", "weapons/arccw_ur/deagle/fire-410-04.ogg", "weapons/arccw_ur/deagle/fire-410-05.ogg", "weapons/arccw_ur/deagle/fire-410-06.ogg"} -- Not Placeholder
+    end
+end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return {"weapons/arccw_ur/sw586/fire-dist-01.ogg", "weapons/arccw_ur/sw586/fire-dist-02.ogg", "weapons/arccw_ur/sw586/fire-dist-03.ogg", "weapons/arccw_ur/sw586/fire-dist-04.ogg", "weapons/arccw_ur/sw586/fire-dist-05.ogg", "weapons/arccw_ur/sw586/fire-dist-06.ogg"}
+    end
+end
