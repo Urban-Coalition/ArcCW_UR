@@ -1,7 +1,7 @@
 att.PrintName = "22.5\" SPAS-12 Competition Kit"
 att.AbbrevName = "22.5\" Competition Kit"
 att.Icon = Material("entities/att/acwatt_ud_m1014_barrel.png", "smooth mips")
-att.Description = "Aftermarket sporting kit that replaces the stock forend, handguard, and barrel. Though its design disables the usage of the semi-automatic gas system and muzzle accessories, it more than makes up for it."
+att.Description = "Aftermarket sporting kit that replaces the stock forend, handguard, and barrel. The removal of the semi-automatic gas system and integrated compensator greatly improves weapon overall performance."
 att.Desc_Cons = {
     "uc.nomuzzle",
     "ur.spas12.pump"
@@ -26,12 +26,11 @@ att.AutoStats = true
 att.Add_BarrelLength = 1
 
 att.Mult_RecoilSide = 0.85
-att.Mult_Recoil = 0.8
-att.Mult_SightTime = 1.15
+att.Mult_Recoil = 0.75
 att.Mult_Sway = 1.2
 
-att.Mult_AccuracyMOA = 0.9
-att.Mult_RangeMin = 2
+att.Mult_AccuracyMOA = 0.85
+att.Mult_RangeMin = 1.5
 att.Mult_CycleTime = 0.9
 
 att.ActivateElements = {"ud_autoshotgun_barrel_sport"}

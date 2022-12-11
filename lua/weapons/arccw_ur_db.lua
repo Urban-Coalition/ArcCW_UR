@@ -30,9 +30,9 @@ SWEP.TrueName = "IZh-58"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[The design of double-barreled shotguns is so ubiquitous that they are usually referred to by weapon class instead of model name. These traditional shotguns are very popular in both rural and urban communities around the world for their simplicity.
+SWEP.Trivia_Desc = [[The design of the double-barrel shotgun is so ubiquitous that they are usually referred to by weapon class instead of model name. These traditional shotguns are very popular in both rural and urban communities around the world for their simplicity and reliability.
 
-Both barrels can be fired back-to-back in quick, deadly succession, but they must be reloaded frequently. Switch to the "2-BST" firemode to pull both triggers at once.]]
+Both barrels can be fired back-to-back in quick, deadly succession, but they must be reloaded frequently. Switch to burst firemode to pull both triggers at once.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Break Action"
@@ -105,6 +105,8 @@ SWEP.Delay = 60 / 350
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.break",
+
     },
     {
         Mode = 1,
@@ -115,12 +117,7 @@ SWEP.Firemodes = {
         Override_AmmoPerShot = 2,
         Mult_Damage = 2,
         Mult_DamageMin = 2,
-        Mult_Recoil = 1.5,
-        Mult_RPM = .5,
-
-        -- Mode = -2,
-        -- Mult_RPM = 3,
-        -- RunawayBurst = true,
+        Mult_VisualRecoilMult = 2,
 
         CustomBars = "--___",
     },
@@ -203,7 +200,6 @@ SWEP.BarrelOffsetHip = Vector(3, 0, -4.5)
 
 -- Firing sounds --
 
-local path1 = ")^weapons/arccw_ud/870/"
 local path = ")^weapons/arccw_ur/dbs/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
@@ -259,7 +255,7 @@ end
 
 SWEP.Hook_Think = function(wep)
     local vm = wep:GetOwner():GetViewModel()
-    
+
     local atts = wep.Attachments
     local barrel = atts[1].Installed or "default"
 
@@ -316,7 +312,7 @@ SWEP.Animations = {
         Source = "fireboth",
         -- Time = 35 / 25,--30,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
-        MinProgress = 0.4
+        MinProgress = 0.3
     },
 
     ["reload"] = {
@@ -347,7 +343,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {33, 55, 88}, 
+        Checkpoints = {33, 55, 88},
         ShellEjectAt = 1.2,
         FrameRate = 30,
         SoundTable = {
@@ -430,7 +426,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
+        Slot = {"charm", "fml_charm", "uc_db_tp"},
         FreeSlot = true,
         Bone = "body",
         Offset = {
