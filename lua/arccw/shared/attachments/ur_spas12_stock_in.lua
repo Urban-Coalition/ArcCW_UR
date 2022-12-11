@@ -2,7 +2,7 @@ att.PrintName = "Folded Stock"
 att.Icon = Material("entities/att/ur_spas/stock_fold.png", "smooth mips")
 att.Description = [[Folding the stock makes the weapon significantly shorter, allowing for easier use around corners and making it easier on the move at the cost of less stability.
 
-Contrary to some depictions, the stock obstructs iron sights when folded.]]
+Contrary to some depictions, the stock obstructs iron sights when folded, making aiming completely impossible.]]
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,8 +23,9 @@ att.Mult_RecoilSide = 1.5
 att.Mult_SightedSpeedMult = 1.1
 att.Mult_ShootSpeedMult = 1.1
 att.Mult_SightTime = 0.5
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
 
-att.Mult_Sway = 2
 att.Add_BarrelLength = -12
 
 att.Override_IronSightStruct = {
@@ -49,6 +50,10 @@ att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then
         data.add = data.add + 75
     end
+end
+
+att.Hook_ShouldNotSight = function(wep, data)
+    return true
 end
 
 att.GivesFlags = {"spas12_foldstock"}
