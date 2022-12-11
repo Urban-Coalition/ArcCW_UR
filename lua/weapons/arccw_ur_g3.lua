@@ -427,7 +427,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         vm:SetBodygroup(6, hgind)
     end
 
-    if (!barrel or barrel == "ur_g3_barrel_15") and ub == "uc_ubgl_hk79" then
+    if (barrel == "default" or barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15") and ub == "uc_ubgl_hk79" then
         vm:SetBodygroup(6, 11)
         atts[15].Offset.vpos = Vector(0, -0.7, 7.3)
     else
@@ -487,10 +487,10 @@ end
 
 SWEP.O_Hook_UC_UseClassicHK79Mount = function(wep, data)
     local atts = wep.Attachments
-    local barrel = atts[2].Installed
+    local barrel = atts[2].Installed or "default"
     local ub = atts[6].Installed or atts[15].Installed
 
-	if ub == "uc_ubgl_hk79" and (!barrel or barrel == "ur_g3_barrel_15") then
+	if ub == "uc_ubgl_hk79" and (barrel or barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15") then
 		data.current = true
 	end
 end
