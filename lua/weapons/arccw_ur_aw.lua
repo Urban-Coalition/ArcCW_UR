@@ -822,7 +822,7 @@ SWEP.Animations = {
         Source = "cycle",
         Time = 1.47,
         ShellEjectAt = 0.4,
-        MinProgress = 1.2,
+        MinProgress = 0.9,
         SoundTable = {
             {s = ratel,                             t = 0.07},
             {s = testpath .. "boltup.ogg",          t = 0.1},
