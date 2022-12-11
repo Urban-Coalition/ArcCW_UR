@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ur_g3_optic_sg1.png", "mips smooth")
-att.Description = "Variable power scope, adjustable for a very wide range of magnifications.\nExclusive to the G3 pattern."
+att.Description = "Variable power scope, adjustable for a very wide range of magnifications.\nExclusive to the G3 pattern rifle."
 -- need icon
 att.SortOrder = 300
 
@@ -55,5 +55,4 @@ att.HolosightPiece = "models/weapons/arccw/atts/g3_optic_sg1_hsp.mdl"
 -- att.HolosightBone = "holosight"
 att.Colorable = true
 
-att.Mult_SightedSpeedMult = .8
--- att.ExcludeFlags = {"ak_norail","cover_rail"}
+att.Mult_SightedSpeedMult = 0.78

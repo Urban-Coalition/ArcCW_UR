@@ -7,7 +7,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ur_g3_optic_psg1.png", "mips smooth")
-att.Description = "Long range combat scope for extreme distance combat.\nExclusive to the G3 pattern."
+att.Description = "Long range combat scope for precision shooting.\nExclusive to the G3 pattern rifle."
 -- need icon
 att.SortOrder = 300
 
@@ -50,5 +50,4 @@ att.HolosightPiece = "models/weapons/arccw/atts/g3_optic_psg_hsp.mdl"
 -- att.HolosightBone = "holosight"
 att.Colorable = true
 
-att.Mult_SightedSpeedMult = .8
--- att.ExcludeFlags = {"ak_norail","cover_rail"}
+att.Mult_SightedSpeedMult = 0.84
