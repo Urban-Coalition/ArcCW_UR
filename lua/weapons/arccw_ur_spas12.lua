@@ -13,7 +13,7 @@ SWEP.ShellModel = "models/weapons/arccw/uc_shells/12g.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
 SWEP.ShellScale = 1
-SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
+SWEP.UC_ShellColor = Color(0.7 * 255, 0.2 * 255, 0.2 * 255)
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -309,6 +309,7 @@ SWEP.Animations = {
     ["fire_manual"] = { -- No bolt cycling
         Source = "fire_pump",
         Time = 23 / 25,--30,
+        MinProgress = 0.2,
         ShellEjectAt = false,
         SoundTable = {{ s = common .. "manual_trigger.ogg", t = 0}},
     },
@@ -316,7 +317,7 @@ SWEP.Animations = {
         Source = "cycle",
         Time = 30 / 30,
         ShellEjectAt = 0.1,
-        MinProgress = .5,
+        MinProgress = 0.4,
         SoundTable = {
             {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
