@@ -650,7 +650,7 @@ SWEP.Animations = {
         LHIKOut = 0.65,
         LHIKEaseOut = 0.25,
         MinProgress = 2.5,
-        Time = 3.8,
+        Time = 3.4,
         SoundTable = {
             {s = rottle,                             t = 0.1},
             {s = testpath .. "magrel.ogg", 	t = 0.2},
@@ -739,8 +739,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.5,
         ShellEjectAt = .5,
         LastClip1OutTime = 2.3,
-        MinProgress = 4.5,
-        Time = 5.15,
+        MinProgress = 4,
+        Time = 4.25,
         SoundTable = {
             {s = ratel,                             t = 0.05},
             {s = testpath .. "boltup.ogg",          t = 0.1},
@@ -770,9 +770,9 @@ SWEP.Animations = {
         LHIKOut = 1.25,
         LHIKEaseIn = 0.1,
         LHIKEaseOut = 0.5,
-        MinProgress = 4.5,
+        MinProgress = 4,
         LastClip1OutTime = 2.3,
-        Time = 5.15,
+        Time = 4.5,
         ShellEjectAt = .5,
         SoundTable = {
             {s = ratel,                             t = 0.05},
@@ -802,8 +802,8 @@ SWEP.Animations = {
         LHIKIn = 0.3,
         LHIKOut = 0.65,
         LHIKEaseOut = 0.25,
-        MinProgress = 2.8,
-        Time = 3,
+        MinProgress = 3,
+        Time = 3.5,
         SoundTable = {
             {s = rottle,                             t = 0.1},
             {s = testpath .. "magrel.ogg", 	t = 0.4},
