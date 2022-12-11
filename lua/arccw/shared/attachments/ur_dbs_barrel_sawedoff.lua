@@ -26,3 +26,4 @@ att.Mult_Range = .65
 
 
 att.ActivateElements = {"barrel_sw"}
+att.GivesFlags = {"sawnoff"}
