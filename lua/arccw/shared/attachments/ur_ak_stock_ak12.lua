@@ -13,3 +13,8 @@ att.Mult_Sway = 1.25
 att.Add_BarrelLength = -4
 
 att.ActivateElements = {"stock_ak12"}
+
+-- Goes into standalone AK pack
+att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"

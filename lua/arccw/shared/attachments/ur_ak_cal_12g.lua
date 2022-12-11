@@ -124,4 +124,4 @@ end
 -- Goes into standalone AK pack
 att.Ignore = true
 att.Icon = Material("entities/att/obsolete.png", "mips smooth")
-att.Description = "Слава России! Единству Слава! Бояре, холопы, хозяева, рабы, должны слиться в экстазе единства! Что бы Россия была Великая и Мощная! Наша любовь к Путину объединяет все классы и слои населения! СЛАВА ПУТИНУ! УРА! УРА! УРА!"
+att.Description = "stop looking at deprecated shit you suka"

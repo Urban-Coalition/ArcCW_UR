@@ -28,3 +28,8 @@ att.HideIfBlocked = true
 att.ActivateElements = {"mag_545_ak12"}
 -- att.ActivateElements = {"mag_545_45"}
 att.RequireFlags = {"cal_545"}
+
+-- Goes into standalone AK pack
+att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"

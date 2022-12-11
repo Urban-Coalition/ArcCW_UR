@@ -75,3 +75,8 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
         return slotinfo[slot][3]
     end
 end
+
+-- Goes into standalone AK pack
+att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"
