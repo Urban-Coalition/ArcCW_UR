@@ -1,4 +1,4 @@
-$modelname "weapons\arccw\atts\uc_ubgl_gp25_1.mdl"
+$modelname "weapons\arccw\atts\uc_ubgl_gp25_2.mdl"
 
 $bodygroup "studio" {
 	studio "gp25.smd"
