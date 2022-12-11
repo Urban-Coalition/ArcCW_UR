@@ -21,7 +21,7 @@ local desc_556 = "This international variant has a lower damage output than the 
 local desc_366 = "AK-pattern shotgun chambered in .366 TKM, a sporting cartridge that uses reshaped M43 casings. It is considered a shotgun becuase of its smoothbore barrel, a change made to circumvent Russian rifle laws. Despite the lack of rifling, it achieves similar ballistics to a proper AK-47."
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = descStart..desc_762
+SWEP.Trivia_Desc = descStart .. desc_762
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -188,7 +188,7 @@ SWEP.ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
-SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
+SWEP.UC_ShellColor = Color(0.7 * 255, 0.2 * 255, 0.2 * 255)
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -265,11 +265,11 @@ SWEP.AttachmentElements = {
             vpos = Vector(0, 32.2, 2.6),
             vang = Angle(0, 270, 0),
         }},
-	Override_IronSightStruct = {
-    		Pos = Vector(-2.625, -2, 0.68),
-    		Ang = Angle(-0.1, 0.274, 5.53),
-    		Magnification = 1,
-	}
+    Override_IronSightStruct = {
+            Pos = Vector(-2.625, -2, 0.68),
+            Ang = Angle(-0.1, 0.274, 5.53),
+            Magnification = 1,
+    }
     },
     ["barrel_rpk74m"] = {
         VMBodygroups = {
@@ -282,10 +282,10 @@ SWEP.AttachmentElements = {
         --     vang = Angle(0, 270, 0),
         -- }},
         -- Override_IronSightStruct = {
-    	-- 	Pos = Vector(-2.625, -2, 0.68),
-    	-- 	Ang = Angle(-0.1, 0.274, 5.53),
-    	-- 	Magnification = 1,
-	    -- }
+        -- 	Pos = Vector(-2.625, -2, 0.68),
+        -- 	Ang = Angle(-0.1, 0.274, 5.53),
+        -- 	Magnification = 1,
+        -- }
     },
     ["barrel_krinkov"] = {
         VMBodygroups = {
@@ -346,7 +346,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_t56"] = {
         VMBodygroups = {
-            {ind =7, bg = 3},
+            {ind = 7, bg = 3},
             {ind = 11, bg = 2},
             {ind = 8, bg = 2}
         },
@@ -607,7 +607,7 @@ SWEP.AttachmentElements = {
     },
     ["sight_ak12"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
-        RequireFlags = {"cover_rail"},
+        RequireFlags = {"cover_rail", "ak_railedguard"},
         Override_IronSightStruct = {
             Pos = Vector(-2.63, 0, 0.79),
             Ang = Angle(-1.12, 0.116, 5.53),
@@ -672,7 +672,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(8,0)
     end
 
-    -- 
+    --
     if taclaser and !akOptics[optic] then
         vm:SetBodygroup(12,2)
     else
@@ -961,7 +961,7 @@ SWEP.Hook_NameChange = function(wep,name)
             post = "-18"
         end
         if string.EndsWith(barr,"105") or shortBarrs[barr] then
-            post = post .."K"
+            post = post .. "K"
         end
     elseif barr == "rpk" or barr == "rpk74m" then
         start = "RPK"
@@ -1035,7 +1035,7 @@ SWEP.Hook_NameChange = function(wep,name)
                 post = post .. "N"
             end
         end
-        
+
     end
 
     return start .. mid .. post

@@ -12,6 +12,6 @@ att.Slot = "ur_ak_barrel"
 
 att.SortOrder = 16
 
-att.ActivateElements = {"barrel_ak12","sight_ak12"}
+att.ActivateElements = {"barrel_ak12", "sight_ak12"}
 att.GivesFlags = {"ak_barrelchange"}
 --att.Ignore = true

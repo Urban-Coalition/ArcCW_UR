@@ -11,4 +11,4 @@ att.Desc_Neutrals = {
 
 att.ActivateElements = {"cover_ak12"}
 att.GivesFlags = {"cover_rail"}
-att.ExcludeFlags = {"ak_barrelkrinkov","ak_norail"}
+att.ExcludeFlags = {"ak_barrelkrinkov", "ak_norail"}
