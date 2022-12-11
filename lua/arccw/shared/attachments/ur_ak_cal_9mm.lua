@@ -36,7 +36,7 @@ end
 
 att.GivesFlags = {"cal_9mm"}
 att.ActivateElements = {"mag_9mm"}
-
+local path = ")^weapons/arccw_ur/ak/9mm/"
 
 local soundpath = ")^weapons/arccw_ur/1911/fire-9-"
 
@@ -49,11 +49,22 @@ att.Hook_GetShootSound = function(wep, fsound)
         soundpath .. "05.ogg",
         soundpath .. "06.ogg",
      } end
+     if fsound == wep.ShootSoundSilenced then return {
+        path .. "fire-sup-01.ogg",
+        path .. "fire-sup-02.ogg",
+        path .. "fire-sup-03.ogg",
+        path .. "fire-sup-04.ogg",
+        path .. "fire-sup-05.ogg",
+        path .. "fire-sup-06.ogg"
+    } end
 end
 
 local soundpath_dist = ")^weapons/arccw_ur/1911/fire-9-dist-"
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
     if distancesound == wep.DistantShootSound then return {
         soundpath_dist .. "01.ogg",
         soundpath_dist .. "02.ogg",
@@ -62,7 +73,7 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
         soundpath_dist .. "05.ogg",
         soundpath_dist .. "06.ogg",
     } end
-
+    end
 end
 
 local slotinfo = {
