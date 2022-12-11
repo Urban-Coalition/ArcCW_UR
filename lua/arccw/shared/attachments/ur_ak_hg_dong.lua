@@ -1,7 +1,7 @@
 att.PrintName = "\"Romanian Dong\" Integral Foregrip"
 att.AbbrevName = "Dong Foregrip"
 att.Icon = Material("entities/att/ur_ak/dong.png", "mips smooth")
-att.Description = "Romanian lower handguard design, shaped into an integrated foregrip. Functions like a Stubby Foregrip with slightly less added weight."
+att.Description = "Romanian lower handguard design, shaped into an integrated foregrip."
 att.Slot = {"ur_ak_hg"}
 att.Desc_Cons = {"uc.noubs"}
 att.AutoStats = true
