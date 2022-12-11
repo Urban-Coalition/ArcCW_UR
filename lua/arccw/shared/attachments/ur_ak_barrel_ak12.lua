@@ -15,3 +15,8 @@ att.SortOrder = 16
 att.ActivateElements = {"barrel_ak12", "sight_ak12"}
 att.GivesFlags = {"ak_barrelchange"}
 --att.Ignore = true
+
+-- Goes into standalone AK pack
+att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"

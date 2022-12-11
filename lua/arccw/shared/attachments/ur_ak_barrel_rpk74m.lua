@@ -26,4 +26,7 @@ att.Mult_BipodDispersion = .2
 att.ActivateElements = {"barrel_rpk74m"}
 att.GivesFlags = {"ak_barrelchange","nodong"}
 
+-- dunno why we keeping it
 att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"

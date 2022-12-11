@@ -12,3 +12,8 @@ att.Desc_Neutrals = {
 att.ActivateElements = {"cover_ak12"}
 att.GivesFlags = {"cover_rail"}
 att.ExcludeFlags = {"ak_barrelkrinkov", "ak_norail"}
+
+-- Goes into standalone AK pack
+att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"

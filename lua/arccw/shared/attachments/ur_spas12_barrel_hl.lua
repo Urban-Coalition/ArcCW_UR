@@ -67,3 +67,6 @@ end
 att.Mult_CycleTime = 1.15
 att.Override_ActivePos = Vector(1.90, -3, -0.40) --Vector(1, -3, 0)
 att.Override_ActivePos_Priority = 10
+
+att.ActivateElements = {"uc_spas_slam"}
+att.GivesFlags = {"freeman"} -- only activates if a manual action shell type is used

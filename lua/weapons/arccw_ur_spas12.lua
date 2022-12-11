@@ -30,10 +30,10 @@ SWEP.TrueName = "SPAS-12"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[Flexible combat shotgun with the ability to toggle between manual and semi-automatic action. This "dual-mode" operation, as marketed to law enforcement, allows the weapon to accept low pressure, less-lethal ammunition that lacks the energy to properly extract.
-The weapon's attempts to reach the American civilian market may have been struck down by legal encumberances, but it remains prominent in culture for its intimidating appearance.
+SWEP.Trivia_Desc = [[Flexible combat shotgun with the ability to toggle between manual and semi-automatic action. This "dual-mode" operationw allows the weapon to accept low pressure, less-lethal ammunition that lacks the energy to extract itself.
+The weapon's attempts to reach the American civilian market may have been struck down by legal encumberances, but it remains prominent in popular culture for its intimidating and tactical appearance.
 
-Switch to pump-action mode to increase accuracy and aid ammo conservation.]]
+Switch to pump-action mode to tighten spread and conserve ammo.]]
 SWEP.Trivia_Manufacturer = "Iscapelli Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Hybrid"
@@ -613,6 +613,22 @@ SWEP.AttachmentElements = {
             },
         },
         Override_Firemodes_Priority = 10,
+    },
+    ["uc_spas_slam"] = {
+        RequireFlags = {"freeman", "needsmanual"},
+        Override_Firemodes = {
+            {
+                Mode = 2,
+                PrintName = "fcg.slam",
+                Override_ManualAction = true,
+                Mult_AccuracyMOA = 0.8,
+                Mult_HipDispersion = 0.8,
+            },
+            {
+                Mode = 0,
+            },
+        },
+        Override_Firemodes_Priority = 15,
     },
     ["ur_spas12_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 1}},

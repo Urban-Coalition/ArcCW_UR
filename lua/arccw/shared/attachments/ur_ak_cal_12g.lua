@@ -26,15 +26,9 @@ att.Override_ClipSize = 8
 --att.Mult_HipDispersion = 1.25
 att.Mult_RPM = 0.4
 
-
-
-
 att.Override_Malfunction = true
 att.Mult_MalfunctionMean = 0.8
 att.Mult_MalfunctionVariance = 1.5
-
-
-
 
 att.Override_AccuracyMOA_Priority = -1
 att.Override_AccuracyMOA = 40
@@ -126,3 +120,8 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
         return slotinfo[slot][3]
     end
 end
+
+-- Goes into standalone AK pack
+att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"
