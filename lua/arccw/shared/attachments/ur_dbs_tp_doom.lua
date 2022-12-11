@@ -1,5 +1,5 @@
 att.PrintName = "The Slayer"
-att.Icon = nil Material("entities/att/acwatt_ur_dbs_tp_doom.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ur_dbs_tp_doom.png", "smooth mips")
 att.Description = "They are rage, brutal, without mercy. But you. You will be worse."
 att.Desc_Pros = {
 }
