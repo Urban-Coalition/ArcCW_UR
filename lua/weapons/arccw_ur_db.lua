@@ -30,9 +30,9 @@ SWEP.TrueName = "IZh-58"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[The design of double-barreled shotguns is so ubiquitous that they are usually referred to by weapon class instead of model name. These traditional shotguns are very popular in both rural and urban communities around the world for their simplicity.
+SWEP.Trivia_Desc = [[The design of the double-barrel shotgun is so ubiquitous that they are usually referred to by weapon class instead of model name. These traditional shotguns are very popular in both rural and urban communities around the world for their simplicity and reliability.
 
-Both barrels can be fired back-to-back in quick, deadly succession, but they must be reloaded frequently. Switch to the "2-BST" firemode to pull both triggers at once.]]
+Both barrels can be fired back-to-back in quick, deadly succession, but they must be reloaded frequently. Switch to burst firemode to pull both triggers at once.]]
 SWEP.Trivia_Manufacturer = "Sikov Machining Plant"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Break Action"
@@ -105,6 +105,8 @@ SWEP.Delay = 60 / 350
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.break",
+
     },
     {
         Mode = 1,
