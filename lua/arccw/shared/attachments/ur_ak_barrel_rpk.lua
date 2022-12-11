@@ -24,4 +24,4 @@ att.Mult_BipodRecoil = .25
 att.Mult_BipodDispersion = .2
 
 att.ActivateElements = {"barrel_rpk"}
-att.GivesFlags = {"ak_barrelchange","uc_noubgl"}
+att.GivesFlags = {"ak_barrelchange", "uc_noubgl"}
