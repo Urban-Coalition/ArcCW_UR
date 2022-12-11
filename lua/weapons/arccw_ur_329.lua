@@ -114,6 +114,7 @@ SWEP.Firemodes = {
        PrintName = "ur.329.sact",
        Override_ManualAction = true,
        Mult_AccuracyMOA = 0.5,
+       Mult_HipDispersion = 0.5,
        Mult_MoveDispersion = 0.5,
        Mult_ShootSpeedMult = 1.2,
        Override_TriggerDelay = false,
@@ -496,12 +497,14 @@ SWEP.Attachments = {
             vang = Angle(0, 0, -90),
         },
     },
+    --[[]
     {
         PrintName = "Grip",
         DefaultAttName = "Factory Grip",
         DefaultAttIcon = Material("entities/att/acwatt_ur_329_grip.png","mips smooth"),
         Slot = "ur_329_grip"
     },
+    ]]
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
