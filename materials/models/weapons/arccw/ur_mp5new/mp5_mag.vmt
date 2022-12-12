@@ -1,0 +1,24 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models\weapons\arccw\ur_mp5NEW\mag_c"
+	"$bumpmap" 					"models\weapons\arccw\ur_mp5NEW\mag_n"	
+	"$phongexponenttexture"		"models\weapons\arccw\ur_mp5NEW\mag_m"
+
+	"$color2" "[1.15 1.15 1.15]"
+
+	"$normalmapalphaenvmapmask" 	"1"
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
+	"$phong" 		"1"
+	"$phongboost" "19"
+	"$phongalbedotint" 			"1"
+	"$phongfresnelranges" "[0.5 1.5 3.0]"
+	"$halflambert" "1"
+
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"2"
+	"$envmaptint"	"[0.02 0.02 0.02]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimmask" "1"
+}
