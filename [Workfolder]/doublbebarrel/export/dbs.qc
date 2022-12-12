@@ -68,6 +68,13 @@ $sequence "draw" {
 	"ACT_VM_DRAW" 1
 }
 
+$sequence "deploy" {
+	"anims\deploy.smd"
+	fps 30
+	"ACT_VM_DEPLOY" 1
+}
+
+
 $sequence "holster" {
 	"anims\holster.smd"
 	fps 30
