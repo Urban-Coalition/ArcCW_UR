@@ -311,12 +311,16 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, 15.4, 2.85),
+                vpos = Vector(0, 15, 2.85),
                 vang = Angle(0, 270, 0),
             },
             [7] = {
-                vpos = Vector(0,11,1.7),
+                vpos = Vector(0,10,1.7),
                 vang = Angle(90, -90, -90),
+                SlideAmount = {
+                    vmin = Vector(0,10,1.7),
+                    vmax = Vector(0,10,1.7)
+                },
             },
             [8] = {
                 vpos = Vector(-0.8, 11.75, 2.9),
@@ -339,12 +343,16 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, 17.2, 2.85),
+                vpos = Vector(0, 16.5, 2.85),
                 vang = Angle(0, 270, 0),
             },
             [7] = {
                 vpos = Vector(0,11,1.7),
                 vang = Angle(90, -90, -90),
+                SlideAmount = {
+                    vmin = Vector(0,10,1.7),
+                    vmax = Vector(0,11,1.7)
+                },
             },
             [8] = {
                 vpos = Vector(-0.8, 11.75, 2.9),
@@ -364,12 +372,6 @@ SWEP.AttachmentElements = {
             {ind = 11, bg = 2},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {
-            [7] = {
-                vpos = Vector(-0.4, 16.75, 2.8),
-                vang = Angle(-90, 270, 0),
-            },
-        }
     },
     ["barrel_t56_ext"] = {
         VMBodygroups = {
@@ -377,12 +379,6 @@ SWEP.AttachmentElements = {
             {ind = 11, bg = 3},
             {ind = 8, bg = 2}
         },
-        AttPosMods = {
-            [7] = {
-                vpos = Vector(-0.4, 16.75, 2.8),
-                vang = Angle(-90, 270, 0),
-            },
-        }
     },
     ["barrel_vepr"] = {
         VMBodygroups = {
@@ -414,7 +410,7 @@ SWEP.AttachmentElements = {
             {ind = 8, bg = 2}
         },
         AttPosMods = {[4] = {
-            vpos = Vector(0, 20.6, 2.7),
+            vpos = Vector(0, 19.9, 2.7),
             vang = Angle(0, 270, 0),
         }},
         Override_IronSightStruct = {
@@ -438,6 +434,9 @@ SWEP.AttachmentElements = {
     },
     ["muzzle_ak74"] = {
         VMBodygroups = {{ind = 8, bg = 3}}
+    },
+    ["muzzle_aku"] = {
+        VMBodygroups = {{ind = 8, bg = 6}}
     },
     ["muzzle_bayonet"] = {
         VMBodygroups = {{ind = 11, bg = 1}}
@@ -672,6 +671,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- Default muzzle devices
     if !muzz or muzz == "ur_ak_muzzle_bayonet" then
         if barr == "ak12" and (cal == "default" or intCals[cal]) then
+            vm:SetBodygroup(8,3)
+        elseif barr == "krinkov" then
             vm:SetBodygroup(8,4)
         elseif barr == "default" or barr == "t56" then
             if cal == "default" then
@@ -682,8 +683,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 vm:SetBodygroup(8,0)
             end
         end
-    else
+    elseif barr == "default" then
         vm:SetBodygroup(8,0)
+    else
+        vm:SetBodygroup(8,2)
     end
 
     --
