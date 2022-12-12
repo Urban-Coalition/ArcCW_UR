@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arccw/ur_deagle/tritium_c"
-     
+
 	"$selfillum"   "1"
 }

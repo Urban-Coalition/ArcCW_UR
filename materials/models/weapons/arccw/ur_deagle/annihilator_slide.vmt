@@ -12,7 +12,7 @@
 	"$phongalbedotint" 			"0"
 	"$phongfresnelranges" "[1 1 1]"
 	"$halflambert" "1"
-	
+
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 			"1"
 	"$envmapFresnelMinMaxExp" "[0 5 .4]"

@@ -3,7 +3,7 @@
 	"$basetexture" "models\weapons\arccw\ur_deagle/deagle_c"
 	"$bumpmap" "models\weapons\arccw\ur_deagle/deagle_n"
 	"$normalmapalphaenvmapmask" 	1
-	
+
 	"$phong" 		"1"
 	"$phongexponent" "4"
 	"$phongboost" "1"

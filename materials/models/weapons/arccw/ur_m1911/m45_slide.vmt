@@ -4,8 +4,8 @@
 "VertexLitGeneric"
 {
 	"$basetexture" "models/weapons/arccw/ur_m1911/slide_custom"
-	"$bumpmap" "models/weapons/arccw/ur_m1911/reciever_m1911_colt_m45a1_std_LOD0_nrm"
-	"$phongexponenttexture" "models/weapons/arccw/ur_m1911/reciever_m1911_colt_m45a1_std_LOD0_gloss"
+	"$bumpmap" "models/weapons/arccw/ur_m1911/reciever_m1911_colt_m45a1_std_lod0_nrm"
+	"$phongexponenttexture" "models/weapons/arccw/ur_m1911/reciever_m1911_colt_m45a1_std_lod0_gloss"
 
 	"$blendtintbybasealpha" "1"
 	"$normalmapalphaenvmapmask" "0"
@@ -15,11 +15,11 @@
 	"$phongboost" "0.4"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0.5 1 1]"
-	
+
 	"$rimlight" "1"
 	"$rimlightexponent" "4"
 	"$rimmask" "1"
-	
+
 	"$envmap" "models/uc/attachments/envmap_unfuck"
 	"$envmapfresnel" "0.1"
 

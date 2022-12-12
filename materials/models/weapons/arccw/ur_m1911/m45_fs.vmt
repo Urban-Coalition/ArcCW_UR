@@ -3,9 +3,9 @@
 
 "VertexLitGeneric"
 {
-	"$basetexture" "models/weapons/arccw/ur_m1911/sight_front_m1911_novak_lomount_front_sight_LOD0_diff"
-	"$bumpmap" "models/weapons/arccw/ur_m1911/sight_front_m1911_novak_lomount_front_sight_LOD0_nrm"
-	"$phongexponenttexture" "models/weapons/arccw/ur_m1911/sight_front_m1911_novak_lomount_front_sight_LOD0_gloss"
+	"$basetexture" "models/weapons/arccw/ur_m1911/sight_front_m1911_novak_lomount_front_sight_lod0_diff"
+	"$bumpmap" "models/weapons/arccw/ur_m1911/sight_front_m1911_novak_lomount_front_sight_lod0_nrm"
+	"$phongexponenttexture" "models/weapons/arccw/ur_m1911/sight_front_m1911_novak_lomount_front_sight_lod0_gloss"
 
 	"$blendtintbybasealpha" "1"
 	"$normalmapalphaenvmapmask" "0"
@@ -15,11 +15,11 @@
 	"$phongboost" "2"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0.5 1 1]"
-	
+
 	"$rimlight" "1"
 	"$rimlightexponent" "4"
 	"$rimmask" "1"
-	
+
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" "0.1"
 

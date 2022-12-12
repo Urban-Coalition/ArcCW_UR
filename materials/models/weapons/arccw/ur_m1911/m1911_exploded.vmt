@@ -4,9 +4,9 @@
 	"$bumpmap" "models\weapons\arccw\ur_m1911/c1911exploded_default_n"
 	"$normalmapalphaenvmapmask" 	1
 
-	"$color2" "[1.55 1.6 1.6]"	
+	"$color2" "[1.55 1.6 1.6]"
 
-	"$blendTintByBaseAlpha"		"1" 
+	"$blendTintByBaseAlpha"		"1"
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 	"$phongexponentfactor"		"15"
 	"$phong" 		"1"

@@ -1,9 +1,9 @@
  // ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE GAMEPLAY auto converter  by darcu   mal0 mode
 "VertexLitGeneric"
 {
-	"$basetexture" "models/weapons/arccw/ur_ak/mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_LOD0_diff"
-	"$bumpmap" "models/weapons/arccw/ur_ak/mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_LOD0_nrm"
-	"$phongexponenttexture" "models/weapons/arccw/ur_ak/mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_LOD0_gloss"
+	"$basetexture" "models/weapons/arccw/ur_ak/mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_lod0_diff"
+	"$bumpmap" "models/weapons/arccw/ur_ak/mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_lod0_nrm"
+	"$phongexponenttexture" "models/weapons/arccw/ur_ak/mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_lod0_gloss"
 	"$phong" "1"
 	"$phongboost" "10"
 	"$phongalbedotint" "1"

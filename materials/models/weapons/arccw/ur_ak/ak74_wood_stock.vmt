@@ -3,9 +3,9 @@
 
 "VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_LOD0_diff"
-	"$bumpmap" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_LOD0_nrm"
-	"$phongexponenttexture" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_LOD0_gloss"
+	"$basetexture" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_lod0_diff"
+	"$bumpmap" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_lod0_nrm"
+	"$phongexponenttexture" "models\weapons\arccw\ur_ak\stock_ak74_izhmash_ak74_std_wood_lod0_gloss"
 
 	"$blendtintbybasealpha" "1"
 	"$normalmapalphaenvmapmask" "0"
@@ -15,7 +15,7 @@
 	"$phongboost" "1"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0.5 1.5 3.0]"
-	
+
 	"$rimlight" "1"
 	"$rimlightexponent" "4"
 	"$rimmask" "1"

@@ -1,4 +1,4 @@
- // PLACEHOLDER COPIED FROM L4D2 WORSHOP 
+ // PLACEHOLDER COPIED FROM L4D2 WORSHOP
 
 
 "VertexLitGeneric"
@@ -10,7 +10,7 @@
 	"$envmapmask" "models\weapons\arccw\ur_g3\lens"
 	"$envmapfresnel" 1
 	"$envmaptint" "[.005 .005 .005]"
-	
+
 	"$phong" 1
 	"$phongboost" 0.3
 	"$normalmapalphaphongmask" 1
@@ -21,6 +21,6 @@
 
 	"$rimlight"        1
 	"$rimlightexponent" 2
-	"$rimlightboost"   15	
-	
+	"$rimlightboost"   15
+
 }

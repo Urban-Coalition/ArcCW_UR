@@ -11,12 +11,12 @@
 	"$phongboost" "3"
 	"$phongfresnelranges"	"[2 4 6]"
 	"$phongexponenttexture" "models/weapons/arccw/ur_329pd/sw329_e"
-	
+
 	"$envmap" "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"
 	$envmaptint 		"[0.025 0.025 0.025]"
-	"$phongtint" 			"[0.5 0.5 0.5]"			
+	"$phongtint" 			"[0.5 0.5 0.5]"
 	"$PhongAlbedoTint" "1"
 
-	"$ambientocclusion" "1"	
+	"$ambientocclusion" "1"
 }

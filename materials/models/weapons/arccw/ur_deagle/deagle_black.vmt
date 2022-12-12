@@ -5,14 +5,14 @@
 	"$color2" "[0.5 0.48 0.45]"
 	"$normalmapalphaenvmapmask" 	1
 
-	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)	
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 	"$phong" 		"1"
 	"$phongexponenttexture" "models\weapons\arccw\ur_deagle/deagle_e"
 	"$phongboost" "0.7"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[0 0 0]"
 	"$halflambert" "1"
-	
+
 	//"$envmap" "env_cubemap"
 	//"$envmapfresnel" 			"1"
 	//"$envmapFresnelMinMaxExp" "[0 5 .4]"

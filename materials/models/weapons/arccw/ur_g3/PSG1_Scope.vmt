@@ -14,12 +14,12 @@
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 0.02
 	"$envmaptint" "[.02 .02 .02]"
-	
-	
+
+
 	"$nocull" 1
 
-	
+
 	"$rimlight"               1
-	"$rimlightboost"          1	
+	"$rimlightboost"          1
 	"$rimmask" 1
 }

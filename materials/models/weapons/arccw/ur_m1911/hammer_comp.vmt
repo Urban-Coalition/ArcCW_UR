@@ -1,19 +1,19 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ur_m1911/ALISD_hammer_c"  // why is the m45 skeleton hammer named after ALISD??? ALISD doesn't even use it
-	"$bumpmap" "models\weapons\arccw\ur_m1911/ALISD_hammer_n"
+	"$basetexture" "models\weapons\arccw\ur_m1911/alisd_hammer_c"  // why is the m45 skeleton hammer named after ALISD??? ALISD doesn't even use it
+	"$bumpmap" "models\weapons\arccw\ur_m1911/alisd_hammer_n"
 	"$normalmapalphaenvmapmask" 	1
 	"$color2" "[1.1 1.1 1.1]"
-	
+
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 	"$phong" 		"1"
                 "$phongtint" "[1 1 0.8]"
-	"$phongexponenttexture" "models\weapons\arccw\ur_m1911/ALISD_hammer_e"
+	"$phongexponenttexture" "models\weapons\arccw\ur_m1911/alisd_hammer_e"
 	"$phongboost" "3"
 	"$phongalbedotint" 			"0"
 	"$phongfresnelranges" "[0.5 1.5 3.0]"
 	"$halflambert" "1"
-	
+
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 			"1"
 	"$envmapFresnelMinMaxExp" "[0 5 .4]"

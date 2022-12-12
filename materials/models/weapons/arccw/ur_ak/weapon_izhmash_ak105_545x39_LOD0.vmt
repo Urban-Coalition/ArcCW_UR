@@ -1,8 +1,8 @@
  // ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE GAMEPLAY auto converter  eft  real vmt  darcy
 "VertexLitGeneric"
 {
-	"$basetexture" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_LOD0_diff"
-	"$bumpmap" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_LOD0_nrm"
+	"$basetexture" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_lod0_diff"
+	"$bumpmap" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_lod0_nrm""
 	"$phong" "1"
 	"$phongboost" "1"
 	"$phongfresnelranges" "[0.32 0.72 0.99]"

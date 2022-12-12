@@ -8,7 +8,7 @@
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
 	"$nocull"					"1"
 	"$halflambert"              "1"
-	
+
 // map interp
     "$color2"					"[0.42 0.42 0.43]" // vector -- rgb tinting of the basetexture
 	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
