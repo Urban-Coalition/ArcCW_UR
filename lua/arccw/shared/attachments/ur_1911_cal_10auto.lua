@@ -36,6 +36,8 @@ att.Mult_RangeMin = 1.5
 -- att.Mult_MalfunctionMean = 0.75
 
 att.Mult_PhysBulletMuzzleVelocity = 1.5 --380 / 253
+att.Override_TracerNum = 1
+att.Override_TracerNum_Priority = 0.5 -- subsonic can override
 
 att.Mult_ClipSize = 8 / 7
 att.Override_ShellScale = 1

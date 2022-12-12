@@ -17,7 +17,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 5
-SWEP.TracerNum = 1
+SWEP.TracerNum = 0 -- subsonic by default
 SWEP.TracerWidth = 1
 SWEP.ShootPitch = 100
 
