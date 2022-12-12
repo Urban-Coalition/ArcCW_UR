@@ -150,7 +150,7 @@ SWEP.MagID = "deagle"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.925
+SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.8
