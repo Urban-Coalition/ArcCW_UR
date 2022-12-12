@@ -236,11 +236,15 @@ SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
-
 SWEP.BulletBones = {
-    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3", [4] = "Bullet4",    [5] = "Bullet5",    [6] = "Bullet6", [7] = "Bullet7"
+    [1] = "mag_round1",
+    [2] = "mag_round2",
+    [3] = "mag_round3",
+    [4] = "mag_round4",
+    [5] = "mag_round5",
+    [6] = "mag_round6",
+    [7] = "mag_round7"
 }
-
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.AttachmentElements = {
