@@ -280,6 +280,15 @@ SWEP.Animations = {
             {s = path .. "shoulder.ogg", t = 0.5},
         },
     },
+    ["ready"] = {
+        Source = "deploy",
+        Time = 26 / 30,
+        SoundTable = {
+            {s = path .. "close.ogg", t = 0.1},
+            {s = common .. "shoulder.ogg", t = 0.2},
+            {s = path .. "shoulder.ogg", t = 0.455},
+        },
+    },
     ["holster"] = {
         Source = "holster",
         Time = 20 / 30,
