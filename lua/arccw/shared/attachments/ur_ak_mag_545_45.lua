@@ -24,5 +24,7 @@ att.Override_Malfunction = true
 att.Mult_MalfunctionMean = 0.85
 att.Mult_MalfunctionVariance = 1.5
 
+att.Mult_HipDispersion = 1.25
+
 att.ActivateElements = {"mag_545_45"}
 att.RequireFlags = {"cal_545"}

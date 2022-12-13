@@ -19,6 +19,8 @@ att.Mult_Sway = 0.5
 att.Mult_SpeedMult = 1.025
 att.Mult_ShootSpeedMult = 1.05
 
+att.Mult_HipDispersion = 0.75
+
 att.Mult_MalfunctionMean = 1.6
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

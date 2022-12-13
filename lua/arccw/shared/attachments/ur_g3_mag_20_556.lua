@@ -24,8 +24,6 @@ att.Mult_SpeedMult = 1.025
 att.Mult_SightedSpeedMult = 1.05
 att.Mult_ShootSpeedMult = 1.05
 
-att.Mult_MalfunctionMean = 1.5
-
 att.RequireFlags = {"cal_556"}
 
 -- att.Hook_SelectReloadAnimation = function(wep, anim)

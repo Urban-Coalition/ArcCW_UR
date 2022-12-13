@@ -23,7 +23,7 @@ att.Mult_Sway = 0.7
 att.Mult_SpeedMult = 1.025
 att.Mult_ShootSpeedMult = 1.05
 
-att.Mult_MalfunctionMean = 1.6
+att.Mult_HipDispersion = 0.85
 
 att.ExcludeFlags = {"cal_556"}
 
