@@ -6,17 +6,19 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AWP"
 
-if !GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = "Apex Precision"
-end
-
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "The Arctic Warfare: a heavy, purpose-designed rifle for extreme-range combat under extreme climates. Originally developed as a replacement for the British Army's aged sniper rifles, it would evolve cold weather adaptations to address similar problems in the Swedish miltary. A rifle of this family claimed what was once the most distant confirmed sniper kill in military history, at almost 2.5 kilometers.\nFew targets can stand up to a well-placed shot, but its long bolt pull and reload time are an encumbrance outside of its preferred environment.\n\nOne shot. One kill. You know the routine."
+SWEP.Trivia_Desc = "A heavy rifle purpose-built for extreme range combat under extreme climates, first developed for the British military but quickly adopted by many more. Iconic for its appearance among military and police marksmen, this rifle is a symbol of discipline and order.\n\nOffers outstanding precision and kill potential, but its long bolt pull and reload time can become a hinderance outside its ideal engagement range.\n\nOne shot. One kill. You know the routine."
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Bolt Action"
 SWEP.Trivia_Country = "United Kingdom"
 SWEP.Trivia_Year = 1982
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = "Apex Precision"
+    SWEP.Trivia_Manufacturer = "Marksman Institute"
+end
+
 
 SWEP.Slot = 3
 SWEP.CamAttachment = 3
@@ -37,7 +39,7 @@ SWEP.BulletBones = {
 
 SWEP.Damage = 80 -- 2 shot close range
 SWEP.DamageMin = 50 -- 2 shot long range
-SWEP.RangeMin = 50
+SWEP.RangeMin = 100
 SWEP.Range = 400 -- 2 shot at ~300m
 
 SWEP.Penetration = 18
@@ -548,7 +550,7 @@ SWEP.Animations = {
         LHIK = false,
         LHIKIn = 0,
         LHIKOut = 0.5,
-        Time = .75,
+        Time = 35 / 30,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "raise.ogg", t = 0.2},
@@ -568,7 +570,7 @@ SWEP.Animations = {
         Source = "draw_empty",
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 0.5,
+        LHIKOut = 35 / 30,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "raise.ogg", t = 0.2},

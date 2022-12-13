@@ -26,6 +26,8 @@ att.Override_Malfunction = true
 att.Mult_MalfunctionMean = 0.7
 att.Mult_MalfunctionVariance = 1.5
 
+att.Mult_HipDispersion = 1.5
+
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_75"
 end

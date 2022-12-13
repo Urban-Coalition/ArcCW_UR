@@ -240,43 +240,43 @@ SWEP.AttachmentElements = {
     },
     ["ur_deagle_barrel_compact"] = {
         VMBodygroups = {{ind = 1, bg = 5}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, .15),
-                vang = Angle(90, 0, -90),
-            },
-        }
+        -- AttPosMods = {
+        --     [4] = {
+        --         vpos = Vector(0, 0, .15),
+        --         vang = Angle(90, 0, -90),
+        --     },
+        -- }
     },
     ["ur_deagle_barrel_compen"] = {
         VMBodygroups = {{ind = 1, bg = 4}},
     },
     ["ur_deagle_barrel_ext"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, 1.95),
-                vang = Angle(90, 0, -90),
-            },
-        },
+        -- AttPosMods = {
+        --     [4] = {
+        --         vpos = Vector(0, 0, 1.95),
+        --         vang = Angle(90, 0, -90),
+        --     },
+        -- },
     },
     ["ur_deagle_barrel_marksman"] = {
         VMBodygroups = {{ind = 1, bg = 3}},
 
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, -0.05, 5.1),
-                vang = Angle(90, 0, -90),
-            },
-        },
+        -- AttPosMods = {
+        --     [4] = {
+        --         vpos = Vector(0, -0.05, 5.1),
+        --         vang = Angle(90, 0, -90),
+        --     },
+        -- },
     },
     ["ur_deagle_barrel_annihilator"] = {
         VMBodygroups = {{ind = 1, bg = 6}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, -0.05, 1.25),
-                vang = Angle(90, 0, -90),
-            },
-        },
+        -- AttPosMods = {
+        --     [4] = {
+        --         vpos = Vector(0, -0.05, 1.25),
+        --         vang = Angle(90, 0, -90),
+        --     },
+        -- },
     },
 
     ["ur_deagle_mag_ext"] = {

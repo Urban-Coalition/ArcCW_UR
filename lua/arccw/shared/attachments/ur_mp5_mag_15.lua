@@ -24,6 +24,8 @@ att.Override_ClipSize = 15
 att.Mult_Sway = 0.75
 att.Mult_ShootSpeedMult = 1.1
 
+att.Mult_HipDispersion = 0.75
+
 att.ActivateElements = {"ur_mp5_mag_15"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
