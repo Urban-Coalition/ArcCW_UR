@@ -1101,7 +1101,7 @@ SWEP.Attachments = {
         --VMScale = Vector(.8, .8, .8),
         InstalledEles = {"ur_mp5_rail_fg"},
         GivesFlags = {"mp5_rail"},
-        ExcludeFlags = {"mp5_badhg"},
+        ExcludeFlags = {"mp5_badhg","mp5_kurz"},
 		MergeSlots = {15},
     },
     {
@@ -1171,6 +1171,7 @@ SWEP.Attachments = {
 		},
 		Hidden = true,
         --RequireFlags = {"barrel_eod"},
+        ExcludeFlags = {"mp5_badhg","mp5_kurz"},
 	}
 }
 
