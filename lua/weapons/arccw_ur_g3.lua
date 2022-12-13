@@ -269,7 +269,7 @@ SWEP.AttachmentElements = {
     },
     ["ur_g3_rec_psg"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1},
+            -- {ind = 1, bg = 1},
             {ind = 3, bg = 2},
         },
         TrueNameChange = "PSG1",
@@ -410,10 +410,10 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     local charm = atts[14].Installed
 
     local hgind = hgbg[hg] or 0
-    
+
     if barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15" then
         vm:SetBodygroup(6, hgind + 3)
-        
+
         if ub == "ur_g3_ub_bayonet" then
             vm:SetBodygroup(7, 2)
         elseif ub == "ur_g3_ub_bipod" then
@@ -434,6 +434,9 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         atts[15].Offset.vpos = Vector(0, 0.1, 6.9)
     end
 
+    if barrel == "ur_g3_barrel_26" or optic then
+        vm:SetBodygroup(1, 1)
+    end
 
     vm:SetBodygroup(9, !muzzle and muzzlebg[barrel] or 3)
 
@@ -449,14 +452,14 @@ SWEP.Hook_NameChange = function(wep)
     local stock = string.Replace(atts[8].Installed or "default","ur_g3_stock_","")
     local trueNames = GetConVar("arccw_truenames"):GetBool()
 
-    
+
     if rec == "hk33" then
         if trueNames then
             local bLookupTrue = {
                 ["8"] = "HK53",
                 ["12"] = "HK33KA3",
             }
-    
+
             if bLookupTrue[barr] then
                 return bLookupTrue[barr]
             elseif atts[1].Installed == "ur_g3_optic_sg1" then
@@ -490,9 +493,9 @@ SWEP.O_Hook_UC_UseClassicHK79Mount = function(wep, data)
     local barrel = atts[2].Installed or "default"
     local ub = atts[6].Installed or atts[15].Installed
 
-	if ub == "uc_ubgl_hk79" and (barrel or barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15") then
-		data.current = true
-	end
+    if ub == "uc_ubgl_hk79" and (barrel or barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15") then
+        data.current = true
+    end
 end
 
 SWEP.ExtraSightDist = 2
@@ -1074,9 +1077,9 @@ SWEP.Animations = {
 
 -- SWEP.Hook_Think = ArcCW.UC.ADSReload
 
-SWEP.Hook_Think = function(wep) 
+SWEP.Hook_Think = function(wep)
     local vm = wep:GetOwner():GetViewModel()
-    
+
     vm:SetPoseParameter("short", wep.Attachments[2].Installed == "ur_g3_barrel_8" and 1 or 0)
 
     ArcCW.UC.ADSReload(wep)
