@@ -253,15 +253,6 @@ end
 
 -- Animations --
 
-SWEP.Hook_Think = function(wep)
-    local vm = wep:GetOwner():GetViewModel()
-
-    local atts = wep.Attachments
-    local barrel = atts[1].Installed or "default"
-
-    vm:SetPoseParameter("long", (barrel == "default" or barrel == "ur_dbs_barrel_mid") and 1 or 0) -- not sure about mid barrel
-end
-
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local shellin = {common .. "dbs-shell-insert-01.ogg", common .. "dbs-shell-insert-02.ogg", common .. "dbs-shell-insert-03.ogg", common .. "dbs-shell-insert-04.ogg", common .. "dbs-shell-insert-05.ogg", common .. "dbs-shell-insert-06.ogg", common .. "dbs-shell-insert-07.ogg", common .. "dbs-shell-insert-08.ogg", common .. "dbs-shell-insert-09.ogg", common .. "dbs-shell-insert-10.ogg", common .. "dbs-shell-insert-11.ogg", common .. "dbs-shell-insert-12.ogg"}
