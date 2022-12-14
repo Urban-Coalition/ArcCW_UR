@@ -110,25 +110,10 @@ $sequence "reload" {
 	snap
 }
 $sequence "reload_empty" {
-	"anims\empty_manual.smd"
 	"anims\empty_manual_long.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "long" 0 1
-	snap
-}
-
-
-$sequence "reload_fast" {
-	"anims\tac.smd"
-	fps 30
-	"ACT_VM_RELOAD" 1
-	snap
-}
-$sequence "reload_empty_fast" {
-	"anims\empty.smd"
-	fps 30
-	"ACT_VM_RELOAD" 1
 	snap
 }
 
