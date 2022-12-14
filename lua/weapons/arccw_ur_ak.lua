@@ -1019,8 +1019,10 @@ SWEP.Hook_NameChange = function(wep,name)
         if cal == "762" then
             if barr == "t56" then
                 post = post .. "-1"
-            else
+            elseif !fakeNames then
                 post = "MS"
+            else
+                mid = "S"
             end
         else
             mid = "S"
