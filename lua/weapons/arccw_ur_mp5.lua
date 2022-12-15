@@ -258,66 +258,66 @@ SWEP.BulletBones = {
 
 1 --- 	id: 0
      [	name: iron
-	num: 1
-	submodels:
-	0 --- ironSIGHT.smd
+    num: 1
+    submodels:
+    0 --- ironSIGHT.smd
 2 --- 	id: 1
      [	name: 1
-	num: 4
-	submodels:
-	0 --- mp5UPPER.smd
-	1 --- mp5sdUPPER.smd
-	2 --- mp5kUPPER.smd
-	3 --- swordUPPER.smd
+    num: 4
+    submodels:
+    0 --- mp5UPPER.smd
+    1 --- mp5sdUPPER.smd
+    2 --- mp5kUPPER.smd
+    3 --- swordUPPER.smd
 3 --- 	id: 2
      [	name: 2
-	num: 2
-	submodels:
-	0 --- fourLOWER.smd
-	1 --- sefLOWER.smd
+    num: 2
+    submodels:
+    0 --- fourLOWER.smd
+    1 --- sefLOWER.smd
 4 --- 	id: 3
      [	name: 3
-	num: 11
-	submodels:
-	0 --- fixedSTOCK.smd
-	1 --- collapseSTOCK.smd
-	2 --- collapseSTOCKcoll.smd
-	3 --- pdwSTOCK.smd
-	4 --- pdwSTOCKfold.smd
-	5 --- tacticSTOCK.smd
-	6 --- tacticSTOCKfold.smd
-	7 --- futureSTOCK.smd
-	8 --- futureSTOCKcoll.smd
-	9 --- futureSTOCKfold.smd
-	10 --- buttSTOCK.smd
+    num: 11
+    submodels:
+    0 --- fixedSTOCK.smd
+    1 --- collapseSTOCK.smd
+    2 --- collapseSTOCKcoll.smd
+    3 --- pdwSTOCK.smd
+    4 --- pdwSTOCKfold.smd
+    5 --- tacticSTOCK.smd
+    6 --- tacticSTOCKfold.smd
+    7 --- futureSTOCK.smd
+    8 --- futureSTOCKcoll.smd
+    9 --- futureSTOCKfold.smd
+    10 --- buttSTOCK.smd
 5 --- 	id: 4
      [	name: 4
-	num: 10
-	submodels:
-	0 --- standardHG.smd
-	1 --- flashHG.smd
-	2 --- flashmlokHG.smd
-	3 --- slimHG.smd
-	4 --- picaHG.smd
-	5 --- mlokHG.smd
-	6 --- kurzgripHG.smd
-	7 --- kurzslimHG.smd
-	8 --- kurzmlokHG.smd
-	9 ---
+    num: 10
+    submodels:
+    0 --- standardHG.smd
+    1 --- flashHG.smd
+    2 --- flashmlokHG.smd
+    3 --- slimHG.smd
+    4 --- picaHG.smd
+    5 --- mlokHG.smd
+    6 --- kurzgripHG.smd
+    7 --- kurzslimHG.smd
+    8 --- kurzmlokHG.smd
+    9 ---
 6 --- 	id: 5
      [	name: 5
-	num: 4
-	submodels:
-	0 --- standardMAG.smd
-	1 --- smallMAG.smd
-	2 --- straightMAG.smd
-	3 --- drumMAG.smd
+    num: 4
+    submodels:
+    0 --- standardMAG.smd
+    1 --- smallMAG.smd
+    2 --- straightMAG.smd
+    3 --- drumMAG.smd
 7 --- 	id: 6
      [	name: 6
-	num: 2
-	submodels:
-	0 ---
-	1 --- mp5RAIL.smd
+    num: 2
+    submodels:
+    0 ---
+    1 --- mp5RAIL.smd
 
 ]]
 
@@ -1102,14 +1102,14 @@ SWEP.Attachments = {
         InstalledEles = {"ur_mp5_rail_fg"},
         GivesFlags = {"mp5_rail"},
         ExcludeFlags = {"mp5_badhg","mp5_kurz"},
-		MergeSlots = {15},
+        MergeSlots = {15},
     },
     {
         PrintName = "Tactical",
         Slot = "tac",
         Bone = "body",
         Offset = {
-            vpos = Vector(-1.1, 0.2, 8),
+            vpos = Vector(-0.9, 0.2, 8),
             vang = Angle(90, 0, 180),
         },
         VMScale = Vector(.8,.8,.8),
@@ -1161,18 +1161,18 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
-	{
-		PrintName = "M203 slot",
-		Slot = "uc_ubgl",
-		Bone = "Body",
-		Offset = {
-			vpos = Vector(0, 0, 7.9),
-			vang = Angle(90, 0, -90),
-		},
-		Hidden = true,
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0, 0, 7.9),
+            vang = Angle(90, 0, -90),
+        },
+        Hidden = true,
         --RequireFlags = {"barrel_eod"},
         ExcludeFlags = {"mp5_badhg","mp5_kurz"},
-	}
+    }
 }
 
 -- SWEP.AttachmentOverrides = {
