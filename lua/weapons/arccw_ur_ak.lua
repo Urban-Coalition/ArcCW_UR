@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.UC_CategoryPack = "2Urban Renewal"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KF-7"
+SWEP.PrintName = "KF-67"
 SWEP.TrueName = "AKM"
 
 if GetConVar("arccw_truenames"):GetBool() then
@@ -905,7 +905,7 @@ SWEP.Hook_NameChange = function(wep,name)
 
     if fakeNames then
         start = "KF"
-        post = "-7"
+        post = "-67"
     end
 
     local atts = wep.Attachments
@@ -1033,17 +1033,17 @@ SWEP.Hook_NameChange = function(wep,name)
         wep.Trivia_Desc = descStart .. desc_545
         if hg == "74m" or hg == "rpk74m" or hg == "ak12" then
             noN = true
-            post = (fakeNames and "-5M") or "-74M"
+            post = (fakeNames and "-76M") or "-74M"
         elseif shortBarrs[barr] then
             if fakeNames then
-                post = "-5"
+                post = "-76"
                 mid = mid .. "U"
             else
                 post = "-74U"
             end
             wep.Trivia_Desc = descStart .. desc_74u
         else
-            post = (fakeNames and "-5") or "-74"
+            post = (fakeNames and "-76") or "-74"
         end
     end
 
