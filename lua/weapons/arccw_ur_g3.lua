@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.UC_CategoryPack = "2Urban Renewal"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "G58"
+SWEP.PrintName = "CN StG"
 SWEP.TrueName = "G3A3"
 
 SWEP.Trivia_Class = "Battle Rifle"
