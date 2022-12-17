@@ -477,7 +477,7 @@ SWEP.Hook_NameChange = function(wep)
             if bLookup[barr] then
                 return bLookup[barr]
             elseif atts[1].Installed == "ur_g3_optic_sg1" then
-                return "CN66/SG"
+                return "CN66-SSR"
             else
                 return "CN66"
             end
@@ -506,7 +506,7 @@ SWEP.Hook_NameChange = function(wep)
             if bLookup[barr] then
                 return bLookup[barr]
             elseif atts[1].Installed == "ur_g3_optic_sg1" then
-                return "AGSG"
+                return "AG-SSR"
             else
                 return "AG58"
             end
