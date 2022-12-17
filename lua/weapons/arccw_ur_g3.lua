@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
 SWEP.UC_CategoryPack = "2Urban Renewal"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "CN StG"
+SWEP.PrintName = "AG58"
 SWEP.TrueName = "G3A3"
 
 SWEP.Trivia_Class = "Battle Rifle"
@@ -272,6 +272,7 @@ SWEP.AttachmentElements = {
             -- {ind = 1, bg = 1},
             {ind = 3, bg = 2},
         },
+        NameChange = "PMR-2",
         TrueNameChange = "PSG1",
     },
 
@@ -467,6 +468,12 @@ SWEP.Hook_NameChange = function(wep)
             else
                 return (stock == "collapsible" and "HK33A3") or "HK33A2"
             end
+        else
+            local bLookupTrue = {
+                ["8"] = "HK53",
+                ["12"] = "HK33KA3",
+            }
+            return "CN66"
         end
     elseif rec == "default" then -- not "else" here to allow the base's PSG1 namechange to happen
         if trueNames then
@@ -484,6 +491,11 @@ SWEP.Hook_NameChange = function(wep)
             else
                 return (stock == "collapsible" and "G3A4") or wep.TrueName
             end
+        else
+            local bLookup = {
+                ["8"] = "CN102",
+                ["12"] = "CN StGK",
+            }
         end
     end
 end
