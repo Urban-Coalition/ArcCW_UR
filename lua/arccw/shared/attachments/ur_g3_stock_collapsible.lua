@@ -2,7 +2,7 @@ att.PrintName = "G3 Collapsible Stock" -- I just copied the mp5 collapsible stoc
 att.AbbrevName = "Collapsible Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "G58 Collapsible Stock"
+    att.PrintName = "AG58 Collapsible Stock"
 end
 
 att.Icon = Material("entities/att/ur_g3/stock_colap.png","smooth mips")

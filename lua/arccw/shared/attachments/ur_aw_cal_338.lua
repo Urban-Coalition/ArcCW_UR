@@ -22,7 +22,7 @@ att.Mult_PhysBulletMuzzleVelocity = 950 / 850
 
 att.Mult_Penetration = 2
 att.Mult_Recoil = 2
-att.Mult_CycleTime = 1.18
+att.Mult_CycleTime = 1.24
 att.Mult_ReloadTime = 5.55 / 5.15
 
 att.Mult_ShootSpeedMult = 0.8
