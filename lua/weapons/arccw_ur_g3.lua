@@ -456,36 +456,43 @@ SWEP.Hook_NameChange = function(wep)
 
     if rec == "hk33" then
         if trueNames then
-            local bLookupTrue = {
+            local bLookup = {
                 ["8"] = "HK53",
                 ["12"] = "HK33KA3",
             }
 
-            if bLookupTrue[barr] then
-                return bLookupTrue[barr]
+            if bLookup[barr] then
+                return bLookup[barr]
             elseif atts[1].Installed == "ur_g3_optic_sg1" then
                 return "HK33SG/1"
             else
                 return (stock == "collapsible" and "HK33A3") or "HK33A2"
             end
         else
-            local bLookupTrue = {
-                ["8"] = "HK53",
-                ["12"] = "HK33KA3",
+            local bLookup = {
+                ["8"] = "CN109",
+                ["12"] = "CN66K",
             }
-            return "CN66"
+
+            if bLookup[barr] then
+                return bLookup[barr]
+            elseif atts[1].Installed == "ur_g3_optic_sg1" then
+                return "CN66/SG"
+            else
+                return "CN66"
+            end
         end
     elseif rec == "default" then -- not "else" here to allow the base's PSG1 namechange to happen
         if trueNames then
             if atts[13].Installed == "uc_fg_civvy" then return "HK91" end
 
-            local bLookupTrue = {
+            local bLookup = {
                 ["8"] = "HK51",
                 ["12"] = "G3KA4",
             }
 
-            if bLookupTrue[barr] then
-                return bLookupTrue[barr]
+            if bLookup[barr] then
+                return bLookup[barr]
             elseif atts[1].Installed == "ur_g3_optic_sg1" then
                 return "G3SG/1"
             else
@@ -494,8 +501,15 @@ SWEP.Hook_NameChange = function(wep)
         else
             local bLookup = {
                 ["8"] = "CN102",
-                ["12"] = "CN StGK",
+                ["12"] = "AG58K",
             }
+            if bLookup[barr] then
+                return bLookup[barr]
+            elseif atts[1].Installed == "ur_g3_optic_sg1" then
+                return "AGSG"
+            else
+                return "AG58"
+            end
         end
     end
 end
