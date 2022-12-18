@@ -6,12 +6,13 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/ur_mp5/hg_flash.png", "smooth mips")
-att.Description = "Alternative handguard with an integrated flashlight."
+att.Description = "Alternative handguard with an integrated flashlight and a wider grip."
 att.Desc_Pros = {
     "uc.light"
 }
 att.Desc_Cons = {
-    "con.light"
+    "con.light",
+    "uc.noubs"
 }
 att.AutoStats = true
 
@@ -43,6 +44,8 @@ att.ToggleStats = {
         Flashlight = false,
     }
 }
+
+att.Mult_SightTime = 0.9
 
 att.GivesFlags = {"hg_surefire","mp5_badhg"} -- badhg flag is temporary until underbarrel rail model is implemented (it disables use of underbarrel atts)
 att.ExcludeFlags = {"barrel_sd","mp5_kurz","g3_not8"}

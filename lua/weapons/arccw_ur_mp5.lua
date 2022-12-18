@@ -202,7 +202,6 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 local path = ")^weapons/arccw_ur/mp5/"
-local path1 = ")^weapons/arccw_ud/glock/"
 local common = ")^/arccw_uc/common/"
 
 SWEP.ShootSound = {
@@ -659,7 +658,6 @@ SWEP.Animations = {
     ["fix"] = {
         Source = "fix",
         Time = 40 / 30,
-        ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
