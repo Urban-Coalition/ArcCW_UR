@@ -2,7 +2,7 @@ att.PrintName = "G3 Padded Stock"
 att.AbbrevName = "Padded Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "G58 Marksman Stock"
+    att.PrintName = "AG58 Marksman Stock"
 end
 
 att.Icon = Material("entities/att/ur_g3/stock_sg.png","smooth mips")
