@@ -900,10 +900,15 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 999, -- maybe im dumb
         SoundTable = {
-            {s = rutle, t = 0.2},
+            {s = common .. "movement-sniper-01.ogg", t = 0.05},
             {s = rottle, t = 0.25},
-            {s = rottle, t = 1.2},
-            {s = rutle, t = 1.25},
+            {s = testpath .. "boltup_inspect.ogg",          t = 1.2},
+            {s = common .. "movement-sniper-03.ogg", t = 1.25},
+            {s = testpath .. "boltback_inspect.ogg",        t = 1.35},
+            {s = testpath .. "boltforward_inspect.ogg",     t = 1.8},
+            {s = testpath .. "boltdown_inspect.ogg",        t = 1.9},
+            {s = rottle, t = 2.0},
+            {s = common .. "movement-sniper-04.ogg", t = 2.2},
         },
     },
 }
