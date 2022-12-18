@@ -201,17 +201,17 @@ $sequence "reload_empty_exte_magnum" "talonAnims/reload_empty_magnum_ext.smd" {
 
 
 $sequence "inspect_enter" {
-	"talonAnims\awinspect_enter"
+	"talonAnims\inspect_enter.smd"
 	fps 30
 	// snap
 }
 $sequence "inspect_loop" {
-	"talonAnims\awinspect_loop"
+	"talonAnims\inspect_idle.smd"
 	fps 30
 	// snap
 }
 $sequence "inspect_exit" {
-	"talonAnims\awinspect_exit"
+	"talonAnims\inspect_end.smd"
 	fps 30
 	// snap
 }
