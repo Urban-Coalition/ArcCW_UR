@@ -267,7 +267,7 @@ $sequence "exit_inspect_jam" {
 }
 
 $sequence "enter_inspect_empty" {
-	"anims\vm_m1911_inspect_empty2.smd"
+	"anims\vm_m1911_inspect_empty.smd"
 	"ACT_VM_IDLE" 1
 	frame 0 18
 	fadein 0
@@ -276,7 +276,7 @@ $sequence "enter_inspect_empty" {
 }
 
 $sequence "idle_inspect_empty" {
-	"anims\vm_m1911_inspect_empty2.smd"
+	"anims\vm_m1911_inspect_empty.smd"
 	"ACT_VM_IDLE" 1
 	frame 18 120
 	snap
@@ -284,7 +284,7 @@ $sequence "idle_inspect_empty" {
 }
 
 $sequence "exit_inspect_empty" {
-	"anims\vm_m1911_inspect_empty2.smd"
+	"anims\vm_m1911_inspect_empty.smd"
 	"ACT_VM_IDLE" 1
 	frame 120 168
 	fadein 0.2
