@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/ur_g3/barrel_psg.png","smooth mips")
-att.Description = "Long barrel and handguard assembly for the sniper variant of the rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned purely for long range usage, this barrel lacks iron sights."
+att.Description = "Long barrel and handguard assembly for the sniper variant of the rifle. Reduces fire rate, but enhances ranged performance greatly.\nDesigned purely for long range usage, this barrel lacks a front sight post."
 att.Slot = "ur_g3_barrel"
 att.Desc_Cons = {
     "uc.nofs",
@@ -17,8 +17,7 @@ att.SortOrder = 26
 
 att.Mult_SightTime = 1.2
 att.Add_BarrelLength = 6
-att.Mult_SightedSpeedMult = 0.9
-att.Mult_Sway = 1.5
+att.Mult_SightedSpeedMult = 0.85
 
 att.Mult_Recoil = 0.75
 att.Mult_AccuracyMOA = 0.5
