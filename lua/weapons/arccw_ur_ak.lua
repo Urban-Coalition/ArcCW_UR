@@ -650,8 +650,7 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
     local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
-    local bipodBarrs = {["rpk"] = true, ["rpk74m"] = true}
-    local polRailHgs = {["74m"] = true, ["rpk74m"] = true, ["105"] = true}
+    local bipodBarrs = {["rpk"] = true}
     local shortBarrs = {["krinkov"] = true, ["vityaz"] = true}
     local intCals = {["545"] = true, ["556"] = true, ["545_ak12"] = true}
 
@@ -704,7 +703,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if ub and hg ~= "ur_ak_hg_dong" and !shortBarrs[barr] then
         if railHgs[hg] then
             vm:SetBodygroup(1,13)
-        elseif polRailHgs[hg] then
+        elseif hg == "74m" then
             vm:SetBodygroup(1,4)
         end
     end
