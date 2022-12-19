@@ -649,7 +649,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local akOptics = {["uc_optic_pso1"] = true, ["uc_optic_kobra"] = true} -- Will need to update this list if more AK optics get added
-    local railHgs = {["default"] = true, ["akm"] = true, ["t56"] = true, ["rpk"] = true, ["vepr"] = true}
+    local railHgs = {["default"] = true, ["type3"] = true}
     local bipodBarrs = {["rpk"] = true}
     local shortBarrs = {["krinkov"] = true, ["vityaz"] = true}
     local intCals = {["545"] = true, ["556"] = true, ["545_ak12"] = true}
