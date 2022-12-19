@@ -700,12 +700,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Railed underbarrel
-    if ub and hg ~= "ur_ak_hg_dong" and !shortBarrs[barr] then
-        if railHgs[hg] then
+    if ub and hg != "ur_ak_hg_dong" and barr != "vityaz" then
+        if barr == "krinkov" then
+            vm:SetBodygroup(13,2)
+        elseif railHgs[hg] then
             vm:SetBodygroup(1,13)
-        elseif hg == "74m" then
-            vm:SetBodygroup(1,4)
+        else
+            vm:SetBodygroup(13,1)
         end
+    else
+        vm:SetBodygroup(13,0)
     end
 
     -- RPK bipod
