@@ -756,6 +756,11 @@ SWEP.Attachments = {
         PrintName = "Handguard",
         DefaultAttName = "Factory Handguard",
         DefaultAttIcon = Material("entities/att/ur_ak/handguards/std.png", "mips smooth"),
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(0,12, 1.9),
+            vang = Angle(90, -90, -90),
+        },
         Slot = "ur_ak_hg",
         ExcludeFlags = {"barrel_carbine"},
     },

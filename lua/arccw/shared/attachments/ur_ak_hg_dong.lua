@@ -18,7 +18,6 @@ att.GivesFlags = {"ak_noubs"}
 att.LHIK = true
 
 att.ModelOffset = Vector(-23, -2.6, 3.8)
---att.ModelScale = Vector(1.111, 1.111, 1.111)
 att.Model = "models/weapons/arccw/ak_lhik_dong.mdl"
 
 att.Override_HoldtypeActive = "smg"
