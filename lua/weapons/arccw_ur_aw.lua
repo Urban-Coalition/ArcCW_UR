@@ -676,7 +676,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.5,
         MinProgress = 3.0,
         ShellEjectAt = .45,
-        LastClip1OutTime = 1.3,
+        LastClip1OutTime = 1.8,
         Time = 4.5,
         SoundTable = {
             {s = ratel,                             t = 0.05},
@@ -709,6 +709,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.5,
         ShellEjectAt = .5,
         MinProgress = 3.5,
+        LastClip1OutTime = 1.8,
         Time = 4.5,
         SoundTable = {
             {s = ratel,                             t = 0.05},
@@ -740,7 +741,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.1,
         LHIKEaseOut = 0.5,
         ShellEjectAt = .5,
-        LastClip1OutTime = 2.3,
+        LastClip1OutTime = 1.5,
         MinProgress = 4,
         Time = 4.25,
         SoundTable = {
