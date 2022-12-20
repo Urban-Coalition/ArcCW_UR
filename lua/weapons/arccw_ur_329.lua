@@ -101,7 +101,7 @@ SWEP.Sway = 1.1
 
 SWEP.TriggerDelay = true
 
-SWEP.Delay = 60 / 160
+SWEP.Delay = 0.25
 SWEP.Num = 1
 SWEP.FiremodeSound = false
 SWEP.Firemodes = {
@@ -391,7 +391,8 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
-        MinProgress = 1.9,
+        Time = 3.0,
+        MinProgress = 1.8,
         ShellEjectAt = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -408,15 +409,16 @@ SWEP.Animations = {
             { s = path1 .. "cylinder_extract.ogg", t = 0.75 },
             { s = path1 .. "extractor2.ogg", t = 0.825 },
             { s = common .. "magpouch_pull_small.ogg", t = 1.2, v = 0.2 },
-            { s = path1 .. "speedloader.ogg", t = 1.9 },
-            { s = path1 .. "cylinder_in.ogg", t = 2.4 },
+            { s = path1 .. "speedloader.ogg", t = 1.65 },
+            { s = path1 .. "cylinder_in.ogg", t = 2.15 },
             { s = rottle, t = 2.4 },
         },
     },
     ["reload_cocked"] = {
         Source = "reload_cocked",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
-        MinProgress = 1.9,
+        Time = 3.0,
+        MinProgress = 1.8,
         ShellEjectAt = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -433,8 +435,8 @@ SWEP.Animations = {
             { s = path1 .. "cylinder_extract.ogg", t = 0.75 },
             { s = path1 .. "extractor2.ogg", t = 0.825 },
             { s = common .. "magpouch_pull_small.ogg", t = 1.2, v = 0.2 },
-            { s = path1 .. "speedloader.ogg", t = 1.9 },
-            { s = path1 .. "cylinder_in.ogg", t = 2.4 },
+            { s = path1 .. "speedloader.ogg", t = 1.65 },
+            { s = path1 .. "cylinder_in.ogg", t = 2.15 },
             { s = rottle, t = 2.4 },
         },
     },
