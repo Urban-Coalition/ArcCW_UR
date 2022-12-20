@@ -8,7 +8,7 @@ att.AutoStats = true
 att.SortOrder = 10
 
 att.Override_Ammo = "smg1"
-att.Override_Trivia_Calibre = "5.45x39mm"
+att.Override_Trivia_Calibre = "5.45x39mm Soviet"
 
 att.Mult_Range = 1.2
 att.Mult_RPM = 1.083 -- 650 rpm
