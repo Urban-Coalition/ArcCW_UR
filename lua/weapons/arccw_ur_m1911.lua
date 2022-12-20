@@ -263,6 +263,27 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Colt Officer's ACP",
     },
 
+    ["ur_1911_slide_compact_custom"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 1},
+            {ind = 1, bg = 5}
+        },
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -3.58, .22),
+                vang = Angle(0, 90, 0),
+            }
+        },
+        NameChange = "AMAD",
+        TrueNameChange = "Colt Officer's ACP",
+    },
+
+    ["ur_1911_slide_custom"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 4}
+        },
+    },
+
     ["ur_1911_slide_m45"] = {
         VMBodygroups = {
             {ind = 1, bg = 2},
