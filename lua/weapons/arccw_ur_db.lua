@@ -243,9 +243,9 @@ SWEP.Hook_AddShootSound = function(wep,data)
     ArcCW.UC.InnyOuty(wep)
 
     if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
-        timer.Simple(0.1, function()
+        timer.Simple(0.05, function()
             if IsValid(wep) then
-                wep:EmitSound(wep.ShootSound[math.random(1,#wep.ShootSound)], data.volume * .5, data.pitch, 1, CHAN_WEAPON - 1)
+                wep:EmitSound(wep.ShootSound[math.random(1,#wep.ShootSound)], data.volume * .4, data.pitch, 1, CHAN_WEAPON - 1)
             end
         end)
     end

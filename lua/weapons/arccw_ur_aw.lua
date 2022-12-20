@@ -530,13 +530,11 @@ SWEP.Animations = {
          Time = 1.47,
         MinProgress = 1.3,
         SoundTable = {
-            {s = ratel,                             t = 0.05},
+            {s = ratel,                             t = 0.07},
             {s = testpath .. "boltup.ogg",          t = 0.1},
             {s = testpath .. "boltback.ogg",        t = 0.2},
-            {s = testpath .. "boltforward.ogg",     t = 0.6},
-            {s = testpath .. "boltdown.ogg",        t = 0.8},
-
-            --{s = common .. "shoulder.ogg",          t = 0.7},
+            {s = testpath .. "boltforward.ogg",     t = 0.32},
+            {s = testpath .. "boltdown.ogg",        t = 0.6},
         },
         ProcDraw = true,
     },
