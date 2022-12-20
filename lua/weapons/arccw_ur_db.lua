@@ -106,7 +106,6 @@ SWEP.Firemodes = {
     {
         Mode = 1,
         PrintName = "fcg.break",
-
     },
     {
         Mode = 1,
@@ -148,7 +147,7 @@ SWEP.NPCWeight = 210
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 28
+SWEP.AccuracyMOA = 25
 SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 125
 SWEP.JumpDispersion = 1000
