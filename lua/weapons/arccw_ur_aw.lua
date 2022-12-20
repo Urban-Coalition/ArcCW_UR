@@ -846,7 +846,7 @@ SWEP.Animations = {
         LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = common .. "movement-sniper-03.ogg", t = 0.1},
+            {s = common .. "movement-sniper-03.ogg", t = 0.05},
         },
     },
     ["idle_inspect"] = {
@@ -863,7 +863,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 999, -- maybe im dumb
         SoundTable = {
-            {s = common .. "movement-sniper-01.ogg", t = 0.05},
+            {s = common .. "movement-sniper-01.ogg", t = 0},
             {s = rottle, t = 0.25},
             {s = testpath .. "boltup_inspect.ogg",          t = 1.2},
             {s = common .. "movement-sniper-03.ogg", t = 1.25},
