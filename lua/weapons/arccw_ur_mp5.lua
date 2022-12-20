@@ -1016,7 +1016,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKOut = 0,
-        Time = .75,
+        Time = .5,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -1030,7 +1030,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseOut = 0.4,
         LHIKOut = 0.5,
-        Time = .75,
+        Time = .5,
     },
 }
 
