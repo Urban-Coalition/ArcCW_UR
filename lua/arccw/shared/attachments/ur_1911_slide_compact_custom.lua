@@ -9,6 +9,7 @@ att.Desc_Neutrals = {
 att.AutoStats = true
 att.Slot = "ur_m1911_slide"
 att.SortOrder = 3.5 - 0.01
+att.InvAtt = "ur_1911_slide_compact"
 
 att.Mult_DrawTime = 0.85
 att.Mult_HolsterTime = 0.85
