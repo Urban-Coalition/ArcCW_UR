@@ -5,6 +5,10 @@ att.Description = "Submachine gun barrel with a rail interface for additional mo
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Bogatyr SMG 9\" SMG Barrel"
+end
+
 att.SortOrder = 9
 
 att.Add_BarrelLength = -5

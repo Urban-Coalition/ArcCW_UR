@@ -6,6 +6,10 @@ att.Slot = {"ur_ak_barrel"}
 att.Desc_Cons = {"uc.noubs"} -- remove when we get a lower rail
 att.AutoStats = true
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KFSU-76 8\" Compact Barrel"
+end
+
 att.SortOrder = 8
 
 att.Mult_ShootPitch = 115 / 100

@@ -7,6 +7,10 @@ att.AutoStats = true
 
 att.SortOrder = 23
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "PKF-67 23\" SAW Barrel"
+end
+
 att.Add_BarrelLength = 5
 att.Mult_SightTime = 1.2
 att.Mult_SpeedMult = .95

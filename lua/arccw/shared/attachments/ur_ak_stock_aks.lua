@@ -1,4 +1,8 @@
-att.PrintName = "Sidefolding Stock"
+att.PrintName = "AK Sidefolding Stock"
+att.AbbrevName = "Sidefolding Stock"
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF Sidefolding Stock"
+end
 att.Icon = Material("entities/att/ur_ak/stock/fold.png", "mips smooth")
 att.Description = [[Side-folding stock found since the 74 series' debut. The triangular structure reduces its compromise on stability, but it is still less effective than a fixed stock. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
 

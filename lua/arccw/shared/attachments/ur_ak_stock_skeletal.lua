@@ -17,3 +17,5 @@ att.Mult_RecoilSide = 1.15
 att.ActivateElements = {"stock_skeletal"}
 
 att.Ignore = true
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "stop looking at deprecated shit you suka"

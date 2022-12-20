@@ -1,4 +1,8 @@
-att.PrintName = "Thumbhole Stock"
+att.PrintName = "AK Thumbhole Stock"
+att.AbbrevName = "Thumbhole Stock"
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF Thumbhole Stock"
+end
 att.Icon = Material("entities/att/ur_ak/stock/vepr.png", "mips smooth")
 att.Description = "Marksman stock with integrated grip. The thumbhole design provides unparalleled stability."
 att.Slot = {"ur_ak_stock"}

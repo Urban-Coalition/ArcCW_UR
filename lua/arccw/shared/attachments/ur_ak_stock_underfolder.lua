@@ -1,4 +1,8 @@
-att.PrintName = "Underfolding Stock"
+att.PrintName = "AK Underfolding Stock"
+att.AbbrevName = "Underfolding Stock"
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF Underfolding Stock"
+end
 att.Icon = Material("entities/att/ur_ak/stock/under.png", "mips smooth")
 att.Description = [[Folding stock of the AKS-47. While not as stable as a full wood stock, it is much lighter. Folding the stock provides massively boosted maneuverability at the cost of severe recoil.
 

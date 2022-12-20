@@ -1,4 +1,8 @@
-att.PrintName = "Carbine Stock"
+att.PrintName = "AK SOPMOD Stock"
+att.AbbrevName = "Carbine Stock"
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF SOPMOD Stock"
+end
 att.Icon = Material("entities/att/ur_ak/stock/helix.png", "mips smooth")
 att.Description = "US-made lightweight stock that mounts on an AR buffer tube. More maneuverable than the solid wood stock."
 att.Slot = {"ur_ak_stock"}

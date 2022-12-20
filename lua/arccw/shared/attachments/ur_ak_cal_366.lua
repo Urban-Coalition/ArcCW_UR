@@ -5,6 +5,10 @@ att.AbbrevName = ".366 TKM Receiver"
 att.Icon = Material("entities/att/uc_bullets/762x39.png", "mips smooth")
 att.Description = "Hunting round based on 7.62x39mm, with more powerful ranged ballistics than the parent cartridge. Weapons chambered for it are exclusively produced for the Russian civilian market, and are therefore semi-automatic only."
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KFN-209 .366 TKM Receiver"
+end
+
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

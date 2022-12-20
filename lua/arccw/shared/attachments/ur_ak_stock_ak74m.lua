@@ -1,4 +1,8 @@
-att.PrintName = "Polymer Stock"
+att.PrintName = "AK Polymer Stock"
+att.AbbrevName = "Polymer Stock"
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF Polymer Stock"
+end
 att.Icon = Material("entities/att/ur_ak/stock/n.png", "mips smooth")
 att.Description = [[Full side-folding stock. While extended, it functions similarly to a standard wood stock, albeit with less stability.
 Folding the stock boosts mobility and recoil, though not as significantly as skeletal folding stocks.

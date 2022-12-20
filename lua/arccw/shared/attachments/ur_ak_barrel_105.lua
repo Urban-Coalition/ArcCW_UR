@@ -5,6 +5,10 @@ att.Description = "Reduced length barrel that serves as a middle ground between 
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF-104 12\" Carbine Barrel"
+end
+
 att.SortOrder = 12
 
 att.Mult_Sway = .85

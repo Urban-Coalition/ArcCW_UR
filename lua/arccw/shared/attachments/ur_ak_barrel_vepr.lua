@@ -5,6 +5,10 @@ att.Description = "Long civilian hunting barrel. Improved performance at range, 
 att.Slot = {"ur_ak_barrel"}
 att.AutoStats = true
 
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Amur 20\" Marksman Barrel"
+end
+
 att.SortOrder = 20
 
 att.Add_BarrelLength = 4

@@ -1,5 +1,10 @@
 att.PrintName = "PP-19 Vityaz 9x19mm Parabellum Receiver"
 att.AbbrevName = "9x19mm Receiver"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Bogatyr SMG 9x19mm Parabellum Receiver"
+end
+
 att.Icon = Material("entities/att/uc_bullets/9x19.png", "mips smooth")
 att.Description = "Converts the weapon to a submachine gun. The smaller caliber drastically reduces recoil, but has much less range and is less accurate."
 att.Slot = {"ur_ak_cal"}

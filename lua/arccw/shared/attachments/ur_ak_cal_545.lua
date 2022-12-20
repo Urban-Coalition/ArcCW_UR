@@ -1,5 +1,10 @@
 att.PrintName = "AK-74 5.45x39mm Receiver"
 att.AbbrevName = "5.45x39mm Receiver"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "KF-76 5.45x39mm Receiver"
+end
+
 att.Icon = Material("entities/att/uc_bullets/545x39.png", "mips smooth")
 att.Description = "Lighter, more accurate cartridge that maintains wounding potential up close, but lacks penetration."
 att.Slot = {"ur_ak_cal"}
