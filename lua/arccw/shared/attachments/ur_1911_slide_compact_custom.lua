@@ -1,6 +1,6 @@
 att.PrintName = "Colt Officer's Model 3.5\" Slide w/ Custom Finish"
 att.AbbrevName = "3.5\" Officer Slide (Custom)"
-att.Icon = Material("entities/att/ur_1911/slide_std.png","mips smooth")
+att.Icon = Material("entities/att/ur_1911/slide_compact.png","mips smooth")
 att.Description = "A shortened slide reduces the amount of holster to clear and further improves agility to the detriment of long-range performance and recoil control.\n\nThis variant will use your configured custom color for that extra flair."
 
 att.Desc_Neutrals = {
