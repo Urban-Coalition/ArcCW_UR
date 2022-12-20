@@ -114,8 +114,8 @@ SWEP.Firemodes = {
        PrintName = "ur.329.sact",
        Override_ManualAction = true,
        Mult_AccuracyMOA = 0.5,
-       Mult_HipDispersion = 0.5,
-       Mult_MoveDispersion = 0.5,
+       Mult_HipDispersion = (1/3),
+       Mult_MoveDispersion = (1/3),
        Mult_ShootSpeedMult = 1.2,
        Override_TriggerDelay = false,
    },
@@ -337,7 +337,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
-        MinProgress = .3,
+        MinProgress = .2,
     },
     ["fire_dry"] = {
         Source = "dryfire",
