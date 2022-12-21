@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ur_spas12_new/spas_flash"
+	"$bumpmap" "models/weapons/arccw/ur_spas12_new/spas_flash_normal"
+	"$normalmapalphaenvmapmask" 	1
+	
+	"$phongexponent" 			"5"
+	"$phong" 					"1"
+	"$phongboost"				"1"
+	"$phongfresnelranges" "[.6 1 2]"
+
+	"$envmap" 					"env_cubemap"
+	"$envmaptint" "[.02 .02  .02]"
+	"$envmapfresnel" 			"1"
+}
