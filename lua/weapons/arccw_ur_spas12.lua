@@ -647,7 +647,6 @@ SWEP.AttachmentElements = {
 
     ["ur_spas12_stock_full"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1},
             {ind = 7, bg = 2},
         }
     },

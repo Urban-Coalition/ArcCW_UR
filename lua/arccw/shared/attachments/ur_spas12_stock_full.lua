@@ -1,4 +1,5 @@
-att.PrintName = "Sporting Stock"
+att.PrintName = (GetConVar("arccw_truenames"):GetBool() and "SPAS-12 Fixed Polymer Stock") or "Martello 12/70 Fixed Polymer Stock"
+att.AbbrevName = "Fixed Stock"
 att.Icon = Material("entities/att/acwatt_ud_m1014_stock_in.png", "smooth mips")
 att.Description = "Solid, non-adjustable polymer stock designed specifically for the civilian market. Provides a better brace at the cost of combat mobility."
 att.Icon = Material("entities/att/ur_spas/stock_full.png", "smooth mips")
