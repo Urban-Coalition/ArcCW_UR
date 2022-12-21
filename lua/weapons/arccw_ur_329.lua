@@ -116,7 +116,7 @@ SWEP.Firemodes = {
        Mult_AccuracyMOA = 0.5,
        Mult_HipDispersion = (1/3),
        Mult_MoveDispersion = (1/3),
-       Mult_ShootSpeedMult = 1.2,
+       Mult_ShootSpeedMult = 3,
        Override_TriggerDelay = false,
    },
     {
@@ -355,7 +355,7 @@ SWEP.Animations = {
 
     ["trigger"] = {
         Source = "trigger",
-        Time = 0.12,
+        Time = 0.1,
         SoundTable = {
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-02.ogg", common .. "revolver_trigger-03.ogg" }, t = 0 }
         },
