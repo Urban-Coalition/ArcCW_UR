@@ -35,3 +35,5 @@ att.Mult_CycleTime = 0.9
 
 att.ActivateElements = {"ud_autoshotgun_barrel_sport"}
 att.GivesFlags = {"nomuzzle"}
+
+att.Ignore = true
