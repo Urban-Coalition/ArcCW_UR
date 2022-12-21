@@ -54,7 +54,7 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
-SWEP.ViewModel = "models/weapons/arccw/c_ur_spas12.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ur_spas12_1.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_spas12.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
@@ -165,8 +165,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.75, -4, 1.2),
-     Ang = Angle(.345, .03, 1.5),
+     Pos = Vector(-3.75, -4, 1.05),
+     Ang = Angle(.2, .03, 1.5),
      Magnification = 1.05,
      SwitchToSound = "",
 }
@@ -177,7 +177,7 @@ SWEP.SprintAng = Angle(3.5, 7, -20)
 SWEP.HolsterPos = Vector(2.5, -1, -3)
 SWEP.HolsterAng = Angle(-3.5, 20, -20)
 
-SWEP.ActivePos = Vector(0, -1, 0)
+SWEP.ActivePos = Vector(-0.3, -3, 0.1)
 SWEP.ActiveAng = Angle(1, 1, -1)
 
 SWEP.CrouchPos = Vector(-4, -2, 0)
@@ -712,7 +712,7 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "spas_parent",
         Offset = {
-            vpos = Vector(-0.02, 25.75, -0.7),
+            vpos = Vector(-0.02, 29.9, -0.6),
             vang = Angle(90, -90, -90),
         },
         ExcludeFlags = {"nomuzzle"}
