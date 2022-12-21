@@ -711,7 +711,7 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "spas_parent",
         Offset = {
-            vpos = Vector(-0.02, 29.9, -0.6),
+            vpos = Vector(-0.02, 26.9, -0.6),
             vang = Angle(90, -90, -90),
         },
         ExcludeFlags = {"nomuzzle"}
