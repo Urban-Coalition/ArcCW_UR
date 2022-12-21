@@ -49,10 +49,10 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire_dist_10.ogg" end
-end
+-- att.Hook_GetDistantShootSound = function(wep, distancesound)
+--     if distancesound == wep.DistantShootSound then
+--         return "weapons/arccw_ud/glock/fire_dist_10.ogg" end
+-- end
 
 att.GivesFlags = {"ur_mp5_cal_10mm"}
 --att.ExcludeFlags = {"barrel_sd"}
