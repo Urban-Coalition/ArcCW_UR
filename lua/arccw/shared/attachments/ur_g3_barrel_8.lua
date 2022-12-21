@@ -7,7 +7,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/ur_g3/barrel_51.png","smooth mips")
-att.Description = "Ridiculously short aftermarket barrel. Colloqually known as a \"flashbang dispenser,\" the tiny barrel drastically increases fire rate - for better and for worse.\n\nThe reduced dimensions are compatible with some MP5 furniture."
+att.Description = "Ridiculously short aftermarket barrel. Colloquially known as a \"flashbang dispenser,\" the tiny barrel drastically increases fire rate - for better and for worse.\n\nThe reduced dimensions are compatible with some MP5 furniture."
 att.Slot = "ur_g3_barrel"
 att.Desc_Pros = {
     "ur.g3.8"
