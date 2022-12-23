@@ -381,20 +381,23 @@ SWEP.Animations = {
 
     ["1_to_2"] = {
         Source = "cocking",
+        Time = 0.8,
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.1 }
         }
     },
     ["2_to_1"] = {
         Source = "decocking",
+        Time = 0.8,
         SoundTable = {
-            { s = common .. "revolver_trigger-02.ogg", t = 0.2 }
+            { s = common .. "revolver_trigger-02.ogg", t = 0.1 }
         }
     },
     ["2_to_3"] = {
         Source = "decocking",
+        Time = 0.8,
         SoundTable = {
-            { s = common .. "revolver_trigger-02.ogg", t = 0.2 }
+            { s = common .. "revolver_trigger-02.ogg", t = 0.1 }
         }
     },
 

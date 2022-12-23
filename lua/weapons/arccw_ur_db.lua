@@ -391,6 +391,11 @@ SWEP.Attachments = {
         DefaultAttName = "26\" Factory Barrel",
         DefaultAttIcon = Material("entities/att/ur_dbs/blong.png", "smooth mips"),
         Slot = "ur_db_barrel",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(-0.4, -5, -6),
+            vang = Angle(0, 90, 0),
+        },
     },
     {
         PrintName = "Muzzle",
