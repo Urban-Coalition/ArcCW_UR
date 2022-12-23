@@ -17,3 +17,5 @@ att.Add_BarrelLength = -1
 
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
+
+att.Ignore = true
