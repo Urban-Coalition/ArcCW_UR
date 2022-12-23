@@ -386,6 +386,19 @@ SWEP.AttachmentElements = {
 SWEP.DefaultBodygroups = "00000000"
 
 SWEP.Attachments = {
+    -- {
+    --     PrintName = "Optic",
+    --     DefaultAttName = "Iron Sights",
+    --     Slot = {"optic_lp","optic"},
+    --     Bone = "barrels",
+    --     Offset = {
+    --         vpos = Vector(0.5, -1.75, 1.5),
+    --         vang = Angle(0, 90, 0),
+    --     },
+    --     VMScale = Vector(1,1,1),
+    --     CorrectivePos = Vector(0, 0, -0.0),
+    --     CorrectiveAng = Angle(0, 180, 0),
+    -- },
     {
         PrintName = "Barrel",
         DefaultAttName = "26\" Factory Barrel",
