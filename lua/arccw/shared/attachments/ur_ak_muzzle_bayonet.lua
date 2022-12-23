@@ -1,5 +1,5 @@
 att.PrintName = "Type 2 Bayonet"
-att.Icon = Material("entities/att/ur_ak/muzzle_bayonet.png", "mips smooth")
+att.Icon = Material("entities/att/ur_ak/acwatt_ur_ak_muzzle_bayonet.png", "mips smooth")
 att.Description = "External bayonet unique to early AK-pattern rifles. Wide and sharp, it's a bit bulky but allows for a devastating melee attack."
 att.AutoStats = true
 att.Slot = {"ur_ak_muzzle"}
