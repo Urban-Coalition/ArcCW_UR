@@ -541,7 +541,7 @@ SWEP.Attachments = {
         Slot = {"ur_g3_optic", "optic"},
         Bone = "body",
         Offset = {
-            vpos = Vector(0, -1.7, -0.55),
+            vpos = Vector(0, -1.6, -0.55),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"mount_optic"},
