@@ -19,5 +19,5 @@ att.Mult_PhysBulletMuzzleVelocity = 1.15
 
 att.Add_BarrelLength = 4
 
-att.Mult_DrawTime = 1.25
-att.Mult_HolsterTime = 1.25
+att.Mult_DrawTime = 1.15
+att.Mult_HolsterTime = 1.15
