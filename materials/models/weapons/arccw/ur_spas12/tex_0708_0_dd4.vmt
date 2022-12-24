@@ -8,7 +8,7 @@ VertexlitGeneric
 	"$phongboost"               "0.3"
 	"$phongfresnelranges"       "[1 4 8]"
 	
-	"$color2"					"[0.8 0.8 0.8]"
+	"$color2"					"[0.4 0.4 0.4]"
 	"$blendTintByBaseAlpha"		"1" 
 
 	"$rimlight"					"1"

@@ -54,7 +54,7 @@ end
 
 -- Viewmodel / Worldmodel / FOV --
 
-SWEP.ViewModel = "models/weapons/arccw/c_ur_spas12_1.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_ur_spas12.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ur_spas12.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
@@ -165,8 +165,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.78, -4, 1.18),
-     Ang = Angle(.2, .03, 1.5),
+     Pos = Vector(-3.765, -4, 1.3),
+     Ang = Angle(.2, 0, 1),
      Magnification = 1.05,
      SwitchToSound = "",
 }
@@ -632,29 +632,22 @@ SWEP.AttachmentElements = {
         Override_Firemodes_Priority = 15,
     },
     ["ur_spas12_barrel_short"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+        VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {[3] = {
             vpos = Vector(-0.02, 22.25, -0.7),
         }}
     },
-    ["ur_spas12_barrel_sport"] = {
-        VMBodygroups = {
-            {ind = 3, bg = 2},
-            {ind = 5, bg = 1},
-            {ind = 6, bg = 1},
-            },
-    },
 
     ["ur_spas12_stock_full"] = {
         VMBodygroups = {
-            {ind = 7, bg = 2},
+            {ind = 3, bg = 1},
         }
     },
     ["ur_spas12_stock_in"] = {
-        VMBodygroups = {{ind = 7, bg = 3}}
+        VMBodygroups = {{ind = 3, bg = 2}}
     },
     ["ur_spas12_stock_none"] = {
-        VMBodygroups = {{ind = 7, bg = 5}}
+        VMBodygroups = {{ind = 3, bg = 3}}
     },
 
     ["ur_spas12_tube_reduced"] = {
@@ -662,10 +655,10 @@ SWEP.AttachmentElements = {
     },
 
     ["rail_classic"] = {
-        VMBodygroups = {{ind = 8, bg = 2}}
+        VMBodygroups = {{ind = 4, bg = 2}}
     },
     ["rail_modern"] = {
-        VMBodygroups = {{ind = 8, bg = 1}},
+        VMBodygroups = {{ind = 4, bg = 1}},
         AttPosMods = {[1] = {
             SlideAmount = {
                 vmin = Vector(0, 0.5, 0.65),
