@@ -329,22 +329,34 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 4, bg = 9},
+            //{ind = 8, bg = 1},
         },
         AttPosMods = {
             [6] = {
-                vpos = Vector(0, 0.9, 10),
+                vpos = Vector(0, 1.3, 10),
                 vang = Angle(90, 0, -90),
             },
-            [5] = {
-                vpos = Vector(-0.2, 1.6, 10),
-                vang = Angle(90, 0, -90),
-            }
+            [7] = {
+				vpos = Vector(-1.15, 0.3, 8),
+				vang = Angle(90, 0, 180),
+			},
         },
     },
     ["ur_mp5_barrel_eod"] = {
         VMBodygroups = {
             {ind = 4, bg = 10},
+            //{ind = 8, bg = 2},
         },
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 1.5, 10),
+                vang = Angle(90, 0, -90),
+            },
+            [7] = {
+				vpos = Vector(-0.95, 0.3, 8),
+				vang = Angle(90, 0, 180),
+			},
+		}
     },
     ["ur_mp5_barrel_kurz"] = {
         VMBodygroups = {
@@ -469,6 +481,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
     local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
+	
+	if atts[6].Installed or atts[7].Installed then
+		if barr == "sd" then
+			vm:SetBodygroup(8, 1)
+		elseif barr == "eod" then
+			vm:SetBodygroup(8, 2)
+		elseif hg == "default" or hg == "classic" then
+			vm:SetBodygroup(4, 4)
+			vm:SetBodygroup(8, 0)
+		else
+			vm:SetBodygroup(8, 0)
+		end
+	else
+		vm:SetBodygroup(8, 0)
+	end
 
     if hg == "mlok" then
         if barr == "kurz" then
@@ -1101,7 +1128,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         --VMScale = Vector(.8, .8, .8),
-        InstalledEles = {"ur_mp5_rail_fg"},
+        --InstalledEles = {"ur_mp5_rail_fg"},
         GivesFlags = {"mp5_rail"},
         ExcludeFlags = {"mp5_badhg","mp5_kurz"},
         MergeSlots = {15},
