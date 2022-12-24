@@ -13,4 +13,6 @@
 	"$phong"							"1"
 	"$phongboost"						"2"
 	"$phongfresnelranges"				"[ 1 3 4]"
+
+	$color2								"[2 2 2]"
 }

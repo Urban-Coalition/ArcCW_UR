@@ -11,8 +11,8 @@
 	"$envmapFresnel"					"1"
 
 	"$phong"							"1"
-	"$phongboost"						"200"
-	"$phongfresnelranges"				"[0 0.4 2]"
+	"$phongboost"						"120"
+	"$phongfresnelranges"				"[0 0.09 2]"
 	
-	$color2 "[0.85 0.85 0.85]"
+	$color2 "[1.6 1.6 1.6]"
 }
