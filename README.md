@@ -1,6 +1,7 @@
 # ArcCW_UR
 Second major weapon pack for Garry's Mod  
-https://trello.com/b/ukOphim9/urbna
+https://discord.gg/gdJBZh9NPR  
+https://trello.com/b/ukOphim9/urbna (do we still use this?)
 - AI AW
 - AKM
 - IMI Desert Eagle
