@@ -13,6 +13,7 @@ att.Mult_SightTime = 1.3
 att.Mult_Sway = 1.4
 att.Mult_HipDispersion = 1.15
 att.Mult_PhysBulletMuzzleVelocity = 1.2
+att.Mult_SightedSpeedMult = .8
 
 att.Add_BarrelLength = 5
 
