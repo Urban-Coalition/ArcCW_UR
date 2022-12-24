@@ -1058,14 +1058,18 @@ SWEP.Animations = {
     },
     ["unjam"] = {
         Source = "jamfix",
-        ShellEjectAt = 0.65,
+        ShellEjectAt = 0.5,
         SoundTable = {
             {s = common .. "cloth_4.ogg",  t = 0.1},
-            {s = path .. "chback.ogg",    t = 0.6},
-            {s = path .. "chamber.ogg",    t = 0.7},
-            {s = common .. "grab.ogg", t = 1.1},
-            {s = common .. "shoulder.ogg", t = 1.15},
-        }
+            {s = path .. "chback.ogg",    t = 0.3},
+            {s = path .. "chamber.ogg",    t = 0.6},
+            {s = common .. "grab.ogg", t = 0.9},
+            {s = common .. "shoulder.ogg", t = 0.95},
+        },
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.6,
     },
 
     ["enter_inspect"] = {
