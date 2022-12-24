@@ -1,6 +1,6 @@
 att.PrintName = "7\" Master Barrel"
 att.AbbrevName = "7\" Master Barrel"
-att.Icon = Material("entities/att/acwatt_ur_329_barrel_m29.png","smooth mips")
+att.Icon = Material("entities/att/acwatt_ur_329_barrel_master.png","smooth mips")
 att.Description = "Huge, imposing barrel with extra frontal weight and precision rifling. Hard to keep steady, but hones accuracy even further."
 att.Slot = "ur_329_barrel"
 att.AutoStats = true
