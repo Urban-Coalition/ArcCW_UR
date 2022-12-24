@@ -44,8 +44,8 @@ att.Override_Trivia_Class = "Shot Pistol"
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
 
 local slotinfo = {
-    [5] = {"8-Round Mag", "8-Round Mag", Material("entities/att/acwatt_ur_deagle_mag_7.png", "mips smooth")},
-    [8] = {"\"BUCK\" #000 Buckshot", "\"BUCK\" #000 Buckshot", Material("entities/att/arccw_uc_ammo_shotgun_generic.png", "mips smooth")},
+    [6] = {"8-Round Mag", "8-Round Mag", Material("entities/att/acwatt_ur_deagle_mag_7.png", "mips smooth")},
+    [9] = {"\"BUCK\" #000 Buckshot", "\"BUCK\" #000 Buckshot", Material("entities/att/arccw_uc_ammo_shotgun_generic.png", "mips smooth")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

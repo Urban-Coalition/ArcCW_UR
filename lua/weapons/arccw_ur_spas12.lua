@@ -651,7 +651,7 @@ SWEP.AttachmentElements = {
     },
 
     ["ur_spas12_tube_reduced"] = {
-        VMBodygroups = {{ind = 4, bg = 1}}
+        VMBodygroups = {{ind = 2, bg = 1}}
     },
 
     ["rail_classic"] = {

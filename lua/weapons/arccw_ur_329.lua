@@ -275,12 +275,12 @@ SWEP.AttachmentElements = {
     ["ur_329_barrel_master"] = {
         VMBodygroups = { { ind = 1, bg = 2 } },
         NameChange = "Thunderbolt .44 Master",
-        TrueNameChange = "Model 29 Master"
+        TrueNameChange = "Model 29"
     },
     ["ur_329_barrel_pocket"] = {
         VMBodygroups = { { ind = 1, bg = 3 } },
-        NameChange = "Enforcement .44 Pocket",
-        TrueNameChange = "Model 29 Pocket"
+        NameChange = "Companion .44",
+        TrueNameChange = "Model 629"
     }
 }
 
