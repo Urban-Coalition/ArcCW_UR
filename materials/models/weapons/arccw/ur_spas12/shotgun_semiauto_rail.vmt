@@ -3,7 +3,8 @@ VertexlitGeneric
 	"$basetexture" 	"models/weapons/arccw/ur_spas12/shotgun_semiauto_rail_Base_Color"
 	
 	"$phong" 1
-	"$phongexponenttexture"     "models/weapons/arccw/ur_spas12/shotgun_semiauto_receiver_Roughness"
+	//"$phongexponenttexture"     "models/weapons/arccw/ur_spas12/shotgun_semiauto_receiver_Roughness"
+	$phongexponent 10
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
 	"$phongboost"               "0.3"
 	"$phongfresnelranges"       "[1 4 8]"
