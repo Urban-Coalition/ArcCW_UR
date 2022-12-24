@@ -31,7 +31,6 @@ SWEP.TrueName = "SPAS-12"
 
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = [[Flexible combat shotgun with the ability to toggle between manual and semi-automatic action. This "dual-mode operation" allows the weapon to cycle low pressure, less-lethal rounds that lack the energy to extract themselves.
-
 The weapon's attempts to reach the American civilian market may have been slowed by legal challenges, but it remains prominent in popular culture for its intimidating and tactical appearance.
 
 Highly versatile, but encumbering to carry and difficult to reload. Switch to pump-action mode to tighten spread and conserve ammo.]]
