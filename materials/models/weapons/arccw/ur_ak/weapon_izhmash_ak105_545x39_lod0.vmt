@@ -2,7 +2,7 @@
 "VertexLitGeneric"
 {
 	"$basetexture" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_lod0_diff"
-	"$bumpmap" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_lod0_nrm""
+	"$bumpmap" "models/weapons/arccw/ur_ak/weapon_izhmash_ak105_545x39_lod0_nrm"
 	"$phong" "1"
 	"$phongboost" "1"
 	"$phongfresnelranges" "[0.32 0.72 0.99]"
