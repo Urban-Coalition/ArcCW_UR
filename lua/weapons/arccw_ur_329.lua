@@ -162,9 +162,6 @@ SWEP.ExtraSightDist = 10
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(0.3, 1, 0)
-SWEP.HolsterAng = Angle(-3, 9, -12)
-
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
@@ -185,6 +182,12 @@ SWEP.CustomizeAng = Angle(15, 15, 0)
 
 SWEP.CrouchPos = Vector(-2.2, 1, 0.6)
 SWEP.CrouchAng = Angle(0, 0, -14)
+
+SWEP.HolsterPos = Vector(-1, 2, 1)
+SWEP.HolsterAng = Angle(-15.5, 2, -4)
+
+SWEP.SprintPos = Vector(0.3, 1, 0)
+SWEP.SprintAng = Angle(-3, 9, -12)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
