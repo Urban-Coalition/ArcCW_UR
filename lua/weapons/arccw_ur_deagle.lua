@@ -782,10 +782,10 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.65, -4.1, 7.5),
+            vpos = Vector(0.55, -3.4, 4.2),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(.75,.75,.75),
+        VMScale = Vector(.65,.65,.65),
     },
     {
         PrintName = "Finish",
