@@ -11,6 +11,7 @@ att.AutoStats = true
 att.Slot = "ur_329_caliber"
 
 att.Mult_RangeMin = 0.5
+att.Mult_Range = 0.6
 att.Mult_Recoil = 0.75
 att.Override_PhysBulletMuzzleVelocity = 265
 
