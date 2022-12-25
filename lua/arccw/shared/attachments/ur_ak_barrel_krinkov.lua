@@ -29,5 +29,5 @@ att.GivesFlags = {"ak_barrelchange", "barrel_carbine", "ak_barrelkrinkov"}
 
 att.LHIK = true
 
-att.ModelOffset = Vector(-23, -3.2, 3.5)
+att.ModelOffset = Vector(-23, -3.2, 3.2)
 att.Model = "models/weapons/arccw/atts/lhik_kurz.mdl"
