@@ -27,7 +27,7 @@ att.Mult_Range = .5
 att.ActivateElements = {"barrel_krinkov"}
 att.GivesFlags = {"ak_barrelchange", "barrel_carbine", "ak_barrelkrinkov"}
 
-att.LHIK = true
+att.LHIK = false
 
 att.ModelOffset = Vector(-23, -3.2, 3.2)
 att.Model = "models/weapons/arccw/atts/lhik_kurz.mdl"
