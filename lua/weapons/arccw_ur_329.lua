@@ -77,7 +77,7 @@ SWEP.Malfunction = false
 SWEP.MalfunctionJam = false
 --SWEP.MalfunctionMean = 21
 -- SWEP.MalfunctionPostFire = true
--- SWEP.MalfunctionTakeRound = false
+SWEP.MalfunctionTakeRound = false
 
 -- Mag size --
 
@@ -375,6 +375,14 @@ SWEP.Animations = {
     },
 
     ["cycle"] = {
+        Source = "cocking",
+        MinProgress = 0.5,
+        SoundTable = {
+            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.2 }
+        }
+    },
+
+    ["fix"] = {
         Source = "cocking",
         MinProgress = 0.5,
         SoundTable = {
