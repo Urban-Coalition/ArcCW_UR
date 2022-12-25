@@ -307,6 +307,15 @@ SWEP.Animations = {
         Source = "idle_cocked",
         Time = 3,
     },
+    ["ready"] = {
+        Source = "ready",
+        Time = 86 / 60,
+        SoundTable = {
+            {s = path2 .. "draw.ogg", t = 0},
+            { s = path1 .. "cylinder_in.ogg", t = 0.2 },
+            {s = common .. "raise.ogg", t = 0.55},
+        },
+    },
     ["draw"] = {
         Source = "draw",
         Time = 0.7,
