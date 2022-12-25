@@ -42,17 +42,39 @@ att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
 att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
+local path = "arccw_uc/common/"
+
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/mini14/fire_22_supp.ogg" -- Placeholder
+        return path .. "fire-22-supp.gg" -- Placeholder
     else
-        return "weapons/arccw_ud/mini14/fire_22.ogg"
+        return {path .. "fire-22-01.ogg",path .. "fire-22-02.ogg",path .. "fire-22-03.ogg",path .. "fire-22-04.ogg",path .. "fire-22-05.ogg",path .. "fire-22-06.ogg"}
     end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/mini14/fire_22_dist.ogg" end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+        return
+    else
+        return {path .. "fire-22-dist-01.ogg",path .. "fire-22-dist-02.ogg",path .. "fire-22-dist-03.ogg",path .. "fire-22-dist-04.ogg",path .. "fire-22-dist-05.ogg",path .. "fire-22-dist-06.ogg"}
+    end
+end
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+        return
+    else
+        return {
+            path .. "fire-dist-int-pistol-light-01.ogg",
+            path .. "fire-dist-int-pistol-light-02.ogg",
+            path .. "fire-dist-int-pistol-light-03.ogg",
+            path .. "fire-dist-int-pistol-light-04.ogg",
+            path .. "fire-dist-int-pistol-light-05.ogg",
+            path .. "fire-dist-int-pistol-light-06.ogg"
+        }
+    end
 end
 
 att.GivesFlags = {"ur_mp5_cal_22lr"}
