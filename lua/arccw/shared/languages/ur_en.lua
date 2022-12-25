@@ -29,6 +29,7 @@ L["ur.329.dact"] = "Double-action"
 L["ur.329.dact.abbrev"] = "DACT"
 
 L["ur.329.snakeshot.1"] = "Fires 4 pellets instead of one round"
-L["ur.329.snakeshot.2"] = "65MOA Imprecision"
+L["ur.329.snakeshot.2"] = "Disables Ammo Type attachments"
+L["ur.329.snakeshot.3"] = "65MOA Base imprecision"
 
 L["ur.g3.8"] = "Accepts MP5 handguards"
