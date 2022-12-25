@@ -3,7 +3,6 @@ att.AbbrevName = "8\" Compact Barrel"
 att.Icon = Material("entities/att/ur_ak/barrel/aksu.png", "mips smooth")
 att.Description = "Special carbine length handguard and barrel. Its reduced length leads to less unwieldiness, and the shortened gas system increases cyclic rate respectably.\nThese traits combined, however, result in a difficult weapon to control."
 att.Slot = {"ur_ak_barrel"}
-att.Desc_Cons = {"uc.noubs"} -- remove when we get a lower rail
 att.AutoStats = true
 
 if !GetConVar("arccw_truenames"):GetBool() then
@@ -27,3 +26,8 @@ att.Mult_Range = .5
 
 att.ActivateElements = {"barrel_krinkov"}
 att.GivesFlags = {"ak_barrelchange", "barrel_carbine", "ak_barrelkrinkov"}
+
+att.LHIK = true
+
+att.ModelOffset = Vector(-23, -3.2, 3.5)
+att.Model = "models/weapons/arccw/atts/lhik_kurz.mdl"

@@ -751,6 +751,11 @@ SWEP.Attachments = {
         DefaultAttName = "16\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/ur_ak/barrel/std.png", "mips smooth"),
         Slot = "ur_ak_barrel",
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(0,12, 1.9),
+            vang = Angle(90, -90, -90),
+        },
     },
     {
         PrintName = "Handguard",
