@@ -73,11 +73,8 @@ SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
 -- Jamming --
 
-SWEP.Malfunction = false
-SWEP.MalfunctionJam = false
---SWEP.MalfunctionMean = 21
--- SWEP.MalfunctionPostFire = true
 SWEP.MalfunctionTakeRound = false
+SWEP.MalfunctionMean = math.huge -- Theoretically it will never malfunction
 
 -- Mag size --
 
