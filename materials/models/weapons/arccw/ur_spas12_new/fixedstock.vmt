@@ -11,7 +11,7 @@
 	"$envmapFresnel"					"1"
 
 	"$phong"							"1"
-	"$phongboost"						"2"
+	"$phongboost"						"0.1"
 	//"$phongexponent"					"110"
 	"$phongfresnelranges"				"[ 1 3 4]"
 
