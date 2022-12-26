@@ -18,7 +18,7 @@ local desc_74u = "This PDW variant sacrifices range and control to fit the power
 local desc_9mm = "Well-rounded submachine gun that shares common parts with AK rifles. For its widespread use by a variety of security divisions, it can be described as a Russian counterpart to the MP5.\n\nThe moniker \"Vityaz\" translates to \"knight.\""
 local desc_12g = "Magazine-fed semi automatic shotgun based on the Kalashnikov pattern. It is a popular civilian weapon due to the comparative simplicity of Russia's smoothbore gun licenses, but it has also been used by security firms around the world.\n\nIts low accuracy is compensated for by a much faster reload time than tube-fed designs."
 local desc_556 = "This international variant has a lower damage output than the Russian cartridges, but boasts substantially lower recoil."
-local desc_366 = "AK-pattern shotgun chambered in .366 TKM, a sporting cartridge that uses reshaped M43 casings. It is considered a shotgun becuase of its smoothbore barrel, a change made to circumvent Russian rifle laws. Despite the lack of rifling, it achieves similar ballistics to a proper AK-47."
+local desc_366 = "AK-pattern shotgun chambered in .366 TKM, a sporting cartridge that uses reshaped M43 casings. It is considered a shotgun because of its smoothbore barrel, a change made to circumvent Russian rifle laws. Despite the lack of rifling, it achieves similar ballistics to a proper AK-47."
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = descStart .. desc_762
