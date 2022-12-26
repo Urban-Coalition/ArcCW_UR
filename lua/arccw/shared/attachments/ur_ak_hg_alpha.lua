@@ -18,3 +18,9 @@ att.Mult_Recoil = 1.075
 
 att.GivesFlags = {"ak_railedguard","nodong"}
 att.ActivateElements = {"barrel_alpha"}
+
+att.LHIK = true
+
+att.ModelOffset = Vector(-22, -3.4, 3.3)
+att.OffsetAng = Angle(5, 0, 0)
+att.Model = "models/weapons/arccw/ak_lhik_u.mdl"
