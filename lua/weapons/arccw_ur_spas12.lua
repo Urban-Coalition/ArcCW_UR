@@ -479,7 +479,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {common .. "shotgun-insert-alt-01.ogg", common .. "shotgun-insert-alt-02.ogg", common .. "shotgun-insert-alt-03.ogg"},  t = 0},
+            {s = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg"},  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
@@ -493,7 +493,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {common .. "shotgun-insert-alt-01.ogg", common .. "shotgun-insert-alt-02.ogg", common .. "shotgun-insert-alt-03.ogg"},  t = 0},
+            {s = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg"},  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
