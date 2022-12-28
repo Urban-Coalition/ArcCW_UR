@@ -370,7 +370,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_4.ogg", t = 0},
             {s = path .. "open.ogg", t = 0.2},
-            {s = common .. "magpouch_pull_small.ogg", t = 1.0},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.5},
             {s = shellfall, t = 0.4},
             {s = common .. "cloth_2.ogg", t = 0.6},
             {s = path .. "struggle.ogg", t = 1.0, v = 0.5},
@@ -392,7 +392,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_4.ogg", t = 0},
             {s = path .. "open.ogg", t = 0.2},
-            {s = common .. "magpouch_pull_small.ogg", t = 1.0},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.5},
             {s = shellfall, t = 0.4},
             {s = shellfall, t = 0.45},
             {s = common .. "cloth_2.ogg", t = 0.6},
