@@ -478,35 +478,36 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local atts = wep.Attachments
     local vm = data.vm
-
-    local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
-    local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
-	
-	if atts[6].Installed or atts[7].Installed then
-		if barr == "sd" then
-			vm:SetBodygroup(8, 1)
-		elseif barr == "eod" then
-			vm:SetBodygroup(8, 2)
-		elseif hg == "default" or hg == "classic" then
-			vm:SetBodygroup(4, 4)
-			vm:SetBodygroup(8, 0)
-		else
-			vm:SetBodygroup(8, 0)
-		end
-	else
-		vm:SetBodygroup(8, 0)
-	end
-
-    if hg == "mlok" then
-        if barr == "kurz" then
-            vm:SetBodygroup(4,8)
+    if IsValid(vm) then
+        local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
+        local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
+        
+        if atts[6].Installed or atts[7].Installed then
+            if barr == "sd" then
+                vm:SetBodygroup(8, 1)
+            elseif barr == "eod" then
+                vm:SetBodygroup(8, 2)
+            elseif hg == "default" or hg == "classic" then
+                vm:SetBodygroup(4, 4)
+                vm:SetBodygroup(8, 0)
+            else
+                vm:SetBodygroup(8, 0)
+            end
         else
-            vm:SetBodygroup(4,5)
+            vm:SetBodygroup(8, 0)
         end
-    end
 
-    if barr == "sword" then
-        vm:SetBodygroup(0,(atts[1].Installed and 3) or 1)
+        if hg == "mlok" then
+            if barr == "kurz" then
+                vm:SetBodygroup(4,8)
+            else
+                vm:SetBodygroup(4,5)
+            end
+        end
+
+        if barr == "sword" then
+            vm:SetBodygroup(0,(atts[1].Installed and 3) or 1)
+        end
     end
 end
 
