@@ -123,7 +123,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.625
-SWEP.SightTime = 0.6
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.625
 
 local path = ")^weapons/arccw_ur/ak/"
