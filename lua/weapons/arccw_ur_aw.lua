@@ -60,7 +60,7 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 2
+SWEP.Recoil = 1.75
 SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.6
@@ -106,7 +106,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = .25
 SWEP.HipDispersion = 1250
 SWEP.MoveDispersion = 500
-SWEP.JumpDispersion = 0 -- tactical unrealism    set to 700 later
+SWEP.JumpDispersion = 700 -- tactical unrealism    set to 700 later
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "awp"
