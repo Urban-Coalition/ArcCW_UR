@@ -59,8 +59,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4, 3, -5),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-3, 3, -5),
+    ang        =    Angle(-12, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
 }

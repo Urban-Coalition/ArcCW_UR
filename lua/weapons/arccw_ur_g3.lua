@@ -528,8 +528,8 @@ SWEP.ExtraSightDist = 2
 SWEP.GuaranteeLaser = false
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-5, 3, -5.5),
-    ang = Angle(-10, 0, 180)
+    pos = Vector(-5, 3, -5),
+    ang = Angle(-12, 0, 180)
 }
 
 SWEP.MirrorVMWM = true

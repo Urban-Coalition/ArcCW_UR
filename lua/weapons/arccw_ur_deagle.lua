@@ -174,8 +174,8 @@ SWEP.CrouchAng = Angle(0, 0, -14)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-10.5, 2.5, -5),
-    ang        =    Angle(-6, -6, 180),
+    pos        =    Vector(-10.5, 4, -4),
+    ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
