@@ -256,6 +256,7 @@ end
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local rutle = {common .. "movement-shotgun-01.ogg",common .. "movement-shotgun-02.ogg",common .. "movement-shotgun-03.ogg",common .. "movement-shotgun-04.ogg"}
+local shellin = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg", path .. "shell-insert-05.ogg", path .. "shell-insert-06.ogg", path .. "shell-insert-07.ogg", path .. "shell-insert-08.ogg", path .. "shell-insert-09.ogg", path .. "shell-insert-10.ogg", path .. "shell-insert-11.ogg", path .. "shell-insert-12.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -479,7 +480,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg"},  t = 0},
+            {s = shellin,  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
@@ -493,7 +494,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg"},  t = 0},
+            {s = shellin,  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
