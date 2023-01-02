@@ -14,23 +14,22 @@ att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
 att.Mult_MoveDispersion = .85
+att.Mult_Sway = 1.5
+att.Mult_SightTime = 1.2
+att.Mult_RecoilSide = 1.15
+att.Mult_HipDispersion = 0.85
 
 att.ToggleStats = {
     {
         PrintName = "Extended",
         ActivateElements = {"stock_future"},
         AutoStats = true,
-        Mult_HipDispersion = .85,
-        Mult_SightTime = 1.25,
     },
     {
         PrintName = "Collapsed",
         ActivateElements = {"stock_future_folded"},
         AutoStats = true,
-        Mult_SightTime = .9,
         Mult_ShootSpeedMult = 1.15,
-        Add_BarrelLength = -4,
-        Mult_RecoilSide = 1.5,
-        Mult_Sway = 1.5,
+        Add_BarrelLength = -4
     }
 }
