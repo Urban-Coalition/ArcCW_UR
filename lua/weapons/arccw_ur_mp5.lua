@@ -153,7 +153,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.925
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.3
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --
@@ -198,8 +198,8 @@ SWEP.BarrelOffsetHip = Vector(4, 0, -4)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 3.75, -6.5),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(-8, 4, -5),
+    ang        =    Angle(-12, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
 }
@@ -478,35 +478,36 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local atts = wep.Attachments
     local vm = data.vm
-
-    local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
-    local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
-	
-	if atts[6].Installed or atts[7].Installed then
-		if barr == "sd" then
-			vm:SetBodygroup(8, 1)
-		elseif barr == "eod" then
-			vm:SetBodygroup(8, 2)
-		elseif hg == "default" or hg == "classic" then
-			vm:SetBodygroup(4, 4)
-			vm:SetBodygroup(8, 0)
-		else
-			vm:SetBodygroup(8, 0)
-		end
-	else
-		vm:SetBodygroup(8, 0)
-	end
-
-    if hg == "mlok" then
-        if barr == "kurz" then
-            vm:SetBodygroup(4,8)
+    if IsValid(vm) then
+        local barr = string.Replace(atts[2].Installed or "default","ur_mp5_barrel_","")
+        local hg = string.Replace(atts[5].Installed or "default","ur_mp5_ub_","")
+        
+        if atts[6].Installed or atts[7].Installed then
+            if barr == "sd" then
+                vm:SetBodygroup(8, 1)
+            elseif barr == "eod" then
+                vm:SetBodygroup(8, 2)
+            elseif hg == "default" or hg == "classic" then
+                vm:SetBodygroup(4, 4)
+                vm:SetBodygroup(8, 0)
+            else
+                vm:SetBodygroup(8, 0)
+            end
         else
-            vm:SetBodygroup(4,5)
+            vm:SetBodygroup(8, 0)
         end
-    end
 
-    if barr == "sword" then
-        vm:SetBodygroup(0,(atts[1].Installed and 3) or 1)
+        if hg == "mlok" then
+            if barr == "kurz" then
+                vm:SetBodygroup(4,8)
+            else
+                vm:SetBodygroup(4,5)
+            end
+        end
+
+        if barr == "sword" then
+            vm:SetBodygroup(0,(atts[1].Installed and 3) or 1)
+        end
     end
 end
 

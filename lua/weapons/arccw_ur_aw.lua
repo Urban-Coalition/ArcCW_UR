@@ -60,7 +60,7 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 2
+SWEP.Recoil = 1.75
 SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.6
@@ -106,7 +106,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = .25
 SWEP.HipDispersion = 1250
 SWEP.MoveDispersion = 500
-SWEP.JumpDispersion = 0 -- tactical unrealism    set to 700 later
+SWEP.JumpDispersion = 700 -- tactical unrealism    set to 700 later
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "awp"
@@ -123,7 +123,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.625
-SWEP.SightTime = 0.6
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.625
 
 local path = ")^weapons/arccw_ur/ak/"
@@ -322,8 +322,8 @@ SWEP.ExtraSightDist = 2
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-7, 4, -4.5),
-    ang = Angle(-10, 0, 180)
+    pos = Vector(-7, 5, -4.8),
+    ang = Angle(-12, 0, 180)
 }
 
 SWEP.MirrorVMWM = true

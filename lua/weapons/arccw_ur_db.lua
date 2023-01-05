@@ -59,8 +59,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4, 3, -5),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-3, 3, -5),
+    ang        =    Angle(-12, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
 }
@@ -158,7 +158,7 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 0.91
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.475
+SWEP.SightTime = 0.25
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --
@@ -370,7 +370,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_4.ogg", t = 0},
             {s = path .. "open.ogg", t = 0.2},
-            {s = common .. "magpouch_pull_small.ogg", t = 1.0},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.5},
             {s = shellfall, t = 0.4},
             {s = common .. "cloth_2.ogg", t = 0.6},
             {s = path .. "struggle.ogg", t = 1.0, v = 0.5},
@@ -392,7 +392,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_4.ogg", t = 0},
             {s = path .. "open.ogg", t = 0.2},
-            {s = common .. "magpouch_pull_small.ogg", t = 1.0},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.5},
             {s = shellfall, t = 0.4},
             {s = shellfall, t = 0.45},
             {s = common .. "cloth_2.ogg", t = 0.6},

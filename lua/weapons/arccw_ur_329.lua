@@ -149,7 +149,7 @@ SWEP.MagID = "deagle"
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.25
 SWEP.ShootSpeedMult = 0.8
 
 -- Length --
@@ -188,8 +188,8 @@ SWEP.SprintAng = Angle(-3, 9, -12)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7.5, 2.5, -4.5),
-    ang        =    Angle(-6, -6, 180),
+    pos        =    Vector(-7.5, 4, -4.5),
+    ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 

@@ -138,7 +138,7 @@ SWEP.MagID = "m1911"
 
 SWEP.SpeedMult = 0.97
 SWEP.SightedSpeedMult = 0.875
-SWEP.SightTime = 0.32
+SWEP.SightTime = 0.25
 SWEP.ShootSpeedMult = 1
 
 -- Length --
@@ -176,8 +176,8 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9, 2.5, -4.25),
-    ang        =    Angle(-6, -6, 180),
+    pos        =    Vector(-9, 4, -4.25),
+    ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
@@ -413,7 +413,7 @@ SWEP.Animations = {
         ProcDraw = true,
         SoundTable = {
             { s = rottle, t = 0 / 60, c = ca },
-            {s = path .. "draw.ogg", t = 0},
+            {s = path .. "draw.ogg", t = 0.05},
             { s = path .. "mech.ogg",t = 28 / 60}, -- Temporary
             { s = path .. "slidedrop.ogg",t = 35 / 60},
         },
@@ -425,7 +425,7 @@ SWEP.Animations = {
         --ProcDraw = true,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path .. "draw.ogg", t = 0.05}, -- Not Temporary
             {s = rutle, t = 0.1},
             --{s = common .. "raise.ogg", t = 0.05},
         },
@@ -437,7 +437,7 @@ SWEP.Animations = {
         --ProcDraw = true,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path .. "draw.ogg", t = 0.05}, -- Not Temporary
             {s = rutle, t = 0.1},
             --{s = common .. "raise.ogg", t = 0.05},
         },
@@ -448,7 +448,7 @@ SWEP.Animations = {
         MinProgress = .4,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = path .. "draw.ogg", t = 0.05}, -- Not Temporary
             {s = rutle, t = 0.1},
             --{s = common .. "raise.ogg", t = 0.05},
         },
@@ -482,6 +482,12 @@ SWEP.Animations = {
         Source = "fire",
         Time = 30 / 30,
         ShellEjectAt = 0,
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
+    },
+    ["fire_iron"] = {
+        Source = "fire",
+        Time = 30 / 30,
+        ShellEjectAt = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
@@ -489,7 +495,6 @@ SWEP.Animations = {
         Time = 24 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = rottle, t = 0},
             { s = path .. "mech_last.ogg", t = 0 },
         },
     },

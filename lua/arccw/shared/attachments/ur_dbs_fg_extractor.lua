@@ -19,3 +19,5 @@ att.Mult_MoveSpeed = 0.92
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_extractor"
 end
+
+att.AttachSound = "arccw_uc/common/gunsmith/internal_modification.ogg"

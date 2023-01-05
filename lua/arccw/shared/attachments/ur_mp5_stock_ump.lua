@@ -13,28 +13,24 @@ att.Slot = "ur_mp5_stock"
 att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
+att.Mult_DrawTime = 1.1
+att.Mult_HolsterTime = 1.1
+att.Mult_SightedSpeedMult = 0.85
+att.Mult_ShootSpeedMult = 0.85
+att.Mult_Recoil = 0.9
+
 att.ToggleStats = {
     {
         PrintName = "Extended",
         ActivateElements = {"stock_ump"},
         AutoStats = true,
-        Mult_RecoilSide = 0.75,
-        Mult_SightedSpeedMult = 0.85,
-        Mult_ShootSpeedMult = 0.85,
-        Mult_DrawTime = 1.15,
-        Mult_HolsterTime = 1.15,
+        Mult_HipDispersion = .75,
     },
     {
         PrintName = "Folded",
         ActivateElements = {"stock_ump_folded"},
         AutoStats = true,
-        Mult_HipDispersion = .75,
-        Mult_DrawTime = 0.85,
-        Mult_HolsterTime = 0.85,
-        Mult_ShootSpeedMult = 1.15,
-        Add_BarrelLength = -9,
-        Mult_Recoil = 2,
-        Mult_RecoilSide = 1.25,
+        Add_BarrelLength = -12,
         Mult_Sway = 3,
     }
 }

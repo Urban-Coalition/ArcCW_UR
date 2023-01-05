@@ -6,33 +6,36 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/ur_mp5/stock_colap.png", "smooth mips")
-att.Description = "Retractable skeletal stock, signficantly less massive than solid polymer. It can be collapsed to reduce profile even further at the cost of recoil.\n\nToggling the stock modifies performance accordingly."
+att.Description = "Retractable skeletal stock, signficantly less massive than solid polymer. It can be collapsed to reduce profile even further at the cost of stability.\n\nToggling the stock modifies performance accordingly."
 att.AutoStats = true
 att.Slot = "ur_mp5_stock"
 
 att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
-att.Mult_SightTime = 0.75
+att.Mult_Recoil = 1.5
+att.Mult_RecoilSide = 1.15
+att.Mult_SightTime = 0.90
+
+att.Mult_DrawTime = 0.85
+att.Mult_HolsterTime = 0.85
+
+att.Mult_HipDispersion = 0.8
 
 att.ToggleStats = {
     {
         PrintName = "Extended",
         ActivateElements = {"stock_a3"},
         AutoStats = true,
-        Mult_Recoil = 1.25,
     },
     {
         PrintName = "Collapsed",
         ActivateElements = {"stock_a3_folded"},
         AutoStats = true,
-        Mult_HipDispersion = .8,
-        Mult_DrawTime = 0.85,
-        Mult_HolsterTime = 0.85,
-        Mult_ShootSpeedMult = 1.15,
         Add_BarrelLength = -9,
-        Mult_Recoil = 1.5,
-        Mult_RecoilSide = 1.1,
-        Mult_Sway = 3,
+
+        Mult_Sway = 2,
+        Mult_ShootSpeedMult = 1.12,
+        Mult_SightedSpeedMult = 1.12,
     }
 }

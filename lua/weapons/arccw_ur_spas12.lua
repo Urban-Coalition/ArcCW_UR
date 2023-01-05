@@ -60,8 +60,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-5.8, 5, -5),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-5.8, 5, -4.5),
+    ang        =    Angle(-12, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
 }
@@ -149,7 +149,7 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 0.88
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.625
+SWEP.SightTime = 0.4
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --
@@ -256,6 +256,7 @@ end
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local rutle = {common .. "movement-shotgun-01.ogg",common .. "movement-shotgun-02.ogg",common .. "movement-shotgun-03.ogg",common .. "movement-shotgun-04.ogg"}
+local shellin = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg", path .. "shell-insert-05.ogg", path .. "shell-insert-06.ogg", path .. "shell-insert-07.ogg", path .. "shell-insert-08.ogg", path .. "shell-insert-09.ogg", path .. "shell-insert-10.ogg", path .. "shell-insert-11.ogg", path .. "shell-insert-12.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -309,7 +310,7 @@ SWEP.Animations = {
     ["fire_manual"] = { -- No bolt cycling
         Source = "fire_pump",
         Time = 23 / 25,--30,
-        MinProgress = 0.2,
+        MinProgress = 0.3,
         ShellEjectAt = false,
         SoundTable = {{ s = common .. "manual_trigger.ogg", t = 0}},
     },
@@ -317,7 +318,7 @@ SWEP.Animations = {
         Source = "cycle",
         Time = 30 / 30,
         ShellEjectAt = 0.1,
-        MinProgress = 0.4,
+        MinProgress = 0.35,
         SoundTable = {
             {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
@@ -479,7 +480,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg"},  t = 0},
+            {s = shellin,  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
@@ -493,7 +494,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg"},  t = 0},
+            {s = shellin,  t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
