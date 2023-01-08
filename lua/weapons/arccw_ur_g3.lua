@@ -435,7 +435,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
         atts[15].Offset.vpos = Vector(0, 0.1, 6.9)
     end
 
-    if barrel == "ur_g3_barrel_26" or optic then
+    if barrel == "ur_g3_barrel_26" then
         vm:SetBodygroup(1, 1)
     end
 
