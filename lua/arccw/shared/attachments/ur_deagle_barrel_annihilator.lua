@@ -4,7 +4,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "6.75\" Predator Annihilator Barrel"
 end
 att.Icon = Material("entities/att/acwatt_ur_deagle_barrel_annihilator.png","smooth mips")
-att.Description = "Heavily modified barrel with gilded parts and an oversized integral muzzle brake. Effects are exacerbated, and the sheer volume of vented gas can get disorienting.\nMuzzle attachments will not work at all with this barrel."
+att.Description = "Heavily modified barrel with gilded parts and an oversized integral muzzle brake. Effects are exacerbated, and the sheer volume of vented gas can get disorienting."
 att.Slot = "ur_deagle_barrel"
 att.AutoStats = true
 att.Desc_Cons = {

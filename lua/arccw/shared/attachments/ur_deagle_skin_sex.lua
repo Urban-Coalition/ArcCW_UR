@@ -32,4 +32,4 @@ att.Override_Firemodes = {
 ]]
 
 att.IgnorePickX = true
-att.ActivateElements = {"ur_deagle_skin_sex", "tac_rail"}
+att.ActivateElements = {"ur_deagle_skin_sex"}
