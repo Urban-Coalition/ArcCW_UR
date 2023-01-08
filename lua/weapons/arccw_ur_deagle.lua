@@ -353,8 +353,6 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
 end
 
 SWEP.Hook_NameChange = function(wep, name)
-    if wep.Attachments[14].Installed == "ur_deagle_skin_sex" then return "Sexyness" end
-    
     if wep.Attachments[2].Installed == "ur_deagle_barrel_annihilator" then
         return "Annihilator"
     elseif !GetConVar("arccw_truenames"):GetBool() then

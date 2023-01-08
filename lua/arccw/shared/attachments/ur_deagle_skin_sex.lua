@@ -1,18 +1,19 @@
-att.PrintName = "Sexyness"
-att.AbbrevName = "Sexyness"
+att.PrintName = "The Ultimate"
+att.AbbrevName = "The Ultimate"
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Sexyness"
+    att.PrintName = "The Ultimate"
 end
 att.Icon = Material("entities/att/acwatt_ur_deagle_finish_sex.png","mips smooth")
-att.Description = "sex"
+att.Description = "Administrator powers not included."
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"
 }
 
+--[[]
 att.Hook_NameChange = function(wep, name) return "Sexyness" end
 
-att.AdminOnly = true 
+att.AdminOnly = true
 att.SortOrder = 2
 att.Mult_Damage = 100
 att.Mult_RPM  = 100
@@ -28,6 +29,7 @@ att.Override_Firemodes = {
         Mode = 2,
     },
 }
+]]
 
 att.IgnorePickX = true
 att.ActivateElements = {"ur_deagle_skin_sex", "tac_rail"}
