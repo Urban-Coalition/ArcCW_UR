@@ -1041,7 +1041,7 @@ SWEP.Hook_NameChange = function(wep,name)
 
     if cal == "545" then
         wep.Trivia_Desc = descStart .. desc_545
-        if hg == "74m" or hg == "rpk74m" or hg == "ak12" then
+        if (hg == "74m" or hg == "rpk74m" or hg == "ak12") and stock == "ak74m" then
             noN = true
             post = (fakeNames and "-76M") or "-74M"
         elseif shortBarrs[barr] then
