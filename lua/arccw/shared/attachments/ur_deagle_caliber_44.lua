@@ -17,7 +17,7 @@ att.Mult_Damage = 75 / 80
 att.Mult_DamageMin = 16 / 12
 
 att.Mult_ShootSpeedMult = 1.1
---att.Mult_RPM = 1.1
+att.Mult_RPM = 1 + (1/6)
 
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"
