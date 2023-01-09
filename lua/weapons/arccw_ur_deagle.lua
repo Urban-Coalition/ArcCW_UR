@@ -156,7 +156,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.559, 1, 1.505),
+     Pos = Vector(-2.549, 1, 1.505),
      Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
@@ -684,10 +684,10 @@ SWEP.Hook_Think = function(wep)
         vm:SetPoseParameter("sights", Lerp( math.ease.InOutCubic(math.max(delta, wep.ADSBipodAnims)), 0, 1)) -- thanks fesiug
 
         local slot = wep.Attachments[3].Installed
-        if slot == "ur_deagle_caliber_44" then
+    if wep.Attachments[7].Installed or slot == "ur_deagle_caliber_357" then
+        vm:SetPoseParameter("light", 1)
+    elseif slot == "ur_deagle_caliber_44" then
             vm:SetPoseParameter("light", .5)
-        elseif slot == "ur_deagle_caliber_357" then
-            vm:SetPoseParameter("light", 1)
         else
             vm:SetPoseParameter("light", 0)
         end
@@ -706,7 +706,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -5.3, 7),
+            vpos = Vector(0, -5.15, 6.4),
             vang = Angle(90, 0, -90),
         },
     },
@@ -769,7 +769,7 @@ SWEP.Attachments = {
         VMScale = Vector(1.1, 1.1, 1.1),
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.25, 0),
+            vpos = Vector(0, -0.25, -1),
             vang = Angle(90, 0, -90),
         },
     },
@@ -823,7 +823,7 @@ SWEP.Attachments = {
         Slot = "uc_ubgl",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -4.8, 6.5),
+            vpos = Vector(0, -4.8, 6.0),
             vang = Angle(90, 0, -90),
         },
         Hidden = true,
