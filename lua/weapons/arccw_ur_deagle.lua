@@ -156,17 +156,17 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.529, 3, 1.305),
+     Pos = Vector(-2.559, 1, 1.505),
      Ang = Angle(0, 0, 0),
-     Magnification = 1,
+     Magnification = 1.1,
      SwitchToSound = "",
      ViewModelFOV = 55,
 }
 
-SWEP.ActivePos = Vector(0.2, 2, 1.5)
+SWEP.ActivePos = Vector(-0.1, 0.5, 1.9)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
-SWEP.CustomizePos = Vector(-1, -2, 1)
+SWEP.CustomizePos = Vector(-1, -2, 2)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-2.2, 1, 0.6)
@@ -672,7 +672,27 @@ SWEP.Animations = {
 
 -- ADS animation blending, thanks fesiug --
 
-SWEP.Hook_Think = ArcCW.UC.ADSReload
+SWEP.Hook_Think = function(wep)
+    if IsValid(wep) and wep.ArcCW then
+        local vm = wep:GetOwner():GetViewModel()
+
+        local delta = 1-wep:GetSightDelta()
+
+        local bipoded = wep:GetInBipod()
+        wep.ADSBipodAnims = math.Approach(wep.ADSBipodAnims or 0, bipoded and 1 or 0, FrameTime() / 0.5)
+
+        vm:SetPoseParameter("sights", Lerp( math.ease.InOutCubic(math.max(delta, wep.ADSBipodAnims)), 0, 1)) -- thanks fesiug
+
+        local slot = wep.Attachments[3].Installed
+        if slot == "ur_deagle_caliber_44" then
+            vm:SetPoseParameter("light", .5)
+        elseif slot == "ur_deagle_caliber_357" then
+            vm:SetPoseParameter("light", 1)
+        else
+            vm:SetPoseParameter("light", 0)
+        end
+    end
+end
 
 
 -- Attachments --
