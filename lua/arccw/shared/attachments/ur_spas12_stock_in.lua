@@ -28,7 +28,7 @@ att.Mult_Sway = 2
 att.Add_BarrelLength = -12
 
 att.Override_IronSightStruct = {
-    Pos = Vector(-1.5, 2, -1.5),
+    Pos = Vector(-1.1, -2, -1.1),
      Ang = Angle(3, 1.5, 0),
      Magnification = 1.075,
      SwitchToSound = "",
@@ -41,7 +41,6 @@ att.Hook_TranslateAnimation = function(wep,anim)
     end
 end
 
-att.Override_ActivePos = Vector(-1, 1, -2)
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"
 
