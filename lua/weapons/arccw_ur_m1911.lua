@@ -391,8 +391,6 @@ end
 
 -- Animations --
 
-local ca = CHAN_AUTO
-
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -412,7 +410,7 @@ SWEP.Animations = {
         ShellEjectAt = false,
         ProcDraw = true,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
+            { s = rottle, t = 0 / 60 },
             {s = path .. "draw.ogg", t = 0.05},
             { s = path .. "mech.ogg",t = 28 / 60}, -- Temporary
             { s = path .. "slidedrop.ogg",t = 35 / 60},
@@ -522,14 +520,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.62,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magpouch_pull_small.ogg", t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 17 / 60, c = ca },
-            { s = path .. "magout.ogg", t = 26 / 60, c = ca },
-            { s = rottle, t = 10 / 60, c = ca },
-            { s = rottle, t = 55 / 60, c = ca },
-            { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60, c = ca },
-            { s = path .. "magin.ogg", t = 50 / 60, c = ca },
+            { s = rottle, t = 0 / 60 },
+            { s = common .. "magpouch_pull_small.ogg", t = 0 / 60 },
+            { s = common .. "magrelease.ogg", t = 17 / 60 },
+            { s = path .. "magout.ogg", t = 26 / 60 },
+            { s = rottle, t = 10 / 60 },
+            { s = rottle, t = 55 / 60 },
+            { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60 },
+            { s = path .. "magin.ogg", t = 50 / 60 },
         },
     },
     ["reload_empty_10"] = {
@@ -544,16 +542,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.55,
         LHIKOut = 0.7,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-            { s = path .. "magout.ogg", t = 16 / 60, c = ca },
-            { s = rottle, t = 10 / 60, c = ca },
-            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60, c = ca },
-            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
-            { s = rottle, t = 55 / 60, c = ca },
-            { s = path .. "magin.ogg", t = 64 / 60, c = ca },
-            { s = rottle, t = 90 / 60, c = ca },
-            { s = path .. "slidedrop.ogg", t = 94 / 60, c = ca },
+            { s = rottle, t = 0 / 60 },
+            { s = common .. "magrelease.ogg", t = 7 / 60 },
+            { s = path .. "magout.ogg", t = 16 / 60 },
+            { s = rottle, t = 10 / 60 },
+            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60 },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60 },
+            { s = rottle, t = 55 / 60 },
+            { s = path .. "magin.ogg", t = 64 / 60 },
+            { s = rottle, t = 90 / 60 },
+            { s = path .. "slidedrop.ogg", t = 94 / 60 },
         },
     },
 
@@ -569,15 +567,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.62,
         SoundTable = {
-            { s = rottle,                                   t = 0 / 60, c = ca },
-            { s = common .. "magpouch_pull_small.ogg",      t = 5 / 60, c = ca },
-            { s = rottle,                                   t = 10 / 60, c = ca },
-            { s = common .. "magrelease.ogg",               t = 17 / 60, c = ca },
-            { s = path .. "magout.ogg",                     t = 26 / 60, c = ca },
-            { s = path .. "magin.ogg",                      t = 45 / 60, c = ca },
-            { s = rottle,                                   t = 55 / 60, c = ca },
-            { s = common ..  "magpouch_replace_small.ogg",  t = 80 / 60, c = ca },
-            { s = path .. "grab.ogg",                       t = 110 / 60, c = ca },
+            { s = rottle,                                   t = 0 / 60 },
+            { s = common .. "magpouch_pull_small.ogg",      t = 5 / 60 },
+            { s = rottle,                                   t = 10 / 60 },
+            { s = common .. "magrelease.ogg",               t = 17 / 60 },
+            { s = path .. "magout.ogg",                     t = 26 / 60 },
+            { s = path .. "magin.ogg",                      t = 45 / 60 },
+            { s = rottle,                                   t = 55 / 60 },
+            { s = common ..  "magpouch_replace_small.ogg",  t = 80 / 60 },
+            { s = path .. "grab.ogg",                       t = 110 / 60 },
         },
     },
     ["reload_empty"] = {
@@ -592,17 +590,17 @@ SWEP.Animations = {
         LHIKEaseOut = 0.55,
         LHIKOut = 0.7,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
-            { s = common .. "magrelease.ogg", t = 7 / 60, c = ca },
-            { s = path .. "magout.ogg", t = 16 / 60, c = ca },
-            { s = rottle, t = 10 / 60, c = ca },
-            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60, c = ca },
-            { s = common .. "pistol_magdrop.ogg", t = 40 / 60, c = ca },
-            { s = rottle, t = 55 / 60, c = ca },
-            { s = path .. "magin.ogg", t = 64 / 60, c = ca },
-            { s = rottle, t = 90 / 60, c = ca },
-            { s = path .. "slidedrop.ogg", t = 94 / 60, c = ca },
-            { s = path .. "grab.ogg", t = 125 / 60, c = ca },
+            { s = rottle, t = 0 / 60 },
+            { s = common .. "magrelease.ogg", t = 7 / 60 },
+            { s = path .. "magout.ogg", t = 16 / 60 },
+            { s = rottle, t = 10 / 60 },
+            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60 },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60 },
+            { s = rottle, t = 55 / 60 },
+            { s = path .. "magin.ogg", t = 64 / 60 },
+            { s = rottle, t = 90 / 60 },
+            { s = path .. "slidedrop.ogg", t = 94 / 60 },
+            { s = path .. "grab.ogg", t = 125 / 60 },
         },
     },
 
@@ -616,7 +614,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         ShellEjectAt = 30 / 60,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
+            { s = rottle, t = 0 / 60 },
             { s = path .. "mech.ogg",t = 28 / 60}, -- Temporary
             { s = path .. "slidedrop.ogg",t = 35 / 60},
         },
@@ -630,7 +628,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         ShellEjectAt = 30 / 60,
         SoundTable = {
-            { s = rottle, t = 0 / 60, c = ca },
+            { s = rottle, t = 0 / 60 },
             { s = path .. "mech.ogg",t = 28 / 60},
         },
     },

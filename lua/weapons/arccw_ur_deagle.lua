@@ -163,8 +163,8 @@ SWEP.IronSightStruct = {
      ViewModelFOV = 55,
 }
 
-SWEP.ActivePos = Vector(-0.1, 0.5, 1.9)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(0.1, 1.5, 1.5)
+SWEP.ActiveAng = Angle(0.5, 0.5, -2)
 
 SWEP.CustomizePos = Vector(-1, -2, 2)
 SWEP.CustomizeAng = Angle(0, 0, 0)
@@ -684,9 +684,9 @@ SWEP.Hook_Think = function(wep)
         vm:SetPoseParameter("sights", Lerp( math.ease.InOutCubic(math.max(delta, wep.ADSBipodAnims)), 0, 1)) -- thanks fesiug
 
         local slot = wep.Attachments[3].Installed
-    if wep.Attachments[7].Installed or slot == "ur_deagle_caliber_357" then
-        vm:SetPoseParameter("light", 1)
-    elseif slot == "ur_deagle_caliber_44" then
+        if wep.Attachments[7].Installed or slot == "ur_deagle_caliber_357" then
+            vm:SetPoseParameter("light", 1)
+        elseif slot == "ur_deagle_caliber_44" then
             vm:SetPoseParameter("light", .5)
         else
             vm:SetPoseParameter("light", 0)
