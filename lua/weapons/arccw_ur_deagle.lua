@@ -163,7 +163,7 @@ SWEP.IronSightStruct = {
      ViewModelFOV = 55,
 }
 
-SWEP.ActivePos = Vector(0.1, 1.5, 1.5)
+SWEP.ActivePos = Vector(-0.5, 1.5, 1.15)
 SWEP.ActiveAng = Angle(0.5, 0.5, -2)
 
 SWEP.CustomizePos = Vector(-1, -2, 2)
