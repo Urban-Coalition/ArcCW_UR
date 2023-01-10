@@ -684,9 +684,9 @@ SWEP.Hook_Think = function(wep)
         vm:SetPoseParameter("sights", Lerp( math.ease.InOutCubic(math.max(delta, wep.ADSBipodAnims)), 0, 1)) -- thanks fesiug
 
         local slot = wep.Attachments[3].Installed
-    if wep.Attachments[7].Installed or slot == "ur_deagle_caliber_357" then
-        vm:SetPoseParameter("light", 1)
-    elseif slot == "ur_deagle_caliber_44" then
+        if wep.Attachments[7].Installed or slot == "ur_deagle_caliber_357" then
+            vm:SetPoseParameter("light", 1)
+        elseif slot == "ur_deagle_caliber_44" then
             vm:SetPoseParameter("light", .5)
         else
             vm:SetPoseParameter("light", 0)
