@@ -20,5 +20,7 @@ att.Add_BarrelLength = -9
 att.Mult_Sway = 3
 
 att.Override_ActivePos = Vector(0.5, 2, 0.5)
+att.Override_HoldtypeActive = "shotgun"
+att.Override_HoldtypeSights = "ar2"
 
 att.ActivateElements = {"stock_none"}
