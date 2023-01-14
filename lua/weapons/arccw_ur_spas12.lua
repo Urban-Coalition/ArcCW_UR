@@ -361,9 +361,9 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKOut = 0,
         SoundTable = {
-            {s = rottle,  t = 0},
-            {s = ratel,  t = 0.1},
-            {s = common .. "grab.ogg",  t = 0.2},
+            {s = path .. "turn.ogg",  t = 0}, -- Temporary
+            {s = rottle,  t = 0.1},
+            {s = path .. "grab.ogg",  t = 0.15},
         }
     },
     ["sgreload_start_fold"] = {
@@ -375,9 +375,9 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKOut = 0,
         SoundTable = {
-            {s = rottle,  t = 0},
-            {s = ratel,  t = 0.1},
-            {s = common .. "grab.ogg",  t = 0.2},
+            {s = path .. "turn.ogg",  t = 0}, -- Temporary
+            {s = rottle,  t = 0.1},
+            {s = path .. "grab.ogg",  t = 0.15},
         }
     },
     ["sgreload_start_empty"] = {
@@ -394,11 +394,9 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path .. "breechload.ogg",  t = .4},
             {s = path .. "breechclose.ogg",  t = 1}, -- Temporary
+            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
             {s = rottle,  t = 1.5},
-
-            {s = rottle,  t = 2},
-            {s = ratel,  t = 2.1},
-            {s = common .. "grab.ogg",  t = 2.2},
+            {s = path .. "grab.ogg",  t = 1.9},
         },
         ForceEmpty = true,
     },
@@ -416,11 +414,9 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path .. "breechload.ogg",  t = .4},
             {s = path .. "breechclose.ogg",  t = 1}, -- Temporary
+            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
             {s = rottle,  t = 1.5},
-
-            {s = rottle,  t = 2},
-            {s = ratel,  t = 2.1},
-            {s = common .. "grab.ogg",  t = 2.2},
+            {s = path .. "grab.ogg",  t = 1.9},
         },
         ForceEmpty = true,
     },
@@ -440,10 +436,9 @@ SWEP.Animations = {
             {s = rottle, t = .2},
             {s = path .. "breechload.ogg",  t = .7},
             {s = path .. "forearm_forward.ogg", t = 1.6},
-
-            {s = rottle,  t = 2.1},
-            {s = ratel,  t = 2.2},
-            {s = common .. "grab.ogg",  t = 2.3},
+            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
+            {s = rottle,  t = 1.5},
+            {s = path .. "grab.ogg",  t = 2.0},
         },
         ForceEmpty = true,
     },
@@ -463,10 +458,9 @@ SWEP.Animations = {
             {s = rottle, t = .2},
             {s = path .. "breechload.ogg",  t = .7},
             {s = path .. "forearm_forward.ogg", t = 1.6},
-
-            {s = rottle,  t = 2.1},
-            {s = ratel,  t = 2.2},
-            {s = common .. "grab.ogg",  t = 2.3},
+            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
+            {s = rottle,  t = 1.5},
+            {s = path .. "grab.ogg",  t = 2.0},
         },
         ForceEmpty = true,
     },
@@ -509,7 +503,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.8,
         SoundTable = {
             {s = rottle,  t = 0.2},
-            {s = ratel,  t = 0.35},
+            {s = path .. "return.ogg",  t = 0.475}, -- Temporary
             {s = common .. "shoulder.ogg",  t = 0.55},
         },
     },
@@ -524,7 +518,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.8,
         SoundTable = {
             {s = rottle,  t = 0.2},
-            {s = ratel,  t = 0.35},
+            {s = path .. "return.ogg",  t = 0.475}, -- Temporary
             {s = common .. "shoulder.ogg",  t = 0.55},
         },
     },
