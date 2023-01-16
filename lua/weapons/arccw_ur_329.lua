@@ -81,6 +81,7 @@ SWEP.MalfunctionMean = math.huge -- Theoretically it will never malfunction
 SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 6
 SWEP.RejectMagSizeChange = true -- Signals to attachments that mag size shouldn't be changeable; needs to be implemented attachment-side with att.Compatible
+SWEP.UC_CanManualAction = true -- In case this ever applies to anything other than shotguns
 
 -- Recoil --
 
