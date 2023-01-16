@@ -792,7 +792,6 @@ SWEP.Attachments = {
         },
         InstalledEles = {"nofh"},
         ExcludeFlags = {"barrel_annihilator"},
-        VMScale = Vector(.8, .8, .8)
     },
     {
         PrintName = "Tactical",
