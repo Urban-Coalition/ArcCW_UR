@@ -32,7 +32,7 @@ SWEP.ViewModelFOV = 70
 SWEP.DefaultBodygroups = "000000000000"
 
 SWEP.BulletBones = {
-    [1] = "top_round",
+    --[1] = "top_round",
     [2] = "mag_round",
 }
 
@@ -894,7 +894,7 @@ SWEP.Animations = {
         LHIKOut = 999, -- maybe im dumb
     },
     ["exit_inspect_empty"] = {
-        Source = "inspect_exit_empty",
+        Source = "inspect_exit",
         -- time = 66 / 60,
         LHIK = false,
         LHIKIn = 0,
