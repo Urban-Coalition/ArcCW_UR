@@ -774,10 +774,8 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle","ur_ak_muzzle"},
         Bone = "tag_weapon",
-        VMScale = Vector(1.2, 1.2, 1.2),
-        WMScale = VMScale,
         Offset = {
-            vpos = Vector(0, 24.6, 2.7),
+            vpos = Vector(0, 24.1, 2.7),
             vang = Angle(0, 270, 0),
         },
         ExcludeFlags = {"ur_ak_nomuzzle"},
