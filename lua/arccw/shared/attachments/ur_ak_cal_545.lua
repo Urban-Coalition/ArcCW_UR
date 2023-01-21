@@ -28,7 +28,7 @@ att.Mult_DamageMin = .8
 att.Mult_Damage = .8
 att.ShootPitchVariation = 1
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/545x39.mdl"
-att.Override_ShellScale = 1
+att.Override_ShellScale = 0.666
 att.GivesFlags = {"cal_545"}
 
 att.ActivateElements = {"mag_545_30"}

@@ -30,7 +30,7 @@ att.Override_Trivia_Country = "Russia"
 
 att.ShootPitchVariation = 1
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
-att.Override_ShellScale = 1
+att.Override_ShellScale = .666
 att.GivesFlags = {"cal_556"}
 
 att.ActivateElements = {"mag_556_30"}

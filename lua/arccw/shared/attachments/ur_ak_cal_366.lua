@@ -46,7 +46,7 @@ att.Override_Firemodes = {
 }
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/366tkm.mdl"
-att.Override_ShellScale = 1
+att.Override_ShellScale = .666
 --att.Override_Trivia_Class = "Shotgun" -- The VPO-209 is considered a shotgun because of its smoothbore barrel
 att.Override_Trivia_Calibre = ".366 TKM"
 att.Override_Trivia_Manufacturer = "Molot-Oruzhiye"
