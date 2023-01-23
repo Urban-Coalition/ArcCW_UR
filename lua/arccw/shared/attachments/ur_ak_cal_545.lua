@@ -45,11 +45,20 @@ att.Hook_GetShootSound = function(wep, fsound)
 end
 
 
+local tail = ")/arccw_uc/common/556x45/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {path2 .. "fire-dist-01.ogg", path2 .. "fire-dist-02.ogg", path2 .. "fire-dist-03.ogg", path2 .. "fire-dist-04.ogg", path2 .. "fire-dist-05.ogg", path2 .. "fire-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-556x45-rif-ext-01.ogg",
+            tail .. "fire-dist-556x45-rif-ext-02.ogg",
+            tail .. "fire-dist-556x45-rif-ext-03.ogg",
+            tail .. "fire-dist-556x45-rif-ext-04.ogg",
+            tail .. "fire-dist-556x45-rif-ext-05.ogg",
+            tail .. "fire-dist-556x45-rif-ext-06.ogg"
+        }
     end
 end
 
