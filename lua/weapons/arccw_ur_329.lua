@@ -223,13 +223,15 @@ SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}
 
+local tail = ")^/arccw_uc/common/44mag/"
+
 SWEP.DistantShootSoundOutdoors = {
-    path .. "fire-dist-01.ogg",
-    path .. "fire-dist-02.ogg",
-    path .. "fire-dist-03.ogg",
-    path .. "fire-dist-04.ogg",
-    path .. "fire-dist-05.ogg",
-    path .. "fire-dist-06.ogg"
+    tail .. "fire-dist-44mag-pistol-ext-01.ogg",
+    tail .. "fire-dist-44mag-pistol-ext-02.ogg",
+    tail .. "fire-dist-44mag-pistol-ext-03.ogg",
+    tail .. "fire-dist-44mag-pistol-ext-04.ogg",
+    tail .. "fire-dist-44mag-pistol-ext-05.ogg",
+    tail .. "fire-dist-44mag-pistol-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",

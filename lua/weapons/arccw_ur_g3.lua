@@ -147,13 +147,15 @@ SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
+local tail = ")^/arccw_uc/common/308/"
+
 SWEP.DistantShootSoundOutdoors = {
-    path .. "fire-dist-01.ogg",
-    path .. "fire-dist-02.ogg",
-    path .. "fire-dist-03.ogg",
-    path .. "fire-dist-04.ogg",
-    path .. "fire-dist-05.ogg",
-    path .. "fire-dist-06.ogg"
+    tail .. "fire-dist-308-rif-ext-01.ogg",
+    tail .. "fire-dist-308-rif-ext-02.ogg",
+    tail .. "fire-dist-308-rif-ext-03.ogg",
+    tail .. "fire-dist-308-rif-ext-04.ogg",
+    tail .. "fire-dist-308-rif-ext-05.ogg",
+    tail .. "fire-dist-308-rif-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-rifle-01.ogg",

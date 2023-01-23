@@ -15,13 +15,23 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
+local tail = ")^/arccw_uc/common/357mag/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {"weapons/arccw_ur/sw586/fire-dist-01.ogg", "weapons/arccw_ur/sw586/fire-dist-02.ogg", "weapons/arccw_ur/sw586/fire-dist-03.ogg", "weapons/arccw_ur/sw586/fire-dist-04.ogg", "weapons/arccw_ur/sw586/fire-dist-05.ogg", "weapons/arccw_ur/sw586/fire-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-357mag-pistol-ext-01.ogg",
+            tail .. "fire-dist-357mag-pistol-ext-02.ogg",
+            tail .. "fire-dist-357mag-pistol-ext-03.ogg",
+            tail .. "fire-dist-357mag-pistol-ext-04.ogg",
+            tail .. "fire-dist-357mag-pistol-ext-05.ogg",
+            tail .. "fire-dist-357mag-pistol-ext-06.ogg"
+        }
     end
 end
+
 
 att.AutoStats = true
 att.Slot = "ur_deagle_caliber"

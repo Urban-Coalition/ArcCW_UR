@@ -30,11 +30,19 @@ att.Hook_GetShootSound = function(wep, sound)
         return {"weapons/arccw_ur/sw329/fire-01.ogg", "weapons/arccw_ur/sw329/fire-02.ogg", "weapons/arccw_ur/sw329/fire-03.ogg", "weapons/arccw_ur/sw329/fire-04.ogg", "weapons/arccw_ur/sw329/fire-05.ogg", "weapons/arccw_ur/sw329/fire-06.ogg"} -- Not Placeholder
     end
 end
+local tail = ")^/arccw_uc/common/44mag/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {"weapons/arccw_ur/sw329/fire-dist-01.ogg", "weapons/arccw_ur/sw329/fire-dist-02.ogg", "weapons/arccw_ur/sw329/fire-dist-03.ogg", "weapons/arccw_ur/sw329/fire-dist-04.ogg", "weapons/arccw_ur/sw329/fire-dist-05.ogg", "weapons/arccw_ur/sw329/fire-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-44mag-pistol-ext-01.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-02.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-03.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-04.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-05.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-06.ogg"
+        }
     end
 end
