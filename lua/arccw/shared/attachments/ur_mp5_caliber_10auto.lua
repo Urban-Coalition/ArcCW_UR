@@ -35,17 +35,26 @@ local path = ")^weapons/arccw_ur/1911/"
 
 att.Hook_GetShootSound = function(wep, sound) -- Temporary
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp.ogg"
+        return --fucking nothing
     else
         return {path .. "fire-10-01.ogg", path .. "fire-10-02.ogg", path .. "fire-10-03.ogg", path .. "fire-10-04.ogg", path .. "fire-10-05.ogg", path .. "fire-10-06.ogg"}
     end
 end
 
+local tail = ")^/arccw_uc/common/10x25/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
-        return -- fallback to script
+        -- fallback to script
     else
-        return {path .. "fire-10-dist-01.ogg", path .. "fire-10-dist-02.ogg", path .. "fire-10-dist-03.ogg", path .. "fire-10-dist-04.ogg", path .. "fire-10-dist-05.ogg", path .. "fire-10-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-10x25-pistol-ext-01.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-02.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-03.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-04.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-05.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-06.ogg"
+        }
     end
 end
 

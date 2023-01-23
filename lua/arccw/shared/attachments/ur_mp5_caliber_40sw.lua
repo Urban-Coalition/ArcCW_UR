@@ -29,19 +29,28 @@ att.Override_ShellScale = 1.1
 
 local path = ")^weapons/arccw_ur/mp5/"
 
-att.Hook_GetShootSound = function(wep, sound) -- Temporary
+att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp.ogg"
+        return {path .. "fire-40-sup-01.ogg",path .. "fire-40-sup-02.ogg",path .. "fire-40-sup-03.ogg",path .. "fire-40-sup-04.ogg",path .. "fire-40-sup-05.ogg",path .. "fire-40-sup-06.ogg"} -- Placeholder
     else
-        return {path .. "fire-40-01.ogg", path .. "fire-40-02.ogg", path .. "fire-40-03.ogg", path .. "fire-40-04.ogg", path .. "fire-40-05.ogg", path .. "fire-40-06.ogg"}
+        return {path .. "fire-40-01.ogg",path .. "fire-40-02.ogg",path .. "fire-40-03.ogg",path .. "fire-40-04.ogg",path .. "fire-40-05.ogg",path .. "fire-40-06.ogg"}
     end
 end
 
+local tail = ")^/arccw_uc/common/40sw/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
-        return -- fallback to script
+        -- fallback to script
     else
-        return {path .. "fire-40-dist-01.ogg", path .. "fire-40-dist-02.ogg", path .. "fire-40-dist-03.ogg", path .. "fire-40-dist-04.ogg", path .. "fire-40-dist-05.ogg", path .. "fire-40-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-40sw-pistol-ext-01.ogg",
+            tail .. "fire-dist-40sw-pistol-ext-02.ogg",
+            tail .. "fire-dist-40sw-pistol-ext-03.ogg",
+            tail .. "fire-dist-40sw-pistol-ext-04.ogg",
+            tail .. "fire-dist-40sw-pistol-ext-05.ogg",
+            tail .. "fire-dist-40sw-pistol-ext-06.ogg"
+        }
     end
 end
 
