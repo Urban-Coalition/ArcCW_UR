@@ -4,7 +4,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "The Ultimate"
 end
 att.Icon = Material("entities/att/acwatt_ur_deagle_finish_sex.png","mips smooth")
-att.Description = "Administrator powers not included."
+att.Description = "Administrator powers not included.\n\n\"This is an extremely OP admin weapon. fires every .05 seconds, 75 bullets per shot, and no recoil..... it's awesome.\n\nRight click spawns rapid fire explosions\""
 att.Slot = "ur_deagle_skin"
 att.Desc_Neutrals = {
     "uc.cosmetic"
