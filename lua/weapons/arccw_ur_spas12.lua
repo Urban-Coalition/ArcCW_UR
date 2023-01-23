@@ -216,6 +216,14 @@ SWEP.DistantShootSoundOutdoors = {
 
 local tail = ")^/arccw_uc/common/12ga/"
 
+SWEP.ShootSoundSilenced = {
+    tail .. "fire-sup-01.ogg",
+    tail .. "fire-sup-02.ogg",
+    tail .. "fire-sup-03.ogg",
+    tail .. "fire-sup-04.ogg",
+    tail .. "fire-sup-05.ogg",
+    tail .. "fire-sup-06.ogg"
+}
 SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-12ga-pasg-ext-01.ogg",
     tail .. "fire-dist-12ga-pasg-ext-02.ogg",
@@ -225,10 +233,24 @@ SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-12ga-pasg-ext-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
-    common .. "sup_tail.ogg"
+    common .. "sup-tail-01.ogg",
+    common .. "sup-tail-02.ogg",
+    common .. "sup-tail-03.ogg",
+    common .. "sup-tail-04.ogg",
+    common .. "sup-tail-05.ogg",
+    common .. "sup-tail-06.ogg",
+    common .. "sup-tail-07.ogg",
+    common .. "sup-tail-08.ogg",
+    common .. "sup-tail-09.ogg",
+    common .. "sup-tail-10.ogg"
 }
 SWEP.DistantShootSoundIndoorsSilenced = {
-    common .. "sup_tail.ogg"
+    common .. "fire-dist-int-pistol-light-01.ogg",
+    common .. "fire-dist-int-pistol-light-02.ogg",
+    common .. "fire-dist-int-pistol-light-03.ogg",
+    common .. "fire-dist-int-pistol-light-04.ogg",
+    common .. "fire-dist-int-pistol-light-05.ogg",
+    common .. "fire-dist-int-pistol-light-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
