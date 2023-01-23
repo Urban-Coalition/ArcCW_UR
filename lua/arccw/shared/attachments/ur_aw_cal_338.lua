@@ -27,28 +27,26 @@ att.Mult_ReloadTime = 5.55 / 5.15
 
 att.Mult_ShootSpeedMult = 0.8
 
-local path = ")^weapons/arccw_ur/aw_placeholders/338/"
-local path1 = ")^weapons/arccw_ur/aw_placeholders/"
+local path = ")weapons/arccw_ur/aw_placeholders/338/"
+local path1 = ")weapons/arccw_ur/aw_placeholders/"
 
-att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then end
-    if fsound == wep.ShootSoundSilenced then return {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"} end
+local fire338sup = {path1 .. "fire-sup-01.ogg",path1 .. "fire-sup-02.ogg",path1 .. "fire-sup-03.ogg",path1 .. "fire-sup-04.ogg",path1 .. "fire-sup-05.ogg",path1 .. "fire-sup-06.ogg"}
+
+att.Hook_GetShootSound = function(wep, sound)
+    if wep:GetBuff_Override("Silencer") then
+        return fire338sup
+    else
+    end
 end
 
-local tail = ")^/arccw_uc/common/338lm/"
+local tail = ")/arccw_uc/common/338lm/"
+local fire338dist = {tail .. "fire-dist-338lm-rif-ext-01.ogg", tail .. "fire-dist-338lm-rif-ext-02.ogg", tail .. "fire-dist-338lm-rif-ext-03.ogg", tail .. "fire-dist-338lm-rif-ext-04.ogg", tail .. "fire-dist-338lm-rif-ext-05.ogg", tail .. "fire-dist-338lm-rif-ext-06.ogg"}
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-338lm-rif-ext-01.ogg",
-            tail .. "fire-dist-338lm-rif-ext-02.ogg",
-            tail .. "fire-dist-338lm-rif-ext-03.ogg",
-            tail .. "fire-dist-338lm-rif-ext-04.ogg",
-            tail .. "fire-dist-338lm-rif-ext-05.ogg",
-            tail .. "fire-dist-338lm-rif-ext-06.ogg"
-        }
+        return fire338dist
     end
 end
 

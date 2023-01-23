@@ -23,7 +23,7 @@ att.Override_Trivia_Class = "Assault Rifle"
 att.Mult_RPM = 650 / 520 -- 650 rpm
 att.Mult_SightedSpeedMult = 1.05
 att.Mult_ReloadTime = .95
-att.Mult_Recoil = 0.25
+att.Mult_Recoil = 0.45
 att.Mult_HipDispersion = .75
 
 att.Mult_Penetration = 14 / 20
@@ -48,32 +48,29 @@ att.Override_Firemodes = {
     }
 }
 
-local path = ")^weapons/arccw_ur/g3/"
-local path1 = ")^weapons/arccw_ur/ak/"
-local path2 = ")^weapons/arccw_ur/ak/556/"
+local path = ")weapons/arccw_ur/g3/"
+local path1 = ")weapons/arccw_ur/ak/556/"
 
-att.Hook_GetShootSound = function(wep, fsound)
-    --[[if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
-        path .. "stalol/fire_545_1.wav",
-     } end]]
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire-556-01.ogg", path .. "fire-556-02.ogg", path .. "fire-556-03.ogg", path .. "fire-556-04.ogg", path .. "fire-556-05.ogg", path .. "fire-556-06.ogg"} end
-    if fsound == wep.ShootSoundSilenced then return {path2 .. "fire-sup-01.ogg", path2 .. "fire-sup-02.ogg", path2 .. "fire-sup-03.ogg", path2 .. "fire-sup-04.ogg", path2 .. "fire-sup-05.ogg", path2 .. "fire-sup-06.ogg"} end
+local fire556 = {path .. "fire-556-01.ogg",path .. "fire-556-02.ogg",path .. "fire-556-03.ogg",path .. "fire-556-04.ogg",path .. "fire-556-05.ogg",path .. "fire-556-06.ogg"}
+local fire556sup = {path1 .. "fire-sup-01.ogg",path1 .. "fire-sup-02.ogg",path1 .. "fire-sup-03.ogg",path1 .. "fire-sup-04.ogg",path1 .. "fire-sup-05.ogg",path1 .. "fire-sup-06.ogg"}
+
+att.Hook_GetShootSound = function(wep, sound)
+    if wep:GetBuff_Override("Silencer") then
+        return fire556sup
+    else
+        return fire556
+    end
 end
 
-local tail = ")^/arccw_uc/common/556x45/"
+local tail = ")/arccw_uc/common/556x45/"
+local fire556dist = {tail .. "fire-dist-556x45-rif-ext-01.ogg", tail .. "fire-dist-556x45-rif-ext-02.ogg", tail .. "fire-dist-556x45-rif-ext-03.ogg", tail .. "fire-dist-556x45-rif-ext-04.ogg", tail .. "fire-dist-556x45-rif-ext-05.ogg", tail .. "fire-dist-556x45-rif-ext-06.ogg"}
+local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-556x45-rif-ext-01.ogg",
-            tail .. "fire-dist-556x45-rif-ext-02.ogg",
-            tail .. "fire-dist-556x45-rif-ext-03.ogg",
-            tail .. "fire-dist-556x45-rif-ext-04.ogg",
-            tail .. "fire-dist-556x45-rif-ext-05.ogg",
-            tail .. "fire-dist-556x45-rif-ext-06.ogg"
-        }
+        return fire556dist
     end
 end
 

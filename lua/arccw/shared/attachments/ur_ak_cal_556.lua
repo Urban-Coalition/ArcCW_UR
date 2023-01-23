@@ -34,8 +34,8 @@ att.Override_ShellScale = .666
 att.GivesFlags = {"cal_556"}
 
 att.ActivateElements = {"mag_556_30"}
-local path = ")^weapons/arccw_ur/ak/556/"
-local path1 = ")^weapons/arccw_ur/ak/"
+local path = ")weapons/arccw_ur/ak/556/"
+local path1 = ")weapons/arccw_ur/ak/"
 
 att.Hook_GetShootSound = function(wep, fsound)
     --[[if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
@@ -45,7 +45,7 @@ att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSoundSilenced then return {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"} end
 end
 
-local tail = ")^/arccw_uc/common/556x45/"
+local tail = ")/arccw_uc/common/556x45/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then

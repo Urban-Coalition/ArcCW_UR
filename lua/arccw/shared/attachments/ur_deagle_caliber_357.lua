@@ -7,28 +7,26 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Predator .357 Magnum Conversion"
 end
 
+local path = ")^weapons/arccw_ur/sw586/"
+local fire357 = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"}
+
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ur/deagle/fire_supp_10.ogg" -- Placeholder
+        return fire357sup
     else
-        return {"weapons/arccw_ur/sw586/fire-01.ogg", "weapons/arccw_ur/sw586/fire-02.ogg", "weapons/arccw_ur/sw586/fire-03.ogg", "weapons/arccw_ur/sw586/fire-04.ogg", "weapons/arccw_ur/sw586/fire-05.ogg", "weapons/arccw_ur/sw586/fire-06.ogg"} -- Not Placeholder
+        return fire357
     end
 end
 
-local tail = ")^/arccw_uc/common/357mag/"
+local tail = ")/arccw_uc/common/357mag/"
+local fire357dist = {tail .. "fire-dist-357mag-pistol-ext-01.ogg", tail .. "fire-dist-357mag-pistol-ext-02.ogg", tail .. "fire-dist-357mag-pistol-ext-03.ogg", tail .. "fire-dist-357mag-pistol-ext-04.ogg", tail .. "fire-dist-357mag-pistol-ext-05.ogg", tail .. "fire-dist-357mag-pistol-ext-06.ogg"}
+local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-357mag-pistol-ext-01.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-02.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-03.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-04.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-05.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-06.ogg"
-        }
+        return fire357dist
     end
 end
 

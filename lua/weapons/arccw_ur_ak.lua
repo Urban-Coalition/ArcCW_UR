@@ -128,9 +128,9 @@ SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.75
 
-local path = ")^weapons/arccw_ur/ak/"
-local path1 = ")^weapons/arccw_ur/mp5/"
-local common = ")^/arccw_uc/common/"
+local path = ")weapons/arccw_ur/ak/"
+local path1 = ")weapons/arccw_ur/mp5/"
+local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local rutle = {common .. "movement-rifle-01.ogg",common .. "movement-rifle-02.ogg",common .. "movement-rifle-03.ogg",common .. "movement-rifle-04.ogg"}
@@ -156,7 +156,7 @@ SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-local tail = ")^/arccw_uc/common/762x39/"
+local tail = ")/arccw_uc/common/762x39/"
 
 SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-762x39-rif-ext-01.ogg",

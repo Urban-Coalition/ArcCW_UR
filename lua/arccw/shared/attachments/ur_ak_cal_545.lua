@@ -32,9 +32,9 @@ att.Override_ShellScale = 0.666
 att.GivesFlags = {"cal_545"}
 
 att.ActivateElements = {"mag_545_30"}
-local path = ")^weapons/arccw_ur/ak/545_39/"
-local path1 = ")^weapons/arccw_ur/ak/"
-local path2 = ")^weapons/arccw_ur/ak/556/"
+local path = ")weapons/arccw_ur/ak/545_39/"
+local path1 = ")weapons/arccw_ur/ak/"
+local path2 = ")weapons/arccw_ur/ak/556/"
 
 att.Hook_GetShootSound = function(wep, fsound)
     --[[if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {

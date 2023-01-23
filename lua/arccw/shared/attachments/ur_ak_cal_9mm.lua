@@ -41,9 +41,9 @@ end
 
 att.GivesFlags = {"cal_9mm"}
 att.ActivateElements = {"mag_9mm"}
-local path = ")^weapons/arccw_ur/ak/9mm/"
+local path = ")weapons/arccw_ur/ak/9mm/"
 
-local soundpath = ")^weapons/arccw_ur/1911/fire-9-"
+local soundpath = ")weapons/arccw_ur/1911/fire-9-"
 
 att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSound or fsound == wep.FirstShootSoundSilenced then return {
@@ -64,7 +64,7 @@ att.Hook_GetShootSound = function(wep, fsound)
     } end
 end
 
-local tail = ")^/arccw_uc/common/9x19/"
+local tail = ")/arccw_uc/common/9x19/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then

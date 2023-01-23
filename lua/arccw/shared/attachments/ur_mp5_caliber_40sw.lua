@@ -27,30 +27,38 @@ att.Mult_Recoil = 1.15
 --att.Mult_ClipSize = .9
 att.Override_ShellScale = 1.1
 
-local path = ")^weapons/arccw_ur/mp5/"
+local path = ")weapons/arccw_ur/mp5/"
+local fire40 = {path .. "fire-40-01.ogg",path .. "fire-40-02.ogg",path .. "fire-40-03.ogg",path .. "fire-40-04.ogg",path .. "fire-40-05.ogg",path .. "fire-40-06.ogg"}
+local fire40sup = {path .. "fire-40-sup-01.ogg",path .. "fire-40-sup-02.ogg",path .. "fire-40-sup-03.ogg",path .. "fire-40-sup-04.ogg",path .. "fire-40-sup-05.ogg",path .. "fire-40-sup-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return {path .. "fire-40-sup-01.ogg",path .. "fire-40-sup-02.ogg",path .. "fire-40-sup-03.ogg",path .. "fire-40-sup-04.ogg",path .. "fire-40-sup-05.ogg",path .. "fire-40-sup-06.ogg"} -- Placeholder
+        return fire40sup
     else
-        return {path .. "fire-40-01.ogg",path .. "fire-40-02.ogg",path .. "fire-40-03.ogg",path .. "fire-40-04.ogg",path .. "fire-40-05.ogg",path .. "fire-40-06.ogg"}
+        return fire40
     end
 end
 
-local tail = ")^/arccw_uc/common/40sw/"
+local tail = ")/arccw_uc/common/40sw/"
+local fire40dist = {tail .. "fire-dist-40sw-pistol-ext-01.ogg", tail .. "fire-dist-40sw-pistol-ext-02.ogg", tail .. "fire-dist-40sw-pistol-ext-03.ogg", tail .. "fire-dist-40sw-pistol-ext-04.ogg", tail .. "fire-dist-40sw-pistol-ext-05.ogg", tail .. "fire-dist-40sw-pistol-ext-06.ogg"}
+local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-40sw-pistol-ext-01.ogg",
-            tail .. "fire-dist-40sw-pistol-ext-02.ogg",
-            tail .. "fire-dist-40sw-pistol-ext-03.ogg",
-            tail .. "fire-dist-40sw-pistol-ext-04.ogg",
-            tail .. "fire-dist-40sw-pistol-ext-05.ogg",
-            tail .. "fire-dist-40sw-pistol-ext-06.ogg"
-        }
+        return fire40dist
+    end
+end
+
+
+local fire40distint = {common .. "fire-dist-int-pistol-heavy-01.ogg", common .. "fire-dist-int-pistol-heavy-02.ogg", common .. "fire-dist-int-pistol-heavy-03.ogg", common .. "fire-dist-int-pistol-heavy-04.ogg", common .. "fire-dist-int-pistol-heavy-05.ogg", common .. "fire-dist-int-pistol-heavy-06.ogg"}
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return fire40distint
     end
 end
 

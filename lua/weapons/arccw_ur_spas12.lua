@@ -190,9 +190,9 @@ SWEP.BarrelOffsetHip = Vector(3, 0, -4.5)
 
 -- Firing sounds --
 
-local path1 = ")^weapons/arccw_ud/870/"
-local path = ")^weapons/arccw_ur/spas12/"
-local common = ")^/arccw_uc/common/"
+local path1 = ")weapons/arccw_ud/870/"
+local path = ")weapons/arccw_ur/spas12/"
+local common = ")/arccw_uc/common/"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 --[[SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg"}
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
@@ -214,7 +214,7 @@ SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-05.ogg",
 }
 
-local tail = ")^/arccw_uc/common/12ga/"
+local tail = ")/arccw_uc/common/12ga/"
 
 SWEP.ShootSoundSilenced = {
     tail .. "fire-sup-01.ogg",

@@ -20,29 +20,28 @@ att.Mult_ShootSpeedMult = 1.1
 att.Mult_RPM = 1 + (1/6)
 
 att.Override_Trivia_Calibre = att.AbbrevName -- E F F I C I E N C Y
-att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
 att.Override_ShellScale = 1
+
+local path = ")^weapons/arccw_ur/sw329/"
+local fire44 = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ur/deagle/fire_supp_10.ogg" -- Placeholder
+        return fire44sup
     else
-        return {"weapons/arccw_ur/sw329/fire-01.ogg", "weapons/arccw_ur/sw329/fire-02.ogg", "weapons/arccw_ur/sw329/fire-03.ogg", "weapons/arccw_ur/sw329/fire-04.ogg", "weapons/arccw_ur/sw329/fire-05.ogg", "weapons/arccw_ur/sw329/fire-06.ogg"} -- Not Placeholder
+        return fire44
     end
 end
-local tail = ")^/arccw_uc/common/44mag/"
+
+local tail = ")/arccw_uc/common/44mag/"
+local fire44dist = {tail .. "fire-dist-44mag-pistol-ext-01.ogg", tail .. "fire-dist-44mag-pistol-ext-02.ogg", tail .. "fire-dist-44mag-pistol-ext-03.ogg", tail .. "fire-dist-44mag-pistol-ext-04.ogg", tail .. "fire-dist-44mag-pistol-ext-05.ogg", tail .. "fire-dist-44mag-pistol-ext-06.ogg"}
+local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-44mag-pistol-ext-01.ogg",
-            tail .. "fire-dist-44mag-pistol-ext-02.ogg",
-            tail .. "fire-dist-44mag-pistol-ext-03.ogg",
-            tail .. "fire-dist-44mag-pistol-ext-04.ogg",
-            tail .. "fire-dist-44mag-pistol-ext-05.ogg",
-            tail .. "fire-dist-44mag-pistol-ext-06.ogg"
-        }
+        return fire44dist
     end
 end
