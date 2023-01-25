@@ -34,14 +34,17 @@ att.GivesFlags = {"cal_545"}
 att.ActivateElements = {"mag_545_30"}
 local path = ")weapons/arccw_ur/ak/545_39/"
 local path1 = ")weapons/arccw_ur/ak/"
-local path2 = ")weapons/arccw_ur/ak/556/"
+local tail = ")/arccw_uc/common/556x45/"
+local fire545dist = {tail .. "fire-dist-556x45-rif-ext-01.ogg",tail .. "fire-dist-556x45-rif-ext-02.ogg",tail .. "fire-dist-556x45-rif-ext-03.ogg",tail .. "fire-dist-556x45-rif-ext-04.ogg",tail .. "fire-dist-556x45-rif-ext-05.ogg",tail .. "fire-dist-556x45-rif-ext-06.ogg"}
+local fire545 = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"}
+local fire545supp = {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, fsound)
-    --[[if fsound == wep.FirstShootSound or fsound == wep.FirstShootSound then return {
-        path .. "stalol/fire_545_1.wav",
-     } end]]
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} end
-    if fsound == wep.ShootSoundSilenced then return {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"} end
+    if wep:GetBuff_Override("Silencer") then
+        return fire545supp
+    else
+        return fire545
+    end
 end
 
 
@@ -49,7 +52,7 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {path2 .. "fire-dist-01.ogg", path2 .. "fire-dist-02.ogg", path2 .. "fire-dist-03.ogg", path2 .. "fire-dist-04.ogg", path2 .. "fire-dist-05.ogg", path2 .. "fire-dist-06.ogg"}
+        return fire545dist
     end
 end
 
