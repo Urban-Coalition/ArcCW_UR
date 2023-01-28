@@ -1010,7 +1010,7 @@ SWEP.Hook_NameChange = function(wep,name)
                 start = "Type "
                 post = "56"
             end
-        elseif barr == "74m" then
+        elseif (hg == "74m" or hg == "rpk74m" or hg == "ak12") and stock == "ak74m" then
             noN = true
             post = "-103"
         end
