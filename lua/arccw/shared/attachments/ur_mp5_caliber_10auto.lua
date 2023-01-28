@@ -7,10 +7,11 @@ end
 
 att.SortOrder = 80
 att.Icon = Material("entities/att/uc_bullets/10.png", "smooth mips")
-att.Description = "The FBI's preferred caliber of choice.\nSignificantly more powerful, but weapon handling suffers."
+att.Description = "The FBI's preferred caliber of choice.\nSignificantly more powerful, but with reliability issues, and weapon handling suffers."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "uc.jam"
 }
 att.Desc_Neutrals = {
 }
@@ -26,10 +27,13 @@ att.Mult_DamageMin = 1.15
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.25
 att.Mult_ReloadTime = 1.15
-att.Mult_MalfunctionMean = 0.75
 
 --att.Mult_ClipSize = 0.9
 att.Override_ShellScale = 1.1
+
+att.Override_Malfunction = true
+att.Mult_MalfunctionMean = 0.4
+att.Mult_MalfunctionVariance = 1.5
 
 local path = ")weapons/arccw_ur/1911/"
 local path1 = ")weapons/arccw_ur/mp5/"

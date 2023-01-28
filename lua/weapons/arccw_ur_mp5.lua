@@ -65,12 +65,12 @@ SWEP.ProceduralIronFire = true
 
 -- Damage --
 
-SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
-SWEP.DamageMin = 17 -- 6 shot long range kill
+SWEP.Damage = ArcCW.UC.StdDmg["9mm"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["9mm"].min
+SWEP.Penetration = ArcCW.UC.StdDmg["9mm"].pen
 SWEP.RangeMin = 20
-SWEP.Range = 100 -- 4 shot until ~50m
+SWEP.Range = 100
 
-SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 400
