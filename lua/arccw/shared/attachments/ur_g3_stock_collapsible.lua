@@ -22,7 +22,6 @@ att.ToggleStats = {
         ActivateElements = {"stock_g3_collapsible"},
         AutoStats = true,
         Mult_Recoil = 1.2,
-        Override_ActivePos = Vector(0.3, 1.7, 0.8)
     },
     {
         PrintName = "Collapsed",
@@ -36,6 +35,5 @@ att.ToggleStats = {
         Mult_Recoil = 1.5,
         Mult_RecoilSide = 1.25,
         Mult_Sway = 3,
-        Override_ActivePos = Vector(0.3, 2.1, 0.95)
     }
 }

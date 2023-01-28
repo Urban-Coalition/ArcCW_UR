@@ -17,5 +17,3 @@ att.Mult_SightTime = .9
 
 att.Mult_Sway = 1.5
 att.Mult_RecoilSide = 1.5
-
-att.Override_ActivePos = Vector(0.5, 1.5, 0.7)

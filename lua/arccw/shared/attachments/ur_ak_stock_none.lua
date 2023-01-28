@@ -19,6 +19,4 @@ att.Mult_ShootSpeedMult = 1.15
 att.Add_BarrelLength = -9
 att.Mult_Sway = 3
 
-att.Override_ActivePos = Vector(0.5, 2, 0.5)
-
 att.ActivateElements = {"stock_none"}
