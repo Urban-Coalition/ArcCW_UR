@@ -523,9 +523,8 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Stock",
-        Slot = {"uc_stock", "go_stock_pistol_bt"},
-        VMScale = Vector(1.1, 1.1, 1.1),
+        PrintName = "Grip",
+        Slot = {"ur_329_grip", "uc_stock", "go_stock_pistol_bt"},
         Bone = "Body",
         Offset = {
             vpos = Vector(-2, 2, 0),

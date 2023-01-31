@@ -6,6 +6,7 @@ end
 att.Icon = Material("entities/att/acwatt_ur_deagle_grip_plastic.png","mips smooth")
 att.Description = "Polymer grip which improves handling at the cost of increased recoil."
 att.Slot = "ur_329_grip"
+att.Ignore = true
 att.AutoStats = true
 att.SortOrder = 6
 
