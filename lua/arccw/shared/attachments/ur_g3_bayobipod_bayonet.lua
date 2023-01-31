@@ -8,6 +8,6 @@ end
 att.Icon = false
 att.Description = "Bayonet"
 att.Slot = "ur_g3_bayobipod"
-att.SortOrder = 1
+att.SortOrder = 999
 
 att.IgnorePickX = true

@@ -8,6 +8,6 @@ end
 att.Icon = false
 att.Description = "Bipod"
 att.Slot = "ur_g3_bayobipod"
-att.SortOrder = 2
+att.SortOrder = 998
 
 att.IgnorePickX = true
