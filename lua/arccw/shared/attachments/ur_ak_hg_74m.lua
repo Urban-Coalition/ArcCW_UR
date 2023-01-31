@@ -6,9 +6,9 @@ att.AutoStats = true
 
 att.SortOrder = 16
 
-att.Mult_Sway = .85
-att.Mult_SightTime = .85
-att.Mult_Recoil = 1.15
+att.Mult_Sway = 0.9
+att.Mult_SightTime = 0.9
+att.Mult_Recoil = 1.1
 
 att.ToggleLockDefault = true
 att.ToggleStats = {

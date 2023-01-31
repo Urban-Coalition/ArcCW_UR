@@ -8,8 +8,8 @@ att.AutoStats = true
 
 att.SortOrder = 16
 
-att.Mult_Recoil = .825
-att.Mult_SightTime = 1.125
+att.Mult_Recoil = .82
+att.Mult_SightTime = 1.12
 att.Mult_MoveDispersion = 1.25
 
 att.ActivateElements = {"barrel_dong"}

@@ -5,7 +5,7 @@ att.Description = "Rough US-made polymer grip, prodiving a bit more sighted mobi
 att.AutoStats = true
 att.Slot = {"ur_ak_grip"}
 
-att.Mult_Recoil = 1.1
+att.Mult_Recoil = 1.05
 att.Mult_SightedSpeedMult = 1.05
 
 att.ActivateElements = {"grip_alpha"}

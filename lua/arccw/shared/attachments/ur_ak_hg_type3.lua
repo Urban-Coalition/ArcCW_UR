@@ -9,7 +9,7 @@ att.AutoStats = true
 att.SortOrder = 16
 
 att.Mult_Recoil = 1.05
-att.Mult_SightedSpeedMult = 1.075
+att.Mult_SightedSpeedMult = 1.08
 
 att.ActivateElements = {"barrel_akm"}
 

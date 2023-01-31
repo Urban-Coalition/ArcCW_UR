@@ -5,7 +5,7 @@ att.AutoStats = true
 att.Slot = {"ur_ak_grip"}
 
 
-att.Mult_Recoil = .9
-att.Mult_SightTime = 1.1
+att.Mult_Recoil = 0.95
+att.Mult_SightTime = 1.05
 
 att.ActivateElements = {"grip_akm"}
