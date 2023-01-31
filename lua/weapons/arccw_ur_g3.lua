@@ -420,6 +420,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     local ub = atts[6].Installed or atts[15].Installed
     local optic = atts[1].Installed
     local charm = atts[14].Installed
+    local bayobipod = atts[17].Installed
 
     local hgind = hgbg[hg] or 0
 
@@ -455,6 +456,15 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     vm:SetBodygroup(10, (optic or charm == "ur_mp5_optic_mount") and (opticbg[optic] and 0 or 1) or 0)
 
     vm:SetBodygroup(8, ub and (ubmountbg[hg] or 1) or 0)
+
+    local todo = 0
+    local short = barrel == "ur_g3_barrel_12" or barrel == "ur_g3_barrel_15"
+    if bayobipod == "ur_g3_bayobipod_bayonet" then
+        todo = short and 2 or 1
+    elseif bayobipod == "ur_g3_bayobipod_bipod" then
+        todo = short and 4 or 3
+    end
+    vm:SetBodygroup(7, todo)
 end
 
 SWEP.Hook_NameChange = function(wep)
@@ -592,6 +602,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.06, 22.5),
             vang = Angle(90, 0, -90),
         },
+        MergeSlots = {17},
     },
     {
         PrintName = "Underbarrel",
@@ -674,8 +685,12 @@ SWEP.Attachments = {
         Slot = "ur_g3_skin",
         DefaultAttName = "Gray",
         DefaultAttIcon = Material("entities/att/ur_g3/skin_gray.png", "smooth mips"),
-    }
-
+    },
+    {
+        PrintName = "UR G3 bayobipod slot",
+        Slot = "ur_g3_bayobipod",
+        ExcludeFlags = {"g3_hk51hg"},
+    },
 }
 
 SWEP.Animations = {
