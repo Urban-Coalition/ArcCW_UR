@@ -75,7 +75,8 @@ SWEP.Num = 8
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 200
+SWEP.MuzzleVelocity = 365
+SWEP.PhysBulletMuzzleVelocity = 365
 
 SWEP.HullSize = 0.25
 
