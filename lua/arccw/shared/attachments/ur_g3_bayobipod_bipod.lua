@@ -11,3 +11,4 @@ att.Slot = "ur_g3_bayobipod"
 att.SortOrder = 998
 
 att.IgnorePickX = true
+att.Ignore = true
