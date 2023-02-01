@@ -27,7 +27,7 @@ att.AdditionalSights = {
     {
         Pos = Vector(0.01, 11.5, -1.12),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.25,
+        Magnification = 1.1,
         HolosightData = {
             Holosight = true,
             HolosightReticle = Material("hud/scopes/PSG1_reticle.png", "mips smooth"),
@@ -35,7 +35,7 @@ att.AdditionalSights = {
             HolosightSize = 9.5,
             HolosightPiece = "models/weapons/arccw/atts/g3_optic_psg_hsp.mdl",
             HolosightBlackbox = true,
-            HolosightMagnification = 6,
+            HolosightMagnification = UC_HalfScope( 6 ),
             Colorable = true,
         },
     }
