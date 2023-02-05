@@ -615,7 +615,8 @@ SWEP.Animations = {
         Time = 27 / 30,
         MinProgress = 0.2,
         SoundTable = {
-            SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
         },
     },
 

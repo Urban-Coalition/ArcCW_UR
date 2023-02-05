@@ -357,6 +357,14 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         SoundTable = {
+            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0, v = 0.75 }
+        },
+        MinProgress = .2,
+    },
+    ["fire_iron"] = {
+        Source = "fire",
+        SoundTable = {
+            {s = common .. "common_mech_light.ogg", t = 0},
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
         MinProgress = .2,

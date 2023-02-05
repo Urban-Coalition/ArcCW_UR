@@ -444,7 +444,10 @@ SWEP.Animations = {
         Source = {"fire_01", "fire_02", "fire_03"},
         Time = 0.9,
         ShellEjectAt = 0.05,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+        },
     },
     ["fire_jammed"] = {
         Source = "fire_jammed",
@@ -460,7 +463,10 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 0.9,
         ShellEjectAt = 0.05,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            { s = {path .. "mech-last.ogg", t = 0 }}
+        },
     },
 
     -- 7-R Reloads --

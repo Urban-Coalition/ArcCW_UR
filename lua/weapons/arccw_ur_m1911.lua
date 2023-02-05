@@ -502,7 +502,10 @@ SWEP.Animations = {
         Source = "fire",
         Time = 30 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            {s = common .. "common_mech_light.ogg", t = 0},
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -517,7 +520,10 @@ SWEP.Animations = {
         Time = 24 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            { s = path .. "mech_last.ogg", t = 0 },
+            SoundTable = {
+                {s = common .. "common_mech_light.ogg", t = 0},
+                { s = path .. "mech_last.ogg", t = 0 }
+            },
         },
     },
     ["fire_jammed"] = {

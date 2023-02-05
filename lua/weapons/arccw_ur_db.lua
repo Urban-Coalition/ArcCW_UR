@@ -311,7 +311,10 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = "fire",
         -- Time = 23 / 25,--30,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+        },
     },
 
     ["fire_empty"] = { -- second barrel
@@ -322,7 +325,10 @@ SWEP.Animations = {
     ["fire_iron_empty"] = {
         Source = "fire_empty", -- fire_empty
         -- Time = 23 / 25,--30,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0}},
+        SoundTable = {
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+        },
     },
 
     ["fire_2bst"] = { -- both

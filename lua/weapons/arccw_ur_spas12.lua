@@ -326,19 +326,30 @@ SWEP.Animations = {
         Source = "fire_semi",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
+        SoundTable = {
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 },
+            {s = path1 .. "eject.ogg", t = 0.01},
+        },
     },
     ["fire_iron"] = {
         Source = "fire_semi",
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 },
+            {s = path1 .. "eject.ogg", t = 0.01},
+        },
     },
     ["fire_2bst"] = {
         Source = "fire_semi",
         Time = 35 / 25,--30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 },
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+            {s = path1 .. "eject.ogg", t = 0.01},
+        },
         MinProgress = 0.4
     },
     ["fire_manual"] = { -- No bolt cycling
@@ -346,7 +357,10 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         MinProgress = 0.3,
         ShellEjectAt = false,
-        SoundTable = {{ s = common .. "manual_trigger.ogg", t = 0}},
+        SoundTable = {
+            { s = common .. "manual_trigger.ogg", t = 0},
+            {s = common .. "common_mech_heavy.ogg", t = 0},
+        },
     },
     ["cycle"] = {
         Source = "cycle",
