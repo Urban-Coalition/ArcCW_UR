@@ -681,6 +681,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 vm:SetBodygroup(8,0)
             end
         end
+    elseif muzz == "ur_ak_muzzle_ak74" then
+        vm:SetBodygroup(8,3)
     elseif barr == "default" then
         vm:SetBodygroup(8,0)
     else
