@@ -7,7 +7,7 @@ att.AutoStats = true
 att.SortOrder = 16
 
 att.Mult_Sway = .8
-att.Mult_SightTime = 1.05
-att.Mult_Recoil = 0.95
+att.Mult_SightTime = 1.1
+att.Mult_Recoil = 0.9
 
 att.ActivateElements = {"barrel_rpk74m"}
