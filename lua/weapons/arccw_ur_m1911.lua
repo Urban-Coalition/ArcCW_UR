@@ -520,10 +520,8 @@ SWEP.Animations = {
         Time = 24 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            SoundTable = {
-                {s = common .. "common_mech_light.ogg", t = 0},
-                { s = path .. "mech_last.ogg", t = 0 }
-            },
+            {s = common .. "common_mech_light.ogg", t = 0},
+            { s = path .. "mech_last.ogg", t = 0 }
         },
     },
     ["fire_jammed"] = {
