@@ -199,6 +199,8 @@ SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = common .. "manual_trigger.ogg"
 
+local tail = ")/arccw_uc/common/12ga/"
+
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
     path .. "fire-02.ogg",
@@ -215,15 +217,13 @@ SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-05.ogg",
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-int-shotgun-01.ogg",
-    common .. "fire-dist-int-shotgun-02.ogg",
-    common .. "fire-dist-int-shotgun-03.ogg",
-    common .. "fire-dist-int-shotgun-04.ogg",
-    common .. "fire-dist-int-shotgun-05.ogg",
-    common .. "fire-dist-int-shotgun-06.ogg"
+    tail .. "fire-dist-12ga-pasg-int-01.ogg",
+    tail .. "fire-dist-12ga-pasg-int-02.ogg",
+    tail .. "fire-dist-12ga-pasg-int-03.ogg",
+    tail .. "fire-dist-12ga-pasg-int-04.ogg",
+    tail .. "fire-dist-12ga-pasg-int-05.ogg",
+    tail .. "fire-dist-12ga-pasg-int-06.ogg"
 }
-
-local tail = ")/arccw_uc/common/12ga/"
 
 SWEP.ShootSoundSilenced = {
     tail .. "fire-sup-01.ogg",
@@ -523,7 +523,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = shellin,  t = 0},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05, v = 0.5},
         },
     },
     ["sgreload_insert_fold"] = {
