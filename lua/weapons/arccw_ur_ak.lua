@@ -813,8 +813,8 @@ SWEP.Attachments = {
         },
         VMScale = Vector(1, 1, 1),
         SlideAmount = {
-            vmin = Vector(0,10.5,1.9),
-            vmax = Vector(0,13.5,1.9)
+            vmin = Vector(0,10.5,1.8),
+            vmax = Vector(0,13.5,1.8)
         },
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"ak_noubs"},
