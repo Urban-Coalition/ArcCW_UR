@@ -30,12 +30,14 @@ att.Mult_ShootSpeedMult = 0.8
 local path = ")weapons/arccw_ur/aw_placeholders/338/"
 local path1 = ")weapons/arccw_ur/aw_placeholders/"
 
+local fire338 = {path .. "fire-01.ogg",path .. "fire-02.ogg",path .. "fire-03.ogg",path .. "fire-04.ogg",path .. "fire-05.ogg",path .. "fire-06.ogg"}
 local fire338sup = {path1 .. "fire-sup-01.ogg",path1 .. "fire-sup-02.ogg",path1 .. "fire-sup-03.ogg",path1 .. "fire-sup-04.ogg",path1 .. "fire-sup-05.ogg",path1 .. "fire-sup-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
         return fire338sup
     else
+        return fire338
     end
 end
 

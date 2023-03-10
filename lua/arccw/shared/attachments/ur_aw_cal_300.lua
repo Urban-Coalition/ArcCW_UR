@@ -28,7 +28,7 @@ att.Mult_ShootSpeedMult = 0.9
 local path = ")weapons/arccw_ur/aw_placeholders/338/"
 local path1 = ")weapons/arccw_ur/aw_placeholders/"
 
-local fire300 = {path .. "fire-01.ogg",path .. "fire-02.ogg",path .. "fire-03.ogg",path .. "fire-04.ogg",path .. "fire-05.ogg",path .. "fire-06.ogg"}
+local fire300 = {path .. "fire-300-01.ogg",path .. "fire-300-02.ogg",path .. "fire-300-03.ogg",path .. "fire-300-04.ogg",path .. "fire-300-05.ogg",path .. "fire-300-06.ogg"}
 local fire300sup = {path1 .. "fire-sup-01.ogg",path1 .. "fire-sup-02.ogg",path1 .. "fire-sup-03.ogg",path1 .. "fire-sup-04.ogg",path1 .. "fire-sup-05.ogg",path1 .. "fire-sup-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, sound)
