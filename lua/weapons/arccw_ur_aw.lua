@@ -842,10 +842,10 @@ SWEP.Animations = {
         SoundTable = {
             {s = ratel,                             t = 0.07},
             {s = testpath .. "boltup.ogg",          t = 0.1},
-            {s = testpath .. "boltback.ogg",        t = 0.2},
+            {s = testpath .. "boltback.ogg",        t = 0.25},
             {s = testpath .. "boltforward.ogg",     t = 0.32},
             {s = testpath .. "eject.ogg",           t = 0.4},
-            {s = testpath .. "boltdown.ogg",        t = 0.6},
+            {s = testpath .. "boltdown.ogg",        t = 0.55},
 
             --{s = common .. "shoulder.ogg",          t = 0.7},
         },
