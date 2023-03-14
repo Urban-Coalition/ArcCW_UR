@@ -17,7 +17,7 @@ att.Mult_DrawTime = 1.1
 att.Mult_HolsterTime = 1.1
 att.Mult_SightedSpeedMult = 0.85
 att.Mult_ShootSpeedMult = 0.85
-att.Mult_Recoil = 0.9
+att.Mult_RecoilSide = 0.75
 
 att.ToggleStats = {
     {
@@ -31,6 +31,7 @@ att.ToggleStats = {
         ActivateElements = {"stock_ump_folded"},
         AutoStats = true,
         Add_BarrelLength = -12,
-        Mult_Sway = 3,
+        Mult_Recoil = 1.75,
+        Mult_Sway = 2.5,
     }
 }
