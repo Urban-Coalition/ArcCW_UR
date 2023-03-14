@@ -13,8 +13,7 @@ att.Slot = "ur_mp5_stock"
 att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
-att.Mult_Recoil = 1.5
-att.Mult_RecoilSide = 1.15
+att.Mult_RecoilSide = 1.25
 att.Mult_SightTime = 0.90
 
 att.Mult_DrawTime = 0.85
@@ -34,6 +33,7 @@ att.ToggleStats = {
         AutoStats = true,
         Add_BarrelLength = -9,
 
+        Mult_Recoil = 1.75,
         Mult_Sway = 2,
         Mult_ShootSpeedMult = 1.12,
         Mult_SightedSpeedMult = 1.12,

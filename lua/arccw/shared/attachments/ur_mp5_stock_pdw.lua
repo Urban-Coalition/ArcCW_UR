@@ -14,7 +14,7 @@ att.ToggleLockDefault = true
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
 att.Mult_MoveDispersion = .85
-att.Mult_Recoil = 1.5
+att.Mult_Recoil = 1.15
 att.Mult_RecoilSide = 1.25
 
 
@@ -33,7 +33,7 @@ att.ToggleStats = {
         ActivateElements = {"stock_pdw_folded"},
         AutoStats = true,
         Add_BarrelLength = -12,
-        Mult_Recoil = 2,
+        Mult_Recoil = 1.75,
         Mult_ShootSpeedMult = 1.20,
         Mult_SightedSpeedMult = 1.20,
         Mult_Sway = 3,
