@@ -391,6 +391,8 @@ end
 
 -- Animations --
 
+local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}
+
 SWEP.Animations = {
     ["idle_empty"] = {
         Source = "idle_empty",
@@ -438,34 +440,40 @@ SWEP.Animations = {
         Source = {"fire_01", "fire_02", "fire_03"},
         Time = 0.9,
         ShellEjectAt = 0.05,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
+        SoundTable = {
+            { s = mech, t = 0, v = 0.5 }
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_01", "fire_02", "fire_03"},
         Time = 0.9,
         ShellEjectAt = 0.05,
         SoundTable = {
-            {s = common .. "common_mech_heavy.ogg", t = 0},
-            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+            { s = common .. "common_mech_heavy.ogg", t = 0 },
+            { s = mech, t = 0 }
         },
     },
     ["fire_jammed"] = {
         Source = "fire_jammed",
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            { s = mech, t = 0 }
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 0.9,
         ShellEjectAt = 0.05,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {
+            { s = path .. "mech_last.ogg", t = 0 }
+        },
     },
     ["fire_iron_empty"] = {
         Source = "fire_empty",
         Time = 0.9,
         ShellEjectAt = 0.05,
         SoundTable = {
-            {s = common .. "common_mech_heavy.ogg", t = 0},
-            { s = {path .. "mech-last.ogg", t = 0 }}
+            { s = common .. "common_mech_heavy.ogg", t = 0 },
+            { s = path .. "mech-last.ogg", t = 0 }
         },
     },
 
@@ -583,7 +591,6 @@ SWEP.Animations = {
         LHIKEaseOut = .75,
     },
     -- Inspecc --
-                                    -- disabled due to suck balls
     ["enter_inspect"] = {
         Source = "enter_inspect",
         time = 35 / 60,

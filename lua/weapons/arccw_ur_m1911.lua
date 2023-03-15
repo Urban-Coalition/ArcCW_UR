@@ -132,7 +132,6 @@ SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.MagID = "m1911"
 
 -- Speed multipliers --
 
@@ -378,34 +377,9 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.Hook_ModifyBodygroups = function(wep, data)
-    -- local vm = data.vm
-    -- if !IsValid(vm) then return end
-
-    -- local att_skin = wep.Attachments[14].Installed
-    -- local att_slide = wep.Attachments[2].Installed
-
-    -- if att_slide == "ur_1911_slide_m45" and att_skin == "ur_1911_skin_custom" then
-    --     vm:SetBodygroup(1, 3)
-    -- end
-end
-
--- SWEP.Hook_NameChange = function(wep,name)
---     if GetConVar("arccw_truenames"):GetBool() then
---         local atts = wep.Attachments
---         local cal = string.Replace(atts[3].Installed or "45acp", "ur_1911_cal_", "")
-
---         if cal == "10auto" then return GetConVar("arccw_truenames"):GetBool() and "Delta Elite" or ""
---         elseif cal == "9mm" then return GetConVar("arccw_truenames"):GetBool() and "SR1911" or ""
---         end
-
---         return "M1911"
---     else
---         return "AMAS"
---     end
--- end
-
 -- Animations --
+
+local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -496,15 +470,17 @@ SWEP.Animations = {
         Source = "fire",
         Time = 30 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
+        SoundTable = {
+            { s = mech, t = 0, v = 0.25 }
+        },
     },
     ["fire_iron"] = {
         Source = "fire",
         Time = 30 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = common .. "common_mech_light.ogg", t = 0},
-            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+            { s = common .. "common_mech_light.ogg", t = 0 },
+            { s = mech, t = 0 }
         },
     },
     ["fire_empty"] = {
@@ -520,7 +496,7 @@ SWEP.Animations = {
         Time = 24 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = common .. "common_mech_light.ogg", t = 0},
+            { s = common .. "common_mech_light.ogg", t = 0 },
             { s = path .. "mech_last.ogg", t = 0 }
         },
     },
@@ -643,8 +619,8 @@ SWEP.Animations = {
         ShellEjectAt = 30 / 60,
         SoundTable = {
             { s = rottle, t = 0 / 60 },
-            { s = path .. "mech.ogg",t = 28 / 60}, -- Temporary
-            { s = path .. "slidedrop.ogg",t = 35 / 60},
+            { s = path .. "mech.ogg", t = 28 / 60}, -- Temporary
+            { s = path .. "slidedrop.ogg", t = 35 / 60},
         },
     },
 
