@@ -43,12 +43,21 @@ end
 
 local tail = ")/arccw_uc/common/338lm/"
 local fire338dist = {tail .. "fire-dist-338lm-rif-ext-01.ogg", tail .. "fire-dist-338lm-rif-ext-02.ogg", tail .. "fire-dist-338lm-rif-ext-03.ogg", tail .. "fire-dist-338lm-rif-ext-04.ogg", tail .. "fire-dist-338lm-rif-ext-05.ogg", tail .. "fire-dist-338lm-rif-ext-06.ogg"}
+local fire338distint = {tail .. "fire-dist-338lm-rif-int-01.ogg", tail .. "fire-dist-338lm-rif-int-02.ogg", tail .. "fire-dist-338lm-rif-int-03.ogg", tail .. "fire-dist-338lm-rif-int-04.ogg", tail .. "fire-dist-338lm-rif-int-05.ogg", tail .. "fire-dist-338lm-rif-int-06.ogg"}
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
         return fire338dist
+    end
+end
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return fire338distint
     end
 end
 

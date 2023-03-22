@@ -135,7 +135,7 @@ local path1 = ")weapons/arccw_ur/mp5/"
 local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-local rutle = {common .. "movement-sniper-03.ogg",common .. "movement-sniper-04.ogg"}
+local rutle = {common .. "movement-sniper-01.ogg", common .. "movement-sniper-02.ogg", common .. "movement-sniper-03.ogg", common .. "movement-sniper-04.ogg"}
 
 SWEP.ShootSound = {
     testpath .. "fire-01.ogg",
@@ -168,12 +168,12 @@ SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-308-rif-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-int-shotgun-01.ogg",
-    common .. "fire-dist-int-shotgun-02.ogg",
-    common .. "fire-dist-int-shotgun-03.ogg",
-    common .. "fire-dist-int-shotgun-04.ogg",
-    common .. "fire-dist-int-shotgun-05.ogg",
-    common .. "fire-dist-int-shotgun-06.ogg"
+    tail .. "fire-dist-308-rif-int-01.ogg",
+    tail .. "fire-dist-308-rif-int-02.ogg",
+    tail .. "fire-dist-308-rif-int-03.ogg",
+    tail .. "fire-dist-308-rif-int-04.ogg",
+    tail .. "fire-dist-308-rif-int-05.ogg",
+    tail .. "fire-dist-308-rif-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup-tail-01.ogg",
