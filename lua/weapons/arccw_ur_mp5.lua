@@ -695,7 +695,7 @@ SWEP.Animations = {
         Time = 13 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {
-            {s = common .. "common_mech_light.ogg", t = 0, v = 0.4},
+            {s = common .. "common_mech_light.ogg", t = 0, v = 0.25},
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
         },
     },
@@ -743,7 +743,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",         t = 0.61, c = ci},
             {s = common .. "magpouchin.ogg", t = 1.25},
             {s = ratel,  t = 1.55},
-            {s = common .. "shoulder.ogg",  t = 1.5},
+            {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
     ["reload_empty"] = {
@@ -768,8 +768,8 @@ SWEP.Animations = {
             {s = common .. "magdrop_smg.ogg",  t = 1.5},
             {s = rottle, t = 1.25},
             {s = path .. "chamber.ogg",         t = 2.05, c = ci},
-            {s = ratel,  t = 2.4},
-            {s = common .. "shoulder.ogg",  t = 2.6},
+            {s = ratel,  t = 2.3},
+            {s = common .. "shoulder.ogg",  t = 2.45},
         },
     },
     ["reload_kurz"] = {
@@ -842,7 +842,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",         t = 0.5, c = ci},
             {s = common .. "magpouchin.ogg", t = 1.25},
             {s = ratel,  t = 1.55},
-            {s = common .. "shoulder.ogg",  t = 1.5},
+            {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
     ["reload_empty_15"] = {
@@ -868,7 +868,7 @@ SWEP.Animations = {
             {s = rottle, t = 1.25},
             {s = path .. "chamber.ogg",         t = 2.13, c = ci},
             {s = ratel,  t = 2.4},
-            {s = common .. "shoulder.ogg",  t = 2.6},
+            {s = common .. "shoulder.ogg",  t = 2.45},
         },
     },
     ["reload_empty_kurz_15"] = {
