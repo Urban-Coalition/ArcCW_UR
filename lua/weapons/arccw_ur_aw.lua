@@ -612,7 +612,10 @@ SWEP.Animations = {
         Source = {"fire_iron"},
         Time = 27 / 30,
         MinProgress = 0.2,
-        SoundTable = {{ s = {testpath .. "mech-01.ogg", testpath .. "mech-02.ogg", testpath .. "mech-03.ogg", testpath .. "mech-04.ogg", testpath .. "mech-05.ogg", testpath .. "mech-06.ogg"}, t = 0, v = 0.25 }},
+        SoundTable = {
+            { s = common .. "common_mech_heavy.ogg", t = 0 },
+            { s = {testpath .. "mech-01.ogg", testpath .. "mech-02.ogg", testpath .. "mech-03.ogg", testpath .. "mech-04.ogg", testpath .. "mech-05.ogg", testpath .. "mech-06.ogg"}, t = 0, v = 0.25 }
+        },
     },
 
     ["reload"] = {
