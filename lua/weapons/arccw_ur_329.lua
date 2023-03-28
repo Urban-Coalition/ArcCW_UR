@@ -301,6 +301,8 @@ SWEP.Hook_TranslateAnimation = function(wep,anim)
     end
 end
 
+local hamr = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -357,6 +359,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         SoundTable = {
+            { s = hamr, t = 0, v = .25 },
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0, v = 0.75 }
         },
         MinProgress = .2,
@@ -364,7 +367,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = "fire",
         SoundTable = {
-            {s = common .. "common_mech_light.ogg", t = 0},
+            { s = hamr, t = 0, v = 1 },
             { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
         },
         MinProgress = .2,
@@ -372,13 +375,13 @@ SWEP.Animations = {
     ["fire_dry"] = {
         Source = "dryfire",
         SoundTable = {
-            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 }
+            { s = hamr, t = 0 }
         },
     },
     ["fire_dry_sact"] = {
         Source = "dryfire_sact",
         SoundTable = {
-            { s = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}, t = 0 },
+            { s = hamr, t = 0 },
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.25 + 0.2 },
         },
     },
