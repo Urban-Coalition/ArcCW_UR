@@ -1000,7 +1000,15 @@ SWEP.Hook_NameChange = function(wep,name)
     elseif barr == "rpk" or barr == "rpk74m" then
         start = (fakeNames and "PKF") or "RPK"
         if !fakeNames and barr == "rpk" and cal == "762" then
-            post = ""
+            if hg == "74m" or hg == "rpk74m" then
+                post = "-203"
+                noN = true
+            else
+                post = ""
+            end
+        elseif !fakeNames and cal == "556" then
+            noN = true
+            post = "-201"
         end
     elseif cal == "762" then
         if barr == "t56" then
