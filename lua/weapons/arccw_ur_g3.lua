@@ -690,6 +690,7 @@ SWEP.Attachments = {
         PrintName = "UR G3 bayobipod slot",
         Slot = "ur_g3_bayobipod",
         ExcludeFlags = {"g3_hk51hg"},
+		Hidden = true,
     },
 }
 
