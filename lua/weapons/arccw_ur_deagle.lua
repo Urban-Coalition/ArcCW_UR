@@ -419,20 +419,40 @@ SWEP.Animations = {
             { s = path .. "chamber.ogg", t = 20 / 60, c = ca },
         },
     },
+	
     ["draw"] = {
         Source = "draw",
-        ProcDraw = true,
         SoundTable = {
-            --{s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 20 / 30,
+        SoundTable = {
             {s = common .. "raise.ogg", t = 0.05},
         },
     },
     ["holster"] = {
         Source = "holster",
-        ProcHolster = true,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
         SoundTable = {
-            {s = rottle, t = 0},
-            --{s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "raise.ogg", t = 0.05},
         },
     },
 

@@ -177,8 +177,8 @@ SWEP.SprintAng = Angle(3.5, 7, -20)
 SWEP.HolsterPos = Vector(2.5, -1, -3)
 SWEP.HolsterAng = Angle(-3.5, 20, -20)
 
-SWEP.ActivePos = Vector(-0.3, -3, 0.1)
-SWEP.ActiveAng = Angle(1, 1, -1)
+SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, -2, 0)
 SWEP.CrouchAng = Angle(0, 0, -30)
@@ -274,6 +274,7 @@ SWEP.Hook_TranslateAnimation = function(wep,anim)
         return "idle_empty_manual"
     end
 end
+
 SWEP.Hook_SelectFireAnimation = function(wep,data)
     if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
         return "fire_2bst"
@@ -282,8 +283,13 @@ SWEP.Hook_SelectFireAnimation = function(wep,data)
     end
 end
 SWEP.Hook_SelectReloadAnimation = function(wep,curanim)
-    if wep:GetCurrentFiremode().Override_ManualAction and curanim == "sgreload_start_empty" then
+    local pump_rng = math.Truncate(util.SharedRandom("ik hou van u", 1,100)) -- nombre aleatoire, d'un a cent
+
+    if wep:GetCurrentFiremode().Override_ManualAction and pump_rng >= 50 and curanim == "sgreload_start_empty" then -- lol? how does else work again?
         return "sgreload_start_empty_manual"
+	end
+	if wep:GetCurrentFiremode().Override_ManualAction and pump_rng < 50 and curanim == "sgreload_start_empty" then
+		return "sgreload_start_empty_manual_alt" 
     end
 end
 
@@ -304,6 +310,11 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        --Time = 20 / 30,
+        SoundTable = ArcCW.UC.DrawSounds,
+    },  
+    ["ready"] = {
+        Source = "deploy",
         --Time = 20 / 30,
         SoundTable = ArcCW.UC.DrawSounds,
     },
@@ -402,7 +413,6 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",
-        Time = 25 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
@@ -430,7 +440,6 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty_semi",
-        Time = 80 / 30,
         -- MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -450,7 +459,6 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty_fold"] = {
         Source = "sgreload_start_empty_semi_fold",
-        Time = 80 / 30,
         -- MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -470,7 +478,27 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty_manual"] = {
         Source = "sgreload_start_empty",
-        Time = 85 / 30,
+        MinProgress = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+        TPAnimStartTime = 0.5,
+        ShellEjectAt = .1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = path .. "forearm_back.ogg", t = 0},
+            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = rottle, t = .2},
+            {s = path .. "breechload.ogg",  t = .7},
+            {s = path .. "forearm_forward.ogg", t = 1.6},
+            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
+            {s = rottle,  t = 1.5},
+            {s = path .. "grab.ogg",  t = 2.0},
+        },
+        ForceEmpty = true,
+    },  
+	["sgreload_start_empty_manual_alt"] = {
+        Source = "sgreload_start_empty_alt",
         MinProgress = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -514,7 +542,6 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
-        Time = 18 / 30,
         MinProgress = 0.24,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
@@ -542,7 +569,6 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 45 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
