@@ -315,8 +315,11 @@ SWEP.Animations = {
     },  
     ["ready"] = {
         Source = "deploy",
-        --Time = 20 / 30,
-        SoundTable = ArcCW.UC.DrawSounds,
+        SoundTable = {
+            ArcCW.UC.DrawSounds,
+            {s = path .. "forearm_back.ogg", t = 8/30},
+            {s = path .. "forearm_forward.ogg", t = 15/30}, -- Not temporary
+        },
     },
     ["draw_empty"] = {
         Source = "draw", -- draw_empty
@@ -324,18 +327,17 @@ SWEP.Animations = {
         SoundTable = ArcCW.UC.DrawSounds,
     },
     ["holster"] = {
-        Source = "holster",
+        Source = {"holster","holster2"},
         --Time = 20 / 30,
         SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_empty"] = {
-        Source = "holster", -- holster_empty
+        Source = {"holster","holster2"}, -- holster_empty
         --Time = 20 / 30,
         SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["fire"] = {
         Source = "fire_semi",
-        Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 },
@@ -344,7 +346,6 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = "fire_semi",
-        Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = common .. "common_mech_heavy.ogg", t = 0},
@@ -354,7 +355,6 @@ SWEP.Animations = {
     },
     ["fire_2bst"] = {
         Source = "fire_semi",
-        Time = 35 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 },
@@ -365,8 +365,7 @@ SWEP.Animations = {
     },
     ["fire_manual"] = { -- No bolt cycling
         Source = "fire_pump",
-        Time = 23 / 25,--30,
-        MinProgress = 0.3,
+        MinProgress = 0.1,
         ShellEjectAt = false,
         SoundTable = {
             { s = common .. "manual_trigger.ogg", t = 0},
@@ -374,10 +373,10 @@ SWEP.Animations = {
         },
     },
     ["cycle"] = {
-        Source = "cycle",
-        Time = 30 / 30,
+        Source = {"cycle", "cycle2"},
         ShellEjectAt = 0.1,
-        MinProgress = 0.35,
+        MinProgress = 0.4,
+        Time = 25 / 30,
         SoundTable = {
             {s = path .. "forearm_back.ogg", t = 0},
             {s = path1 .. "eject.ogg", t = 0.1},
@@ -386,7 +385,6 @@ SWEP.Animations = {
     },
     ["unjam"] = {
         Source = "cycle",
-        Time = 30 / 30,
         ShellEjectAt = 0.01,
         MinProgress = .25,
         SoundTable = {
@@ -397,7 +395,6 @@ SWEP.Animations = {
     },
     ["fire_empty"] = {
         Source = "fire_empty_semi", -- fire_empty
-        Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
@@ -405,7 +402,6 @@ SWEP.Animations = {
     },
     ["fire_iron_empty"] = {
         Source = "fire_empty_semi", -- fire_empty
-        Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
@@ -422,11 +418,12 @@ SWEP.Animations = {
             {s = path .. "turn.ogg",  t = 0}, -- Temporary
             {s = rottle,  t = 0.1},
             {s = path .. "grab.ogg",  t = 0.15},
+            {s = shellin,  t = 31/30},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = (31/30 + 0.05), v = 0.5},
         }
     },
     ["sgreload_start_fold"] = {
         Source = "sgreload_start_fold",
-        Time = 25 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
@@ -483,14 +480,14 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0,
         TPAnimStartTime = 0.5,
-        ShellEjectAt = .1,
+        ShellEjectAt = 15/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = path .. "forearm_back.ogg", t = 0},
-            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = path .. "forearm_back.ogg", t = 10/30},
+            {s = path1 .. "eject.ogg", t = 11/30},
+            {s = path .. "forearm_forward.ogg", t = 33/30}, -- Not temporary
             {s = rottle, t = .2},
-            {s = path .. "breechload.ogg",  t = .7},
-            {s = path .. "forearm_forward.ogg", t = 1.6},
+            {s = path .. "breechload.ogg",  t = 15/30},
             {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
             {s = rottle,  t = 1.5},
             {s = path .. "grab.ogg",  t = 2.0},
@@ -507,11 +504,11 @@ SWEP.Animations = {
         ShellEjectAt = .1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = path .. "forearm_back.ogg", t = 0},
-            {s = path1 .. "eject.ogg", t = 0.1},
+            {s = path .. "forearm_back.ogg", t = 16/30},
+            {s = path1 .. "eject.ogg", t = 17/30},
             {s = rottle, t = .2},
-            {s = path .. "breechload.ogg",  t = .7},
-            {s = path .. "forearm_forward.ogg", t = 1.6},
+            {s = path .. "breechload.ogg",  t = 1/30},
+            {s = path .. "forearm_forward.ogg", t = 34/30},
             {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
             {s = rottle,  t = 1.5},
             {s = path .. "grab.ogg",  t = 2.0},
@@ -739,7 +736,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.DefaultBodygroups = "00000000"
+SWEP.DefaultBodygroups = "000001"
 
 SWEP.Attachments = {
     {
