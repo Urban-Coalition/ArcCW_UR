@@ -408,13 +408,14 @@ SWEP.Animations = {
         },
     },
     ["sgreload_start"] = {
-        Source = "sgreload_start",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKOut = 0,
-        SoundTable = {
+		Source = "sgreload_start",
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+		RestoreAmmo = 2,
+		LHIK = true,
+		LHIKIn = 0.2,
+		LHIKEaseIn = 0.2,
+		LHIKOut = 0,
+		SoundTable = {
             {s = path .. "turn.ogg",  t = 0}, -- Temporary
             {s = rottle,  t = 0.1},
             {s = path .. "grab.ogg",  t = 0.15},
