@@ -35,11 +35,11 @@ att.Override_IronSightStruct = {
      CrosshairInSights = true,
 }
 
-att.Hook_TranslateAnimation = function(wep,anim)
+--[[att.Hook_TranslateAnimation = function(wep,anim)
     if string.StartWith(anim,"sgreload") then
         return anim .. "_fold"
     end
-end
+end]]
 
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"
