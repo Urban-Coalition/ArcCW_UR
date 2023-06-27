@@ -37,7 +37,7 @@ att.Override_Firemodes = {
         Mult_DamageMin = 2,
         Mult_Recoil = 1.5,
         CustomBars = "--___",
-        Mult_CycleTime = 1.13
+        --Mult_CycleTime = 1.13 
     },
     {
         Mode = 0,
@@ -56,13 +56,19 @@ att.Hook_GetDistantShootSound = function(wep,sound)
     end
 end
 -- Overwritten by weapon's hook
---[[]
+
+att.Hook_SelectCycleAnimation = function(wep,curanim)
+    if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
+        return "cycle_2bst"
+    end
+end
+
 att.Hook_SelectFireAnimation = function(wep,curanim)
     if wep:GetCurrentFiremode().Override_AmmoPerShot == 2 then
         return "fire_2bst"
     end
 end
-]]
+
 
 att.Mult_CycleTime = 1.15
 att.Override_ActivePos = Vector(1.90, -3, -0.40) --Vector(1, -3, 0)
