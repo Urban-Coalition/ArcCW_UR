@@ -588,6 +588,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseOut = 0.3,
         LHIKOut = 0.6,
+        MinProgress = 0.7,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.8,
         SoundTable = {
