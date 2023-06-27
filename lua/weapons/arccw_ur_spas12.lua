@@ -385,13 +385,13 @@ SWEP.Animations = {
     }, 
 	["cycle_2bst"] = {
         Source = {"cycle_freeman", "cycle_freeman2"},
-        ShellEjectAt = 0.2,
+        ShellEjectAt = 0.37,
         MinProgress = 0.6,
         --Time = 25 / 30,
         SoundTable = {
-            {s = path .. "forearm_back.ogg", t = 0.1},
-            {s = path1 .. "eject.ogg", t = 0.1},
-            {s = path .. "forearm_forward.ogg", t = 0.3}, -- Not temporary
+            {s = path .. "forearm_back.ogg", t = 0.3},
+            {s = path1 .. "eject.ogg", t = 0.37},
+            {s = path .. "forearm_forward.ogg", t = 0.5}, -- Not temporary
         },
     },
     ["unjam"] = {
