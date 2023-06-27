@@ -355,6 +355,10 @@ SWEP.Animations = {
     },
     ["fire_2bst"] = {
         Source = "fire_freeman",
+        LHIK = true,
+        LHIKIn = 0.05,
+        LHIKEaseOut = 0.175,
+        LHIKOut = 0.65,
         ShellEjectAt = 0.01,
         SoundTable = {
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 },
@@ -386,7 +390,7 @@ SWEP.Animations = {
 	["cycle_2bst"] = {
         Source = {"cycle_freeman", "cycle_freeman2"},
         ShellEjectAt = 0.37,
-        MinProgress = 0.6,
+        MinProgress = 0.8,
         --Time = 25 / 30,
         SoundTable = {
             {s = path .. "forearm_back_2bst.ogg", t = 0.3},
@@ -489,7 +493,8 @@ SWEP.Animations = {
         Source = "sgreload_start_empty",
         MinProgress = 1,
         LHIK = true,
-        LHIKIn = 0.2,
+        LHIKIn = 1.7,
+        LHIKEaseIn = 0.2,
         LHIKOut = 0,
         TPAnimStartTime = 0.5,
         ShellEjectAt = 15/30,
@@ -510,7 +515,8 @@ SWEP.Animations = {
         Source = "sgreload_start_empty_alt",
         MinProgress = 1,
         LHIK = true,
-        LHIKIn = 0.2,
+        LHIKIn = 1.6,
+        LHIKEaseIn = 0.2,
         LHIKOut = 0,
         TPAnimStartTime = 0.5,
         ShellEjectAt = .1,
@@ -786,16 +792,16 @@ SWEP.Attachments = {
         },
         ExcludeFlags = {"nomuzzle"}
     },
-    -- {
-    --     PrintName = "Underbarrel",
-    --     Slot = {"foregrip"},
-    --     Bone = "pump",
-    --     MergeSlots = {13},
-    --     Offset = {
-    --         vpos = Vector(0, -5, .1),
-    --         vang = Angle(90, -90, -90),
-    --     },
-    -- },
+	{
+		PrintName = "Underbarrel",
+		Slot = {"foregrip"},
+		Bone = "pump",
+		MergeSlots = {13},
+		Offset = {
+			vpos = Vector(0, -5, .1),
+			vang = Angle(90, -90, -90),
+		},
+	},
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
