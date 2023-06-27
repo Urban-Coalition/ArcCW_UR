@@ -462,11 +462,11 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path .. "breechload.ogg",  t = .4},
-            {s = path .. "breechclose.ogg",  t = 1}, -- Temporary
-            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
-            {s = rottle,  t = 1.5},
-            {s = path .. "grab.ogg",  t = 1.9},
+            {s = path .. "breechload.ogg",  t = .2},
+            {s = path .. "breechclose.ogg",  t = 0.9}, -- Temporary
+            {s = path .. "turn.ogg",  t = 1.0}, -- Temporary
+            {s = rottle,  t = 1.2},
+            {s = path .. "grab.ogg",  t = 1.4},
         },
         ForceEmpty = true,
     },
@@ -481,11 +481,11 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path .. "breechload.ogg",  t = .4},
-            {s = path .. "breechclose.ogg",  t = 1}, -- Temporary
-            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
-            {s = rottle,  t = 1.5},
-            {s = path .. "grab.ogg",  t = 1.9},
+            {s = path .. "breechload.ogg",  t = .2},
+            {s = path .. "breechclose.ogg",  t = 0.9}, -- Temporary
+            {s = path .. "turn.ogg",  t = 1.0}, -- Temporary
+            {s = rottle,  t = 1.2},
+            {s = path .. "grab.ogg",  t = 1.4},
         },
         ForceEmpty = true,
     },
@@ -502,12 +502,12 @@ SWEP.Animations = {
         SoundTable = {
             {s = path .. "forearm_back.ogg", t = 10/30},
             {s = path1 .. "eject.ogg", t = 11/30},
-            {s = path .. "forearm_forward.ogg", t = 33/30}, -- Not temporary
-            {s = rottle, t = .2},
             {s = path .. "breechload.ogg",  t = 15/30},
-            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
-            {s = rottle,  t = 1.5},
-            {s = path .. "grab.ogg",  t = 2.0},
+            {s = path .. "forearm_forward.ogg", t = 33/30}, -- Not temporary
+            {s = rottle, t = 0.2},
+            {s = path .. "turn.ogg",  t = 1.1}, -- Temporary
+            {s = rottle,  t = 1.2},
+            {s = path .. "grab.ogg",  t = 1.5},
         },
         ForceEmpty = true,
     },  
@@ -523,13 +523,13 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             {s = path .. "forearm_back.ogg", t = 16/30},
-            {s = path1 .. "eject.ogg", t = 17/30},
-            {s = rottle, t = .2},
-            {s = path .. "breechload.ogg",  t = 1/30},
-            {s = path .. "forearm_forward.ogg", t = 34/30},
-            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
-            {s = rottle,  t = 1.5},
-            {s = path .. "grab.ogg",  t = 2.0},
+            {s = path1 .. "eject.ogg", t = 18/30},
+            {s = path .. "breechload.ogg",  t = 15/30},
+            {s = path .. "forearm_forward.ogg", t = 33/30}, -- Not temporary
+            {s = rottle, t = 0.2},
+            {s = path .. "turn.ogg",  t = 1.1}, -- Temporary
+            {s = rottle,  t = 1.2},
+            {s = path .. "grab.ogg",  t = 1.4},
         },
         ForceEmpty = true,
     },
@@ -544,14 +544,14 @@ SWEP.Animations = {
         ShellEjectAt = .1,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = path .. "forearm_back.ogg", t = 0},
-            {s = path1 .. "eject.ogg", t = 0.1},
-            {s = rottle, t = .2},
-            {s = path .. "breechload.ogg",  t = .7},
-            {s = path .. "forearm_forward.ogg", t = 1.6},
-            {s = path .. "turn.ogg",  t = 1.4}, -- Temporary
-            {s = rottle,  t = 1.5},
-            {s = path .. "grab.ogg",  t = 2.0},
+            {s = path .. "forearm_back.ogg", t = 10/30},
+            {s = path1 .. "eject.ogg", t = 11/30},
+            {s = path .. "breechload.ogg",  t = 15/30},
+            {s = path .. "forearm_forward.ogg", t = 33/30}, -- Not temporary
+            {s = rottle, t = 0.2},
+            {s = path .. "turn.ogg",  t = 1.1}, -- Temporary
+            {s = rottle,  t = 1.2},
+            {s = path .. "grab.ogg",  t = 1.5},
         },
         ForceEmpty = true,
     },
