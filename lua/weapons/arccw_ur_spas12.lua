@@ -739,6 +739,9 @@ SWEP.AttachmentElements = {
 
     ["rail_classic"] = {
         VMBodygroups = {{ind = 4, bg = 2}}
+    }, 
+	["rail_pump"] = {
+        VMBodygroups = {{ind = 6, bg = 1}}
     },
     ["rail_modern"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
@@ -754,7 +757,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.DefaultBodygroups = "000001"
+SWEP.DefaultBodygroups = "0000010"
 
 SWEP.Attachments = {
     {
@@ -798,9 +801,10 @@ SWEP.Attachments = {
 		Bone = "pump",
 		--MergeSlots = {13},
 		Offset = {
-			vpos = Vector(0, -5, .1),
+			vpos = Vector(0, -5, -0.075),
 			vang = Angle(90, -90, -90),
 		},
+        InstalledEles = {"rail_pump"},
 	},
     {
         PrintName = "Tactical",
