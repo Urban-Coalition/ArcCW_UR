@@ -639,9 +639,13 @@ SWEP.Animations = {
         LHIKOut = 999, -- maybe im dumb
         SoundTable = {
             {s = common .. "movement-shotgun-02.ogg", t = 0.3},
-            {s = rottle, t = 0.25},
-            {s = rottle, t = 1.2},
-            {s = common .. "movement-shotgun-04.ogg", t = 1.3},
+            {s = rottle, t = 0.18},
+            {s = rottle, t = 1.0},
+            {s = common .. "movement-shotgun-03.ogg", t = 1.3},
+            {s = path .. "presscheck1.ogg", t = 1.6},
+            {s = path .. "presscheck2.ogg", t = 2.1},
+            {s = rottle, t = 2.2},
+            {s = common .. "movement-shotgun-04.ogg", t = 2.25},
         },
     },
     ["enter_inspect_empty"] = { -- Animations needed!
@@ -670,9 +674,11 @@ SWEP.Animations = {
         LHIKOut = 999, -- maybe im dumb
         SoundTable = {
             {s = common .. "movement-shotgun-02.ogg", t = 0.3},
-            {s = rottle, t = 0.25},
-            {s = rottle, t = 1.2},
-            {s = common .. "movement-shotgun-04.ogg", t = 1.3},
+            {s = rottle, t = 0.18},
+            {s = rottle, t = 1.0},
+            {s = common .. "movement-shotgun-03.ogg", t = 1.3},
+            {s = rottle, t = 2.2},
+            {s = common .. "movement-shotgun-04.ogg", t = 2.25},
         },
     },
 }
