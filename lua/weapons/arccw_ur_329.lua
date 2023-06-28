@@ -313,7 +313,7 @@ SWEP.Animations = {
         Time = 3,
     },
     ["ready"] = {
-        Source = "ready",
+        Source = "deploy",
         Time = 86 / 60,
         SoundTable = {
             {s = path2 .. "draw.ogg", t = 0},
