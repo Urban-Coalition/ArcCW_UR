@@ -663,7 +663,7 @@ SWEP.Animations = {
         LHIKOut = 999, -- maybe im dumb
     },
     ["exit_inspect_empty"] = {
-        Source = "inspect_exit",
+        Source = "inspect_exit_empty",
         -- time = 66 / 60,
         LHIK = false,
         LHIKIn = 0,
