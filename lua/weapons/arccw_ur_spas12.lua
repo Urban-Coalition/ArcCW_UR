@@ -748,8 +748,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 1}},
         AttPosMods = {[1] = {
             SlideAmount = {
-                vmin = Vector(0, 0.5, 0.65),
-                vmax = Vector(0, 2.5, 0.65)
+                vmin = Vector(0, -2.5, 1.8),
+                vmax = Vector(0, 0, 1.8)
             },
         }}
     },
@@ -767,13 +767,13 @@ SWEP.Attachments = {
         Slot = {"optic_lp", "optic"},
         Bone = "spas_parent",
         Offset = {
-            vpos = Vector(0, -1, 0.4),
+            vpos = Vector(0, -1, 1.6),
             vang = Angle(90, -90, -90),
         },
         CorrectiveAng = Angle(180,0,0),
         SlideAmount = {
-            vmin = Vector(0, -2, 0.4),
-            vmax = Vector(0, 1, 0.4)
+            vmin = Vector(0, -4.5, 1.6),
+            vmax = Vector(0, -1.5, 1.6)
         },
         InstalledEles = {"rail_classic"},
         DefaultEles = {"rail_none_fix"},
