@@ -270,8 +270,13 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.Hook_TranslateAnimation = function(wep,anim)
-    if wep:GetCurrentFiremode().Override_ManualAction and anim == "idle_empty" then
-        return "idle_empty_manual"
+    if wep:GetCurrentFiremode().Override_ManualAction then 
+		if	anim == "idle_empty" then
+			return "idle_empty_manual"
+		end
+		if	anim == "exit_inspect_empty" then
+			return "exit_inspect"
+		end
     end
 end
 
@@ -682,6 +687,7 @@ SWEP.Animations = {
         },
     },
 }
+SWEP.NoHideLeftHandInCustomization = true
 
 SWEP.BulletBones = {
     --[1] = "1014_shell1",
