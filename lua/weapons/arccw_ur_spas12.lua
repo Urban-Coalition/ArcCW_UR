@@ -348,7 +348,7 @@ SWEP.Animations = {
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 },
             {s = path1 .. "eject.ogg", t = 0.01},
         },
-    },
+    },  
     ["fire_iron"] = {
         Source = "fire_semi",
         ShellEjectAt = 0.01,
@@ -414,14 +414,14 @@ SWEP.Animations = {
         },
     },
     ["fire_empty"] = {
-        Source = "fire_empty_semi", -- fire_empty
+        Source = "idle_empty_semi", -- fire_empty
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
     ["fire_iron_empty"] = {
-        Source = "fire_empty_semi", -- fire_empty
+        Source = "idle_empty_semi", -- fire_empty
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary

@@ -1130,7 +1130,11 @@ SWEP.Animations = {
             {s = common .. "movement-rifle-04.ogg", t = 0.2},
             {s = rottle, t = 0.25},
             {s = rottle, t = 1.2},
-            {s = common .. "movement-rifle-03.ogg", t = 1.25},
+            {s = common .. "movement-rifle-03.ogg", t = 100/30},
+            {s = common .. "shoulder.ogg", t = 40/30},			
+            {s = path .. "chback.ogg", t = 78/30, v = 1.25},
+            {s = path .. "chlock.ogg", t = 85/30, v = 1.25},
+            {s = path .. "chamber.ogg", t = 103/30},
         },
     },
 }
