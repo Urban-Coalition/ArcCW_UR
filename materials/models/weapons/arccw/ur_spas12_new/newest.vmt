@@ -4,11 +4,11 @@
     "$bumpmap" "models\weapons\arccw\ur_spas12_new\UR_SPAS_n"
     "$phongexponenttexture" "models\weapons\arccw\ur_spas12_new\UR_SPAS_e"
 
-    "$color2" "[0.2 0.2 0.2]"
+    "$color2" "[0.4 0.4 0.4]"
     "$blendtintbybasealpha" "1"
 
     "$phong" "1"
-    "$phongboost" "1"
+    "$phongboost" "1.8"
     "$phongfresnelranges" "[1 0.5 0]"
     "$phongalbedotint" "0"
 
@@ -28,7 +28,7 @@
         {
             "specularity" "0.5"             //0.25, 0.5, 0.75, 1
             "min" "0"
-            "max" "0.3"                       //change this if too bright in game
+            "max" "0.2"                       //change this if too bright in game
         }
     }
 }
