@@ -1123,9 +1123,10 @@ SWEP.Animations = {
     ["exit_inspect"] = {
         Source = "inspect_exit",
         -- time = 66 / 60,
-        LHIK = false,
+        LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 999, -- maybe im dumb
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = common .. "movement-rifle-04.ogg", t = 0.2},
             {s = rottle, t = 0.25},
