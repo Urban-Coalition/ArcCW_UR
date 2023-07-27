@@ -203,35 +203,35 @@ local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.ShootSound = {
-    path .. "fire-01.ogg",
-    path .. "fire-02.ogg",
-    path .. "fire-03.ogg",
-    path .. "fire-04.ogg",
-    path .. "fire-05.ogg",
-    path .. "fire-06.ogg"
+    path1 .. "fire-01.ogg",
+    path1 .. "fire-02.ogg",
+    path1 .. "fire-03.ogg",
+    path1 .. "fire-04.ogg",
+    path1 .. "fire-05.ogg",
+    path1 .. "fire-06.ogg"
 }
 SWEP.ShootSoundSilenced = {
-    path .. "fire-01.ogg",
-    path .. "fire-02.ogg",
-    path .. "fire-03.ogg",
-    path .. "fire-04.ogg",
-    path .. "fire-05.ogg",
-    path .. "fire-06.ogg"
+    path1 .. "fire-01.ogg",
+    path1 .. "fire-02.ogg",
+    path1 .. "fire-03.ogg",
+    path1 .. "fire-04.ogg",
+    path1 .. "fire-05.ogg",
+    path1 .. "fire-06.ogg"
 }
 
 SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = {common .. "revolver_hammer-01.ogg", common .. "revolver_hammer-02.ogg", common .. "revolver_hammer-03.ogg"}
 
-local tail = ")/arccw_uc/common/44mag/"
+local tail = ")/arccw_uc/common/357mag/"
 
 SWEP.DistantShootSoundOutdoors = {
-    tail .. "fire-dist-44mag-pistol-ext-01.ogg",
-    tail .. "fire-dist-44mag-pistol-ext-02.ogg",
-    tail .. "fire-dist-44mag-pistol-ext-03.ogg",
-    tail .. "fire-dist-44mag-pistol-ext-04.ogg",
-    tail .. "fire-dist-44mag-pistol-ext-05.ogg",
-    tail .. "fire-dist-44mag-pistol-ext-06.ogg"
+    tail .. "fire-dist-357mag-pistol-ext-01.ogg",
+    tail .. "fire-dist-357mag-pistol-ext-02.ogg",
+    tail .. "fire-dist-357mag-pistol-ext-03.ogg",
+    tail .. "fire-dist-357mag-pistol-ext-04.ogg",
+    tail .. "fire-dist-357mag-pistol-ext-05.ogg",
+    tail .. "fire-dist-357mag-pistol-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",

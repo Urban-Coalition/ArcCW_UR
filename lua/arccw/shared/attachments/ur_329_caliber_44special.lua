@@ -17,7 +17,7 @@ att.Override_PhysBulletMuzzleVelocity = 265
 
 att.Override_Trivia_Calibre = ".44 Special"
 
-local path = "weapons/arccw_ur/sw586/"
+local path = "weapons/arccw_ur/sw329/"
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
@@ -34,19 +34,19 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-local tail = ")^/arccw_uc/common/357mag/"
+local tail = ")^/arccw_uc/common/44mag/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
         return {
-            tail .. "fire-dist-357mag-pistol-ext-01.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-02.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-03.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-04.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-05.ogg",
-            tail .. "fire-dist-357mag-pistol-ext-06.ogg"
+            tail .. "fire-dist-44mag-pistol-ext-01.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-02.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-03.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-04.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-05.ogg",
+            tail .. "fire-dist-44mag-pistol-ext-06.ogg"
         }
     end
 end
