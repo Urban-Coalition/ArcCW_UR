@@ -24,7 +24,7 @@ att.ModelOffset = Vector(0.55, 0, -1.7)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.01, 10.5, -1.18),
+        Pos = Vector(0.01, 8.5, -1.18),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -35,7 +35,7 @@ att.AdditionalSights = {
             Holosight = true,
             HolosightReticle = Material("hud/scopes/SG1_reticle.png", "mips smooth"),
             HolosightNoFlare = true,
-            HolosightSize = 9.5,
+            HolosightSize = 16,
             HolosightPiece = "models/weapons/arccw/atts/g3_optic_sg1_hsp.mdl",
             HolosightBlackbox = true,
             HolosightMagnification = UC_HalfScope( 4.5 ),
