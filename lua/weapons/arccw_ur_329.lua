@@ -397,7 +397,7 @@ SWEP.Animations = {
     ["cycle"] = {
         Source = "cocking",
         Time = 1,
-        MinProgress = 0.5,
+        MinProgress = 0.25,
         SoundTable = {
             { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.1 }
         }
