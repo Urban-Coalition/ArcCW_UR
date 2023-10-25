@@ -382,7 +382,7 @@ SWEP.Animations = {
         Source = "dryfire_sact",
         SoundTable = {
             { s = hamr, t = 0 },
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.25 + 0.2 },
+            { s = common .. "revolver_cock.ogg", t = 0.35 }
         },
     },
 
@@ -399,7 +399,7 @@ SWEP.Animations = {
         Time = 1,
         MinProgress = 0.25,
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.1 }
+            { s = common .. "revolver_cock.ogg", t = 0.1 }
         }
     },
 
@@ -408,7 +408,7 @@ SWEP.Animations = {
         Time = 1,
         MinProgress = 0.5,
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.1 }
+            { s = common .. "revolver_cock.ogg", t = 0.1 }
         }
     },
 
@@ -416,7 +416,7 @@ SWEP.Animations = {
         Source = "cocking",
         Time = 1,
         SoundTable = {
-            { s = { common .. "revolver_trigger-01.ogg", common .. "revolver_trigger-03.ogg" }, t = 0.1 }
+            { s = common .. "revolver_cock.ogg", t = 0.1 }
         }
     },
     ["2_to_1"] = {
