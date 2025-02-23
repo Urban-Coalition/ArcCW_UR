@@ -493,7 +493,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.05,
         SoundTable = {
             { s = common .. "common_mech_heavy.ogg", t = 0 },
-            { s = path .. "mech-last.ogg", t = 0 }
+            { s = path .. "mech_last.ogg", t = 0 }
         },
     },
 
